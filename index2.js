@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sprachaufnahme initialisieren
     let recognition;
-    let isRecognizing = false; // Flag, um den Status der Erkennung zu verfolgen
+    let isRecognizing = false;
 
     // Überprüfen, ob die Web Speech API unterstützt wird
     if ('webkitSpeechRecognition' in window) {
         recognition = new webkitSpeechRecognition();
-        recognition.continuous = true; // Kontinuierliche Erkennung aktivieren
+        recognition.continuous = false; // Kontinuierliche Erkennung deaktivieren
         recognition.interimResults = false; // Keine Zwischenergebnisse
         recognition.lang = 'de-DE'; // Sprache auf Deutsch setzen
 
@@ -377,5 +377,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadNextQuestion();
 });
-
-
