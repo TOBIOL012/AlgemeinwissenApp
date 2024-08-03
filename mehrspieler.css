@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #303031;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;  /* Ermöglicht das Scrollen */
+}
+
+#spieler-container {
+    width: 90%;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px; /* Abstand zu den Input-Feldern */
+}
+
+.back-arrow {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.erklärung {
+    color: white;
+    font-size: 1.2em;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px; /* Abstand zwischen den Spielern */
+    width: 100%; /* Anpassung an Handyformat */
+}
+
+.spieler-name {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #484848;
+    background-color: #303031;
+    color: white;
+    font-size: 1em;
+    width: 60%; /* Anpassung an Handyformat */
+    font-family: "Dosis", sans-serif;
+    outline: none;
+}
+
+.schwierigkeit-button {
+    background-color: #303031;
+    color: white;
+    border: 2px solid #484848;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 40%; /* Anpassung an Handyformat */
+    font-family: "Dosis", sans-serif;
+    outline: none;
+    outline-offset: -4px;
+}
+
+.plus-minus-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: calc( 30vh + 2em);
+}
+
+#add-player-button, #remove-player-button {
+    background-color: #303031;
+    color: white;
+    border: 2px solid #484848;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 48%; /* 48% der Elternelementbreite für beide Buttons */
+    font-family: "Dosis", sans-serif;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Passt die Höhe an, um den Bereich abzudecken */
+    background-color: #303031;
+    z-index: 900; /* Unter dem Question Regler und dem Button */
+    outline: 2px solid #484848;
+}
+
+.question-regler-container {
+    position: fixed;
+    bottom: 15%; /* Verschiebt das Feld höher */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    width: 90%; /* 90% der Bildschirmbreite */
+}
+
+.question-regler-text {
+    font-size: 1em; /* Kleine Schriftgröße */
+    color: white;
+    margin-bottom: 5px; /* Abstand zum Regler */
+}
+
+.question-regler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303031;
+    border: 2px solid #484848;
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding-right: 10px; /* Kleineres Padding */
+    width: calc(90% - 10px); /* 90% der Bildschirmbreite minus Padding */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-button {
+    background-color: #303031;
+    color: white;
+    border: none;
+    padding: 3px; /* Kleineres Padding */
+    cursor: pointer;
+    font-size: 0.8em; /* Kleinere Schriftgröße */
+    outline: none;
+    position: relative;
+}
+
+#increase-button::before {
+    content: "";
+    position: absolute;
+    top: -10px;    /* Erweiterung nach oben */
+    left: -10px;  /* Erweiterung nach rechts */
+    bottom: -10px; /* Erweiterung nach unten */
+    right: -20vw;   /* Erweiterung nach links */
+    z-index: 1;   /* Sicherstellen, dass das Pseudo-Element unter dem Button bleibt */
+}
+#decrease-button::before {
+    content: "";
+    position: absolute;
+    top: -10px;    /* Erweiterung nach oben */
+    left: -20vw;  /* Erweiterung nach rechts */
+    bottom: -10px; /* Erweiterung nach unten */
+    right: -10px;   /* Erweiterung nach links */
+    z-index: 1;   /* Sicherstellen, dass das Pseudo-Element unter dem Button bleibt */
+}
+.back-arrow::before {
+    content: "";
+    position: absolute;
+    top: -10px;    /* Erweiterung nach oben */
+    left: -15vw;  /* Erweiterung nach rechts */
+    bottom: -10px; /* Erweiterung nach unten */
+    right: -15vw;   /* Erweiterung nach links */
+    z-index: 1;   /* Sicherstellen, dass das Pseudo-Element unter dem Button bleibt */
+}
+
+#question-count {
+    font-size: 1.2em; /* Kleinere Schriftgröße */
+    margin: 0 10px; /* Kleinerer Abstand */
+    color: white;
+}
+
+.button {
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: calc(90% - 10px); /* 90% der Bildschirmbreite minus Padding */
+}
+
+.next-button {
+    background-color: #e48d45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Dosis", sans-serif;
+    outline: 2px solid #484848;
+    outline-offset: -4px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    width: 100%; /* 100% des übergeordneten Containers */
+}
+
+.next-button-kategorien {
+    background-color: #e48d45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Dosis", sans-serif;
+    outline: 2px solid #484848;
+    outline-offset: -4px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    width: 100%; /* 100% des übergeordneten Containers */
+}

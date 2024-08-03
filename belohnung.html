@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeinwissen Quiz App - Belohnung</title>
+    <link rel="stylesheet" href="belohnung.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%;">
+                    <a>0%</a>
+                </div>
+            </div>
+        </div>
+        <div class="Anzeige">
+            <div class="Coins">
+                <img src="coin.png" alt="Coin-Icon" class="category-icon">
+                <a id="coins-total">0</a>
+            </div>
+            <div class="streak">
+                <img src="streak.png" alt="Streak-Icon" class="category-icon">
+                <a>21</a>
+            </div>
+        </div>
+        <div class="results">
+            <button id="next-button" class="next-button">Weiter</button>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const correctCount = parseInt(localStorage.getItem('correctCount') || '0', 10);
+            const percentage = (correctCount / 20) * 100;
+            document.querySelector('.progress').style.width = `${percentage}%`;
+            document.querySelector('.progress a').textContent = `${percentage}%`;
+
+            const nextButton = document.getElementById('next-button');
+            nextButton.addEventListener('click', function() {
+                window.location.href = 'startseite.html';
+            });
+
+            // Calculate earned coins
+            const earnedCoins = correctCount + 10; // Example calculation
+            const previousTotalCoins = parseInt(localStorage.getItem('totalCoins') || '0', 10);
+            const newTotalCoins = previousTotalCoins + earnedCoins;
+
+            // Display earned coins first
+            const coinsElement = document.getElementById('coins-total');
+            coinsElement.textContent = `+${earnedCoins}`;
+            coinsElement.style.opacity = '1';
+
+            setTimeout(() => {
+                // Transition to display total coins before adding earned coins
+                coinsElement.style.opacity = '0.5';
+                coinsElement.textContent = previousTotalCoins;
+
+                let start = previousTotalCoins;
+                const end = newTotalCoins;
+                const duration = 800;
+                const startTime = performance.now();
+
+                function updateCoinsAnimation(currentTime) {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    const currentCoins = Math.floor(start + (end - start) * progress);
+                    coinsElement.textContent = currentCoins;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCoinsAnimation);
+                    } else {
+                        coinsElement.style.opacity = '1';
+                    }
+                }
+
+                requestAnimationFrame(updateCoinsAnimation);
+            }, 2000);
+
+            localStorage.setItem('totalCoins', newTotalCoins);
+        });
+    </script>
+</body>
+</html>
+

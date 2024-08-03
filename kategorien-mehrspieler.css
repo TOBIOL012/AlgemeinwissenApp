@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #303031;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    width: 75%;
+    max-width: 20em;
+    text-align: left;
+    margin-top: 15%;
+}
+
+.Überschrift {
+    font-size: 2em;
+    margin: 0;
+    display: block;
+}
+
+.Unterüberschrift {
+    font-size: 1em;
+    display: block;
+}
+
+#buttons-container {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+button {
+    background-color: #e48d45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 90%;
+    font-family: "Dosis", sans-serif;
+    outline: 2px solid #484848;
+    outline-offset: -4px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.next-button {
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 32px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second img, .third img, .fourth img, .fifth img, .sixth img, .seventh img {
+    width: 75vw;
+    margin-top: 7%;
+    border-radius: 25px;
+    max-width: 20em;
+    min-width: 7em;
+}
+
+.first img {
+    max-width: 27em;
+    margin-top: 10%;
+    width: 75%;
+    border-radius: 25px;
+}
+
+.seventh {
+    padding-bottom: 20vh;
+}

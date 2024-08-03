@@ -1,0 +1,10 @@
+<div class="profile-container">
+        <div class="username-section">
+            <input type="text" id="username" placeholder="Benutzername">
+        </div>
+        <div class="profile-picture-section">
+            <a href="change-profile-picture.html">
+                <img src="Caesar-PB.jpg" alt="Profilbild" id="profile-picture">
+            </a>
+        </div>
+    </div>

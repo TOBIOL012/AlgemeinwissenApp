@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeinwissen Quiz App - Mehrspieler</title>
+    <link rel="stylesheet" href="fragen-mehrspieler.css">
+    <script src="questions.js" defer></script> <!-- Stellt sicher, dass questions.js eingebunden ist -->
+    <script src="fragen-mehrspieler.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
+        
+        <div class="player-info">
+            <div class="current-player"></div> <!-- Entferne den statischen Namen -->
+            <div class="question-status">1/6</div> <!-- Dies wird dynamisch aktualisiert -->
+        </div>
+        
+    </header>
+    <main>
+        <div class="category-difficulty">
+            <div class="category">
+                <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon">
+                <a class="category-text"></a>
+            </div>
+            <div class="difficulty">
+                <!-- Schwierigkeits-Blocks werden hier durch JS hinzugefügt -->
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question">Frage wird geladen...</p>
+            <div class="answers">
+                <button class="answer">Antwort1</button>
+                <button class="answer">Antwort2</button>
+                <button class="answer">Antwort3</button>
+                <button class="answer">Antwort4</button>
+            </div>
+        </div>
+        <div class="results">
+            <button class="next-button">Weiter</button>
+        </div>
+    </main>
+</body>
+</html>

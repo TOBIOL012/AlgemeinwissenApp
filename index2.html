@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeinwissen Quiz App</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%;"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="category-difficulty">
+            <div class="category">
+                <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon">
+                <a class="category-text">Geographie</a>
+            </div>
+            <div class="difficulty">
+                <div class="difficulty-block"></div>
+                <div class="difficulty-block"></div>
+                <div class="difficulty-block"></div>
+                <div class="difficulty-block"></div>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question">Was ist die Hauptstadt von Deutschland?</p>
+            <div class="answer-typed">
+                <input type="text" class="text-input" placeholder="Antwort">
+                <button class="mic-button"><img src="icons8-microphone-32.png" alt="Mikrofon"></button>
+            </div>
+            <div class="next-button-wrapper">
+                <p class="correct-answer"></p>
+                <button id="next-button">Weiter</button>
+            </div>
+        </div>
+        
+    </main>
+    <script src="questions.js"></script>
+    <script src="index2.js"></script>
+</body>
+</html>
+
+
+
+
+

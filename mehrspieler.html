@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeinwissen Quiz App - Mehrspieler</title>
+    <link rel="stylesheet" href="mehrspieler.css">
+</head>
+<body>
+    <div id="spieler-container">
+        
+        <div class="header">
+            <a href="startseite.html" class="back-arrow">←</a>
+            <div class="erklärung">Spieler hinzufügen</div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" class="spieler-name" placeholder="Spieler 1" value="Spieler 1">
+            <button class="schwierigkeit-button">Leicht</button>
+        </div>
+        <div class="input-container">
+            <input type="text" class="spieler-name" placeholder="Spieler 2" value="Spieler 2">
+            <button class="schwierigkeit-button">Leicht</button>
+        </div>
+    </div>
+    
+    <div class="plus-minus-buttons">
+        <button id="add-player-button">+</button>
+        <button id="remove-player-button">-</button>
+    </div>
+    
+    <div class="overlay-background"></div> <!-- Hintergrundfeld -->
+    
+    <div class="question-regler-container">
+        <div class="question-regler-text">Fragen pro Person</div>
+        <div class="question-regler">
+            <button class="arrow-button" id="decrease-button">◄</button>
+            <span id="question-count">20</span>
+            <button class="arrow-button" id="increase-button">►</button>
+        </div>
+    </div>
+    
+    <div class="button">
+        <button class="next-button" id="next-button" >Weiter</button>
+    </div>
+    <script src="mehrspieler.js"></script>
+</body>
+</html>

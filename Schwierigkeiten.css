@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #303031;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.difficulty-button1,
+.difficulty-button2,
+.difficulty-button3,
+.difficulty-button4,
+.difficulty-button-all {
+    background-color: #303031;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 90%;
+    font-family: "Dosis", sans-serif;
+    outline: 3px solid;
+    outline-offset: -4px;
+}
+
+.difficulty-button1 {
+    color: #5EFC8D ;
+    outline-color: #303031;
+    background-color: #484848;
+}
+
+.difficulty-button2 {
+    color: #E5E55E ;
+    outline-color: #303031;
+    background-color: #484848;
+}
+
+.difficulty-button3 {
+    color: #E58A5E ;
+    outline-color: #303031;
+    background-color: #484848;
+}
+
+.difficulty-button4 {
+    color: #E55E5E;
+    outline-color: #303031;
+    background-color: #484848;
+}
+
+.difficulty-button-all{
+    color: #e35ee5;
+    outline-color: #303031;
+    background-color: #484848;
+}
+
+.difficulty-button:hover {
+    background-color: #db7c36;
+}
