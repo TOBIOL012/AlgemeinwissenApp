@@ -5,15 +5,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #303031;
+    background-color: #141F25;
 }
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100vh; /* Nimmt die gesamte Höhe des Ansichtsfensters ein */ /* Optional: fügt einen Abstand um den Inhalt herum hinzu */
-    box-sizing: border-box; /* Stellt sicher, dass das Padding in der Höhe enthalten ist */
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 #buttons-container {
@@ -32,92 +32,106 @@ main {
 
 .progress-bar-wrapper {
     width: 90%;
-    margin: 1em auto;
+    margin-left: 5%;
+    margin-bottom: 2em;
+
 }
 
 .progress-bar {
-    background-color: #484848;
-    border-radius: 25px;
+    background-color: #45545c;
+    border-radius: 0.8em;
     overflow: hidden;
     width: 100%;
+    height: 1.8em;
 }
 
 .progress {
-    background: #5EFC8D;
+    color: white;
+    text-align: center;
+    background-color: #7948ff;
     height: 100%;
     width: 0%;
     transition: width 1s ease-in-out;
-    border-radius: 20px;
+    border-radius: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-button {
-    background-color: #e48d45;
+
+.progress a {
+    text-align: center;
+}
+
+.weiter-button {
+    background-color: var(--background-color);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+.next-button {
+    background-color: #f1730c;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 0.5em;
+    border-radius: 1em;
     cursor: pointer;
-    font-size: 1em;
-    width: 90%; /* Breite auf 90% der Seite eingestellt */
+    font-size: 1.6em;
+    width: 90%;
     font-family: "Dosis", sans-serif;
-    outline: 2px solid #484848;
-    outline-offset: -4px;
-    margin-bottom: 2em;
+    box-shadow: 0px 6px 0px 0px rgb(146, 65, 7);
+}
+
+.next-button:active {
+    box-shadow: none;
+    transform: translateY(6px);
+}
+
+.XP, .Coins {
+    display: table;
+    margin-bottom: 1em;
+    margin-left: 5%;
+    padding: 1em;
+    border-radius: 1em;
+    white-space: nowrap;
+    width: calc(42.5% - 2em);
+}
+
+.XP {
+    color: #8c52ff;
+    outline: 3px solid #8c52ff;
+}
+
+.XP img, .XP a, .Coins img, .Coins a {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.XP img, .Coins img {
+    width: 2.3em;
+    height: 2.3em;
+}
+
+#xp-total {
+    font-size: 1.5em;
+}
+
+#coins-total {
+    font-size: 1.5em;
 }
 
 .Coins {
-    display: table; /* Stellt sicher, dass das Element nur so breit ist wie der Inhalt */
-    font-size: 1.2em;
     color: #e2d515;
-    margin-bottom: 1em;
-    margin-left: 5%;
-    padding: 10px;
-    border-radius: 20px;
-    outline: 2px solid #e2d515;
-    white-space: nowrap; /* Verhindert Zeilenumbruch innerhalb des Elements */
-    width:calc(42.5% - 20px);
-}
-
-.Coins img, .Coins a {
-    display: table-cell; /* Macht die Kinder-Elemente zu Zellen */
-    vertical-align: middle; /* Stellt sicher, dass die Inhalte vertikal mittig ausgerichtet sind */
-}
-
-.Coins img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.streak {
-    display: table; /* Stellt sicher, dass das Element nur so breit ist wie der Inhalt */
-    font-size: 1.2em;
-    color: #e9492c;
-    margin-bottom: 1em;
-    margin-left: 5%;
-    padding: 10px;
-    border-radius: 20px;
-    outline: 2px solid #e9492c;
-    white-space: nowrap; /* Verhindert Zeilenumbruch innerhalb des Elements */
-    width:calc(42.5% - 20px);
-}
-
-.streak img, .streak a {
-    display: table-cell; /* Macht die Kinder-Elemente zu Zellen */
-    vertical-align: middle; /* Stellt sicher, dass die Inhalte vertikal mittig ausgerichtet sind */
-}
-
-.streak img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    outline: 3px solid #e2d515;
 }
 
 .Anzeige {
     display: flex;
 }
 
-/* belohnung.css */
-
-.Coins a, .streak a {
+.Coins a, .XP a {
     animation: countUp 0.5s ease-out;
 }

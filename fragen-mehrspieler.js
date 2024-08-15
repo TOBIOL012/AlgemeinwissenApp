@@ -2,10 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const players = JSON.parse(localStorage.getItem('players')) || [];
     const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
     const totalQuestionsPerPlayer = players[0].questionCount; // Alle Spieler haben die gleiche Anzahl von Fragen
+    const totalQuestions = totalQuestionsPerPlayer * players.length;
+
+    // Speichern der Gesamtzahl der Fragen in localStorage
+    localStorage.setItem('totalQuestions', totalQuestions);
+
     let currentPlayerIndex = 0;
-    let questionsAsked = 0;
+    let questionsAsked = localStorage.getItem('questionsAsked') ? parseInt(localStorage.getItem('questionsAsked')) : 0;
     let currentQuestionIndex = 0;
     let correctCount = 0;
+
+    console.log('Players:', players);
+    console.log('Selected Categories:', selectedCategories);
+    console.log('Total Questions Per Player:', totalQuestionsPerPlayer);
+    console.log('Total Questions:', totalQuestions);
 
     // Initialisiere die Anzahl der beantworteten Fragen und Punkte für jeden Spieler
     players.forEach(player => {
@@ -15,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getNextPlayer() {
         currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
+        console.log('Current Player Index:', currentPlayerIndex);
         return players[currentPlayerIndex];
     }
 
@@ -26,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             filteredQuestions = questions.filter(q => q.Schwierigkeitsgrad.toLowerCase() === player.difficulty.toLowerCase());
         }
 
+        console.log('Filtered Questions for', player.name, ':', filteredQuestions);
         return filteredQuestions;
     }
 
@@ -44,9 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function loadQuestion() {
-        if (questionsAsked >= totalQuestionsPerPlayer * players.length) {
+        console.log('Questions Asked:', questionsAsked, 'Total Questions:', totalQuestions);
+        if (questionsAsked >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
-            window.location.href = 'belohnung.html';
+            console.log('Redirecting to endranking-mehrspieler.html');
+            questionsAsked = 0;
+            localStorage.setItem('questionsAsked', questionsAsked);
+            window.location.href = 'endranking-mehrspieler.html';
             return;
         }
 
@@ -110,12 +126,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentPlayer.questionsAnswered++;
                 currentQuestionIndex++;
                 questionsAsked++;
+                localStorage.setItem('questionsAsked', questionsAsked); // Speichere den aktuellen Stand
                 updateProgressBar();
             }, { once: true });
         });
 
         function updateProgressBar() {
-            const percentage = (currentQuestionIndex / (totalQuestionsPerPlayer * players.length)) * 100;
+            const percentage = (currentQuestionIndex / totalQuestions) * 100;
             const progressBar = document.querySelector('.progress');
             if (progressBar) {
                 progressBar.style.width = `${percentage}%`;
@@ -153,9 +170,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.querySelector('.next-button').addEventListener('click', function() {
-        // Überprüfen, ob alle Spieler ihre Fragen beantwortet haben
-        if ((currentPlayerIndex + 1) % players.length === 0) {
+        console.log('Next Button Clicked - Questions Asked:', questionsAsked, 'Total Questions:', totalQuestions);
+        if (questionsAsked >= totalQuestions) {
+            console.log('Redirecting to endranking-mehrspieler.html');
+            questionsAsked = 0;
+            localStorage.setItem('questionsAsked', questionsAsked);
+            window.location.href = 'endranking-mehrspieler.html';
+        } else if ((currentPlayerIndex + 1) % players.length === 0 && questionsAsked < totalQuestions) {
             localStorage.setItem('players', JSON.stringify(players));
+            console.log('Redirecting to ranking-mehrspieler.html');
             window.location.href = 'ranking-mehrspieler.html';
         } else {
             getNextPlayer();

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     const addPlayerButton = document.getElementById('add-player-button');
     const removePlayerButton = document.getElementById('remove-player-button');
     const spielerContainer = document.getElementById('spieler-container');
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const playerCount = inputContainers.length + 1;
                 inputField.placeholder = `Spieler ${playerCount}`;
                 inputField.value = defaultNames[inputContainers.length] || `Spieler ${playerCount}`;
+                inputField.maxLength = 15; // Maximal 15 Zeichen
 
                 const difficultyButton = document.createElement('button');
                 difficultyButton.className = 'schwierigkeit-button';
@@ -103,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const decreaseButton = document.getElementById('decrease-button');
     const increaseButton = document.getElementById('increase-button');
     const questionCountElement = document.getElementById('question-count');
-    let questionCount = 10; // Anfangsanzahl der Fragen auf 10 setzen
+    let questionCount = 5; // Anfangsanzahl der Fragen auf 10 setzen
     if (questionCountElement) {
         questionCountElement.textContent = questionCount;
     }
@@ -205,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const inputField = inputContainers[i].querySelector('.spieler-name');
         if (inputField) {
             inputField.value = defaultNames[i] || `Spieler ${i + 1}`;
+            inputField.maxLength = 15; // Maximal 15 Zeichen
         }
     }
 });

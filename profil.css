@@ -7,7 +7,7 @@ html, body {
     height: 100%;
     overflow: hidden; /* Verhindert horizontales und vertikales Scrollen */
     font-family: "Dosis", sans-serif;
-    background-color: #303031;
+    background-color: #141F25;
     color: white;
     display: flex;
     flex-direction: column;
@@ -17,27 +17,24 @@ html, body {
 
 .settings-icon {
     position: absolute;
-    top: 10px; /* Abstand vom oberen Rand */
-    right: 10px; /* Abstand vom rechten Rand */
-    width: 20px;
-    height: 20px;
+    top: 5vw; /* Abstand vom oberen Rand */
+    right: 5vw; /* Abstand vom rechten Rand */
     cursor: pointer;
 }
 
 .settings-icon img {
-    height: 20px;
+    height: 2.3em;
 }
 
 .Profilbild-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 .Profilbild-groß {
-    width: 120px; /* Größe des Profilbildes anpassen */
-    height: 120px; /* Höhe des Profilbildes anpassen */
+    width: 50vw; /* Größe des Profilbildes anpassen */
     object-fit: cover;
 }
 
@@ -50,15 +47,15 @@ html, body {
 .Benutzername {
     width: 100%;
     border-radius: 25px;
-    background-color: #303031;
+    background-color: #141F25;
     color: white;
     border: none;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 0.5em;
     border-radius: 10px;
-    font-size: 1em;
-    outline: 2px solid #484848;
+    font-size: 1.6em;
+    outline: 2px solid #2f4957;
     font-family: "Dosis", sans-serif;
 }
 
@@ -66,15 +63,15 @@ html, body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #303031;
-    border: 2px solid #484848;
+    background-color: #141F25;
+    border: 2px solid #2f4957;
     border-radius: 15px;
-    padding: 15px 5px 15px 5px;
-    width: 85%;
+    padding: 1em 0em;
+    width: 90%;
     margin-top: 20px;
 }
 
-.Streak, .Coins, .Prozent {
+.XP, .Coins, .Streak {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,16 +79,16 @@ html, body {
     position: relative;
 }
 
-.Streak::after, .Coins::after {
+.XP::after, .Coins::after {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     width: 1px; /* Schmalere Trennstriche */
-    background-color: #484848;
+    background-color: #2f4957;
 }
 
-.Streak::after {
+.XP::after {
     right: 0;
 }
 
@@ -99,40 +96,41 @@ html, body {
     right: 0;
 }
 
-.Streak img, .Coins img, .Prozent img {
-    width: 30px;
-    height: 30px;
+.XP img, .Coins img, .Streak img {
+    width: 2.3em;
 }
 
-.Streak span, .Coins span, .Prozent span {
-    font-size: 1em;
+.XP span, .Coins span, .Streak span {
+    font-size: 1.6em;
+    padding-top: 5px;
 }
 
 .nav-bar {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #303031;
+    background-color: #141F25;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
-    border: 2px solid #484848;
+    padding: 1em 0;
+    padding-bottom: 2em;
+    border: 2px solid #2f4957;
 }
 
 .nav-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
-    height: 25px;
+    width: 2.3em;
+    height: 2.3em;
     background-color: #303031;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
 .nav-button img {
-    width: 24px;
-    height: 24px;
+    width: 2.3em;
+    height: 2.3em;
     color: white;
 }
 

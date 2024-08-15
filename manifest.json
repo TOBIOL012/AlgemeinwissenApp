@@ -1,0 +1,15 @@
+{
+    "short_name": "Besserwisser",
+    "name": "Besserwisser",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#141F25",
+    "theme_color": "#141F25",
+    "icons": [
+      {
+        "src": "/Logo-neu.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+}

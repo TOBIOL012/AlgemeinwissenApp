@@ -1,0 +1,25 @@
+/* Verhindert die Auswahl von Text auf der gesamten Seite */
+body {
+    user-select: none; /* Für moderne Browser */
+}
+
+/* Für Webkit-Browser wie Chrome, Safari und Opera */
+body {
+    -webkit-user-select: none;
+}
+
+/* Für Firefox */
+body {
+    -moz-user-select: none;
+}
+
+/* Für Internet Explorer */
+body {
+    -ms-user-select: none;
+}
+
+/* Verhindert das Ziehen von Bildern */
+img {
+    pointer-events: none; /* Deaktiviert alle Mausereignisse für Bilder */
+}
+

@@ -12,17 +12,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Wenn die Seite 'profil.html' ist, aktualisieren Sie den Münztext
-    if (window.location.pathname.endsWith('profil.html')) {
-        updateCoinText();
+    function updateXPText() {
+        const xpElement = document.getElementById('xp-total');
+        const totalXP = parseInt(localStorage.getItem('totalXP') || '0', 10);
+        if (xpElement) {
+            xpElement.textContent = totalXP;
+        }
     }
 
+    function updateStreakText() {
+        const streakElement = document.querySelector('.Streak span');
+        const streakCount = parseInt(localStorage.getItem('streakCount') || '0', 10);
+        if (streakElement) {
+            streakElement.textContent = streakCount;
+        }
+    }
+
+    // Wenn die Seite 'profil.html' ist, aktualisieren Sie den Münztext, XP und Streak
+    if (window.location.pathname.endsWith('profil.html')) {
+        updateCoinText();
+        updateXPText();
+        updateStreakText();
+    }
 
     function updateContinueButtonState() {
         if (continueButton) {
-            continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#e48d45';
+            continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#f1730c';
             continueButton.disabled = selectedCategories.length === 0;
         }
+    }
+
+    function getCssVariableValue(variableName) {
+        return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
     }
 
     updateContinueButtonState();
@@ -69,23 +90,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (continueButton) {
         continueButton.addEventListener('click', function() {
             if (selectedCategories.length > 0) {
+                // Zurücksetzen der Zustandsvariablen
+                localStorage.removeItem('questionsAsked');
+                localStorage.removeItem('correctCount');
+                // Weitere Variablen, die zurückgesetzt werden sollen, können hier hinzugefügt werden
+
                 window.location.href = 'schwierigkeiten.html';
             }
         });
     }
 
-    const difficultyButtons = document.querySelectorAll('.difficulty-button1, .difficulty-button2, .difficulty-button3, .difficulty-button4, .difficulty-button-all');
+    const difficultyButtons = document.querySelectorAll('.difficulty-button1, .difficulty-button2, .difficulty-button3, .difficulty-button4, .difficulty-button5');
 
     difficultyButtons.forEach(button => {
         button.addEventListener('click', function() {
             const selectedDifficulty = this.getAttribute('data-difficulty');
             if (selectedDifficulty === 'alle') {
-                localStorage.setItem('selectedDifficulty', 'alle');
+                localStorage.setItem('selectedDifficulty', 'selectedDifficulty');
             } else {
                 localStorage.setItem('selectedDifficulty', selectedDifficulty);
             }
 
-            if (selectedDifficulty === 'schwer' || selectedDifficulty === 'extrem') {
+            if (selectedDifficulty === 'schwer' || selectedDifficulty === 'extrem' || selectedDifficulty === 'expert') {
+                console.log(selectedDifficulty)
                 window.location.href = 'index2.html';
             } else {
                 window.location.href = 'index.html';
@@ -96,8 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Quiz-Seite
     let currentQuestionIndex = 0;
     let correctCount = 0;
-    const totalQuestions = 4;
-    
+    let askedQuestions = [];
+    const totalQuestions = 20;
 
     function getRandomQuestion() {
         const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
@@ -109,12 +136,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (selectedDifficulty && selectedDifficulty !== 'alle') {
-            if (selectedDifficulty === 'schwer' || selectedDifficulty === 'extrem') {
-                filteredQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
+            let expertQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'expert');
+            let extremQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'extrem');
+            let schwerQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'schwer');
+            let mittelQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'mittel');
+            let leichtQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'leicht');
+
+            let questionsPool = [];
+
+            if (selectedDifficulty === 'expert') {
+                questionsPool = [
+                    ...expertQuestions,
+                    ...extremQuestions.slice(0, Math.floor(extremQuestions.length * 0.3)),
+                    ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.1))
+                ];
+            } else if (selectedDifficulty === 'extrem') {
+                questionsPool = [
+                    ...extremQuestions,
+                    ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.3))
+                ];
+            } else if (selectedDifficulty === 'schwer') {
+                questionsPool = [
+                    ...schwerQuestions,
+                    ...mittelQuestions.slice(0, Math.floor(schwerQuestions.length * 0.4))
+                ];
             } else if (selectedDifficulty === 'mittel') {
-                filteredQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'mittel');
+                questionsPool = [
+                    ...mittelQuestions,
+                    ...schwerQuestions.slice(0, Math.floor(mittelQuestions.length * 0.4))
+                ];
             } else {
-                filteredQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
+                questionsPool = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
+            }
+
+            if (questionsPool.length > 0) {
+                filteredQuestions = questionsPool;
             }
         }
 
@@ -122,7 +178,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return null;
         }
 
-        return filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
+        filteredQuestions = filteredQuestions.filter(q => !askedQuestions.includes(q.Frage));
+
+        if (filteredQuestions.length === 0) {
+            return null;
+        }
+
+        const question = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
+        askedQuestions.push(question.Frage);
+        return question;
     }
 
     function setDifficultyBlocks(difficulty) {
@@ -142,6 +206,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'extrem':
                 difficultyLevel = 4;
+                break;
+            case 'expert':
+                difficultyLevel = 5;
                 break;
             default:
                 difficultyLevel = 0;
@@ -234,4 +301,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.next-button').addEventListener('click', loadQuestion);
 
     loadQuestion();
+});
+
+document.getElementById("animated-button").addEventListener("mousedown", function() {
+    navigator.vibrate(200); // Vibriert für 200 Millisekunden
 });

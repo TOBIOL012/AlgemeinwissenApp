@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const rankingContainer = document.getElementById('ranking-container');
     const nextRoundButton = document.getElementById('next-round-button');
     const players = JSON.parse(localStorage.getItem('players')) || [];
-    const totalQuestionsPerPlayer = players[0].questionCount;
+
+    let questionsAsked = localStorage.getItem('questionsAsked') ? parseInt(localStorage.getItem('questionsAsked')) : 0;
+    questionsAsked = 0;
+    localStorage.setItem('questionsAsked', questionsAsked);
 
     function updateRanking() {
         // Sortiere die Spieler nach Punkten absteigend
@@ -36,13 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     nextRoundButton.addEventListener('click', function() {
-        // Überprüfen, ob alle Fragen beantwortet wurden
-        const allQuestionsAnswered = players.every(player => player.questionsAnswered >= totalQuestionsPerPlayer);
-        if (allQuestionsAnswered) {
-            window.location.href = 'startseite.html';
-        } else {
-            window.location.href = 'fragen-mehrspieler.html';
-        }
+        window.location.href = 'belohnung-mehrspieler.html';
     });
 
     updateRanking();

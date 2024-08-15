@@ -5,15 +5,13 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #303031;
+    background-color: var(--background-color);
 }
 
 header {
-    background-color: #303031;
-    padding: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 0px;
+    background-color: var(--background-color);
+    padding: 5%;
+    padding-bottom: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,11 +23,11 @@ header {
 }
 
 .progress-bar {
-    background-color: #484848;
+    background-color: #20323b;
     border-radius: 25px;
     overflow: hidden;
     width: 100%;
-    height: 15px;
+    height: 1.3em;
 }
 
 .progress {
@@ -55,13 +53,12 @@ header {
 }
 
 .category-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
+    width: 1.8em;
+    margin-right: 10px;
 }
 
 .category-text {
-    font-size: 1em;
+    font-size: 1.4em;
     color: #e48d45;
     text-decoration: none;
 }
@@ -74,11 +71,19 @@ header {
 }
 
 .difficulty-block {
-    width: 4px;
-    height: 14px;
+    width: 0.4em;
+    height: 1.8em;
+    background-color: #5EFC8D;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.difficulty-block {
+    width: 0.4em;
+    height: 1.2em;
     margin-left: 5px;
     border-radius: 5px;
-    background-color: #303031; /* Standardfarbe */
+    background-color: #141F25; /* Standardfarbe */
 }
 
 .difficulty-block.leicht {
@@ -102,9 +107,17 @@ header {
     align-items: center;
 }
 
-.home-button img {
-    height: 25px;
-    margin-right: 15px;
+.home-button{
+    height: var(--icon-size);
+    width: var(--icon-size);
+    margin-right: 1em;
+    filter: invert(0%);
+}
+
+.home-button img{
+    height: var(--icon-size);
+    width: var(--icon-size);
+    margin-right: 1em;
     filter: invert(0%);
 }
 
@@ -125,14 +138,14 @@ main {
 }
 
 .question {
-    padding: 20px;
-    font-size: 1.2em;
+    padding: 1em;
+    font-size: var(--font-size-question);
     color: white;
-    background-color: #303031;
+    background-color: var(--background-color);
     border-radius: 20px;
-    width: calc(90% - 40px);
+    width: calc(90% - 2em);
     margin-left: 5%;
-    outline: 2px solid #484848;
+    outline: 3px solid var(--line-color);
 }
 
 .answers {
@@ -144,20 +157,20 @@ main {
 }
 
 .answer {
-    background-color: #303031;
+    background-color: var(--background-color);
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: var(--font-size-question);
     width: 90%;
-    outline: 2px solid #484848;
+    outline: 3px solid var(--line-color);
     font-family: "Dosis", sans-serif;
 }
 
 .answer:hover {
-    background-color: #484848;
+    background-color: var(--line-color);
 }
 
 .answer:active {
@@ -165,97 +178,183 @@ main {
 }
 
 .answer-typed {
+    display: flex;
     padding-left: 5%;
     padding-right: 5%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .text-input {
-    margin-right: 3%;
     border-radius: 25px;
-    background-color: #303031;
+    background-color: var(--background-color);
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 0.6em 0.7em;
     border-radius: 20px;
-    font-size: 1em;
-    width: 90%;
-    outline: 2px solid #484848;
+    font-size: var(--font-size-question);
+    width: calc(90vw - 4.8em);
+    font-family: "Dosis", sans-serif;
+    outline: 3px solid var(--line-color);
     transition: background-color 0.3s;
 }
 
 .text-input.correct {
-    background-color: #303031; /* Rot für falsch */
-    outline-color: #5EFC8D;
+    background-color: var(--background-color); /* Rot für falsch */
+    outline-color: #3df574;
 }
 
 .text-input.incorrect {
-    background-color: #303031; /* Rot für falsch */
-    outline-color: #E55E5E;
-}
-
-.mic-button {
-    background-color: #303031;
-    border-radius: 25px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    outline: 2px solid #484848;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
-}
-
-.mic-button img {
-    width: 19px;
-    height: 19px;
+    background-color: var(--background-color); /* Rot für falsch */
+    outline-color: #e92f2f;
 }
 
 .mic-button.correct {
-    background-color: #303031; /* Rot für falsch */
-    outline-color: #5EFC8D;
+    background-color: #40b062;
+    box-shadow: 0px 6px 0px 0px rgb(43, 88, 49);
 }
 
 .mic-button.incorrect {
-    background-color: #303031; /* Rot für falsch */
-    outline-color: #E55E5E;
+    background-color: #b42727;
+    box-shadow: 0px 6px 0px 0px rgb(110, 19, 19);
+}
+
+.mic-button {
+    margin-left: 0.5em;
+    background-color: #38424b;
+    color: white;
+    border: none;
+    padding: 0.3em 0.5em;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 1.6em;
+    font-family: "Dosis", sans-serif;
+    box-shadow: 0px 6px 0px 0px rgb(38, 46, 49);
+}
+
+.mic-button:active {
+    box-shadow: none;
+    transform: translateY(6px);
+}
+
+.mic-button img {
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.volume-bars {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; /* Höhe der Balken */
+    max-height: 1em;
+    margin-bottom: 20px; /* Abstand zum "Weiter"-Button */
+    width: 10em;
+}
+
+.bar {
+    height: 5px;
+    width: 1em; /* Breite jedes Balkens */
+    background-color: #ffffff; /* Farbe der Balken */
+    border-radius: 0.7em;
+    transition: height 0.1s; /* Glatte Übergänge bei Höhenänderungen */
+}
+
+.bars-content {
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: calc(5em + 3em + var(--font-size-question));
+}
+
+.fact {
+    color: white;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-align: left;
+    padding: 0 10%;
+    margin-bottom: 1.4em;
 }
 
 .correct-answer {
     display: block; /* Stelle sicher, dass die Antwort immer angezeigt wird, wenn sie angezeigt werden soll */
     color: white;
+    font-size: 1.4em;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 0.4em;
+    text-align: left;
+    padding: 0 10%;
+    margin-bottom: 1em;
+    margin-top: 0.5em; 
 }
 
 .next-button-wrapper {
+    transform: translateY(100%);
     position: fixed;
     bottom: 0;
     align-items: center;
     width: 100%;
     justify-content: center;
-    background-color: #303031;
-    padding: 10px 0;
+    background-color: var(--background-color);;
+    padding: 0 0;
+    padding-bottom: 6em;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid var(--line-color);
+    transition: transform 0.3s ease;
+}
+
+.next-button-wrapper.correct {
+    display: block;
+    transform: translateY(0px);
+}
+
+.next-button-wrapper.incorrect {
+    transform: translateY(0px);
+    display: block;
+}
+
+.next-button-wrapper.no-transition {
+    transition:none;
 }
 
 #next-button {
-    background-color: #e48d45;
     color: white;
     border: none;
     padding: 10px 20px;
+    background-color: #38424b;
+    box-shadow: 0px 6px 0px 0px rgb(38, 46, 49);
     border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
     width: 90%; /* Breite auf 90% der Seite eingestellt */
     font-family: "Dosis", sans-serif;
-    outline: 2px solid #484848;
-    outline-offset: -4px;
+    position: fixed;
+    margin-bottom:2em;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+#next-button.active{
+    background-color: var(--button-color);
+    box-shadow: 0px 6px 0px 0px rgb(146, 65, 7);
+}
+
+#next-button.correct{
+    background-color: #40b062;
+    box-shadow: 0px 6px 0px 0px rgb(43, 88, 49);
+}
+
+#next-button.incorrect{
+    background-color: #b42727;
+    box-shadow: 0px 6px 0px 0px rgb(110, 19, 19);
 }
 
 #next-button:not([disabled]) {
-    background-color: #e48d45; /* Hintergrundfarbe für aktiven Zustand */
     color: white; /* Textfarbe für aktiven Zustand */
     cursor: pointer; /* Zeigt an, dass der Button klickbar ist */
 }

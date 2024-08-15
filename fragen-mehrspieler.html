@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allgemeinwissen Quiz App - Mehrspieler</title>
     <link rel="stylesheet" href="fragen-mehrspieler.css">
-    <script src="questions.js" defer></script> <!-- Stellt sicher, dass questions.js eingebunden ist -->
+    <script src="questions.js" defer></script>
     <script src="fragen-mehrspieler.js" defer></script>
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
     <header>
         <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
         
         <div class="player-info">
-            <div class="current-player"></div> <!-- Entferne den statischen Namen -->
-            <div class="question-status">1/6</div> <!-- Dies wird dynamisch aktualisiert -->
+            <div class="current-player"></div>
+            <div class="question-status"></div>
         </div>
         
     </header>

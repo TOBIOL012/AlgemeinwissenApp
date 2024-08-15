@@ -7,6 +7,7 @@ body {
     text-align: center;
     background-color: #303031;
     color: white;
+    flex-direction: column;
 }
 
 main {
@@ -18,22 +19,14 @@ main {
     box-sizing: border-box;
 }
 
-header {
-    width: 75%;
-    max-width: 20em;
-    text-align: left;
-    margin-top: 15%;
-}
-
 .Überschrift {
-    font-size: 2em;
-    margin: 0;
-    display: block;
+    font-size: 1.8em;
 }
 
-.Unterüberschrift {
-    font-size: 1em;
-    display: block;
+header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #buttons-container {
