@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141F25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    width: 100%;
+}
+
+.difficulty-button1,
+.difficulty-button2,
+.difficulty-button3,
+.difficulty-button4,
+.difficulty-button5 {
+    background-color: #38424b;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 1.6em;
+    font-family: "Dosis", sans-serif;
+    width: 90%;
+    box-shadow: 0px 6px 0px 0px rgb(38, 46, 49);
+}
+
+.difficulty-button1 {
+    color: #5EFC8D ;
+}
+
+.difficulty-button2 {
+    color: #E5E55E ;
+}
+
+.difficulty-button3 {
+    color: #E58A5E ;
+}
+
+.difficulty-button4 {
+    color: #E55E5E;
+}
+
+.difficulty-button5 {
+    color: #d969e7;
+}
+
+.difficulty-button1:active,
+.difficulty-button2:active,
+.difficulty-button3:active,
+.difficulty-button4:active {
+    box-shadow: none;
+    transform: translateY(6px);
+}

@@ -1,6 +1,1031 @@
 const questions = [
 
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+
+    { //Anzahl der Ozeane
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Ozeane gibt es auf der Erde?",
+        "Antworten": ["3", "4", "5", "6"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Es gibt fünf Ozeane auf der Erde: den Pazifischen Ozean, den Atlantischen Ozean, den Indischen Ozean, den Arktischen Ozean und den Südlichen Ozean"
+    },
+    { //Größter Ozean der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der größte Ozean der Welt?",
+        "Antworten": ["Atlantischer Ozean", "Indischer Ozean", "Pazifischer Ozean", "Arktischer Ozean"],
+        "RichtigeAntwort": "Pazifischer Ozean",
+        "RichtigeAntwortMöglichkeiten": "Pazifischer Pazifik",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Pazifische Ozean ist mit einer Fläche von etwa 168 Millionen Quadratkilometern der größte Ozean der Welt"
+    },
+    { //Kleinster Ozean der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der kleinste Ozean der Welt?",
+        "Antworten": ["Indischer Ozean", "Südlicher Ozean", "Arktischer Ozean", "Atlantischer Ozean"],
+        "RichtigeAntwort": "Arktischer Ozean",
+        "RichtigeAntwortMöglichkeiten": "Arktischer Ozean",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Arktische Ozean hat trotzdem eine Fläche von etwa 14 Millionen Quadratkilometern"
+    },
+    { //Größe des Pazifischen Ozeans
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Pazifische Ozean?",
+        "Antworten": ["105 Millionen km²", "165 Millionen km²", "198 Millionen km²", "234 Millionen km²"],
+        "RichtigeAntwort": "165 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "165 Millionen km²",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Pazifische Ozean ist mit etwa 165 Millionen Quadratkilometern der größte Ozean der Welt"
+    },
+    { //Wasserstrom im Pazifik
+        "Kategorie": "Geographie",
+        "Frage": "Welcher große Wasserstrom fließt durch den Pazifischen Ozean?",
+        "Antworten": ["Golfstrom", "Humboldtstrom", "Nordatlantikstrom", "Ostgrönlandstrom"],
+        "RichtigeAntwort": "Humboldtstrom",
+        "RichtigeAntwortMöglichkeiten": "Humboldtstrom",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Humboldtstrom ist ein kalter Meeresstrom, der entlang der Westküste Südamerikas durch den Pazifischen Ozean fließt"
+    },
+    { //Pazifik Bedeutung des Namens
+        "Kategorie": "Geographie",
+        "Frage": "Was bedeutet der Name 'Pazifik'?",
+        "Antworten": ["Stürmischer Ozean", "Friedlicher Ozean", "Großer Ozean", "Tiefer Ozean"],
+        "RichtigeAntwort": "Friedlicher Ozean",
+        "RichtigeAntwortMöglichkeiten": "Friedlicher Ozean",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Name 'Pazifik' kommt vom lateinischen 'Mare Pacificum', was 'Friedlicher Ozean' bedeutet"
+    },
+    { //Tiefster Punkt im Marianengraben
+        "Kategorie": "Geographie",
+        "Frage": "Wie tief ist der tiefste Punkt des Marianengrabens?",
+        "Antworten": ["8.848 Meter", "10.994 Meter", "11.034 Meter", "12.000 Meter"],
+        "RichtigeAntwort": "11.034 Meter",
+        "RichtigeAntwortMöglichkeiten": "11.034 Meter",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der tiefste Punkt des Marianengrabens, bekannt als das Challenger-Tief, liegt etwa 11.034 Meter unter dem Meeresspiegel"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Größe des Atlantischen Ozeans
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Atlantische Ozean?",
+        "Antworten": ["85 Millionen km²", "90 Millionen km²", "100 Millionen km²", "110 Millionen km²"],
+        "RichtigeAntwort": "85 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "85 Millionen km²",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Atlantische Ozean  ist der zweitgrößte Ozean der Welt"
+    },
+    { //Tiefster Punkt des Atlantiks
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der tiefste Punkt des Atlantischen Ozeans?",
+        "Antworten": ["Puerto-Rico-Graben", "Tonga-Graben", "Süd-Sandwich-Graben", "Java-Graben"],
+        "RichtigeAntwort": "Puerto-Rico-Graben",
+        "RichtigeAntwortMöglichkeiten": "Puerto-Rico-Graben",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Puerto-Rico-Graben ist mit etwa 8.376 Metern der tiefste Punkt des Atlantischen Ozeans"
+    },
+    { //Längster Fluss mündet in den Atlantik
+        "Kategorie": "Geographie",
+        "Frage": "Welcher der längsten Flüsse der Welt mündet in den Atlantischen Ozean?",
+        "Antworten": ["Nil", "Amazonas", "Jangtsekiang", "Mississippi"],
+        "RichtigeAntwort": "Amazonas",
+        "RichtigeAntwortMöglichkeiten": "Amazonas",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Amazonas, der zweitlängste Fluss der Welt, mündet in den Atlantischen Ozean"
+    },
+    { //Wasserstrom im Atlantik
+        "Kategorie": "Geographie",
+        "Frage": "Welcher große Wasserstrom fließt durch den Atlantischen Ozean?",
+        "Antworten": ["Golfstrom", "Humboldtstrom", "Nordatlantikstrom", "Ostgrönlandstrom"],
+        "RichtigeAntwort": "Golfstrom",
+        "RichtigeAntwortMöglichkeiten": "Golfstrom",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Golfstrom ist ein starker Meeresstrom, der warmes Wasser aus dem Golf von Mexiko in den Nordatlantik transportiert"
+    },
+    { //Bedeutung des Namens Atlantik
+        "Kategorie": "Geographie",
+        "Frage": "Was bedeutet der Name 'Atlantik'?",
+        "Antworten": ["Stürmischer Ozean", "Ozean des Atlas", "Großer Ozean", "Tiefer Ozean"],
+        "RichtigeAntwort": "Ozean des Atlas",
+        "RichtigeAntwortMöglichkeiten": " Atlas",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Name 'Atlantik' leitet sich vom griechischen Gott Atlas ab und bedeutet 'Ozean des Atlas'"
+    },
+    { //Anzahl der Kontinente, die an den Atlantik grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Kontinente grenzen an den Atlantischen Ozean?",
+        "Antworten": ["3", "4", "5", "6"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Vier Kontinente grenzen an den Atlantischen Ozean: Nordamerika, Südamerika, Europa und Afrika"
+    },
+    { //Größte Insel im Atlantik
+        "Kategorie": "Geographie",
+        "Frage": "Welche ist die größte Insel im Atlantischen Ozean?",
+        "Antworten": ["Grönland", "Island", "Großbritannien", "Madagaskar"],
+        "RichtigeAntwort": "Grönland",
+        "RichtigeAntwortMöglichkeiten": "Grönland",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Grönland ist die größte Insel im Atlantischen Ozean und die größte Insel der Welt"
+    },
+    { //Mid-Atlantic Ridge
+        "Kategorie": "Geographie",
+        "Frage": "Was ist der Mid-Atlantic Ridge?",
+        "Antworten": ["Ein Gebirge auf dem Meeresboden", "Ein großer Meeresstrom", "Ein Tiefseegraben", "Ein unterseeischer Vulkan"],
+        "RichtigeAntwort": "Ein Gebirge auf dem Meeresboden",
+        "RichtigeAntwortMöglichkeiten": "Ein Gebirge auf dem Meeresboden",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Mid-Atlantic Ridge ist ein Gebirge auf dem Meeresboden, das sich über den gesamten Atlantischen Ozean erstreckt und eine bedeutende divergente Plattengrenze darstellt"
+    },
+    { //Entdeckung des Atlantischen Ozeans
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Entdecker überquerte den Atlantischen Ozean 1492?",
+        "Antworten": ["Vasco da Gama", "Ferdinand Magellan", "Christopher Columbus", "James Cook"],
+        "RichtigeAntwort": "Christopher Columbus",
+        "RichtigeAntwortMöglichkeiten": "Christopher Columbus",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Christopher Columbus überquerte den Atlantischen Ozean im Jahr 1492 und entdeckte die Neue Welt"
+    },
+    { //Berühmte Seewege im Atlantik
+        "Kategorie": "Geographie",
+        "Frage": "Welcher berühmte Seeweg verbindet den Atlantischen Ozean mit dem Pazifischen Ozean?",
+        "Antworten": ["Suezkanal", "Panamakanal", "Nordwestpassage", "Straße von Gibraltar"],
+        "RichtigeAntwort": "Panamakanal",
+        "RichtigeAntwortMöglichkeiten": "Panamakanal",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Panamakanal ist ein berühmter Seeweg, der den Atlantischen Ozean mit dem Pazifischen Ozean verbindet"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Größe des Indischen Ozeans
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Indische Ozean?",
+        "Antworten": ["50 Millionen km²", "70 Millionen km²", "90 Millionen km²", "110 Millionen km²"],
+        "RichtigeAntwort": "70 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "70 Millionen km²",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Indische Ozean erstreckt sich über eine Fläche von etwa 70 Millionen Quadratkilometern"
+    },
+    { //Begrenzende Kontinente des Indischen Ozeans
+        "Kategorie": "Geographie",
+        "Frage": "Welche Kontinente grenzen an den Indischen Ozean?",
+        "Antworten": ["Afrika und Asien", "Asien und Australien", "Afrika, Asien und Australien", "Afrika, Europa und Asien"],
+        "RichtigeAntwort": "Afrika, Asien und Australien",
+        "RichtigeAntwortMöglichkeiten": "Afrika, Asien und Australien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Indische Ozean wird von drei Kontinenten umgeben: Afrika, Asien und Australien"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    { //Größter See der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welcher See ist der größte der Welt (nach Fläche)?",
+        "Antworten": ["Baikalsee", "Victoriasee", "Kaspisches Meer", "Oberer See"],
+        "RichtigeAntwort": "Kaspisches Meer",
+        "RichtigeAntwortMöglichkeiten": "Kaspisches Meer",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Kaspische Meer ist mit einer Fläche von etwa 371.000 Quadratkilometern der größte See der Welt"
+    },
+    { //Anrainerstaaten des Kaspischen Meeres
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder grenzen an das Kaspische Meer?",
+        "Antworten": ["3", "4", "5", "6"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Fünf Länder grenzen an das Kaspische Meer: Russland, Kasachstan, Turkmenistan, Iran und Aserbaidschan"
+    },
+    { //Hauptzuflüsse des Kaspischen Meeres
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Fluss ist der Hauptzufluss des Kaspischen Meeres?",
+        "Antworten": ["Donau", "Wolga", "Amur", "Jenissei"],
+        "RichtigeAntwort": "Wolga",
+        "RichtigeAntwortMöglichkeiten": "Wolga",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Wolga ist der Hauptzufluss des Kaspischen Meeres und der längste Fluss Europas"
+    },
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+    { //Höchstes Gebirge der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches Gebirge ist das höchste der Welt?",
+        "Antworten": ["Anden", "Rocky Mountains", "Himalaya", "Alpen"],
+        "RichtigeAntwort": "Himalaya",
+        "RichtigeAntwortMöglichkeiten": "Himalaya",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Himalaya ist das höchste Gebirge der Welt und beherbergt den Mount Everest"
+    },
+    { //Tierspezies im Himalaya
+        "Kategorie": "Geographie",
+        "Frage": "Welche seltene Tierspezies ist im Himalaya heimisch?",
+        "Antworten": ["Schneeleopard", "Polarfuchs", "Koala", "Komodowaran"],
+        "RichtigeAntwort": "Schneeleopard",
+        "RichtigeAntwortMöglichkeiten": "Schneeleopard",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Schneeleopard ist eine seltene Tierspezies, die im Himalaya-Gebirge heimisch ist"
+    },
+    { //Himalaya-Mythen
+        "Kategorie": "Geographie",
+        "Frage": "Welches mythische Wesen soll im Himalaya leben?",
+        "Antworten": ["Bigfoot", "Chupacabra", "Nessie", "Yeti"],
+        "RichtigeAntwort": "Yeti",
+        "RichtigeAntwortMöglichkeiten": "Yeti",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Yeti, auch bekannt als der 'Schneemensch', ist ein mythisches Wesen, das angeblich im Himalaya lebt"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Amazonas-Regenwald
+        "Kategorie": "Geographie",
+        "Frage": "Auf welchem Kontinent liegt der Amazonas-Regenwald?",
+        "Antworten": ["Afrika", "Asien", "Südamerika", "Australien"],
+        "RichtigeAntwort": "Südamerika",
+        "RichtigeAntwortMöglichkeiten": "Südamerika",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Amazonas-Regenwald liegt in Südamerika und erstreckt sich über mehrere Länder"
+    },
+
+    { //Größe des Amazonas-Regenwaldes
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Amazonas-Regenwald?",
+        "Antworten": ["2,5 Millionen km²", "6 Millionen km²", "1 Millionen km²", "65 Millionen km²"],
+        "RichtigeAntwort": "6 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "6 Millionen km²",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Amazonas-Regenwald erstreckt sich über etwa 6 Millionen Quadratkilometer und ist der größte Regenwald der Welt"
+    },
+    { //Durchfließender Fluss
+        "Kategorie": "Geographie",
+        "Frage": "Welcher große Fluss fließt durch den Amazonas-Regenwald?",
+        "Antworten": ["Nil", "Mississippi", "Amazonas", "Ganges"],
+        "RichtigeAntwort": "Amazonas",
+        "RichtigeAntwortMöglichkeiten": "Amazonas",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Amazonas ist der größte Fluss, der durch den Amazonas-Regenwald fließt und hat das größte Einzugsgebiet der Welt"
+    },
+    { //Länder, die den Amazonas-Regenwald teilen
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder teilen sich den Amazonas-Regenwald?",
+        "Antworten": ["6", "7", "8", "9"],
+        "RichtigeAntwort": "9",
+        "RichtigeAntwortMöglichkeiten": "9",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Amazonas-Regenwald erstreckt sich über neun Länder: Brasilien, Peru, Kolumbien, Venezuela, Ecuador, Bolivien, Guyana, Suriname und Französisch-Guayana"
+    },
+    { //Gefährdung des Amazonas-Regenwaldes
+        "Kategorie": "Geographie",
+        "Frage": "Welche Hauptgefahr bedroht den Amazonas-Regenwald?",
+        "Antworten": ["Erdbeben", "Tsunamis", "Abholzung", "Vulkanausbrüche"],
+        "RichtigeAntwort": "Abholzung",
+        "RichtigeAntwortMöglichkeiten": "Abholzung",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Abholzung ist die größte Bedrohung für den Amazonas-Regenwald, was zu erheblichen Umweltproblemen führt"
+    },
+    { //Indigene Völker im Amazonas-Regenwald
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele indigene Völker leben im Amazonas-Regenwald?",
+        "Antworten": ["Mehr als 100", "ungefähr 40", "Mehr als 300", "Mehr als 10.000"],
+        "RichtigeAntwort": "Mehr als 300",
+        "RichtigeAntwortMöglichkeiten": "Mehr als 300",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Im Amazonas-Regenwald leben mehr als 300 indigene Völker, die in Harmonie mit der Natur leben"
+    },
+    { //Nutztier des Amazonas-Regenwalds
+        "Kategorie": "Geographie",
+        "Frage": "Welches Tier ist bekannt dafür, große Gebiete des Amazonas-Regenwalds zu bewohnen und zu nutzen?",
+        "Antworten": ["Jaguar", "Elefant", "Känguru", "Fuchs"],
+        "RichtigeAntwort": "Jaguar",
+        "RichtigeAntwortMöglichkeiten": "Jaguar",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Jaguar ist eines der größten Raubtiere im Amazonas-Regenwald und spielt eine wichtige Rolle im Ökosystem"
+    },
+    { //Andere Bezeichnung für den Amazonas-Regenwald
+        "Kategorie": "Geographie",
+        "Frage": "Wie wird der Amazonas-Regenwald noch genannt?",
+        "Antworten": ["Der grüne Riese", "Die grüne Wüste", "Die Lunge der Erde", "Der grüne Ozean"],
+        "RichtigeAntwort": "Die Lunge der Erde",
+        "RichtigeAntwortMöglichkeiten": "Die Lunge der Erde",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Amazonas-Regenwald wird oft als 'Lunge der Erde' bezeichnet, weil er eine große Menge Sauerstoff produziert"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Meisten Inseln
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die meisten Inseln der Welt?",
+        "Antworten": ["Indonesien", "Philippinen", "Kanada", "Schweden"],
+        "RichtigeAntwort": "Schweden",
+        "RichtigeAntwortMöglichkeiten": "Schweden",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Schweden hat die meisten Inseln der Welt mit etwa 267.570 Inseln"
+    },
+    { //Atacama-Wüste
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land liegt die Atacama-Wüste, die trockenste Wüste der Welt?",
+        "Antworten": ["Tansania", "China", "Chile", "Äthiopien"],
+        "RichtigeAntwort": "Chile",
+        "RichtigeAntwortMöglichkeiten": "Chile",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Atacama-Wüste wird für wissenschaftliche Forschung genutzt, da ihre Bedingungen denen auf dem Mars ähneln"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Salzhaltigstes Meer
+        "Kategorie": "Geographie",
+        "Frage": "Welches Meer ist das salzhaltigste der Welt?",
+        "Antworten": ["Mittelmeer", "Rotes Meer", "Tote Meer", "Kaspisches Meer"],
+        "RichtigeAntwort": "Tote Meer",
+        "RichtigeAntwortMöglichkeiten": "Tote Meer",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das Tote Meer hat einen Salzgehalt von etwa 30%"
+    },
+    { //Lage des Toten Meeres
+        "Kategorie": "Geographie",
+        "Frage": "Zwischen welchen zwei Ländern liegt das Tote Meer?",
+        "Antworten": ["Israel und Jordanien", "Ägypten und Libyen", "Syrien und Irak", "Saudi-Arabien und Kuwait"],
+        "RichtigeAntwort": "Israel und Jordanien",
+        "RichtigeAntwortMöglichkeiten": "Israel Jordanien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Tote Meer ist der tiefste Punkt auf der Erdoberfläche, etwa 430 Meter unter dem Meeresspiegel"
+    },
+    { //Heilende Eigenschaften des Toten Meeres
+        "Kategorie": "Geographie",
+        "Frage": "Welches Element des Toten Meeres wird oft zur Behandlung von Hautkrankheiten genutzt?",
+        "Antworten": ["Wasser", "Sand", "Schlamm", "Luft"],
+        "RichtigeAntwort": "Schlamm",
+        "RichtigeAntwortMöglichkeiten": "Schlamm",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Schlamm des Toten Meeres ist für seine heilenden Eigenschaften bekannt und wird oft zur Behandlung von Hautkrankheiten genutzt"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Größe der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist die Antarktis ungefähr?",
+        "Antworten": ["8 Millionen km²", "14 Millionen km²", "27 Millionen km²", "29 Millionen km²"],
+        "RichtigeAntwort": "14 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "14 Millionen km²",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Antarktis erstreckt sich über eine Fläche von etwa 14 Millionen Quadratkilometern"
+    },
+    { //Kälte der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Wie tief kann die Temperatur in der Antarktis fallen?",
+        "Antworten": ["-40°C", "-270°C", "-80°C", "-100°C"],
+        "RichtigeAntwort": "-80°C",
+        "RichtigeAntwortMöglichkeiten": "-80°C",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Antarktis ist damit der kälteste Ort der Erde"
+    },
+    { //Eisdecke der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Wie viel Prozent der weltweiten Süßwasserreserven sind in der Eisdecke der Antarktis gespeichert?",
+        "Antworten": ["17%", "11%", "70%", "33%"],
+        "RichtigeAntwort": "70%",
+        "RichtigeAntwortMöglichkeiten": "70%",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Etwa 70% der weltweiten Süßwasserreserven sind in der Eisdecke der Antarktis gespeichert"
+    },
+    { //Sonne in der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Wie lange ist die Sonne während des antarktischen Sommers sichtbar?",
+        "Antworten": ["Gar nicht", "24 Stunden", "1 Monat", "6 Monate"],
+        "RichtigeAntwort": "24 Stunden",
+        "RichtigeAntwortMöglichkeiten": "24 Stunden",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Während des antarktischen Sommers ist die Sonne rund um die Uhr sichtbar"
+    },
+    { //Tiere der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Welche Tierart lebt typischerweise in der Antarktis?",
+        "Antworten": ["Pinguine", "Eisbären", "Kamele", "Polarfüchse"],
+        "RichtigeAntwort": "Pinguine",
+        "RichtigeAntwortMöglichkeiten": "Pinguine",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Pinguine sind eine typische Tierart, die in der Antarktis lebt"
+    },
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    { //Kleinster Kontinent der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der kleinste Kontinent der Welt?",
+        "Antworten": ["Europa", "Australien", "Antarktis", "Südamerika"],
+        "RichtigeAntwort": "Australien",
+        "RichtigeAntwortMöglichkeiten": "Australien",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Australien ist der kleinste Kontinent der Welt mit einer Fläche von etwa 7,7 Millionen Quadratkilometern"
+    },
+    { //Größtes Land der Welt nach Fläche
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist das größte der Welt (nach Fläche)?",
+        "Antworten": ["Kanada", "China", "USA", "Russland"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Russland ist das größte Land der Welt und erstreckt sich über elf Zeitzonen"
+    },
+    { //Kontinent der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Auf welchem Kontinent liegt die Antarktis?",
+        "Antworten": ["Asien", "Europa", "Antarktis", "Australien"],
+        "RichtigeAntwort": "Antarktis",
+        "RichtigeAntwortMöglichkeiten": "Antarktis",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Antarktis ist der kälteste und trockenste Kontinent der Erde"
+    },
+    { //Anzahl der Länder auf der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es auf der Welt?",
+        "Antworten": ["96", "127", "525", "195"],
+        "RichtigeAntwort": "195",
+        "RichtigeAntwortMöglichkeiten": "195",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Gerade keine Zeit für einen Fakt"
+    },
+    { //Anzahl der Länder in Afrika
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in Afrika?",
+        "Antworten": ["50", "52", "54", "56"],
+        "RichtigeAntwort": "54",
+        "RichtigeAntwortMöglichkeiten": "54",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Afrika besteht aus 54 souveränen Staaten und ist damit der Kontinent mit den meisten Ländern"
+    },
+    { //Anzahl der Länder in Asien
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in Asien?",
+        "Antworten": ["32", "47", "56", "71"],
+        "RichtigeAntwort": "49",
+        "RichtigeAntwortMöglichkeiten": "49",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Asien besteht aus 49 souveränen Staaten"
+    },
+    { //Anzahl der Länder in Europa
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in Europa?",
+        "Antworten": ["44", "49", "68", "50"],
+        "RichtigeAntwort": "44",
+        "RichtigeAntwortMöglichkeiten": "44",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Europa besteht aus 44 souveränen Staaten"
+    },
+    { //Anzahl der Länder in Nordamerika
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in Nordamerika?",
+        "Antworten": ["9", "23", "14", "3"],
+        "RichtigeAntwort": "23",
+        "RichtigeAntwortMöglichkeiten": "23",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Nordamerika besteht aus 23 souveränen Staaten"
+    },
+    { //Anzahl der Länder in Südamerika
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in Südamerika?",
+        "Antworten": ["5", "12", "22", "16"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 13",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Südamerika besteht aus 12 souveränen Staaten"
+    },
+    { //Anzahl der Länder in Australien und Ozeanien
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in Australien und Ozeanien?",
+        "Antworten": ["3", "14", "4", "43"],
+        "RichtigeAntwort": "14",
+        "RichtigeAntwortMöglichkeiten": "14",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Australien und Ozeanien bestehen aus 14 souveränen Staaten"
+    },
+    { //Anzahl der Länder in der Antarktis
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Länder gibt es in der Antarktis?",
+        "Antworten": ["0", "1", "3", "5"],
+        "RichtigeAntwort": "0",
+        "RichtigeAntwortMöglichkeiten": "0",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Es gibt keine souveränen Staaten in der Antarktis, da der Kontinent durch den Antarktisvertrag international verwaltet wird"
+    },
+    { //Anzahl der Länder in Afrika
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die meisten Länder?",
+        "Antworten": ["Afrika", "Europa", "Asien", "Südamerika"],
+        "RichtigeAntwort": "Afrika",
+        "RichtigeAntwortMöglichkeiten": "Afrika",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Afrika besteht aus 54 souveränen Staaten"
+    },
+    { //Wenigste Länder auf einem Kontinent
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die wenigsten Länder?",
+        "Antworten": ["Europa", "Südamerika", "Australien und Ozeanien", "Antarktis"],
+        "RichtigeAntwort": "Antarktis",
+        "RichtigeAntwortMöglichkeiten": "Antarktis",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Antarktis hat keine souveränen Staaten, da der Kontinent durch den Antarktisvertrag international verwaltet wird"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Meer zwischen Europa und Afrika
+        "Kategorie": "Geographie",
+        "Frage": "Welches Meer liegt zwischen Europa und Afrika?",
+        "Antworten": ["Nordsee", "Ostsee", "Schwarzes Meer", "Mittelmeer"],
+        "RichtigeAntwort": "Mittelmeer",
+        "RichtigeAntwortMöglichkeiten": "Mittelmeer",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Mittelmeer verbindet Europa, Afrika und Asien und war historisch eine wichtige Handelsroute"
+    },
+    { //Fläche des Mittelmeers
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist die Fläche des Mittelmeers?",
+        "Antworten": ["1 Million km²", "2,5 Millionen km²", "4 Millionen km²", "5,5 Millionen km²"],
+        "RichtigeAntwort": "2,5 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "2,5 Millionen km²",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das Mittelmeer erstreckt sich über eine Fläche von etwa 2,5 Millionen Quadratkilometern"
+    },
+    { //Verbindung zu anderen Meeren
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kanal verbindet das Mittelmeer mit dem Roten Meer?",
+        "Antworten": ["Panamakanal", "Suezkanal", "Kielkanal", "Korinthkanal"],
+        "RichtigeAntwort": "Suezkanal",
+        "RichtigeAntwortMöglichkeiten": "Suezkanal",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Dadurch ermöglicht er eine direkte Schifffahrtsroute zwischen Europa und Asien"
+    },
+    { //Umrundende Kontinente
+        "Kategorie": "Geographie",
+        "Frage": "Welche Kontinente grenzen an das Mittelmeer?",
+        "Antworten": ["Europa und Asien", "Asien und Afrika", "Europa, Asien und Afrika", "Europa und Afrika"],
+        "RichtigeAntwort": "Europa, Asien und Afrika",
+        "RichtigeAntwortMöglichkeiten": "Europa, Asien und Afrika",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Mittelmeer wird von drei Kontinenten umgeben: Europa, Asien und Afrika"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Bevölkerungsreichste Kontinent
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent ist der bevölkerungsreichste?",
+        "Antworten": ["Afrika", "Europa", "Asien", "Amerika"],
+        "RichtigeAntwort": "Asien",
+        "RichtigeAntwortMöglichkeiten": "Asien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Asien ist der bevölkerungsreichste Kontinent mit etwa 60% der Weltbevölkerung"
+    },
+    { //Bevölkerungsärmster Kontinent
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent ist der bevölkerungsärmste?",
+        "Antworten": ["Australien und Ozeanien", "Antarktis", "Europa", "Südamerika"],
+        "RichtigeAntwort": "Antarktis",
+        "RichtigeAntwortMöglichkeiten": "Antarktis",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Antarktis hat keine permanente Bevölkerung und ist damit der bevölkerungsärmste Kontinent"
+    },
+    { //Land der tausend Seen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land wird oft als 'Land der tausend Seen' bezeichnet?",
+        "Antworten": ["Schweden", "Kanada", "Finnland", "Norwegen"],
+        "RichtigeAntwort": "Finnland",
+        "RichtigeAntwortMöglichkeiten": "Finnland",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Finnland wird als 'Land der tausend Seen' bezeichnet,da es etwa 188.000 Seen hat"
+    },
+    { //Ozeane um Afrika
+        "Kategorie": "Geographie",
+        "Frage": "Welche zwei Ozeane umgeben Afrika?",
+        "Antworten": ["Atlantischer und Pazifischer Ozean", "Indischer und Pazifischer Ozean", "Atlantischer und Indischer Ozean", "Arktischer und Atlantischer Ozean"],
+        "RichtigeAntwort": "Atlantischer und Indischer Ozean",
+        "RichtigeAntwortMöglichkeiten": "Atlantischer Indischer Atlantik",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Afrika wird vom Atlantischen und Indischen Ozean umgeben"
+    },
+
+    { //Fluss zwischen Mexiko und USA
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Fluss bildet die Grenze zwischen Mexiko und den USA?",
+        "Antworten": ["Mississippi", "Colorado", "Rio Grande", "Missouri"],
+        "RichtigeAntwort": "Rio Grande",
+        "RichtigeAntwortMöglichkeiten": "Rio Grande",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Rio Grande bildet einen natürlichen Grenzverlauf zwischen Mexiko und den USA"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Höchster Berg in Europa
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Berg ist der höchste in Europa?",
+        "Antworten": ["Matterhorn", "Mont Blanc", "Zugspitze", "Elbrus"],
+        "RichtigeAntwort": "Mont Blanc",
+        "RichtigeAntwortMöglichkeiten": "Mont Blanc",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Mont Blanc ist mit 4.810 Metern der höchste Berg in den Alpen und Europa"
+    },
+    { //Höhe des Mont Blanc
+        "Kategorie": "Geographie",
+        "Frage": "Wie hoch ist der Mont Blanc?",
+        "Antworten": ["3.800 Meter", "4.200 Meter", "4.810 Meter", "5.000 Meter"],
+        "RichtigeAntwort": "4.810 Meter",
+        "RichtigeAntwortMöglichkeiten": "4.810 Meter",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Mont Blanc ist mit 4.810 Metern der höchste Berg der Alpen und Westeuropas"
+    },
+    { //Grenze des Mont Blanc
+        "Kategorie": "Geographie",
+        "Frage": "Zwischen welchen Ländern liegt der Mont Blanc?",
+        "Antworten": ["Deutschland und Österreich", "Frankreich und Italien", "Schweiz und Italien", "Frankreich und Schweiz"],
+        "RichtigeAntwort": "Frankreich und Italien",
+        "RichtigeAntwortMöglichkeiten": "Frankreich und Italien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Mont-Blanc-Tunnel ist einer der längsten Straßentunnel der Welt und verbindet Frankreich und Italien unter dem Berg hindurch"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Land der Pyramiden
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist für seine großen Pyramiden bekannt?",
+        "Antworten": ["Mexiko", "Peru", "Ägypten", "Indien"],
+        "RichtigeAntwort": "Ägypten",
+        "RichtigeAntwortMöglichkeiten": "Ägypten",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Ägypten ist weltweit bekannt für seine großen Pyramiden, insbesondere die Pyramiden von Gizeh"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Land südlich von Kanada
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land liegt südlich von Kanada?",
+        "Antworten": ["Mexiko", "Vereinigte Staaten von Amerika", "Grönland", "Kuba"],
+        "RichtigeAntwort": "Vereinigte Staaten von Amerika",
+        "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten von Amerika USA",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Vereinigten Staaten von Amerika liegen südlich von Kanada"
+    },
+    { //See zwischen Israel und Jordanien
+        "Kategorie": "Geographie",
+        "Frage": "Welcher See liegt zwischen Israel und Jordanien?",
+        "Antworten": ["Tiberias-See", "Tote Meer", "Kaspisches Meer", "Tanganjikasee"],
+        "RichtigeAntwort": "Tote Meer",
+        "RichtigeAntwortMöglichkeiten": "Tote Meer",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Tote Meer liegt zwischen Israel und Jordanien und ist bekannt für seinen hohen Salzgehalt"
+    },
+    { //Zeitzonen in Russland
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Zeitzonen gibt es in Russland?",
+        "Antworten": ["7", "9", "11", "6"],
+        "RichtigeAntwort": "11",
+        "RichtigeAntwortMöglichkeiten": "11",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Russland erstreckt sich über 11 Zeitzonen, mehr als jedes andere Land der Welt"
+    },
+
+
+
+    { //Land mit dem höchsten BIP der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat das höchste Bruttoinlandsprodukt (BIP) der Welt?",
+        "Antworten": ["China", "Deutschland", "Japan", "Vereinigte Staaten von Amerika"],
+        "RichtigeAntwort": "Vereinigte Staaten von Amerika",
+        "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten von Amerika USA",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Vereinigten Staaten von Amerika haben das höchste Bruttoinlandsprodukt (BIP) der Welt"
+    },
+    { //Ärmstes Land der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist das ärmste Land der Welt (nach BIP pro Kopf)?",
+        "Antworten": ["Südsudan", "Niger", "Burundi", "Zentralafrikanische Republik"],
+        "RichtigeAntwort": "Burundi",
+        "RichtigeAntwortMöglichkeiten": "Burundi",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Burundi ist das ärmste Land der Welt, gemessen am BIP pro Kopf"
+    },
+
+    { //Kältester Ort der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Was ist der kälteste Ort der Erde?",
+        "Antworten": ["Nordpol", "Mount Everest", "Sibirien", "Ostantarktisches Plateau"],
+        "RichtigeAntwort": "Ostantarktisches Plateau",
+        "RichtigeAntwortMöglichkeiten": "Ostantarktisches Plateau",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Ostantarktische Plateau ist der kälteste Ort der Erde, wo Temperaturen bis zu -93,2°C gemessen wurden"
+    },
+    { //Größte Wüste der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Was ist die größte Wüste der Welt?",
+        "Antworten": ["Sahara", "Gobi", "Antarktische Wüste", "Arktische Wüste"],
+        "RichtigeAntwort": "Antarktische Wüste",
+        "RichtigeAntwortMöglichkeiten": "Antarktische Wüste",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Antarktische Wüste ist die größte Wüste der Welt, obwohl sie aus Eis und Schnee besteht"
+    },
+    { //Anzahl der großen Inseln in Hawaii
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele große Inseln bilden Hawaii?",
+        "Antworten": ["Fünf", "Sechs", "Acht", "Zehn"],
+        "RichtigeAntwort": "Acht",
+        "RichtigeAntwortMöglichkeiten": "Acht",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Hawaii besteht aus acht großen Inseln: Hawai'i, Maui, O'ahu, Kaua'i, Moloka'i, Lāna'i, Ni'ihau und Kaho'olawe"
+    },
+    { //Größter Vulkan der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Wo befindet sich der größte Vulkan der Erde?",
+        "Antworten": ["Island", "Hawaii", "Indonesien", "Japan"],
+        "RichtigeAntwort": "Hawaii",
+        "RichtigeAntwortMöglichkeiten": "Hawaii",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der größte Vulkan der Erde, der Mauna Loa, befindet sich auf Hawaii"
+    },
+    { //Größte Insel der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Was ist die größte Insel der Welt?",
+        "Antworten": ["Neuguinea", "Borneo", "Madagaskar", "Grönland"],
+        "RichtigeAntwort": "Grönland",
+        "RichtigeAntwortMöglichkeiten": "Grönland",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Grönland ist die größte Insel der Welt und befindet sich im Nordatlantik"
+    },
+    { //Anzahl der Zeitzonen in Australien
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Zeitzonen hat Australien?",
+        "Antworten": ["Zwei", "Drei", "Vier", "Fünf"],
+        "RichtigeAntwort": "Drei",
+        "RichtigeAntwortMöglichkeiten": "Drei",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Australian Western Standard Time, Australian Central Standard Time und Australian Eastern Standard Time"
+    },
+    { //13 Streifen auf der Flagge der Vereinigten Staaten
+        "Kategorie": "Geographie",
+        "Frage": "Was symbolisieren die 13 Streifen auf der Flagge der Vereinigten Staaten?",
+        "Antworten": ["Die 13 ursprünglichen Kolonien", "Die 13 Gründungsstaaten", "Die 13 Regionen", "Die 13 Präsidenten"],
+        "RichtigeAntwort": "Die 13 ursprünglichen Kolonien",
+        "RichtigeAntwortMöglichkeiten": "Die 13 ursprünglichen Kolonien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die 13 Streifen auf der Flagge der Vereinigten Staaten symbolisieren die 13 ursprünglichen Kolonien, die die Unabhängigkeit erklärten"
+    },
+    { //50 Sterne auf der Flagge der Vereinigten Staaten
+        "Kategorie": "Geographie",
+        "Frage": "Was symbolisieren die 50 Sterne auf der Flagge der Vereinigten Staaten?",
+        "Antworten": ["Die 50 Bundesstaaten", "Die 50 Präsidenten", "Die 50 Jahre", "Die 50 Gründungsmitglieder"],
+        "RichtigeAntwort": "Die 50 Bundesstaaten",
+        "RichtigeAntwortMöglichkeiten": "50 Bundesstaaten Staaten",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die 50 Sterne auf der Flagge der Vereinigten Staaten symbolisieren die 50 Bundesstaaten"
+    },
+    { //Flächenmäßig größter US-Bundesstaat
+        "Kategorie": "Geographie",
+        "Frage": "Was ist der flächenmäßig größte US-Bundesstaat?",
+        "Antworten": ["Texas", "Alaska", "California", "Montana"],
+        "RichtigeAntwort": "Alaska",
+        "RichtigeAntwortMöglichkeiten": "Alaska",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Alaska ist flächenmäßig der größte US-Bundesstaat und fast sieben Mal so groß wie der kleinste Bundesstaat Rhode Island"
+    }, 
+    { //Zugehörigkeit der Kanarischen Inseln
+        "Kategorie": "Geographie",
+        "Frage": "Zu welchem Land gehören die Kanarischen Inseln?",
+        "Antworten": ["Portugal", "Marokko", "Spanien", "Italien"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Kanarischen Inseln gehören zu Spanien und liegen im Atlantischen Ozean, nordwestlich von Afrika"
+    },
+    { //Zweithöchster Berg der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt der zweithöchste Berg der Welt?",
+        "Antworten": ["Kangchenjunga", "Lhotse", "Makalu", "K2"],
+        "RichtigeAntwort": "K2",
+        "RichtigeAntwortMöglichkeiten": "K2",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der K2 ist mit 8.611 Metern der zweithöchste Berg der Welt und liegt im Karakorum-Gebirge an der Grenze zwischen Pakistan und China"
+    },
+    { //Höchstes von Menschenhand geschaffenes Bauwerk
+        "Kategorie": "Geographie",
+        "Frage": "Was ist das höchste von Menschenhand geschaffene Bauwerk, das jemals gebaut wurde?",
+        "Antworten": ["Shanghai Tower", "Abraj Al Bait", "Burj Khalifa in Dubai", "Taipei 101"],
+        "RichtigeAntwort": "Burj Khalifa in Dubai",
+        "RichtigeAntwortMöglichkeiten": "Burj Khalifa in Dubai",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Burj Khalifa in Dubai ist mit einer Höhe von 828 Metern das höchste von Menschenhand geschaffene Bauwerk der Welt"
+    },
+    { //Vom Meer bedeckte Erdoberfläche
+        "Kategorie": "Geographie",
+        "Frage": "Wie viel der Erdoberfläche ist vom Meer bedeckt?",
+        "Antworten": ["57%", "45%", "90%", "71%"],
+        "RichtigeAntwort": "71%",
+        "RichtigeAntwortMöglichkeiten": "71%",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Etwa 71% der Erdoberfläche sind vom Meer bedeckt, was die Ozeane zu einem wesentlichen Bestandteil des globalen Ökosystems macht"
+    },
+    { //Erforschte Ozeane
+        "Kategorie": "Geographie",
+        "Frage": "Wie viel Prozent unserer Ozeane wurden erforscht?",
+        "Antworten": ["5%", "99%", "55%", "19%"],
+        "RichtigeAntwort": "5%",
+        "RichtigeAntwortMöglichkeiten": "5 5% fünf",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Nur 5% unserer Ozeane sind erforscht, was bedeutet, dass der größte Teil der Meere noch immer ein Geheimnis bleibt"
+    },
+
+
+
+
+    { //Durchmesser der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Durchmesser der Erde am Äquator (in km)?",
+        "Antworten": ["5.978km", "12.742km", "2.547km", "14.806km"],
+        "RichtigeAntwort": "12.742km",
+        "RichtigeAntwortMöglichkeiten": "12.742km 12.000km 13.000km 12.500km 12742km 12000km 13000km 12500km",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Durchmesser der Erde am Äquator beträgt etwa 12.742 Kilometer"
+    },
+    { //Oberfläche der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist die gesamte Oberfläche der Erde?",
+        "Antworten": ["100 Millionen km²", "510 Millionen km²", "690 Millionen km²", "710 Millionen km²"],
+        "RichtigeAntwort": "510 Millionen km²",
+        "RichtigeAntwortMöglichkeiten": "510 Millionen km²",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die gesamte Oberfläche der Erde beträgt etwa 510 Millionen Quadratkilometer"
+    },
+    { //Umfang der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Umfang der Erde am Äquator?",
+        "Antworten": ["30.075 km", "40.075 km", "55.075 km", "20.075 km"],
+        "RichtigeAntwort": "40.075 km",
+        "RichtigeAntwortMöglichkeiten": "40.075 km",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Umfang der Erde am Äquator beträgt etwa 40.075 Kilometer"
+    },
+    { //Tiefster Punkt der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Punkt auf der Erde ist der tiefste unter dem Meeresspiegel?",
+        "Antworten": ["Puerto-Rico-Graben", "Marianengraben", "Java-Graben", "Tonga-Graben"],
+        "RichtigeAntwort": "Marianengraben",
+        "RichtigeAntwortMöglichkeiten": "Marianengraben",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Marianengraben im Pazifik ist mit etwa 11.034 Metern unter dem Meeresspiegel der tiefste Punkt der Erde"
+    },
+    { //Durchschnittliche Tiefe der Ozeane
+        "Kategorie": "Geographie",
+        "Frage": "Wie tief sind die Ozeane der Erde im Durchschnitt?",
+        "Antworten": ["2.000 Meter", "3.000 Meter", "3.800 Meter", "4.500 Meter"],
+        "RichtigeAntwort": "3.800 Meter",
+        "RichtigeAntwortMöglichkeiten": "3.800 Meter",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die durchschnittliche Tiefe der Ozeane beträgt etwa 3.800 Meter, was etwa 12.500 Fuß entspricht"
+    },
+    { //Polardurchmesser der Erde
+        "Kategorie": "Geographie",
+        "Frage": "Wie groß ist der Durchmesser der Erde von Pol zu Pol?",
+        "Antworten": ["10.714 km", "12.714 km", "13.714 km", "14.714 km"],
+        "RichtigeAntwort": "12.714 km",
+        "RichtigeAntwortMöglichkeiten": "12.714 km",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Durchmesser der Erde von Pol zu Pol beträgt etwa 12.714 Kilometer"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    { //Bundesstaat mit den meisten Einwohnern
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Bundesstaat der USA hat die meisten Einwohner?",
+        "Antworten": ["New York", "Texas", "Kalifornien", "Florida"],
+        "RichtigeAntwort": "Kalifornien",
+        "RichtigeAntwortMöglichkeiten": "Kalifornien",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Kalifornien ist der bevölkerungsreichste Bundesstaat der USA mit über 39 Millionen Einwohnern"
+    },
+    { //Fluss durch Colorado
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Fluss fließt durch den Bundesstaat Colorado und den Grand Canyon?",
+        "Antworten": ["Mississippi", "Colorado", "Rio Grande", "Missouri"],
+        "RichtigeAntwort": "Colorado",
+        "RichtigeAntwortMöglichkeiten": "Colorado",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Colorado River fließt durch den Bundesstaat Colorado und den Grand Canyon in Arizona"
+    },
+    { //Bundesstaat mit dem Grand Canyon
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Bundesstaat befindet sich der Grand Canyon?",
+        "Antworten": ["Nevada", "Arizona", "Utah", "Colorado"],
+        "RichtigeAntwort": "Arizona",
+        "RichtigeAntwortMöglichkeiten": "Arizona",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Grand Canyon befindet sich im Bundesstaat Arizona und ist eines der sieben Weltwunder der Natur"
+    },
+    { //Hauptstadt von New York
+        "Kategorie": "Geographie",
+        "Frage": "Was ist die Hauptstadt von New York?",
+        "Antworten": ["New York City", "Buffalo", "Albany", "Rochester"],
+        "RichtigeAntwort": "Albany",
+        "RichtigeAntwortMöglichkeiten": "Albany",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Obwohl New York City die bekannteste Stadt ist ist sie nicht die Hauptstadt New Yorks"
+    },
+    { //Bundesstaat mit der größten Wüste
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Bundesstaat befindet sich die größte Wüste der USA die Mojave-Wüste?",
+        "Antworten": ["Nevada", "Arizona", "Kalifornien", "New Mexico"],
+        "RichtigeAntwort": "Kalifornien",
+        "RichtigeAntwortMöglichkeiten": "Kalifornien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Mojave-Wüste, die größte Wüste der USA, befindet sich größtenteils in Kalifornien"
+    },
+    { //Höchster Berg in den USA
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der höchste Berg in den USA?",
+        "Antworten": ["Mount Whitney", "Mount Rainier", "Mount Elbert", "Denali"],
+        "RichtigeAntwort": "Denali",
+        "RichtigeAntwortMöglichkeiten": "Denali",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Denali, auch bekannt als Mount McKinley, ist mit 6.190 Metern der höchste Berg in den USA und befindet sich in Alaska"
+    },
+    { //Anzahl der Bundesstaaten in den USA
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Bundesstaaten gibt es in den USA?",
+        "Antworten": ["48", "49", "50", "51"],
+        "RichtigeAntwort": "50",
+        "RichtigeAntwortMöglichkeiten": "50",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Vereinigten Staaten bestehen aus 50 Bundesstaaten"
+    },
+    { //Neueste Bundesstaat der USA
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der neueste Bundesstaat der USA?",
+        "Antworten": ["Hawaii", "Alaska", "Arizona", "New Mexico"],
+        "RichtigeAntwort": "Hawaii",
+        "RichtigeAntwortMöglichkeiten": "Hawaii",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Hawaii ist der neueste Bundesstaat der USA und trat der Union 1959 bei"
+    },
+    { //Kleinster Bundesstaat nach Fläche
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der flächenmäßig kleinste Bundesstaat der USA?",
+        "Antworten": ["Delaware", "Rhode Island", "Connecticut", "New Jersey"],
+        "RichtigeAntwort": "Rhode Island",
+        "RichtigeAntwortMöglichkeiten": "Rhode Island",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Rhode Island ist der flächenmäßig kleinste Bundesstaat der USA"
+    },
+    { //Bundesstaatenanzahl bei Gründung
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Bundesstaaten gab es bei der Gründung der USA?",
+        "Antworten": ["10", "13", "15", "17"],
+        "RichtigeAntwort": "13",
+        "RichtigeAntwortMöglichkeiten": "13",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Bei der Gründung der USA im Jahr 1776 gab es 13 ursprüngliche Bundesstaaten, bekannt als die ursprünglichen Kolonien"
+    },
+    { //Bundesstaat mit der längsten Küstenlinie
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Bundesstaat der USA hat die längste Küstenlinie?",
+        "Antworten": ["Kalifornien", "Florida", "Texas", "Alaska"],
+        "RichtigeAntwort": "Alaska",
+        "RichtigeAntwortMöglichkeiten": "Alaska",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Alaska hat die längste Küstenlinie aller Bundesstaaten der USA"
+    },
+    { //Einziger Bundesstaat mit einer Inselkette
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Bundesstaat der USA ist eine Inselkette?",
+        "Antworten": ["Hawaii", "Florida", "Kalifornien", "Texas"],
+        "RichtigeAntwort": "Hawaii",
+        "RichtigeAntwortMöglichkeiten": "Hawaii",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Hawaii ist der einzige Bundesstaat der USA, der aus einer Inselkette besteht"
+    },
+
+
+
+
+
+
+
+    
+    
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     ////////////////////////////// SÜD-AMERIKA //////////////////////////////
 
     { //Hauptstädte
@@ -2779,138 +3804,775 @@ const questions = [
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    { //Größte Städte weltweit
+    { //Bevölkerungsreichste Stadt weltweit
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt hat die größte Fläche weltweit?",
-        "Antworten": ["Shanghai", "Tokio", "Los Angeles", "Moskau"],
+        "Frage": "Welche Stadt hat die größte Bevölkerung weltweit?",
+        "Antworten": ["New York City", "Tokio", "Shanghai", "Delhi"],
         "RichtigeAntwort": "Tokio",
         "RichtigeAntwortMöglichkeiten": "Tokio",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Tokio ist die größte Stadt weltweit nach Fläche mit etwa 2.194 Quadratkilometern"
+        "Fakt": "Tokio ist die bevölkerungsreichste Stadt weltweit mit über 37 Millionen Einwohnern"
     },
-    { //Kleinste Städte weltweit
+    { //Bevölkerungsärmste Stadt weltweit
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt hat die kleinste Fläche weltweit?",
-        "Antworten": ["Vatikanstadt", "Monaco", "Nauru", "San Marino"],
-        "RichtigeAntwort": "Vatikanstadt",
-        "RichtigeAntwortMöglichkeiten": "Vatikanstadt Vatikan",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Vatikanstadt ist die kleinste unabhängige Stadt mit einer Fläche von etwa 44 Hektar"
-    },
-
-
-
-    { //Größte Städte Nordamerika
-        "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Nordamerika hat die größte Fläche?",
-        "Antworten": ["New York City", "Los Angeles", "Houston", "Toronto"],
-        "RichtigeAntwort": "Houston",
-        "RichtigeAntwortMöglichkeiten": "Houston",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Houston ist die größte Stadt in den USA nach Fläche mit etwa 1.650 Quadratkilometern"
-    },
-    { //Kleinste Städte Nordamerika
-        "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Nordamerika hat die kleinste Fläche?",
-        "Antworten": ["Vatikanstadt", "Monaco", "Nauru", "Monowi"],
+        "Frage": "Welche Stadt hat die geringste Bevölkerung weltweit?",
+        "Antworten": ["Vatikanstadt", "Monowi", "Hum", "Adamstown"],
         "RichtigeAntwort": "Monowi",
         "RichtigeAntwortMöglichkeiten": "Monowi",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "Monowi in Nebraska, USA, ist die kleinste eingetragene Stadt in Nordamerika mit nur einer Einwohnerin"
+        "Fakt": "Monowi in Nebraska, USA, ist die bevölkerungsärmste Stadt der Welt mit nur einer Einwohnerin"
     },
-
-
-
-    { //Größte Städte Südamerika
+    { //Bevölkerungsreichste Stadt in Nordamerika
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Südamerika hat die größte Fläche?",
-        "Antworten": ["São Paulo", "Buenos Aires", "Lima", "Bogotá"],
+        "Frage": "Welche Stadt hat die größte Bevölkerung in Nordamerika?",
+        "Antworten": ["Los Angeles", "Mexiko-Stadt", "Toronto", "New York City"],
+        "RichtigeAntwort": "Mexiko-Stadt",
+        "RichtigeAntwortMöglichkeiten": "Mexiko-Stadt",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mexiko-Stadt ist die bevölkerungsreichste Stadt in Nordamerika mit über 21 Millionen Einwohnern"
+    },
+    { //Bevölkerungsreichste Stadt in Südamerika
+        "Kategorie": "Geographie",
+        "Frage": "Welche Stadt hat die größte Bevölkerung in Südamerika?",
+        "Antworten": ["Buenos Aires", "Lima", "Bogotá", "São Paulo"],
         "RichtigeAntwort": "São Paulo",
         "RichtigeAntwortMöglichkeiten": "São Paulo",
         "Schwierigkeitsgrad": "extrem",
-        "Fakt": "São Paulo ist die größte Stadt in Südamerika nach Fläche mit etwa 1.521 Quadratkilometern"
+        "Fakt": "São Paulo ist die bevölkerungsreichste Stadt in Südamerika mit über 12 Millionen Einwohnern"
     },
-    { //Kleinste Städte Südamerika
+    { //Bevölkerungsreichste Stadt in Europa
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Südamerika hat die kleinste Fläche?",
-        "Antworten": ["Santa Cruz de la Sierra", "Punta Arenas", "Ushuaia", "Leticia"],
-        "RichtigeAntwort": "Leticia",
-        "RichtigeAntwortMöglichkeiten": "Leticia",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Leticia in Kolumbien ist eine der kleinsten Städte Südamerikas mit einer Fläche von etwa 5 Quadratkilometern"
-    },
-
-
-
-    { //Größte Städte Europa
-        "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Europa hat die größte Fläche?",
-        "Antworten": ["Moskau", "London", "Berlin", "Paris"],
+        "Frage": "Welche Stadt hat die größte Bevölkerung in Europa?",
+        "Antworten": ["Paris", "London", "Moskau", "Berlin"],
         "RichtigeAntwort": "Moskau",
         "RichtigeAntwortMöglichkeiten": "Moskau",
         "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Moskau ist die größte Stadt in Europa nach Fläche mit etwa 2.511 Quadratkilometern"
+        "Fakt": "Moskau ist die bevölkerungsreichste Stadt in Europa mit über 12 Millionen Einwohnern"
     },
-    { //Kleinste Städte Europa
+    { //Bevölkerungsärmste Stadt in Europa
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Europa hat die kleinste Fläche?",
-        "Antworten": ["Vatikanstadt", "Monaco", "San Marino", "Vaduz"],
-        "RichtigeAntwort": "Vatikanstadt",
-        "RichtigeAntwortMöglichkeiten": "Vatikanstadt",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Vatikanstadt ist die kleinste Stadt in Europa mit etwa 44 Hektar"
+        "Frage": "Welche Stadt hat die geringste Bevölkerung in Europa?",
+        "Antworten": ["Vatikanstadt", "Hum", "Vaduz", "San Marino"],
+        "RichtigeAntwort": "Hum",
+        "RichtigeAntwortMöglichkeiten": "Hum",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Hum in Kroatien ist die bevölkerungsärmste Stadt in Europa mit etwa 30 Einwohnern"
     },
-
-
-
-    { //Größte Städte Asien
+    { //Bevölkerungsreichste Stadt in Afrika
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Asien hat die größte Fläche?",
+        "Frage": "Welche Stadt hat die größte Bevölkerung in Afrika?",
+        "Antworten": ["Kapstadt", "Lagos", "Kairo", "Johannesburg"],
+        "RichtigeAntwort": "Lagos",
+        "RichtigeAntwortMöglichkeiten": "Lagos",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Lagos ist die bevölkerungsreichste Stadt in Afrika mit über 21 Millionen Einwohnern"
+    },
+    { //Bevölkerungsreichste Stadt in Asien
+        "Kategorie": "Geographie",
+        "Frage": "Welche Stadt hat die größte Bevölkerung in Asien?",
         "Antworten": ["Shanghai", "Mumbai", "Tokio", "Peking"],
         "RichtigeAntwort": "Tokio",
         "RichtigeAntwortMöglichkeiten": "Tokio",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Tokio ist die größte Stadt in Asien nach Fläche mit etwa 2.194 Quadratkilometern"
+        "Fakt": "Tokio ist die bevölkerungsreichste Stadt in Asien mit über 37 Millionen Einwohnern"
     },
-    { //Kleinste Städte Asien
+    { //Bevölkerungsreichste Stadt in Australien und Ozeanien
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Asien hat die kleinste Fläche?",
-        "Antworten": ["Male", "Thimphu", "Dili", "Victoria"],
-        "RichtigeAntwort": "Male",
-        "RichtigeAntwortMöglichkeiten": "Male",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Male auf den Malediven ist eine der kleinsten Städte Asiens mit einer Fläche von etwa 5,8 Quadratkilometern"
-    },
-
-
-
-    { //Größte Städte Australien und Ozeanien
-        "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Australien und Ozeanien hat die größte Fläche?",
-        "Antworten": ["Sydney", "Melbourne", "Brisbane", "Perth"],
+        "Frage": "Welche Stadt hat die größte Bevölkerung in Australien und Ozeanien?",
+        "Antworten": ["Sydney", "Melbourne", "Auckland", "Brisbane"],
         "RichtigeAntwort": "Sydney",
         "RichtigeAntwortMöglichkeiten": "Sydney",
         "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Sydney ist die größte Stadt in Australien nach Fläche mit etwa 12.367 Quadratkilometern"
+        "Fakt": "Sydney hat über 5 Millionen Einwohnern"
     },
-    { //Kleinste Städte Australien und Ozeanien
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    { //Politische Grenzen
         "Kategorie": "Geographie",
-        "Frage": "Welche Stadt in Australien und Ozeanien hat die kleinste Fläche?",
-        "Antworten": ["Funafuti", "Yaren", "Ngerulmud", "Port Vila"],
-        "RichtigeAntwort": "Funafuti",
-        "RichtigeAntwortMöglichkeiten": "Funafuti",
+        "Frage": "Welches Land hat die längste Landgrenze mit Russland?",
+        "Antworten": ["China", "Kasachstan", "Ukraine", "Mongolei"],
+        "RichtigeAntwort": "Kasachstan",
+        "RichtigeAntwortMöglichkeiten": "Kasachstan",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kasachstan hat die längste Landgrenze mit Russland, die etwa 7.644 Kilometer lang ist"
+    },
+    { //Politische Grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die meisten Nachbarländer?",
+        "Antworten": ["China", "Russland", "Deutschland", "Brasilien"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "China hat die meisten Nachbarländer mit insgesamt 14 angrenzenden Ländern"
+    },
+    { //Politische Grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist vollständig von Südafrika umschlossen?",
+        "Antworten": ["Lesotho", "Swasiland", "Botswana", "Namibia"],
+        "RichtigeAntwort": "Lesotho",
+        "RichtigeAntwortMöglichkeiten": "Lesotho",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "Funafuti auf Tuvalu ist eine der kleinsten Städte in Australien und Ozeanien mit etwa 2,4 Quadratkilometern"
+        "Fakt": "Lesotho ist ein Binnenstaat, der vollständig von Südafrika umschlossen ist"
+    },
+    { //Politische Grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die längste Küstenlinie der Welt?",
+        "Antworten": ["Australien", "Kanada", "Indonesien", "Russland"],
+        "RichtigeAntwort": "Kanada",
+        "RichtigeAntwortMöglichkeiten": "Kanada",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kanada hat mit etwa 202.080 Kilometern die längste Küstenlinie der Welt"
+    },
+    { //Politische Grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land wurde nach dem Zweiten Weltkrieg in Nord und Süd geteilt?",
+        "Antworten": ["Vietnam", "Deutschland", "Korea", "Sudan"],
+        "RichtigeAntwort": "Korea",
+        "RichtigeAntwortMöglichkeiten": "Korea Nordkorea Südkorea",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Korea wurde nach dem Zweiten Weltkrieg in Nord- und Südkorea geteilt"
+    },
+    { //Politische Grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land liegt zwischen Frankreich und Spanien in den Pyrenäen?",
+        "Antworten": ["Andorra", "Luxemburg", "Monaco", "Liechtenstein"],
+        "RichtigeAntwort": "Andorra",
+        "RichtigeAntwortMöglichkeiten": "Andorra",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Andorra liegt in den Pyrenäen zwischen Frankreich und Spanien"
+    },
+    { //Politische Grenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land wurde nach dem Ersten Weltkrieg in mehrere Teile zerteilt?",
+        "Antworten": ["Österreich-Ungarn", "Ottomanisches Reich", "Russisches Reich", "Deutschland"],
+        "RichtigeAntwort": "Österreich-Ungarn",
+        "RichtigeAntwortMöglichkeiten": "Österreich-Ungarn",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Österreich-Ungarische Kaiserreich wurde nach dem Ersten Weltkrieg in mehrere neue Staaten aufgeteilt"
+    },
+
+
+    
+    { //Wirtschaftszonen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Handelsabkommen umfasst die Länder Kanada, Mexiko und die USA?",
+        "Antworten": ["EU", "ASEAN", "NAFTA", "MERCOSUR"],
+        "RichtigeAntwort": "NAFTA",
+        "RichtigeAntwortMöglichkeiten": "NAFTA",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Nordamerikanische Freihandelsabkommen (NAFTA) umfasst Kanada, Mexiko und die USA"
+    },
+    { //Wirtschaftszonen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Handelsabkommen umfasst die meisten Länder in Südostasien?",
+        "Antworten": ["EU", "NAFTA", "ASEAN", "MERCOSUR"],
+        "RichtigeAntwort": "ASEAN",
+        "RichtigeAntwortMöglichkeiten": "ASEAN",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Verband Südostasiatischer Nationen (ASEAN) umfasst 10 Länder in Südostasien"
+    },
+    { //Wirtschaftszonen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Handelsabkommen umfasst die Länder Brasilien, Argentinien, Paraguay und Uruguay?",
+        "Antworten": ["EU", "NAFTA", "ASEAN", "MERCOSUR"],
+        "RichtigeAntwort": "MERCOSUR",
+        "RichtigeAntwortMöglichkeiten": "MERCOSUR",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "MERCOSUR ist ein Handelsabkommen, das Brasilien, Argentinien, Paraguay und Uruguay umfasst"
+    },
+    { //Wirtschaftszonen
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die meisten Mitglieder in der Weltbank?",
+        "Antworten": ["Afrika", "Asien", "Europa", "Südamerika"],
+        "RichtigeAntwort": "Afrika",
+        "RichtigeAntwortMöglichkeiten": "Afrika",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Afrika hat die meisten Mitgliedsländer in der Weltbank"
+    },
+    { //Wirtschaftszonen
+        "Kategorie": "Geographie",
+        "Frage": "Welches der folgenden Länder ist kein Mitglied der Europäischen Union (Schweden, Norwegen, Finnland, Dänemark)?",
+        "Antworten": ["Schweden", "Norwegen", "Finnland", "Dänemark"],
+        "RichtigeAntwort": "Norwegen",
+        "RichtigeAntwortMöglichkeiten": "Norwegen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Norwegen ist kein Mitglied der Europäischen Union, obwohl es eng mit der EU zusammenarbeitet"
+    },
+    { //Wirtschaftszonen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Stadt gilt als das Finanzzentrum der Europäischen Union?",
+        "Antworten": ["Paris", "London", "Frankfurt am Main", "Brüssel"],
+        "RichtigeAntwort": "Frankfurt am Main",
+        "RichtigeAntwortMöglichkeiten": "Frankfurt am Main Frankfurt",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankfurt am Main gilt als das Finanzzentrum der Europäischen Union und Sitz der Europäischen Zentralbank"
     },
 
 
 
+
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Erdöl weltweit?",
+        "Antworten": ["Saudi-Arabien", "USA", "Russland", "Iran"],
+        "RichtigeAntwort": "USA",
+        "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die USA sind der größte Produzent von Erdöl weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größten Reserven an Gold?",
+        "Antworten": ["Südafrika", "China", "Australien", "USA"],
+        "RichtigeAntwort": "USA",
+        "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die USA haben die größten Goldreserven der Welt"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Kaffee?",
+        "Antworten": ["Kolumbien", "Vietnam", "Brasilien", "Äthiopien"],
+        "RichtigeAntwort": "Brasilien",
+        "RichtigeAntwortMöglichkeiten": "Brasilien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Brasilien ist der größte Produzent von Kaffee weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Exporteur von Bananen?",
+        "Antworten": ["Ecuador", "Kolumbien", "Philippinen", "Indien"],
+        "RichtigeAntwort": "Ecuador",
+        "RichtigeAntwortMöglichkeiten": "Ecuador",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ecuador ist der größte Exporteur von Bananen weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Weizen weltweit?",
+        "Antworten": ["USA", "Indien", "China", "Russland"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "China ist der größte Produzent von Weizen weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist weltweit der größte Exporteur von Erdgas?",
+        "Antworten": ["USA", "Russland", "Katar", "Kanada"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Russland ist der größte Exporteur von Erdgas weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Lithium, einem wichtigen Rohstoff für Batterien?",
+        "Antworten": ["Australien", "Bolivien", "Chile", "Argentinien"],
+        "RichtigeAntwort": "Australien",
+        "RichtigeAntwortMöglichkeiten": "Australien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Australien ist der größte Produzent von Lithium, das für die Produktion von Batterien benötigt wird"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Diamanten weltweit?",
+        "Antworten": ["Australien", "Kanada", "Botswana", "Russland"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Russland ist der größte Produzent von Diamanten weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größten Vorkommen an seltenen Erden, die in der Elektronikindustrie verwendet werden?",
+        "Antworten": ["USA", "China", "Australien", "Brasilien"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "China hat die größten Vorkommen an seltenen Erden, die für die Elektronikindustrie entscheidend sind"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Kakaobohnen weltweit?",
+        "Antworten": ["Brasilien", "Indonesien", "Ghana", "Elfenbeinküste"],
+        "RichtigeAntwort": "Elfenbeinküste",
+        "RichtigeAntwortMöglichkeiten": "Elfenbeinküste Côte d'Ivoire",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Elfenbeinküste ist der größte Produzent von Kakaobohnen weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Exporteur von Eisenerz?",
+        "Antworten": ["Brasilien", "Australien", "Indien", "China"],
+        "RichtigeAntwort": "Australien",
+        "RichtigeAntwortMöglichkeiten": "Australien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Australien ist der größte Exporteur von Eisenerz weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Silber?",
+        "Antworten": ["Peru", "China", "Australien", "Mexiko"],
+        "RichtigeAntwort": "Mexiko",
+        "RichtigeAntwortMöglichkeiten": "Mexiko",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Mexiko ist der größte Produzent von Silber weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Kupfer?",
+        "Antworten": ["USA", "Chile", "Peru", "China"],
+        "RichtigeAntwort": "Chile",
+        "RichtigeAntwortMöglichkeiten": "Chile",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Chile ist der größte Produzent von Kupfer weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Palmöl?",
+        "Antworten": ["Malaysia", "Thailand", "Nigeria", "Indonesien"],
+        "RichtigeAntwort": "Indonesien",
+        "RichtigeAntwortMöglichkeiten": "Indonesien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Indonesien ist der größte Produzent von Palmöl weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Exporteur von Erdgas nach Europa?",
+        "Antworten": ["Norwegen", "Russland", "Algerien", "Katar"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Russland ist der größte Exporteur von Erdgas nach Europa"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Zink?",
+        "Antworten": ["USA", "China", "Kanada", "Australien"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "China ist der größte Produzent von Zink weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Baumwolle?",
+        "Antworten": ["Indien", "USA", "China", "Pakistan"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "China ist der größte Produzent von Baumwolle weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größten Vorkommen an Kohle?",
+        "Antworten": ["China", "USA", "Indien", "Russland"],
+        "RichtigeAntwort": "USA",
+        "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die USA besitzen die größten Vorkommen an Kohle weltweit"
+    },
+    { //Ressourcen und Rohstoffe
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist der größte Produzent von Zuckerrohr?",
+        "Antworten": ["Brasilien", "Indien", "China", "Thailand"],
+        "RichtigeAntwort": "Brasilien",
+        "RichtigeAntwortMöglichkeiten": "Brasilien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Brasilien ist der größte Produzent von Zuckerrohr weltweit"
+    },
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Landgrenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welche zwei Länder teilen die längste Landgrenze der Welt?",
+        "Antworten": ["USA und Mexiko", "Russland und China", "Kanada und USA", "China und Indien"],
+        "RichtigeAntwort": "Kanada und USA",
+        "RichtigeAntwortMöglichkeiten": "Kanada USA",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kanada und die USA teilen die längste Landgrenze der Welt, die über 8.891 Kilometer lang ist"
+    },
+    { //Landgrenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches europäische Land hat die meisten Nachbarländer?",
+        "Antworten": ["Deutschland", "Frankreich", "Polen", "Russland"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Deutschland hat die meisten Nachbarländer in Europa mit insgesamt neun angrenzenden Ländern"
+    },
+    { //Landgrenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welche zwei afrikanischen Länder haben die längste gemeinsame Grenze?",
+        "Antworten": ["Sudan und Südsudan", "Ägypten und Libyen", "Angola und Demokratische Republik Kongo", "Algerien und Mali"],
+        "RichtigeAntwort": "Sudan und Südsudan",
+        "RichtigeAntwortMöglichkeiten": "Sudan Südsudan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Sudan und Südsudan teilen die längste gemeinsame Grenze in Afrika, die etwa 2.184 Kilometer lang ist"
+    },
+    { //Landgrenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welche beiden Länder in Südamerika teilen die längste Landgrenze?",
+        "Antworten": ["Brasilien und Argentinien", "Argentinien und Chile", "Brasilien und Bolivien", "Peru und Kolumbien"],
+        "RichtigeAntwort": "Argentinien und Chile",
+        "RichtigeAntwortMöglichkeiten": "Argentinien Chile",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Argentinien und Chile teilen die längste Landgrenze in Südamerika, die etwa 5.308 Kilometer lang ist"
+    },
+    { //Landgrenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die längste Landgrenze mit Brasilien?",
+        "Antworten": ["Argentinien", "Bolivien", "Peru", "Venezuela"],
+        "RichtigeAntwort": "Bolivien",
+        "RichtigeAntwortMöglichkeiten": "Bolivien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bolivien Landgrenze mit Brasilien ist etwa 3.423 Kilometer lang"
+    },
+    { //Landgrenzen
+        "Kategorie": "Geographie",
+        "Frage": "Welche beiden Länder in Europa haben die längste gemeinsame Grenze?",
+        "Antworten": ["Deutschland und Polen", "Norwegen und Schweden", "Frankreich und Spanien", "Finnland und Russland"],
+        "RichtigeAntwort": "Finnland und Russland",
+        "RichtigeAntwortMöglichkeiten": "Finnland und Russland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Finnland und Russland teilen die längste gemeinsame Grenze in Europa"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Kontinentale Geographie
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt die größte Wüste der Welt",
+        "Antworten": ["Kalahari", "Gobi", "Sahara", "Antarktis"],
+        "RichtigeAntwort": "Antarktis",
+        "RichtigeAntwortMöglichkeiten": "Antarktis",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Antarktis ist eine Eiswüste mit insgesamt 14 Millionen km²"
+    },
+    { //Kontinentale Geographie
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die meisten aktiven Vulkane?",
+        "Antworten": ["Asien", "Nordamerika", "Südamerika", "Australien"],
+        "RichtigeAntwort": "Asien",
+        "RichtigeAntwortMöglichkeiten": "Asien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Asien, insbesondere der Pazifische Feuerring, hat die meisten aktiven Vulkane"
+    },
+    { //Kontinentale Geographie
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die größte Anzahl an Ländern?",
+        "Antworten": ["Afrika", "Europa", "Asien", "Südamerika"],
+        "RichtigeAntwort": "Afrika",
+        "RichtigeAntwortMöglichkeiten": "Afrika",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Afrika hat die größte Anzahl an Ländern mit insgesamt 54 anerkannten Staaten"
+    },
+    { //Kontinentale Geographie
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat den höchsten Punkt der Erde?",
+        "Antworten": ["Asien", "Afrika", "Europa", "Südamerika"],
+        "RichtigeAntwort": "Asien",
+        "RichtigeAntwortMöglichkeiten": "Asien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Asien ist Heimat des Mount Everest, der höchste Punkt der Erde"
+    },
+    { //Kontinentale Geographie
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die längste Küstenlinie?",
+        "Antworten": ["Nordamerika", "Asien", "Afrika", "Europa"],
+        "RichtigeAntwort": "Nordamerika",
+        "RichtigeAntwortMöglichkeiten": "Nordamerika",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nordamerika hat die längste Küstenlinie, größtenteils wegen Kanadas ausgedehnter Küste"
+    },
+    { //Kontinentale Geographie
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die größte Anzahl an Inseln?",
+        "Antworten": ["Australien/Ozeanien", "Asien", "Europa", "Afrika"],
+        "RichtigeAntwort": "Ozeanien",
+        "RichtigeAntwortMöglichkeiten": "Ozeanien Australien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ozeanien besteht aus Tausenden von Inseln, die im Pazifischen Ozean verteilt sind"
+    },
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Sprachen und Ethnien
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat die meisten Muttersprachler weltweit?",
+        "Antworten": ["Englisch", "Spanisch", "Mandarin", "Hindi"],
+        "RichtigeAntwort": "Mandarin",
+        "RichtigeAntwortMöglichkeiten": "Mandarin",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Mandarin-Chinesisch hat die meisten Muttersprachler weltweit"
+    },
+    { //Sprachen und Ethnien
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größte Anzahl an offiziell anerkannten Sprachen?",
+        "Antworten": ["Indien", "Papua-Neuguinea", "Südafrika", "Nigeria"],
+        "RichtigeAntwort": "Papua-Neuguinea",
+        "RichtigeAntwortMöglichkeiten": "Papua-Neuguinea",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Papua-Neuguinea hat die größte Anzahl an offiziell anerkannten Sprachen mit über 800 verschiedenen Sprachen"
+    },
+    { //Sprachen und Ethnien
+        "Kategorie": "Geographie",
+        "Frage": "Welche der folgenden Sprachen wird in Südamerika am häufigsten gesprochen?",
+        "Antworten": ["Portugiesisch", "Spanisch", "Englisch", "Französisch"],
+        "RichtigeAntwort": "Spanisch",
+        "RichtigeAntwortMöglichkeiten": "Spanisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanisch ist die am häufigsten gesprochene Sprache in Südamerika"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größte Anzahl an Französischsprechern weltweit?",
+        "Antworten": ["Frankreich", "Kanada", "Belgien", "Demokratische Republik Kongo"],
+        "RichtigeAntwort": "Demokratische Republik Kongo",
+        "RichtigeAntwortMöglichkeiten": "Demokratische Republik Kongo",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Demokratische Republik Kongo hat die größte Anzahl an Französischsprechern weltweit"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache ist die am weitesten verbreitete Muttersprache in Europa?",
+        "Antworten": ["Englisch", "Spanisch", "Deutsch", "Französisch"],
+        "RichtigeAntwort": "Deutsch",
+        "RichtigeAntwortMöglichkeiten": "Deutsch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Deutsch ist die am weitesten verbreitete Muttersprache in Europa"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache wird auf allen Kontinenten als Amtssprache verwendet?",
+        "Antworten": ["Englisch", "Spanisch", "Französisch", "Arabisch"],
+        "RichtigeAntwort": "Englisch",
+        "RichtigeAntwortMöglichkeiten": "Englisch",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Englisch wird auf allen Kontinenten als Amtssprache verwendet"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat die meisten offiziellen Länder in Afrika?",
+        "Antworten": ["Englisch", "Französisch", "Arabisch", "Portugiesisch"],
+        "RichtigeAntwort": "Französisch",
+        "RichtigeAntwortMöglichkeiten": "Französisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Französisch ist die Sprache mit den meisten offiziellen Ländern in Afrika"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache ist die zweitmeistgesprochene Sprache in den USA?",
+        "Antworten": ["Deutsch", "Französisch", "Chinesisch", "Spanisch"],
+        "RichtigeAntwort": "Spanisch",
+        "RichtigeAntwortMöglichkeiten": "Spanisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanisch ist die zweitmeistgesprochene Sprache in den USA"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat die meisten Amtssprachen in der Europäischen Union?",
+        "Antworten": ["Englisch", "Französisch", "Deutsch", "Italienisch"],
+        "RichtigeAntwort": "Englisch",
+        "RichtigeAntwortMöglichkeiten": "Englisch",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Englisch hat die meisten Amtssprachen in der Europäischen Union"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache wird in Südamerika in den meisten Ländern als Amtssprache gesprochen?",
+        "Antworten": ["Portugiesisch", "Spanisch", "Englisch", "Französisch"],
+        "RichtigeAntwort": "Spanisch",
+        "RichtigeAntwortMöglichkeiten": "Spanisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanisch ist die Amtssprache in den meisten Ländern Südamerikas"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache wird in Australien am zweithäufigsten gesprochen?",
+        "Antworten": ["Italienisch", "Griechisch", "Chinesisch", "Arabisch"],
+        "RichtigeAntwort": "Chinesisch",
+        "RichtigeAntwortMöglichkeiten": "Chinesisch",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Chinesisch ist die zweithäufigste Sprache in Australien"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat weltweit die meisten Lerner als Fremdsprache?",
+        "Antworten": ["Spanisch", "Französisch", "Deutsch", "Englisch"],
+        "RichtigeAntwort": "Englisch",
+        "RichtigeAntwortMöglichkeiten": "Englisch",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Englisch hat weltweit die meisten Lerner als Fremdsprache"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache wird in Kanada neben Englisch am häufigsten gesprochen?",
+        "Antworten": ["Spanisch", "Italienisch", "Deutsch", "Französisch"],
+        "RichtigeAntwort": "Französisch",
+        "RichtigeAntwortMöglichkeiten": "Französisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Französisch ist neben Englisch die am häufigsten gesprochene Sprache in Kanada"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat die meisten Dialekte weltweit?",
+        "Antworten": ["Spanisch", "Englisch", "Mandarin", "Arabisch"],
+        "RichtigeAntwort": "Mandarin",
+        "RichtigeAntwortMöglichkeiten": "Chinesisch Mandarin",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die bekanntesten Dialekte der Chinesischen Sprache sind Mandarin und Kantonesisch"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat die meisten Schriftzeichen?",
+        "Antworten": ["Koreanisch", "Japanisch", "Chinesisch", "Arabisch"],
+        "RichtigeAntwort": "Chinesisch",
+        "RichtigeAntwortMöglichkeiten": "Chinesisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Chinesisch hat die meisten Schriftzeichen mit über 50.000 Zeichen"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache gilt als die älteste noch gesprochene Sprache der Welt?",
+        "Antworten": ["Griechisch", "Latein", "Hebräisch", "Tamil"],
+        "RichtigeAntwort": "Tamil",
+        "RichtigeAntwortMöglichkeiten": "Tamil",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Tamil gilt als eine der ältesten noch gesprochenen Sprachen der Welt"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache hat die zweitmeisten Muttersprachler nach Mandarin?",
+        "Antworten": ["Englisch", "Spanisch", "Hindi", "Arabisch"],
+        "RichtigeAntwort": "Spanisch",
+        "RichtigeAntwortMöglichkeiten": "Spanisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanisch hat die zweitmeisten Muttersprachler weltweit nach Mandarin"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache wird in Brasilien gesprochen?",
+        "Antworten": ["Spanisch", "Portugiesisch", "Französisch", "Englisch"],
+        "RichtigeAntwort": "Portugiesisch",
+        "RichtigeAntwortMöglichkeiten": "Portugiesisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Portugiesisch ist die offizielle Sprache in Brasilien"
+    },
+    { //Sprachen
+        "Kategorie": "Geographie",
+        "Frage": "Welche Sprache wird in der Region Québec in Kanada hauptsächlich gesprochen?",
+        "Antworten": ["Englisch", "Spanisch", "Französisch", "Deutsch"],
+        "RichtigeAntwort": "Französisch",
+        "RichtigeAntwortMöglichkeiten": "Französisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Französisch ist die Hauptsprache in der Region Québec in Kanada"
+    },
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    { //Religionsverbreitung
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land gibt es die größte Anzahl von Muslimen?",
+        "Antworten": ["Saudi-Arabien", "Indonesien", "Pakistan", "Indien"],
+        "RichtigeAntwort": "Indonesien",
+        "RichtigeAntwortMöglichkeiten": "Indonesien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Indonesien hat die größte Anzahl von Muslimen weltweit"
+    },
+    { //Religionsverbreitung
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land gibt es die meisten Christen?",
+        "Antworten": ["Vereinigte Staaten", "Brasilien", "Mexiko", "Philippinen"],
+        "RichtigeAntwort": "Vereinigte Staaten",
+        "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Vereinigten Staaten haben die größte Anzahl von Christen weltweit"
+    },
+    { //Religionsverbreitung
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Anteil an Buddhisten?",
+        "Antworten": ["China", "Japan", "Thailand", "Myanmar"],
+        "RichtigeAntwort": "Thailand",
+        "RichtigeAntwortMöglichkeiten": "Thailand",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Thailand hat den höchsten Anteil an Buddhisten weltweit"
+    },
+    { //Religionsverbreitung
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land gibt es die größte hinduistische Bevölkerung?",
+        "Antworten": ["Nepal", "Bangladesch", "Indien", "Sri Lanka"],
+        "RichtigeAntwort": "Indien",
+        "RichtigeAntwortMöglichkeiten": "Indien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Indien hat die größte hinduistische Bevölkerung weltweit"
+    },
+    { //Traditionen und Feste
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land wird das Fest Holi gefeiert?",
+        "Antworten": ["Nepal", "Sri Lanka", "Bangladesch", "Indien"],
+        "RichtigeAntwort": "Indien",
+        "RichtigeAntwortMöglichkeiten": "Indien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Holi, das Fest der Farben, wird hauptsächlich in Indien gefeiert"
+    },
+    { //Traditionen und Feste
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land wird das berühmte Oktoberfest gefeiert?",
+        "Antworten": ["Österreich", "Schweiz", "Deutschland", "Niederlande"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Oktoberfest ist ein berühmtes Volksfest, das in München, Deutschland, gefeiert wird"
+    },
+    { //Traditionen und Feste
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land wird der Sankt-Patrickstag am meisten gefeiert?",
+        "Antworten": ["Schottland", "England", "Irland", "Wales"],
+        "RichtigeAntwort": "Irland",
+        "RichtigeAntwortMöglichkeiten": "Irland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Sankt-Patrickstag ist das wichtigste Fest in Irland"
+    },
+    { //Traditionen und Feste
+        "Kategorie": "Geographie",
+        "Frage": "Was wird beim chinesischen Neujahrsfest gefeiert?",
+        "Antworten": ["Die Gründung Chinas", "Der Beginn des Frühlings und das neue Mondjahr", "Der Geburtstag von Konfuzius", "Das Ende des Bürgerkriegs"],
+        "RichtigeAntwort": "Der Beginn des Frühlings und das neue Mondjahr",
+        "RichtigeAntwortMöglichkeiten": "Beginn des Frühlings neue Mondjahr",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das chinesische Neujahrsfest wird auch das Frühlingsfest genannt"
+    },
 
 
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+    
+    { //Anzahl der Kontinente
+        "Kategorie": "Geographie",
+        "Frage": "Wie viele Kontinente gibt es auf der Erde?",
+        "Antworten": ["Fünf", "Sechs", "Sieben", "Acht"],
+        "RichtigeAntwort": "Sieben",
+        "RichtigeAntwortMöglichkeiten": "Sieben",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Es gibt sieben Kontinente auf der Erde: Afrika, Asien, Europa, Nordamerika, Südamerika, Australien und Antarktis"
+    },
+    { //Größter Kontinent
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent ist flächenmäßig der größte?",
+        "Antworten": ["Afrika", "Asien", "Nordamerika", "Südamerika"],
+        "RichtigeAntwort": "Asien",
+        "RichtigeAntwortMöglichkeiten": "Asien",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Asien ist mit einer Fläche von etwa 44,58 Millionen Quadratkilometern der größte Kontinent der Welt"
+    },
 
     { //Kontinente
         "Kategorie": "Geographie",
@@ -3783,11 +5445,11 @@ const questions = [
     },
     { //Sehenswürdigkeiten
         "Kategorie": "Geographie",
-        "Frage": "In welchem Land befindet sich der Amazonas-Regenwald?",
+        "Frage": "In welchem Land befindet sich der Amazonas-Regenwald größtenteils?",
         "Antworten": ["Venezuela", "Kolumbien", "Argentinien", "Brasilien"],
         "RichtigeAntwort": "Brasilien",
         "RichtigeAntwortMöglichkeiten": "Brasilien",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "mittel",
         "Fakt": "Der Amazonas-Regenwald erstreckt sich über mehrere Länder, aber der größte Teil liegt in Brasilien"
     },
     { //Sehenswürdigkeiten
@@ -3936,6 +5598,33 @@ const questions = [
         "RichtigeAntwortMöglichkeiten": "Washington D.C. Washington DC",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Das Weiße Haus ist der Amtssitz des Präsidenten der Vereinigten Staaten"
+    },
+    { //Central Park Ort
+        "Kategorie": "Geographie",
+        "Frage": "In welcher Stadt befindet sich der Central Park?",
+        "Antworten": ["Los Angeles", "Chicago", "New York City", "San Francisco"],
+        "RichtigeAntwort": "New York City",
+        "RichtigeAntwortMöglichkeiten": "New York City",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Central Park befindet sich im Herzen von Manhattan in New York City"
+    },
+    { //Central Park Entstehungsjahr
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Jahr wurde der Central Park in New York City eröffnet?",
+        "Antworten": ["2012", "1858", "1965", "2001"],
+        "RichtigeAntwort": "1858",
+        "RichtigeAntwortMöglichkeiten": "1858",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Central Park wurde 1858 eröffnet und ist damit einer der ältesten städtischen Parks in den USA"
+    },
+    { //Central Park Sehenswürdigkeiten
+        "Kategorie": "Geographie",
+        "Frage": "Welche berühmte Sehenswürdigkeit befindet sich im Central Park?",
+        "Antworten": ["Strawberry Fields", "Golden Gate Bridge", "Lincoln Memorial", "Statue of Liberty"],
+        "RichtigeAntwort": "Strawberry Fields",
+        "RichtigeAntwortMöglichkeiten": "Strawberry Fields",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Strawberry Fields ist ein Denkmal im Central Park, das John Lennon gewidmet ist"
     },
     { //Sehenswürdigkeiten
         "Kategorie": "Geographie",
@@ -4673,8 +6362,8 @@ const questions = [
         "Kategorie": "Geographie",
         "Frage": "In welchem Meer mündet der Amazonas?",
         "Antworten": ["Pazifik", "Schwarze Meer", "Atlantik", "Zonas Meer"],
-        "RichtigeAntwort": "Pazifik",
-        "RichtigeAntwortMöglichkeiten": "Pazifik Pazific",
+        "RichtigeAntwort": "Atlantik",
+        "RichtigeAntwortMöglichkeiten": "Atlantik Atlantischer",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Es wird angenommen, dass noch viele Fischarten unentdeckt sind"
     },
@@ -4687,6 +6376,25 @@ const questions = [
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Das liegt daran, dass das Mündungsgebiet des Flusses sehr breit ist"
     },
+    { //Längster Fluss der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der längste Fluss der Welt?",
+        "Antworten": ["Amazonas", "Nil", "Jangtsekiang", "Mississippi"],
+        "RichtigeAntwort": "Nil",
+        "RichtigeAntwortMöglichkeiten": "Nil",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Nil ist mit etwa 6.650 Kilometern der längste Fluss der Welt"
+    },
+    { //Wasserreichster Fluss der Welt
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der wasserreichste Fluss der Welt?",
+        "Antworten": ["Nil", "Mississippi", "Amazonas", "Jangtsekiang"],
+        "RichtigeAntwort": "Amazonas",
+        "RichtigeAntwortMöglichkeiten": "Amazonas",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Amazonas ist der wasserreichste Fluss der Welt und führt mehr Wasser als die nächsten sieben größten Flüsse zusammen"
+    },
+
     { //Wichtige Flüsse
         "Kategorie": "Geographie",
         "Frage": "In welchem Land entspringt der Orinoco?",
@@ -5251,6 +6959,15 @@ const questions = [
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Donau fließt durch insgesamt zehn Länder in Europa"
     },
+    { //Fluss durch Paris
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Fluss fließt durch Paris?",
+        "Antworten": ["Rhein", "Donau", "Themse", "Seine"],
+        "RichtigeAntwort": "Seine",
+        "RichtigeAntwortMöglichkeiten": "Seine",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Seine fließt durch Paris und ist einer der bekanntesten Flüsse Frankreichs"
+    },
     { //Wichtige Flüsse
         "Kategorie": "Geographie",
         "Frage": "In welchem Land mündet der Rhein ins Meer?",
@@ -5559,7 +7276,376 @@ const questions = [
         "RichtigeAntwortMöglichkeiten": "Frühling",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Wenn es auf der Nordhalbkugel Herbst ist, ist auf der Südhalbkugel Frühling"
-    }
+    },
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Human Development Index (HDI) weltweit?",
+        "Antworten": ["Norwegen", "Schweiz", "Irland", "Deutschland"],
+        "RichtigeAntwort": "Norwegen",
+        "RichtigeAntwortMöglichkeiten": "Norwegen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Norwegen hat den höchsten Human Development Index (HDI) weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den niedrigsten Human Development Index (HDI) weltweit?",
+        "Antworten": ["Niger", "Zentralafrikanische Republik", "Tschad", "Burkina Faso"],
+        "RichtigeAntwort": "Niger",
+        "RichtigeAntwortMöglichkeiten": "Niger",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Niger hat den niedrigsten Human Development Index (HDI) weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die höchste Lebenserwartung weltweit?",
+        "Antworten": ["Japan", "Schweiz", "Singapur", "Australien"],
+        "RichtigeAntwort": "Japan",
+        "RichtigeAntwortMöglichkeiten": "Japan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Japan hat die höchste Lebenserwartung weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat das höchste Bruttoinlandsprodukt (BIP) pro Kopf weltweit?",
+        "Antworten": ["Luxemburg", "Schweiz", "Norwegen", "Irland"],
+        "RichtigeAntwort": "Luxemburg",
+        "RichtigeAntwortMöglichkeiten": "Luxemburg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Luxemburg hat das höchste Bruttoinlandsprodukt (BIP) pro Kopf weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Alphabetisierungsgrad weltweit?",
+        "Antworten": ["Finnland", "Norwegen", "Deutschland", "Andorra"],
+        "RichtigeAntwort": "Andorra",
+        "RichtigeAntwortMöglichkeiten": "Andorra",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Andorra hat den höchsten Alphabetisierungsgrad weltweit mit nahezu 100%"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die höchste Geburtenrate weltweit?",
+        "Antworten": ["Niger", "Angola", "Afghanistan", "Mali"],
+        "RichtigeAntwort": "Niger",
+        "RichtigeAntwortMöglichkeiten": "Niger",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Niger hat die höchste Geburtenrate weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Anteil an städtischer Bevölkerung weltweit?",
+        "Antworten": ["Singapur", "Monaco", "Kuwait", "Hongkong"],
+        "RichtigeAntwort": "Monaco",
+        "RichtigeAntwortMöglichkeiten": "Monaco",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Monaco hat den höchsten Anteil an städtischer Bevölkerung, da es vollständig urbanisiert ist"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die geringste Arbeitslosenrate weltweit?",
+        "Antworten": ["Japan", "Schweiz", "Qatar", "Island"],
+        "RichtigeAntwort": "Qatar",
+        "RichtigeAntwortMöglichkeiten": "Qatar",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Qatar hat die geringste Arbeitslosenrate weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die höchste Anzahl an Nobelpreisträgern pro Kopf?",
+        "Antworten": ["Island", "Luxemburg", "Schweiz", "Schweden"],
+        "RichtigeAntwort": "Schweiz",
+        "RichtigeAntwortMöglichkeiten": "Schweiz",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Schweiz hat die höchste Anzahl an Nobelpreisträgern pro Kopf"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die höchste Alphabetisierungsrate in Afrika?",
+        "Antworten": ["Südafrika", "Ägypten", "Seychellen", "Tunesien"],
+        "RichtigeAntwort": "Seychellen",
+        "RichtigeAntwortMöglichkeiten": "Seychellen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Seychellen haben die höchste Alphabetisierungsrate in Afrika mit fast 95%"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land in Asien hat den höchsten HDI (Human Development Index)?",
+        "Antworten": ["Japan", "Südkorea", "Singapur", "Hongkong"],
+        "RichtigeAntwort": "Hongkong",
+        "RichtigeAntwortMöglichkeiten": "Hongkong",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Hongkong hat den höchsten HDI in Asien"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die höchste Durchschnittseinkommen pro Kopf in Afrika?",
+        "Antworten": ["Südafrika", "Nigeria", "Seychellen", "Äquatorialguinea"],
+        "RichtigeAntwort": "Seychellen",
+        "RichtigeAntwortMöglichkeiten": "Seychellen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Seychellen haben das höchste Durchschnittseinkommen pro Kopf in Afrika"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land in Europa hat die niedrigste Arbeitslosenrate?",
+        "Antworten": ["Deutschland", "Schweiz", "Norwegen", "Tschechien"],
+        "RichtigeAntwort": "Tschechien",
+        "RichtigeAntwortMöglichkeiten": "Tschechien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Tschechien hat die niedrigste Arbeitslosenrate in Europa"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Anteil an Universitätsabsolventen weltweit?",
+        "Antworten": ["USA", "Kanada", "Japan", "Israel"],
+        "RichtigeAntwort": "Israel",
+        "RichtigeAntwortMöglichkeiten": "Israel",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Israel hat den höchsten Anteil an Universitätsabsolventen weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die niedrigste Kindersterblichkeitsrate weltweit?",
+        "Antworten": ["Island", "Japan", "Norwegen", "Finnland"],
+        "RichtigeAntwort": "Japan",
+        "RichtigeAntwortMöglichkeiten": "Japan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Japan hat die niedrigste Kindersterblichkeitsrate weltweit"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die höchste Lebenserwartung in Afrika?",
+        "Antworten": ["Südafrika", "Mauritius", "Seychellen", "Algerien"],
+        "RichtigeAntwort": "Seychellen",
+        "RichtigeAntwortMöglichkeiten": "Seychellen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Seychellen haben die höchste Lebenserwartung in Afrika"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Anteil an erneuerbaren Energien in seiner Energieerzeugung?",
+        "Antworten": ["Norwegen", "Island", "Deutschland", "Brasilien"],
+        "RichtigeAntwort": "Island",
+        "RichtigeAntwortMöglichkeiten": "Island",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Island hat den höchsten Anteil an erneuerbaren Energien in seiner Energieerzeugung"
+    },
+    { //Entwicklungsindikatoren
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat das höchste Bruttoinlandsprodukt (BIP) in Europa?",
+        "Antworten": ["Deutschland", "Frankreich", "Vereinigtes Königreich", "Italien"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Deutschland hat das höchste Bruttoinlandsprodukt (BIP) in Europa"
+    },
+
+
+
+
+
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist weltweit für die meisten CO2-Emissionen verantwortlich?",
+        "Antworten": ["USA", "Indien", "China", "Russland"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "China ist weltweit für die meisten CO2-Emissionen verantwortlich"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Umweltproblem betrifft den Aralsee in Zentralasien?",
+        "Antworten": ["Verschmutzung", "Überfischung", "Desertifikation", "Austrocknung"],
+        "RichtigeAntwort": "Austrocknung",
+        "RichtigeAntwortMöglichkeiten": "Austrocknung",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Aralsee in Zentralasien ist aufgrund von Wasserumleitungen stark ausgetrocknet"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größte Fläche an abgeholztem Regenwald?",
+        "Antworten": ["Indonesien", "Brasilien", "Kongo", "Malaysia"],
+        "RichtigeAntwort": "Brasilien",
+        "RichtigeAntwortMöglichkeiten": "Brasilien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Brasilien hat die größte Fläche an abgeholztem Regenwald, insbesondere im Amazonasgebiet"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Meer ist am stärksten von Plastikverschmutzung betroffen?",
+        "Antworten": ["Nordsee", "Ostsee", "Mittelmeer", "Pazifischer Ozean"],
+        "RichtigeAntwort": "Pazifischer Ozean",
+        "RichtigeAntwortMöglichkeiten": "Pazifischer Ozean",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Pazifische Ozean ist stark von Plastikverschmutzung betroffen, besonders im Great Pacific Garbage Patch"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größte Fläche an Wüstenbildung durch Desertifikation?",
+        "Antworten": ["China", "USA", "Sudan", "Australien"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "China hat eine große Fläche, die von Wüstenbildung durch Desertifikation betroffen ist"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist am stärksten von der Luftverschmutzung betroffen?",
+        "Antworten": ["China", "Indien", "Pakistan", "Bangladesch"],
+        "RichtigeAntwort": "Indien",
+        "RichtigeAntwortMöglichkeiten": "Indien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Indien ist eines der am stärksten von Luftverschmutzung betroffenen Länder weltweit"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den größten Wasserfußabdruck pro Kopf?",
+        "Antworten": ["USA", "China", "Indien", "Brasilien"],
+        "RichtigeAntwort": "USA",
+        "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die USA haben den größten Wasserfußabdruck pro Kopf weltweit"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die größte Abfallproduktion pro Kopf?",
+        "Antworten": ["Kuwait", "USA", "Kanada", "Deutschland"],
+        "RichtigeAntwort": "Kuwait",
+        "RichtigeAntwortMöglichkeiten": "Kuwait",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Kuwait hat die größte Abfallproduktion pro Kopf weltweit"
+    },
+    { //Umweltprobleme
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat die meisten Kohlekraftwerke weltweit?",
+        "Antworten": ["USA", "Indien", "China", "Deutschland"],
+        "RichtigeAntwort": "China",
+        "RichtigeAntwortMöglichkeiten": "China",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "China hat die meisten Kohlekraftwerke weltweit"
+    },
+
+
+
+
+
+    { //Naturschutzgebiete
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist das größte Naturschutzgebiet der Welt?",
+        "Antworten": ["Yellowstone", "Greenland National Park", "Amazonas-Regenwald", "Great Barrier Reef Marine Park"],
+        "RichtigeAntwort": "Greenland National Park",
+        "RichtigeAntwortMöglichkeiten": "Greenland National Park",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Greenland National Park ist das größte Naturschutzgebiet der Welt"
+    },
+    { //Naturschutzgebiete
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den größten Anteil an Naturschutzgebieten weltweit?",
+        "Antworten": ["Brasilien", "Australien", "Vereinigte Staaten", "Vereinigtes Königreich"],
+        "RichtigeAntwort": "Brasilien",
+        "RichtigeAntwortMöglichkeiten": "Brasilien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Brasilien hat eine große Fläche an Naturschutzgebieten, insbesondere im Amazonasgebiet"
+    },
+    { //Naturschutzgebiete
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist das älteste Nationalpark der Welt?",
+        "Antworten": ["Yellowstone", "Yosemite", "Banff", "Kruger Nationalpark"],
+        "RichtigeAntwort": "Yellowstone",
+        "RichtigeAntwortMöglichkeiten": "Yellowstone",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Yellowstone-Nationalpark in den USA ist der älteste Nationalpark der Welt, gegründet 1872"
+    },
+    { //Naturschutzgebiete
+        "Kategorie": "Geographie",
+        "Frage": "Welches Meeresschutzgebiet ist das größte der Welt?",
+        "Antworten": ["Great Barrier Reef Marine Park", "Papahānaumokuākea Marine National Monument", "Chagos Marine Protected Area", "Ross Sea Region MPA"],
+        "RichtigeAntwort": "Papahānaumokuākea Marine National Monument",
+        "RichtigeAntwortMöglichkeiten": "Papahānaumokuākea Marine National Monument",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Papahānaumokuākea Marine National Monument ist das größte Meeresschutzgebiet der Welt"
+    },
+    { //Naturschutzgebiete
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land hat den höchsten Anteil seiner Landesfläche als Naturschutzgebiet ausgewiesen?",
+        "Antworten": ["Vereinigte Staaten", "Vereinigtes Königreich", "Costa Rica", "Neuseeland"],
+        "RichtigeAntwort": "Costa Rica",
+        "RichtigeAntwortMöglichkeiten": "Costa Rica",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Costa Rica hat einen hohen Anteil seiner Landesfläche als Naturschutzgebiet ausgewiesen"
+    },
+    { //Naturschutzgebiete
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Nationalpark in Europa ist der erste, der als UNESCO-Welterbe anerkannt wurde?",
+        "Antworten": ["Plitvicer Seen Nationalpark", "Cinque Terre", "Doñana Nationalpark", "Sächsische Schweiz Nationalpark"],
+        "RichtigeAntwort": "Plitvicer Seen Nationalpark",
+        "RichtigeAntwortMöglichkeiten": "Plitvicer Seen Nationalpark",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Plitvicer Seen Nationalpark in Kroatien war der erste Nationalpark in Europa, der als UNESCO-Welterbe anerkannt wurde"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Definition von Plattentektonik
+        "Kategorie": "Wissenschaft",
+        "Frage": "Was ist Plattentektonik?",
+        "Antworten": ["Die Bewegung der Kontinente", "Die Bewegung der Erdplatten", "Die Bewegung der Ozeane", "Die Bewegung der Atmosphäre"],
+        "RichtigeAntwort": "Die Bewegung der Erdplatten",
+        "RichtigeAntwortMöglichkeiten": "Bewegung Erdplatten Verschiebung Erdkrusten",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Plattentektonik bezieht sich auf die Bewegung und Wechselwirkung der großen Platten, aus denen die Erdkruste besteht"
+    },
+    { //Anzahl der großen tektonischen Platten
+        "Kategorie": "Wissenschaft",
+        "Frage": "Wie viele große tektonische Platten gibt es auf der Erde?",
+        "Antworten": ["5", "7", "9", "11"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Es gibt sieben große tektonische Platten auf der Erde: Pazifische Platte, Nordamerikanische Platte, Eurasische Platte, Afrikanische Platte, Südamerikanische Platte, Antarktische Platte und Australische Platte"
+    },
+    { //Pazifische Platte
+        "Kategorie": "Wissenschaft",
+        "Frage": "Welche tektonische Platte ist die größte?",
+        "Antworten": ["Eurasische Platte", "Afrikanische Platte", "Nordamerikanische Platte", "Pazifische Platte"],
+        "RichtigeAntwort": "Pazifische Platte",
+        "RichtigeAntwortMöglichkeiten": "Pazifische Platte",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Pazifische Platte ist die größte tektonische Platte und bedeckt den größten Teil des Pazifischen Ozeans"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { //Größter Flughafen der Welt nach Fläche
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der größte Flughafen der Welt nach Fläche?",
+        "Antworten": ["King Fahd International Airport", "Denver International Airport", "Beijing Daxing International Airport", "Dallas/Fort Worth International Airport"],
+        "RichtigeAntwort": "King Fahd International Airport",
+        "RichtigeAntwortMöglichkeiten": "King Fahd Saudi Arabien",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der King Fahd International Airport in Saudi-Arabien ist der größte Flughafen der Welt nach Fläche"
+    },
+    { //Ältester internationaler Flughafen
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der älteste internationale Flughafen der Welt?",
+        "Antworten": ["Flughafen London Heathrow", "Flughafen Sydney", "Flughafen Berlin Tempelhof", "Flughafen Paris-Le Bourget"],
+        "RichtigeAntwort": "Flughafen Paris-Le Bourget",
+        "RichtigeAntwortMöglichkeiten": "Flughafen Paris-Le Bourget",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Flughafen Paris-Le Bourget in Frankreich ist der älteste internationale Flughafen der Welt"
+    },
+    { //Flughafen mit dem höchsten Passagieraufkommen in Europa
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Flughafen hat das höchste Passagieraufkommen in Europa?",
+        "Antworten": ["Flughafen Frankfurt", "Flughafen Paris-Charles de Gaulle", "Flughafen Amsterdam Schiphol", "Flughafen London Heathrow"],
+        "RichtigeAntwort": "Flughafen London Heathrow",
+        "RichtigeAntwortMöglichkeiten": "London Heathrow",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Flughafen London Heathrow hat das höchste Passagieraufkommen in Europa"
+    },
 
 ]; 
