@@ -53,7 +53,17 @@
     </div>
 
     <script>
-        // Optional: JavaScript, um zusätzliche Anpassungen vorzunehmen.
+        let initialHeight = window.innerHeight;
+
+window.addEventListener('resize', function() {
+    let currentHeight = window.innerHeight;
+    
+    if (currentHeight < initialHeight) {
+        let keyboardHeight = initialHeight - currentHeight;
+        console.log('Ungefähre Tastaturhöhe:', keyboardHeight, 'px');
+        document.getElementById('myInput').value = 'Ungefähre Tastaturhöhe:', keyboardHeight, 'px';
+    }
+});
     </script>
 
 </body>
