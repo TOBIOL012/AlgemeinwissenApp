@@ -104,6 +104,24 @@ document.getElementById('clearImage').addEventListener('click', function() {
     document.getElementById('myInput').value = '';
 });
 
+document.querySelector('input').addEventListener('focus', function() {
+    console.log('Tastatur könnte geöffnet sein');
+});
+
+let initialHeight = window.innerHeight;
+
+window.addEventListener('resize', function() {
+    let currentHeight = window.innerHeight;
+    
+    if (currentHeight < initialHeight) {
+        let keyboardHeight = initialHeight - currentHeight;
+        console.log('Ungefähre Tastaturhöhe:', keyboardHeight, 'px');
+        document.getElementById('myInput').value = keyboardHeight;
+    }
+});
+
+
+
 
     function getRandomQuestion() {
         const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
