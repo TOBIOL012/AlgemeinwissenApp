@@ -37,7 +37,10 @@
         <div class="question-wrapper">
             <p class="question">Was ist die Hauptstadt von Deutschland?</p>
             <div class="answer-typed">
-                <input type="text" class="text-input" placeholder="Antwort">
+                <div class="container">
+                    <input type="text" class="text-input" placeholder="Antwort" id="myInput">
+                    <img class="kreuz" src="kreuz.png" alt="Bild" id="clearImage">
+                </div>
                 <button class="mic-button"><img src="icons8-microphone-32.png" alt="Mikrofon"></button>
             </div>
             <div class="bars-content">
@@ -53,8 +56,10 @@
             </div>
             <button id="next-button">Weiter</button>
             <div class="next-button-wrapper">
-                <p class="fact"></p>              
                 <p class="correct-answer"></p>
+                <div class="fact-box">
+                    <p class="fact"></p>
+                </div>
             </div>
         </div>
         

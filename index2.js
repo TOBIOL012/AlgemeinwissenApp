@@ -48,6 +48,7 @@ if ('webkitSpeechRecognition' in window) {
 // Sprachaufnahme beim Drücken des Mikrofon-Buttons starten und stoppen
 const micButton = document.querySelector('.mic-button');
 
+
 micButton.addEventListener('mousedown', function() {
     isMouseDown = true; // Maus gedrückt
     if (recognition && !isRecognizing) {
@@ -95,6 +96,12 @@ micButton.addEventListener('touchend', function(e) {
         recognition.stop();
         stopAudioProcessing();
     }
+});
+
+
+document.getElementById('clearImage').addEventListener('click', function() {
+    console.log('hallo');
+    document.getElementById('myInput').value = '';
 });
 
 
@@ -386,6 +393,7 @@ micButton.addEventListener('touchend', function(e) {
         const micButton = document.querySelector('.mic-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
         const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
+        const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box auszublenden
         const question = document.querySelector('.question');
         const categoryText = document.querySelector('.category-text');
         const categoryIcon = document.querySelector('.category-icon');
@@ -397,6 +405,7 @@ micButton.addEventListener('touchend', function(e) {
         button.classList.remove('correct', 'incorrect');
         correctAnswerDisplay.style.display = 'none';
         factDisplay.style.display = 'none'; // Fakt ausblenden
+        factBox.style.display = 'none'; // Die Box ausblenden
         
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
@@ -491,6 +500,7 @@ micButton.addEventListener('touchend', function(e) {
         const nextButton = document.querySelector('#next-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
         const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
+        const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box sichtbar zu machen
         const userAnswer = inputField.value.trim();
         const randomQuestion = questions.find(q => q.Frage === document.querySelector('.question').textContent);
         
@@ -510,6 +520,7 @@ micButton.addEventListener('touchend', function(e) {
             // Zeigen Sie den Fakt an
             factDisplay.textContent = randomQuestion.Fakt;
             factDisplay.style.display = 'block';
+            factBox.style.display = 'block'; // Die Box sichtbar machen
         } else if (clickCount === 2) {
             loadNextQuestion();
         }

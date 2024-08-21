@@ -185,26 +185,56 @@ main {
     justify-content: center;
 }
 
-.text-input {
+.container {
     border-radius: 25px;
     background-color: var(--background-color);
     color: white;
     border: none;
-    padding: 0.6em 0.7em;
     border-radius: 20px;
     font-size: var(--font-size-question);
-    width: calc(90vw - 4.8em);
+    width: calc(90vw - 3.5em);
     font-family: "Dosis", sans-serif;
     outline: 3px solid var(--line-color);
     transition: background-color 0.3s;
+
 }
 
-.text-input.correct {
+.text-input{
+    color: white;
+    font-size: var(--font-size-question);
+    border:none;
+    background-color: var(--background-color);
+    outline: none;
+    width: calc(100% - 7.5em);
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto; /* Zentriert den Container auf der Seite */
+}
+
+.container input[type="text"] {
+    flex-grow: 1;
+    font-size: 1em;
+    padding: 0.7em 0.7em;
+}
+
+.container img {
+    height: 1.8em;
+    margin-right: 0.3em;
+    cursor: pointer;
+    z-index: 5000;
+}
+
+.container.correct {
     background-color: var(--background-color); /* Rot für falsch */
     outline-color: #3df574;
 }
 
-.text-input.incorrect {
+.container.incorrect {
     background-color: var(--background-color); /* Rot für falsch */
     outline-color: #e92f2f;
 }
@@ -240,6 +270,7 @@ main {
 .mic-button img {
     width: 1.7em;
     height: 1.7em;
+    
 }
 
 .volume-bars {
@@ -273,11 +304,23 @@ main {
 
 .fact {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: normal;
     text-align: left;
-    padding: 0 10%;
-    margin-bottom: 1.4em;
+    padding: 0 calc(10% - 1em);
+}
+
+.fact-box {
+    background-color: #38424b;
+    border-radius: 20px;
+    padding: 1px;
+    width: 90%;
+    margin: 0 auto;
+    color: white; 
+    font-weight: normal; 
+    text-align: left;
+    margin-bottom: 0.8em; 
+    margin-top: 1em;
 }
 
 .correct-answer {
@@ -289,7 +332,7 @@ main {
     text-align: left;
     padding: 0 10%;
     margin-bottom: 1em;
-    margin-top: 0.5em; 
+    margin-top: 0.3em; 
 }
 
 .next-button-wrapper {
@@ -299,7 +342,7 @@ main {
     align-items: center;
     width: 100%;
     justify-content: center;
-    background-color: var(--background-color);;
+    background-color: var(--background-color);
     padding: 0 0;
     padding-bottom: 6em;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);

@@ -225,7 +225,7 @@ const questions = [
         "Kategorie": "Geschichte",
         "Frage": "Welches ist einer der 7 Weltwunder?",
         "Antworten": ["Leutturm von Alexandria", "Chinesische Mauer", "Petra", "Machu Picchu"],
-        "RichtigeAntwort": "Richtig",
+        "RichtigeAntwort": "Leutturm von Alexandria",
         "RichtigeAntwortMöglichkeiten": "Pyramide Gizeh Hängenden Gärten Semiramis Zeus Olympia Artemis Ephesos Mausoleum Halikarnassos Koloss Rhodos Leuchtturm Alexandria",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Chinesische Mauer gilt nicht als eines der Antiken Weltwunder"
@@ -325,7 +325,7 @@ const questions = [
         "Frage": "Welcher König gründete das erste Perserreich?",
         "Antworten": ["Kyros der Große", "Darius I.", "Xerxes I.", "Artaxerxes I."],
         "RichtigeAntwort": "Kyros der Große",
-        "RichtigeAntwortMöglichkeiten": "Kyros Große Cyrus ",
+        "RichtigeAntwortMöglichkeiten": "Kyros Große Cyru",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Kyros der Große gründete das achämenidische Perserreich"
     },
@@ -361,7 +361,7 @@ const questions = [
         "Frage": "Welcher Fluss war für die Landwirtschaft im alten Ägypten besonders wichtig?",
         "Antworten": ["Nil", "Tigris", "Euphrat", "Ganges"],
         "RichtigeAntwort": "Nil",
-        "RichtigeAntwortMöglichkeiten": "Nil",
+        "RichtigeAntwortMöglichkeiten": "Nil neil",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Der Nil war für das alte Ägypten lebenswichtig"
     },
@@ -916,7 +916,7 @@ const questions = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wie oft wurden die antiken Olympischen Spiele abgehalten?",
+        "Frage": "In welchem Zeitabstand wurden die antiken Olympischen Spiele abgehalten?",
         "Antworten": ["Jährlich", "Alle 2 Jahre", "Alle 4 Jahre", "Alle 10 Jahre"],
         "RichtigeAntwort": "Alle 4 Jahre",
         "RichtigeAntwortMöglichkeiten": "4 vierjährig vier vierjahre",
@@ -955,7 +955,7 @@ const questions = [
         "Frage": "Welches antike griechische Bauwerk ist der Tempel des Zeus",
         "Antworten": ["Olympeion", "Parthenon", "Erechtheion", "Zeus-Tempel"],
         "RichtigeAntwort": "Olympeion",
-        "RichtigeAntwortMöglichkeiten": "Olympeion",
+        "RichtigeAntwortMöglichkeiten": "Olympeion olmp",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Der Tempel des Zeus, auch Olympeion genannt, befindet sich in Athen und war einem der wichtigsten Götter des griechischen Pantheons gewidmet."
     },    
@@ -996,7 +996,7 @@ const questions = [
         "Antworten": ["Aeneas", "Achilles", "Hektor", "Odysseus"],
         "RichtigeAntwort": "Aeneas",
         "RichtigeAntwortMöglichkeiten": "Aeneas",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Aeneas floh nach dem Fall Trojas und gilt als Stammvater der Römer"
     },
     {
@@ -1134,6 +1134,99 @@ const questions = [
         "Schwierigkeitsgrad": "leicht",
         "Fakt": "Latein hatte große Einflüsse auf unsere heutigen Sprachen"
     },
+    {//Römische Zahlen
+        "Kategorie": "Geschichte",
+        "Frage": "Welches römische Zahlensystem-Symbol steht für die Zahl 10?",
+        "Antworten": ["X", "V", "I", "L"],
+        "RichtigeAntwort": "X",
+        "RichtigeAntwortMöglichkeiten": "X",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das römische Zahlensystem verwendet X für 10, was von der Form einer römischen Ziffer abgeleitet ist."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches römische Zahlensystem-Symbol repräsentiert die Zahl 50?",
+        "Antworten": ["L", "X", "V", "C"],
+        "RichtigeAntwort": "L",
+        "RichtigeAntwortMöglichkeiten": "L",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Symbol L steht für 50 und leitet sich vom lateinischen Wort für 'fünfzig' ab."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Symbol steht in der römischen Zahlenreihe für die Zahl 100?",
+        "Antworten": ["C", "D", "M", "V"],
+        "RichtigeAntwort": "C",
+        "RichtigeAntwortMöglichkeiten": "C",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Symbol C für 100 stammt von der ersten Buchstabe des lateinischen Wortes 'centum', was hundert bedeutet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wird die Zahl 1 in römischen Zahlen dargestellt?",
+        "Antworten": ["I", "V", "X", "L"],
+        "RichtigeAntwort": "I",
+        "RichtigeAntwortMöglichkeiten": "I",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Symbol I für 1 wurde verwendet, um Einzelziffern in der römischen Zahlenreihe darzustellen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches römische Zahlensystem-Symbol steht für die Zahl 500?",
+        "Antworten": ["D", "M", "C", "L"],
+        "RichtigeAntwort": "D",
+        "RichtigeAntwortMöglichkeiten": "D",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Symbol D für 500 wird verwendet, um größere Werte in der römischen Zahlenreihe darzustellen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches römische Zahlensystem-Symbol steht für die Zahl 5?",
+        "Antworten": ["V", "X", "L", "I"],
+        "RichtigeAntwort": "V",
+        "RichtigeAntwortMöglichkeiten": "V",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Symbol V repräsentiert die Zahl 5 und stammt vom lateinischen Wort für fünf, 'quinque'."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche römische Zahl entspricht der Zahl 20?",
+        "Antworten": ["XX", "X", "V", "L"],
+        "RichtigeAntwort": "XX",
+        "RichtigeAntwortMöglichkeiten": "XX",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Symbol XX steht für 20, da es zwei X-Symbole kombiniert, die jeweils 10 repräsentieren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wird die Zahl 4 in römischen Zahlen dargestellt?",
+        "Antworten": ["IV", "VI", "III", "V"],
+        "RichtigeAntwort": "IV",
+        "RichtigeAntwortMöglichkeiten": "IV",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "In der römischen Zahlenreihe wird 4 als IV dargestellt, wobei I vor V subtrahiert wird."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches römische Zahlensystem-Symbol steht für die Zahl 1.000?",
+        "Antworten": ["M", "D", "C", "L"],
+        "RichtigeAntwort": "M",
+        "RichtigeAntwortMöglichkeiten": "M",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Symbol M steht für 1.000 und ist die höchste Zahl in der römischen Zahlenreihe ohne Kombinationen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Für welche Zahl steht das römische Symbol XL?",
+        "Antworten": ["40", "50", "30", "60"],
+        "RichtigeAntwort": "40",
+        "RichtigeAntwortMöglichkeiten": "40",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "XL steht für 40, da X (10) vor L (50) subtrahiert wird."
+    },
+
+
+
     {//Römische Republik
         "Kategorie": "Geschichte",
         "Frage": "Wie hieß das höchste Amt in der römischen Republik?",
@@ -1149,7 +1242,7 @@ const questions = [
         "Antworten": ["4 Jahre", "2 Jahre", "5 Jahre", "1 Jahr"],
         "RichtigeAntwort": "1 Jahr",
         "RichtigeAntwortMöglichkeiten": "1 ein",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Konsuln wurden jedes Jahr neu gewählt."
     },
     {
@@ -1158,7 +1251,7 @@ const questions = [
         "Antworten": ["Zwei", "Ein", "Drei", "Vier"],
         "RichtigeAntwort": "Zwei",
         "RichtigeAntwortMöglichkeiten": "Zwei 2",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Es gab immer zwei Konsuln gleichzeitig in der römischen Republik"
     },
     {
@@ -1184,7 +1277,7 @@ const questions = [
         "Frage": "Welcher Krieg führte zur Eroberung des antiken Griechenlands?",
         "Antworten": ["Makedonischer Krieg", "Kriege gegen die Daker", "Kriege gegen die Karthager", "Kriege gegen die Gallier"],
         "RichtigeAntwort": "Makedonischer Krieg",
-        "RichtigeAntwortMöglichkeiten": "Makedonischer Krieg",
+        "RichtigeAntwortMöglichkeiten": "Makedonischer grieschiche",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Der Makedonische Krieg führte zur römischen Unterwerfung Griechenlands"
     },
@@ -1194,7 +1287,7 @@ const questions = [
         "Antworten": ["Amphitheater von Pompeji", "Kolosseum", "Amphitheater von Capua", "Amphitheater von Verona"],
         "RichtigeAntwort": "Amphitheater von Pompeji",
         "RichtigeAntwortMöglichkeiten": "Pompeji",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Das Amphitheater von Pompeji wurde vor dem Kolosseum erbaut"
     },
     {
@@ -1203,7 +1296,7 @@ const questions = [
         "Antworten": ["Forum Romanum", "Pantheon", "Kapitolinische Tempel", "Basilika Julia"],
         "RichtigeAntwort": "Forum Romanum",
         "RichtigeAntwortMöglichkeiten": "Forum Romanum",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Das Forum Romanum war das Herzstück der römischen Republik"
     },
     {//Römische Ereignisse Jahreszahlen
@@ -1248,17 +1341,26 @@ const questions = [
         "Antworten": ["Punischen Kriege", "Peloponnesische Krieg", "Gallischen Kriege", "Perserkriege"],
         "RichtigeAntwort": "Punischen Kriege",
         "RichtigeAntwortMöglichkeiten": "Punische punisch",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Punischen Kriege endeten mit der Zerstörung Karthagos und dem Sieg Roms."
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welcher Feldheer kämpfte während des Zweiten Punischen Krieges gegen Rom?",
+        "Frage": "Welcher berühmte Feldheer kämpfte während des Zweiten Punischen Krieges gegen Rom?",
+        "Antworten": ["Hannibal", "Hasdrubal", "Mago", "Hamilkar"],
+        "RichtigeAntwort": "Hannibal",
+        "RichtigeAntwortMöglichkeiten": "Hannibal Barca",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Hannibal ist berühmt für seinen Feldzug über die Alpen"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher berühmte Feldheer überquerte die Alpen mit Elefanten und Kämpfte gegen Rom?",
         "Antworten": ["Hannibal", "Hasdrubal", "Mago", "Hamilkar"],
         "RichtigeAntwort": "Hannibal",
         "RichtigeAntwortMöglichkeiten": "Hannibal Barca",
         "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Hannibal ist berühmt für seinen Feldzug über die Alpen"
+        "Fakt": "Hannibal kämpfte im 2. Punischem Krieg gegen Rom"
     },
     {
         "Kategorie": "Geschichte",
@@ -1271,11 +1373,11 @@ const questions = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welche Stadt makierte durch ihren Fall das Ende der Punischen Kriege?",
+        "Frage": "Welche Stadt makierte durch ihren Fall das Ende der Punischen Kriege gegen Rom?",
         "Antworten": ["Karthago", "Syrakus", "Athen", "Hippo"],
         "RichtigeAntwort": "Karthago",
         "RichtigeAntwortMöglichkeiten": "Karthago kartago", 
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Punischen Kriege waren eine Außeinandersezung zwischen Rom und Kartagho im 2. und 3. Jahrhundert v. Chr."
     },
     {
@@ -2018,10 +2120,19 @@ const questions = [
     },
     {//Martin Luther
         "Kategorie": "Geschichte",
-        "Frage": "Welchen Text hat Martin Luther an die Tür der Schlosskirche in Wittenberg genagelt?",
+        "Frage": "Welches Dokument hat Martin Luther an die Tür der Schlosskirche in Wittenberg genagelt?",
         "Antworten": ["95 Thesen", "Magna Carta", "Westfälischer Friede", "Goldene Bulle"],
         "RichtigeAntwort": "95 Thesen",
         "RichtigeAntwortMöglichkeiten": "95 Thesen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die 95 Thesen richteten sich vorallem gegen den Ablasshandel"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer veröffentlichte die 95 Thesen?",
+        "Antworten": ["Martin Luther", "Nelson Mandela", "Karl Marx", "Friedrich der Große"],
+        "RichtigeAntwort": "Martin Luther",
+        "RichtigeAntwortMöglichkeiten": "Martin Luther",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die 95 Thesen richteten sich vorallem gegen den Ablasshandel"
     },
@@ -2031,13 +2142,13 @@ const questions = [
         "Antworten": ["Deutsch", "Latein", "Griechisch", "Hebräisch"],
         "RichtigeAntwort": "Deutsch",
         "RichtigeAntwortMöglichkeiten": "Deutsch",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Luthers Bibelübersetzung ins Deutsche war revolutionär, da sie die Heilige Schrift erstmals einem breiten Publikum zugänglich machte."
     },
     {
         "Kategorie": "Geschichte",
         "Frage": "Welcher Reichstag verurteilte Martin Luther?",
-        "Antworten": ["Reichstag zu Worms", "REichstag von Trient", "Reichstag zu Speyer", "REichstag von Nicäa"],
+        "Antworten": ["Reichstag zu Worms", "Reichstag von Trient", "Reichstag zu Speyer", "Reichstag von Nicäa"],
         "RichtigeAntwort": "Reichstag zu Worms",
         "RichtigeAntwortMöglichkeiten": "Worms",
         "Schwierigkeitsgrad": "expert",
@@ -2085,7 +2196,7 @@ const questions = [
         "Antworten": ["Ablasshandel", "Kreuzzüge", "Priestertum", "Klosterleben"],
         "RichtigeAntwort": "Ablasshandel",
         "RichtigeAntwortMöglichkeiten": "Ablasshandel Ablassbriefe Ablas Begnadigung Freisprechung Lossprechung Sündenerlass Indulgenzhandel Sündenvergebungshandel Sündenablasshandel handel briefe",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Damals hatte man Ablassbriefe gekauft um von seinen Sünden befreit zu werden"
     },
     {
@@ -2481,7 +2592,7 @@ const questions = [
         "Antworten": ["Odin", "Thor", "Loki", "Freyja"],
         "RichtigeAntwort": "Odin",
         "RichtigeAntwortMöglichkeiten": "Odin",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Odin ist der Allvater und der wichtigste Gott in der nordischen Mythologie"
     },
     {
@@ -2499,7 +2610,7 @@ const questions = [
         "Antworten": ["Asgard", "Midgard", "Vanaheim", "Helheim"],
         "RichtigeAntwort": "Asgard",
         "RichtigeAntwortMöglichkeiten": "Asgard",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Asgard ist mit einer Regenbogenbrücke namens Bifröst mit der Menschenwelt verbunden."
     },
     {
@@ -2508,12 +2619,12 @@ const questions = [
         "Antworten": ["Ragnarök", "Armageddon", "Apokalypse", "Ragnarökkr"],
         "RichtigeAntwort": "Ragnarök",
         "RichtigeAntwortMöglichkeiten": "Ragnarök",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Ragnarök ist das Schicksal der Götter, ein prophezeiter Weltuntergang"
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wie heißt der Ort, in dem im Kampf gefallene Krieger nach dem Tod hinkommen?",
+        "Frage": "Wie heißt der Ort, in dem im Kampf gefallene Krieger im nordischen Glauben nach dem Tod hinkommen?",
         "Antworten": ["Valhalla", "Hel", "Asgard", "Midgard"],
         "RichtigeAntwort": "Valhalla",
         "RichtigeAntwortMöglichkeiten": "Valhalla",
@@ -2526,7 +2637,7 @@ const questions = [
         "Antworten": ["Loki", "Thor", "Odin", "Freyja"],
         "RichtigeAntwort": "Loki",
         "RichtigeAntwortMöglichkeiten": "Loki",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Loki ist bekannt für seine Schabernack"
     },
     {
@@ -2535,7 +2646,7 @@ const questions = [
         "Antworten": ["Loki", "Balder", "Tyr", "Vidar"],
         "RichtigeAntwort": "Loki",
         "RichtigeAntwortMöglichkeiten": "Loki",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Loki ist der Gott des Schabernacks"
     },
     {
@@ -2562,7 +2673,7 @@ const questions = [
         "Antworten": ["Odin", "Loki", "Balder", "Heimdall"],
         "RichtigeAntwort": "Odin",
         "RichtigeAntwortMöglichkeiten": "Odin",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Odin ist der Allvater und oberste Gott der nordischen Mythologie"
     },
     {
@@ -2871,7669 +2982,2060 @@ const questions = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Das Königreich Ungarn war bekannt für seine Verteidigung gegen die Osmanischen Türken, besonders bei der Schlacht von Mohács 1526."
     },
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-    
-        { //Anzahl der Ozeane
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Ozeane gibt es auf der Erde?",
-            "Antworten": ["3", "4", "5", "6"],
-            "RichtigeAntwort": "5",
-            "RichtigeAntwortMöglichkeiten": "5",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Es gibt fünf Ozeane auf der Erde: den Pazifischen Ozean, den Atlantischen Ozean, den Indischen Ozean, den Arktischen Ozean und den Südlichen Ozean"
-        },
-        { //Größter Ozean der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist der größte Ozean der Welt?",
-            "Antworten": ["Atlantischer Ozean", "Indischer Ozean", "Pazifischer Ozean", "Arktischer Ozean"],
-            "RichtigeAntwort": "Pazifischer Ozean",
-            "RichtigeAntwortMöglichkeiten": "Pazifischer Pazifik",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Pazifische Ozean ist mit einer Fläche von etwa 168 Millionen Quadratkilometern der größte Ozean der Welt"
-        },
-        { //Kleinster Ozean der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist der kleinste Ozean der Welt?",
-            "Antworten": ["Indischer Ozean", "Südlicher Ozean", "Arktischer Ozean", "Atlantischer Ozean"],
-            "RichtigeAntwort": "Arktischer Ozean",
-            "RichtigeAntwortMöglichkeiten": "Arktischer Ozean",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Arktische Ozean hat trotzdem eine Fläche von etwa 14 Millionen Quadratkilometern"
-        },
-        { //Größe des Pazifischen Ozeans
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Pazifische Ozean?",
-            "Antworten": ["105 Millionen km²", "165 Millionen km²", "198 Millionen km²", "234 Millionen km²"],
-            "RichtigeAntwort": "165 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "165 Millionen km²",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Pazifische Ozean ist mit etwa 165 Millionen Quadratkilometern der größte Ozean der Welt"
-        },
-        { //Wasserstrom im Pazifik
-            "Kategorie": "Geographie",
-            "Frage": "Welcher große Wasserstrom fließt durch den Pazifischen Ozean?",
-            "Antworten": ["Golfstrom", "Humboldtstrom", "Nordatlantikstrom", "Ostgrönlandstrom"],
-            "RichtigeAntwort": "Humboldtstrom",
-            "RichtigeAntwortMöglichkeiten": "Humboldtstrom",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Humboldtstrom ist ein kalter Meeresstrom, der entlang der Westküste Südamerikas durch den Pazifischen Ozean fließt"
-        },
-        { //Pazifik Bedeutung des Namens
-            "Kategorie": "Geographie",
-            "Frage": "Was bedeutet der Name 'Pazifik'?",
-            "Antworten": ["Stürmischer Ozean", "Friedlicher Ozean", "Großer Ozean", "Tiefer Ozean"],
-            "RichtigeAntwort": "Friedlicher Ozean",
-            "RichtigeAntwortMöglichkeiten": "Friedlicher Ozean",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Name 'Pazifik' kommt vom lateinischen 'Mare Pacificum', was 'Friedlicher Ozean' bedeutet"
-        },
-        { //Tiefster Punkt im Marianengraben
-            "Kategorie": "Geographie",
-            "Frage": "Wie tief ist der tiefste Punkt des Marianengrabens?",
-            "Antworten": ["8.848 Meter", "10.994 Meter", "11.034 Meter", "12.000 Meter"],
-            "RichtigeAntwort": "11.034 Meter",
-            "RichtigeAntwortMöglichkeiten": "11.034 Meter",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der tiefste Punkt des Marianengrabens, bekannt als das Challenger-Tief, liegt etwa 11.034 Meter unter dem Meeresspiegel"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Größe des Atlantischen Ozeans
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Atlantische Ozean?",
-            "Antworten": ["85 Millionen km²", "90 Millionen km²", "100 Millionen km²", "110 Millionen km²"],
-            "RichtigeAntwort": "85 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "85 Millionen km²",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Atlantische Ozean  ist der zweitgrößte Ozean der Welt"
-        },
-        { //Tiefster Punkt des Atlantiks
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist der tiefste Punkt des Atlantischen Ozeans?",
-            "Antworten": ["Puerto-Rico-Graben", "Tonga-Graben", "Süd-Sandwich-Graben", "Java-Graben"],
-            "RichtigeAntwort": "Puerto-Rico-Graben",
-            "RichtigeAntwortMöglichkeiten": "Puerto-Rico-Graben",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Puerto-Rico-Graben ist mit etwa 8.376 Metern der tiefste Punkt des Atlantischen Ozeans"
-        },
-        { //Längster Fluss mündet in den Atlantik
-            "Kategorie": "Geographie",
-            "Frage": "Welcher der längsten Flüsse der Welt mündet in den Atlantischen Ozean?",
-            "Antworten": ["Nil", "Amazonas", "Jangtsekiang", "Mississippi"],
-            "RichtigeAntwort": "Amazonas",
-            "RichtigeAntwortMöglichkeiten": "Amazonas",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Amazonas, der zweitlängste Fluss der Welt, mündet in den Atlantischen Ozean"
-        },
-        { //Wasserstrom im Atlantik
-            "Kategorie": "Geographie",
-            "Frage": "Welcher große Wasserstrom fließt durch den Atlantischen Ozean?",
-            "Antworten": ["Golfstrom", "Humboldtstrom", "Nordatlantikstrom", "Ostgrönlandstrom"],
-            "RichtigeAntwort": "Golfstrom",
-            "RichtigeAntwortMöglichkeiten": "Golfstrom",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Golfstrom ist ein starker Meeresstrom, der warmes Wasser aus dem Golf von Mexiko in den Nordatlantik transportiert"
-        },
-        { //Bedeutung des Namens Atlantik
-            "Kategorie": "Geographie",
-            "Frage": "Was bedeutet der Name 'Atlantik'?",
-            "Antworten": ["Stürmischer Ozean", "Ozean des Atlas", "Großer Ozean", "Tiefer Ozean"],
-            "RichtigeAntwort": "Ozean des Atlas",
-            "RichtigeAntwortMöglichkeiten": " Atlas",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Name 'Atlantik' leitet sich vom griechischen Gott Atlas ab und bedeutet 'Ozean des Atlas'"
-        },
-        { //Anzahl der Kontinente, die an den Atlantik grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Kontinente grenzen an den Atlantischen Ozean?",
-            "Antworten": ["3", "4", "5", "6"],
-            "RichtigeAntwort": "4",
-            "RichtigeAntwortMöglichkeiten": "4",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Vier Kontinente grenzen an den Atlantischen Ozean: Nordamerika, Südamerika, Europa und Afrika"
-        },
-        { //Größte Insel im Atlantik
-            "Kategorie": "Geographie",
-            "Frage": "Welche ist die größte Insel im Atlantischen Ozean?",
-            "Antworten": ["Grönland", "Island", "Großbritannien", "Madagaskar"],
-            "RichtigeAntwort": "Grönland",
-            "RichtigeAntwortMöglichkeiten": "Grönland",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Grönland ist die größte Insel im Atlantischen Ozean und die größte Insel der Welt"
-        },
-        { //Mid-Atlantic Ridge
-            "Kategorie": "Geographie",
-            "Frage": "Was ist der Mid-Atlantic Ridge?",
-            "Antworten": ["Ein Gebirge auf dem Meeresboden", "Ein großer Meeresstrom", "Ein Tiefseegraben", "Ein unterseeischer Vulkan"],
-            "RichtigeAntwort": "Ein Gebirge auf dem Meeresboden",
-            "RichtigeAntwortMöglichkeiten": "Ein Gebirge auf dem Meeresboden",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Mid-Atlantic Ridge ist ein Gebirge auf dem Meeresboden, das sich über den gesamten Atlantischen Ozean erstreckt und eine bedeutende divergente Plattengrenze darstellt"
-        },
-        { //Entdeckung des Atlantischen Ozeans
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Entdecker überquerte den Atlantischen Ozean 1492?",
-            "Antworten": ["Vasco da Gama", "Ferdinand Magellan", "Christopher Columbus", "James Cook"],
-            "RichtigeAntwort": "Christopher Columbus",
-            "RichtigeAntwortMöglichkeiten": "Christopher Columbus",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Christopher Columbus überquerte den Atlantischen Ozean im Jahr 1492 und entdeckte die Neue Welt"
-        },
-        { //Berühmte Seewege im Atlantik
-            "Kategorie": "Geographie",
-            "Frage": "Welcher berühmte Seeweg verbindet den Atlantischen Ozean mit dem Pazifischen Ozean?",
-            "Antworten": ["Suezkanal", "Panamakanal", "Nordwestpassage", "Straße von Gibraltar"],
-            "RichtigeAntwort": "Panamakanal",
-            "RichtigeAntwortMöglichkeiten": "Panamakanal",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Panamakanal ist ein berühmter Seeweg, der den Atlantischen Ozean mit dem Pazifischen Ozean verbindet"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Größe des Indischen Ozeans
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Indische Ozean?",
-            "Antworten": ["50 Millionen km²", "70 Millionen km²", "90 Millionen km²", "110 Millionen km²"],
-            "RichtigeAntwort": "70 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "70 Millionen km²",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Indische Ozean erstreckt sich über eine Fläche von etwa 70 Millionen Quadratkilometern"
-        },
-        { //Begrenzende Kontinente des Indischen Ozeans
-            "Kategorie": "Geographie",
-            "Frage": "Welche Kontinente grenzen an den Indischen Ozean?",
-            "Antworten": ["Afrika und Asien", "Asien und Australien", "Afrika, Asien und Australien", "Afrika, Europa und Asien"],
-            "RichtigeAntwort": "Afrika, Asien und Australien",
-            "RichtigeAntwortMöglichkeiten": "Afrika, Asien und Australien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Indische Ozean wird von drei Kontinenten umgeben: Afrika, Asien und Australien"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        { //Größter See der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welcher See ist der größte der Welt (nach Fläche)?",
-            "Antworten": ["Baikalsee", "Victoriasee", "Kaspisches Meer", "Oberer See"],
-            "RichtigeAntwort": "Kaspisches Meer",
-            "RichtigeAntwortMöglichkeiten": "Kaspisches Meer",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Kaspische Meer ist mit einer Fläche von etwa 371.000 Quadratkilometern der größte See der Welt"
-        },
-        { //Anrainerstaaten des Kaspischen Meeres
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder grenzen an das Kaspische Meer?",
-            "Antworten": ["3", "4", "5", "6"],
-            "RichtigeAntwort": "5",
-            "RichtigeAntwortMöglichkeiten": "5",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Fünf Länder grenzen an das Kaspische Meer: Russland, Kasachstan, Turkmenistan, Iran und Aserbaidschan"
-        },
-        { //Hauptzuflüsse des Kaspischen Meeres
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist der Hauptzufluss des Kaspischen Meeres?",
-            "Antworten": ["Donau", "Wolga", "Amur", "Jenissei"],
-            "RichtigeAntwort": "Wolga",
-            "RichtigeAntwortMöglichkeiten": "Wolga",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Wolga ist der Hauptzufluss des Kaspischen Meeres und der längste Fluss Europas"
-        },
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-    
-        { //Höchstes Gebirge der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches Gebirge ist das höchste der Welt?",
-            "Antworten": ["Anden", "Rocky Mountains", "Himalaya", "Alpen"],
-            "RichtigeAntwort": "Himalaya",
-            "RichtigeAntwortMöglichkeiten": "Himalaya",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Himalaya ist das höchste Gebirge der Welt und beherbergt den Mount Everest"
-        },
-        { //Tierspezies im Himalaya
-            "Kategorie": "Geographie",
-            "Frage": "Welche seltene Tierspezies ist im Himalaya heimisch?",
-            "Antworten": ["Schneeleopard", "Polarfuchs", "Koala", "Komodowaran"],
-            "RichtigeAntwort": "Schneeleopard",
-            "RichtigeAntwortMöglichkeiten": "Schneeleopard",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Schneeleopard ist eine seltene Tierspezies, die im Himalaya-Gebirge heimisch ist"
-        },
-        { //Himalaya-Mythen
-            "Kategorie": "Geographie",
-            "Frage": "Welches mythische Wesen soll im Himalaya leben?",
-            "Antworten": ["Bigfoot", "Chupacabra", "Nessie", "Yeti"],
-            "RichtigeAntwort": "Yeti",
-            "RichtigeAntwortMöglichkeiten": "Yeti",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Yeti, auch bekannt als der 'Schneemensch', ist ein mythisches Wesen, das angeblich im Himalaya lebt"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Amazonas-Regenwald
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt der Amazonas-Regenwald?",
-            "Antworten": ["Afrika", "Asien", "Südamerika", "Australien"],
-            "RichtigeAntwort": "Südamerika",
-            "RichtigeAntwortMöglichkeiten": "Südamerika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas-Regenwald liegt in Südamerika und erstreckt sich über mehrere Länder"
-        },
-    
-        { //Größe des Amazonas-Regenwaldes
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Amazonas-Regenwald?",
-            "Antworten": ["2,5 Millionen km²", "6 Millionen km²", "1 Millionen km²", "65 Millionen km²"],
-            "RichtigeAntwort": "6 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "6 Millionen km²",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas-Regenwald erstreckt sich über etwa 6 Millionen Quadratkilometer und ist der größte Regenwald der Welt"
-        },
-        { //Durchfließender Fluss
-            "Kategorie": "Geographie",
-            "Frage": "Welcher große Fluss fließt durch den Amazonas-Regenwald?",
-            "Antworten": ["Nil", "Mississippi", "Amazonas", "Ganges"],
-            "RichtigeAntwort": "Amazonas",
-            "RichtigeAntwortMöglichkeiten": "Amazonas",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Amazonas ist der größte Fluss, der durch den Amazonas-Regenwald fließt und hat das größte Einzugsgebiet der Welt"
-        },
-        { //Länder, die den Amazonas-Regenwald teilen
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder teilen sich den Amazonas-Regenwald?",
-            "Antworten": ["6", "7", "8", "9"],
-            "RichtigeAntwort": "9",
-            "RichtigeAntwortMöglichkeiten": "9",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas-Regenwald erstreckt sich über neun Länder: Brasilien, Peru, Kolumbien, Venezuela, Ecuador, Bolivien, Guyana, Suriname und Französisch-Guayana"
-        },
-        { //Gefährdung des Amazonas-Regenwaldes
-            "Kategorie": "Geographie",
-            "Frage": "Welche Hauptgefahr bedroht den Amazonas-Regenwald?",
-            "Antworten": ["Erdbeben", "Tsunamis", "Abholzung", "Vulkanausbrüche"],
-            "RichtigeAntwort": "Abholzung",
-            "RichtigeAntwortMöglichkeiten": "Abholzung",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Abholzung ist die größte Bedrohung für den Amazonas-Regenwald, was zu erheblichen Umweltproblemen führt"
-        },
-        { //Indigene Völker im Amazonas-Regenwald
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele indigene Völker leben im Amazonas-Regenwald?",
-            "Antworten": ["Mehr als 100", "ungefähr 40", "Mehr als 300", "Mehr als 10.000"],
-            "RichtigeAntwort": "Mehr als 300",
-            "RichtigeAntwortMöglichkeiten": "Mehr als 300",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Im Amazonas-Regenwald leben mehr als 300 indigene Völker, die in Harmonie mit der Natur leben"
-        },
-        { //Nutztier des Amazonas-Regenwalds
-            "Kategorie": "Geographie",
-            "Frage": "Welches Tier ist bekannt dafür, große Gebiete des Amazonas-Regenwalds zu bewohnen und zu nutzen?",
-            "Antworten": ["Jaguar", "Elefant", "Känguru", "Fuchs"],
-            "RichtigeAntwort": "Jaguar",
-            "RichtigeAntwortMöglichkeiten": "Jaguar",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Jaguar ist eines der größten Raubtiere im Amazonas-Regenwald und spielt eine wichtige Rolle im Ökosystem"
-        },
-        { //Andere Bezeichnung für den Amazonas-Regenwald
-            "Kategorie": "Geographie",
-            "Frage": "Wie wird der Amazonas-Regenwald noch genannt?",
-            "Antworten": ["Der grüne Riese", "Die grüne Wüste", "Die Lunge der Erde", "Der grüne Ozean"],
-            "RichtigeAntwort": "Die Lunge der Erde",
-            "RichtigeAntwortMöglichkeiten": "Die Lunge der Erde",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas-Regenwald wird oft als 'Lunge der Erde' bezeichnet, weil er eine große Menge Sauerstoff produziert"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Meisten Inseln
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die meisten Inseln der Welt?",
-            "Antworten": ["Indonesien", "Philippinen", "Kanada", "Schweden"],
-            "RichtigeAntwort": "Schweden",
-            "RichtigeAntwortMöglichkeiten": "Schweden",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Schweden hat die meisten Inseln der Welt mit etwa 267.570 Inseln"
-        },
-        { //Atacama-Wüste
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Atacama-Wüste, die trockenste Wüste der Welt?",
-            "Antworten": ["Tansania", "China", "Chile", "Äthiopien"],
-            "RichtigeAntwort": "Chile",
-            "RichtigeAntwortMöglichkeiten": "Chile",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Atacama-Wüste wird für wissenschaftliche Forschung genutzt, da ihre Bedingungen denen auf dem Mars ähneln"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Salzhaltigstes Meer
-            "Kategorie": "Geographie",
-            "Frage": "Welches Meer ist das salzhaltigste der Welt?",
-            "Antworten": ["Mittelmeer", "Rotes Meer", "Tote Meer", "Kaspisches Meer"],
-            "RichtigeAntwort": "Tote Meer",
-            "RichtigeAntwortMöglichkeiten": "Tote Meer",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Tote Meer hat einen Salzgehalt von etwa 30%"
-        },
-        { //Lage des Toten Meeres
-            "Kategorie": "Geographie",
-            "Frage": "Zwischen welchen zwei Ländern liegt das Tote Meer?",
-            "Antworten": ["Israel und Jordanien", "Ägypten und Libyen", "Syrien und Irak", "Saudi-Arabien und Kuwait"],
-            "RichtigeAntwort": "Israel und Jordanien",
-            "RichtigeAntwortMöglichkeiten": "Israel Jordanien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Das Tote Meer ist der tiefste Punkt auf der Erdoberfläche, etwa 430 Meter unter dem Meeresspiegel"
-        },
-        { //Heilende Eigenschaften des Toten Meeres
-            "Kategorie": "Geographie",
-            "Frage": "Welches Element des Toten Meeres wird oft zur Behandlung von Hautkrankheiten genutzt?",
-            "Antworten": ["Wasser", "Sand", "Schlamm", "Luft"],
-            "RichtigeAntwort": "Schlamm",
-            "RichtigeAntwortMöglichkeiten": "Schlamm",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Schlamm des Toten Meeres ist für seine heilenden Eigenschaften bekannt und wird oft zur Behandlung von Hautkrankheiten genutzt"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Größe der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist die Antarktis ungefähr?",
-            "Antworten": ["8 Millionen km²", "14 Millionen km²", "27 Millionen km²", "29 Millionen km²"],
-            "RichtigeAntwort": "14 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "14 Millionen km²",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Antarktis erstreckt sich über eine Fläche von etwa 14 Millionen Quadratkilometern"
-        },
-        { //Kälte der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Wie tief kann die Temperatur in der Antarktis fallen?",
-            "Antworten": ["-40°C", "-270°C", "-80°C", "-100°C"],
-            "RichtigeAntwort": "-80°C",
-            "RichtigeAntwortMöglichkeiten": "-80°C",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Antarktis ist damit der kälteste Ort der Erde"
-        },
-        { //Eisdecke der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Wie viel Prozent der weltweiten Süßwasserreserven sind in der Eisdecke der Antarktis gespeichert?",
-            "Antworten": ["17%", "11%", "70%", "33%"],
-            "RichtigeAntwort": "70%",
-            "RichtigeAntwortMöglichkeiten": "70%",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Etwa 70% der weltweiten Süßwasserreserven sind in der Eisdecke der Antarktis gespeichert"
-        },
-        { //Sonne in der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Wie lange ist die Sonne während des antarktischen Sommers sichtbar?",
-            "Antworten": ["Gar nicht", "24 Stunden", "1 Monat", "6 Monate"],
-            "RichtigeAntwort": "24 Stunden",
-            "RichtigeAntwortMöglichkeiten": "24 Stunden",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Während des antarktischen Sommers ist die Sonne rund um die Uhr sichtbar"
-        },
-        { //Tiere der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Welche Tierart lebt typischerweise in der Antarktis?",
-            "Antworten": ["Pinguine", "Eisbären", "Kamele", "Polarfüchse"],
-            "RichtigeAntwort": "Pinguine",
-            "RichtigeAntwortMöglichkeiten": "Pinguine",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Pinguine sind eine typische Tierart, die in der Antarktis lebt"
-        },
-        
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        { //Kleinster Kontinent der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist der kleinste Kontinent der Welt?",
-            "Antworten": ["Europa", "Australien", "Antarktis", "Südamerika"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Australien ist der kleinste Kontinent der Welt mit einer Fläche von etwa 7,7 Millionen Quadratkilometern"
-        },
-        { //Größtes Land der Welt nach Fläche
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist das größte der Welt (nach Fläche)?",
-            "Antworten": ["Kanada", "China", "USA", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Russland ist das größte Land der Welt und erstreckt sich über elf Zeitzonen"
-        },
-        { //Kontinent der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt die Antarktis?",
-            "Antworten": ["Asien", "Europa", "Antarktis", "Australien"],
-            "RichtigeAntwort": "Antarktis",
-            "RichtigeAntwortMöglichkeiten": "Antarktis",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Antarktis ist der kälteste und trockenste Kontinent der Erde"
-        },
-        { //Anzahl der Länder auf der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es auf der Welt?",
-            "Antworten": ["96", "127", "525", "195"],
-            "RichtigeAntwort": "195",
-            "RichtigeAntwortMöglichkeiten": "195",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Gerade keine Zeit für einen Fakt"
-        },
-        { //Anzahl der Länder in Afrika
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in Afrika?",
-            "Antworten": ["50", "52", "54", "56"],
-            "RichtigeAntwort": "54",
-            "RichtigeAntwortMöglichkeiten": "54",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Afrika besteht aus 54 souveränen Staaten und ist damit der Kontinent mit den meisten Ländern"
-        },
-        { //Anzahl der Länder in Asien
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in Asien?",
-            "Antworten": ["32", "47", "56", "71"],
-            "RichtigeAntwort": "49",
-            "RichtigeAntwortMöglichkeiten": "49",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Asien besteht aus 49 souveränen Staaten"
-        },
-        { //Anzahl der Länder in Europa
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in Europa?",
-            "Antworten": ["44", "49", "68", "50"],
-            "RichtigeAntwort": "44",
-            "RichtigeAntwortMöglichkeiten": "44",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Europa besteht aus 44 souveränen Staaten"
-        },
-        { //Anzahl der Länder in Nordamerika
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in Nordamerika?",
-            "Antworten": ["9", "23", "14", "3"],
-            "RichtigeAntwort": "23",
-            "RichtigeAntwortMöglichkeiten": "23",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Nordamerika besteht aus 23 souveränen Staaten"
-        },
-        { //Anzahl der Länder in Südamerika
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in Südamerika?",
-            "Antworten": ["5", "12", "22", "16"],
-            "RichtigeAntwort": "12",
-            "RichtigeAntwortMöglichkeiten": "12 13",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Südamerika besteht aus 12 souveränen Staaten"
-        },
-        { //Anzahl der Länder in Australien und Ozeanien
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in Australien und Ozeanien?",
-            "Antworten": ["3", "14", "4", "43"],
-            "RichtigeAntwort": "14",
-            "RichtigeAntwortMöglichkeiten": "14",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Australien und Ozeanien bestehen aus 14 souveränen Staaten"
-        },
-        { //Anzahl der Länder in der Antarktis
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Länder gibt es in der Antarktis?",
-            "Antworten": ["0", "1", "3", "5"],
-            "RichtigeAntwort": "0",
-            "RichtigeAntwortMöglichkeiten": "0",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Es gibt keine souveränen Staaten in der Antarktis, da der Kontinent durch den Antarktisvertrag international verwaltet wird"
-        },
-        { //Anzahl der Länder in Afrika
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die meisten Länder?",
-            "Antworten": ["Afrika", "Europa", "Asien", "Südamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Afrika besteht aus 54 souveränen Staaten"
-        },
-        { //Wenigste Länder auf einem Kontinent
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die wenigsten Länder?",
-            "Antworten": ["Europa", "Südamerika", "Australien und Ozeanien", "Antarktis"],
-            "RichtigeAntwort": "Antarktis",
-            "RichtigeAntwortMöglichkeiten": "Antarktis",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Antarktis hat keine souveränen Staaten, da der Kontinent durch den Antarktisvertrag international verwaltet wird"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Meer zwischen Europa und Afrika
-            "Kategorie": "Geographie",
-            "Frage": "Welches Meer liegt zwischen Europa und Afrika?",
-            "Antworten": ["Nordsee", "Ostsee", "Schwarzes Meer", "Mittelmeer"],
-            "RichtigeAntwort": "Mittelmeer",
-            "RichtigeAntwortMöglichkeiten": "Mittelmeer",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Das Mittelmeer verbindet Europa, Afrika und Asien und war historisch eine wichtige Handelsroute"
-        },
-        { //Fläche des Mittelmeers
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist die Fläche des Mittelmeers?",
-            "Antworten": ["1 Million km²", "2,5 Millionen km²", "4 Millionen km²", "5,5 Millionen km²"],
-            "RichtigeAntwort": "2,5 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "2,5 Millionen km²",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Mittelmeer erstreckt sich über eine Fläche von etwa 2,5 Millionen Quadratkilometern"
-        },
-        { //Verbindung zu anderen Meeren
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kanal verbindet das Mittelmeer mit dem Roten Meer?",
-            "Antworten": ["Panamakanal", "Suezkanal", "Kielkanal", "Korinthkanal"],
-            "RichtigeAntwort": "Suezkanal",
-            "RichtigeAntwortMöglichkeiten": "Suezkanal",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Dadurch ermöglicht er eine direkte Schifffahrtsroute zwischen Europa und Asien"
-        },
-        { //Umrundende Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Welche Kontinente grenzen an das Mittelmeer?",
-            "Antworten": ["Europa und Asien", "Asien und Afrika", "Europa, Asien und Afrika", "Europa und Afrika"],
-            "RichtigeAntwort": "Europa, Asien und Afrika",
-            "RichtigeAntwortMöglichkeiten": "Europa, Asien und Afrika",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Das Mittelmeer wird von drei Kontinenten umgeben: Europa, Asien und Afrika"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Bevölkerungsreichste Kontinent
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent ist der bevölkerungsreichste?",
-            "Antworten": ["Afrika", "Europa", "Asien", "Amerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Asien ist der bevölkerungsreichste Kontinent mit etwa 60% der Weltbevölkerung"
-        },
-        { //Bevölkerungsärmster Kontinent
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent ist der bevölkerungsärmste?",
-            "Antworten": ["Australien und Ozeanien", "Antarktis", "Europa", "Südamerika"],
-            "RichtigeAntwort": "Antarktis",
-            "RichtigeAntwortMöglichkeiten": "Antarktis",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Antarktis hat keine permanente Bevölkerung und ist damit der bevölkerungsärmste Kontinent"
-        },
-        { //Land der tausend Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land wird oft als 'Land der tausend Seen' bezeichnet?",
-            "Antworten": ["Schweden", "Kanada", "Finnland", "Norwegen"],
-            "RichtigeAntwort": "Finnland",
-            "RichtigeAntwortMöglichkeiten": "Finnland",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Finnland wird als 'Land der tausend Seen' bezeichnet,da es etwa 188.000 Seen hat"
-        },
-        { //Ozeane um Afrika
-            "Kategorie": "Geographie",
-            "Frage": "Welche zwei Ozeane umgeben Afrika?",
-            "Antworten": ["Atlantischer und Pazifischer Ozean", "Indischer und Pazifischer Ozean", "Atlantischer und Indischer Ozean", "Arktischer und Atlantischer Ozean"],
-            "RichtigeAntwort": "Atlantischer und Indischer Ozean",
-            "RichtigeAntwortMöglichkeiten": "Atlantischer Indischer Atlantik",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Afrika wird vom Atlantischen und Indischen Ozean umgeben"
-        },
-    
-        { //Fluss zwischen Mexiko und USA
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss bildet die Grenze zwischen Mexiko und den USA?",
-            "Antworten": ["Mississippi", "Colorado", "Rio Grande", "Missouri"],
-            "RichtigeAntwort": "Rio Grande",
-            "RichtigeAntwortMöglichkeiten": "Rio Grande",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Rio Grande bildet einen natürlichen Grenzverlauf zwischen Mexiko und den USA"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Höchster Berg in Europa
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Berg ist der höchste in Europa?",
-            "Antworten": ["Matterhorn", "Mont Blanc", "Zugspitze", "Elbrus"],
-            "RichtigeAntwort": "Mont Blanc",
-            "RichtigeAntwortMöglichkeiten": "Mont Blanc",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Mont Blanc ist mit 4.810 Metern der höchste Berg in den Alpen und Europa"
-        },
-        { //Höhe des Mont Blanc
-            "Kategorie": "Geographie",
-            "Frage": "Wie hoch ist der Mont Blanc?",
-            "Antworten": ["3.800 Meter", "4.200 Meter", "4.810 Meter", "5.000 Meter"],
-            "RichtigeAntwort": "4.810 Meter",
-            "RichtigeAntwortMöglichkeiten": "4.810 Meter",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Mont Blanc ist mit 4.810 Metern der höchste Berg der Alpen und Westeuropas"
-        },
-        { //Grenze des Mont Blanc
-            "Kategorie": "Geographie",
-            "Frage": "Zwischen welchen Ländern liegt der Mont Blanc?",
-            "Antworten": ["Deutschland und Österreich", "Frankreich und Italien", "Schweiz und Italien", "Frankreich und Schweiz"],
-            "RichtigeAntwort": "Frankreich und Italien",
-            "RichtigeAntwortMöglichkeiten": "Frankreich und Italien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Mont-Blanc-Tunnel ist einer der längsten Straßentunnel der Welt und verbindet Frankreich und Italien unter dem Berg hindurch"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Land der Pyramiden
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist für seine großen Pyramiden bekannt?",
-            "Antworten": ["Mexiko", "Peru", "Ägypten", "Indien"],
-            "RichtigeAntwort": "Ägypten",
-            "RichtigeAntwortMöglichkeiten": "Ägypten",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Ägypten ist weltweit bekannt für seine großen Pyramiden, insbesondere die Pyramiden von Gizeh"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Land südlich von Kanada
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land liegt südlich von Kanada?",
-            "Antworten": ["Mexiko", "Vereinigte Staaten von Amerika", "Grönland", "Kuba"],
-            "RichtigeAntwort": "Vereinigte Staaten von Amerika",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten von Amerika USA",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Vereinigten Staaten von Amerika liegen südlich von Kanada"
-        },
-        { //See zwischen Israel und Jordanien
-            "Kategorie": "Geographie",
-            "Frage": "Welcher See liegt zwischen Israel und Jordanien?",
-            "Antworten": ["Tiberias-See", "Tote Meer", "Kaspisches Meer", "Tanganjikasee"],
-            "RichtigeAntwort": "Tote Meer",
-            "RichtigeAntwortMöglichkeiten": "Tote Meer",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Das Tote Meer liegt zwischen Israel und Jordanien und ist bekannt für seinen hohen Salzgehalt"
-        },
-        { //Zeitzonen in Russland
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Zeitzonen gibt es in Russland?",
-            "Antworten": ["7", "9", "11", "6"],
-            "RichtigeAntwort": "11",
-            "RichtigeAntwortMöglichkeiten": "11",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Russland erstreckt sich über 11 Zeitzonen, mehr als jedes andere Land der Welt"
-        },
-    
-    
-    
-        { //Land mit dem höchsten BIP der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat das höchste Bruttoinlandsprodukt (BIP) der Welt?",
-            "Antworten": ["China", "Deutschland", "Japan", "Vereinigte Staaten von Amerika"],
-            "RichtigeAntwort": "Vereinigte Staaten von Amerika",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten von Amerika USA",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Vereinigten Staaten von Amerika haben das höchste Bruttoinlandsprodukt (BIP) der Welt"
-        },
-        { //Ärmstes Land der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das ärmste Land der Welt (nach BIP pro Kopf)?",
-            "Antworten": ["Südsudan", "Niger", "Burundi", "Zentralafrikanische Republik"],
-            "RichtigeAntwort": "Burundi",
-            "RichtigeAntwortMöglichkeiten": "Burundi",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Burundi ist das ärmste Land der Welt, gemessen am BIP pro Kopf"
-        },
-    
-        { //Kältester Ort der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Was ist der kälteste Ort der Erde?",
-            "Antworten": ["Nordpol", "Mount Everest", "Sibirien", "Ostantarktisches Plateau"],
-            "RichtigeAntwort": "Ostantarktisches Plateau",
-            "RichtigeAntwortMöglichkeiten": "Ostantarktisches Plateau",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Ostantarktische Plateau ist der kälteste Ort der Erde, wo Temperaturen bis zu -93,2°C gemessen wurden"
-        },
-        { //Größte Wüste der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die größte Wüste der Welt?",
-            "Antworten": ["Sahara", "Gobi", "Antarktische Wüste", "Arktische Wüste"],
-            "RichtigeAntwort": "Antarktische Wüste",
-            "RichtigeAntwortMöglichkeiten": "Antarktische Wüste",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Antarktische Wüste ist die größte Wüste der Welt, obwohl sie aus Eis und Schnee besteht"
-        },
-        { //Anzahl der großen Inseln in Hawaii
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele große Inseln bilden Hawaii?",
-            "Antworten": ["Fünf", "Sechs", "Acht", "Zehn"],
-            "RichtigeAntwort": "Acht",
-            "RichtigeAntwortMöglichkeiten": "Acht",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Hawaii besteht aus acht großen Inseln: Hawai'i, Maui, O'ahu, Kaua'i, Moloka'i, Lāna'i, Ni'ihau und Kaho'olawe"
-        },
-        { //Größter Vulkan der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Wo befindet sich der größte Vulkan der Erde?",
-            "Antworten": ["Island", "Hawaii", "Indonesien", "Japan"],
-            "RichtigeAntwort": "Hawaii",
-            "RichtigeAntwortMöglichkeiten": "Hawaii",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der größte Vulkan der Erde, der Mauna Loa, befindet sich auf Hawaii"
-        },
-        { //Größte Insel der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die größte Insel der Welt?",
-            "Antworten": ["Neuguinea", "Borneo", "Madagaskar", "Grönland"],
-            "RichtigeAntwort": "Grönland",
-            "RichtigeAntwortMöglichkeiten": "Grönland",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Grönland ist die größte Insel der Welt und befindet sich im Nordatlantik"
-        },
-        { //Anzahl der Zeitzonen in Australien
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Zeitzonen hat Australien?",
-            "Antworten": ["Zwei", "Drei", "Vier", "Fünf"],
-            "RichtigeAntwort": "Drei",
-            "RichtigeAntwortMöglichkeiten": "Drei",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Australian Western Standard Time, Australian Central Standard Time und Australian Eastern Standard Time"
-        },
-        { //13 Streifen auf der Flagge der Vereinigten Staaten
-            "Kategorie": "Geographie",
-            "Frage": "Was symbolisieren die 13 Streifen auf der Flagge der Vereinigten Staaten?",
-            "Antworten": ["Die 13 ursprünglichen Kolonien", "Die 13 Gründungsstaaten", "Die 13 Regionen", "Die 13 Präsidenten"],
-            "RichtigeAntwort": "Die 13 ursprünglichen Kolonien",
-            "RichtigeAntwortMöglichkeiten": "Die 13 ursprünglichen Kolonien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die 13 Streifen auf der Flagge der Vereinigten Staaten symbolisieren die 13 ursprünglichen Kolonien, die die Unabhängigkeit erklärten"
-        },
-        { //50 Sterne auf der Flagge der Vereinigten Staaten
-            "Kategorie": "Geographie",
-            "Frage": "Was symbolisieren die 50 Sterne auf der Flagge der Vereinigten Staaten?",
-            "Antworten": ["Die 50 Bundesstaaten", "Die 50 Präsidenten", "Die 50 Jahre", "Die 50 Gründungsmitglieder"],
-            "RichtigeAntwort": "Die 50 Bundesstaaten",
-            "RichtigeAntwortMöglichkeiten": "50 Bundesstaaten Staaten",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die 50 Sterne auf der Flagge der Vereinigten Staaten symbolisieren die 50 Bundesstaaten"
-        },
-        { //Flächenmäßig größter US-Bundesstaat
-            "Kategorie": "Geographie",
-            "Frage": "Was ist der flächenmäßig größte US-Bundesstaat?",
-            "Antworten": ["Texas", "Alaska", "California", "Montana"],
-            "RichtigeAntwort": "Alaska",
-            "RichtigeAntwortMöglichkeiten": "Alaska",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Alaska ist flächenmäßig der größte US-Bundesstaat und fast sieben Mal so groß wie der kleinste Bundesstaat Rhode Island"
-        }, 
-        { //Zugehörigkeit der Kanarischen Inseln
-            "Kategorie": "Geographie",
-            "Frage": "Zu welchem Land gehören die Kanarischen Inseln?",
-            "Antworten": ["Portugal", "Marokko", "Spanien", "Italien"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Kanarischen Inseln gehören zu Spanien und liegen im Atlantischen Ozean, nordwestlich von Afrika"
-        },
-        { //Zweithöchster Berg der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Wie heißt der zweithöchste Berg der Welt?",
-            "Antworten": ["Kangchenjunga", "Lhotse", "Makalu", "K2"],
-            "RichtigeAntwort": "K2",
-            "RichtigeAntwortMöglichkeiten": "K2",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der K2 ist mit 8.611 Metern der zweithöchste Berg der Welt und liegt im Karakorum-Gebirge an der Grenze zwischen Pakistan und China"
-        },
-        { //Höchstes von Menschenhand geschaffenes Bauwerk
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das höchste von Menschenhand geschaffene Bauwerk, das jemals gebaut wurde?",
-            "Antworten": ["Shanghai Tower", "Abraj Al Bait", "Burj Khalifa in Dubai", "Taipei 101"],
-            "RichtigeAntwort": "Burj Khalifa in Dubai",
-            "RichtigeAntwortMöglichkeiten": "Burj Khalifa in Dubai",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Burj Khalifa in Dubai ist mit einer Höhe von 828 Metern das höchste von Menschenhand geschaffene Bauwerk der Welt"
-        },
-        { //Vom Meer bedeckte Erdoberfläche
-            "Kategorie": "Geographie",
-            "Frage": "Wie viel der Erdoberfläche ist vom Meer bedeckt?",
-            "Antworten": ["57%", "45%", "90%", "71%"],
-            "RichtigeAntwort": "71%",
-            "RichtigeAntwortMöglichkeiten": "71%",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Etwa 71% der Erdoberfläche sind vom Meer bedeckt, was die Ozeane zu einem wesentlichen Bestandteil des globalen Ökosystems macht"
-        },
-        { //Erforschte Ozeane
-            "Kategorie": "Geographie",
-            "Frage": "Wie viel Prozent unserer Ozeane wurden erforscht?",
-            "Antworten": ["5%", "99%", "55%", "19%"],
-            "RichtigeAntwort": "5%",
-            "RichtigeAntwortMöglichkeiten": "5 5% fünf",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Nur 5% unserer Ozeane sind erforscht, was bedeutet, dass der größte Teil der Meere noch immer ein Geheimnis bleibt"
-        },
-    
-    
-    
-    
-        { //Durchmesser der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Durchmesser der Erde am Äquator (in km)?",
-            "Antworten": ["5.978km", "12.742km", "2.547km", "14.806km"],
-            "RichtigeAntwort": "12.742km",
-            "RichtigeAntwortMöglichkeiten": "12.742km 12.000km 13.000km 12.500km 12742km 12000km 13000km 12500km",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Durchmesser der Erde am Äquator beträgt etwa 12.742 Kilometer"
-        },
-        { //Oberfläche der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist die gesamte Oberfläche der Erde?",
-            "Antworten": ["100 Millionen km²", "510 Millionen km²", "690 Millionen km²", "710 Millionen km²"],
-            "RichtigeAntwort": "510 Millionen km²",
-            "RichtigeAntwortMöglichkeiten": "510 Millionen km²",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Die gesamte Oberfläche der Erde beträgt etwa 510 Millionen Quadratkilometer"
-        },
-        { //Umfang der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Umfang der Erde am Äquator?",
-            "Antworten": ["30.075 km", "40.075 km", "55.075 km", "20.075 km"],
-            "RichtigeAntwort": "40.075 km",
-            "RichtigeAntwortMöglichkeiten": "40.075 km",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Umfang der Erde am Äquator beträgt etwa 40.075 Kilometer"
-        },
-        { //Tiefster Punkt der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Punkt auf der Erde ist der tiefste unter dem Meeresspiegel?",
-            "Antworten": ["Puerto-Rico-Graben", "Marianengraben", "Java-Graben", "Tonga-Graben"],
-            "RichtigeAntwort": "Marianengraben",
-            "RichtigeAntwortMöglichkeiten": "Marianengraben",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Marianengraben im Pazifik ist mit etwa 11.034 Metern unter dem Meeresspiegel der tiefste Punkt der Erde"
-        },
-        { //Durchschnittliche Tiefe der Ozeane
-            "Kategorie": "Geographie",
-            "Frage": "Wie tief sind die Ozeane der Erde im Durchschnitt?",
-            "Antworten": ["2.000 Meter", "3.000 Meter", "3.800 Meter", "4.500 Meter"],
-            "RichtigeAntwort": "3.800 Meter",
-            "RichtigeAntwortMöglichkeiten": "3.800 Meter",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die durchschnittliche Tiefe der Ozeane beträgt etwa 3.800 Meter, was etwa 12.500 Fuß entspricht"
-        },
-        { //Polardurchmesser der Erde
-            "Kategorie": "Geographie",
-            "Frage": "Wie groß ist der Durchmesser der Erde von Pol zu Pol?",
-            "Antworten": ["10.714 km", "12.714 km", "13.714 km", "14.714 km"],
-            "RichtigeAntwort": "12.714 km",
-            "RichtigeAntwortMöglichkeiten": "12.714 km",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Durchmesser der Erde von Pol zu Pol beträgt etwa 12.714 Kilometer"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        
-        { //Bundesstaat mit den meisten Einwohnern
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Bundesstaat der USA hat die meisten Einwohner?",
-            "Antworten": ["New York", "Texas", "Kalifornien", "Florida"],
-            "RichtigeAntwort": "Kalifornien",
-            "RichtigeAntwortMöglichkeiten": "Kalifornien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Kalifornien ist der bevölkerungsreichste Bundesstaat der USA mit über 39 Millionen Einwohnern"
-        },
-        { //Fluss durch Colorado
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss fließt durch den Bundesstaat Colorado und den Grand Canyon?",
-            "Antworten": ["Mississippi", "Colorado", "Rio Grande", "Missouri"],
-            "RichtigeAntwort": "Colorado",
-            "RichtigeAntwortMöglichkeiten": "Colorado",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Colorado River fließt durch den Bundesstaat Colorado und den Grand Canyon in Arizona"
-        },
-        { //Bundesstaat mit dem Grand Canyon
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Bundesstaat befindet sich der Grand Canyon?",
-            "Antworten": ["Nevada", "Arizona", "Utah", "Colorado"],
-            "RichtigeAntwort": "Arizona",
-            "RichtigeAntwortMöglichkeiten": "Arizona",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Grand Canyon befindet sich im Bundesstaat Arizona und ist eines der sieben Weltwunder der Natur"
-        },
-        { //Hauptstadt von New York
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von New York?",
-            "Antworten": ["New York City", "Buffalo", "Albany", "Rochester"],
-            "RichtigeAntwort": "Albany",
-            "RichtigeAntwortMöglichkeiten": "Albany",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Obwohl New York City die bekannteste Stadt ist ist sie nicht die Hauptstadt New Yorks"
-        },
-        { //Bundesstaat mit der größten Wüste
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Bundesstaat befindet sich die größte Wüste der USA die Mojave-Wüste?",
-            "Antworten": ["Nevada", "Arizona", "Kalifornien", "New Mexico"],
-            "RichtigeAntwort": "Kalifornien",
-            "RichtigeAntwortMöglichkeiten": "Kalifornien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Mojave-Wüste, die größte Wüste der USA, befindet sich größtenteils in Kalifornien"
-        },
-        { //Höchster Berg in den USA
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der höchste Berg in den USA?",
-            "Antworten": ["Mount Whitney", "Mount Rainier", "Mount Elbert", "Denali"],
-            "RichtigeAntwort": "Denali",
-            "RichtigeAntwortMöglichkeiten": "Denali",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Denali, auch bekannt als Mount McKinley, ist mit 6.190 Metern der höchste Berg in den USA und befindet sich in Alaska"
-        },
-        { //Anzahl der Bundesstaaten in den USA
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Bundesstaaten gibt es in den USA?",
-            "Antworten": ["48", "49", "50", "51"],
-            "RichtigeAntwort": "50",
-            "RichtigeAntwortMöglichkeiten": "50",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Vereinigten Staaten bestehen aus 50 Bundesstaaten"
-        },
-        { //Neueste Bundesstaat der USA
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der neueste Bundesstaat der USA?",
-            "Antworten": ["Hawaii", "Alaska", "Arizona", "New Mexico"],
-            "RichtigeAntwort": "Hawaii",
-            "RichtigeAntwortMöglichkeiten": "Hawaii",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Hawaii ist der neueste Bundesstaat der USA und trat der Union 1959 bei"
-        },
-        { //Kleinster Bundesstaat nach Fläche
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der flächenmäßig kleinste Bundesstaat der USA?",
-            "Antworten": ["Delaware", "Rhode Island", "Connecticut", "New Jersey"],
-            "RichtigeAntwort": "Rhode Island",
-            "RichtigeAntwortMöglichkeiten": "Rhode Island",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Rhode Island ist der flächenmäßig kleinste Bundesstaat der USA"
-        },
-        { //Bundesstaatenanzahl bei Gründung
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Bundesstaaten gab es bei der Gründung der USA?",
-            "Antworten": ["10", "13", "15", "17"],
-            "RichtigeAntwort": "13",
-            "RichtigeAntwortMöglichkeiten": "13",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Bei der Gründung der USA im Jahr 1776 gab es 13 ursprüngliche Bundesstaaten, bekannt als die ursprünglichen Kolonien"
-        },
-        { //Bundesstaat mit der längsten Küstenlinie
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Bundesstaat der USA hat die längste Küstenlinie?",
-            "Antworten": ["Kalifornien", "Florida", "Texas", "Alaska"],
-            "RichtigeAntwort": "Alaska",
-            "RichtigeAntwortMöglichkeiten": "Alaska",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Alaska hat die längste Küstenlinie aller Bundesstaaten der USA"
-        },
-        { //Einziger Bundesstaat mit einer Inselkette
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Bundesstaat der USA ist eine Inselkette?",
-            "Antworten": ["Hawaii", "Florida", "Kalifornien", "Texas"],
-            "RichtigeAntwort": "Hawaii",
-            "RichtigeAntwortMöglichkeiten": "Hawaii",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Hawaii ist der einzige Bundesstaat der USA, der aus einer Inselkette besteht"
-        },
-    
-    
-    
-    
-    
-    
-    
-        
-        
-        
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        ////////////////////////////// SÜD-AMERIKA //////////////////////////////
-    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Argentinien?",
-            "Antworten": ["Buenos Aires", "Córdoba", "Rosario", "Mendoza"],
-            "RichtigeAntwort": "Buenos Aires",
-            "RichtigeAntwortMöglichkeiten": "Buenos Aires",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Buenos Aires bedeutet auf Spanisch 'Gute Lüfte'"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bolivien?",
-            "Antworten": ["La Paz", "Sucre", "Santa Cruz", "Cochabamba"],
-            "RichtigeAntwort": "Sucre und La Paz",
-            "RichtigeAntwortMöglichkeiten": "Sucre Paz",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bolivien hat zwei Hauptstädte: La Paz und Sucre"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Brasilien?",
-            "Antworten": ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"],
-            "RichtigeAntwort": "Brasília",
-            "RichtigeAntwortMöglichkeiten": "Brasília Brasilia",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Brasília wurde 1960 zur Hauptstadt von Brasilien"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Chile?",
-            "Antworten": ["Santiago", "Valparaíso", "Concepción", "La Serena"],
-            "RichtigeAntwort": "Santiago",
-            "RichtigeAntwortMöglichkeiten": "Santiago",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Santiago wurde schon 1541 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kolumbien?",
-            "Antworten": ["Bogotá", "Medellín", "Cali", "Cartagena"],
-            "RichtigeAntwort": "Bogotá",
-            "RichtigeAntwortMöglichkeiten": "Bogotá",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bogotá liegt auf einer Höhe von 2.640 Metern über dem Meeresspiegel"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Ecuador?",
-            "Antworten": ["Quito", "Guayaquil", "Cuenca", "Ambato"],
-            "RichtigeAntwort": "Quito",
-            "RichtigeAntwortMöglichkeiten": "Quito",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Quito liegt sehr nahe am Äquator"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Guyana?",
-            "Antworten": ["Georgetown", "Linden", "New Amsterdam", "Bartica"],
-            "RichtigeAntwort": "Georgetown",
-            "RichtigeAntwortMöglichkeiten": "Georgetown",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Guyana ist das einzige englischsprachige Land in Südamerika"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Paraguay?",
-            "Antworten": ["Asunción", "Ciudad del Este", "Encarnación", "San Lorenzo"],
-            "RichtigeAntwort": "Asunción",
-            "RichtigeAntwortMöglichkeiten": "Asunción Asuncion",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Asunción wurde 1537 gegründet und ist eine der ältesten Städte Südamerikas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Peru?",
-            "Antworten": ["Lima", "Cusco", "Arequipa", "Trujillo"],
-            "RichtigeAntwort": "Lima",
-            "RichtigeAntwortMöglichkeiten": "Lima",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lima wurde 1535 von Francisco Pizarro gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Suriname?",
-            "Antworten": ["Paramaribo", "Nieuw Nickerie", "Moengo", "Albina"],
-            "RichtigeAntwort": "Paramaribo",
-            "RichtigeAntwortMöglichkeiten": "Paramaribo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Paramaribo liegt am Ufer des Suriname-Flusses"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Uruguay?",
-            "Antworten": ["Montevideo", "Salto", "Punta del Este", "Maldonado"],
-            "RichtigeAntwort": "Montevideo",
-            "RichtigeAntwortMöglichkeiten": "Montevideo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Montevideo ist die südlichste Hauptstadt Amerikas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Venezuela?",
-            "Antworten": ["Caracas", "Maracaibo", "Valencia", "Barquisimeto"],
-            "RichtigeAntwort": "Caracas",
-            "RichtigeAntwortMöglichkeiten": "Caracas",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Caracas liegt im Küstengebirge Venezuelas"
-        },
-    
-        ////////////////////////////// NORD-AMERIKA //////////////////////////////
-    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt der USA?",
-            "Antworten": ["New York", "Los Angeles", "Washington D.C.", "Las Vegas"],
-            "RichtigeAntwort": "Washington D.C.",
-            "RichtigeAntwortMöglichkeiten": "Washington D.C. Washington DC",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Washington D.C. wurde 1790 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kanada?",
-            "Antworten": ["Toronto", "Vancouver", "Montreal", "Ottawa"],
-            "RichtigeAntwort": "Ottawa",
-            "RichtigeAntwortMöglichkeiten": "Ottawa",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Ottawa wurde 1857 zur Hauptstadt von Kanada erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Mexiko?",
-            "Antworten": ["Guadalajara", "Monterrey", "Cancún", "Mexiko-Stadt"],
-            "RichtigeAntwort": "Mexiko-Stadt",
-            "RichtigeAntwortMöglichkeiten": "Mexiko-Stadt Mexico City",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Mexiko-Stadt ist eine der ältesten Hauptstädte Amerikas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Guatemala?",
-            "Antworten": ["Antigua", "Quetzaltenango", "Guatemala-Stadt", "Escuintla"],
-            "RichtigeAntwort": "Guatemala-Stadt",
-            "RichtigeAntwortMöglichkeiten": "Guatemala-Stadt Guatemala City",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Guatemala-Stadt wurde 1776 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Belize?",
-            "Antworten": ["Belmopan", "Belize City", "San Ignacio", "Orange Walk"],
-            "RichtigeAntwort": "Belmopan",
-            "RichtigeAntwortMöglichkeiten": "Belmopan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Belmopan wurde 1970 zur Hauptstadt von Belize erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Honduras?",
-            "Antworten": ["San Pedro Sula", "La Ceiba", "Tegucigalpa", "Comayagua"],
-            "RichtigeAntwort": "Tegucigalpa",
-            "RichtigeAntwortMöglichkeiten": "Tegucigalpa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tegucigalpa wurde 1578 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von El Salvador?",
-            "Antworten": ["San Salvador", "Santa Ana", "San Miguel", "Soyapango"],
-            "RichtigeAntwort": "San Salvador",
-            "RichtigeAntwortMöglichkeiten": "Salvador",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "San Salvador wurde 1525 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Nicaragua?",
-            "Antworten": ["León", "Granada", "Managua", "Masaya"],
-            "RichtigeAntwort": "Managua",
-            "RichtigeAntwortMöglichkeiten": "Managua",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Managua wurde 1852 zur Hauptstadt von Nicaragua erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Costa Rica?",
-            "Antworten": ["San José", "Alajuela", "Cartago", "Heredia"],
-            "RichtigeAntwort": "San José",
-            "RichtigeAntwortMöglichkeiten": "San José San Jose",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "San José wurde 1823 zur Hauptstadt von Costa Rica erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Panama?",
-            "Antworten": ["Colón", "David", "Santiago", "Panama-Stadt"],
-            "RichtigeAntwort": "Panama-Stadt",
-            "RichtigeAntwortMöglichkeiten": "Panama-Stadt Panama City",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Panama-Stadt wurde 1519 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Jamaika?",
-            "Antworten": ["Montego Bay", "Kingston", "Spanish Town", "Portmore"],
-            "RichtigeAntwort": "Kingston",
-            "RichtigeAntwortMöglichkeiten": "Kingston",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kingston wurde 1692 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kuba?",
-            "Antworten": ["Havanna", "Santiago de Cuba", "Holguín", "Camagüey"],
-            "RichtigeAntwort": "Havanna",
-            "RichtigeAntwortMöglichkeiten": "Havanna Havana",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Havanna wurde 1519 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt der Dominikanischen Republik?",
-            "Antworten": ["Puerto Plata", "Santiago de los Caballeros", "La Romana", "Santo Domingo"],
-            "RichtigeAntwort": "Santo Domingo",
-            "RichtigeAntwortMöglichkeiten": "Santo Domingo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Santo Domingo ist die älteste ständig bewohnte europäische Siedlung in Amerika"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Haiti?",
-            "Antworten": ["Cap-Haïtien", "Gonaïves", "Les Cayes", "Port-au-Prince"],
-            "RichtigeAntwort": "Port-au-Prince",
-            "RichtigeAntwortMöglichkeiten": "Port-au-Prince",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Port-au-Prince wurde 1749 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Trinidad und Tobago?",
-            "Antworten": ["San Fernando", "Port of Spain", "Chaguanas", "Arima"],
-            "RichtigeAntwort": "Port of Spain",
-            "RichtigeAntwortMöglichkeiten": "Port of Spain",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Port of Spain wurde 1560 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bahamas?",
-            "Antworten": ["Freeport", "Nassau", "Marsh Harbour", "West End"],
-            "RichtigeAntwort": "Nassau",
-            "RichtigeAntwortMöglichkeiten": "Nassau",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nassau ist die größte Stadt und Hauptstadt der Bahamas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Barbados?",
-            "Antworten": ["Speightstown", "Bridgetown", "Holetown", "Oistins"],
-            "RichtigeAntwort": "Bridgetown",
-            "RichtigeAntwortMöglichkeiten": "Bridgetown",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bridgetown wurde 1628 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Antigua und Barbuda?",
-            "Antworten": ["All Saints", "Liberta", "Parham", "Saint John's"],
-            "RichtigeAntwort": "Saint John's",
-            "RichtigeAntwortMöglichkeiten": "Saint John's",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Saint John's wurde im 17. Jahrhundert gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Dominica?",
-            "Antworten": ["Portsmouth", "Marigot", "Roseau", "Castle Bruce"],
-            "RichtigeAntwort": "Roseau",
-            "RichtigeAntwortMöglichkeiten": "Roseau",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Roseau ist die größte Stadt und Hauptstadt von Dominica"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von St. Kitts und Nevis?",
-            "Antworten": ["Trinity", "Charlestown", "Dieppe Bay Town", "Basseterre"],
-            "RichtigeAntwort": "Basseterre",
-            "RichtigeAntwortMöglichkeiten": "Basseterre",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Basseterre wurde 1627 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von St. Vincent und die Grenadinen?",
-            "Antworten": ["Kingstown", "Georgetown", "Barrouallie", "Chateaubelair"],
-            "RichtigeAntwort": "Kingstown",
-            "RichtigeAntwortMöglichkeiten": "Kingstown",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kingstown wurde 1763 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von St. Lucia?",
-            "Antworten": ["Gros Islet", "Soufrière", "Vieux Fort", "Castries"],
-            "RichtigeAntwort": "Castries",
-            "RichtigeAntwortMöglichkeiten": "Castries",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Castries wurde 1650 gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Grenada?",
-            "Antworten": ["St. George's", "Gouyave", "Grenville", "Victoria"],
-            "RichtigeAntwort": "St. George's",
-            "RichtigeAntwortMöglichkeiten": "St. George's",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "St. George's wurde 1650 gegründet"
-        },
-    
-    
-        ////////////////////////////// EUROPA //////////////////////////////
-    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt wird als politisches Zentrum Europas bezeichnet?",
-            "Antworten": ["Brüssel", "Paris", "London", "Madrid"],
-            "RichtigeAntwort": "Brüssel",
-            "RichtigeAntwortMöglichkeiten": "Brüssel",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Brüssel wir oft inoffiziell als 'Hauptstadt Europas' betitelt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Deutschland?",
-            "Antworten": ["Berlin", "München", "Frankfurt", "Hamburg"],
-            "RichtigeAntwort": "Berlin",
-            "RichtigeAntwortMöglichkeiten": "Berlin",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Berlin ist die größte Stadt Deutschlands"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Frankreich?",
-            "Antworten": ["Marseille", "Lyon", "Paris", "Nizza"],
-            "RichtigeAntwort": "Paris",
-            "RichtigeAntwortMöglichkeiten": "Paris",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Paris wird oft als 'Stadt der Liebe' bezeichnet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Italien?",
-            "Antworten": ["Rom", "Mailand", "Venedig", "Neapel"],
-            "RichtigeAntwort": "Rom",
-            "RichtigeAntwortMöglichkeiten": "Rom",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Rom ist bekannt für das Kolosseum und den Vatikan"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Spanien?",
-            "Antworten": ["Barcelona", "Madrid", "Sevilla", "Valencia"],
-            "RichtigeAntwort": "Madrid",
-            "RichtigeAntwortMöglichkeiten": "Madrid",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Madrid liegt im geografischen Zentrum Spaniens"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Portugal?",
-            "Antworten": ["Porto", "Lissabon", "Coimbra", "Braga"],
-            "RichtigeAntwort": "Lissabon",
-            "RichtigeAntwortMöglichkeiten": "Lissabon",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Lissabon ist auch die größte Stadt Portugals"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Österreich?",
-            "Antworten": ["Graz", "Salzburg", "Linz", "Wien"],
-            "RichtigeAntwort": "Wien",
-            "RichtigeAntwortMöglichkeiten": "Wien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Wien ist bekannt für seine Musik- und Kunstgeschichte"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Schweiz?",
-            "Antworten": ["Zürich", "Genf", "Basel", "Bern"],
-            "RichtigeAntwort": "Bern",
-            "RichtigeAntwortMöglichkeiten": "Bern",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Bern ist bekannt für seine gut erhaltene Altstadt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Niederlande?",
-            "Antworten": ["Rotterdam", "Amsterdam", "Den Haag", "Utrecht"],
-            "RichtigeAntwort": "Amsterdam",
-            "RichtigeAntwortMöglichkeiten": "Amsterdam",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Amsterdam ist bekannt für seine Grachten und Fahrräder"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Belgien?",
-            "Antworten": ["Antwerpen", "Gent", "Brüssel", "Brügge"],
-            "RichtigeAntwort": "Brüssel",
-            "RichtigeAntwortMöglichkeiten": "Brüssel",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Brüssel ist der Sitz der Europäischen Union"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Schweden?",
-            "Antworten": ["Göteborg", "Malmö", "Stockholm", "Uppsala"],
-            "RichtigeAntwort": "Stockholm",
-            "RichtigeAntwortMöglichkeiten": "Stockholm",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Stockholm erstreckt sich über 14 Inseln"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Norwegen?",
-            "Antworten": ["Bergen", "Trondheim", "Oslo", "Stavanger"],
-            "RichtigeAntwort": "Oslo",
-            "RichtigeAntwortMöglichkeiten": "Oslo",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Oslo liegt im Süden Norwegens am Oslofjord"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Dänemark?",
-            "Antworten": ["Aarhus", "Odense", "Kopenhagen", "Aalborg"],
-            "RichtigeAntwort": "Kopenhagen",
-            "RichtigeAntwortMöglichkeiten": "Kopenhagen",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Kopenhagen liegt auf der Insel Seeland"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Finnland?",
-            "Antworten": ["Tampere", "Turku", "Helsinki", "Oulu"],
-            "RichtigeAntwort": "Helsinki",
-            "RichtigeAntwortMöglichkeiten": "Helsinki",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Helsinki liegt am Finnischen Meerbusen"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Irland?",
-            "Antworten": ["Cork", "Galway", "Limerick", "Dublin"],
-            "RichtigeAntwort": "Dublin",
-            "RichtigeAntwortMöglichkeiten": "Dublin",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Dublin ist bekannt für das Trinity College und das Book of Kells"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Großbritannien?",
-            "Antworten": ["London", "Edinburgh", "Manchester", "Birmingham"],
-            "RichtigeAntwort": "London",
-            "RichtigeAntwortMöglichkeiten": "London",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "London ist die größte Stadt Großbritanniens"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Griechenland?",
-            "Antworten": ["Thessaloniki", "Patras", "Heraklion", "Athen"],
-            "RichtigeAntwort": "Athen",
-            "RichtigeAntwortMöglichkeiten": "Athen",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Athen ist eine der ältesten Hauptstädte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Polen?",
-            "Antworten": ["Krakau", "Prag", "Warschau", "Wrocław"],
-            "RichtigeAntwort": "Warschau",
-            "RichtigeAntwortMöglichkeiten": "Warschau",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Warschau wurde im Zweiten Weltkrieg fast vollständig zerstört und wieder aufgebaut"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tschechien?",
-            "Antworten": ["Warschau", "Ostrava", "Pilsen", "Prag"],
-            "RichtigeAntwort": "Prag",
-            "RichtigeAntwortMöglichkeiten": "Prag",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Prag wird oft als 'Stadt der hundert Türme' bezeichnet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Ungarn?",
-            "Antworten": ["Bukarest", "Szeged", "Miskolc", "Budapest"],
-            "RichtigeAntwort": "Budapest",
-            "RichtigeAntwortMöglichkeiten": "Budapest",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Budapest entstand durch die Zusammenlegung von Buda und Pest"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Rumänien?",
-            "Antworten": ["Sofia", "Timișoara", "Iași", "Bukarest"],
-            "RichtigeAntwort": "Bukarest",
-            "RichtigeAntwortMöglichkeiten": "Bukarest",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Bukarest wird oft als 'Paris des Ostens' bezeichnet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bulgarien?",
-            "Antworten": ["Bukarest", "Warna", "Burgas", "Sofia"],
-            "RichtigeAntwort": "Sofia",
-            "RichtigeAntwortMöglichkeiten": "Sofia",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Sofia ist eine der ältesten Städte Europas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Serbien?",
-            "Antworten": ["Novi Sad", "Niš", "Kragujevac", "Belgrad"],
-            "RichtigeAntwort": "Belgrad",
-            "RichtigeAntwortMöglichkeiten": "Belgrad",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Belgrad liegt an der Mündung der Save in die Donau"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kroatien?",
-            "Antworten": ["Belgrad", "Rijeka", "Dubrovnik", "Zagreb"],
-            "RichtigeAntwort": "Zagreb",
-            "RichtigeAntwortMöglichkeiten": "Zagreb",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Zagreb ist die größte Stadt Kroatiens"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Slowenien?",
-            "Antworten": ["Maribor", "Bratislava", "Celje", "Ljubljana"],
-            "RichtigeAntwort": "Ljubljana",
-            "RichtigeAntwortMöglichkeiten": "Ljubljana",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ljubljana wird oft als eine der grünsten Hauptstädte Europas bezeichnet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt der Slowakei?",
-            "Antworten": ["Košice", "Prag", "Žilina", "Bratislava"],
-            "RichtigeAntwort": "Bratislava",
-            "RichtigeAntwortMöglichkeiten": "Bratislava",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Bratislava liegt an der Donau"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bosnien und Herzegowina?",
-            "Antworten": ["Mostar", "Banja Luka", "Tuzla", "Sarajevo"],
-            "RichtigeAntwort": "Sarajevo",
-            "RichtigeAntwortMöglichkeiten": "Sarajevo",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Sarajevo war Austragungsort der Olympischen Winterspiele 1984"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Montenegro?",
-            "Antworten": ["Kotor", "Herceg Novi", "Podgorica", "Nikšić"],
-            "RichtigeAntwort": "Podgorica",
-            "RichtigeAntwortMöglichkeiten": "Podgorica",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Podgorica wurde 1946 zur Hauptstadt von Montenegro erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kosovo?",
-            "Antworten": ["Prizren", "Pe", "Mitrovica", "Pristina"],
-            "RichtigeAntwort": "Pristina",
-            "RichtigeAntwortMöglichkeiten": "Pristina",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Pristina ist die größte Stadt im Kosovo"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Nordmazedonien?",
-            "Antworten": ["Bitola", "Ohrid", "Kumanovo", "Skopje"],
-            "RichtigeAntwort": "Skopje",
-            "RichtigeAntwortMöglichkeiten": "Skopje",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Skopje liegt am Fluss Vardar"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Albanien?",
-            "Antworten": ["Durrës", "Shkodra", "Vlora", "Tirana"],
-            "RichtigeAntwort": "Tirana",
-            "RichtigeAntwortMöglichkeiten": "Tirana",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tirana wurde 1920 zur Hauptstadt von Albanien erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Island?",
-            "Antworten": ["Akureyri", "Reykjavík", "Kópavogur", "Hafnarfjörður"],
-            "RichtigeAntwort": "Reykjavík",
-            "RichtigeAntwortMöglichkeiten": "Reykjavík Reykjavik",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Reykjavík ist die nördlichste Hauptstadt der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Malta?",
-            "Antworten": ["Valletta", "Mdina", "Birkirkara", "Sliema"],
-            "RichtigeAntwort": "Valletta",
-            "RichtigeAntwortMöglichkeiten": "Valletta",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Valletta ist eine der kleinsten Hauptstädte Europas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Zypern?",
-            "Antworten": ["Limassol", "Larnaka", "Paphos", "Nikosia"],
-            "RichtigeAntwort": "Nikosia",
-            "RichtigeAntwortMöglichkeiten": "Nikosia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nikosia ist die einzige geteilte Hauptstadt Europas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Estland?",
-            "Antworten": ["Tartu", "Narva", "Pärnu", "Tallinn"],
-            "RichtigeAntwort": "Tallinn",
-            "RichtigeAntwortMöglichkeiten": "Tallinn",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tallinn hat eine gut erhaltene mittelalterliche Altstadt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Lettland?",
-            "Antworten": ["Daugavpils", "Liepāja", "Jelgava", "Riga"],
-            "RichtigeAntwort": "Riga",
-            "RichtigeAntwortMöglichkeiten": "Riga",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Riga ist die größte Stadt im Baltikum"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Litauen?",
-            "Antworten": ["Kaunas", "Klaipėda", "Šiauliai", "Vilnius"],
-            "RichtigeAntwort": "Vilnius",
-            "RichtigeAntwortMöglichkeiten": "Vilnius",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Vilnius ist bekannt für seine barocke Altstadt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Belarus?",
-            "Antworten": ["Brest", "Gomel", "Mogilev", "Minsk"],
-            "RichtigeAntwort": "Minsk",
-            "RichtigeAntwortMöglichkeiten": "Minsk",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Minsk ist das politische und kulturelle Zentrum von Belarus"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Ukraine?",
-            "Antworten": ["Lwiw", "Odessa", "Charkiw", "Kiew"],
-            "RichtigeAntwort": "Kiew",
-            "RichtigeAntwortMöglichkeiten": "Kiew",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Kiew liegt am Dnepr-Fluss"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Russland?",
-            "Antworten": ["St. Petersburg", "Wladiwostok", "Nowosibirsk", "Moskau"],
-            "RichtigeAntwort": "Moskau",
-            "RichtigeAntwortMöglichkeiten": "leicht",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Moskau ist die größte Stadt Europas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Moldawien?",
-            "Antworten": ["Bălți", "Tiraspol", "Cahul", "Chișinău"],
-            "RichtigeAntwort": "Chișinău",
-            "RichtigeAntwortMöglichkeiten": "Chișinău Chisinau",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Chișinău ist die größte Stadt Moldawiens"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Georgien?",
-            "Antworten": ["Kutaisi", "Batumi", "Rustawi", "Tiflis"],
-            "RichtigeAntwort": "Tiflis",
-            "RichtigeAntwortMöglichkeiten": "Tiflis Tbilisi",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tiflis liegt am Fluss Kura"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Armenien?",
-            "Antworten": ["Gjumri", "Wanadsor", "Hrasdan", "Eriwan"],
-            "RichtigeAntwort": "Eriwan",
-            "RichtigeAntwortMöglichkeiten": "Eriwan Yerevan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Eriwan ist eine der ältesten kontinuierlich bewohnten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Aserbaidschan?",
-            "Antworten": ["Gəncə", "Sumqayıt", "Lənkəran", "Baku"],
-            "RichtigeAntwort": "Baku",
-            "RichtigeAntwortMöglichkeiten": "Baku",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Baku liegt an der Küste des Kaspischen Meeres"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kasachstan?",
-            "Antworten": ["Almaty", "Schymkent", "Karaganda", "Astana"],
-            "RichtigeAntwort": "Astana",
-            "RichtigeAntwortMöglichkeiten": "Astana",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Astana wurde 1997 zur Hauptstadt von Kasachstan"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Andorra?",
-            "Antworten": ["Encamp", "La Massana", "Escaldes-Engordany", "Andorra la Vella"],
-            "RichtigeAntwort": "Andorra la Vella",
-            "RichtigeAntwortMöglichkeiten": "Andorra la Vella",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Andorra la Vella ist die höchstgelegene Hauptstadt Europas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Monaco?",
-            "Antworten": ["La Condamine", "Monte Carlo", "Fontvieille", "Monaco"],
-            "RichtigeAntwort": "Monaco",
-            "RichtigeAntwortMöglichkeiten": "Monaco",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Monaco ist der zweitkleinste Staat der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Liechtenstein?",
-            "Antworten": ["Balzers", "Schaan", "Triesen", "Vaduz"],
-            "RichtigeAntwort": "Vaduz",
-            "RichtigeAntwortMöglichkeiten": "Vaduz",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Vaduz ist bekannt für das Schloss Vaduz"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von San Marino?",
-            "Antworten": ["Serravalle", "Borgo Maggiore", "Fiorentino", "San Marino"],
-            "RichtigeAntwort": "San Marino",
-            "RichtigeAntwortMöglichkeiten": "San Marino",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "San Marino ist eine der ältesten Republiken der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Vatikanstadt?",
-            "Antworten": ["Vatikanstadt", "Rom", "Castel Gandolfo", "Keine"],
-            "RichtigeAntwort": "Vatikanstadt",
-            "RichtigeAntwortMöglichkeiten": "Vatikanstadt",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Vatikanstadt ist der kleinste unabhängige Staat der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Luxemburg?",
-            "Antworten": ["Esch-sur-Alzette", "Differdingen", "Dudelange", "Luxemburg"],
-            "RichtigeAntwort": "Luxemburg",
-            "RichtigeAntwortMöglichkeiten": "Luxemburg",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Luxemburg ist auch der Name des Landes"
-        },
-    
-    
-        ////////////////////////////// ASIEN //////////////////////////////
-    
-    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Saudi-Arabien?",
-            "Antworten": ["Dschidda", "Mekka", "Riad", "Medina"],
-            "RichtigeAntwort": "Riad",
-            "RichtigeAntwortMöglichkeiten": "Riad Riyadh",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Riad ist die größte Stadt in Saudi-Arabien"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Iran?",
-            "Antworten": ["Isfahan", "Schiras", "Tabris", "Teheran"],
-            "RichtigeAntwort": "Teheran",
-            "RichtigeAntwortMöglichkeiten": "Teheran Tehran",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Teheran liegt am Fuße des Elburs-Gebirges"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Irak?",
-            "Antworten": ["Basra", "Mossul", "Erbil", "Bagdad"],
-            "RichtigeAntwort": "Bagdad",
-            "RichtigeAntwortMöglichkeiten": "Bagdad Baghdad",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bagdad liegt am Tigris-Fluss"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Israel?",
-            "Antworten": ["Tel Aviv", "Haifa", "Eilat", "Jerusalem"],
-            "RichtigeAntwort": "Jerusalem",
-            "RichtigeAntwortMöglichkeiten": "Jerusalem",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Jerusalem ist eine der ältesten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Jordanien?",
-            "Antworten": ["Aqaba", "Irbid", "Zarqa", "Amman"],
-            "RichtigeAntwort": "Amman",
-            "RichtigeAntwortMöglichkeiten": "Amman",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Amman ist die größte Stadt in Jordanien"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Libanon?",
-            "Antworten": ["Tripoli", "Sidon", "Byblos", "Beirut"],
-            "RichtigeAntwort": "Beirut",
-            "RichtigeAntwortMöglichkeiten": "Beirut",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Beirut wird oft als 'Paris des Nahen Ostens' bezeichnet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Syrien?",
-            "Antworten": ["Aleppo", "Homs", "Latakia", "Damaskus"],
-            "RichtigeAntwort": "Damaskus",
-            "RichtigeAntwortMöglichkeiten": "Damaskus",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Damaskus ist eine der ältesten kontinuierlich bewohnten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Türkei?",
-            "Antworten": ["Istanbul", "Izmir", "Antalya", "Ankara"],
-            "RichtigeAntwort": "Ankara",
-            "RichtigeAntwortMöglichkeiten": "Ankara",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Ankara wurde 1923 zur Hauptstadt der Türkei erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Jemen?",
-            "Antworten": ["Aden", "Taiz", "Hodeidah", "Sanaa"],
-            "RichtigeAntwort": "Sanaa",
-            "RichtigeAntwortMöglichkeiten": "Sanaa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Sanaa liegt auf einer Höhe von 2.300 Metern"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Oman?",
-            "Antworten": ["Salalah", "Sohar", "Nizwa", "Maskat"],
-            "RichtigeAntwort": "Maskat",
-            "RichtigeAntwortMöglichkeiten": "Maskat Muscat",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Maskat ist die größte Stadt in Oman"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kuwait?",
-            "Antworten": ["Al Jahra", "Al Ahmadi", "Salmiya", "Kuwait-Stadt"],
-            "RichtigeAntwort": "Kuwait-Stadt",
-            "RichtigeAntwortMöglichkeiten": "Kuwait-Stadt Kuwait City",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kuwait-Stadt liegt am Persischen Golf"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bahrain?",
-            "Antworten": ["Riffa", "Muharraq", "Hamad Town", "Manama"],
-            "RichtigeAntwort": "Manama",
-            "RichtigeAntwortMöglichkeiten": "Manama",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Manama ist das wirtschaftliche Zentrum Bahrains"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Katar?",
-            "Antworten": ["Al Rayyan", "Al Khor", "Umm Salal", "Doha"],
-            "RichtigeAntwort": "Doha",
-            "RichtigeAntwortMöglichkeiten": "Doha",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Doha ist die bevölkerungsreichste Stadt Katars"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt der Vereinigten Arabischen Emirate?",
-            "Antworten": ["Dubai", "Sharjah", "Ajman", "Abu Dhabi"],
-            "RichtigeAntwort": "Abu Dhabi",
-            "RichtigeAntwortMöglichkeiten": "Abu Dhabi",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Abu Dhabi ist das politische und industrielle Zentrum der VAE"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von China?",
-            "Antworten": ["Shanghai", "Guangzhou", "Peking", "Shenzhen"],
-            "RichtigeAntwort": "Peking",
-            "RichtigeAntwortMöglichkeiten": "Peking Beijing",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Peking ist eine der ältesten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Japan?",
-            "Antworten": ["Peking", "Kyoto", "Seoul", "Tokio"],
-            "RichtigeAntwort": "Tokio",
-            "RichtigeAntwortMöglichkeiten": "Tokio Tokyo",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Tokio ist die bevölkerungsreichste Metropolregion der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Südkorea?",
-            "Antworten": ["Busan", "Incheon", "Daegu", "Seoul"],
-            "RichtigeAntwort": "Seoul",
-            "RichtigeAntwortMöglichkeiten": "Seoul",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Seoul ist eine der größten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Nordkorea?",
-            "Antworten": ["Kaesong", "Wonsan", "Hamhung", "Pjöngjang"],
-            "RichtigeAntwort": "Pjöngjang",
-            "RichtigeAntwortMöglichkeiten": "Pjöngjang Pyongyang",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Pjöngjang ist die größte Stadt Nordkoreas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Taiwan?",
-            "Antworten": ["Kaohsiung", "Taichung", "Tainan", "Taipeh"],
-            "RichtigeAntwort": "Taipeh",
-            "RichtigeAntwortMöglichkeiten": "Taipeh Taipei",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Taipeh 101 war das höchste Gebäude der Welt bis 2010"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt der Mongolei?",
-            "Antworten": ["Erdenet", "Darkhan", "Choibalsan", "Ulaanbaatar"],
-            "RichtigeAntwort": "Ulaanbaatar",
-            "RichtigeAntwortMöglichkeiten": "Ulaanbaatar",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ulaanbaatar ist die kälteste Hauptstadt der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Hongkong?",
-            "Antworten": ["Hongkong", "Kowloon", "Victoria", "Sha Tin"],
-            "RichtigeAntwort": "Hongkong",
-            "RichtigeAntwortMöglichkeiten": "Hongkong",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Hongkong hat eine der höchsten Bevölkerungsdichten der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Afghanistan?",
-            "Antworten": ["Kandahar", "Herat", "Mazar-i-Sharif", "Kabul"],
-            "RichtigeAntwort": "Kabul",
-            "RichtigeAntwortMöglichkeiten": "Kabul",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kabul liegt im östlichen Teil Afghanistans"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Pakistan?",
-            "Antworten": ["Karachi", "Lahore", "Islamabad", "Quetta"],
-            "RichtigeAntwort": "Islamabad",
-            "RichtigeAntwortMöglichkeiten": "Islamabad",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Islamabad wurde in den 1960er Jahren als Hauptstadt geplant und gebaut"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Indien?",
-            "Antworten": ["Mumbai", "Bangalore", "Chennai", "Neu-Delhi"],
-            "RichtigeAntwort": "Neu-Delhi",
-            "RichtigeAntwortMöglichkeiten": "Neu-Delhi New Delhi",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Neu-Delhi ist Teil der Metropolregion Delhi"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Nepal?",
-            "Antworten": ["Pokhara", "Biratnagar", "Lalitpur", "Kathmandu"],
-            "RichtigeAntwort": "Kathmandu",
-            "RichtigeAntwortMöglichkeiten": "Kathmandu",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kathmandu liegt in einem Tal umgeben von Bergen"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bhutan?",
-            "Antworten": ["Paro", "Punakha", "Phuntsholing", "Thimphu"],
-            "RichtigeAntwort": "Thimphu",
-            "RichtigeAntwortMöglichkeiten": "Thimphu",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Thimphu ist die einzige Hauptstadt der Welt ohne Ampeln"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Bangladesch?",
-            "Antworten": ["Chittagong", "Khulna", "Rajshahi", "Dhaka"],
-            "RichtigeAntwort": "Dhaka",
-            "RichtigeAntwortMöglichkeiten": "Dhaka",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Dhaka ist eine der am dichtesten besiedelten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Sri Lanka?",
-            "Antworten": ["Kandy", "Galle", "Jaffna", "Sri Jayawardenepura Kotte"],
-            "RichtigeAntwort": "Sri Jayawardenepura Kotte",
-            "RichtigeAntwortMöglichkeiten": "Sri Jayawardenepura Kotte",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Colombo ist die kommerzielle Hauptstadt von Sri Lanka"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von den Malediven?",
-            "Antworten": ["Addu City", "Fuvahmulah", "Hithadhoo", "Malé"],
-            "RichtigeAntwort": "Malé",
-            "RichtigeAntwortMöglichkeiten": "Malé Male",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Malé ist eine der am dichtesten bevölkerten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Myanmar?",
-            "Antworten": ["Mandalay", "Yangon", "Naypyidaw", "Bago"],
-            "RichtigeAntwort": "Naypyidaw",
-            "RichtigeAntwortMöglichkeiten": "Naypyidaw",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Naypyidaw wurde 2005 zur Hauptstadt von Myanmar erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Thailand?",
-            "Antworten": ["Chiang Mai", "Phuket", "Pattaya", "Bangkok"],
-            "RichtigeAntwort": "Bangkok",
-            "RichtigeAntwortMöglichkeiten": "Bangkok",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Bangkok ist bekannt für seine lebendige Straßenkultur und Tempel"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Laos?",
-            "Antworten": ["Luang Prabang", "Pakse", "Savannakhet", "Vientiane"],
-            "RichtigeAntwort": "Vientiane",
-            "RichtigeAntwortMöglichkeiten": "Vientiane",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Vientiane liegt am Mekong-Fluss"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kambodscha?",
-            "Antworten": ["Siem Reap", "Battambang", "Sihanoukville", "Phnom Penh"],
-            "RichtigeAntwort": "Phnom Penh",
-            "RichtigeAntwortMöglichkeiten": "Phnom Penh",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Phnom Penh liegt am Zusammenfluss von Mekong und Tonle Sap"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Vietnam?",
-            "Antworten": ["Ho-Chi-Minh-Stadt", "Da Nang", "Hué", "Hanoi"],
-            "RichtigeAntwort": "Hanoi",
-            "RichtigeAntwortMöglichkeiten": "Hanoi",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Hanoi ist bekannt für seine historische Architektur und reiche Kultur"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Malaysia?",
-            "Antworten": ["Johor Bahru", "George Town", "Ipoh", "Kuala Lumpur"],
-            "RichtigeAntwort": "Kuala Lumpur",
-            "RichtigeAntwortMöglichkeiten": "Kuala Lumpur",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kuala Lumpur ist bekannt für die Petronas Towers"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Singapur?",
-            "Antworten": ["Bukit Batok", "Jurong East", "Tampines", "Singapur"],
-            "RichtigeAntwort": "Singapur",
-            "RichtigeAntwortMöglichkeiten": "Singapur Singapore",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Singapur ist sowohl Stadt als auch Land"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Brunei?",
-            "Antworten": ["Kuala Belait", "Seria", "Tutong", "Bandar Seri Begawan"],
-            "RichtigeAntwort": "Bandar Seri Begawan",
-            "RichtigeAntwortMöglichkeiten": "Bandar Seri Begawan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bandar Seri Begawan liegt an der Brunei-Bucht"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Osttimor?",
-            "Antworten": ["Baucau", "Same", "Suai", "Dili"],
-            "RichtigeAntwort": "Dili",
-            "RichtigeAntwortMöglichkeiten": "Dili",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Dili ist die größte Stadt in Osttimor"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Philippinen?",
-            "Antworten": ["Cebu City", "Davao City", "Quezon City", "Manila"],
-            "RichtigeAntwort": "Manila",
-            "RichtigeAntwortMöglichkeiten": "Manila",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Manila ist eine der am dichtesten besiedelten Städte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Indonesien?",
-            "Antworten": ["Surabaya", "Bandung", "Medan", "Jakarta"],
-            "RichtigeAntwort": "Jakarta",
-            "RichtigeAntwortMöglichkeiten": "Jakarta",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Jakarta liegt auf der Insel Java"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Usbekistan?",
-            "Antworten": ["Samarkand", "Bukhara", "Nukus", "Taschkent"],
-            "RichtigeAntwort": "Taschkent",
-            "RichtigeAntwortMöglichkeiten": "Taschkent Tashkent",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Taschkent ist die größte Stadt in Zentralasien"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kirgisistan?",
-            "Antworten": ["Osch", "Dschalalabat", "Karakol", "Bischkek"],
-            "RichtigeAntwort": "Bischkek",
-            "RichtigeAntwortMöglichkeiten": "Bischkek Bishkek",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bischkek liegt im Norden von Kirgisistan"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tadschikistan?",
-            "Antworten": ["Chudschand", "Kulob", "Bokhtar", "Duschanbe"],
-            "RichtigeAntwort": "Duschanbe",
-            "RichtigeAntwortMöglichkeiten": "Duschanbe Dushanbe",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Duschanbe bedeutet 'Montag' auf Tadschikisch"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Turkmenistan?",
-            "Antworten": ["Türkmenabat", "Daşoguz", "Mary", "Aschgabat"],
-            "RichtigeAntwort": "Aschgabat",
-            "RichtigeAntwortMöglichkeiten": "Aschgabat Ashgabat",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Aschgabat ist bekannt für seine weißen Marmorgebäude"
-        },
-    
-        ////////////////////////////// AFRIKA //////////////////////////////
-    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Ägypten?",
-            "Antworten": ["Alexandria", "Gizeh", "Luxor", "Kairo"],
-            "RichtigeAntwort": "Kairo",
-            "RichtigeAntwortMöglichkeiten": "Kairo Cairo",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Kairo ist die größte Stadt Afrikas"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Nigeria?",
-            "Antworten": ["Lagos", "Kano", "Ibadan", "Abuja"],
-            "RichtigeAntwort": "Abuja",
-            "RichtigeAntwortMöglichkeiten": "Abuja",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Abuja wurde 1991 zur Hauptstadt von Nigeria erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Welche ist nicht einer der drei Haubstädte Südafrika?",
-            "Antworten": ["Johannesburg", "Kapstadt", "Durban", "Pretoria"],
-            "RichtigeAntwort": "Durban",
-            "RichtigeAntwortMöglichkeiten": "Durban",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Im Atlas und auf Karten wird fälschlicherweise oft nur Pretoria als Hauptstadt gekennzeichnet."
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kenia?",
-            "Antworten": ["Mombasa", "Kisumu", "Nakuru", "Nairobi"],
-            "RichtigeAntwort": "Nairobi",
-            "RichtigeAntwortMöglichkeiten": "Nairobi",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Nairobi wird auch 'Grüne Stadt in der Sonne' genannt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Äthiopien?",
-            "Antworten": ["Dire Dawa", "Mekele", "Gondar", "Addis Abeba"],
-            "RichtigeAntwort": "Addis Abeba",
-            "RichtigeAntwortMöglichkeiten": "Addis Abeba Addis Ababa",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Addis Abeba bedeutet 'neue Blume' auf Amharisch"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Marokko?",
-            "Antworten": ["Marrakesch", "Fès", "Casablanca", "Rabat"],
-            "RichtigeAntwort": "Rabat",
-            "RichtigeAntwortMöglichkeiten": "Rabat",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Rabat liegt an der Atlantikküste"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Uganda?",
-            "Antworten": ["Entebbe", "Jinja", "Mbarara", "Kampala"],
-            "RichtigeAntwort": "Kampala",
-            "RichtigeAntwortMöglichkeiten": "Kampala",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kampala liegt am Ufer des Viktoriasees"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tansania?",
-            "Antworten": ["Arusha", "Dodoma", "Mwanza", "Dar es Salaam"],
-            "RichtigeAntwort": "Dodoma",
-            "RichtigeAntwortMöglichkeiten": "Dodoma",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Dodoma wurde 1974 zur Hauptstadt von Tansania erklärt"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Simbabwe?",
-            "Antworten": ["Bulawayo", "Mutare", "Gweru", "Harare"],
-            "RichtigeAntwort": "Harare",
-            "RichtigeAntwortMöglichkeiten": "Harare",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Harare liegt im nördlichen Teil von Simbabwe"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Angola?",
-            "Antworten": ["Lobito", "Huambo", "Benguela", "Luanda"],
-            "RichtigeAntwort": "Luanda",
-            "RichtigeAntwortMöglichkeiten": "Luanda",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Luanda liegt an der Atlantikküste"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Namibia?",
-            "Antworten": ["Swakopmund", "Walvis Bay", "Rundu", "Windhoek"],
-            "RichtigeAntwort": "Windhoek",
-            "RichtigeAntwortMöglichkeiten": "Windhoek",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Windhoek liegt im zentralen Teil Namibias"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Botswana?",
-            "Antworten": ["Francistown", "Maun", "Kasane", "Gaborone"],
-            "RichtigeAntwort": "Gaborone",
-            "RichtigeAntwortMöglichkeiten": "Gaborone",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Gaborone liegt nahe der Grenze zu Südafrika"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Mosambik?",
-            "Antworten": ["Beira", "Nampula", "Tete", "Maputo"],
-            "RichtigeAntwort": "Maputo",
-            "RichtigeAntwortMöglichkeiten": "Maputo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Maputo liegt an der Küste des Indischen Ozeans"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Madagaskar?",
-            "Antworten": ["Toamasina", "Fianarantsoa", "Mahajanga", "Antananarivo"],
-            "RichtigeAntwort": "Antananarivo",
-            "RichtigeAntwortMöglichkeiten": "Antananarivo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Antananarivo liegt im zentralen Hochland von Madagaskar"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Mali?",
-            "Antworten": ["Sikasso", "Segou", "Mopti", "Bamako"],
-            "RichtigeAntwort": "Bamako",
-            "RichtigeAntwortMöglichkeiten": "Bamako",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bamako liegt am Niger-Fluss"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Senegal?",
-            "Antworten": ["Touba", "Thiès", "Saint-Louis", "Dakar"],
-            "RichtigeAntwort": "Dakar",
-            "RichtigeAntwortMöglichkeiten": "Dakar",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Dakar liegt auf der Cap-Vert-Halbinsel"
-        },   
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Ghana?",
-            "Antworten": ["Kumasi", "Tamale", "Sekondi-Takoradi", "Accra"],
-            "RichtigeAntwort": "Accra",
-            "RichtigeAntwortMöglichkeiten": "Accra",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Accra liegt an der Atlantikküste"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Burkina Faso?",
-            "Antworten": ["Bobo-Dioulasso", "Koudougou", "Banfora", "Ouagadougou"],
-            "RichtigeAntwort": "Ouagadougou",
-            "RichtigeAntwortMöglichkeiten": "Ouagadougou",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ouagadougou ist auch bekannt als 'Ouaga'"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Sudan?",
-            "Antworten": ["Omdurman", "Port Sudan", "Kassala", "Khartum"],
-            "RichtigeAntwort": "Khartum",
-            "RichtigeAntwortMöglichkeiten": "Khartum Khartoum",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Khartum liegt am Zusammenfluss von Blauem und Weißem Nil"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Südsudan?",
-            "Antworten": ["Malakal", "Wau", "Bor", "Juba"],
-            "RichtigeAntwort": "Juba",
-            "RichtigeAntwortMöglichkeiten": "Juba",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Juba ist die größte Stadt im Südsudan"
-        },  
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Eritrea?",
-            "Antworten": ["Keren", "Massawa", "Assab", "Asmara"],
-            "RichtigeAntwort": "Asmara",
-            "RichtigeAntwortMöglichkeiten": "Asmara",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Asmara liegt auf einem Hochplateau"
-        },    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Dschibuti?",
-            "Antworten": ["Tadjoura", "Obock", "Ali Sabieh", "Dschibuti"],
-            "RichtigeAntwort": "Dschibuti",
-            "RichtigeAntwortMöglichkeiten": "Dschibuti Djibouti",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Dschibuti liegt am Bab-el-Mandeb"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Gabun?",
-            "Antworten": ["Port-Gentil", "Franceville", "Oyem", "Libreville"],
-            "RichtigeAntwort": "Libreville",
-            "RichtigeAntwortMöglichkeiten": "Libreville",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Libreville liegt an der Atlantikküste"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Zentralafrikanische Republik?",
-            "Antworten": ["Bambari", "Berbérati", "Kaga-Bandoro", "Bangui"],
-            "RichtigeAntwort": "Bangui",
-            "RichtigeAntwortMöglichkeiten": "Bangui",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bangui liegt am Ubangi-Fluss"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Ruanda?",
-            "Antworten": ["Butare", "Gisenyi", "Byumba", "Kigali"],
-            "RichtigeAntwort": "Kigali",
-            "RichtigeAntwortMöglichkeiten": "Kigali",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kigali liegt im Zentrum von Ruanda"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Burundi?",
-            "Antworten": ["Gitega", "Ngozi", "Ruyigi", "Bujumbura"],
-            "RichtigeAntwort": "Gitega",
-            "RichtigeAntwortMöglichkeiten": "Gitega",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Gitega wurde 2019 zur Hauptstadt von Burundi erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Liberia?",
-            "Antworten": ["Gbarnga", "Kakata", "Buchanan", "Monrovia"],
-            "RichtigeAntwort": "Monrovia",
-            "RichtigeAntwortMöglichkeiten": "Monrovia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Monrovia wurde nach dem US-Präsidenten James Monroe benannt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Guinea-Bissau?",
-            "Antworten": ["Bafatá", "Cacheu", "Gabu", "Bissau"],
-            "RichtigeAntwort": "Bissau",
-            "RichtigeAntwortMöglichkeiten": "Bissau",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bissau liegt an der Küste des Atlantiks"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Gambia?",
-            "Antworten": ["Brikama", "Bakau", "Farafenni", "Banjul"],
-            "RichtigeAntwort": "Banjul",
-            "RichtigeAntwortMöglichkeiten": "Banjul",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Banjul liegt auf der Insel St. Mary"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Lesotho?",
-            "Antworten": ["Teyateyaneng", "Maseru", "Mafeteng", "Hlotse"],
-            "RichtigeAntwort": "Maseru",
-            "RichtigeAntwortMöglichkeiten": "Maseru",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Maseru liegt an der Grenze zu Südafrika"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Eswatini?",
-            "Antworten": ["Manzini", "Mbabane", "Lobamba", "Siteki"],
-            "RichtigeAntwort": "Mbabane",
-            "RichtigeAntwortMöglichkeiten": "Mbabane",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Im April 2018 wurde der offizielle Name von Königreich Swasiland in Königreich Eswatini geändert"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Malawi?",
-            "Antworten": ["Blantyre", "Mzuzu", "Zomba", "Lilongwe"],
-            "RichtigeAntwort": "Lilongwe",
-            "RichtigeAntwortMöglichkeiten": "Lilongwe",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lilongwe wurde 1975 zur Hauptstadt von Malawi erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Mauretanien?",
-            "Antworten": ["Nouadhibou", "Rosso", "Kaédi", "Nouakchott"],
-            "RichtigeAntwort": "Nouakchott",
-            "RichtigeAntwortMöglichkeiten": "Nouakchott",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nouakchott wurde 1960 zur Hauptstadt von Mauretanien erklärt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Mauritius?",
-            "Antworten": ["Curepipe", "Quatre Bornes", "Port Louis", "Vacoas-Phoenix"],
-            "RichtigeAntwort": "Port Louis",
-            "RichtigeAntwortMöglichkeiten": "Port Louis",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Port Louis ist das wirtschaftliche Zentrum von Mauritius"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Seychellen?",
-            "Antworten": ["Anse Boileau", "Beau Vallon", "Takamaka", "Victoria"],
-            "RichtigeAntwort": "Victoria",
-            "RichtigeAntwortMöglichkeiten": "Victoria",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Victoria liegt auf der Insel Mahé"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Komoren?",
-            "Antworten": ["Fomboni", "Mutsamudu", "Domoni", "Moroni"],
-            "RichtigeAntwort": "Moroni",
-            "RichtigeAntwortMöglichkeiten": "Moroni",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Moroni liegt auf der Insel Grande Comore"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von São Tomé und Príncipe?",
-            "Antworten": ["Neves", "Santo António", "Trindade", "São Tomé"],
-            "RichtigeAntwort": "São Tomé",
-            "RichtigeAntwortMöglichkeiten": "São Tomé Sao Tome",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "São Tomé liegt auf der größten Insel des Landes"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Algerien?",
-            "Antworten": ["Oran", "Constantine", "Annaba", "Algier"],
-            "RichtigeAntwort": "Algier",
-            "RichtigeAntwortMöglichkeiten": "Algier Algiers",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Algier liegt an der Mittelmeerküste"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Libyen?",
-            "Antworten": ["Bengasi", "Misrata", "Sabha", "Tripolis"],
-            "RichtigeAntwort": "Tripolis",
-            "RichtigeAntwortMöglichkeiten": "Tripolis Tripoli",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tripolis liegt an der nordwestlichen Küste Libyens"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tunesien?",
-            "Antworten": ["Sousse", "Sfax", "Kairouan", "Tunis"],
-            "RichtigeAntwort": "Tunis",
-            "RichtigeAntwortMöglichkeiten": "Tunis",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tunis ist die größte Stadt Tunesiens"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tschad?",
-            "Antworten": ["Moundou", "Abéché", "Sarh", "N'Djamena"],
-            "RichtigeAntwort": "N'Djamena",
-            "RichtigeAntwortMöglichkeiten": "N'Djamena",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "N'Djamena liegt am Fluss Chari"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Somalia?",
-            "Antworten": ["Hargeisa", "Kismayo", "Baidoa", "Mogadischu"],
-            "RichtigeAntwort": "Mogadischu",
-            "RichtigeAntwortMöglichkeiten": "Mogadischu Mogadishu",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Mogadischu liegt an der Küste des Indischen Ozeans"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Guinea?",
-            "Antworten": ["Kankan", "Labé", "Nzérékoré", "Conakry"],
-            "RichtigeAntwort": "Conakry",
-            "RichtigeAntwortMöglichkeiten": "Conakry",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Conakry ist das wirtschaftliche und kulturelle Zentrum von Guinea"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Sierra Leone?",
-            "Antworten": ["Bo", "Kenema", "Makeni", "Freetown"],
-            "RichtigeAntwort": "Freetown",
-            "RichtigeAntwortMöglichkeiten": "Freetown",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Freetown wurde 1787 für befreite Sklaven gegründet"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Elfenbeinküste?",
-            "Antworten": ["Yamoussoukro", "Bouaké", "Abidjan", "San-Pédro"],
-            "RichtigeAntwort": "Yamoussoukro",
-            "RichtigeAntwortMöglichkeiten": "Yamoussoukro",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Yamoussoukro ist seit 1983 die politische Hauptstadt der Elfenbeinküste"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Togo?",
-            "Antworten": ["Sokodé", "Kpalimé", "Atakpamé", "Lomé"],
-            "RichtigeAntwort": "Lomé",
-            "RichtigeAntwortMöglichkeiten": "Lomé Lome",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lomé liegt an der Küste des Golfs von Guinea"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Benin?",
-            "Antworten": ["Porto-Novo", "Cotonou", "Parakou", "Abomey"],
-            "RichtigeAntwort": "Porto-Novo",
-            "RichtigeAntwortMöglichkeiten": "Porto-Novo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Cotonou ist die größte Stadt und der wirtschaftliche Mittelpunkt von Benin"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Niger?",
-            "Antworten": ["Zinder", "Maradi", "Agadez", "Niamey"],
-            "RichtigeAntwort": "Niamey",
-            "RichtigeAntwortMöglichkeiten": "Niamey",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Niamey liegt am Niger-Fluss"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kamerun?",
-            "Antworten": ["Douala", "Bamenda", "Bafoussam", "Yaoundé"],
-            "RichtigeAntwort": "Yaoundé",
-            "RichtigeAntwortMöglichkeiten": "Yaoundé Yaounde",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Yaoundé liegt im zentralen Teil Kameruns"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Demokratische Republik Kongo?",
-            "Antworten": ["Lubumbashi", "Mbuji-Mayi", "Kisangani", "Kinshasa"],
-            "RichtigeAntwort": "Kinshasa",
-            "RichtigeAntwortMöglichkeiten": "Kinshasa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kinshasa ist die größte Stadt in der Demokratischen Republik Kongo"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Äquatorialguinea?",
-            "Antworten": ["Bata", "Mongomo", "Ebebiyin", "Malabo"],
-            "RichtigeAntwort": "Malabo",
-            "RichtigeAntwortMöglichkeiten": "Malabo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Malabo liegt auf der Insel Bioko"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Republik Kongo?",
-            "Antworten": ["Pointe-Noire", "Dolisie", "Nkayi", "Brazzaville"],
-            "RichtigeAntwort": "Brazzaville",
-            "RichtigeAntwortMöglichkeiten": "Brazzaville",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Brazzaville liegt am Kongo-Fluss gegenüber von Kinshasa"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Sambia?",
-            "Antworten": ["Kitwe", "Ndola", "Livingstone", "Lusaka"],
-            "RichtigeAntwort": "Lusaka",
-            "RichtigeAntwortMöglichkeiten": "Lusaka",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lusaka wurde 1935 zur Hauptstadt von Sambia ernannt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kap Verde?",
-            "Antworten": ["Mindelo", "Praia", "Santa Maria", "Espargos"],
-            "RichtigeAntwort": "Praia",
-            "RichtigeAntwortMöglichkeiten": "Praia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Praia liegt auf der Insel Santiago"
-        },
-    
-    
-        ////////////////////////////// OZEANIEN //////////////////////////////
-    
-    
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Australien?",
-            "Antworten": ["Sydney", "Melbourne", "Brisbane", "Canberra"],
-            "RichtigeAntwort": "Canberra",
-            "RichtigeAntwortMöglichkeiten": "Canberra",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Canberra wurde 1908 als Kompromiss zwischen Sydney und Melbourne zur Hauptstadt gewählt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Neuseeland?",
-            "Antworten": ["Auckland", "Christchurch", "Canberra", "Wellington"],
-            "RichtigeAntwort": "Wellington",
-            "RichtigeAntwortMöglichkeiten": "Wellington",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Wellington ist die südlichste Hauptstadt eines souveränen Staates der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Fidschi?",
-            "Antworten": ["Nadi", "Labasa", "Lautoka", "Suva"],
-            "RichtigeAntwort": "Suva",
-            "RichtigeAntwortMöglichkeiten": "Suva",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Suva befindet sich auf der Insel Viti Levu"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Papua-Neuguinea?",
-            "Antworten": ["Lae", "Madang", "Goroka", "Port Moresby"],
-            "RichtigeAntwort": "Port Moresby",
-            "RichtigeAntwortMöglichkeiten": "Port Moresby",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Port Moresby liegt an der Südküste von Papua-Neuguinea"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Samoa?",
-            "Antworten": ["Salelologa", "Asau", "Lalomanu", "Apia"],
-            "RichtigeAntwort": "Apia",
-            "RichtigeAntwortMöglichkeiten": "Apia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Apia befindet sich auf der Insel Upolu"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tonga?",
-            "Antworten": ["Neiafu", "Nuku'alofa", "Vava'u", "Pangai"],
-            "RichtigeAntwort": "Nuku'alofa",
-            "RichtigeAntwortMöglichkeiten": "Nuku'alofa Nuku alofa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nuku'alofa liegt auf der Insel Tongatapu"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Vanuatu?",
-            "Antworten": ["Luganville", "Isangel", "Port Olry", "Port Vila"],
-            "RichtigeAntwort": "Port Vila",
-            "RichtigeAntwortMöglichkeiten": "Port Vila",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Port Vila liegt auf der Insel Efate"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Palau?",
-            "Antworten": ["Koror", "Ngaraard", "Ngerulmud", "Melekeok"],
-            "RichtigeAntwort": "Ngerulmud",
-            "RichtigeAntwortMöglichkeiten": "Ngerulmud",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ngerulmud ist eine der jüngsten Hauptstädte der Welt"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Kiribati?",
-            "Antworten": ["Betio", "Bairiki", "Tabiteuea", "South Tarawa"],
-            "RichtigeAntwort": "South Tarawa",
-            "RichtigeAntwortMöglichkeiten": "South Tarawa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "South Tarawa umfasst mehrere Inseln des Tarawa-Atolls"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Tuvalu?",
-            "Antworten": ["Nanumaga", "Funafuti", "Nui", "Vaitupu"],
-            "RichtigeAntwort": "Funafuti",
-            "RichtigeAntwortMöglichkeiten": "Funafuti",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Funafuti ist ein Atoll mit einer kleinen Bevölkerung"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt der Marshallinseln?",
-            "Antworten": ["Jaluit", "Kwajalein", "Majuro", "Rongelap"],
-            "RichtigeAntwort": "Majuro",
-            "RichtigeAntwortMöglichkeiten": "Majuro",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Majuro ist ein Atoll und das wirtschaftliche Zentrum der Marshallinseln"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Mikronesien?",
-            "Antworten": ["Chuuk", "Pohnpei", "Kosrae", "Palikir"],
-            "RichtigeAntwort": "Palikir",
-            "RichtigeAntwortMöglichkeiten": "Palikir",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Palikir liegt auf der Insel Pohnpei"
-        },
-        { //Hauptstädte
-            "Kategorie": "Geographie",
-            "Frage": "Was ist die Hauptstadt von Nauru?",
-            "Antworten": ["Yaren", "Buada", "Nibok", "Anabar"],
-            "RichtigeAntwort": "Yaren",
-            "RichtigeAntwortMöglichkeiten": "Yaren",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nauru hat offiziell keine Hauptstadt, aber die Regierungssitze befinden sich in Yaren"
-        },
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        /////////////////////////////////EUROPA/////////////////////////////////
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Marseille?",
-            "Antworten": ["Spanien", "Portugal", "Italien", "Frankreich"],
-            "RichtigeAntwort": "Frankreich",
-            "RichtigeAntwortMöglichkeiten": "Frankreich",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Marseille ist eine bedeutende Hafenstadt am Mittelmeer in Frankreich"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Lyon?",
-            "Antworten": ["Belgien", "Schweiz", "Frankreich", "Italien"],
-            "RichtigeAntwort": "Frankreich",
-            "RichtigeAntwortMöglichkeiten": "Frankreich",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Lyon ist eine bedeutende Stadt in Frankreich, bekannt für ihre Gastronomie"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Bordeaux?",
-            "Antworten": ["Spanien", "Portugal", "Italien", "Frankreich"],
-            "RichtigeAntwort": "Frankreich",
-            "RichtigeAntwortMöglichkeiten": "Frankreich",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bordeaux ist bekannt für seine Weine und seine historische Altstadt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Barcelona?",
-            "Antworten": ["Portugal", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Barcelona ist eine bedeutende Stadt in Katalonien, Spanien"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Valencia?",
-            "Antworten": ["Portugal", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Valencia ist eine bedeutende Hafenstadt an der Ostküste Spaniens"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Sevilla?",
-            "Antworten": ["Portugal", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Sevilla ist bekannt für ihre Architektur, Flamenco-Tanz und die Kathedrale von Sevilla"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Porto?",
-            "Antworten": ["Spanien", "Frankreich", "Italien", "Portugal"],
-            "RichtigeAntwort": "Portugal",
-            "RichtigeAntwortMöglichkeiten": "Portugal",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Porto ist die zweitgrößte Stadt Portugals und bekannt für ihren Weinanbau"
-        },
-    
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Manchester?",
-            "Antworten": ["Irland", "Schottland", "Wales", "England"],
-            "RichtigeAntwort": "England",
-            "RichtigeAntwortMöglichkeiten": "England Vereinigtes Königreich UK",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Manchester ist bekannt für seine industrielle Geschichte und seine Fußballkultur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Liverpool?",
-            "Antworten": ["Irland", "Schottland", "Wales", "England"],
-            "RichtigeAntwort": "England",
-            "RichtigeAntwortMöglichkeiten": "England Vereinigtes Königreich UK",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Liverpool ist bekannt als Geburtsort der Beatles und für ihren Hafen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Glasgow?",
-            "Antworten": ["Irland", "England", "Wales", "Schottland"],
-            "RichtigeAntwort": "Schottland",
-            "RichtigeAntwortMöglichkeiten": "Schottland Vereinigtes Königreich UK",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Glasgow ist die größte Stadt Schottlands und bekannt für ihre viktorianische und Art-Nouveau-Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Edinburgh?",
-            "Antworten": ["Irland", "England", "Wales", "Schottland"],
-            "RichtigeAntwort": "Schottland",
-            "RichtigeAntwortMöglichkeiten": "Schottland Vereinigtes Königreich UK",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Edinburgh ist bekannt für ihr Schloss, das jährlich stattfindende Edinburgh Festival und ihre historische Altstadt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Bergen?",
-            "Antworten": ["Dänemark", "Finnland", "Island", "Norwegen"],
-            "RichtigeAntwort": "Norwegen",
-            "RichtigeAntwortMöglichkeiten": "Norwegen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bergen ist eine wichtige Hafenstadt in Norwegen und bekannt für ihre umliegenden Fjorde"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Göteborg?",
-            "Antworten": ["Norwegen", "Finnland", "Dänemark", "Schweden"],
-            "RichtigeAntwort": "Schweden",
-            "RichtigeAntwortMöglichkeiten": "Schweden",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Göteborg ist die zweitgrößte Stadt Schwedens und bekannt für ihren Hafen und die Universität"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Malmö?",
-            "Antworten": ["Norwegen", "Finnland", "Dänemark", "Schweden"],
-            "RichtigeAntwort": "Schweden",
-            "RichtigeAntwortMöglichkeiten": "Schweden",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Malmö ist eine bedeutende Stadt im Süden Schwedens und bekannt für ihre moderne Architektur"
-        },
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Mailand?",
-            "Antworten": ["Portugal", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Mailand ist eine bedeutende Stadt in Norditalien, bekannt für Mode und Design"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Neapel?",
-            "Antworten": ["Griechenland", "Italien", "Spanien", "Frankreich"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Neapel ist eine große Stadt in Süditalien, bekannt für ihre Küste und Geschichte"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Turin?",
-            "Antworten": ["Portugal", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Turin ist eine bedeutende Industriestadt in Norditalien und bekannt für ihre barocke Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Florenz?",
-            "Antworten": ["Portugal", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Florenz ist bekannt als Geburtsort der Renaissance und für ihre Kunst und Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Thessaloniki?",
-            "Antworten": ["Türkei", "Bulgarien", "Albanien", "Griechenland"],
-            "RichtigeAntwort": "Griechenland",
-            "RichtigeAntwortMöglichkeiten": "Griechenland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Thessaloniki ist die zweitgrößte Stadt Griechenlands und bekannt für ihre byzantinischen Bauwerke"
-        },
-    
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Sankt Petersburg?",
-            "Antworten": ["Ukraine", "Litauen", "Polen", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Sankt Petersburg ist die zweitgrößte Stadt Russlands und bekannt für ihre Paläste und Museen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Nowosibirsk?",
-            "Antworten": ["Ukraine", "Litauen", "Polen", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nowosibirsk ist die drittgrößte Stadt Russlands und bekannt für ihre wissenschaftliche Forschung"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Jekaterinburg?",
-            "Antworten": ["Ukraine", "Litauen", "Polen", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Jekaterinburg ist eine bedeutende Industriestadt im Uralgebirge"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Dnipro?",
-            "Antworten": ["Polen", "Russland", "Litauen", "Ukraine"],
-            "RichtigeAntwort": "Ukraine",
-            "RichtigeAntwortMöglichkeiten": "Ukraine",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Dnipro ist eine bedeutende Industriestadt in der Ukraine"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Charkiw?",
-            "Antworten": ["Polen", "Russland", "Litauen", "Ukraine"],
-            "RichtigeAntwort": "Ukraine",
-            "RichtigeAntwortMöglichkeiten": "Ukraine",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Charkiw ist die zweitgrößte Stadt der Ukraine und bekannt für ihre Universitäten und Forschungseinrichtungen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Krakau?",
-            "Antworten": ["Polen", "Slowakei", "Ungarn", "Tschechien"],
-            "RichtigeAntwort": "Polen",
-            "RichtigeAntwortMöglichkeiten": "Polen",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Krakau ist eine bedeutende Stadt in Polen, bekannt für ihre mittelalterliche Altstadt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Gdańsk?",
-            "Antworten": ["Polen", "Slowakei", "Ungarn", "Tschechien"],
-            "RichtigeAntwort": "Polen",
-            "RichtigeAntwortMöglichkeiten": "Polen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Gdańsk ist eine bedeutende Hafenstadt an der Ostseeküste Polens"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Brno?",
-            "Antworten": ["Polen", "Slowakei", "Ungarn", "Tschechien"],
-            "RichtigeAntwort": "Tschechien",
-            "RichtigeAntwortMöglichkeiten": "Tschechien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Brno ist die zweitgrößte Stadt Tschechiens und bekannt für ihre Universität und Architektur"
-        },
-        
-        ////////////////////////////////SÜD AMERIKA///////////////////////////////////
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt São Paulo?",
-            "Antworten": ["Argentinien", "Uruguay", "Paraguay", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "São Paulo ist die größte Stadt Brasiliens und eine der größten Städte der Welt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Rio de Janeiro?",
-            "Antworten": ["Argentinien", "Uruguay", "Paraguay", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Rio de Janeiro ist bekannt für seinen Karneval und die Christusstatue"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Salvador?",
-            "Antworten": ["Argentinien", "Uruguay", "Paraguay", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Salvador ist bekannt für seine koloniale Architektur und seine afro-brasilianische Kultur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Córdoba?",
-            "Antworten": ["Bolivien", "Chile", "Paraguay", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Córdoba ist eine wichtige Stadt in Argentinien, bekannt für ihre Kolonialarchitektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Rosario?",
-            "Antworten": ["Bolivien", "Chile", "Paraguay", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Rosario ist eine bedeutende Stadt in Argentinien und bekannt für ihre Kultur und Geschichte"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Medellín?",
-            "Antworten": ["Brasilien", "Peru", "Ecuador", "Kolumbien"],
-            "RichtigeAntwort": "Kolumbien",
-            "RichtigeAntwortMöglichkeiten": "Kolumbien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Medellín ist die zweitgrößte Stadt Kolumbiens und für ihr innovatives Transportsystem bekannt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Cali?",
-            "Antworten": ["Brasilien", "Peru", "Ecuador", "Kolumbien"],
-            "RichtigeAntwort": "Kolumbien",
-            "RichtigeAntwortMöglichkeiten": "Kolumbien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Cali ist bekannt für seinen Salsa-Tanz und seine lebhafte Kultur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Guayaquil?",
-            "Antworten": ["Brasilien", "Kolumbien", "Peru", "Ecuador"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Guayaquil ist die größte Stadt Ecuadors und ein wichtiger Handels- und Industriehafen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Cuenca?",
-            "Antworten": ["Brasilien", "Kolumbien", "Peru", "Ecuador"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Cuenca ist bekannt für ihre gut erhaltene Altstadt und ihre koloniale Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Valparaíso?",
-            "Antworten": ["Argentinien", "Bolivien", "Peru", "Chile"],
-            "RichtigeAntwort": "Chile",
-            "RichtigeAntwortMöglichkeiten": "Chile",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Valparaíso ist eine wichtige Hafenstadt in Chile"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Concepción?",
-            "Antworten": ["Argentinien", "Bolivien", "Peru", "Chile"],
-            "RichtigeAntwort": "Chile",
-            "RichtigeAntwortMöglichkeiten": "Chile",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Concepción ist eine bedeutende Stadt im Süden Chiles"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Arequipa?",
-            "Antworten": ["Brasilien", "Kolumbien", "Bolivien", "Peru"],
-            "RichtigeAntwort": "Peru",
-            "RichtigeAntwortMöglichkeiten": "Peru",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Arequipa ist die zweitgrößte Stadt Perus und bekannt für ihre koloniale Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Trujillo?",
-            "Antworten": ["Brasilien", "Kolumbien", "Bolivien", "Peru"],
-            "RichtigeAntwort": "Peru",
-            "RichtigeAntwortMöglichkeiten": "Peru",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Trujillo ist eine bedeutende Stadt im Norden Perus und bekannt für ihre Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Maracaibo?",
-            "Antworten": ["Kolumbien", "Brasilien", "Guyana", "Venezuela"],
-            "RichtigeAntwort": "Venezuela",
-            "RichtigeAntwortMöglichkeiten": "Venezuela",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Maracaibo ist eine der größten Städte Venezuelas und ein wichtiger Ölproduktionsstandort"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Valencia?",
-            "Antworten": ["Kolumbien", "Brasilien", "Guyana", "Venezuela"],
-            "RichtigeAntwort": "Venezuela",
-            "RichtigeAntwortMöglichkeiten": "Venezuela",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Valencia ist eine der größten Städte Venezuelas und ein wichtiges Industriezentrum"
-        },
-    
-        ////////////////////////////////NORD AMERIKA////////////////////////////////
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt New York City?",
-            "Antworten": ["Kanada", "Mexiko", "Kuba", "Vereinigte Staaten"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "New York City ist die bevölkerungsreichste Stadt der Vereinigten Staaten"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Los Angeles?",
-            "Antworten": ["Kanada", "Mexiko", "Vereinigte Staaten", "Kuba"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Los Angeles ist bekannt für Hollywood und die Filmindustrie"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Chicago?",
-            "Antworten": ["Kanada", "Mexiko", "Vereinigte Staaten", "Kuba"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Chicago liegt am Ufer des Michigansees und ist bekannt für seine Architektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Houston?",
-            "Antworten": ["Kanada", "Mexiko", "Vereinigte Staaten", "Kuba"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Houston ist die größte Stadt in Texas und bekannt für das Space Center Houston"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Toronto?",
-            "Antworten": ["Vereinigte Staaten", "Mexiko", "Kanada", "Kuba"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Toronto ist die bevölkerungsreichste Stadt Kanadas und eine der multikulturellsten Städte der Welt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Vancouver?",
-            "Antworten": ["Vereinigte Staaten", "Mexiko", "Kanada", "Kuba"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Vancouver liegt an der Westküste Kanadas und ist bekannt für seine natürliche Schönheit"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Montreal?",
-            "Antworten": ["Vereinigte Staaten", "Mexiko", "Kanada", "Kuba"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Montreal ist die zweitgrößte Stadt Kanadas und bekannt für ihre französischsprachige Kultur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Monterrey?",
-            "Antworten": ["Vereinigte Staaten", "Kanada", "Guatemala", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Monterrey ist eine wichtige Industrie- und Handelsstadt in Mexiko"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Guadalajara?",
-            "Antworten": ["Vereinigte Staaten", "Kanada", "Guatemala", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Guadalajara ist bekannt für seine reiche Kultur und als Geburtsort des Mariachi"
-        },
-    
-        //////////////////////////////Asien/////////////////////////////////
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Osaka?",
-            "Antworten": ["China", "Südkorea", "Japan", "Vietnam"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Osaka ist die drittgrößte Stadt Japans und bekannt für ihre moderne Architektur und ihr Nachtleben"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Yokohama?",
-            "Antworten": ["China", "Südkorea", "Japan", "Taiwan"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Yokohama ist eine der größten Städte Japans und bekannt für ihren Hafen und ihre futuristischen Gebäude"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Busan?",
-            "Antworten": ["China", "Japan", "Nordkorea", "Südkorea"],
-            "RichtigeAntwort": "Südkorea",
-            "RichtigeAntwortMöglichkeiten": "Südkorea",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Busan ist die zweitgrößte Stadt Südkoreas und bekannt für ihren Hafen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Incheon?",
-            "Antworten": ["China", "Japan", "Nordkorea", "Südkorea"],
-            "RichtigeAntwort": "Südkorea",
-            "RichtigeAntwortMöglichkeiten": "Südkorea",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Incheon ist eine bedeutende Stadt in Südkorea und bekannt für ihren internationalen Flughafen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Shanghai?",
-            "Antworten": ["Japan", "Südkorea", "Taiwan", "China"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Shanghai ist die größte Stadt Chinas und ein globales Finanzzentrum"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Guangzhou?",
-            "Antworten": ["Japan", "Südkorea", "Taiwan", "China"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Guangzhou ist eine der größten Städte Chinas und ein wichtiges Handelszentrum"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Shenzhen?",
-            "Antworten": ["Japan", "Südkorea", "Taiwan", "China"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Shenzhen ist eine der am schnellsten wachsenden Städte Chinas und bekannt für ihre Hightech-Industrie"
-        },
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Mumbai (Bombay)?",
-            "Antworten": ["Pakistan", "Bangladesch", "Sri Lanka", "Indien"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Mumbai, früher als Bombay bekannt, ist die größte Stadt Indiens und das wirtschaftliche Zentrum des Landes"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Bengaluru (Bangalore)?",
-            "Antworten": ["Pakistan", "Bangladesch", "Sri Lanka", "Indien"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bengaluru, auch als Bangalore bekannt, ist das IT-Zentrum Indiens"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Kalkutta (Kolkata)?",
-            "Antworten": ["Pakistan", "Bangladesch", "Sri Lanka", "Indien"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kolkata, früher als Kalkutta bekannt, ist eine der größten Städte Indiens und bekannt für ihre Kolonialarchitektur"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Lahore?",
-            "Antworten": ["Indien", "Bangladesch", "Afghanistan", "Pakistan"],
-            "RichtigeAntwort": "Pakistan",
-            "RichtigeAntwortMöglichkeiten": "Pakistan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lahore ist die zweitgrößte Stadt Pakistans und bekannt für ihre kulturellen und historischen Stätten"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Karatschi?",
-            "Antworten": ["Indien", "Bangladesch", "Afghanistan", "Pakistan"],
-            "RichtigeAntwort": "Pakistan",
-            "RichtigeAntwortMöglichkeiten": "Pakistan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Karatschi ist die größte Stadt Pakistans und ein wichtiges wirtschaftliches Zentrum"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Chittagong?",
-            "Antworten": ["Pakistan", "Indien", "Myanmar", "Bangladesch"],
-            "RichtigeAntwort": "Bangladesch",
-            "RichtigeAntwortMöglichkeiten": "Bangladesch",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Chittagong ist die zweitgrößte Stadt Bangladeschs und ein wichtiger Hafen"
-        },
-    
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Ho-Chi-Minh-Stadt (Saigon)?",
-            "Antworten": ["Indonesien", "Malaysia", "Thailand", "Vietnam"],
-            "RichtigeAntwort": "Vietnam",
-            "RichtigeAntwortMöglichkeiten": "Vietnam",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ho-Chi-Minh-Stadt, früher als Saigon bekannt, ist die größte Stadt Vietnams"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Da Nang?",
-            "Antworten": ["Indonesien", "Malaysia", "Thailand", "Vietnam"],
-            "RichtigeAntwort": "Vietnam",
-            "RichtigeAntwortMöglichkeiten": "Vietnam",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Da Nang ist eine wichtige Hafenstadt in Zentralvietnam"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Jakarta?",
-            "Antworten": ["Malaysia", "Philippinen", "Thailand", "Indonesien"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Jakarta ist die Hauptstadt und größte Stadt Indonesiens"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Surabaya?",
-            "Antworten": ["Malaysia", "Philippinen", "Thailand", "Indonesien"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Surabaya ist die zweitgrößte Stadt Indonesiens und ein wichtiger Hafen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Cebu?",
-            "Antworten": ["Indonesien", "Malaysia", "Vietnam", "Philippinen"],
-            "RichtigeAntwort": "Philippinen",
-            "RichtigeAntwortMöglichkeiten": "Philippinen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Cebu ist eine wichtige Stadt und Insel in den Zentralphilippinen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Bangkok?",
-            "Antworten": ["Vietnam", "Myanmar", "Laos", "Thailand"],
-            "RichtigeAntwort": "Thailand",
-            "RichtigeAntwortMöglichkeiten": "Thailand",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Bangkok ist die Hauptstadt und größte Stadt Thailands"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Chiang Mai?",
-            "Antworten": ["Vietnam", "Myanmar", "Laos", "Thailand"],
-            "RichtigeAntwort": "Thailand",
-            "RichtigeAntwortMöglichkeiten": "Thailand",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Chiang Mai ist eine kulturell bedeutende Stadt im Norden Thailands"
-        },
-    
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Tel Aviv?",
-            "Antworten": ["Iran", "Irak", "Syrien", "Israel"],
-            "RichtigeAntwort": "Israel",
-            "RichtigeAntwortMöglichkeiten": "Israel",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tel Aviv ist eine der größten Städte Israels und bekannt für ihre Strände und das Nachtleben"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Haifa?",
-            "Antworten": ["Iran", "Irak", "Syrien", "Israel"],
-            "RichtigeAntwort": "Israel",
-            "RichtigeAntwortMöglichkeiten": "Israel",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Haifa ist eine wichtige Hafenstadt im Norden Israels"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Istanbul?",
-            "Antworten": ["Iran", "Irak", "Syrien", "Türkei"],
-            "RichtigeAntwort": "Türkei",
-            "RichtigeAntwortMöglichkeiten": "Türkei",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Istanbul ist die größte Stadt der Türkei und das kulturelle und wirtschaftliche Zentrum des Landes"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Izmir?",
-            "Antworten": ["Iran", "Irak", "Syrien", "Türkei"],
-            "RichtigeAntwort": "Türkei",
-            "RichtigeAntwortMöglichkeiten": "Türkei",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Izmir ist eine wichtige Hafenstadt an der Ägäisküste der Türkei"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Bagdad?",
-            "Antworten": ["Syrien", "Iran", "Jordanien", "Irak"],
-            "RichtigeAntwort": "Irak",
-            "RichtigeAntwortMöglichkeiten": "Irak",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bagdad ist die Hauptstadt und größte Stadt des Iraks"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Basra?",
-            "Antworten": ["Syrien", "Iran", "Jordanien", "Irak"],
-            "RichtigeAntwort": "Irak",
-            "RichtigeAntwortMöglichkeiten": "Irak",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Basra ist die drittgrößte Stadt des Iraks und ein wichtiger Hafen am Persischen Golf"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Teheran?",
-            "Antworten": ["Pakistan", "Indien", "Irak", "Iran"],
-            "RichtigeAntwort": "Iran",
-            "RichtigeAntwortMöglichkeiten": "Iran",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Teheran ist die Hauptstadt und größte Stadt Irans"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Mashhad?",
-            "Antworten": ["Pakistan", "Indien", "Irak", "Iran"],
-            "RichtigeAntwort": "Iran",
-            "RichtigeAntwortMöglichkeiten": "Iran",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Mashhad ist die zweitgrößte Stadt Irans und ein bedeutendes religiöses Zentrum"
-        },
-    
-        ///////////////////////////////AFRIKA/////////////////////////////////
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Casablanca?",
-            "Antworten": ["Algerien", "Libyen", "Tunesien", "Marokko"],
-            "RichtigeAntwort": "Marokko",
-            "RichtigeAntwortMöglichkeiten": "Marokko",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Casablanca ist die größte Stadt Marokkos und ein bedeutendes Finanzzentrum"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Marrakesch?",
-            "Antworten": ["Algerien", "Libyen", "Tunesien", "Marokko"],
-            "RichtigeAntwort": "Marokko",
-            "RichtigeAntwortMöglichkeiten": "Marokko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Marrakesch ist bekannt für ihre historischen Märkte und Paläste"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Alexandria?",
-            "Antworten": ["Marokko", "Tunesien", "Algerien", "Ägypten"],
-            "RichtigeAntwort": "Ägypten",
-            "RichtigeAntwortMöglichkeiten": "Ägypten",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Alexandria ist eine bedeutende Hafenstadt am Mittelmeer in Ägypten"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Fès?",
-            "Antworten": ["Ägypten", "Tunesien", "Algerien", "Marokko"],
-            "RichtigeAntwort": "Marokko",
-            "RichtigeAntwortMöglichkeiten": "Marokko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Fès ist eine bedeutende Stadt in Marokko, bekannt für ihre gut erhaltene Altstadt"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Oran?",
-            "Antworten": ["Marokko", "Tunesien", "Libyen", "Algerien"],
-            "RichtigeAntwort": "Algerien",
-            "RichtigeAntwortMöglichkeiten": "Algerien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Oran ist eine bedeutende Hafenstadt in Algerien"
-        },
-    
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Lagos?",
-            "Antworten": ["Ghana", "Elfenbeinküste", "Nigeria", "Senegal"],
-            "RichtigeAntwort": "Nigeria",
-            "RichtigeAntwortMöglichkeiten": "Nigeria",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Lagos ist die größte Stadt Nigerias und ein bedeutendes Wirtschaftszentrum in Afrika"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Ibadan?",
-            "Antworten": ["Ghana", "Elfenbeinküste", "Nigeria", "Senegal"],
-            "RichtigeAntwort": "Nigeria",
-            "RichtigeAntwortMöglichkeiten": "Nigeria",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ibadan ist eine der größten Städte Nigerias und bekannt für ihre Universitäten"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Accra?",
-            "Antworten": ["Nigeria", "Elfenbeinküste", "Gambia", "Ghana"],
-            "RichtigeAntwort": "Ghana",
-            "RichtigeAntwortMöglichkeiten": "Ghana",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Accra ist die Hauptstadt und größte Stadt Ghanas"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Kumasi?",
-            "Antworten": ["Nigeria", "Elfenbeinküste", "Gambia", "Ghana"],
-            "RichtigeAntwort": "Ghana",
-            "RichtigeAntwortMöglichkeiten": "Ghana",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kumasi ist bekannt als kulturelles Zentrum Ghanas"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Dakar?",
-            "Antworten": ["Nigeria", "Elfenbeinküste", "Mali", "Senegal"],
-            "RichtigeAntwort": "Senegal",
-            "RichtigeAntwortMöglichkeiten": "Senegal",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Dakar ist die Hauptstadt und größte Stadt Senegals"
-        },
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Kinshasa?",
-            "Antworten": ["Angola", "Kamerun", "Gabon", "Demokratische Republik Kongo"],
-            "RichtigeAntwort": "Demokratische Republik Kongo",
-            "RichtigeAntwortMöglichkeiten": "Demokratische Republik Kongo Kongo-Kinshasa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kinshasa ist die Hauptstadt und größte Stadt der Demokratischen Republik Kongo"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Lubumbashi?",
-            "Antworten": ["Angola", "Kamerun", "Gabon", "Demokratische Republik Kongo"],
-            "RichtigeAntwort": "Demokratische Republik Kongo",
-            "RichtigeAntwortMöglichkeiten": "Demokratische Republik Kongo Kongo-Kinshasa",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lubumbashi ist die zweitgrößte Stadt der Demokratischen Republik Kongo und ein bedeutendes Bergbauzentrum"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Brazzaville?",
-            "Antworten": ["Demokratische Republik Kongo", "Kamerun", "Gabon", "Republik Kongo"],
-            "RichtigeAntwort": "Republik Kongo",
-            "RichtigeAntwortMöglichkeiten": "Republik Kongo Kongo-Brazzaville",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Brazzaville ist die Hauptstadt der Republik Kongo und liegt direkt gegenüber von Kinshasa"
-        },
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Nairobi?",
-            "Antworten": ["Uganda", "Tansania", "Somalia", "Kenia"],
-            "RichtigeAntwort": "Kenia",
-            "RichtigeAntwortMöglichkeiten": "Kenia",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Nairobi ist die Hauptstadt und größte Stadt Kenias"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Mombasa?",
-            "Antworten": ["Uganda", "Tansania", "Somalia", "Kenia"],
-            "RichtigeAntwort": "Kenia",
-            "RichtigeAntwortMöglichkeiten": "Kenia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Mombasa ist die zweitgrößte Stadt Kenias und ein wichtiger Hafen am Indischen Ozean"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Dar es Salaam?",
-            "Antworten": ["Uganda", "Kenia", "Somalia", "Tansania"],
-            "RichtigeAntwort": "Tansania",
-            "RichtigeAntwortMöglichkeiten": "Tansania",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Dar es Salaam ist die größte Stadt Tansanias und ein bedeutender Hafen"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Arusha?",
-            "Antworten": ["Uganda", "Kenia", "Somalia", "Tansania"],
-            "RichtigeAntwort": "Tansania",
-            "RichtigeAntwortMöglichkeiten": "Tansania",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Arusha ist bekannt als Zentrum für Safari-Tourismus in Tansania"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Addis Abeba?",
-            "Antworten": ["Uganda", "Kenia", "Somalia", "Äthiopien"],
-            "RichtigeAntwort": "Äthiopien",
-            "RichtigeAntwortMöglichkeiten": "Äthiopien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Addis Abeba ist die Hauptstadt und größte Stadt Äthiopiens"
-        },
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Johannesburg?",
-            "Antworten": ["Namibia", "Botswana", "Simbabwe", "Südafrika"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Johannesburg ist die größte Stadt Südafrikas und ein bedeutendes Wirtschaftszentrum"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Kapstadt?",
-            "Antworten": ["Namibia", "Botswana", "Simbabwe", "Südafrika"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Kapstadt ist bekannt für ihren Hafen, den Tafelberg und die historische Robben Island"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Durban?",
-            "Antworten": ["Namibia", "Botswana", "Simbabwe", "Südafrika"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Durban ist eine bedeutende Hafenstadt an der Ostküste Südafrikas"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Pretoria?",
-            "Antworten": ["Namibia", "Botswana", "Simbabwe", "Südafrika"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Pretoria ist eine der drei Hauptstädte Südafrikas und bekannt für ihre Regierungsgebäude"
-        },
-    
-    
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Sydney?",
-            "Antworten": ["Neuseeland", "Australien", "Papua-Neuguinea", "Fidschi"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Sydney ist die größte Stadt Australiens und bekannt für das Sydney Opera House und die Harbour Bridge"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Melbourne?",
-            "Antworten": ["Neuseeland", "Australien", "Papua-Neuguinea", "Fidschi"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Melbourne ist die zweitgrößte Stadt Australiens und bekannt für ihre Kultur und Kunst"
-        },
-        { //Städte
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Stadt Brisbane?",
-            "Antworten": ["Neuseeland", "Australien", "Papua-Neuguinea", "Fidschi"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Brisbane ist die drittgrößte Stadt Australiens und bekannt für ihre subtropische Klimazone"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Bevölkerungsreichste Stadt weltweit
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung weltweit?",
-            "Antworten": ["New York City", "Tokio", "Shanghai", "Delhi"],
-            "RichtigeAntwort": "Tokio",
-            "RichtigeAntwortMöglichkeiten": "Tokio",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Tokio ist die bevölkerungsreichste Stadt weltweit mit über 37 Millionen Einwohnern"
-        },
-        { //Bevölkerungsärmste Stadt weltweit
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die geringste Bevölkerung weltweit?",
-            "Antworten": ["Vatikanstadt", "Monowi", "Hum", "Adamstown"],
-            "RichtigeAntwort": "Monowi",
-            "RichtigeAntwortMöglichkeiten": "Monowi",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Monowi in Nebraska, USA, ist die bevölkerungsärmste Stadt der Welt mit nur einer Einwohnerin"
-        },
-        { //Bevölkerungsreichste Stadt in Nordamerika
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung in Nordamerika?",
-            "Antworten": ["Los Angeles", "Mexiko-Stadt", "Toronto", "New York City"],
-            "RichtigeAntwort": "Mexiko-Stadt",
-            "RichtigeAntwortMöglichkeiten": "Mexiko-Stadt",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Mexiko-Stadt ist die bevölkerungsreichste Stadt in Nordamerika mit über 21 Millionen Einwohnern"
-        },
-        { //Bevölkerungsreichste Stadt in Südamerika
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung in Südamerika?",
-            "Antworten": ["Buenos Aires", "Lima", "Bogotá", "São Paulo"],
-            "RichtigeAntwort": "São Paulo",
-            "RichtigeAntwortMöglichkeiten": "São Paulo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "São Paulo ist die bevölkerungsreichste Stadt in Südamerika mit über 12 Millionen Einwohnern"
-        },
-        { //Bevölkerungsreichste Stadt in Europa
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung in Europa?",
-            "Antworten": ["Paris", "London", "Moskau", "Berlin"],
-            "RichtigeAntwort": "Moskau",
-            "RichtigeAntwortMöglichkeiten": "Moskau",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Moskau ist die bevölkerungsreichste Stadt in Europa mit über 12 Millionen Einwohnern"
-        },
-        { //Bevölkerungsärmste Stadt in Europa
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die geringste Bevölkerung in Europa?",
-            "Antworten": ["Vatikanstadt", "Hum", "Vaduz", "San Marino"],
-            "RichtigeAntwort": "Hum",
-            "RichtigeAntwortMöglichkeiten": "Hum",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Hum in Kroatien ist die bevölkerungsärmste Stadt in Europa mit etwa 30 Einwohnern"
-        },
-        { //Bevölkerungsreichste Stadt in Afrika
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung in Afrika?",
-            "Antworten": ["Kapstadt", "Lagos", "Kairo", "Johannesburg"],
-            "RichtigeAntwort": "Lagos",
-            "RichtigeAntwortMöglichkeiten": "Lagos",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lagos ist die bevölkerungsreichste Stadt in Afrika mit über 21 Millionen Einwohnern"
-        },
-        { //Bevölkerungsreichste Stadt in Asien
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung in Asien?",
-            "Antworten": ["Shanghai", "Mumbai", "Tokio", "Peking"],
-            "RichtigeAntwort": "Tokio",
-            "RichtigeAntwortMöglichkeiten": "Tokio",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Tokio ist die bevölkerungsreichste Stadt in Asien mit über 37 Millionen Einwohnern"
-        },
-        { //Bevölkerungsreichste Stadt in Australien und Ozeanien
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt hat die größte Bevölkerung in Australien und Ozeanien?",
-            "Antworten": ["Sydney", "Melbourne", "Auckland", "Brisbane"],
-            "RichtigeAntwort": "Sydney",
-            "RichtigeAntwortMöglichkeiten": "Sydney",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Sydney hat über 5 Millionen Einwohnern"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die längste Landgrenze mit Russland?",
-            "Antworten": ["China", "Kasachstan", "Ukraine", "Mongolei"],
-            "RichtigeAntwort": "Kasachstan",
-            "RichtigeAntwortMöglichkeiten": "Kasachstan",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Kasachstan hat die längste Landgrenze mit Russland, die etwa 7.644 Kilometer lang ist"
-        },
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die meisten Nachbarländer?",
-            "Antworten": ["China", "Russland", "Deutschland", "Brasilien"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "China hat die meisten Nachbarländer mit insgesamt 14 angrenzenden Ländern"
-        },
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist vollständig von Südafrika umschlossen?",
-            "Antworten": ["Lesotho", "Swasiland", "Botswana", "Namibia"],
-            "RichtigeAntwort": "Lesotho",
-            "RichtigeAntwortMöglichkeiten": "Lesotho",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Lesotho ist ein Binnenstaat, der vollständig von Südafrika umschlossen ist"
-        },
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die längste Küstenlinie der Welt?",
-            "Antworten": ["Australien", "Kanada", "Indonesien", "Russland"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Kanada hat mit etwa 202.080 Kilometern die längste Küstenlinie der Welt"
-        },
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land wurde nach dem Zweiten Weltkrieg in Nord und Süd geteilt?",
-            "Antworten": ["Vietnam", "Deutschland", "Korea", "Sudan"],
-            "RichtigeAntwort": "Korea",
-            "RichtigeAntwortMöglichkeiten": "Korea Nordkorea Südkorea",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Korea wurde nach dem Zweiten Weltkrieg in Nord- und Südkorea geteilt"
-        },
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land liegt zwischen Frankreich und Spanien in den Pyrenäen?",
-            "Antworten": ["Andorra", "Luxemburg", "Monaco", "Liechtenstein"],
-            "RichtigeAntwort": "Andorra",
-            "RichtigeAntwortMöglichkeiten": "Andorra",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Andorra liegt in den Pyrenäen zwischen Frankreich und Spanien"
-        },
-        { //Politische Grenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land wurde nach dem Ersten Weltkrieg in mehrere Teile zerteilt?",
-            "Antworten": ["Österreich-Ungarn", "Ottomanisches Reich", "Russisches Reich", "Deutschland"],
-            "RichtigeAntwort": "Österreich-Ungarn",
-            "RichtigeAntwortMöglichkeiten": "Österreich-Ungarn",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Österreich-Ungarische Kaiserreich wurde nach dem Ersten Weltkrieg in mehrere neue Staaten aufgeteilt"
-        },
-    
-    
-        
-        { //Wirtschaftszonen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Handelsabkommen umfasst die Länder Kanada, Mexiko und die USA?",
-            "Antworten": ["EU", "ASEAN", "NAFTA", "MERCOSUR"],
-            "RichtigeAntwort": "NAFTA",
-            "RichtigeAntwortMöglichkeiten": "NAFTA",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Nordamerikanische Freihandelsabkommen (NAFTA) umfasst Kanada, Mexiko und die USA"
-        },
-        { //Wirtschaftszonen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Handelsabkommen umfasst die meisten Länder in Südostasien?",
-            "Antworten": ["EU", "NAFTA", "ASEAN", "MERCOSUR"],
-            "RichtigeAntwort": "ASEAN",
-            "RichtigeAntwortMöglichkeiten": "ASEAN",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Der Verband Südostasiatischer Nationen (ASEAN) umfasst 10 Länder in Südostasien"
-        },
-        { //Wirtschaftszonen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Handelsabkommen umfasst die Länder Brasilien, Argentinien, Paraguay und Uruguay?",
-            "Antworten": ["EU", "NAFTA", "ASEAN", "MERCOSUR"],
-            "RichtigeAntwort": "MERCOSUR",
-            "RichtigeAntwortMöglichkeiten": "MERCOSUR",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "MERCOSUR ist ein Handelsabkommen, das Brasilien, Argentinien, Paraguay und Uruguay umfasst"
-        },
-        { //Wirtschaftszonen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die meisten Mitglieder in der Weltbank?",
-            "Antworten": ["Afrika", "Asien", "Europa", "Südamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Afrika hat die meisten Mitgliedsländer in der Weltbank"
-        },
-        { //Wirtschaftszonen
-            "Kategorie": "Geographie",
-            "Frage": "Welches der folgenden Länder ist kein Mitglied der Europäischen Union (Schweden, Norwegen, Finnland, Dänemark)?",
-            "Antworten": ["Schweden", "Norwegen", "Finnland", "Dänemark"],
-            "RichtigeAntwort": "Norwegen",
-            "RichtigeAntwortMöglichkeiten": "Norwegen",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Norwegen ist kein Mitglied der Europäischen Union, obwohl es eng mit der EU zusammenarbeitet"
-        },
-        { //Wirtschaftszonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Stadt gilt als das Finanzzentrum der Europäischen Union?",
-            "Antworten": ["Paris", "London", "Frankfurt am Main", "Brüssel"],
-            "RichtigeAntwort": "Frankfurt am Main",
-            "RichtigeAntwortMöglichkeiten": "Frankfurt am Main Frankfurt",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Frankfurt am Main gilt als das Finanzzentrum der Europäischen Union und Sitz der Europäischen Zentralbank"
-        },
-    
-    
-    
-    
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Erdöl weltweit?",
-            "Antworten": ["Saudi-Arabien", "USA", "Russland", "Iran"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die USA sind der größte Produzent von Erdöl weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größten Reserven an Gold?",
-            "Antworten": ["Südafrika", "China", "Australien", "USA"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die USA haben die größten Goldreserven der Welt"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Kaffee?",
-            "Antworten": ["Kolumbien", "Vietnam", "Brasilien", "Äthiopien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Brasilien ist der größte Produzent von Kaffee weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Exporteur von Bananen?",
-            "Antworten": ["Ecuador", "Kolumbien", "Philippinen", "Indien"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ecuador ist der größte Exporteur von Bananen weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Weizen weltweit?",
-            "Antworten": ["USA", "Indien", "China", "Russland"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "China ist der größte Produzent von Weizen weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist weltweit der größte Exporteur von Erdgas?",
-            "Antworten": ["USA", "Russland", "Katar", "Kanada"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Russland ist der größte Exporteur von Erdgas weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Lithium, einem wichtigen Rohstoff für Batterien?",
-            "Antworten": ["Australien", "Bolivien", "Chile", "Argentinien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Australien ist der größte Produzent von Lithium, das für die Produktion von Batterien benötigt wird"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Diamanten weltweit?",
-            "Antworten": ["Australien", "Kanada", "Botswana", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Russland ist der größte Produzent von Diamanten weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größten Vorkommen an seltenen Erden, die in der Elektronikindustrie verwendet werden?",
-            "Antworten": ["USA", "China", "Australien", "Brasilien"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "China hat die größten Vorkommen an seltenen Erden, die für die Elektronikindustrie entscheidend sind"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Kakaobohnen weltweit?",
-            "Antworten": ["Brasilien", "Indonesien", "Ghana", "Elfenbeinküste"],
-            "RichtigeAntwort": "Elfenbeinküste",
-            "RichtigeAntwortMöglichkeiten": "Elfenbeinküste Côte d'Ivoire",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Elfenbeinküste ist der größte Produzent von Kakaobohnen weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Exporteur von Eisenerz?",
-            "Antworten": ["Brasilien", "Australien", "Indien", "China"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Australien ist der größte Exporteur von Eisenerz weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Silber?",
-            "Antworten": ["Peru", "China", "Australien", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Mexiko ist der größte Produzent von Silber weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Kupfer?",
-            "Antworten": ["USA", "Chile", "Peru", "China"],
-            "RichtigeAntwort": "Chile",
-            "RichtigeAntwortMöglichkeiten": "Chile",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Chile ist der größte Produzent von Kupfer weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Palmöl?",
-            "Antworten": ["Malaysia", "Thailand", "Nigeria", "Indonesien"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Indonesien ist der größte Produzent von Palmöl weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Exporteur von Erdgas nach Europa?",
-            "Antworten": ["Norwegen", "Russland", "Algerien", "Katar"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Russland ist der größte Exporteur von Erdgas nach Europa"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Zink?",
-            "Antworten": ["USA", "China", "Kanada", "Australien"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "China ist der größte Produzent von Zink weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Baumwolle?",
-            "Antworten": ["Indien", "USA", "China", "Pakistan"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "China ist der größte Produzent von Baumwolle weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größten Vorkommen an Kohle?",
-            "Antworten": ["China", "USA", "Indien", "Russland"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die USA besitzen die größten Vorkommen an Kohle weltweit"
-        },
-        { //Ressourcen und Rohstoffe
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist der größte Produzent von Zuckerrohr?",
-            "Antworten": ["Brasilien", "Indien", "China", "Thailand"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Brasilien ist der größte Produzent von Zuckerrohr weltweit"
-        },
-    
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Landgrenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welche zwei Länder teilen die längste Landgrenze der Welt?",
-            "Antworten": ["USA und Mexiko", "Russland und China", "Kanada und USA", "China und Indien"],
-            "RichtigeAntwort": "Kanada und USA",
-            "RichtigeAntwortMöglichkeiten": "Kanada USA",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kanada und die USA teilen die längste Landgrenze der Welt, die über 8.891 Kilometer lang ist"
-        },
-        { //Landgrenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches europäische Land hat die meisten Nachbarländer?",
-            "Antworten": ["Deutschland", "Frankreich", "Polen", "Russland"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Deutschland hat die meisten Nachbarländer in Europa mit insgesamt neun angrenzenden Ländern"
-        },
-        { //Landgrenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welche zwei afrikanischen Länder haben die längste gemeinsame Grenze?",
-            "Antworten": ["Sudan und Südsudan", "Ägypten und Libyen", "Angola und Demokratische Republik Kongo", "Algerien und Mali"],
-            "RichtigeAntwort": "Sudan und Südsudan",
-            "RichtigeAntwortMöglichkeiten": "Sudan Südsudan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Sudan und Südsudan teilen die längste gemeinsame Grenze in Afrika, die etwa 2.184 Kilometer lang ist"
-        },
-        { //Landgrenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welche beiden Länder in Südamerika teilen die längste Landgrenze?",
-            "Antworten": ["Brasilien und Argentinien", "Argentinien und Chile", "Brasilien und Bolivien", "Peru und Kolumbien"],
-            "RichtigeAntwort": "Argentinien und Chile",
-            "RichtigeAntwortMöglichkeiten": "Argentinien Chile",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Argentinien und Chile teilen die längste Landgrenze in Südamerika, die etwa 5.308 Kilometer lang ist"
-        },
-        { //Landgrenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die längste Landgrenze mit Brasilien?",
-            "Antworten": ["Argentinien", "Bolivien", "Peru", "Venezuela"],
-            "RichtigeAntwort": "Bolivien",
-            "RichtigeAntwortMöglichkeiten": "Bolivien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bolivien Landgrenze mit Brasilien ist etwa 3.423 Kilometer lang"
-        },
-        { //Landgrenzen
-            "Kategorie": "Geographie",
-            "Frage": "Welche beiden Länder in Europa haben die längste gemeinsame Grenze?",
-            "Antworten": ["Deutschland und Polen", "Norwegen und Schweden", "Frankreich und Spanien", "Finnland und Russland"],
-            "RichtigeAntwort": "Finnland und Russland",
-            "RichtigeAntwortMöglichkeiten": "Finnland und Russland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Finnland und Russland teilen die längste gemeinsame Grenze in Europa"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Kontinentale Geographie
-            "Kategorie": "Geographie",
-            "Frage": "Wie heißt die größte Wüste der Welt",
-            "Antworten": ["Kalahari", "Gobi", "Sahara", "Antarktis"],
-            "RichtigeAntwort": "Antarktis",
-            "RichtigeAntwortMöglichkeiten": "Antarktis",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Antarktis ist eine Eiswüste mit insgesamt 14 Millionen km²"
-        },
-        { //Kontinentale Geographie
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die meisten aktiven Vulkane?",
-            "Antworten": ["Asien", "Nordamerika", "Südamerika", "Australien"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Asien, insbesondere der Pazifische Feuerring, hat die meisten aktiven Vulkane"
-        },
-        { //Kontinentale Geographie
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die größte Anzahl an Ländern?",
-            "Antworten": ["Afrika", "Europa", "Asien", "Südamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Afrika hat die größte Anzahl an Ländern mit insgesamt 54 anerkannten Staaten"
-        },
-        { //Kontinentale Geographie
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat den höchsten Punkt der Erde?",
-            "Antworten": ["Asien", "Afrika", "Europa", "Südamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Asien ist Heimat des Mount Everest, der höchste Punkt der Erde"
-        },
-        { //Kontinentale Geographie
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die längste Küstenlinie?",
-            "Antworten": ["Nordamerika", "Asien", "Afrika", "Europa"],
-            "RichtigeAntwort": "Nordamerika",
-            "RichtigeAntwortMöglichkeiten": "Nordamerika",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nordamerika hat die längste Küstenlinie, größtenteils wegen Kanadas ausgedehnter Küste"
-        },
-        { //Kontinentale Geographie
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent hat die größte Anzahl an Inseln?",
-            "Antworten": ["Australien/Ozeanien", "Asien", "Europa", "Afrika"],
-            "RichtigeAntwort": "Ozeanien",
-            "RichtigeAntwortMöglichkeiten": "Ozeanien Australien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Ozeanien besteht aus Tausenden von Inseln, die im Pazifischen Ozean verteilt sind"
-        },
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Sprachen und Ethnien
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat die meisten Muttersprachler weltweit?",
-            "Antworten": ["Englisch", "Spanisch", "Mandarin", "Hindi"],
-            "RichtigeAntwort": "Mandarin",
-            "RichtigeAntwortMöglichkeiten": "Mandarin",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Mandarin-Chinesisch hat die meisten Muttersprachler weltweit"
-        },
-        { //Sprachen und Ethnien
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größte Anzahl an offiziell anerkannten Sprachen?",
-            "Antworten": ["Indien", "Papua-Neuguinea", "Südafrika", "Nigeria"],
-            "RichtigeAntwort": "Papua-Neuguinea",
-            "RichtigeAntwortMöglichkeiten": "Papua-Neuguinea",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Papua-Neuguinea hat die größte Anzahl an offiziell anerkannten Sprachen mit über 800 verschiedenen Sprachen"
-        },
-        { //Sprachen und Ethnien
-            "Kategorie": "Geographie",
-            "Frage": "Welche der folgenden Sprachen wird in Südamerika am häufigsten gesprochen?",
-            "Antworten": ["Portugiesisch", "Spanisch", "Englisch", "Französisch"],
-            "RichtigeAntwort": "Spanisch",
-            "RichtigeAntwortMöglichkeiten": "Spanisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Spanisch ist die am häufigsten gesprochene Sprache in Südamerika"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größte Anzahl an Französischsprechern weltweit?",
-            "Antworten": ["Frankreich", "Kanada", "Belgien", "Demokratische Republik Kongo"],
-            "RichtigeAntwort": "Demokratische Republik Kongo",
-            "RichtigeAntwortMöglichkeiten": "Demokratische Republik Kongo",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Die Demokratische Republik Kongo hat die größte Anzahl an Französischsprechern weltweit"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache ist die am weitesten verbreitete Muttersprache in Europa?",
-            "Antworten": ["Englisch", "Spanisch", "Deutsch", "Französisch"],
-            "RichtigeAntwort": "Deutsch",
-            "RichtigeAntwortMöglichkeiten": "Deutsch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Deutsch ist die am weitesten verbreitete Muttersprache in Europa"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache wird auf allen Kontinenten als Amtssprache verwendet?",
-            "Antworten": ["Englisch", "Spanisch", "Französisch", "Arabisch"],
-            "RichtigeAntwort": "Englisch",
-            "RichtigeAntwortMöglichkeiten": "Englisch",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Englisch wird auf allen Kontinenten als Amtssprache verwendet"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat die meisten offiziellen Länder in Afrika?",
-            "Antworten": ["Englisch", "Französisch", "Arabisch", "Portugiesisch"],
-            "RichtigeAntwort": "Französisch",
-            "RichtigeAntwortMöglichkeiten": "Französisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Französisch ist die Sprache mit den meisten offiziellen Ländern in Afrika"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache ist die zweitmeistgesprochene Sprache in den USA?",
-            "Antworten": ["Deutsch", "Französisch", "Chinesisch", "Spanisch"],
-            "RichtigeAntwort": "Spanisch",
-            "RichtigeAntwortMöglichkeiten": "Spanisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Spanisch ist die zweitmeistgesprochene Sprache in den USA"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat die meisten Amtssprachen in der Europäischen Union?",
-            "Antworten": ["Englisch", "Französisch", "Deutsch", "Italienisch"],
-            "RichtigeAntwort": "Englisch",
-            "RichtigeAntwortMöglichkeiten": "Englisch",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Englisch hat die meisten Amtssprachen in der Europäischen Union"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache wird in Südamerika in den meisten Ländern als Amtssprache gesprochen?",
-            "Antworten": ["Portugiesisch", "Spanisch", "Englisch", "Französisch"],
-            "RichtigeAntwort": "Spanisch",
-            "RichtigeAntwortMöglichkeiten": "Spanisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Spanisch ist die Amtssprache in den meisten Ländern Südamerikas"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache wird in Australien am zweithäufigsten gesprochen?",
-            "Antworten": ["Italienisch", "Griechisch", "Chinesisch", "Arabisch"],
-            "RichtigeAntwort": "Chinesisch",
-            "RichtigeAntwortMöglichkeiten": "Chinesisch",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Chinesisch ist die zweithäufigste Sprache in Australien"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat weltweit die meisten Lerner als Fremdsprache?",
-            "Antworten": ["Spanisch", "Französisch", "Deutsch", "Englisch"],
-            "RichtigeAntwort": "Englisch",
-            "RichtigeAntwortMöglichkeiten": "Englisch",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Englisch hat weltweit die meisten Lerner als Fremdsprache"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache wird in Kanada neben Englisch am häufigsten gesprochen?",
-            "Antworten": ["Spanisch", "Italienisch", "Deutsch", "Französisch"],
-            "RichtigeAntwort": "Französisch",
-            "RichtigeAntwortMöglichkeiten": "Französisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Französisch ist neben Englisch die am häufigsten gesprochene Sprache in Kanada"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat die meisten Dialekte weltweit?",
-            "Antworten": ["Spanisch", "Englisch", "Mandarin", "Arabisch"],
-            "RichtigeAntwort": "Mandarin",
-            "RichtigeAntwortMöglichkeiten": "Chinesisch Mandarin",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die bekanntesten Dialekte der Chinesischen Sprache sind Mandarin und Kantonesisch"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat die meisten Schriftzeichen?",
-            "Antworten": ["Koreanisch", "Japanisch", "Chinesisch", "Arabisch"],
-            "RichtigeAntwort": "Chinesisch",
-            "RichtigeAntwortMöglichkeiten": "Chinesisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Chinesisch hat die meisten Schriftzeichen mit über 50.000 Zeichen"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache gilt als die älteste noch gesprochene Sprache der Welt?",
-            "Antworten": ["Griechisch", "Latein", "Hebräisch", "Tamil"],
-            "RichtigeAntwort": "Tamil",
-            "RichtigeAntwortMöglichkeiten": "Tamil",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Tamil gilt als eine der ältesten noch gesprochenen Sprachen der Welt"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache hat die zweitmeisten Muttersprachler nach Mandarin?",
-            "Antworten": ["Englisch", "Spanisch", "Hindi", "Arabisch"],
-            "RichtigeAntwort": "Spanisch",
-            "RichtigeAntwortMöglichkeiten": "Spanisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Spanisch hat die zweitmeisten Muttersprachler weltweit nach Mandarin"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache wird in Brasilien gesprochen?",
-            "Antworten": ["Spanisch", "Portugiesisch", "Französisch", "Englisch"],
-            "RichtigeAntwort": "Portugiesisch",
-            "RichtigeAntwortMöglichkeiten": "Portugiesisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Portugiesisch ist die offizielle Sprache in Brasilien"
-        },
-        { //Sprachen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Sprache wird in der Region Québec in Kanada hauptsächlich gesprochen?",
-            "Antworten": ["Englisch", "Spanisch", "Französisch", "Deutsch"],
-            "RichtigeAntwort": "Französisch",
-            "RichtigeAntwortMöglichkeiten": "Französisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Französisch ist die Hauptsprache in der Region Québec in Kanada"
-        },
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    
-    
-        { //Religionsverbreitung
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land gibt es die größte Anzahl von Muslimen?",
-            "Antworten": ["Saudi-Arabien", "Indonesien", "Pakistan", "Indien"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Indonesien hat die größte Anzahl von Muslimen weltweit"
-        },
-        { //Religionsverbreitung
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land gibt es die meisten Christen?",
-            "Antworten": ["Vereinigte Staaten", "Brasilien", "Mexiko", "Philippinen"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Vereinigten Staaten haben die größte Anzahl von Christen weltweit"
-        },
-        { //Religionsverbreitung
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Anteil an Buddhisten?",
-            "Antworten": ["China", "Japan", "Thailand", "Myanmar"],
-            "RichtigeAntwort": "Thailand",
-            "RichtigeAntwortMöglichkeiten": "Thailand",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Thailand hat den höchsten Anteil an Buddhisten weltweit"
-        },
-        { //Religionsverbreitung
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land gibt es die größte hinduistische Bevölkerung?",
-            "Antworten": ["Nepal", "Bangladesch", "Indien", "Sri Lanka"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Indien hat die größte hinduistische Bevölkerung weltweit"
-        },
-        { //Traditionen und Feste
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land wird das Fest Holi gefeiert?",
-            "Antworten": ["Nepal", "Sri Lanka", "Bangladesch", "Indien"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Holi, das Fest der Farben, wird hauptsächlich in Indien gefeiert"
-        },
-        { //Traditionen und Feste
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land wird das berühmte Oktoberfest gefeiert?",
-            "Antworten": ["Österreich", "Schweiz", "Deutschland", "Niederlande"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Oktoberfest ist ein berühmtes Volksfest, das in München, Deutschland, gefeiert wird"
-        },
-        { //Traditionen und Feste
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land wird der Sankt-Patrickstag am meisten gefeiert?",
-            "Antworten": ["Schottland", "England", "Irland", "Wales"],
-            "RichtigeAntwort": "Irland",
-            "RichtigeAntwortMöglichkeiten": "Irland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Sankt-Patrickstag ist das wichtigste Fest in Irland"
-        },
-        { //Traditionen und Feste
-            "Kategorie": "Geographie",
-            "Frage": "Was wird beim chinesischen Neujahrsfest gefeiert?",
-            "Antworten": ["Die Gründung Chinas", "Der Beginn des Frühlings und das neue Mondjahr", "Der Geburtstag von Konfuzius", "Das Ende des Bürgerkriegs"],
-            "RichtigeAntwort": "Der Beginn des Frühlings und das neue Mondjahr",
-            "RichtigeAntwortMöglichkeiten": "Beginn des Frühlings neue Mondjahr",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das chinesische Neujahrsfest wird auch das Frühlingsfest genannt"
-        },
-    
-    
-    
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        { //Anzahl der Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Kontinente gibt es auf der Erde?",
-            "Antworten": ["Fünf", "Sechs", "Sieben", "Acht"],
-            "RichtigeAntwort": "Sieben",
-            "RichtigeAntwortMöglichkeiten": "Sieben",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Es gibt sieben Kontinente auf der Erde: Afrika, Asien, Europa, Nordamerika, Südamerika, Australien und Antarktis"
-        },
-        { //Größter Kontinent
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent ist flächenmäßig der größte?",
-            "Antworten": ["Afrika", "Asien", "Nordamerika", "Südamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Asien ist mit einer Fläche von etwa 44,58 Millionen Quadratkilometern der größte Kontinent der Welt"
-        },
-    
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Deutschland?",
-            "Antworten": ["Europa", "Asien", "Afrika", "Südamerika"],
-            "RichtigeAntwort": "Europa",
-            "RichtigeAntwortMöglichkeiten": "Europa",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Deutschland liegt in Mitteleuropa"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Russland geographisch größtenteils?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die russische Haupstadt Moskau befindet sich jedoch in Europa"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Neuseeland?",
-            "Antworten": ["Asien", "Europa", "Australien", "Südamerika"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Neuseeland liegt im südwestlichen Pazifik"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Australien?",
-            "Antworten": ["Auf keinem Kontinent", "Asien", "Europa", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Australien ist sowohl ein Land als auch ein Kontinent"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Tunesien?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Südamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Tunesien liegt im Norden Afrikas am Mittelmeer"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Chile?",
-            "Antworten": ["Afrika", "Asien", "Europa", "Südamerika"],
-            "RichtigeAntwort": "Südamerika",
-            "RichtigeAntwortMöglichkeiten": "Südamerika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Chile erstreckt sich entlang der Westküste Südamerikas"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Argentinien?",
-            "Antworten": ["Afrika", "Asien", "Nordamerika", "Südamerika"],
-            "RichtigeAntwort": "Südamerika",
-            "RichtigeAntwortMöglichkeiten": "Südamerika",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Argentinien ist eines der größten Länder in Südamerika"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt die Türkei?",
-            "Antworten": ["Afrika", "Asien", "Europa", "Asien"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Ein kleiner Teil der Türkei liegt in Europa"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Saudi-Arabien?",
-            "Antworten": ["Afrika", "Asien", "Europa", "Südamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Saudi-Arabien liegt auf der Arabischen Halbinsel"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Ägypten?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Südamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Ägypten liegt im Nordosten Afrikas"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Marokko?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Marokko liegt im Nordwesten Afrikas"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Syrien?",
-            "Antworten": ["Afrika", "Europa", "Asien", "Nordamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Syrien liegt im Nahen Osten"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Georgien?",
-            "Antworten": ["Europa", "Afrika", "Asien", "Südamerika"],
-            "RichtigeAntwort": "Asien (Europa)",
-            "RichtigeAntwortMöglichkeiten": "Asien Europa",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Georgien liegt im Kaukasus und wird manchmal zu Europa gezählt"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Afghanistan?",
-            "Antworten": ["Europa", "Afrika", "Asien", "Südamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Afghanistan liegt in Südasien"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt die Ukraine?",
-            "Antworten": ["Afrika", "Europa", "Asien", "Südamerika"],
-            "RichtigeAntwort": "Europa",
-            "RichtigeAntwortMöglichkeiten": "Europa",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Ukraine ist das größte Land, das vollständig in Europa liegt"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Albanien?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Europa",
-            "RichtigeAntwortMöglichkeiten": "Europa",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Albanien liegt auf der Balkanhalbinsel in Südosteuropa"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegen die Vereinigten Staaten von Amerika?",
-            "Antworten": ["Europa", "Asien", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Nordamerika",
-            "RichtigeAntwortMöglichkeiten": "Nordamerika",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die USA erstrecken sich über einen großen Teil Nordamerikas"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Brasilien?",
-            "Antworten": ["Afrika", "Asien", "Nordamerika", "Südamerika"],
-            "RichtigeAntwort": "Südamerika",
-            "RichtigeAntwortMöglichkeiten": "Südamerika",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Brasilien ist das größte Land in Südamerika"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Madagaskar?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Afrika",
-            "RichtigeAntwortMöglichkeiten": "Afrika",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Madagaskar ist die viertgrößte Insel der Welt und liegt vor der Küste Afrikas"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Indonesien?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Südamerika"],
-            "RichtigeAntwort": "Asien",
-            "RichtigeAntwortMöglichkeiten": "Asien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Indonesien ist der größte Inselstaat der Welt"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Schweden?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Europa",
-            "RichtigeAntwortMöglichkeiten": "Europa",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Schweden liegt in Nordeuropa auf der Skandinavischen Halbinsel"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Rumänien?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Europa",
-            "RichtigeAntwortMöglichkeiten": "Europa",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Rumänien liegt in Südosteuropa"
-        },
-        { //Kontinente
-            "Kategorie": "Geographie",
-            "Frage": "Auf welchem Kontinent liegt Estland?",
-            "Antworten": ["Asien", "Europa", "Afrika", "Nordamerika"],
-            "RichtigeAntwort": "Europa",
-            "RichtigeAntwortMöglichkeiten": "Europa",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Estland liegt im Baltikum in Nordeuropa"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Größte und kleinste Länder
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte Land der Welt?",
-            "Antworten": ["Kanada", "China", "USA", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Russland erstreckt sich über Europa und Asien"
-        },
-        { //Größte und kleinste Länder
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land der Welt?",
-            "Antworten": ["Monaco", "Nauru", "San Marino", "Vatikanstadt"],
-            "RichtigeAntwort": "Vatikanstadt",
-            "RichtigeAntwortMöglichkeiten": "Vatikanstadt",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Vatikanstadt ist ein unabhängiger Stadtstaat in Rom"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte Land in Afrika?",
-            "Antworten": ["Ägypten", "Nigeria", "Algerien", "Südafrika"],
-            "RichtigeAntwort": "Algerien",
-            "RichtigeAntwortMöglichkeiten": "Algerien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Algerien ist das größte Land in Afrika nach Fläche"
-        },
-        { //Kleinste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land in Afrika?",
-            "Antworten": ["Gambia", "Seychellen", "Lesotho", "Swasiland"],
-            "RichtigeAntwort": "Seychellen",
-            "RichtigeAntwortMöglichkeiten": "Seychellen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Seychellen bestehen aus 115 Inseln im Indischen Ozean"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte Land in Asien?",
-            "Antworten": ["China", "Indien", "Kasachstan", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Russland erstreckt sich über Europa und Asien"
-        },
-        { //Kleinste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land in Asien?",
-            "Antworten": ["Maldives", "Bhutan", "Bahrain", "Singapur"],
-            "RichtigeAntwort": "Maldives",
-            "RichtigeAntwortMöglichkeiten": "Maldives",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Maldives bestehen aus einem Archipel von 26 Atollen"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das flächenmäßig größte Land in Europa?",
-            "Antworten": ["Deutschland", "Frankreich", "Spanien", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Russland ist das größte Land der Welt und erstreckt sich über Europa und Asien"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte vollständig in Europa liegenden Land?",
-            "Antworten": ["Deutschland", "Frankreich", "Ukraine", "Italien"],
-            "RichtigeAntwort": "Ukraine",
-            "RichtigeAntwortMöglichkeiten": "Ukraine",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Ukraine besitzt eine Fläche von 603 km²"
-        },
-        { //Kleinste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land in Europa?",
-            "Antworten": ["Monaco", "San Marino", "Liechtenstein", "Vatikanstadt"],
-            "RichtigeAntwort": "Vatikanstadt",
-            "RichtigeAntwortMöglichkeiten": "Vatikanstadt",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Vatikanstadt ist das kleinste unabhängige Land der Welt"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte Land in Nordamerika?",
-            "Antworten": ["USA", "Kanada", "Mexiko", "Grönland"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Kanada ist das zweitgrößte Land der Welt nach Fläche"
-        },
-        { //Kleinste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land in Nordamerika?",
-            "Antworten": ["St. Kitts und Nevis", "Antigua und Barbuda", "Barbados", "Grenada"],
-            "RichtigeAntwort": "St. Kitts und Nevis",
-            "RichtigeAntwortMöglichkeiten": "St. Kitts und Nevis",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "St. Kitts und Nevis besteht aus zwei Inseln in der Karibik"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte Land in Südamerika?",
-            "Antworten": ["Argentinien", "Kolumbien", "Peru", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Brasilien ist das fünftgrößte Land der Welt"
-        },
-        { //Kleinste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land in Südamerika?",
-            "Antworten": ["Guyana", "Suriname", "Paraguay", "Uruguay"],
-            "RichtigeAntwort": "Suriname",
-            "RichtigeAntwortMöglichkeiten": "Suriname",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Suriname liegt an der Nordküste Südamerikas"
-        },
-        { //Größte Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das größte Land in Australien?",
-            "Antworten": ["Neuseeland", "Fidschi", "Papua-Neuguinea", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Australien ist sowohl ein Land als auch ein Kontinent"
-        },
-        { //Kleinste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das kleinste Land in Australien?",
-            "Antworten": ["Nauru", "Tuvalu", "Palau", "Samoa"],
-            "RichtigeAntwort": "Nauru",
-            "RichtigeAntwortMöglichkeiten": "Nauru",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nauru ist der kleinste Inselstaat der Welt"
-        },
-    
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    
-        { //Bevölkerungsreichste und bevölkerungsärmste Länder
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land der Welt?",
-            "Antworten": ["Indien", "USA", "Indonesien", "China"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Indien hat über 1,4 Einwohner und hat kürzlichn damit China überholt"
-        },
-        { //Bevölkerungsreichste und bevölkerungsärmste Länder
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land der Welt?",
-            "Antworten": ["Nauru", "Tuvalu", "San Marino", "Vatikanstadt"],
-            "RichtigeAntwort": "Vatikanstadt",
-            "RichtigeAntwortMöglichkeiten": "Vatikanstadt",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Vatikanstadt hat weniger als 1.000 Einwohner"
-        },
-        { //Bevölkerungsreichste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land in Afrika?",
-            "Antworten": ["Ägypten", "Nigeria", "Äthiopien", "Südafrika"],
-            "RichtigeAntwort": "Nigeria",
-            "RichtigeAntwortMöglichkeiten": "Nigeria",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Nigeria hat über 200 Millionen Einwohner"
-        },
-        { //Bevölkerungsärmste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land in Afrika?",
-            "Antworten": ["Gambia", "Seychellen", "Komoren", "Kap Verde"],
-            "RichtigeAntwort": "Seychellen",
-            "RichtigeAntwortMöglichkeiten": "Seychellen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Seychellen haben weniger als 100.000 Einwohner"
-        },
-        { //Bevölkerungsreichste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land in Asien?",
-            "Antworten": ["China", "Indien", "Indonesien", "Pakistan"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Indien hat über 1,4 Einwohner und hat kürzlichn damit China überholt"
-        },
-        { //Bevölkerungsärmste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land in Asien?",
-            "Antworten": ["Bhutan", "Brunei", "Maldives", "Timor-Leste"],
-            "RichtigeAntwort": "Maldives",
-            "RichtigeAntwortMöglichkeiten": "Maldives",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Maldives haben etwa 500.000 Einwohner"
-        },
-        { //Bevölkerungsreichste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land in Europa?",
-            "Antworten": ["Deutschland", "Frankreich", "Vereinigtes Königreich", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Russland hat über 140 Millionen Einwohner"
-        },
-        { //Bevölkerungsärmste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land in Europa?",
-            "Antworten": ["Monaco", "San Marino", "Liechtenstein", "Vatikanstadt"],
-            "RichtigeAntwort": "Vatikanstadt",
-            "RichtigeAntwortMöglichkeiten": "Vatikanstadt",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Vatikanstadt hat weniger als 1.000 Einwohner"
-        },
-        { //Bevölkerungsreichste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land in Nordamerika?",
-            "Antworten": ["Mexiko", "Kanada", "Guatemala", "Vereinigte Staaten"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Vereinigten Staaten haben über 330 Millionen Einwohner"
-        },
-        { //Bevölkerungsärmste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land in Nordamerika?",
-            "Antworten": ["St. Kitts und Nevis", "Antigua und Barbuda", "Barbados", "Grenada"],
-            "RichtigeAntwort": "St. Kitts und Nevis",
-            "RichtigeAntwortMöglichkeiten": "St. Kitts und Nevis",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "St. Kitts und Nevis hat etwa 50.000 Einwohner"
-        },
-        { //Bevölkerungsreichste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land in Südamerika?",
-            "Antworten": ["Argentinien", "Kolumbien", "Peru", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Brasilien hat über 210 Millionen Einwohner"
-        },
-        { //Bevölkerungsärmste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land in Südamerika?",
-            "Antworten": ["Guyana", "Suriname", "Paraguay", "Uruguay"],
-            "RichtigeAntwort": "Suriname",
-            "RichtigeAntwortMöglichkeiten": "Suriname",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Suriname hat etwa 600.000 Einwohner"
-        },
-        { //Bevölkerungsreichste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsreichste Land in Australien?",
-            "Antworten": ["Neuseeland", "Fidschi", "Papua-Neuguinea", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Australien hat über 25 Millionen Einwohner"
-        },
-        { //Bevölkerungsärmste Länder in Kontinenten
-            "Kategorie": "Geographie",
-            "Frage": "Was ist das bevölkerungsärmste Land in Australien?",
-            "Antworten": ["Nauru", "Tuvalu", "Palau", "Samoa"],
-            "RichtigeAntwort": "Nauru",
-            "RichtigeAntwortMöglichkeiten": "Nauru",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Nauru hat etwa 10.000 Einwohner"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Eiffelturm?",
-            "Antworten": ["Berlin", "Madrid", "London", "Paris"],
-            "RichtigeAntwort": "Paris",
-            "RichtigeAntwortMöglichkeiten": "Paris",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Eiffelturm wurde 1889 zur Weltausstellung errichtet"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Kolosseum?",
-            "Antworten": ["Griechenland", "Frankreich", "Spanien", "Italien"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien Rom",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Das Kolosseum befindet sich in Rom"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt liegt der Parthenon?",
-            "Antworten": ["Rom", "Athen", "Istanbul", "Barcelona"],
-            "RichtigeAntwort": "Athen",
-            "RichtigeAntwortMöglichkeiten": "Athen",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Parthenon ist ein antiker Tempel auf der Akropolis"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Buckingham Palace?",
-            "Antworten": ["Frankreich", "Deutschland", "Niederlande", "Vereinigtes Königreich"],
-            "RichtigeAntwort": "Vereinigtes Königreich",
-            "RichtigeAntwortMöglichkeiten": "Vereinigtes Königreich",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Buckingham Palace ist die offizielle Residenz des britischen Monarchen in London"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt steht die Sagrada Família?",
-            "Antworten": ["Mailand", "Lissabon", "Barcelona", "Valencia"],
-            "RichtigeAntwort": "Barcelona",
-            "RichtigeAntwortMöglichkeiten": "Barcelona",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Sagrada Família ist eine Basilika, die von Antoni Gaudí entworfen wurde"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Schloss Neuschwanstein?",
-            "Antworten": ["Österreich", "Schweiz", "Frankreich", "Deutschland"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Schloss Neuschwanstein liegt in Bayern"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt steht der Schiefe Turm von Pisa?",
-            "Antworten": ["Rom", "Venedig", "Florenz", "Pisa"],
-            "RichtigeAntwort": "Pisa",
-            "RichtigeAntwortMöglichkeiten": "Pisa",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Schiefe Turm von Pisa ist ein freistehender Glockenturm"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich die Kathedrale Notre-Dame?",
-            "Antworten": ["Lyon", "Marseille", "Madrid", "Paris"],
-            "RichtigeAntwort": "Paris",
-            "RichtigeAntwortMöglichkeiten": "Paris",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Kathedrale Notre-Dame liegt auf der Île de la Cité"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Akropolis?",
-            "Antworten": ["Türkei", "Zypern", "Griechenland", "Albanien"],
-            "RichtigeAntwort": "Griechenland",
-            "RichtigeAntwortMöglichkeiten": "Griechenland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Akropolis ist ein antiker Festungsberg in Athen"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Big Ben?",
-            "Antworten": ["USA", "Liverpool", "Amsterdam", "London"],
-            "RichtigeAntwort": "London",
-            "RichtigeAntwortMöglichkeiten": "London",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Big Ben ist der Spitzname der großen Glocke im Uhrturm des Palace of Westminster"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Mont Saint-Michel?",
-            "Antworten": ["Spanien", "Belgien", "Schweiz", "Frankreich"],
-            "RichtigeAntwort": "Frankreich",
-            "RichtigeAntwortMöglichkeiten": "Frankreich",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Mont Saint-Michel ist eine felsige Insel in der Normandie"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Prager Burg?",
-            "Antworten": ["Polen", "Ungarn", "Österreich", "Tschechien"],
-            "RichtigeAntwort": "Prag",
-            "RichtigeAntwortMöglichkeiten": "Prag",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Prager Burg ist das größte geschlossene Burgareal der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Burg Hohenzollern?",
-            "Antworten": ["Österreich", "Schweiz", "Frankreich", "Deutschland"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Burg Hohenzollern liegt auf dem Hohenzollernberg in Baden-Württemberg"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Petersdom?",
-            "Antworten": ["Venedig", "Mailand", "Neapel", "Rom"],
-            "RichtigeAntwort": "Rom",
-            "RichtigeAntwortMöglichkeiten": "Rom",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Petersdom ist die größte Kirche der Welt und befindet sich im Vatikan"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Alcázar von Segovia?",
-            "Antworten": ["Portugal", "Frankreich", "Italien", "Spanien"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Alcázar von Segovia ist ein mittelalterlicher Palast in der Stadt Segovia"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich die Basilika Sacré-Cœur?",
-            "Antworten": ["Paris", "Marseille", "Lyon", "Toulouse"],
-            "RichtigeAntwort": "Paris",
-            "RichtigeAntwortMöglichkeiten": "Paris",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Sacré-Cœur befindet sich auf dem Montmartre in Paris"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich Schloss Schönbrunn?",
-            "Antworten": ["Ungarn", "Deutschland", "Tschechien", "Österreich"],
-            "RichtigeAntwort": "Österreich",
-            "RichtigeAntwortMöglichkeiten": "Österreich",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Schloss Schönbrunn befindet sich in Wien"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich die Hagia Sophia?",
-            "Antworten": ["Athen", "Rom", "Sofia", "Istanbul"],
-            "RichtigeAntwort": "Istanbul",
-            "RichtigeAntwortMöglichkeiten": "Istanbul",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Hagia Sophia war ursprünglich eine byzantinische Kirche und später eine Moschee"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die Plitvicer Seen?",
-            "Antworten": ["Schweiz", "Österreich", "Slowenien", "Kroatien"],
-            "RichtigeAntwort": "Kroatien",
-            "RichtigeAntwortMöglichkeiten": "Kroatien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Plitvicer Seen sind ein UNESCO-Weltnaturerbe"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Rote Platz?",
-            "Antworten": ["Kiew", "Minsk", "Budapest", "Moskau"],
-            "RichtigeAntwort": "Moskau",
-            "RichtigeAntwortMöglichkeiten": "Moskau",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Rote Platz ist das Herz von Moskau"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Loch Ness?",
-            "Antworten": ["Irland", "Wales", "England", "Schottland"],
-            "RichtigeAntwort": "Schottland",
-            "RichtigeAntwortMöglichkeiten": "Schottland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Loch Ness ist ein großer, tiefer Süßwassersee in den schottischen Highlands"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich das Atomium?",
-            "Antworten": ["Genf", "Amsterdam", "Luxemburg", "Brüssel"],
-            "RichtigeAntwort": "Brüssel",
-            "RichtigeAntwortMöglichkeiten": "Brüssel",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Atomium wurde zur Expo 58 erbaut und stellt ein Eisenkristallmodell dar"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Europapark?",
-            "Antworten": ["Frankreich", "Niederlande", "Schweiz", "Deutschland"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Europapark ist ein Freizeitpark in Rust, Baden-Württemberg"
-        },
-        
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Europapark?",
-            "Antworten": ["Rust", "Hamburg", "Düsseldorf", "Bonn"],
-            "RichtigeAntwort": "Rust",
-            "RichtigeAntwortMöglichkeiten": "Rust",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Europapark ist ein Freizeitpark in Rust, Baden-Württemberg"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich das Brandenburger Tor?",
-            "Antworten": ["Branden", "München", "Hamburg", "Berlin"],
-            "RichtigeAntwort": "Berlin",
-            "RichtigeAntwortMöglichkeiten": "Berlin",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Das Brandenburger Tor ist ein berühmtes Wahrzeichen von Berlin"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich die Piazza San Marco?",
-            "Antworten": ["Florenz", "Mailand", "Rom", "Venedig"],
-            "RichtigeAntwort": "Venedig",
-            "RichtigeAntwortMöglichkeiten": "Venedig",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Piazza San Marco ist der Hauptplatz von Venedig"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Plitvicer Seen Nationalpark?",
-            "Antworten": ["Slowenien", "Ungarn", "Serbien", "Kroatien"],
-            "RichtigeAntwort": "Kroatien",
-            "RichtigeAntwortMöglichkeiten": "Kroatien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Plitvicer Seen Nationalpark ist bekannt für seine kaskadenförmigen Seen und Wasserfälle"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Geirangerfjord?",
-            "Antworten": ["Schweden", "Finnland", "Island", "Norwegen"],
-            "RichtigeAntwort": "Norwegen",
-            "RichtigeAntwortMöglichkeiten": "Norwegen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Geirangerfjord ist einer der bekanntesten Fjorde Norwegens"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Blaue Grotte?",
-            "Antworten": ["Italien", "Kroatien", "Spanien", "Malta"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Blaue Grotte befindet sich auf der Insel Capri"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die Cliffs of Moher?",
-            "Antworten": ["Vereinigtes Königreich", "Norwegen", "Island", "Irland"],
-            "RichtigeAntwort": "Irland",
-            "RichtigeAntwortMöglichkeiten": "Irland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Cliffs of Moher sind steile Klippen an der irischen Westküste"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Nationalpark Sächsische Schweiz?",
-            "Antworten": ["Österreich", "Schweiz", "Luxemburg", "Deutschland"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Nationalpark Sächsische Schweiz liegt an der Grenze zu Tschechien"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Großglockner?",
-            "Antworten": ["Deutschland", "Schweiz", "Italien", "Österreich"],
-            "RichtigeAntwort": "Österreich",
-            "RichtigeAntwortMöglichkeiten": "Österreich",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Großglockner ist der höchste Berg Österreichs"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Ben Nevis?",
-            "Antworten": ["Irland", "Norwegen", "Finnland", "Vereinigtes Königreich"],
-            "RichtigeAntwort": "Vereinigtes Königreich",
-            "RichtigeAntwortMöglichkeiten": "Vereinigtes Königreich",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Ben Nevis ist der höchste Berg Großbritanniens"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Mont Blanc?",
-            "Antworten": ["Deutschland", "Schweiz", "Österreich", "Frankreich"],
-            "RichtigeAntwort": "Frankreich",
-            "RichtigeAntwortMöglichkeiten": "Frankreich",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Mont Blanc ist der höchste Berg der Alpen"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Lofoten-Archipel?",
-            "Antworten": ["Schweden", "Finnland", "Island", "Norwegen"],
-            "RichtigeAntwort": "Norwegen",
-            "RichtigeAntwortMöglichkeiten": "Norwegen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Lofoten sind eine Inselgruppe vor der Küste Norwegens"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Parthenon?",
-            "Antworten": ["Italien", "Türkei", "Spanien", "Griechenland"],
-            "RichtigeAntwort": "Griechenland",
-            "RichtigeAntwortMöglichkeiten": "Griechenland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Parthenon ist ein antiker Tempel auf der Akropolis in Athen"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Alhambra?",
-            "Antworten": ["Portugal", "Frankreich", "Italien", "Spanien"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Alhambra ist eine berühmte Burganlage in Granada"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Tower of London?",
-            "Antworten": ["Irland", "Schottland", "Wales", "Vereinigtes Königreich"],
-            "RichtigeAntwort": "Vereinigtes Königreich",
-            "RichtigeAntwortMöglichkeiten": "Vereinigtes Königreich",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Tower of London dient heute als Museum und beherbergt die britischen Kronjuwelen"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Hagia Sophia?",
-            "Antworten": ["Griechenland", "Bulgarien", "Rumänien", "Türkei"],
-            "RichtigeAntwort": "Türkei",
-            "RichtigeAntwortMöglichkeiten": "Türkei",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Hagia Sophia in Istanbul war ursprünglich eine Kirche, dann eine Moschee und ist heute ein Museum"
-        },
-    
-        ////////////////////////////////SÜD AMERIKA////////////////////////////////
-    
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Christusstatue (Cristo Redentor)?",
-            "Antworten": ["Argentinien", "Chile", "Peru", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Christusstatue steht auf dem Corcovado-Berg in Rio de Janeiro"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die Iguazú-Wasserfälle?",
-            "Antworten": ["Kolumbien", "Venezuela", "Uruguay", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Iguazú-Wasserfälle liegen an der Grenze zwischen Argentinien und Brasilien"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich Machu Picchu?",
-            "Antworten": ["Bolivien", "Chile", "Ecuador", "Peru"],
-            "RichtigeAntwort": "Peru",
-            "RichtigeAntwortMöglichkeiten": "Peru",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Machu Picchu ist eine alte Inkastadt auf einem Berg in Peru"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt der Salar de Uyuni?",
-            "Antworten": ["Chile", "Argentinien", "Paraguay", "Bolivien"],
-            "RichtigeAntwort": "Bolivien",
-            "RichtigeAntwortMöglichkeiten": "Bolivien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Salar de Uyuni ist der größte Salzsee der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Amazonas-Regenwald größtenteils?",
-            "Antworten": ["Venezuela", "Kolumbien", "Argentinien", "Brasilien"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas-Regenwald erstreckt sich über mehrere Länder, aber der größte Teil liegt in Brasilien"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das historische Zentrum von Quito?",
-            "Antworten": ["Kolumbien", "Peru", "Bolivien", "Ecuador"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das historische Zentrum von Quito ist ein UNESCO-Weltkulturerbe"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Nationalpark Torres del Paine?",
-            "Antworten": ["Peru", "Argentinien", "Bolivien", "Chile"],
-            "RichtigeAntwort": "Chile",
-            "RichtigeAntwortMöglichkeiten": "Chile",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Nationalpark Torres del Paine liegt in Patagonien, Chile"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Altstadt von Cartagena?",
-            "Antworten": ["Venezuela", "Peru", "Ecuador", "Kolumbien"],
-            "RichtigeAntwort": "Kolumbien",
-            "RichtigeAntwortMöglichkeiten": "Kolumbien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Altstadt von Cartagena ist für ihre koloniale Architektur bekannt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Angel Falls (Salto Ángel)?",
-            "Antworten": ["Kolumbien", "Brasilien", "Peru", "Venezuela"],
-            "RichtigeAntwort": "Venezuela",
-            "RichtigeAntwortMöglichkeiten": "Venezuela",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Angel Falls ist der höchste Wasserfall der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Cotopaxi-Vulkan?",
-            "Antworten": ["Chile", "Peru", "Kolumbien", "Ecuador"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Cotopaxi ist einer der höchsten aktiven Vulkane der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Titicaca-See?",
-            "Antworten": ["Argentinien", "Chile", "Kolumbien", "Bolivien"],
-            "RichtigeAntwort": "Bolivien",
-            "RichtigeAntwortMöglichkeiten": "Bolivien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Titicaca-See liegt an der Grenze zwischen Bolivien und Peru"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Perito-Moreno-Gletscher?",
-            "Antworten": ["Chile", "Brasilien", "Uruguay", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Perito-Moreno-Gletscher liegt im Los Glaciares Nationalpark"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Stadt Cusco?",
-            "Antworten": ["Kolumbien", "Bolivien", "Chile", "Peru"],
-            "RichtigeAntwort": "Peru",
-            "RichtigeAntwortMöglichkeiten": "Peru",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Cusco war die historische Hauptstadt des Inkareiches"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Teatro Colón?",
-            "Antworten": ["Chile", "Uruguay", "Brasilien", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Teatro Colón ist ein berühmtes Opernhaus in Buenos Aires"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Zitadelle von Cartagena?",
-            "Antworten": ["Venezuela", "Peru", "Kolumbien", "Ecuador"],
-            "RichtigeAntwort": "Kolumbien",
-            "RichtigeAntwortMöglichkeiten": "Kolumbien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Zitadelle von Cartagena ist eine historische Festung an der Karibikküste"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Goldmuseum (Museo del Oro)?",
-            "Antworten": ["Ecuador", "Peru", "Brasilien", "Kolumbien"],
-            "RichtigeAntwort": "Kolumbien",
-            "RichtigeAntwortMöglichkeiten": "Kolumbien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Goldmuseum in Bogotá beherbergt die größte Sammlung präkolumbianischer Goldartefakte"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Ruinenstadt Tiwanaku?",
-            "Antworten": ["Chile", "Argentinien", "Ecuador", "Bolivien"],
-            "RichtigeAntwort": "Bolivien",
-            "RichtigeAntwortMöglichkeiten": "Bolivien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tiwanaku ist eine präkolumbianische archäologische Stätte"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Alhambra?",
-            "Antworten": ["Chile", "Spanien", "Mexiko", "Peru"],
-            "RichtigeAntwort": "Spanien",
-            "RichtigeAntwortMöglichkeiten": "Spanien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Alhambra ist eine berühmte Burganlage auf einem Hügel in Granada, Spanien"
-        },
-    
-        ///////////////////////////////////NORD AMERIKA////////////////////////////////////
-    
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Freiheitsstatue (Statue of Liberty)?",
-            "Antworten": ["Kanada", "Mexiko", "Kuba", "Vereinigte Staaten"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Freiheitsstatue steht auf Liberty Island in New York"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befinden sich die Niagarafälle?",
-            "Antworten": ["Toronto", "New York City", "Buffalo", "Niagara Falls"],
-            "RichtigeAntwort": "Niagara Falls",
-            "RichtigeAntwortMöglichkeiten": "Niagara Falls",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Niagarafälle liegen an der Grenze zwischen den USA und Kanada"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich das Weiße Haus?",
-            "Antworten": ["New York City", "Chicago", "Los Angeles", "Washington D.C."],
-            "RichtigeAntwort": "Washington D.C.",
-            "RichtigeAntwortMöglichkeiten": "Washington D.C. Washington DC",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Weiße Haus ist der Amtssitz des Präsidenten der Vereinigten Staaten"
-        },
-        { //Central Park Ort
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Central Park?",
-            "Antworten": ["Los Angeles", "Chicago", "New York City", "San Francisco"],
-            "RichtigeAntwort": "New York City",
-            "RichtigeAntwortMöglichkeiten": "New York City",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Der Central Park befindet sich im Herzen von Manhattan in New York City"
-        },
-        { //Central Park Entstehungsjahr
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Jahr wurde der Central Park in New York City eröffnet?",
-            "Antworten": ["2012", "1858", "1965", "2001"],
-            "RichtigeAntwort": "1858",
-            "RichtigeAntwortMöglichkeiten": "1858",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Central Park wurde 1858 eröffnet und ist damit einer der ältesten städtischen Parks in den USA"
-        },
-        { //Central Park Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "Welche berühmte Sehenswürdigkeit befindet sich im Central Park?",
-            "Antworten": ["Strawberry Fields", "Golden Gate Bridge", "Lincoln Memorial", "Statue of Liberty"],
-            "RichtigeAntwort": "Strawberry Fields",
-            "RichtigeAntwortMöglichkeiten": "Strawberry Fields",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Strawberry Fields ist ein Denkmal im Central Park, das John Lennon gewidmet ist"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der CN Tower?",
-            "Antworten": ["Mexiko", "Vereinigte Staaten", "Kuba", "Kanada"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der CN Tower steht in Toronto, Kanada"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich der Times Square?",
-            "Antworten": ["Los Angeles", "Miami", "San Francisco", "New York City"],
-            "RichtigeAntwort": "New York City",
-            "RichtigeAntwortMöglichkeiten": "New York City NYC",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Times Square liegt im Stadtteil Manhattan"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Chichén Itzá?",
-            "Antworten": ["Guatemala", "Honduras", "Belize", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Chichén Itzá ist eine große vor-kolumbianische archäologische Stätte der Maya"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich das Empire State Building?",
-            "Antworten": ["Boston", "Philadelphia", "Chicago", "New York City"],
-            "RichtigeAntwort": "New York City",
-            "RichtigeAntwortMöglichkeiten": "New York City NYC",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Empire State Building war von 1931 bis 1971 das höchste Gebäude der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Grand Canyon?",
-            "Antworten": ["Kanada", "Mexiko", "Belize", "Vereinigte Staaten"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Grand Canyon befindet sich im Bundesstaat Arizona"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die Pyramiden von Teotihuacán?",
-            "Antworten": ["Guatemala", "Honduras", "Belize", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Pyramiden von Teotihuacán sind eine der größten präkolumbianischen Städte in Nordamerika"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Yellowstone-Nationalpark?",
-            "Antworten": ["Kanada", "Mexiko", "Guatemala", "Vereinigte Staaten"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Yellowstone-Nationalpark wurde 1872 gegründet und ist der älteste Nationalpark der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Banff-Nationalpark?",
-            "Antworten": ["Vereinigte Staaten", "Mexiko", "Guatemala", "Kanada"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Banff-Nationalpark liegt in den kanadischen Rocky Mountains in Alberta"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Bryce Canyon?",
-            "Antworten": ["Vereinigte Staaten", "Mexiko", "Guatemala", "Kanada"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Bryce Canyon ist bekannt für seine einzigartigen Felsformationen, genannt Hoodoos"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Bay of Fundy?",
-            "Antworten": ["Vereinigte Staaten", "Mexiko", "Guatemala", "Kanada"],
-            "RichtigeAntwort": "Kanada",
-            "RichtigeAntwortMöglichkeiten": "Kanada",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Bay of Fundy hat den höchsten Tidenhub der Welt"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich das Capitol?",
-            "Antworten": ["New York City", "Philadelphia", "Chicago", "Washington D.C."],
-            "RichtigeAntwort": "Washington D.C.",
-            "RichtigeAntwortMöglichkeiten": "Washington D.C. Washington DC",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Capitol ist der Sitz des Kongresses der Vereinigten Staaten"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich die Independence Hall?",
-            "Antworten": ["New York City", "Boston", "Chicago", "Philadelphia"],
-            "RichtigeAntwort": "Philadelphia",
-            "RichtigeAntwortMöglichkeiten": "Philadelphia",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "In der Independence Hall wurde die Unabhängigkeitserklärung der Vereinigten Staaten unterzeichnet"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Pyramide des Kukulcán?",
-            "Antworten": ["Belize", "Honduras", "El Salvador", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Pyramide des Kukulcán ist das Hauptgebäude der Maya-Ruinenstadt Chichén Itzá"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Castillo de San Marcos?",
-            "Antworten": ["Kanada", "Vereinigte Staaten", "Kuba", "Mexiko"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Castillo de San Marcos ist eine historische Festung in St. Augustine, Florida"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich die Alamo-Mission?",
-            "Antworten": ["Austin", "Houston", "Dallas", "San Antonio"],
-            "RichtigeAntwort": "San Antonio",
-            "RichtigeAntwortMöglichkeiten": "San Antonio",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Alamo-Mission ist ein historisches Wahrzeichen in Texas"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Chapultepec-Park?",
-            "Antworten": ["Kanada", "Vereinigte Staaten", "Kuba", "Mexiko"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Chapultepec-Park ist einer der größten Stadtparks der Welt und befindet sich in Mexiko-Stadt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Yosemite-Nationalpark?",
-            "Antworten": ["Vereinigte Staaten", "Kanada", "Mexiko", "Belize"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Yosemite-Nationalpark ist bekannt für seine Wasserfälle und Granitfelsen"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Monument Valley?",
-            "Antworten": ["Vereinigte Staaten", "Kanada", "Mexiko", "Belize"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Monument Valley ist bekannt für seine markanten Sandsteinformationen"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Golden Gate Bridge?",
-            "Antworten": ["Vereinigte Staaten", "Kanada", "Mexiko", "Belize"],
-            "RichtigeAntwort": "Vereinigte Staaten",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Staaten USA United States",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Golden Gate Bridge überspannt die Golden Gate Meerenge in San Francisco"
-        },
-    
-        ////////////////////////////////////////AFRIKA///////////////////////////////////////////
-    
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die Pyramiden von Gizeh?",
-            "Antworten": ["Sudan", "Mexiko", "Libyen", "Ägypten"],
-            "RichtigeAntwort": "Ägypten",
-            "RichtigeAntwortMöglichkeiten": "Ägypten",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Pyramiden von Gizeh sind eines der sieben Weltwunder der Antike"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Tal der Könige?",
-            "Antworten": ["Marokko", "Tunesien", "Jordanien", "Ägypten"],
-            "RichtigeAntwort": "Ägypten",
-            "RichtigeAntwortMöglichkeiten": "Ägypten",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Tal der Könige liegt in der Nähe von Luxor"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Kilimandscharo?",
-            "Antworten": ["Kenia", "Uganda", "Ruanda", "Tansania"],
-            "RichtigeAntwort": "Tansania",
-            "RichtigeAntwortMöglichkeiten": "Tansania",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Kilimandscharo ist der höchste Berg Afrikas"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die Victoriafälle?",
-            "Antworten": ["Botswana", "Mosambik", "Sambia", "Simbabwe"],
-            "RichtigeAntwort": "Simbabwe",
-            "RichtigeAntwortMöglichkeiten": "Simbabwe",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Victoriafälle liegen an der Grenze zwischen Sambia und Simbabwe"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Okavango-Delta?",
-            "Antworten": ["Namibia", "Südafrika", "Simbabwe", "Botswana"],
-            "RichtigeAntwort": "Botswana",
-            "RichtigeAntwortMöglichkeiten": "Botswana",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Okavango-Delta ist eines der größten Binnendeltas der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Medina von Marrakesch?",
-            "Antworten": ["Ägypten", "Tunesien", "Algerien", "Marokko"],
-            "RichtigeAntwort": "Marokko",
-            "RichtigeAntwortMöglichkeiten": "Marokko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Medina von Marrakesch ist ein UNESCO-Weltkulturerbe"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Tafelberg?",
-            "Antworten": ["Namibia", "Botswana", "Simbabwe", "Südafrika"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Tafelberg ist ein markantes Wahrzeichen Kapstadts"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Ngorongoro-Krater?",
-            "Antworten": ["Kenia", "Uganda", "Ruanda", "Tansania"],
-            "RichtigeAntwort": "Tansania",
-            "RichtigeAntwortMöglichkeiten": "Tansania",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Ngorongoro-Krater ist der größte intakte Kraterkessel der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Simien Mountains National Park?",
-            "Antworten": ["Sudan", "Äthiopien", "Kenia", "Uganda"],
-            "RichtigeAntwort": "Äthiopien",
-            "RichtigeAntwortMöglichkeiten": "Äthiopien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Simien Mountains National Park ist ein UNESCO-Weltnaturerbe"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Lake Nakuru?",
-            "Antworten": ["Tansania", "Uganda", "Ruanda", "Kenia"],
-            "RichtigeAntwort": "Kenia",
-            "RichtigeAntwortMöglichkeiten": "Kenia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Lake Nakuru ist bekannt für seine Flamingo-Population"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Große Moschee von Djenné?",
-            "Antworten": ["Mali", "Niger", "Tschad", "Sudan"],
-            "RichtigeAntwort": "Mali",
-            "RichtigeAntwortMöglichkeiten": "Mali",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Große Moschee von Djenné ist das größte Lehmgebäude der Welt"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Festung von Karthago?",
-            "Antworten": ["Libyen", "Algerien", "Tunesien", "Marokko"],
-            "RichtigeAntwort": "Tunesien",
-            "RichtigeAntwortMöglichkeiten": "Tunesien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die antike Stadt Karthago liegt in der Nähe von Tunis"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Lalibela?",
-            "Antworten": ["Äthiopien", "Sudan", "Eritrea", "Dschibuti"],
-            "RichtigeAntwort": "Äthiopien",
-            "RichtigeAntwortMöglichkeiten": "Äthiopien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Lalibela ist bekannt für seine Felsenkirchen"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Festung von Elmina?",
-            "Antworten": ["Ghana", "Elfenbeinküste", "Togo", "Senegal"],
-            "RichtigeAntwort": "Ghana",
-            "RichtigeAntwortMöglichkeiten": "Ghana",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Festung von Elmina war das erste europäische Gebäude in Subsahara-Afrika"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Robben Island?",
-            "Antworten": ["USA", "Namibia", "Südafrika", "Nigeria"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Robben Island ist bekannt als das Gefängnis, in dem Nelson Mandela inhaftiert war"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Namib-Naukluft-Nationalpark?",
-            "Antworten": ["Botswana", "Südafrika", "Sambia", "Namibia"],
-            "RichtigeAntwort": "Namibia",
-            "RichtigeAntwortMöglichkeiten": "Namibia",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Namib-Naukluft-Nationalpark umfasst Teile der ältesten Wüste der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Virunga-Nationalpark?",
-            "Antworten": ["Uganda", "Ruanda", "Burundi", "Demokratische Republik Kongo"],
-            "RichtigeAntwort": "Demokratische Republik Kongo",
-            "RichtigeAntwortMöglichkeiten": "Demokratische Republik Kongo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Virunga-Nationalpark ist bekannt für seine Berggorillas"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Krüger-Nationalpark?",
-            "Antworten": ["Namibia", "Botswana", "Swasiland", "Südafrika"],
-            "RichtigeAntwort": "Südafrika",
-            "RichtigeAntwortMöglichkeiten": "Südafrika",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Krüger-Nationalpark ist eines der größten Wildschutzgebiete Afrikas"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Tsingy de Bemaraha Nationalpark?",
-            "Antworten": ["Mosambik", "Tansania", "Madagaskar", "Komoren"],
-            "RichtigeAntwort": "Madagaskar",
-            "RichtigeAntwortMöglichkeiten": "Madagaskar",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Tsingy de Bemaraha Nationalpark ist bekannt für seine schroffen Kalksteinformationen"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Kasbah von Ait Benhaddou?",
-            "Antworten": ["Algerien", "Marokko", "Tunesien", "Libyen"],
-            "RichtigeAntwort": "Marokko",
-            "RichtigeAntwortMöglichkeiten": "Marokko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ait Benhaddou ist eine befestigte Stadt an der alten Karawanenroute zwischen der Sahara und Marrakesch"
-        },
-    
-        ////////////////////////////////////////ASIEN///////////////////////////////////////
-    
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Chinesische Mauer?",
-            "Antworten": ["Japan", "Südkorea", "Mongolei", "China"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Chinesische Mauer ist das längste Bauwerk der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Taj Mahal?",
-            "Antworten": ["China", "Nepal", "Thailand", "Indien"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Taj Mahal ist ein Mausoleum in Agra"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Angkor Wat?",
-            "Antworten": ["Laos", "Thailand", "Vietnam", "Kambodscha"],
-            "RichtigeAntwort": "Kambodscha",
-            "RichtigeAntwortMöglichkeiten": "Kambodscha",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Angkor Wat ist die größte religiöse Tempelanlage der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Burj Khalifa?",
-            "Antworten": ["Saudi-Arabien", "Katar", "Bahrein", "Vereinigte Arabische Emirate"],
-            "RichtigeAntwort": "Vereinigte Arabische Emirate",
-            "RichtigeAntwortMöglichkeiten": "Vereinigte Arabische Emirate UAE",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Burj Khalifa ist das höchste Gebäude der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Mount Everest?",
-            "Antworten": ["Bhutan", "Indien", "China", "Nepal"],
-            "RichtigeAntwort": "Nepal",
-            "RichtigeAntwortMöglichkeiten": "Nepal",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Mount Everest ist der höchste Berg der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Fuji?",
-            "Antworten": ["China", "Südkorea", "Taiwan", "Japan"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Fuji ist der höchste Berg Japans"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Petra?",
-            "Antworten": ["Libanon", "Syrien", "Israel", "Jordanien"],
-            "RichtigeAntwort": "Jordanien",
-            "RichtigeAntwortMöglichkeiten": "Jordanien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Petra ist eine historische Felsenstadt in Jordanien"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Tote Meer?",
-            "Antworten": ["Libanon", "Ägypten", "Jordanien", "Israel"],
-            "RichtigeAntwort": "Jordanien",
-            "RichtigeAntwortMöglichkeiten": "Jordanien Israel",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Tote Meer ist bekannt für seinen hohen Salzgehalt und therapeutische Wirkung"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Halong-Bucht?",
-            "Antworten": ["Thailand", "Philippinen", "Malaysia", "Vietnam"],
-            "RichtigeAntwort": "Vietnam",
-            "RichtigeAntwortMöglichkeiten": "Vietnam",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Halong-Bucht ist berühmt für ihre Kalksteinfelsen und Inseln"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Komodo-Nationalpark?",
-            "Antworten": ["Malaysia", "Papua-Neuguinea", "Japan", "Indonesien"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Komodo-Nationalpark ist bekannt für seine Komodowarane"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Chocolate Hills?",
-            "Antworten": ["Indonesien", "Thailand", "Vietnam", "Philippinen"],
-            "RichtigeAntwort": "Philippinen",
-            "RichtigeAntwortMöglichkeiten": "Philippinen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Chocolate Hills sind eine geologische Formation auf der Insel Bohol"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Verbotene Stadt?",
-            "Antworten": ["China", "Japan", "Südkorea", "Vietnam"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Verbotene Stadt ist ein Palastkomplex in Peking"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Kyotoer Kaiserpalast?",
-            "Antworten": ["China", "Südkorea", "Taiwan", "Japan"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Kyotoer Kaiserpalast war der Sitz des japanischen Kaisers"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Taj Mahal?",
-            "Antworten": ["Indien", "Pakistan", "Bangladesch", "Nepal"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Taj Mahal ist ein Mausoleum in Agra, Indien"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Blaue Moschee?",
-            "Antworten": ["Ägypten", "Libanon", "Israel", "Türkei"],
-            "RichtigeAntwort": "Türkei",
-            "RichtigeAntwortMöglichkeiten": "Türkei",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Blaue Moschee befindet sich in Istanbul"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Potala-Palast?",
-            "Antworten": ["Nepal", "Bhutan", "Mongolei", "China"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Potala-Palast war der Winterpalast des Dalai Lama in Tibet"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Borobudur-Tempel?",
-            "Antworten": ["Thailand", "Vietnam", "Myanmar", "Indonesien"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Borobudur-Tempel ist das größte buddhistische Tempelkomplex der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Jeju-Vulkaninsel?",
-            "Antworten": ["Japan", "China", "Südkorea", "Vietnam"],
-            "RichtigeAntwort": "Südkorea",
-            "RichtigeAntwortMöglichkeiten": "Südkorea",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Insel Jeju ist bekannt für ihren erloschenen Vulkan Hallasan"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Lake Baikal?",
-            "Antworten": ["China", "Mongolei", "Kasachstan", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Baikalsee ist der tiefste und älteste Süßwassersee der Welt"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Plitvice Nationalpark?",
-            "Antworten": ["Slowenien", "Bosnien und Herzegowina", "Serbien", "Kroatien"],
-            "RichtigeAntwort": "Kroatien",
-            "RichtigeAntwortMöglichkeiten": "Kroatien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Plitvice Nationalpark ist bekannt für seine kaskadenförmigen Seen und Wasserfälle"
-        },
-    
-        /////////////////////////////////AUSTRALIEN///////////////////////////////////////
-    
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Sydney Opera House?",
-            "Antworten": ["Neuseeland", "Fidschi", "Papua-Neuguinea", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Sydney Opera House ist eines der berühmtesten Gebäude der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt befindet sich das berühmte Opera House in Australien?",
-            "Antworten": ["Sydney", "Wellington", "Melbourne", "Canberra"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Sydney Opera House ist eines der berühmtesten Gebäude der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Harbour Bridge?",
-            "Antworten": ["Mexiko", "USA", "Großbritanien", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Harbour Bridge überspannt den Hafen von Sydney"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Uluru (Ayers Rock)?",
-            "Antworten": ["Neuseeland", "Kanada", "Indonesien", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Uluru ist ein heiliger Berg der Aborigines im Northern Territory"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Great Barrier Reef?",
-            "Antworten": ["Madagaskar", "Fidschi", "Neuseeland", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Great Barrier Reef ist das größte Korallenriff der Welt"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Milford Sound?",
-            "Antworten": ["Australien", "Fidschi", "Papua-Neuguinea", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Milford Sound ist ein Fjord auf der Südinsel Neuseelands"
-        },
-        { //Sehenswürdigkeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Blaue Lagune?",
-            "Antworten": ["Australien", "Neuseeland", "Indonesien", "Fidschi"],
-            "RichtigeAntwort": "Fidschi",
-            "RichtigeAntwortMöglichkeiten": "Fidschi",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Blaue Lagune ist ein beliebtes Tauch- und Schnorchelgebiet"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Franz-Josef-Gletscher?",
-            "Antworten": ["Australien", "Fidschi", "Papua-Neuguinea", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Franz-Josef-Gletscher liegt auf der Südinsel Neuseelands"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Mount Cook?",
-            "Antworten": ["Australien", "Fidschi", "Malaysia", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Mount Cook ist der höchste Berg Neuseelands"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Kakadu-Nationalpark?",
-            "Antworten": ["Neuseeland", "Fidschi", "Thailand", "Australien"],
-            "RichtigeAntwort": "Australien",
-            "RichtigeAntwortMöglichkeiten": "Australien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Kakadu-Nationalpark ist bekannt für seine reiche Tierwelt und Aborigine-Kunst"
-        },
-        { //Naturwunder
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Tongariro-Nationalpark?",
-            "Antworten": ["Australien", "Fidschi", "Kambodscha", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Tongariro-Nationalpark ist Neuseelands ältester Nationalpark und ein UNESCO-Weltnaturerbe"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Stadt Australiens befindet sich das Parliament House?",
-            "Antworten": ["Canberra", "Sydney", "Melbourne", "Brisbane"],
-            "RichtigeAntwort": "Canberra",
-            "RichtigeAntwortMöglichkeiten": "Canberra",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Parliament House ist der Sitz des australischen Parlaments in Canberra"
-        },
-        { //Historische Bauwerke
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Te Papa Tongarewa Museum?",
-            "Antworten": ["Philippinen", "Fidschi", "Papua-Neuguinea", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Te Papa Tongarewa Museum ist das Nationalmuseum Neuseelands in Wellington"
-        },
-    
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist der längste in Südamerika?",
-            "Antworten": ["Paraná", "Orinoco", "São Francisco", "Amazonas"],
-            "RichtigeAntwort": "Amazonas",
-            "RichtigeAntwortMöglichkeiten": "Amazonas",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas ist etwa 7.000 Kilometer lang"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie lange ist der Amazonas (in km)?",
-            "Antworten": ["6.400", "1.550", "11.000", "980"],
-            "RichtigeAntwort": "6.400km",
-            "RichtigeAntwortMöglichkeiten": "6.400km 6400 6.400 sechtausendvierhundert 6000 6tausend 7000 6500 ",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Damit gilt der Amazonas als der 2. längste Fluss der Welt"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie ist der tiefste Punkt des Amazonas (in m)?",
-            "Antworten": ["100", "1500", "900", "450"],
-            "RichtigeAntwort": "100",
-            "RichtigeAntwortMöglichkeiten": "100m 100 hundertmeter hundert",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Amazonas ist der wassereichste Fluss der Welt"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Durch wie viele Länder fließt der Amazonas?",
-            "Antworten": ["9", "15", "3", "5"],
-            "RichtigeAntwort": "9",
-            "RichtigeAntwortMöglichkeiten": "9 neun 9Länder",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Amazonas ist der wassereichste Fluss der Welt"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie breit ist der Amazonas ungefähr (in km)?",
-            "Antworten": ["2", "10", "12", "50"],
-            "RichtigeAntwort": "50",
-            "RichtigeAntwortMöglichkeiten": "50 50km fünfzig fünfzigkilometer",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Breite des Amazonas ist sehr von der Jahreszeit abhängig"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie viel Prozent des weltweiten Süßwassers liefert der Amazonas (in %)?",
-            "Antworten": ["<1", "5", "20", "80"],
-            "RichtigeAntwort": "20",
-            "RichtigeAntwortMöglichkeiten": "20 20% zwanzig zwanzigprozent",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Amazonas führt mehr Wasser als jeder andere Fluss auf der Erde"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Nebenflüsse hat der Amazonas?",
-            "Antworten": ["25", "1100", "120", "650"],
-            "RichtigeAntwort": "1100",
-            "RichtigeAntwortMöglichkeiten": "1100 1000 tausend eintausend tausendeinhundert",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Davon haben 17 eine Länge von mehr als 1.500 Kilometern"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie viele Fischarten gibt es im Amazonas?",
-            "Antworten": ["3000", "1100", "500", "200"],
-            "RichtigeAntwort": "3000",
-            "RichtigeAntwortMöglichkeiten": "3000 dreitausend 3.000",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Es wird angenommen, dass noch viele Fischarten unentdeckt sind"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Meer mündet der Amazonas?",
-            "Antworten": ["Pazifik", "Schwarze Meer", "Atlantik", "Zonas Meer"],
-            "RichtigeAntwort": "Atlantik",
-            "RichtigeAntwortMöglichkeiten": "Atlantik Atlantischer",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Es wird angenommen, dass noch viele Fischarten unentdeckt sind"
-        },
-        { //Amazonas
-            "Kategorie": "Geographie",
-            "Frage": "Wie weit ins Meer reicht das Süßwasser des Amazonas (in km)?",
-            "Antworten": ["150", "8", "1", "45"],
-            "RichtigeAntwort": "150",
-            "RichtigeAntwortMöglichkeiten": "150km 150 140km 140 130km 130 120km 120",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das liegt daran, dass das Mündungsgebiet des Flusses sehr breit ist"
-        },
-        { //Längster Fluss der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist der längste Fluss der Welt?",
-            "Antworten": ["Amazonas", "Nil", "Jangtsekiang", "Mississippi"],
-            "RichtigeAntwort": "Nil",
-            "RichtigeAntwortMöglichkeiten": "Nil",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Nil ist mit etwa 6.650 Kilometern der längste Fluss der Welt"
-        },
-        { //Wasserreichster Fluss der Welt
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist der wasserreichste Fluss der Welt?",
-            "Antworten": ["Nil", "Mississippi", "Amazonas", "Jangtsekiang"],
-            "RichtigeAntwort": "Amazonas",
-            "RichtigeAntwortMöglichkeiten": "Amazonas",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Amazonas ist der wasserreichste Fluss der Welt und führt mehr Wasser als die nächsten sieben größten Flüsse zusammen"
-        },
-    
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land entspringt der Orinoco?",
-            "Antworten": ["Kolumbien", "Brasilien", "Peru", "Venezuela"],
-            "RichtigeAntwort": "Venezuela",
-            "RichtigeAntwortMöglichkeiten": "Venezuela",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Orinoco ist einer der längsten Flüsse Südamerikas und entspringt im venezolanischen Hochland"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "An welche beiden Länder grenzt der Titicaca-See?",
-            "Antworten": ["Argentinien und Chile", "Peru und Bolivien", "Brasilien und Paraguay", "Kolumbien und Venezuela"],
-            "RichtigeAntwort": "Peru und Bolivien",
-            "RichtigeAntwortMöglichkeiten": "Peru Bolivien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Titicaca-See ist der höchstgelegene schiffbare See der Welt"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der größte See Venezuelas?",
-            "Antworten": ["Maracaibo-See", "Valencia-See", "Guri-Stausee", "Laguna de Tacarigua"],
-            "RichtigeAntwort": "Maracaibo-See",
-            "RichtigeAntwortMöglichkeiten": "Maracaibo-See",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Maracaibo-See ist der größte natürliche See in Südamerika"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist ein bedeutender Nebenfluss des Amazonas?",
-            "Antworten": ["Magdalena", "Beni", "Orinoco", "Madeira"],
-            "RichtigeAntwort": "Madeira",
-            "RichtigeAntwortMöglichkeiten": "Madeira",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Madeira ist der längste Nebenfluss des Amazonas"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt der Fluss Magdalena?",
-            "Antworten": ["Brasilien", "Peru", "Argentinien", "Kolumbien"],
-            "RichtigeAntwort": "Kolumbien",
-            "RichtigeAntwortMöglichkeiten": "Kolumbien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Magdalena-Fluss ist der wichtigste Fluss Kolumbiens"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das längste Gebirge Südamerikas?",
-            "Antworten": ["Rockies", "Alpen", "Anden", "Apennin"],
-            "RichtigeAntwort": "Anden",
-            "RichtigeAntwortMöglichkeiten": "Anden",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Anden erstrecken sich über 7.000 Kilometer entlang der Westküste Südamerikas"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die höchsten Gipfel der Anden?",
-            "Antworten": ["Chile", "Ecuador", "Kolumbien", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der höchste Gipfel der Anden ist der Aconcagua in Argentinien"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist für seine weitläufigen Pampas bekannt?",
-            "Antworten": ["Kolumbien", "Venezuela", "Peru", "Argentinien"],
-            "RichtigeAntwort": "Argentinien",
-            "RichtigeAntwortMöglichkeiten": "Argentinien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Pampas sind ausgedehnte Graslandschaften in Argentinien"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Atacama-Wüste?",
-            "Antworten": ["Peru", "Bolivien", "Ecuador", "Chile"],
-            "RichtigeAntwort": "Chile",
-            "RichtigeAntwortMöglichkeiten": "Chile",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Atacama-Wüste gilt als die trockenste Wüste der Welt"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Vulkan Cotopaxi?",
-            "Antworten": ["Peru", "Kolumbien", "Bolivien", "Ecuador"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Cotopaxi ist einer der höchsten aktiven Vulkane der Welt"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die Galápagos-Inseln, die für ihre Vulkane bekannt sind?",
-            "Antworten": ["Peru", "Kolumbien", "Ecuador", "Bolivien"],
-            "RichtigeAntwort": "Ecuador",
-            "RichtigeAntwortMöglichkeiten": "Ecuador",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Galápagos-Inseln sind ein vulkanischer Archipel im Pazifik"
-        },
-    
-        //////////////////////////////NORD AMERIKA/////////////////////////////
-    
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist der längste in Nordamerika?",
-            "Antworten": ["Mississippi", "Rio Grande", "Yukon", "Missouri"],
-            "RichtigeAntwort": "Missouri",
-            "RichtigeAntwortMöglichkeiten": "Missouri",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Missouri-Fluss ist etwa 4.370 Kilometer lang und der längste Fluss in Nordamerika"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Durch welche zwei Länder fließt der Yukon-Fluss?",
-            "Antworten": ["USA und Kanada", "Mexiko und USA", "Kanada und Grönland", "USA und Mexiko"],
-            "RichtigeAntwort": "USA und Kanada",
-            "RichtigeAntwortMöglichkeiten": "USA und Kanada",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Yukon-Fluss fließt durch Alaska und das kanadische Yukon-Territorium"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land mündet der Rio Grande ins Meer?",
-            "Antworten": ["Kanada", "USA", "Mexiko", "Guatemala"],
-            "RichtigeAntwort": "Mexiko",
-            "RichtigeAntwortMöglichkeiten": "Mexiko",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Rio Grande bildet die Grenze zwischen den USA und Mexiko und mündet in den Golf von Mexiko"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "An welche beiden Länder grenzt der Große Bärensee?",
-            "Antworten": ["Kanada und USA", "USA und Mexiko", "Kanada und Grönland", "Kanada und Alaska"],
-            "RichtigeAntwort": "Kanada und Alaska",
-            "RichtigeAntwortMöglichkeiten": "Kanada Alaska ",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Große Bärensee ist der viertgrößte See in Nordamerika und liegt vollständig in Kanada"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der größte Süßwassersee der Welt nach Fläche?",
-            "Antworten": ["Lake Huron", "Lake Michigan", "Lake Superior", "Lake Erie"],
-            "RichtigeAntwort": "Lake Superior",
-            "RichtigeAntwortMöglichkeiten": "Lake Superior",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Lake Superior ist der flächenmäßig größte Süßwassersee der Welt"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist ein bedeutender Nebenfluss des Mississippi?",
-            "Antworten": ["Missouri", "Yukon", "Rio Grande", "Kolorado"],
-            "RichtigeAntwort": "Missouri",
-            "RichtigeAntwortMöglichkeiten": "Missouri",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Missouri-Fluss ist der längste Nebenfluss des Mississippi"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss fließt durch den Grand Canyon?",
-            "Antworten": ["Missouri", "Colorado", "Rio Grande", "Snake River"],
-            "RichtigeAntwort": "Colorado",
-            "RichtigeAntwortMöglichkeiten": "Colorado",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Colorado River hat den Grand Canyon über Millionen von Jahren geformt"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das längste Gebirge Nordamerikas?",
-            "Antworten": ["Appalachen", "Sierra Nevada", "Rocky Mountains", "Kaskadenkette"],
-            "RichtigeAntwort": "Rocky Mountains",
-            "RichtigeAntwortMöglichkeiten": "Rocky Mountains",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Rocky Mountains erstrecken sich über etwa 4.800 Kilometer von Kanada bis New Mexico"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die höchsten Gipfel der Rocky Mountains?",
-            "Antworten": ["Kanada", "Mexiko", "USA", "Grönland"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der höchste Gipfel der Rocky Mountains ist der Mount Elbert in Colorado, USA"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Wüste erstreckt sich über Teile von Arizona, Kalifornien und Mexiko?",
-            "Antworten": ["Sonora-Wüste", "Mojave-Wüste", "Chihuahuan-Wüste", "Great Basin"],
-            "RichtigeAntwort": "Sonora-Wüste",
-            "RichtigeAntwortMöglichkeiten": "Sonora-Wüste",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Sonora-Wüste ist eine der heißesten Wüsten Nordamerikas"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist für seine ausgedehnte Prärie bekannt?",
-            "Antworten": ["Kanada", "Mexiko", "USA", "Grönland"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Prärie ist eine große Graslandschaft, die sich hauptsächlich in den Great Plains der USA erstreckt"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Mount St. Helens?",
-            "Antworten": ["Kanada", "Mexiko", "USA", "Guatemala"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Mount St. Helens ist ein aktiver Vulkan im Bundesstaat Washington, USA"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt das Erdbebengebiet der San-Andreas-Verwerfung?",
-            "Antworten": ["Kanada", "Mexiko", "USA", "Kuba"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die San-Andreas-Verwerfung ist eine der bekanntesten und aktivsten Verwerfungen der Welt und verläuft durch Kalifornien"
-        },
-    
-        ////////////////////////////////AFIKA//////////////////////////////////
-    
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist der längste in Afrika?",
-            "Antworten": ["Kongo", "Niger", "Nil", "Sambesi"],
-            "RichtigeAntwort": "Nil",
-            "RichtigeAntwortMöglichkeiten": "Nil",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Nil ist mit etwa 6.650 Kilometern der längste Fluss der Welt"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land mündet der Niger-Fluss ins Meer?",
-            "Antworten": ["Nigeria", "Mali", "Niger", "Südafrika"],
-            "RichtigeAntwort": "Nigeria",
-            "RichtigeAntwortMöglichkeiten": "Nigeria",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Niger mündet in Nigeria in den Golf von Guinea"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Durch wie viele Länder fließt der Kongo-Fluss?",
-            "Antworten": ["3", "5", "7", "9"],
-            "RichtigeAntwort": "9",
-            "RichtigeAntwortMöglichkeiten": "9 neun",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Kongo-Fluss fließt durch insgesamt neun Länder in Afrika"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "An welche drei Länder grenzt der Viktoriasee?",
-            "Antworten": ["Kenia, Uganda, Tansania", "Rwanda, Burundi, Uganda", "Kenia, Sudan, Äthiopien", "Tansania, Mosambik, Malawi"],
-            "RichtigeAntwort": "Kenia, Uganda, Tansania",
-            "RichtigeAntwortMöglichkeiten": "Kenia Uganda Tansania",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Viktoriasee ist der größte See Afrikas"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der tiefste See in Afrika?",
-            "Antworten": ["Malawisee", "Tanganjikasee", "Viktoriasee", "Albertsee"],
-            "RichtigeAntwort": "Tanganjikasee",
-            "RichtigeAntwortMöglichkeiten": "Tanganjikasee",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Tanganjikasee ist der zweittiefste See der Welt mit einer maximalen Tiefe von etwa 1.470 Metern"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist ein bedeutender Nebenfluss des Nil?",
-            "Antworten": ["Limpopo", "Blauer Nil", "Sambesi", "Volta"],
-            "RichtigeAntwort": "Blauer Nil",
-            "RichtigeAntwortMöglichkeiten": "Blauer Nil",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Blaue Nil entspringt im Tana-See in Äthiopien und ist ein Hauptzufluss des Nils"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher See bildet den Ursprung des Weißen Nils?",
-            "Antworten": ["Albertsee", "Kivusee", "Victoriasee", "Malawisee"],
-            "RichtigeAntwort": "Victoriasee",
-            "RichtigeAntwortMöglichkeiten": "Victoriasee",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Weiße Nil entspringt im Viktoriasee"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das höchste Gebirge Afrikas?",
-            "Antworten": ["Atlas", "Ruwenzori", "Drakensberge", "Kilimandscharo"],
-            "RichtigeAntwort": "Kilimandscharo",
-            "RichtigeAntwortMöglichkeiten": "Kilimandscharo",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Kilimandscharo ist der höchste Berg Afrikas mit einer Höhe von 5.895 Metern"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich das Atlasgebirge?",
-            "Antworten": ["Ägypten", "Südafrika", "Marokko", "Äthiopien"],
-            "RichtigeAntwort": "Marokko",
-            "RichtigeAntwortMöglichkeiten": "Marokko",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Atlasgebirge erstreckt sich über Marokko, Algerien und Tunesien"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Wüste ist die größte heiße Wüste der Welt?",
-            "Antworten": ["Kalahari", "Sahara", "Namib", "Libysche Wüste"],
-            "RichtigeAntwort": "Sahara",
-            "RichtigeAntwortMöglichkeiten": "Sahara",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Sahara erstreckt sich über Nordafrika und ist die größte heiße Wüste der Welt"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich die Kalahari-Wüste?",
-            "Antworten": ["Namibia", "Botswana", "Südafrika", "Simbabwe"],
-            "RichtigeAntwort": "Botswana",
-            "RichtigeAntwortMöglichkeiten": "Botswana",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Kalahari-Wüste erstreckt sich über Botswana, Namibia und Südafrika"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Vulkan Nyiragongo?",
-            "Antworten": ["Uganda", "Ruanda", "Äthiopien", "Demokratische Republik Kongo"],
-            "RichtigeAntwort": "Demokratische Republik Kongo",
-            "RichtigeAntwortMöglichkeiten": "Demokratische Republik Kongo",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Nyiragongo ist bekannt für seinen aktiven Lavasee und liegt in der Demokratischen Republik Kongo"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt der Vulkan Mount Kenya?",
-            "Antworten": ["Uganda", "Kenia", "Tansania", "Eritrea"],
-            "RichtigeAntwort": "Kenia",
-            "RichtigeAntwortMöglichkeiten": "Kenia Kenya",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Mount Kenya ist der zweithöchste Berg Afrikas und ein erloschener Vulkan"
-        },
-    
-        //////////////////////////////ASIEN/////////////////////////////////
-    
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist der längste in Asien?",
-            "Antworten": ["Jangtsekiang", "Ganges", "Indus", "Mekong"],
-            "RichtigeAntwort": "Jangtsekiang",
-            "RichtigeAntwortMöglichkeiten": "Jangtsekiang Yangtze",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Jangtsekiang ist mit etwa 6.300 Kilometern der längste Fluss Asiens"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land mündet der Indus ins Meer?",
-            "Antworten": ["Indien", "Bangladesch", "Pakistan", "China"],
-            "RichtigeAntwort": "Pakistan",
-            "RichtigeAntwortMöglichkeiten": "Pakistan",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Indus mündet in Pakistan in das Arabische Meer"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der größte See Asiens nach Fläche?",
-            "Antworten": ["Baikalsee", "Aralsee", "Titicacasee", "Kaspisches Meer"],
-            "RichtigeAntwort": "Kaspisches Meer",
-            "RichtigeAntwortMöglichkeiten": "KaspischesMeer CaspianSea",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Kaspische Meer ist der größte geschlossene See der Erde"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Baikalsee?",
-            "Antworten": ["China", "Kasachstan", "Mongolei", "Russland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Baikalsee ist der tiefste und älteste Süßwassersee der Welt und liegt in Russland"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist ein bedeutender Nebenfluss des Ganges?",
-            "Antworten": ["Yamuna", "Indus", "Brahmaputra", "Narmada"],
-            "RichtigeAntwort": "Yamuna",
-            "RichtigeAntwortMöglichkeiten": "Yamuna",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Yamuna ist der größte Nebenfluss des Ganges"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss bildet die Grenze zwischen Russland und China?",
-            "Antworten": ["Amur", "Huang He", "Jangtsekiang", "Mekong"],
-            "RichtigeAntwort": "Amur",
-            "RichtigeAntwortMöglichkeiten": "Amur",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Amur bildet die natürliche Grenze zwischen Russland und China"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das höchste Gebirge der Welt?",
-            "Antworten": ["Alpen", "Rocky Mountains", "Karakorum", "Himalaya"],
-            "RichtigeAntwort": "Himalaya",
-            "RichtigeAntwortMöglichkeiten": "Himalaya",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Himalaya beherbergt den höchsten Gipfel der Welt, den Mount Everest"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der K2, der zweithöchste Berg der Welt?",
-            "Antworten": ["Indien", "Nepal", "Pakistan", "Bhutan"],
-            "RichtigeAntwort": "Pakistan",
-            "RichtigeAntwortMöglichkeiten": "Pakistan",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der K2 liegt im Karakorum-Gebirge an der Grenze zwischen Pakistan und China"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Wüste ist die größte in Asien?",
-            "Antworten": ["Gobi", "Thar", "Taklamakan", "Karakum"],
-            "RichtigeAntwort": "Gobi",
-            "RichtigeAntwortMöglichkeiten": "Gobi",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Gobi-Wüste erstreckt sich über Teile der Mongolei und Chinas"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist bekannt für seine ausgedehnten Steppen?",
-            "Antworten": ["China", "Indien", "Kasachstan", "Vietnam"],
-            "RichtigeAntwort": "Kasachstan",
-            "RichtigeAntwortMöglichkeiten": "Kasachstan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kasachstan ist bekannt für seine weiten, grasbewachsenen Steppen"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Vulkan Mount Fuji?",
-            "Antworten": ["China", "Südkorea", "Japan", "Philippinen"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Mount Fuji ist der höchste Berg Japans und ein aktiver Vulkan"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt der Vulkan Merapi, einer der aktivsten Vulkane der Welt?",
-            "Antworten": ["Indien", "Philippinen", "Indonesien", "Malaysia"],
-            "RichtigeAntwort": "Indonesien",
-            "RichtigeAntwortMöglichkeiten": "Indonesien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Merapi ist ein aktiver Vulkan auf der Insel Java in Indonesien"
-        },
-    
-        /////////////////////////////AUSTRALIEN///////////////////////////////
-    
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der längste Fluss in Australien?",
-            "Antworten": ["Murrumbidgee", "Darling", "Lachlan", "Murray"],
-            "RichtigeAntwort": "Murray",
-            "RichtigeAntwortMöglichkeiten": "Murray",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Murray ist etwa 2.508 Kilometer lang und der längste Fluss in Australien"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss bildet zusammen mit dem Murray das größte Flusssystem Australiens?",
-            "Antworten": ["Darling", "Fitzroy", "Cooper Creek", "Gascoyne"],
-            "RichtigeAntwort": "Darling",
-            "RichtigeAntwortMöglichkeiten": "Darling",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Darling ist ein wichtiger Nebenfluss des Murray und bildet mit ihm das Murray-Darling-Becken"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der größte See in Australien?",
-            "Antworten": ["Lake Eyre", "Lake Victoria", "Lake Torrens", "Lake Gairdner"],
-            "RichtigeAntwort": "Lake Eyre",
-            "RichtigeAntwortMöglichkeiten": "Lake Eyre",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Lake Eyre ist der größte See Australiens, aber oft ausgetrocknet"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Lake Taupo?",
-            "Antworten": ["Australien", "Fidschi", "Papua-Neuguinea", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Lake Taupo ist der größte See Neuseelands und liegt in einem Vulkankrater"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das höchste Gebirge in Australien?",
-            "Antworten": ["Great Dividing Range", "Flinders Ranges", "MacDonnell Ranges", "Australian Alps"],
-            "RichtigeAntwort": "Australian Alps",
-            "RichtigeAntwortMöglichkeiten": "Australian Alps",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Australian Alps enthalten die höchsten Berge des australischen Kontinents"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der höchste Gipfel Ozeaniens, der Mount Wilhelm?",
-            "Antworten": ["Australien", "Neuseeland", "Papua-Neuguinea", "Fidschi"],
-            "RichtigeAntwort": "Papua-Neuguinea",
-            "RichtigeAntwortMöglichkeiten": "Papua-Neuguinea",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Mount Wilhelm ist der höchste Gipfel in Papua-Neuguinea und Ozeanien"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Wüste ist die größte in Australien?",
-            "Antworten": ["Simpson Desert", "Great Victoria Desert", "Gibson Desert", "Tanami Desert"],
-            "RichtigeAntwort": "Great Victoria Desert",
-            "RichtigeAntwortMöglichkeiten": "Great Victoria Desert",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Great Victoria Desert ist die größte Wüste Australiens"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist bekannt für seine vulkanischen Hochländer?",
-            "Antworten": ["Australien", "Fidschi", "Papua-Neuguinea", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Neuseeland ist bekannt für seine vulkanischen Hochländer, insbesondere auf der Nordinsel"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Vulkan Mount Ruapehu?",
-            "Antworten": ["Australien", "Fidschi", "Papua-Neuguinea", "Neuseeland"],
-            "RichtigeAntwort": "Neuseeland",
-            "RichtigeAntwortMöglichkeiten": "Neuseeland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Mount Ruapehu ist ein aktiver Vulkan auf der Nordinsel Neuseelands"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Vulkan Mount Yasur?",
-            "Antworten": ["Fidschi", "Papua-Neuguinea", "Vanuatu", "Neuseeland"],
-            "RichtigeAntwort": "Vanuatu",
-            "RichtigeAntwortMöglichkeiten": "Vanuatu",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Mount Yasur ist ein aktiver Vulkan auf der Insel Tanna in Vanuatu"
-        },
-    
-        ////////////////////////////////EUROPA////////////////////////////////
-    
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist der längste in Europa?",
-            "Antworten": ["Donau", "Rhein", "Wolga", "Loire"],
-            "RichtigeAntwort": "Wolga",
-            "RichtigeAntwortMöglichkeiten": "Wolga Volga",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Wolga ist mit etwa 3.530 Kilometern der längste Fluss Europas"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "Durch wie viele Länder fließt die Donau?",
-            "Antworten": ["5", "7", "10", "12"],
-            "RichtigeAntwort": "10",
-            "RichtigeAntwortMöglichkeiten": "10",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Donau fließt durch insgesamt zehn Länder in Europa"
-        },
-        { //Fluss durch Paris
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss fließt durch Paris?",
-            "Antworten": ["Rhein", "Donau", "Themse", "Seine"],
-            "RichtigeAntwort": "Seine",
-            "RichtigeAntwortMöglichkeiten": "Seine",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Seine fließt durch Paris und ist einer der bekanntesten Flüsse Frankreichs"
-        },
-        { //Wichtige Flüsse
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land mündet der Rhein ins Meer?",
-            "Antworten": ["Deutschland", "Belgien", "Niederlande", "Frankreich"],
-            "RichtigeAntwort": "Niederlande",
-            "RichtigeAntwortMöglichkeiten": "Niederlande",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Rhein mündet in den Niederlanden in die Nordsee"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der größte See Europas nach Fläche?",
-            "Antworten": ["Genfersee", "Ladogasee", "Bodensee", "Balaton"],
-            "RichtigeAntwort": "Ladogasee",
-            "RichtigeAntwortMöglichkeiten": "Ladogasee",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Ladogasee ist der größte See Europas und liegt in Russland"
-        },
-        { //Bedeutende Seen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Bodensee?",
-            "Antworten": ["Deutschland", "Österreich", "Schweiz", "Alle drei"],
-            "RichtigeAntwort": "Alle drei",
-            "RichtigeAntwortMöglichkeiten": "Deutschland Österreich Schweiz",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Bodensee grenzt an Deutschland, Österreich und die Schweiz"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss ist ein bedeutender Nebenfluss der Wolga?",
-            "Antworten": ["Dnjepr", "Don", "Oka", "Peipus"],
-            "RichtigeAntwort": "Oka",
-            "RichtigeAntwortMöglichkeiten": "Oka",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Oka ist der größte Nebenfluss der Wolga"
-        },
-        { //Flüsse und deren Einzugsgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Fluss bildet die Grenze zwischen Frankreich und Deutschland?",
-            "Antworten": ["Elbe", "Oder", "Rhein", "Mosel"],
-            "RichtigeAntwort": "Rhein",
-            "RichtigeAntwortMöglichkeiten": "Rhein",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Rhein bildet teilweise die Grenze zwischen Frankreich und Deutschland"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das höchste Gebirge Europas?",
-            "Antworten": ["Pyrenäen", "Karpaten", "Alpen", "Hymalaya"],
-            "RichtigeAntwort": "Alpen",
-            "RichtigeAntwortMöglichkeiten": "Alpen",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Die Alpen sind das höchste und umfangreichste Gebirge Europas"
-        },
-        { //Hauptgebirgszüge
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befinden sich die höchsten Gipfel der Alpen?",
-            "Antworten": ["Deutschland", "Österreich", "Frankreich", "Schweiz"],
-            "RichtigeAntwort": "Frankreich",
-            "RichtigeAntwortMöglichkeiten": "Frankreich",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Mont Blanc, der höchste Gipfel der Alpen, liegt an der Grenze zwischen Frankreich und Italien"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Wüste ist die einzige in Europa?",
-            "Antworten": ["Bardenas Reales", "Tabernas", "Monegros", "Las Vegas"],
-            "RichtigeAntwort": "Tabernas",
-            "RichtigeAntwortMöglichkeiten": "Tabernas",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Tabernas-Wüste liegt in der Provinz Almería in Spanien und ist die einzige echte Wüste Europas"
-        },
-        { //Landschaftsarten
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist für seine weitläufigen Tundren bekannt?",
-            "Antworten": ["Norwegen", "Russland", "Schweden", "Finnland"],
-            "RichtigeAntwort": "Russland",
-            "RichtigeAntwortMöglichkeiten": "Russland",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Russland ist bekannt für seine ausgedehnten Tundren in den nördlichen Regionen"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land befindet sich der Vulkan Ätna?",
-            "Antworten": ["Griechenland", "Italien", "Portugal", "Spanien"],
-            "RichtigeAntwort": "Italien",
-            "RichtigeAntwortMöglichkeiten": "Italien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Ätna ist der höchste und aktivste Vulkan Europas und befindet sich auf der Insel Sizilien"
-        },
-        { //Vulkane und Erdbebenregionen
-            "Kategorie": "Geographie",
-            "Frage": "In welchem Land liegt die geothermisch aktive Region Hveragerði?",
-            "Antworten": ["Island", "Norwegen", "Finnland", "Schweden"],
-            "RichtigeAntwort": "Island",
-            "RichtigeAntwortMöglichkeiten": "Island",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Hveragerði ist eine geothermisch aktive Region im Süden Islands"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone ist in der Regel durch wenig Niederschlag und große Temperaturschwankungen zwischen Tag und Nacht gekennzeichnet?",
-            "Antworten": ["Tropisch", "Subtropisch", "Arid", "Gemäßigt"],
-            "RichtigeAntwort": "Arid",
-            "RichtigeAntwortMöglichkeiten": "Arid",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Aride Klimazonen umfassen Wüstenregionen wie die Sahara und die Wüste Gobi"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone ist durch vier ausgeprägte Jahreszeiten mit kalten Wintern und warmen Sommern gekennzeichnet?",
-            "Antworten": ["Tropisch", "Subtropisch", "Gemäßigt", "Arktisch"],
-            "RichtigeAntwort": "Gemäßigt",
-            "RichtigeAntwortMöglichkeiten": "Gemäßigt",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die gemäßigte Klimazone liegt zwischen den Polarzonen und den Tropen"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone ist durch ganzjährig niedrige Temperaturen und lange, dunkle Winter gekennzeichnet?",
-            "Antworten": ["Subtropisch", "Arktisch", "Tropisch", "Gemäßigt"],
-            "RichtigeAntwort": "Arktisch",
-            "RichtigeAntwortMöglichkeiten": "Arktisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die arktische Klimazone umfasst die Regionen um den Nordpol"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Klimazone liegen die Regenwälder des Amazonas?",
-            "Antworten": ["Tropisch", "Subtropisch", "Gemäßigt", "Arktisch"],
-            "RichtigeAntwort": "Tropisch",
-            "RichtigeAntwortMöglichkeiten": "Tropisch",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Amazonas-Regenwälder befinden sich in der tropischen Klimazone"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone ist durch heiße Sommer und milde Winter gekennzeichnet?",
-            "Antworten": ["Subtropisch", "Tropisch", "Arktisch", "Gemäßigt"],
-            "RichtigeAntwort": "Subtropisch",
-            "RichtigeAntwortMöglichkeiten": "Subtropisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die subtropische Klimazone liegt zwischen den Tropen und den gemäßigten Zonen"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone ist durch sehr kalte Winter und kühle Sommer gekennzeichnet?",
-            "Antworten": ["Tropisch", "Subpolar", "Gemäßigt", "Arktisch"],
-            "RichtigeAntwort": "Subpolar",
-            "RichtigeAntwortMöglichkeiten": "Subpolar",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die subpolare Klimazone liegt südlich der Arktis und nördlich der gemäßigten Zonen"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Klimazone liegt die Sahara?",
-            "Antworten": ["Subtropisch", "Tropisch", "Gemäßigt", "Arktisch"],
-            "RichtigeAntwort": "Subtropisch",
-            "RichtigeAntwortMöglichkeiten": "Subtropisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Sahara liegt in der subtropischen Klimazone"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Klimazone liegen die Regenwälder des Kongo-Beckens?",
-            "Antworten": ["Tropisch", "Subtropisch", "Gemäßigt", "Arktisch"],
-            "RichtigeAntwort": "Tropisch",
-            "RichtigeAntwortMöglichkeiten": "Tropisch",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Regenwälder des Kongo-Beckens befinden sich in der tropischen Klimazone"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone hat die meisten Niederschläge im Winter und trockene Sommer?",
-            "Antworten": ["Tropisch", "Subtropisch", "Mediterran", "Arktisch"],
-            "RichtigeAntwort": "Mediterran",
-            "RichtigeAntwortMöglichkeiten": "Mediterran",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Das Mittelmeerklima ist bekannt für seine regnerischen Winter und trockenen Sommer"
-        },
-        { //Klimazonen
-            "Kategorie": "Geographie",
-            "Frage": "Welche Klimazone ist durch heiße, trockene Sommer und milde, feuchte Winter gekennzeichnet?",
-            "Antworten": ["Tropisch", "Subtropisch", "Arid", "Mediterran"],
-            "RichtigeAntwort": "Mediterran",
-            "RichtigeAntwortMöglichkeiten": "Mediterran",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Das Mittelmeerklima herrscht in den Küstenregionen rund um das Mittelmeer"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Kontinent ist für ihre häufigen Tornados bekannt?",
-            "Antworten": ["Australien", "Europa", "Nordamerika", "Asien"],
-            "RichtigeAntwort": "Nordamerika",
-            "RichtigeAntwortMöglichkeiten": "Nordamerika",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Nordamerika, insbesondere die USA, ist für die häufigen Tornados in der sogenannten 'Tornado Alley' bekannt"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Was ist ein El Niño?",
-            "Antworten": ["starkes Erdbeben", "Erwärmung des Pazifiks", "tropischer Wirbelsturm", "arktischer Kälteeinbruch"],
-            "RichtigeAntwort": "Erwärmung des Pazifiks",
-            "RichtigeAntwortMöglichkeiten": "Erwärmung des Pazifiks",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "El Niño ist ein Klimaphänomen, das durch eine Erwärmung der Pazifikoberfläche verursacht wird"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Welche Region ist für ihre intensiven Monsunregen bekannt?",
-            "Antworten": ["Afrika", "Europa", "Südamerika", "Südostasien"],
-            "RichtigeAntwort": "Südostasien",
-            "RichtigeAntwortMöglichkeiten": "Südostasien Ostasien Asien Südasien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Südostasien erlebt jährlich intensive Monsunregen"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Was ist ein La Niña?",
-            "Antworten": ["Kälteeinbruch in Europa", "Abkühlung des Pazifiks", "tropischer Wirbelsturm", "Hitzewelle in Afrika"],
-            "RichtigeAntwort": "Abkühlung des Pazifiks",
-            "RichtigeAntwortMöglichkeiten": "Eine Abkühlung des Pazifiks",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "La Niña ist ein Klimaphänomen, das durch eine Abkühlung der Pazifikoberfläche verursacht wird"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Was ist ein Blizzard?",
-            "Antworten": ["Ein starker Regensturm", "Ein tropischer Wirbelsturm", "Ein Schneesturm", "Eine Hitzeperiode"],
-            "RichtigeAntwort": "Ein Schneesturm",
-            "RichtigeAntwortMöglichkeiten": "Ein Schneesturm Blizzard",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ein Blizzard ist ein starker Schneesturm mit heftigen Winden"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Was ist ein Chinook?",
-            "Antworten": ["Ein heißer Wüstenwind", "Ein kalter Polarwind", "Ein warmer Fallwind", "Ein Monsunregen"],
-            "RichtigeAntwort": "Ein warmer Fallwind",
-            "RichtigeAntwortMöglichkeiten": "Ein warmer Fallwind Chinook",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ein Chinook ist ein warmer, trockener Fallwind, der in den Rocky Mountains auftritt"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "In welcher Region treten häufig Taifune auf?",
-            "Antworten": ["Atlantik", "Pazifik", "Indischer Ozean", "Mittelmeer"],
-            "RichtigeAntwort": "Pazifik",
-            "RichtigeAntwortMöglichkeiten": "Pazifik",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Taifune sind tropische Wirbelstürme, die im westlichen Pazifik auftreten"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Was ist ein Haboob?",
-            "Antworten": ["Ein Sandsturm", "Ein Wirbelsturm", "Ein Schneesturm", "Ein Kaltfront"],
-            "RichtigeAntwort": "Ein Sandsturm",
-            "RichtigeAntwortMöglichkeiten": "Ein Sandsturm Haboob",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ein Haboob ist ein intensiver Sandsturm, der häufig in Wüstengebieten vorkommt"
-        },
-        { //Wetterphänomene
-            "Kategorie": "Geographie",
-            "Frage": "Welche Region ist bekannt für ihre Zyklone?",
-            "Antworten": ["Atlantik", "Pazifik", "Indischer Ozean", "Mittelmeer"],
-            "RichtigeAntwort": "Indischer Ozean",
-            "RichtigeAntwortMöglichkeiten": "Indischer Ozean",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Zyklone sind tropische Wirbelstürme, die im Indischen Ozean auftreten"
-        },
-        { //Jahreszeiten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Jahreszeit ist auf der Nordhalbkugel, wenn die Sonne am weitesten südlich steht?",
-            "Antworten": ["Winter", "Frühling", "Sommer", "Herbst"],
-            "RichtigeAntwort": "Winter",
-            "RichtigeAntwortMöglichkeiten": "Winter",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Wintersonnenwende markiert den Beginn des Winters auf der Nordhalbkugel"
-        },
-        { //Jahreszeiten
-            "Kategorie": "Geographie",
-            "Frage": "In welchen Monaten tritt der Sommer auf der Südhalbkugel auf?",
-            "Antworten": ["Dezember bis Februar", "März bis Mai", "Juni bis August", "September bis November"],
-            "RichtigeAntwort": "Dezember bis Februar",
-            "RichtigeAntwortMöglichkeiten": "Dezember bis Februar",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Sommer auf der Südhalbkugel dauert von Dezember bis Februar"
-        },
-        { //Jahreszeiten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Jahreszeit tritt auf der Nordhalbkugel während der Sommersonnenwende ein?",
-            "Antworten": ["Winter", "Frühling", "Sommer", "Herbst"],
-            "RichtigeAntwort": "Sommer",
-            "RichtigeAntwortMöglichkeiten": "Sommer",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Sommersonnenwende markiert den Beginn des Sommers auf der Nordhalbkugel"
-        },
-        { //Jahreszeiten
-            "Kategorie": "Geographie",
-            "Frage": "Welche Jahreszeit ist auf der Südhalbkugel, wenn es auf der Nordhalbkugel Herbst ist?",
-            "Antworten": ["Winter", "Frühling", "Sommer", "Herbst"],
-            "RichtigeAntwort": "Frühling",
-            "RichtigeAntwortMöglichkeiten": "Frühling",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Wenn es auf der Nordhalbkugel Herbst ist, ist auf der Südhalbkugel Frühling"
-        },
-    
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Human Development Index (HDI) weltweit?",
-            "Antworten": ["Norwegen", "Schweiz", "Irland", "Deutschland"],
-            "RichtigeAntwort": "Norwegen",
-            "RichtigeAntwortMöglichkeiten": "Norwegen",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Norwegen hat den höchsten Human Development Index (HDI) weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den niedrigsten Human Development Index (HDI) weltweit?",
-            "Antworten": ["Niger", "Zentralafrikanische Republik", "Tschad", "Burkina Faso"],
-            "RichtigeAntwort": "Niger",
-            "RichtigeAntwortMöglichkeiten": "Niger",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Niger hat den niedrigsten Human Development Index (HDI) weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die höchste Lebenserwartung weltweit?",
-            "Antworten": ["Japan", "Schweiz", "Singapur", "Australien"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Japan hat die höchste Lebenserwartung weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat das höchste Bruttoinlandsprodukt (BIP) pro Kopf weltweit?",
-            "Antworten": ["Luxemburg", "Schweiz", "Norwegen", "Irland"],
-            "RichtigeAntwort": "Luxemburg",
-            "RichtigeAntwortMöglichkeiten": "Luxemburg",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Luxemburg hat das höchste Bruttoinlandsprodukt (BIP) pro Kopf weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Alphabetisierungsgrad weltweit?",
-            "Antworten": ["Finnland", "Norwegen", "Deutschland", "Andorra"],
-            "RichtigeAntwort": "Andorra",
-            "RichtigeAntwortMöglichkeiten": "Andorra",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Andorra hat den höchsten Alphabetisierungsgrad weltweit mit nahezu 100%"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die höchste Geburtenrate weltweit?",
-            "Antworten": ["Niger", "Angola", "Afghanistan", "Mali"],
-            "RichtigeAntwort": "Niger",
-            "RichtigeAntwortMöglichkeiten": "Niger",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Niger hat die höchste Geburtenrate weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Anteil an städtischer Bevölkerung weltweit?",
-            "Antworten": ["Singapur", "Monaco", "Kuwait", "Hongkong"],
-            "RichtigeAntwort": "Monaco",
-            "RichtigeAntwortMöglichkeiten": "Monaco",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Monaco hat den höchsten Anteil an städtischer Bevölkerung, da es vollständig urbanisiert ist"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die geringste Arbeitslosenrate weltweit?",
-            "Antworten": ["Japan", "Schweiz", "Qatar", "Island"],
-            "RichtigeAntwort": "Qatar",
-            "RichtigeAntwortMöglichkeiten": "Qatar",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Qatar hat die geringste Arbeitslosenrate weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die höchste Anzahl an Nobelpreisträgern pro Kopf?",
-            "Antworten": ["Island", "Luxemburg", "Schweiz", "Schweden"],
-            "RichtigeAntwort": "Schweiz",
-            "RichtigeAntwortMöglichkeiten": "Schweiz",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Schweiz hat die höchste Anzahl an Nobelpreisträgern pro Kopf"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die höchste Alphabetisierungsrate in Afrika?",
-            "Antworten": ["Südafrika", "Ägypten", "Seychellen", "Tunesien"],
-            "RichtigeAntwort": "Seychellen",
-            "RichtigeAntwortMöglichkeiten": "Seychellen",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Die Seychellen haben die höchste Alphabetisierungsrate in Afrika mit fast 95%"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land in Asien hat den höchsten HDI (Human Development Index)?",
-            "Antworten": ["Japan", "Südkorea", "Singapur", "Hongkong"],
-            "RichtigeAntwort": "Hongkong",
-            "RichtigeAntwortMöglichkeiten": "Hongkong",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Hongkong hat den höchsten HDI in Asien"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die höchste Durchschnittseinkommen pro Kopf in Afrika?",
-            "Antworten": ["Südafrika", "Nigeria", "Seychellen", "Äquatorialguinea"],
-            "RichtigeAntwort": "Seychellen",
-            "RichtigeAntwortMöglichkeiten": "Seychellen",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Die Seychellen haben das höchste Durchschnittseinkommen pro Kopf in Afrika"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land in Europa hat die niedrigste Arbeitslosenrate?",
-            "Antworten": ["Deutschland", "Schweiz", "Norwegen", "Tschechien"],
-            "RichtigeAntwort": "Tschechien",
-            "RichtigeAntwortMöglichkeiten": "Tschechien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tschechien hat die niedrigste Arbeitslosenrate in Europa"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Anteil an Universitätsabsolventen weltweit?",
-            "Antworten": ["USA", "Kanada", "Japan", "Israel"],
-            "RichtigeAntwort": "Israel",
-            "RichtigeAntwortMöglichkeiten": "Israel",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Israel hat den höchsten Anteil an Universitätsabsolventen weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die niedrigste Kindersterblichkeitsrate weltweit?",
-            "Antworten": ["Island", "Japan", "Norwegen", "Finnland"],
-            "RichtigeAntwort": "Japan",
-            "RichtigeAntwortMöglichkeiten": "Japan",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Japan hat die niedrigste Kindersterblichkeitsrate weltweit"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die höchste Lebenserwartung in Afrika?",
-            "Antworten": ["Südafrika", "Mauritius", "Seychellen", "Algerien"],
-            "RichtigeAntwort": "Seychellen",
-            "RichtigeAntwortMöglichkeiten": "Seychellen",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Seychellen haben die höchste Lebenserwartung in Afrika"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Anteil an erneuerbaren Energien in seiner Energieerzeugung?",
-            "Antworten": ["Norwegen", "Island", "Deutschland", "Brasilien"],
-            "RichtigeAntwort": "Island",
-            "RichtigeAntwortMöglichkeiten": "Island",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Island hat den höchsten Anteil an erneuerbaren Energien in seiner Energieerzeugung"
-        },
-        { //Entwicklungsindikatoren
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat das höchste Bruttoinlandsprodukt (BIP) in Europa?",
-            "Antworten": ["Deutschland", "Frankreich", "Vereinigtes Königreich", "Italien"],
-            "RichtigeAntwort": "Deutschland",
-            "RichtigeAntwortMöglichkeiten": "Deutschland",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Deutschland hat das höchste Bruttoinlandsprodukt (BIP) in Europa"
-        },
-    
-    
-    
-    
-    
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist weltweit für die meisten CO2-Emissionen verantwortlich?",
-            "Antworten": ["USA", "Indien", "China", "Russland"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "China ist weltweit für die meisten CO2-Emissionen verantwortlich"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Umweltproblem betrifft den Aralsee in Zentralasien?",
-            "Antworten": ["Verschmutzung", "Überfischung", "Desertifikation", "Austrocknung"],
-            "RichtigeAntwort": "Austrocknung",
-            "RichtigeAntwortMöglichkeiten": "Austrocknung",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Der Aralsee in Zentralasien ist aufgrund von Wasserumleitungen stark ausgetrocknet"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größte Fläche an abgeholztem Regenwald?",
-            "Antworten": ["Indonesien", "Brasilien", "Kongo", "Malaysia"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Brasilien hat die größte Fläche an abgeholztem Regenwald, insbesondere im Amazonasgebiet"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Meer ist am stärksten von Plastikverschmutzung betroffen?",
-            "Antworten": ["Nordsee", "Ostsee", "Mittelmeer", "Pazifischer Ozean"],
-            "RichtigeAntwort": "Pazifischer Ozean",
-            "RichtigeAntwortMöglichkeiten": "Pazifischer Ozean",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Der Pazifische Ozean ist stark von Plastikverschmutzung betroffen, besonders im Great Pacific Garbage Patch"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größte Fläche an Wüstenbildung durch Desertifikation?",
-            "Antworten": ["China", "USA", "Sudan", "Australien"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "China hat eine große Fläche, die von Wüstenbildung durch Desertifikation betroffen ist"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land ist am stärksten von der Luftverschmutzung betroffen?",
-            "Antworten": ["China", "Indien", "Pakistan", "Bangladesch"],
-            "RichtigeAntwort": "Indien",
-            "RichtigeAntwortMöglichkeiten": "Indien",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Indien ist eines der am stärksten von Luftverschmutzung betroffenen Länder weltweit"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den größten Wasserfußabdruck pro Kopf?",
-            "Antworten": ["USA", "China", "Indien", "Brasilien"],
-            "RichtigeAntwort": "USA",
-            "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Die USA haben den größten Wasserfußabdruck pro Kopf weltweit"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die größte Abfallproduktion pro Kopf?",
-            "Antworten": ["Kuwait", "USA", "Kanada", "Deutschland"],
-            "RichtigeAntwort": "Kuwait",
-            "RichtigeAntwortMöglichkeiten": "Kuwait",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Kuwait hat die größte Abfallproduktion pro Kopf weltweit"
-        },
-        { //Umweltprobleme
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat die meisten Kohlekraftwerke weltweit?",
-            "Antworten": ["USA", "Indien", "China", "Deutschland"],
-            "RichtigeAntwort": "China",
-            "RichtigeAntwortMöglichkeiten": "China",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "China hat die meisten Kohlekraftwerke weltweit"
-        },
-    
-    
-    
-    
-    
-        { //Naturschutzgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das größte Naturschutzgebiet der Welt?",
-            "Antworten": ["Yellowstone", "Greenland National Park", "Amazonas-Regenwald", "Great Barrier Reef Marine Park"],
-            "RichtigeAntwort": "Greenland National Park",
-            "RichtigeAntwortMöglichkeiten": "Greenland National Park",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Der Greenland National Park ist das größte Naturschutzgebiet der Welt"
-        },
-        { //Naturschutzgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den größten Anteil an Naturschutzgebieten weltweit?",
-            "Antworten": ["Brasilien", "Australien", "Vereinigte Staaten", "Vereinigtes Königreich"],
-            "RichtigeAntwort": "Brasilien",
-            "RichtigeAntwortMöglichkeiten": "Brasilien",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Brasilien hat eine große Fläche an Naturschutzgebieten, insbesondere im Amazonasgebiet"
-        },
-        { //Naturschutzgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welches ist das älteste Nationalpark der Welt?",
-            "Antworten": ["Yellowstone", "Yosemite", "Banff", "Kruger Nationalpark"],
-            "RichtigeAntwort": "Yellowstone",
-            "RichtigeAntwortMöglichkeiten": "Yellowstone",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Der Yellowstone-Nationalpark in den USA ist der älteste Nationalpark der Welt, gegründet 1872"
-        },
-        { //Naturschutzgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welches Meeresschutzgebiet ist das größte der Welt?",
-            "Antworten": ["Great Barrier Reef Marine Park", "Papahānaumokuākea Marine National Monument", "Chagos Marine Protected Area", "Ross Sea Region MPA"],
-            "RichtigeAntwort": "Papahānaumokuākea Marine National Monument",
-            "RichtigeAntwortMöglichkeiten": "Papahānaumokuākea Marine National Monument",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Das Papahānaumokuākea Marine National Monument ist das größte Meeresschutzgebiet der Welt"
-        },
-        { //Naturschutzgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welches Land hat den höchsten Anteil seiner Landesfläche als Naturschutzgebiet ausgewiesen?",
-            "Antworten": ["Vereinigte Staaten", "Vereinigtes Königreich", "Costa Rica", "Neuseeland"],
-            "RichtigeAntwort": "Costa Rica",
-            "RichtigeAntwortMöglichkeiten": "Costa Rica",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Costa Rica hat einen hohen Anteil seiner Landesfläche als Naturschutzgebiet ausgewiesen"
-        },
-        { //Naturschutzgebiete
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Nationalpark in Europa ist der erste, der als UNESCO-Welterbe anerkannt wurde?",
-            "Antworten": ["Plitvicer Seen Nationalpark", "Cinque Terre", "Doñana Nationalpark", "Sächsische Schweiz Nationalpark"],
-            "RichtigeAntwort": "Plitvicer Seen Nationalpark",
-            "RichtigeAntwortMöglichkeiten": "Plitvicer Seen Nationalpark",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Der Plitvicer Seen Nationalpark in Kroatien war der erste Nationalpark in Europa, der als UNESCO-Welterbe anerkannt wurde"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Definition von Plattentektonik
-            "Kategorie": "Wissenschaft",
-            "Frage": "Was ist Plattentektonik?",
-            "Antworten": ["Die Bewegung der Kontinente", "Die Bewegung der Erdplatten", "Die Bewegung der Ozeane", "Die Bewegung der Atmosphäre"],
-            "RichtigeAntwort": "Die Bewegung der Erdplatten",
-            "RichtigeAntwortMöglichkeiten": "Bewegung Erdplatten Verschiebung Erdkrusten",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Plattentektonik bezieht sich auf die Bewegung und Wechselwirkung der großen Platten, aus denen die Erdkruste besteht"
-        },
-        { //Anzahl der großen tektonischen Platten
-            "Kategorie": "Wissenschaft",
-            "Frage": "Wie viele große tektonische Platten gibt es auf der Erde?",
-            "Antworten": ["5", "7", "9", "11"],
-            "RichtigeAntwort": "7",
-            "RichtigeAntwortMöglichkeiten": "7",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Es gibt sieben große tektonische Platten auf der Erde: Pazifische Platte, Nordamerikanische Platte, Eurasische Platte, Afrikanische Platte, Südamerikanische Platte, Antarktische Platte und Australische Platte"
-        },
-        { //Pazifische Platte
-            "Kategorie": "Wissenschaft",
-            "Frage": "Welche tektonische Platte ist die größte?",
-            "Antworten": ["Eurasische Platte", "Afrikanische Platte", "Nordamerikanische Platte", "Pazifische Platte"],
-            "RichtigeAntwort": "Pazifische Platte",
-            "RichtigeAntwortMöglichkeiten": "Pazifische Platte",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Die Pazifische Platte ist die größte tektonische Platte und bedeckt den größten Teil des Pazifischen Ozeans"
-        },
-    
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-        { //Größter Flughafen der Welt nach Fläche
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der größte Flughafen der Welt nach Fläche?",
-            "Antworten": ["King Fahd International Airport", "Denver International Airport", "Beijing Daxing International Airport", "Dallas/Fort Worth International Airport"],
-            "RichtigeAntwort": "King Fahd International Airport",
-            "RichtigeAntwortMöglichkeiten": "King Fahd Saudi Arabien",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der King Fahd International Airport in Saudi-Arabien ist der größte Flughafen der Welt nach Fläche"
-        },
-        { //Ältester internationaler Flughafen
-            "Kategorie": "Geographie",
-            "Frage": "Welcher ist der älteste internationale Flughafen der Welt?",
-            "Antworten": ["Flughafen London Heathrow", "Flughafen Sydney", "Flughafen Berlin Tempelhof", "Flughafen Paris-Le Bourget"],
-            "RichtigeAntwort": "Flughafen Paris-Le Bourget",
-            "RichtigeAntwortMöglichkeiten": "Flughafen Paris-Le Bourget",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Der Flughafen Paris-Le Bourget in Frankreich ist der älteste internationale Flughafen der Welt"
-        },
-        { //Flughafen mit dem höchsten Passagieraufkommen in Europa
-            "Kategorie": "Geographie",
-            "Frage": "Welcher Flughafen hat das höchste Passagieraufkommen in Europa?",
-            "Antworten": ["Flughafen Frankfurt", "Flughafen Paris-Charles de Gaulle", "Flughafen Amsterdam Schiphol", "Flughafen London Heathrow"],
-            "RichtigeAntwort": "Flughafen London Heathrow",
-            "RichtigeAntwortMöglichkeiten": "London Heathrow",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Der Flughafen London Heathrow hat das höchste Passagieraufkommen in Europa"
-        },
-    
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Aus welchem Material wurden die meisten ägyptischen Pyramiden gebaut?",
+        "Antworten": ["Kalkstein", "Granit", "Sandstein", "Marmor"],
+        "RichtigeAntwort": "Kalkstein",
+        "RichtigeAntwortMöglichkeiten": "Kalkstein kalk Stein",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Kalkstein stammt oft aus Steinbrüchen in der Nähe des Nils und wurde als äußere Schicht verwendet."
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Wer war der oberste Gott in der römischen Mythologie?",
+        "Antworten": ["Jupiter", "Mars", "Neptun", "Apollo"],
+        "RichtigeAntwort": "Jupiter",
+        "RichtigeAntwortMöglichkeiten": "Jupiter",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Jupiter war der römische König der Götter und herrschte über den Himmel und das Wetter."
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Welche Göttin war in der römischen Mythologie für die Liebe zuständig?",
+        "Antworten": ["Venus", "Juno", "Diana", "Minerva"],
+        "RichtigeAntwort": "Venus",
+        "RichtigeAntwortMöglichkeiten": "Venus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Venus wurde als Göttin der Liebe, Schönheit und Fruchtbarkeit verehrt."
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Welcher Gott war der römische Gott des Krieges?",
+        "Antworten": ["Mars", "Vulcanus", "Apollo", "Jupiter"],
+        "RichtigeAntwort": "Mars",
+        "RichtigeAntwortMöglichkeiten": "Mars",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mars war nicht nur der Gott des Krieges, sondern auch ein wichtiger Beschützer Roms."
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Welcher römische Gott war der Herrscher der Unterwelt?",
+        "Antworten": ["Pluto", "Mars", "Mercur", "Neptun"],
+        "RichtigeAntwort": "Pluto",
+        "RichtigeAntwortMöglichkeiten": "Pluto",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Pluto war der Gott der Unterwelt und des Reichtums"
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Wer war der römische Gott der Meere?",
+        "Antworten": ["Neptun", "Mars", "Jupiter", "Apollo"],
+        "RichtigeAntwort": "Neptun",
+        "RichtigeAntwortMöglichkeiten": "Neptun",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Neptun war nicht nur der Gott der Meere, sondern auch der Pferde und Erdbeben."
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Wie hieß die römische Göttin der Weisheit?",
+        "Antworten": ["Minerva", "Diana", "Ceres", "Juno"],
+        "RichtigeAntwort": "Minerva",
+        "RichtigeAntwortMöglichkeiten": "Minerva",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Minerva war die Göttin der Weisheit, des Handwerks und der strategischen Kriegsführung."
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Wer war der römische Götterbot?",
+        "Antworten": ["Mercur", "Vulcanus", "Apollo", "Pluto"],
+        "RichtigeAntwort": "Mercur",
+        "RichtigeAntwortMöglichkeiten": "Mercur",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Mercur ist das Ebenbild von Hermes in der grieschichen Mythologie"
+    },
+    {
+        "Kategorie": "Mythologie",
+        "Frage": "Nach welchem römischen Gott wurde der Rote Planet benannt?",
+        "Antworten": ["Mars", "Venus", "Jupiter", "Pluto"],
+        "RichtigeAntwort": "Mars",
+        "RichtigeAntwortMöglichkeiten": "kriegsgott krieges mars",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Mars ist der Römische Kriegsgott"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das muslimische Reich, das im 8. Jahrhundert weite Teile Spaniens und Portugals beherrschte?",
+        "Antworten": ["Umayyaden", "Abbasiden", "Fatimiden", "Ayyubiden"],
+        "RichtigeAntwort": "Umayyaden",
+        "RichtigeAntwortMöglichkeiten": "Umayyaden",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Umayyaden-Kalifat gründete das Emirat von Córdoba, das später zum Kalifat von Córdoba wurde."
+    },
+    {//Entdeckung Amerikas
+        "Kategorie": "Geschichte",
+        "Frage": "welcher spanische Entdecker erreichte Amerika?",
+        "Antworten": ["Christoph Kolumbus", "Leif Erikson", "Vasco da Gama", "Ferdinand Magellan"],
+        "RichtigeAntwort": "Christoph Kolumbus",
+        "RichtigeAntwortMöglichkeiten": "Christoph Kolumbus",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Obwohl Kolumbus Amerika entdeckte, glaubte er bis zu seinem Tod, einen neuen Seeweg nach Indien gefunden zu haben"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land finanzierte Christoph Kolumbus' Reise nach Amerika?",
+        "Antworten": ["Spanien", "Portugal", "England", "Frankreich"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanien ermöglichte Kolumbus die Seefahrt nach Amerika "
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr landete Christoph Kolumbus zum ersten Mal in Amerika?",
+        "Antworten": ["1492", "1501", "1488", "1519"],
+        "RichtigeAntwort": "1492",
+        "RichtigeAntwortMöglichkeiten": "1492",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kolumbus landete auf den Bahamainseln und nannte die erste gesichtete Insel San Salvador."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Nach welchem Entdecker wurde der Kontinent Amerika benannt?",
+        "Antworten": ["Amerigo Vespucci", "Christoph Kolumbus", "Leif Erikson", "Ferdinand Magellan"],
+        "RichtigeAntwort": "Amerigo Vespucci",
+        "RichtigeAntwortMöglichkeiten": "Amerigo Vespucci",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Amerigo Vespucci erkannte als Erster, dass die entdeckten Gebiete ein neuer Kontinent und nicht Teil Asiens waren"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte Christoph Kolumbus die Ureinwohner von Amerika?",
+        "Antworten": ["Indianer", "Eingeborene", "Azteken", "Inka"],
+        "RichtigeAntwort": "Indianer",
+        "RichtigeAntwortMöglichkeiten": "Indianer",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Kolumbus nannte die Ureinwohner 'Indianer', da er glaubte, er hätte einen neuen Seeweg nach Indien entdeckt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Land Christoph Kolumbus während seiner ersten Reise nach Amerika?",
+        "Antworten": ["Bahamas", "Karibik", "Kuba", "Hispaniola"],
+        "RichtigeAntwort": "Bahamas",
+        "RichtigeAntwortMöglichkeiten": "Bahamas",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kolumbus landete auf einer Insel, die er San Salvador nannte"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Reisen unternahm Christoph Kolumbus nach Amerika?",
+        "Antworten": ["Vier", "Eine", "Drei", "Fünf"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kolumbus erkundete verschiedene Teile der Karibik und Südamerikas"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das Flaggschiff von Christoph Kolumbus bei seiner ersten Reise nach Amerika?",
+        "Antworten": ["Santa Maria", "Pinta", "Nina", "Mayflower"],
+        "RichtigeAntwort": "Santa Maria",
+        "RichtigeAntwortMöglichkeiten": "Santa Maria",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die 'Santa Maria' war das größte der drei Schiffe von Kolumbus"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Pflanze entdeckte Christoph Kolumbus auf seiner Reise, die später in Europa weit verbreitet wurde?",
+        "Antworten": ["Tabak", "Kakao", "Mais", "Kartoffel"],
+        "RichtigeAntwort": "Tabak",
+        "RichtigeAntwortMöglichkeiten": "Tabak",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kolumbus entdeckte Tabakpflanzen auf den Karibikinseln und beobachtete die Einheimischen beim Rauchen von Tabakblättern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Frucht brachte Christoph Kolumbus von seiner Reise nach Amerika nach Europa?",
+        "Antworten": ["Ananas", "Banane", "Orange", "Zitrone"],
+        "RichtigeAntwort": "Ananas",
+        "RichtigeAntwortMöglichkeiten": "Ananas",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Ananas war eine der exotischen Früchte, die Kolumbus aus der Neuen Welt nach Europa brachte"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land wollte Christoph Kolumbus ursprünglich finden, als er nach Westen segelte?",
+        "Antworten": ["Indien", "China", "Japan", "Äthiopien"],
+        "RichtigeAntwort": "Indien",
+        "RichtigeAntwortMöglichkeiten": "Indien westindien",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Kolumbus wollte einen westlichen Seeweg nach Indien finden, um direkt mit den Gewürzlieferanten zu handeln."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Kontinent galt im Mittelalter als die 'Neue Welt'?",
+        "Antworten": ["Afrika", "Asien", "Amerika", "Europa"],
+        "RichtigeAntwort": "Amerika",
+        "RichtigeAntwortMöglichkeiten": "Amerika",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Im Mittelalter war Amerika der Kontinent, der für die Europäer unbekannt und daher als die 'Neue Welt' galt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Kontinent wurde von Christoph Kolumbus entdeckt?",
+        "Antworten": ["Afrika", "Asien", "Amerika", "Europa"],
+        "RichtigeAntwort": "Amerika",
+        "RichtigeAntwortMöglichkeiten": "Amerika südamerika nordamerika süd nord-amerika",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Christoph Kolumbus entdeckte 1492 Amerika auf seiner Reise, obwohl er dachte, einen neuen Seeweg nach Indien gefunden zu haben."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Vertrag, der die Weltaufteilung zwischen Spanien und Portugal 1494 regelte?",
+        "Antworten": ["Vertrag von Tordesillas", "Vertrag von Versailles", "Vertrag von Utrecht", "Vertrag von Paris"],
+        "RichtigeAntwort": "Vertrag von Tordesillas",
+        "RichtigeAntwortMöglichkeiten": "Tordesillas",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Vertrag von Tordesillas wurde geschlossen, um ihre Kolonialgebiete zu teilen und Konflikte zu vermeiden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Jahr wurde der Vertrag von Tordesillas unterzeichnet?",
+        "Antworten": ["1492", "1494", "1496", "1500"],
+        "RichtigeAntwort": "1494",
+        "RichtigeAntwortMöglichkeiten": "1494",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "2 Jahrenach der Entdeckung Amerikas regelte die Aufteilung der neu entdeckten Welt zwischen Spanien und Portugal"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land entdeckte die Seeroute um Afrika nach Indien?",
+        "Antworten": ["Spanien", "Portugal", "England", "Niederlande"],
+        "RichtigeAntwort": "Portugal",
+        "RichtigeAntwortMöglichkeiten": "Portugal",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Portugal entdeckte die Seeroute um Afrika nach Indien unter der Führung von Vasco da Gama im späten 15. Jahrhundert"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Handelsroute verband Europa, Afrika und die Amerikas im 16. Jahrhundert?",
+        "Antworten": ["Dreieckshandel", "Seidenroute", "Gewürzroute", "Sklavenroute"],
+        "RichtigeAntwort": "Dreieckshandel",
+        "RichtigeAntwortMöglichkeiten": "Dreieckshandel dreieck dreiecksweg",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Dreieckshandel war eine Handelsroute, die Sklaven, Rohstoffe und fertige Güter zwischen Europa, Afrika und den Amerikas transportierte."
+    },
 
+
+    /////////////Frankreich/////////////
+
+
+    { 
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher französische König wurde heiliggesprochen?",
+        "Antworten": ["Ludwig IX.", "Philipp II.", "Karl V.", "Ludwig VI."],
+        "RichtigeAntwort": "Ludwig IX.",
+        "RichtigeAntwortMöglichkeiten": "Ludwig IX. IX Saint Louis",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ludwig IX., auch bekannt als 'Saint Louis', war bekannt für seine fromme Lebensweise und seine Beteiligung an den Kreuzzügen"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches bedeutende Bauwerk in Paris wurde 1163 begonnen?",
+        "Antworten": ["Notre-Dame", "Louvre", "Sainte-Chapelle", "Palais des Papes"],
+        "RichtigeAntwort": "Notre-Dame",
+        "RichtigeAntwortMöglichkeiten": "Notre-Dame",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Kathedrale Notre-Dame in Paris ist eines der bekanntesten Beispiele für gotische Architektur und wurde 1345 fertiggestellt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher französische König eroberte 1204 die Normandie von England zurück?",
+        "Antworten": ["Philipp II.", "Ludwig VII.", "Karl IV.", "Heinrich II."],
+        "RichtigeAntwort": "Philipp II.",
+        "RichtigeAntwortMöglichkeiten": "Philipp II.",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Philipp II., auch bekannt als 'Philipp Augustus', stärkte die Macht der französischen Monarchie erheblich"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie regierte Frankreich vor den Valois?",
+        "Antworten": ["Capetinger", "Bourbonen", "Merowinger", "Plantagenets"],
+        "RichtigeAntwort": "Capetinger",
+        "RichtigeAntwortMöglichkeiten": "Capetinger",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Capetinger-Dynastie regierte Frankreich von 987 bis 1328 und legte den Grundstein für das mittelalterliche Frankreich."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welcher Stadt wurden die französischen Könige traditionell gekrönt?",
+        "Antworten": ["Reims", "Paris", "Lyon", "Orléans"],
+        "RichtigeAntwort": "Reims",
+        "RichtigeAntwortMöglichkeiten": "Reims",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Kathedrale von Reims war der traditionelle Krönungsort der französischen Könige und symbolisierte die göttliche Legitimation der Herrschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Land wurde die Guillotine zum Köpfen oft eingesetzt?",
+        "Antworten": ["Frankreich", "Deutschland", "Spanien", "Italien"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Guillotine wurde während der Französischen Revolution zum Symbol der Hinrichtungen und Justiz in Frankreich"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches bedeutende Ereignis markierte den Beginn der französischen Renaissance im Jahr 1515?",
+        "Antworten": ["Schlacht von Marignano", "Hochzeit von François I", "Krönung von Henri IV", "Pazifischer Vertrag"],
+        "RichtigeAntwort": "Schlacht von Marignano",
+        "RichtigeAntwortMöglichkeiten": "Schlacht von Marignano",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlacht von Marignano sicherte François I. die Kontrolle über Mailand und leitete die französische Renaissance ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher französische König war bekannt für den Bau des Schlosses von Versailles?",
+        "Antworten": ["Ludwig XIV", "Louis I", "Ludwig XVI", "Louis II"],
+        "RichtigeAntwort": "Ludwig XIV",
+        "RichtigeAntwortMöglichkeiten": "Ludwig XIV louis",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ludwig XIV ließ das prächtige Schloss von Versailles erbauen, um seine Macht zu demonstrieren"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher berühmte französische Herrscher wurde 1804 zum Kaiser gekrönt?",
+        "Antworten": ["Napoleon Bonaparte", "Ludwig XVI", "Henri IV", "François I"],
+        "RichtigeAntwort": "Napoleon Bonaparte",
+        "RichtigeAntwortMöglichkeiten": "Napoleon Bonaparte",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Napoleon Bonaparte krönte sich selbst zum Kaiser der Franzosen und begann eine Ära bedeutender Reformen und Kriege in Europa."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher französische König trug den Spitznamen 'Der Sonnenkönig'?",
+        "Antworten": ["Ludwig XIV", "Ludwig VI", "Henri IV", "François I"],
+        "RichtigeAntwort": "Ludwig XIV",
+        "RichtigeAntwortMöglichkeiten": "Louis Ludwig XIV 14",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Ludwig XIV sah sich selbst als Zentrum des französischen Staates, ähnlich wie die Sonne."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches bedeutende französische Bauwerk wurde 1789 von der Revolution beschädigt?",
+        "Antworten": ["Bastille", "Versailles", "Notre-Dame", "Sainte-Chapelle"],
+        "RichtigeAntwort": "Bastille",
+        "RichtigeAntwortMöglichkeiten": "Bastille",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Bastille war ein Symbol der königlichen Unterdrückung"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher französische König sagte 'Der Staat bin ich'?",
+        "Antworten": ["Francois XIV", "ludwig XVI", "François I", "Henri IV"],
+        "RichtigeAntwort": "ludwig XIV",
+        "RichtigeAntwortMöglichkeiten": "ludwig Louis XIV 14",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Louis XIV prägte den Satz 'Der Staat bin ich', um seine absolute Macht als König zu demonstrieren, was sein Bild als unumschränkter Herrscher unterstrich."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie lautet das berühmte Zitat von Ludwig XIV auf Deutsch, das seine uneingeschränkte Macht beschreibt?",
+        "Antworten": ["Der Staat bin ich", "Ich bin der König", "Der König ist das Gesetz", "Mein Wort ist Gesetz"],
+        "RichtigeAntwort": "Der Staat bin ich",
+        "RichtigeAntwortMöglichkeiten": "Staat ich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Louis XIV sagte 'Der Staat bin ich' ('L'État, c'est moi') und stellte damit klar, dass er die vollständige Kontrolle über den Staat hatte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Staatsform hatte Frankreich vor der Französischen Revolution?",
+        "Antworten": ["Monarchie", "Republik", "Diktaktur", "Feudalismus"],
+        "RichtigeAntwort": "Monarchie",
+        "RichtigeAntwortMöglichkeiten": "Absolute Monarchie absulutismus königreich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Vor der Französischen Revolution war Frankreich eine absolute Monarchie, in der der König uneingeschränkte Macht ausübte."
+    },
+    {//Französische Revolution
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher französische König war zur Zeit des Ausbruchs der Französischen Revolution auf dem Thron?",
+        "Antworten": ["Ludwig XIV", "Henri X", "Karl der Große", "Henri I"],
+        "RichtigeAntwort": "Ludwig XVI",
+        "RichtigeAntwortMöglichkeiten": " louis Ludwig XVI",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ludwig XVI war der König von Frankreich, als die Französische Revolution begann und wurde später während der Revolution geköpft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis markierte den Beginn der Französischen Revolution im Jahr 1789?",
+        "Antworten": ["Sturm auf die Bastille", "Schlacht von Waterloo", "Erklärung der Menschen- und Bürgerrechte", "Revolutionstag"],
+        "RichtigeAntwort": "Sturm auf die Bastille",
+        "RichtigeAntwortMöglichkeiten": "Bastille bastillienangriff",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Sturm auf die Bastille am 14. Juli 1789 wird heute als Nationalfest gefeiert"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann die Französische Revolution?",
+        "Antworten": ["1789", "1740", "1776", "1804"],
+        "RichtigeAntwort": "1789",
+        "RichtigeAntwortMöglichkeiten": "1789",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Französische Revolution begann 1789 und führte zur Abschaffung der Monarchie und zur Errichtung der Ersten Französischen Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was wurde während der Französischen Revolution für Hinrichtungen eingesetzt?",
+        "Antworten": ["Guillotine", "Galgen", "Fallbeil", "Schafott"],
+        "RichtigeAntwort": "Guillotine",
+        "RichtigeAntwortMöglichkeiten": "Guillotine köpfen",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Guillotine wurde während der Revolution berüchtigt als das Hauptinstrument zur Vollstreckung von Todesurteilen und wurde zum Symbol des 'Terreur'."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die radikale politische Gruppe, die während der Französischen Revolution unter der Führung von Robespierre an die Macht kam?",
+        "Antworten": ["Jakobiner", "Girondisten", "Feuillants", "Sansculotten"],
+        "RichtigeAntwort": "Jakobiner",
+        "RichtigeAntwortMöglichkeiten": "Jakobiner",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Jakobiner, angeführt von Maximilien Robespierre, spielten eine zentrale Rolle in der radikalen Phase der Revolution und leiteten die Schreckensherrschaft (Terreur) ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher berühmte General übernahm nach der Französischen Revolution die Macht und wurde Kaiser von Frankreich?",
+        "Antworten": ["Napoleon Bonaparte", "Maximilien Robespierre", "Jean-Paul Marat", "Georges Danton"],
+        "RichtigeAntwort": "Napoleon Bonaparte",
+        "RichtigeAntwortMöglichkeiten": "Napoleon Bonaparte",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Napoleon Bonaparte, ein brillanter Militärführer, ergriff nach der Revolution die Macht und krönte sich 1804 selbst zum Kaiser der Franzosen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche französische Königin wurde während der Revolution hingerichtet?",
+        "Antworten": ["Marie-Antoinette", "Katharina von Medici", "Anna von Österreich", "Margarete von Valois"],
+        "RichtigeAntwort": "Marie-Antoinette",
+        "RichtigeAntwortMöglichkeiten": "Marie-Antoinette",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Marie-Antoinette, die Frau von Ludwig XVI, wurde 1793 wegen Hochverrats verurteilt und hingerichtet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man die Periode der Französischen Revolution, die durch Massenhinrichtungen gekennzeichnet war?",
+        "Antworten": ["Schreckensherrschaft", "Erster Koalitionskrieg", "Thermidor", "Vendee-Aufstand"],
+        "RichtigeAntwort": "Schreckensherrschaft",
+        "RichtigeAntwortMöglichkeiten": "Schreckensherrschaft",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schreckensherrschaft (1793-1794) war eine Phase der Französischen Revolution, in der tausende Menschen hingerichtet wurden, um die Revolution zu schützen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches große Ereignis fand 1789 in Frankreich statt?",
+        "Antworten": ["Französische Revolution", "Bastille-Tag", "Thermidor", "Reign of Terror"],
+        "RichtigeAntwort": "Französische Revolution",
+        "RichtigeAntwortMöglichkeiten": "Französische Revolution Bastille FranzösischeRevulotion",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Französische Revolution leitete eine neue Ära politischer und sozialer Veränderungen in Europa ein"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der führende Kopf hinter der Schreckensherrschaft während der Französischen Revolution?",
+        "Antworten": ["Maximilien Robespierre", "Napoleon Bonaparte", "Georges Danton", "Jean-Paul Marat"],
+        "RichtigeAntwort": "Maximilien Robespierre",
+        "RichtigeAntwortMöglichkeiten": "Maximilien Robespierre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Maximilien Robespierre war der Anführer der Jakobiner und wurde später selbst hingerichtet, was das Ende der Schreckensherrschaft markierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Konflikt, an dem Frankreich beteiligt war, verschärfte die finanzielle Krise und trug zur Revolution bei?",
+        "Antworten": ["Amerikanischer Unabhängigkeitskrieg", "Siebenjähriger Krieg", "Italienische Kriege", "Spanischer Erbfolgekrieg"],
+        "RichtigeAntwort": "Amerikanischer Unabhängigkeitskrieg",
+        "RichtigeAntwortMöglichkeiten": "Amerikanischer Unabhängigkeitskrieg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich unterstützte die amerikanischen Kolonien im Krieg gegen Großbritannien"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie starb Marie Antoinette während der Französischen Revolution?",
+        "Antworten": ["Guillotine", "Vergiftung", "Erschossen", "Ertränkt"],
+        "RichtigeAntwort": "Guillotine",
+        "RichtigeAntwortMöglichkeiten": "Guillotine kopf köpfen klinge hinrichtung geköpft",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Marie Antoinette, wurde 1993 durch die Guillotine geköpft"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man die berühmte Figur, die auf dem Gemälde 'Die Freiheit führt das Volk' dargestellt wird?",
+        "Antworten": ["Marianne", "Libertas", "Freiheitsstatue", "Justitia"],
+        "RichtigeAntwort": "Marianne",
+        "RichtigeAntwortMöglichkeiten": "Marianne",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Marianne ist eine nationale Symbolfigur der Französischen Republik, die Freiheit und Vernunft verkörpert."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Symbol der Freiheit wurde während der französischen Revolution weit verbreitet?",
+        "Antworten": ["Jakobinermütze", "Adler", "Lorbeerkranz", "Rote Fahne"],
+        "RichtigeAntwort": "Jakobinermütze",
+        "RichtigeAntwortMöglichkeiten": "Jakobinermütze",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Revolution sollte Anfangs den Bürgern mehr Freiheit geben endete jedoch mit einer Schreckensherrschaft"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die Französische Revolution offiziell?",
+        "Antworten": ["1799", "1789", "1793", "1804"],
+        "RichtigeAntwort": "1799",
+        "RichtigeAntwortMöglichkeiten": "1799",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Jahr 1799 markiert das Ende der Revolution mit Napoleons Staatsstreich des 18. Brumaire."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer beendete die Französische Revolution?",
+        "Antworten": ["Napoleon Bonaparte", "Ludwig XVI", "Maximilien Robespierre", "Marie Antoinette"],
+        "RichtigeAntwort": "Napoleon Bonaparte",
+        "RichtigeAntwortMöglichkeiten": "Napoleon Bonaparte",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Napoleon Bonaparte beendete die Französische Revolution im Jahr 1799 durch einen Staatsstreich"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welchen Titel bekam Napoleon Bonaparte im Jahr 1804?",
+        "Antworten": ["Kaiser", "König", "Präsident", "Premierminister"],
+        "RichtigeAntwort": "Kaiser",
+        "RichtigeAntwortMöglichkeiten": "Kaiser",
+        "Schwierigkeitsgrad": "schwers",
+        "Fakt": "Napoleon Bonaparte krönte sich 1804 selbst zum Kaiser von Frankreich"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Gesetzbuch ließ Napoleon Bonaparte erstellen?",
+        "Antworten": ["Code Civil", "Magna Carta", "Bill of Rights", "Constitution of the Year III"],
+        "RichtigeAntwort": "Code Civil",
+        "RichtigeAntwortMöglichkeiten": "Code Civil",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der 'Code Civil' wurde 1804 eingeführt und beeinflusste viele moderne Rechtssysteme weltweit"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Auf welcher Insel starb Napoleon Bonaparte?",
+        "Antworten": ["St. Helena", "Elba", "Korfu", "Sizilien"],
+        "RichtigeAntwort": "St. Helena",
+        "RichtigeAntwortMöglichkeiten": "St. Helena",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Nach seiner Niederlage bei Waterloo wurde Napoleon nach St. Helena verbannt, wo er 1821 starb."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land konnte Napoleon Bonaparte nie erfolgreich erobern?",
+        "Antworten": ["Russland", "Spanien", "Italien", "Österreich"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Napoleons Russlandfeldzug 1812 endete in einer katastrophalen Niederlage, hauptsächlich aufgrund des harten Winters und der Taktik der verbrannten Erde"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Land wurde Napoleon Bonaparte geboren?",
+        "Antworten": ["Frankreich", "Italien", "Österreich", "Spanien"],
+        "RichtigeAntwort": "Italien",
+        "RichtigeAntwortMöglichkeiten": "Italien",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Napoleon wurde auf der Insel Korsika geboren, die damals zu Italien gehörte"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Taktik, die die Russen während des Russlandfeldzugs von Napoleon 1812 anwendeten?",
+        "Antworten": ["Verbrannte Erde", "Blitzkrieg", "Kriegswirtschaft", "Luftangriffe"],
+        "RichtigeAntwort": "Verbrannte Erde",
+        "RichtigeAntwortMöglichkeiten": "Verbrannte Erde",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Taktik der verbrannten Erde bestand darin, dass die russischen Truppen alles zerstörten, was den anrückenden Franzosen von Nutzen sein könnte"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was geschah mit der Stadt Moskau während Napoleons Russlandfeldzug 1812?",
+        "Antworten": ["verbrannt", "überschwemmt", "Erdbeeben", "Tornado"],
+        "RichtigeAntwort": "verbrannt",
+        "RichtigeAntwortMöglichkeiten": "verlassen evakuiert brand verbrannt feuer zurückgelassen angezündet entzündet gelegt",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Als Napoleon in Moskau eintraf, fand er die Stadt fast leer vor, da die russische Armee und die Bürger sie evakuiert hatten. Zusätzlich wurde ein Großteil der Stadt in Brand gesteckt, um den Eindringlingen die Versorgung zu erschweren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher russische Zar war während Napoleons Russlandfeldzug 1812 an der Macht?",
+        "Antworten": ["Alexander I.", "Ivan IV.", "Nikolai I.", "Peter der Große"],
+        "RichtigeAntwort": "Alexander I.",
+        "RichtigeAntwortMöglichkeiten": "Alexander ",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Zar Alexander I. führte Russland während der Napoleonischen Kriege und spielte eine entscheidende Rolle im Widerstand gegen Napoleons Invasion."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann Napoleons Russlandfeldzug?",
+        "Antworten": ["1812", "1805", "1815", "1799"],
+        "RichtigeAntwort": "1812",
+        "RichtigeAntwortMöglichkeiten": "1812",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Napoleons Russlandfeldzug, auch als der Feldzug von 1812 bekannt, begann im Juni 1812 und war ein entscheidender Moment im Krieg gegen Russland."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Schlacht gilt als Napoleons erfolgreichste?",
+        "Antworten": ["Schlacht bei Austerlitz", "Schlacht bei Waterloo", "Schlacht bei Leipzig", "Schlacht bei Trafalgar"],
+        "RichtigeAntwort": "Schlacht bei Austerlitz",
+        "RichtigeAntwortMöglichkeiten": "Schlacht bei Austerlitz",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlacht bei Austerlitz, auch als die Schlacht der drei Kaiser bekannt, fand am 2. Dezember 1805 statt und gilt als eine der größten Siege Napoleons."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß Napoleons erster Feldzug?",
+        "Antworten": ["Italienfeldzug", "Ägyptenfeldzug", "Russlandfeldzug", "Preußenfeldzug"],
+        "RichtigeAntwort": "Italienfeldzug",
+        "RichtigeAntwortMöglichkeiten": "Italienfeldzug italien rom",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Napoleons erster bedeutender Feldzug war der Italienfeldzug von 1796 bis 1797, bei dem er seine militärischen Fähigkeiten unter Beweis stellte."
+    },
+    {//einfache fragen Frankreich
+        "Kategorie": "Geschichte",
+        "Frage": "Wo wurde der Eiffelturm gebaut?",
+        "Antworten": ["Frankreich", "England", "USA", "Russland"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Eiffelturm ist eines der berühmtesten Wahrzeichen von Frankreich und steht in Paris."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Land lebte Napoleon Bonaparte?",
+        "Antworten": ["Frankreich", "Spanien", "Portugal", "Belgien"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Napoleon Bonaparte war ein bedeutender Anführer und Kaiser von Frankreich im frühen 19. Jahrhundert."
+    },
+    {//Random Fragen
+        "Kategorie": "Geschichte",
+        "Frage": "Wie heißt das erste Metall, das Menschen benutzten?",
+        "Antworten": ["Kupfer", "Eisen", "Gold", "Silber"],
+        "RichtigeAntwort": "Kupfer",
+        "RichtigeAntwortMöglichkeiten": "Kupfer",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Kupfer wurde bereits in der Jungsteinzeit verwendet, etwa 9000 v. Chr."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer äußerte den Satz 'Ich weiß, dass ich nichts weiß'?",
+        "Antworten": ["Sokrates", "Plato", "Aristoteles", "Socrates"],
+        "RichtigeAntwort": "Sokrates",
+        "RichtigeAntwortMöglichkeiten": "Sokrates",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Satz 'Ich weiß, dass ich nichts weiß' wird Sokrates zugeschrieben, einem der bekanntesten Philosophen des antiken Griechenlands."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches stellte die Grenzen Europas nach den Napoleonischen Kriege wieder her?",
+        "Antworten": ["Wiener Kongress", "Pariser Vertrag", "Vertrag von Versailles", "Rheinbundakte"],
+        "RichtigeAntwort": "Wiener Kongress",
+        "RichtigeAntwortMöglichkeiten": "Wiener Kongress",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Wiener Kongress begann 1814 und endete 1815"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Revolution führte 1848 zur Gründung der Zweiten Französischen Republik?",
+        "Antworten": ["Februarrevolution", "Juli-Revolution", "Französische Revolution", "Glorreiche Revolution"],
+        "RichtigeAntwort": "Februarrevolution febuar",
+        "RichtigeAntwortMöglichkeiten": "Februarrevolution",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Februarrevolution von 1848 führte zum Sturz von Louis-Philippe und zur Gründung der Zweiten Französischen Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land führte 1870 einen Krieg gegen Frankreich?",
+        "Antworten": ["Deutschland", "Spanien", "Italien", "Österreich"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Deutsch-Französische Krieg von 1870-1871 führte zur Niederlage Frankreichs und zur Gründung des Deutschen Kaiserreichs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche französische Stadt wurde 1871 während des Deutsch-Französischen Krieges belagert und kapitulierte?",
+        "Antworten": ["Paris", "Lyon", "Marseille", "Bordeaux"],
+        "RichtigeAntwort": "Paris",
+        "RichtigeAntwortMöglichkeiten": "Paris",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Belagerung von Paris 1870-1871 während des Deutsch-Französischen Krieges führte zur Kapitulation der Stadt und dem Ende des Zweiten Kaiserreichs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag beendete den Deutsch-Französischen Krieg von 1870-1871?",
+        "Antworten": ["Friedensvertrag von Frankfurt", "Versailler Vertrag", "Vertrag von Paris", "Wiener Kongress"],
+        "RichtigeAntwort": "Friedensvertrag von Frankfurt",
+        "RichtigeAntwortMöglichkeiten": "Friedensvertrag von Frankfurt",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Friedensvertrag von Frankfurt 1871 beendete den Deutsch-Französischen Krieg und führte zur Gründung des Deutschen Kaiserreichs."
+    },
+    
+    
+    
+    {//Städte früher
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Stadt Istanbul früher, bevor sie von den Osmanen erobert wurde?",
+        "Antworten": ["Konstantinopel", "Byzanz", "Alexandria", "Antiochia"],
+        "RichtigeAntwort": "Konstantinopel",
+        "RichtigeAntwortMöglichkeiten": "Konstantinopel",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Konstantinopel wurde 330 n. Chr. von Kaiser Konstantin dem Großen gegründet und war die Hauptstadt des Byzantinischen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Stadt London im Mittelalter?",
+        "Antworten": ["Londinium", "Londres", "Londonia", "Londia"],
+        "RichtigeAntwort": "Londinium",
+        "RichtigeAntwortMöglichkeiten": "Londinium",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Londinium war der Name, den die Römer der Stadt London gaben, als sie die Stadt während der römischen Besatzung gründeten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Stadt Paris während der römischen Zeit?",
+        "Antworten": ["Lutetia", "Parisius", "Parisium", "Lutecia"],
+        "RichtigeAntwort": "Lutetia",
+        "RichtigeAntwortMöglichkeiten": "Lutetia",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Im antiken Rom war Paris als Lutetia bekannt, was den Namen der Stadt während der römischen Herrschaft widerspiegelt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Stadt New York, bevor sie von den Engländern erobert wurde?",
+        "Antworten": ["New Amsterdam", "New Paris", "New London", "Nieuw Amsterdam"],
+        "RichtigeAntwort": "New Amsterdam",
+        "RichtigeAntwortMöglichkeiten": "New Amsterdam",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "New Amsterdam war der Name der Stadt, als sie von den Niederländern gegründet wurde, bevor die Engländer sie 1664 eroberten und in New York umbenannten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Stadt Budapest früher, als sie aus zwei Städten bestand?",
+        "Antworten": ["Buda und Pest", "Buda und Óbuda", "Pest und Óbuda", "Buda und Pestburg"],
+        "RichtigeAntwort": "Buda und Pest",
+        "RichtigeAntwortMöglichkeiten": "Buda Pest",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Vor der Vereinigung im Jahr 1873 bestand Budapest aus den Städten Buda und Pest, die durch die Donau getrennt waren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Aus welchen beiden Bundesländern bestand Nordrhein-Westfalen bei seiner Gründung?",
+        "Antworten": ["Rheinland und Westfalen", "Hessen und Rheinland", "Westfalen und Bayern", "Rheinland-Pfalz und Hessen"],
+        "RichtigeAntwort": "Rheinland und Westfalen",
+        "RichtigeAntwortMöglichkeiten": "Rheinland Westfalen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Nordrhein-Westfalen wurde 1946 durch die Vereinigung der britischen Besatzungszone Rheinland und des Landes Westfalen gegründet."
+    },
+    {//Griechisches Alphabet
+        "Kategorie": "Geschichte",
+        "Frage": "Wie heißt der erste Buchstabe im griechischen Alphabet?",
+        "Antworten": ["Alpha", "Beta", "Gamma", "Delta"],
+        "RichtigeAntwort": "Alpha",
+        "RichtigeAntwortMöglichkeiten": "Alpha",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Alpha ist der erste Buchstabe des griechischen Alphabets und entspricht dem Buchstaben A im lateinischen Alphabet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches griechische Alphabet-Symbol steht für den Buchstaben B?",
+        "Antworten": ["Alpha", "Beta", "Gamma", "Delta"],
+        "RichtigeAntwort": "Beta",
+        "RichtigeAntwortMöglichkeiten": "Beta",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Beta ist der zweite Buchstabe im griechischen Alphabet und entspricht dem Buchstaben B im lateinischen Alphabet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches griechische Alphabet-Symbol steht für den Buchstaben G?",
+        "Antworten": ["Gamma", "Delta", "Epsilon", "Zeta"],
+        "RichtigeAntwort": "Gamma",
+        "RichtigeAntwortMöglichkeiten": "Gamma",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Gamma ist der dritte Buchstabe im griechischen Alphabet und entspricht dem Buchstaben G im lateinischen Alphabet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Grieschiche Buchstabe ist der letzte im Alphabeth?",
+        "Antworten": ["Omega", "Phi", "Psi", "Chi"],
+        "RichtigeAntwort": "Omega",
+        "RichtigeAntwortMöglichkeiten": "Omega",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Omega ist der letzte Buchstabe im griechischen Alphabet und steht für die letzte Position im Alphabet, ähnlich wie Z im lateinischen Alphabet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher griechische Buchstabe entspricht dem Buchstaben D im lateinischen Alphabet?",
+        "Antworten": ["Delta", "Gamma", "Sigma", "Kappa"],
+        "RichtigeAntwort": "Delta",
+        "RichtigeAntwortMöglichkeiten": "Delta",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Delta wird in der Mathematik häufig verwendet, um Änderungen oder Differenzen darzustellen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher griechische Buchstabe entspricht dem Buchstaben E?",
+        "Antworten": ["Epsilon", "Eta", "Iota", "Zeta"],
+        "RichtigeAntwort": "Epsilon",
+        "RichtigeAntwortMöglichkeiten": "Epsilon",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Epsilon wird oft verwendet, um kleine positive Werte in der Mathematik und Physik darzustellen."
+    },
+    {//Osmanisches Reich
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Reich kontrollierte das heutige Gebiet der Türkei bis zum Ende des Ersten Weltkriegs?",
+        "Antworten": ["Osmanisches Reich", "Römisches Reich", "Byzantinisches Reich", "Persisches Reich"],
+        "RichtigeAntwort": "Osmanisches Reich",
+        "RichtigeAntwortMöglichkeiten": "Osmanisches Reich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Osmanische Reich wurde nach dem Ersten Weltkrieg aufgelöst, was zur Gründung der modernen Türkei führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer gründete das Osmanische Reich im 13. Jahrhundert?",
+        "Antworten": ["Osman I", "Süleyman I", "Mehmed II", "Selim I"],
+        "RichtigeAntwort": "Osman I",
+        "RichtigeAntwortMöglichkeiten": "Osman",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Osman I gilt als der Namensgeber des Osmanischen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche berühmte Stadt eroberte das Osmanische Reich 1453?",
+        "Antworten": ["Konstantinopel", "Rom", "Bagdad", "Kairo"],
+        "RichtigeAntwort": "Konstantinopel",
+        "RichtigeAntwortMöglichkeiten": "Konstantinopel istanbul",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Eroberung von Konstantinopel durch Mehmed II. markierte das Ende des Byzantinischen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Hauptstadt Konstantinopel nach der Eroberung durch die Osmanen?",
+        "Antworten": ["Istanbul", "Bagdad", "Damaskus", "Kairo"],
+        "RichtigeAntwort": "Istanbul",
+        "RichtigeAntwortMöglichkeiten": "Istanbul",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Konstantinopel wurde in Istanbul umbenannt und blieb die Hauptstadt des Osmanischen Reiches bis zu dessen Ende."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete das Osmanische Reich offiziell?",
+        "Antworten": ["1922", "1918", "1939", "1453"],
+        "RichtigeAntwort": "1922",
+        "RichtigeAntwortMöglichkeiten": "1922",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Ende des Osmanischen Reiches führte zur Gründung der modernen Türkei unter Mustafa Kemal Atatürk"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand die berühmte Belagerung Wiens durch das Osmanische Reich statt?",
+        "Antworten": ["1683", "1453", "1571", "1529"],
+        "RichtigeAntwort": "1683",
+        "RichtigeAntwortMöglichkeiten": "1683",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die zweite Belagerung Wiens 1683 markierte das Ende der osmanischen Expansion in Europa."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wurde der oberste Herrscher im Osmanischen Reich genannt?",
+        "Antworten": ["Sultan", "Kaiser", "Khan", "Zar"],
+        "RichtigeAntwort": "Sultan",
+        "RichtigeAntwortMöglichkeiten": "Sultan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Sultan war sowohl politischer als auch religiöser Führer des Osmanischen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele große Belagerungen Wiens durch das Osmanische Reich gab es?",
+        "Antworten": ["Zwei", "Eine", "Drei", "Vier"],
+        "RichtigeAntwort": "Zwei",
+        "RichtigeAntwortMöglichkeiten": "Zwei 2",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die erste Belagerung fand 1529 statt, und die zweite, bekanntere Belagerung, 1683."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land kam Wien 1683 gegen die Osmanen zur Hilfe?",
+        "Antworten": ["Polen", "Spanien", "Frankreich", "Russland"],
+        "RichtigeAntwort": "Polen",
+        "RichtigeAntwortMöglichkeiten": "Polen litauen polen-litauen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die polnische Armee unter König Jan Sobieski spielte eine entscheidende Rolle bei der Rettung Wiens."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher berühmte osmanische Palast war das Hauptquartier der osmanischen Sultane?",
+        "Antworten": ["Topkapi-Palast", "Windsor Castle", "Louvre", "Schloss Versailles"],
+        "RichtigeAntwort": "Topkapi-Palast",
+        "RichtigeAntwortMöglichkeiten": "Topkapi-Palast",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Topkapi-Palast ist heute ein beliebtes Museum."
+    },
+
+    //////England/////
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Volk griff Großbritannien im 8. und 9. Jahrhundert häufig an?",
+        "Antworten": ["Wikinger", "Römer", "Normannen", "Franzosen"],
+        "RichtigeAntwort": "Wikinger",
+        "RichtigeAntwortMöglichkeiten": "Wikinger normannen dänemark",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Wikinger kamen hauptsächlich aus Skandinavien und waren bekannt für ihre Raubzüge."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land griff im 9. Jahrhundert Großbritannien an und besetzte Teile davon?",
+        "Antworten": ["Dänemark", "Frankreich", "Spanien", "Irland"],
+        "RichtigeAntwort": "Dänemark",
+        "RichtigeAntwortMöglichkeiten": "Dänemark",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Dänen kontrollierten zeitweise große Teile Englands, die als Danelaw bekannt wurden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Volk kam nach den Römern und bevor die Normannen England eroberten?",
+        "Antworten": ["Angelsachsen", "Wikinger", "Kelten", "Franken"],
+        "RichtigeAntwort": "Angelsachsen",
+        "RichtigeAntwortMöglichkeiten": "Angelsachsen angeln jüten sachsen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Angelsachsen siedelten in England nach dem Fall des Römischen Reiches und vor der normannischen Eroberung."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Volk lebte vor den Römern in England?",
+        "Antworten": ["Kelten", "Angelsachsen", "Normannen", "Wikinger"],
+        "RichtigeAntwort": "Kelten",
+        "RichtigeAntwortMöglichkeiten": "Kelten",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Kelten bewohnten England vor der römischen Eroberung im Jahr 43 n. Chr."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der berühmte dänische König, der England in den 11. Jahrhundert anführte?",
+        "Antworten": ["König Knut", "König Harald", "König Sven", "König Gorm"],
+        "RichtigeAntwort": "König Knut",
+        "RichtigeAntwortMöglichkeiten": "Knut",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "König Knut der Große, auch bekannt als Knut der Große, regierte über Dänemark, Norwegen und England"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Dokument aus dem Jahr 1215 beeinflusste die englische Regierung bis ins 14. Jahrhundert?",
+        "Antworten": ["Magna Carta", "Bill of Rights", "Petition of Right", "Act of Supremacy"],
+        "RichtigeAntwort": "Magna Carta",
+        "RichtigeAntwortMöglichkeiten": "Magna Carta",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Magna Carta legte den Grundstein für die Einschränkung der Macht des Königs"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher englische Monarch besiegte die spanische Armada 1588?",
+        "Antworten": ["Elisabeth I.", "Heinrich VIII.", "Maria I.", "Eduard VI."],
+        "RichtigeAntwort": "Elisabeth I.",
+        "RichtigeAntwortMöglichkeiten": "Elisabeth",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die spanische Armada wurde 1588 von der Flotte unter Elisabeth I. besiegt, was Englands Stellung als aufstrebende Seemacht festigte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die große spanische Flotte, die gegen England segelte?",
+        "Antworten": ["Armada", "Flotte", "Caravel", "Galeonen"],
+        "RichtigeAntwort": "Armada",
+        "RichtigeAntwortMöglichkeiten": "Armada",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Armada war eine große spanische Kriegsflotte, die 1588 gegen England segelte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahrhundert regierte Königin Elisabeth I. in England?",
+        "Antworten": ["16. Jahrhundert", "15. Jahrhundert", "17. Jahrhundert", "18. Jahrhundert"],
+        "RichtigeAntwort": "16. Jahrhundert",
+        "RichtigeAntwortMöglichkeiten": "16. 16 sechszehntes 16tes",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Elisabeth I. regierte von 1558 bis 1603 und brachte England in eine Blütezeit."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war die Mutter von Königin Elisabeth I.?",
+        "Antworten": ["Anne Boleyn", "Maria Stuart", "Jane Seymour", "Katharina von Aragon"],
+        "RichtigeAntwort": "Anne Boleyn",
+        "RichtigeAntwortMöglichkeiten": "Anne Boleyn",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Anne Boleyn war die zweite Frau von Heinrich VIII. und wurde 1536 hingerichtet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "welcher berühmte Dichter und Dramatiker lebte im 16. Jahrhundert?",
+        "Antworten": ["William Shakespeare", "Geoffrey Chaucer", "John Milton", "Christopher Marlowe"],
+        "RichtigeAntwort": "William Shakespeare",
+        "RichtigeAntwortMöglichkeiten": "William Shakespeare",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "William Shakespeare schrieb viele seiner berühmtesten Werke während der Regierungszeit von Elisabeth I."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war die Schwester von Anne Boleyn, die ebenfalls am englischen Hof bekannt war?",
+        "Antworten": ["Mary Boleyn", "Jane Seymour", "Katharina von Aragon", "Elizabeth Boleyn"],
+        "RichtigeAntwort": "Mary Boleyn",
+        "RichtigeAntwortMöglichkeiten": "Mary",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mary Boleyn war eine frühere Geliebte von Heinrich VIII. vor Anne."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vorwurf führte zur Hinrichtung von Anne Boleyn im Jahr 1536?",
+        "Antworten": ["Ehebruch", "Verrat gegen Heinrich VIII.", "Verweigerung der Scheidung", "Hexerei"],
+        "RichtigeAntwort": "Ehebruch",
+        "RichtigeAntwortMöglichkeiten": "Ehebruch bruder geschlechtsverkehr verrat hochverrat sex affäre fremdgehen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Anne Boleyn wurde beschuldigt, Affären mit mehreren Männern, darunter ihrem eigenen Bruder, gehabt zu haben"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Altersgruppe hatte im Mittelalter die höchste Sterblichkeitsrate?",
+        "Antworten": ["Erwachsene", "Kinder", "Jugendliche", "Ältere Erwachsene"],
+        "RichtigeAntwort": "Kinder",
+        "RichtigeAntwortMöglichkeiten": "Kinder",
+        "Schwierigkeitsgrad": "einfach",
+        "Fakt": "Im Mittelalter war die Sterblichkeitsrate bei Kindern aufgrund von Krankheiten, Mangelernährung und fehlender medizinischer Versorgung besonders hoch"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Ehepartner hatte Heinrich VIII. während seiner Regierungszeit?",
+        "Antworten": ["Vier", "Sechs", "Fünf", "Drei"],
+        "RichtigeAntwort": "Sechs",
+        "RichtigeAntwortMöglichkeiten": "Sechs 6",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Heinrich VIII. war für seine sechs Ehen bekannt, was große Auswirkungen auf die politische und religiöse Landschaft Englands hatte"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die erste Frau von Heinrich VIII., deren Scheidung den Bruch mit der katholischen Kirche auslöste?",
+        "Antworten": ["Anne Boleyn", "Katherine Howard", "Jane Seymour", "Katherine von Aragon"],
+        "RichtigeAntwort": "Katherine von Aragon",
+        "RichtigeAntwortMöglichkeiten": "Katherine Aragon",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Heinrich VIII. wollte sich von Katherine von Aragon scheiden lassen, um Anne Boleyn zu heiraten"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Religion gründete Heinrich VIII. nach seiner Trennung von der katholischen Kirche?",
+        "Antworten": ["Katholizismus", "Anglikanismus", "Protestantismus", "Orthodoxie"],
+        "RichtigeAntwort": "Anglikanismus",
+        "RichtigeAntwortMöglichkeiten": "Anglikanismus",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Heinrich VIII. gründete die anglikanische Kirche (Church of England), um seine Scheidung von Katharina von Aragon durchzusetzen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Parlament wurde 1707 gegründet und vereinte England und Schottland?",
+        "Antworten": ["Englisches Parlament", "Schottisches Parlament", "Irisches Parlament", "Britisches Parlament"],
+        "RichtigeAntwort": "Britisches Parlament",
+        "RichtigeAntwortMöglichkeiten": "Britisches",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Britische Parlament wurde 1707 durch die Vereinigung von England und Schottland geschaffen"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches tragische Ereignis traf Irland in den 1840er Jahren?",
+        "Antworten": ["Pest", "Hungersnot", "Krieg", "Revolution"],
+        "RichtigeAntwort": "Hungersnot",
+        "RichtigeAntwortMöglichkeiten": "Hungersnot hunger",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Große Hungersnot in Irland (1845-1852) führte zu massiven Hungertoten und einer großen Auswanderungswelle."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag führte zur politischen Vereinigung von England und Schottland?",
+        "Antworten": ["Act of Union", "Treaty of Edinburgh", "Treaty of London", "Union of Crowns"],
+        "RichtigeAntwort": "Act of Union",
+        "RichtigeAntwortMöglichkeiten": "Act Union",
+        "Schwierigkeitsgrad": "einfach",
+        "Fakt": "Der Act of Union von 1707 führte zur Gründung des Königreichs Großbritannien"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wird das Zeitalter genannt, das nach Königin Victoria benannt ist?",
+        "Antworten": ["Viktorianisches Zeitalter", "Tudor-Zeitalter", "Edwardianisches Zeitalter", "Georgisches Zeitalter"],
+        "RichtigeAntwort": "Viktorianisches Zeitalter",
+        "RichtigeAntwortMöglichkeiten": "Viktorianisches",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das viktorianische Zeitalter war geprägt von industriellem Fortschritt und der Expansion des britischen Empire."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Monarchin regierte Großbritannien während des 19. Jahrhunderts?",
+        "Antworten": ["Queen Victoria", "Queen Elizabeth I.", "Queen Anne", "Queen Mary I."],
+        "RichtigeAntwort": "Queen Victoria",
+        "RichtigeAntwortMöglichkeiten": "Victoria",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Queen Victoria war die am längsten regierende britische Monarchin des 19. Jahrhunderts, ihre Herrschaft dauerte 63 Jahre."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches bedeutende Wahrzeichen wurde 1858 unter queen Victoria in London fertiggestellt?",
+        "Antworten": ["Big Ben", "Tower Bridge", "Buckingham Palace", "Westminster Abbey"],
+        "RichtigeAntwort": "Big Ben",
+        "RichtigeAntwortMöglichkeiten": "Big Ben",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Glockenturm, heute bekannt als Big Ben, wurde 1858 fertiggestellt und ist ein Symbol Londons."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Monarch folgte direkt auf Queen Victoria?",
+        "Antworten": ["Edward VII.", "George V.", "William IV.", "Elizabeth II."],
+        "RichtigeAntwort": "Edward VII.",
+        "RichtigeAntwortMöglichkeiten": "Edward",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Nach dem Tod von Queen Victoria im Jahr 1901 wurde ihr Sohn Edward VII. König von Großbritannien"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was begann 1642 in England?",
+        "Antworten": ["Bürgerkrieg", "Industrielle Revolution", "Revolution", "Napoleonische Kriege"],
+        "RichtigeAntwort": "Bürgerkrieg",
+        "RichtigeAntwortMöglichkeiten": "Bürgerkrieg",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Englische Bürgerkrieg begann 1642 und war ein Konflikt zwischen den Anhängern des Königs und des Parlaments."
+    },
+    { //7 jährige Krieg
+        "Kategorie": "Geschichte",
+        "Frage": "Wann begann der Siebenjährige Krieg?",
+        "Antworten": ["1756", "1740", "1763", "1776"],
+        "RichtigeAntwort": "1756",
+        "RichtigeAntwortMöglichkeiten": "1756",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Im Siebenjährige Krieg (1756–1763) kämpften Großbritannien, Preußen, Portugal gegen Frankreich, Österreich, Russland, Spanien"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land war ein Hauptgegner von Preußen im Siebenjährigen Krieg?",
+        "Antworten": ["Österreich", "Frankreich", "Russland", "Spanien"],
+        "RichtigeAntwort": "Österreich",
+        "RichtigeAntwortMöglichkeiten": "Österreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Im Siebenjährige Krieg (1756–1763) kämpften Großbritannien, Preußen, Portugal gegen Frankreich, Österreich, Russland, Spanien"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der König von Preußen während des Siebenjährigen Krieges?",
+        "Antworten": ["Friedrich II.", "Ludwig XIV.", "Peter der Große", "Maria Theresia"],
+        "RichtigeAntwort": "Friedrich II.",
+        "RichtigeAntwortMöglichkeiten": "Friedrich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Friedrich II., auch Friedrich der Große genannt, führte Preußen durch den Siebenjährigen Krieg gegen Frankreich und Österreich"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag beendete den Siebenjährigen Krieg?",
+        "Antworten": ["Frieden von Paris", "Vertrag von Versailles", "Frieden von Utrecht", "Vertrag von Tordesillas"],
+        "RichtigeAntwort": "Frieden von Paris",
+        "RichtigeAntwortMöglichkeiten": "Frieden Paris",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Im Siebenjährige Krieg (1756–1763) kämpften Großbritannien, Preußen, Portugal gegen Frankreich, Österreich, Russland, Spanien"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Gegen welches Land kämpfte Großbritannien im Siebenjährigen Krieg um die Kontrolle über Nordamerika?",
+        "Antworten": ["Frankreich", "Spanien", "Portugal", "Holland"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Konflikt in Nordamerika während des Siebenjährigen Krieges wird oft als der Indianerkrieg bezeichnet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Krieg, in dem im 18. Jahrhundert alle europäischen Großmächte beteiligt waren?",
+        "Antworten": ["Siebenjähriger Krieg", "Napoleonischer Krieg", "Dreißigjähriger Krieg", "Krieg der Spanischen Erbfolge"],
+        "RichtigeAntwort": "Siebenjähriger Krieg",
+        "RichtigeAntwortMöglichkeiten": "Siebenjähriger 7 sieben",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Im Siebenjährige Krieg (1756–1763) kämpften Großbritannien, Preußen, Portugal gegen Frankreich, Österreich, Russland, Spanien"
+    },
+    { //80 Jährige Krieg Niederlande
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Krieg markierte 1581 die Unabhängigkeit der Niederlande von Spanien?",
+        "Antworten": ["Der Achtzigjährige Krieg", "Die Französische Revolution", "Der Dreißigjährige Krieg", "Die Englische Revolution"],
+        "RichtigeAntwort": "Der Achtzigjährige Krieg",
+        "RichtigeAntwortMöglichkeiten": "Achtzigjährige 80 Achtzig",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Achtzigjährige Krieg war ein langwieriger Konflikt zwischen den niederländischen Provinzen und dem spanischen Habsburgerreich, der zur Unabhängigkeit der Niederlande führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche historischen Friedensverträge führten 1648 zur Anerkennung der Unabhängigkeit der Niederlande?",
+        "Antworten": ["Der Westfälische Frieden", "Die Gründung der VOC", "Die Schlacht bei Waterloo", "Der Berliner Kongress"],
+        "RichtigeAntwort": "Der Westfälische Frieden",
+        "RichtigeAntwortMöglichkeiten": "Der Westfälische Frieden",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Westfälische Frieden betsand aus Zwei Friedensverträgen die 1648 in Münster und Osnabrück geschlossen wurden"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Krieg fand im 16. und 17. Jahrhundert zwischen Spanien und Niederlande statt?",
+        "Antworten": ["Der Achtzigjährige Krieg", "Der Dreißigjährige Krieg", "Der Siebenjährige Krieg", "Der Napoleonskrieg"],
+        "RichtigeAntwort": "Der Achtzigjährige Krieg",
+        "RichtigeAntwortMöglichkeiten": "Der Achtzigjährige Krieg",
+        "Schwierigkeitsgrad": "extrems",
+        "Fakt": "Der Achtzigjährige Krieg dauerte von 1568 bis 1648 und führte zur Unabhängigkeit der Niederlande von der spanischen Herrschaft."
+    },
+    {//Deutsche Geschichte
+        "Kategorie": "Geschichte",
+        "Frage": "Welches heutige Land war im Mittelalter der größte Bestandteil des Heiligen Römischen Reiches?",
+        "Antworten": ["Deutschland", "Frankreich", "England", "Spanien"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Heilige Römische Reich war ein Zusammenschluss vieler kleinerer Fürstentümer und Städte im heutigen Deutschland"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche historische Figur war der erste König des vereinigten Deutschlands nach der Napoleonischen Ära?",
+        "Antworten": ["Wilhelm I.", "Friedrich der Große", "Otto von Bismarck", "Karl der Große"],
+        "RichtigeAntwort": "Wilhelm I.",
+        "RichtigeAntwortMöglichkeiten": "Wilhelm",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Wilhelm I. wurde 1871 zum ersten Kaiser des neu gegründeten Deutschen Reiches gekrönt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher preußische König war bekannt als der Große?",
+        "Antworten": ["Friedrich II.", "Wilhelm I.", "Friedrich Wilhelm III.", "Otto von Bismarck"],
+        "RichtigeAntwort": "Friedrich II.",
+        "RichtigeAntwortMöglichkeiten": "Friedrich",
+        "Schwierigkeitsgrad": "",
+        "Fakt": "Friedrich der Große führte Preußen zu militärischen Erfolgen im Siebenjährigen Krieg"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher König sagte: 'Der König ist der erste Diener des Staates'?",
+        "Antworten": ["Friedrich der Große", "Wilhelm II.", "Friedrich Wilhelm I.", "Friedrich III."],
+        "RichtigeAntwort": "Friedrich der Große",
+        "RichtigeAntwortMöglichkeiten": "Friedrich",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Friedrich der Große führte Preußen zu militärischen Erfolgen im Siebenjährigen Krieg"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste König von Preußen?",
+        "Antworten": ["Friedrich I.", "Friedrich der Große", "Wilhelm I.", "Friedrich Wilhelm I."],
+        "RichtigeAntwort": "Friedrich I.",
+        "RichtigeAntwortMöglichkeiten": "Friedrich I.",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Friedrich I. wurde 1701 zum ersten König von Preußen gekrönt"
+    },
+    { //Otto von Bismark und Vereinigung deutschlands
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Person vereinigte das Deutsche Kaiserreich?",
+        "Antworten": ["Otto von Bismarck", "Wilhelm I.", "Friedrich der Große", "Helmut Kohl"],
+        "RichtigeAntwort": "Otto von Bismarck",
+        "RichtigeAntwortMöglichkeiten": "Otto von Bismarck",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Otto von Bismarck "
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Otto von Bismarck Reichskanzler?",
+        "Antworten": ["1871", "1862", "1888", "1848"],
+        "RichtigeAntwort": "1871",
+        "RichtigeAntwortMöglichkeiten": "1871",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "1871 wurde das Deutsche Reich gegründet, und Bismarck wurde zum Reichskanzler ernannt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie lautet der Name des Bismarck'schen Bündnisses, das Preußen mit anderen europäischen Mächten zur Wahrung des Friedens schloss?",
+        "Antworten": ["Dreikaiserbund", "Zweibund", "Dreibund", "Vierbund"],
+        "RichtigeAntwort": "Dreibund",
+        "RichtigeAntwortMöglichkeiten": "Dreibund drei",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Dreibund war ein Bündnis zwischen Deutschland, Österreich-Ungarn und Italien, das 1882 geschlossen wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer sagte, dass Konflikte durch „Eisen und Blut“ entschieden werden?",
+        "Antworten": ["Otto von Bismarck", "Wilhelm I.", "Napoleon Bonaparte", "Helmuth von Moltke"],
+        "RichtigeAntwort": "Otto von Bismarck",
+        "RichtigeAntwortMöglichkeiten": "Otto von Bismarck",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bismarck hielt diese Rede 1862, bevor er die deutsche Vereinigung vorantrieb."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher europäische Krieg fand 1870/71 statt?",
+        "Antworten": ["Deutsch-Französischer Krieg", "Erster Weltkrieg", "Deutsch-Österreichischer Krieg", "Napoleonische Kriege"],
+        "RichtigeAntwort": "Deutsch-Französischer Krieg",
+        "RichtigeAntwortMöglichkeiten": "Deutsch-Französischer deutsch frankreich französischer deutscher französisch",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Deutsch-Französische Krieg führte zur Gründung des Deutschen Reiches und zur Entstehung von Frankreichs Dritte Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welchen Titel trug Otto von Bismarck im Deutschen Reich?",
+        "Antworten": ["Reichskanzler", "Kaiser", "König", "Fürst"],
+        "RichtigeAntwort": "Reichskanzler",
+        "RichtigeAntwortMöglichkeiten": "Reichskanzler kanzler",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Bismarck war der erste Reichskanzler des 1871 gegründeten Deutschen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Kriege führte Otto von Bismarck zur Einigung Deutschlands?",
+        "Antworten": ["Drei", "Zwei", "Vier", "Fünf"],
+        "RichtigeAntwort": "Drei",
+        "RichtigeAntwortMöglichkeiten": "Drei 3",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bismarck führte drei Kriege gegen Dänemark, Österreich und Frankreich, die zur deutschen Einigung führten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Kaiser des Deutschen Kaiserreichs?",
+        "Antworten": ["Wilhelm I.", "Friedrich III.", "Wilhelm II.", "Otto von Bismarck"],
+        "RichtigeAntwort": "Wilhelm I.",
+        "RichtigeAntwortMöglichkeiten": "Wilhelm",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Wilhelm I. wurde 1871 zum ersten Kaiser,während Otto von Bismarck zum Reichskanzler wurde"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welchen wichtigen Vertrag schloss Otto von Bismarck nach dem Deutsch-Französischen Krieg?",
+        "Antworten": ["Frankfurter Frieden", "Wiener Kongress", "Vertrag von Versailles", "Prager Frieden"],
+        "RichtigeAntwort": "Frankfurter Frieden",
+        "RichtigeAntwortMöglichkeiten": "Frankfurter",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Frankfurter Frieden von 1871 führte zum Gebietsverlust Elsass-Lothringens von Frankreich an Deutschland"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Gebiet bekam Deutschland nach dem Deutsch-Französischen Krieg 1871?",
+        "Antworten": ["Elsass-Lothringen", "Saarland", "Bayern", "Versailles"],
+        "RichtigeAntwort": "Elsass-Lothringen",
+        "RichtigeAntwortMöglichkeiten": "Elsass-Lothringen Lothringen Elsass",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nach dem Deutsch-Französischen Krieg 1871 annektierte Deutschland Elsass-Lothringen von Frankreich"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land versuchte Bismarck durch seine Außenpolitik von Europa zu isolieren?",
+        "Antworten": ["Frankreich", "Österreich", "Russland", "Italien"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bismarck isolierte Frankreich diplomatisch, um die Gefahr eines französischen Rachekriegs nach 1871 zu minimieren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte 1889 die gesetzliche Rentenversicherung in Deutschland ein?",
+        "Antworten": ["Otto von Bismarck", "Wilhelm I.", "Friedrich III.", "Ludwig Erhard"],
+        "RichtigeAntwort": "Otto von Bismarck",
+        "RichtigeAntwortMöglichkeiten": "Otto Bismarck",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Otto von Bismarck führte 1889 zur Absicherung der Arbeiter die gesetzliche Rentenversicherung ein"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Königreich führte die Vereinigung Deutschlands 1871 an?",
+        "Antworten": ["Preußen", "Bayern", "Sachsen", "Hessen"],
+        "RichtigeAntwort": "Preußen",
+        "RichtigeAntwortMöglichkeiten": "Preußen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Preußen spielte die führende Rolle in der Vereinigung Deutschlands unter Otto von Bismarck"
+    },
+
+    /////Kolonialisierung/////
+
+    { //Spanien und Portugal
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Brasilien im 16. Jahrhundert?",
+        "Antworten": ["Portugal", "Spanien", "Niederlande", "England"],
+        "RichtigeAntwort": "Portugal",
+        "RichtigeAntwortMöglichkeiten": "Portugal",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Portugal begann 1500 mit der Eroberung Brasiliens, das später die wichtigste Kolonie des Landes wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte die Philippinen im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Spanien kolonialisierte die Philippinen im Jahr 1565, benannt nach König Philipp II."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte die größten Teile Süd- und Nordamerikas?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Abgesehen von Brasilien nahm Spanien ganz Südamerika bis hin zu Teilen der heutigen Usa ein"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Chile im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Chile blieb bis zum frühen 19. Jahrhundert unter spanischer Herrschaft"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Argentinien im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "Niederlande"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Argentiniens Hauptstadt, Buenos Aires, wurde 1536 unter Spanien gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Mexiko im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Hauptstadt Mexiko-Stadt wurde auf den Ruinen von Tenochtitlan erbaut"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Peru im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Hauptstadt Lima 1535 gegründet wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Kolumbien im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Niederlande", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kolumbien wurde im 16. Jahrhundert von Spanien eingenommen und wurde als Neu-Granada bekannt"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Venezuela im 16. Jahrhundert?",
+        "Antworten": ["Spanien", "Portugal", "Frankreich", "England"],
+        "RichtigeAntwort": "Spanien",
+        "RichtigeAntwortMöglichkeiten": "Spanien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanien kolonialisierte Venezuela, und Caracas wurde 1567 gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "WAs ist ein anderes Wort für Kolonialisieren?",
+        "Antworten": ["Besiedeln", "Verteidigen", "Finanzieren", "Gründen"],
+        "RichtigeAntwort": "Besiedeln",
+        "RichtigeAntwortMöglichkeiten": "Besiedeln Ansiedlung Besiedelung Landnahme Erschließung einnehmen erobern angreifen nutzen unterwerfen besetzen annexieren",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Kolonialisierung bezieht sich auf das Besiedeln und Kontrollieren eines fremden Gebiets durch eine andere Nation."
+    },
+    { //Kolonialisieren von Europa
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land kolonialisierte Indien im 18. und 19. Jahrhundert?",
+        "Antworten": ["Großbritannien", "Frankreich", "Spanien", "Portugal"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischens",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Großbritannien etablierte die Britische Ostindien-Kompanie, die ab dem 18. Jahrhundert eine dominierende Rolle in Indien spielte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land gründete die Kolonie Kap der Guten Hoffnung?",
+        "Antworten": ["Niederlande", "Spanien", "Portugal", "Frankreich"],
+        "RichtigeAntwort": "Niederlande",
+        "RichtigeAntwortMöglichkeiten": "Niederlande holland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Niederländer gründeten die Kolonie Kap der Guten Hoffnung 1652 als Handelsstation an der Südspitze Afrikas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land gründete die Kolonie Kongo?",
+        "Antworten": ["Belgien", "Frankreich", "Niederlande", "Portugal"],
+        "RichtigeAntwort": "Belgien",
+        "RichtigeAntwortMöglichkeiten": "Belgien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Belgier König Leopold II. gründete den Freistaat Kongo, der später zu Belgisch-Kongo wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kontrollierte die Kolonie Algerien?",
+        "Antworten": ["Frankreich", "Großbritannien", "Spanien", "Portugal"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Algeriens blieb bis zur Unabhängigkeit 1962 unter französischer Kontrolle blieb."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land besetzte das heutige Indonesien im 17. Jahrhundert?",
+        "Antworten": ["Niederlande", "Spanien", "Frankreich", "Großbritannien"],
+        "RichtigeAntwort": "Niederlande",
+        "RichtigeAntwortMöglichkeiten": "Niederlande",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Niederländer gründeten die Niederländische Ostindien-Kompanie und kolonialisierten Teile Indonesiens ab dem 17. Jahrhundert."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land nahm Australien im 19. Jahrhundert ein?",
+        "Antworten": ["Großbritannien", "Frankreich", "Niederlande", "Portugal"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Großbritannien begann 1788 mit der Kolonialisierung Australiens, das ursprünglich als Sträflingskolonie gegründet wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land kontrollierte das Gebiet von Hongkong bis 1997?",
+        "Antworten": ["Großbritannien", "Portugal", "Niederlande", "Spanien"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Großbritannien kontrollierte Hongkong von 1842 bis 1997, als die Stadt an China zurückgegeben wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land nahm Namibia ein?",
+        "Antworten": ["Deutschland", "Portugal", "Frankreich", "Großbritannien"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland deutsches",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Deutschland kolonialisierte Namibia, das früher als Deutsch-Südwestafrika bekannt war, von 1884 bis 1915."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land kolonialisierte Kanada zuerst?",
+        "Antworten": ["Frankreich", "Spanien", "Portugal", "Niederlande"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich begann 1534 vor Enland mit der Kolonialisierung von Kanada"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land nahm die Vereinigten Staaten von Amerika im 17. Jahrhundert ein?",
+        "Antworten": ["Großbritannien", "Frankreich", "Spanien", "Niederlande"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Großbritannien gründete 1607 die erste permanente englische Kolonie in Jamestown, Virginia, die zur Grundlage der USA wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Südafrika im 17. Jahrhundert?",
+        "Antworten": ["Niederlande", "Frankreich", "Spanien", "Großbritannien"],
+        "RichtigeAntwort": "Niederlande",
+        "RichtigeAntwortMöglichkeiten": "Niederlande",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Niederländer gründeten 1652 eine Handelsstation am Kap der Guten Hoffnung"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land kontrollierte Madagaskar?",
+        "Antworten": ["Frankreich", "Spanien", "Niederlande", "Portugal"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich machte Madagaskar 1897 zu einer Kolonie, die bis zur Unabhängigkeit 1960 unter französischer Kontrolle stand."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land begann 1652 mit der Kolonialisierung von Neuseeland?",
+        "Antworten": ["Niederlande", "Großbritannien", "Frankreich", "Portugal"],
+        "RichtigeAntwort": "Niederlande",
+        "RichtigeAntwortMöglichkeiten": "Niederlande holland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Niederländer entdeckten Neuseeland 1642, begannen aber erst 1652 mit der Erschließung der Region, bevor die Briten die Kolonie übernahmen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kontrollierte Vietnam, Laos und Kambodscha im 19. und 20. Jahrhundert?",
+        "Antworten": ["Frankreich", "Großbritannien", "Niederlande", "Spanien"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Frankreich kolonialisierte Indochina, das heutige Vietnam, Laos und Kambodscha, ab 1887 bis zur Unabhängigkeit 1954."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches europäische Land kontrollierte Ägypten während des 19. Jahrhunderts?",
+        "Antworten": ["Großbritannien", "Frankreich", "Spanien", "Portugal"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Großbritannien übernahm 1882 die Kontrolle über Ägypten und behielt es bis zur Unabhängigkeit 1952."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Ghana im 19. Jahrhundert?",
+        "Antworten": ["Großbritannien", "Frankreich", "Deutschland", "Portugal"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Großbritannien begann 1821 mit der Kolonialisierung der Goldküste, die später als Ghana bekannt wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Angola?",
+        "Antworten": ["Portugal", "Frankreich", "Spanien", "Niederlande"],
+        "RichtigeAntwort": "Portugal",
+        "RichtigeAntwortMöglichkeiten": "Portugal",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Portugal begann 1575 mit der Kolonialisierung von Angola, das bis zur Unabhängigkeit 1975 portugiesisch blieb."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche war die größte Kolonie des Britischen Reiches?",
+        "Antworten": ["Indien", "Kanada", "Australien", "Südafrika"],
+        "RichtigeAntwort": "Indien",
+        "RichtigeAntwortMöglichkeiten": "Indien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Indien war die größte und wirtschaftlich wichtigste Kolonie des Britischen Empire, bekannt als die  des Empire."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches war das größte Kolonialreich in der Geschichte?",
+        "Antworten": ["Britisches Reich", "Frankreich", "China", "Spanien"],
+        "RichtigeAntwort": "Britisches Reich",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Britische Empire war das größte Kolonialreich der Geschichte, und Indien war die bedeutendste und größte Kolonie innerhalb dieses Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche war die wichtigste Kolonie des Britischen Empire?",
+        "Antworten": ["Indien", "Kanada", "Australien", "Südafrika"],
+        "RichtigeAntwort": "Indien",
+        "RichtigeAntwortMöglichkeiten": "Indien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Indien war die größte und wirtschaftlich wichtigste K"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Kolonie war flächenmäßig die größte innerhalb des Britischen Empire?",
+        "Antworten": ["Kanada", "Indien", "Australien", "Südafrika"],
+        "RichtigeAntwort": "Kanada",
+        "RichtigeAntwortMöglichkeiten": "Kanada",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kanada war die größte Kolonie des Britischen Empire nach Fläche, mit einer Ausdehnung von über 9 Millionen Quadratkilometern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Konferenz legte die Regeln für die koloniale Aufteilung Afrikas fest?",
+        "Antworten": ["Berliner Konferenz", "Wiener Kongress", "Friedensvertrag von Versailles", "Jalta-Konferenz"],
+        "RichtigeAntwort": "Berliner Konferenz",
+        "RichtigeAntwortMöglichkeiten": "Berliner",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Berliner Konferenz von 1884-1885 regelte die koloniale Aufteilung Afrikas unter den europäischen Mächten, um Konflikte zu vermeiden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann die Berliner Konferenz zur Aufteilung Afrikas?",
+        "Antworten": ["1884", "1875", "1900", "1890"],
+        "RichtigeAntwort": "1884",
+        "RichtigeAntwortMöglichkeiten": "1884",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Berliner Konferenz begann im Jahr 1884 und war ein entscheidendes Ereignis für die koloniale Aufteilung Afrikas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer leitete die Berliner Konferenz zur Aufteilung Afrikas?",
+        "Antworten": ["Otto von Bismarck", "Winston Churchill", "Napoleon III.", "Leopold II."],
+        "RichtigeAntwort": "Otto von Bismarck",
+        "RichtigeAntwortMöglichkeiten": "Otto Bismarck",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Otto von Bismarck, der deutsche Kanzler, leitete die Berliner Konferenz und spielte eine zentrale Rolle bei der Regelung der kolonialen Aufteilung Afrikas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Kontinent wurde im 19. Jahrhundert von Europa kolonialisiert?",
+        "Antworten": ["Afrika", "Asien", "Südamerika", "Ozeanien"],
+        "RichtigeAntwort": "Afrika",
+        "RichtigeAntwortMöglichkeiten": "Afrika",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Im 19. Jahrhundert erlebte Afrika eine umfassende Kolonialisierung durch europäische Mächte, insbesondere während der sogenannten 'Scramble for Africa'."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land war das erste auf der Welt, das den Sklavenhandel offiziell abschaffte?",
+        "Antworten": ["Dänemark", "Großbritannien", "Haiti", "Vereinigte Staaten"],
+        "RichtigeAntwort": "Dänemark",
+        "RichtigeAntwortMöglichkeiten": "Dänemark",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Dänemark schaffte den transatlantischen Sklavenhandel 1792 ab und war damit das erste Land, das diesen Handel offiziell verbot."
+    },
+    {//Schweden norwegen finnland
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land hatte Schweden im 17. Jahrhundert oft unter Kontrolle?",
+        "Antworten": ["Finnland", "Dänemark", "Norwegen", "Island"],
+        "RichtigeAntwort": "Finnland",
+        "RichtigeAntwortMöglichkeiten": "Finnland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Im 17. Jahrhundert war Finnland Teil des Schwedischen Reiches, bevor es 1809 an Russland abgetreten wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste König von Schweden?",
+        "Antworten": ["Gustav I. Vasa", "Karl XII.", "Erik XIV.", "Gustav II. Adolf"],
+        "RichtigeAntwort": "Gustav I. Vasa",
+        "RichtigeAntwortMöglichkeiten": "Gustav Vasa",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Gustav I. Vasa wurde 1523 König von Schweden und ist als Gründer des modernen schwedischen Staates bekannt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher König vereinte Norwegen im 9. Jahrhundert?",
+        "Antworten": ["Harald Hårfagre", "Olav Tryggvason", "Magnus Haraldsson", "Erik Blut-Axe"],
+        "RichtigeAntwort": "Harald Hårfagre",
+        "RichtigeAntwortMöglichkeiten": "Harald Hårfagre Harfagre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Harald Hårfagre war der erste König, der Norwegen im 9. Jahrhundert vereinte und gilt als der Begründer des norwegischen Königreichs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Union vereinte Schweden, Norwegen und Dänemark im 14. Jahrhundert?",
+        "Antworten": ["Kalmar Union", "Schweden-Union", "Nordische Union", "Dänen-Schweden-Koalition"],
+        "RichtigeAntwort": "Kalmar Union",
+        "RichtigeAntwortMöglichkeiten": "Kalmar",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Kalmar Union wurde 1397 gegründet und verband die drei Königreiche Schweden, Norwegen und Dänemark unter einem Monarchen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Norwegen unabhängig von Schweden?",
+        "Antworten": ["1905", "1814", "1821", "1898"],
+        "RichtigeAntwort": "1905",
+        "RichtigeAntwortMöglichkeiten": "1905",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Norwegen wurde 1905 unabhängig von Schweden nach einem friedlichen Referendum, das die Trennung von der Union beschloss."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Vertrag, der 1905 die Unabhängigkeit Norwegens von Schweden bestätigte?",
+        "Antworten": ["Vertrag von Karlstad", "Vertrag von Oslo", "Vertrag von Kiel", "Vertrag von Stockholm"],
+        "RichtigeAntwort": "Vertrag von Karlstad",
+        "RichtigeAntwortMöglichkeiten": "Vertrag von Karlstad",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Vertrag von Karlstad, unterzeichnet 1905, regelte die Bedingungen für die Unabhängigkeit Norwegens von Schweden."
+    },
+    {//Nordischer Krieg
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land führte den Großen Nordischen Krieg von 1700 bis 1721 gegen Schweden an?",
+        "Antworten": ["Russland", "Dänemark", "Preußen", "Norwegen"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Russland, unter der Führung von Peter dem Großen, war einer der Hauptgegner Schwedens im Großen Nordischen Krieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete der Große Nordische Krieg?",
+        "Antworten": ["1721", "1715", "1700", "1730"],
+        "RichtigeAntwort": "1721",
+        "RichtigeAntwortMöglichkeiten": "1721",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Große Nordische Krieg endete 1721 mit dem Frieden von Nystad, der das Ende der schwedischen Großmachtperiode markierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Gebiet erlangte Russland nach dem Großen Nordischen Krieg durch den Frieden von Nystad?",
+        "Antworten": ["Baltische Staaten", "Finnland", "Polen", "Schlesien"],
+        "RichtigeAntwort": "Baltische Staaten",
+        "RichtigeAntwortMöglichkeiten": "Baltische estland lettland litauen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Durch den Frieden von Nystad erhielt Russland die Kontrolle über die Baltischen Staaten, darunter Estland, Livland und Kurland."
+    },
+    {//Russland
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Zar reformierte Russland im 17. Jahrhundert?",
+        "Antworten": ["Peter der Große", "Iwan der Schreckliche", "Nikolaus II.", "Alexander II."],
+        "RichtigeAntwort": "Peter der Große",
+        "RichtigeAntwortMöglichkeiten": "Peter",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Peter der Große führte umfassende Reformen in Russland durch, darunter die Modernisierung der Armee und der Verwaltung sowie den Bau der neuen Hauptstadt St. Petersburg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die frühere Hauptstadt von Russland?",
+        "Antworten": ["St. Petersburg", "Moskau", "Kiew", "Nischni Nowgorod"],
+        "RichtigeAntwort": "St. Petersburg",
+        "RichtigeAntwortMöglichkeiten": "Petersburg peters",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "St. Petersburg wurde von Peter dem Großen gegründet und diente als neue Hauptstadt Russlands, um den Zugang zum Westen zu verbessern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war die wichtigste Frau des Russisschen Kaiserreichs?",
+        "Antworten": ["Katharina die Große", "Anna Iwanowna", "Elisabeth", "Maria Fjodorowna"],
+        "RichtigeAntwort": "Katharina die Große",
+        "RichtigeAntwortMöglichkeiten": "Katharina",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Katharina die Große setzte zahlreiche Reformen in Russland um und trug wesentlich zur Modernisierung und Expansion des Landes bei."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Zar regierte Russland während des Krimkriegs (1853-1856)?",
+        "Antworten": ["Nikolaus I.", "Alexander II.", "Peter der Große", "Iwan IV."],
+        "RichtigeAntwort": "Nikolaus I.",
+        "RichtigeAntwortMöglichkeiten": "Nikolaus I.",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Nikolaus I. war der Zar von Russland, als der Krimkrieg stattfand, ein Konflikt gegen eine Koalition aus dem Vereinigten Königreich, Frankreich, dem Osmanischen Reich und Sardinien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Zar von Russland?",
+        "Antworten": ["Iwan IV.", "Peter der Große", "Alexander I.", "Nikolaus II."],
+        "RichtigeAntwort": "Iwan IV.",
+        "RichtigeAntwortMöglichkeiten": "Iwan Wassiljewitsch Schreckliche",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Iwan IV., auch bekannt als Iwan der Schreckliche, war der erste Herrscher, der sich zum Zar von Russland krönte, und gründete das russische Zarentum im Jahr 1547."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher russische Zar führte 1812 die russischen Truppen gegen Napoleon Bonaparte und dessen Grande Armée?",
+        "Antworten": ["Alexander I.", "Nikolaus I.", "Peter der Große", "Katharina die Große"],
+        "RichtigeAntwort": "Alexander I.",
+        "RichtigeAntwortMöglichkeiten": "Alexander",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Alexander I. führte die russischen Truppen gegen Napoleon im Jahr 1812 und spielte eine Schlüsselrolle bei Napoleons Niederlage in Russland."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war die Frau von Zar Peter III.?",
+        "Antworten": ["Katharina die Große", "Anna Leopoldowna", "Maria Fjodorowna", "Elisabeth von Russland"],
+        "RichtigeAntwort": "Katharina die Große",
+        "RichtigeAntwortMöglichkeiten": "Katharina",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Katharina die Große war ursprünglich die Frau von Zar Peter III. und übernahm nach einem Staatsstreich 1762 die Herrschaft in Russland."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der letzte Zar von Russland?",
+        "Antworten": ["Nikolaus II.", "Alexander III.", "Peter III.", "Iwan VI."],
+        "RichtigeAntwort": "Nikolaus II.",
+        "RichtigeAntwortMöglichkeiten": "Nikolaus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nikolaus II. regierte von 1894 bis zu seiner Abdankung im Jahr 1917 und war der letzte Zar des Russischen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welchen Titel trugen die Herrscher vom Russischen Kaiserreich?",
+        "Antworten": ["Zar", "Kaiser", "König", "Fürst"],
+        "RichtigeAntwort": "Zar",
+        "RichtigeAntwortMöglichkeiten": "Zar",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Titel 'Zar' wurde von russischen Herrschern bis zur Abdankung von Nikolaus II. im Jahr 1917 verwendet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Land begann die Industrielle Revolution?",
+        "Antworten": ["Großbritannien", "Frankreich", "Deutschland", "USA"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Industrielle Revolution begann im späten 18. Jahrhundert in Großbritannien und führte zu tiefgreifenden wirtschaftlichen und sozialen Veränderungen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Erfindung wardie wichtigste der Industriellen Revolution?",
+        "Antworten": ["Dampfmaschine", "Spinnmaschine", "Lokomotive", "Webstuhl"],
+        "RichtigeAntwort": "Dampfmaschine",
+        "RichtigeAntwortMöglichkeiten": "Dampfmaschine",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "James Watt verbesserte die Dampfmaschine in den 1760er Jahren, was zu ihrer breiten Anwendung in der Industrie führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Rohstoff war der wichtigste in der Industriellen Revolution?",
+        "Antworten": ["Kohle", "Eisen", "Holz", "Wolle"],
+        "RichtigeAntwort": "Kohle",
+        "RichtigeAntwortMöglichkeiten": "Kohle",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kohle war der wichtigste Energieträger der Industriellen Revolution, da sie die Dampfmaschinen und die Metallproduktion antrieb."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Transportmittel revolutionierte den Waren- und Personentransport während der Industriellen Revolution?",
+        "Antworten": ["Eisenbahn", "Automobil", "Schiff", "Flugzeug"],
+        "RichtigeAntwort": "Eisenbahn",
+        "RichtigeAntwortMöglichkeiten": "Eisenbahn dampfmaschiene lockomotive bahn",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Eisenbahn ermöglichte schnelle und kostengünstige Transporte, was entscheidend für die Expansion der Industrie war."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer entwickelte den mechanischen Webstuhl?",
+        "Antworten": ["Edmund Cartwright", "Richard Arkwright", "James Watt", "George Stephenson"],
+        "RichtigeAntwort": "Edmund Cartwright",
+        "RichtigeAntwortMöglichkeiten": "Edmund Cartwright",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Edmund Cartwright erfand 1785 den mechanischen Webstuhl, der die Effizienz der Textilproduktion erheblich steigerte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Epoche prägte das 18. Jahrhundert maßgeblich?",
+        "Antworten": ["Aufklärung", "Renaissance", "Mittelalter", "Reformation"],
+        "RichtigeAntwort": "Aufklärung",
+        "RichtigeAntwortMöglichkeiten": "Aufklärung",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Aufklärung war eine intellektuelle Bewegung im 18. Jahrhundert, die Vernunft und Wissenschaft betonte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis ziehte sich durch die ganze Welt im 19. Jahrhundert?",
+        "Antworten": ["Industrielle Revolution", "Agrarrevolution", "Digitale Revolution", "Verkehrsrevolution"],
+        "RichtigeAntwort": "Industrielle Revolution",
+        "RichtigeAntwortMöglichkeiten": "Industrielle",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Industrielle Revolution veränderte die Produktionsweisen grundlegend und führte zu einer urbanen Gesellschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer entwickelte die Dampfmaschiene maßgeblich weiter?",
+        "Antworten": ["James Watt", "Thomas Edison", "Nikola Tesla", "Isaac Newton"],
+        "RichtigeAntwort": "James Watt",
+        "RichtigeAntwortMöglichkeiten": "James Watt",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "James Watts Verbesserungen an der Dampfmaschine trugen wesentlich zur Beschleunigung der Industriellen Revolution bei."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer erfand die erste funktionsfähige Dampfmaschine?",
+        "Antworten": ["Thomas Newcomen", "James Watt", "George Stephenson", "Robert Fulton"],
+        "RichtigeAntwort": "Thomas Newcomen",
+        "RichtigeAntwortMöglichkeiten": "Thomas Newcomen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Thomas Newcomen entwickelte 1712 die erste funktionsfähige Dampfmaschine, die zur Wasserhebung in Bergwerken genutzt wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand die Deutsche Revolution statt?",
+        "Antworten": ["1848", "1815", "1866", "1871"],
+        "RichtigeAntwort": "1848",
+        "RichtigeAntwortMöglichkeiten": "1848",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Deutsche Revolution von 1848/49 war Teil einer europaweiten Welle von Aufständen gegen die monarchische Herrschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das politische Bündnis der deutschen Staaten, das 1815 gegründet wurde?",
+        "Antworten": ["Deutscher Bund", "Heiliges Römisches Reich", "Norddeutscher Bund", "Zollverein"],
+        "RichtigeAntwort": "Deutscher Bund",
+        "RichtigeAntwortMöglichkeiten": "Deutscher-bund",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Deutsche Bund wurde 1815 nach dem Wiener Kongress gegründet und bestand aus 39 deutschen Staaten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Staat dominierte den Deutschen Bund anfangs?",
+        "Antworten": ["Österreich", "Preußen", "Bayern", "Sachsen"],
+        "RichtigeAntwort": "Österreich",
+        "RichtigeAntwortMöglichkeiten": "Österreich",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Österreich war bis zur Auflösung des Deutschen Bundes 1866 die führende Macht innerhalb des Bundes."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wann fand der Deutsch-Österreichische Krieg statt, der auch als Deutscher Krieg bekannt ist?",
+        "Antworten": ["1866", "1848", "1871", "1850"],
+        "RichtigeAntwort": "1866",
+        "RichtigeAntwortMöglichkeiten": "1866",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Deutsch-Österreichische Krieg 1866 führte zur Auflösung des Deutschen Bundes und zur Gründung des Norddeutschen Bundes unter preußischer Führung."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand der Deutsch-Dänische Krieg statt?",
+        "Antworten": ["1864", "1850", "1866", "1870"],
+        "RichtigeAntwort": "1864",
+        "RichtigeAntwortMöglichkeiten": "1864",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Deutsch-Dänische Krieg 1864 endete mit dem Sieg Preußens und Österreichs über Dänemark und führte zur Annexion von Schleswig durch Preußen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wann wurde die Doppelmonarchie Österreich-Ungarn gegründet?",
+        "Antworten": ["1867", "1871", "1859", "1889"],
+        "RichtigeAntwort": "1867",
+        "RichtigeAntwortMöglichkeiten": "1867",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Doppelmonarchie Österreich-Ungarn wurde 1867 durch den Ausgleich (Kompromiss) zwischen Österreich und Ungarn gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Kaiser von Österreich nach der Gründung der Doppelmonarchie?",
+        "Antworten": ["Franz Joseph I.", "Franz Ferdinand", "Karl I.", "Maximilian I."],
+        "RichtigeAntwort": "Franz Joseph I.",
+        "RichtigeAntwortMöglichkeiten": "Franz Joseph",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Franz Joseph I. regierte als Kaiser von Österreich von 1848 bis 1916 und als Kaiser von Österreich-Ungarn nach dem Ausgleich von 1867."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Mit welchem Land gründete Österreich eine Doppelmonarchie?",
+        "Antworten": ["Ungarn", "Polen", "Schweden", "Bohemia"],
+        "RichtigeAntwort": "Ungarn",
+        "RichtigeAntwortMöglichkeiten": "Ungarn",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Österreich gründete 1867 die Doppelmonarchie Österreich-Ungarn in einem politischen Ausgleichsprozess mit Ungarn, um die Verwaltung und das politische Gewicht zwischen beiden Regionen zu teilen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Vereinbarung führte 1815 zur Schaffung des Deutschen Bunds",
+        "Antworten": ["Wiener Kongress", "Pariser Frieden", "Friedensvertrag von Versailles", "Kongress von Berlin"],
+        "RichtigeAntwort": "Wiener Kongress",
+        "RichtigeAntwortMöglichkeiten": "Wiener Kongress",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Wiener Kongress 1815 führte zur Schaffung des Deutschen Bundes, einem lockeren Zusammenschluss deutscher Staaten, in den Österreich eine wichtige Rolle spielte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis führte zur Auflösung des Heiligen Römischen Reiches im Jahr 1806?",
+        "Antworten": ["Napoleonische Kriege", "Französische Revolution", "Wiener Kongress", "Zweiter Weltkrieg"],
+        "RichtigeAntwort": "Napoleonische Kriege",
+        "RichtigeAntwortMöglichkeiten": "Napoleonische Kriege",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Napoleonischen Kriege führten zur Auflösung des Heiligen Römischen Reiches und zur Gründung des Kaiserreichs Österreich."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß Österreich vor der Gründung der Doppelmonarchie Österreich-Ungarn im Jahr 1867?",
+        "Antworten": ["Kaiserreich Österreich", "Heiliges Römisches Reich", "Kaiserreich Preußen", "Königreich Österreich"],
+        "RichtigeAntwort": "Kaiserreich Österreich",
+        "RichtigeAntwortMöglichkeiten": "Kaiserreich kaisertum königreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Vor der Doppelmonarchie Österreich-Ungarn hieß das Land das „Kaiserreich Österreich“, das 1804 gegründet wurde."
+    },
+    
+    
 
     
     
     
     
-    
-    
-     
-      
-      
-      
-      
-      
-      
-      
-      
-       
+
+
+
+
+
+
+
+
+
+
 ];

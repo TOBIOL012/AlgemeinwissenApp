@@ -19,7 +19,5 @@ body {
 }
 
 /* Verhindert das Ziehen von Bildern */
-img {
-    pointer-events: none; /* Deaktiviert alle Mausereignisse für Bilder */
-}
+
 
