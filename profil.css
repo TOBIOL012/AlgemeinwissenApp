@@ -33,6 +33,10 @@ html, body {
     margin-top: 5%;
 }
 
+.Profilbild-container a {
+    display: block;
+}
+
 .Profilbild-groß {
     width: 50vw; /* Größe des Profilbildes anpassen */
     object-fit: cover;
@@ -114,7 +118,7 @@ html, body {
     justify-content: space-around;
     padding: 1em 0;
     padding-bottom: 2em;
-    border: 2px solid #2f4957;
+    border-top: 3px solid #2f4957;
 }
 
 .nav-button {

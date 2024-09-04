@@ -205,9 +205,25 @@ main {
     border:none;
     background-color: var(--background-color);
     outline: none;
-    width: calc(100% - 7.5em);
-    
+    width: calc(100% - 7.5em); 
 }
+
+.text-input::placeholder {
+    font-family: "Dosis", sans-serif;
+    color: var(--line-color);
+    font-size: 1em;
+}
+
+.text-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: "Dosis", sans-serif;
+    color: var(--line-color);
+}
+
+.text-input::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: "Dosis", sans-serif;
+    color: var(--line-color);
+}
+
 
 .container {
     display: flex;
@@ -223,20 +239,20 @@ main {
 }
 
 .container img {
-    height: 1.8em;
-    margin-right: 0.3em;
+    height: 1.5em;
+    margin-right: 0.4em;
     cursor: pointer;
     z-index: 5000;
 }
 
 .container.correct {
     background-color: var(--background-color); /* Rot für falsch */
-    outline-color: #3df574;
+    outline-color: #40b062;
 }
 
 .container.incorrect {
     background-color: var(--background-color); /* Rot für falsch */
-    outline-color: #e92f2f;
+    outline-color: #b42727;
 }
 
 .mic-button.correct {
@@ -307,7 +323,8 @@ main {
     font-size: 1.1em;
     font-weight: normal;
     text-align: left;
-    padding: 0 calc(10% - 1em);
+    padding-left: calc(10% - 1em);
+    padding-right: calc(8% - 1em);
 }
 
 .fact-box {
@@ -320,7 +337,19 @@ main {
     font-weight: normal; 
     text-align: left;
     margin-bottom: 2em; 
-    margin-top: 1.3em;
+    margin-top: 0.8em;
+}
+
+.answer-box {
+    background-color: #38424b;
+    border-radius: 20px;
+    padding: 1px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1em;
 }
 
 .correct-answer {
@@ -329,8 +358,15 @@ main {
     font-size: 1.4em;
     font-weight: bold;
     text-align: left;
-    padding: 0 10%;
-    margin-top: 1em;
+    padding: 0.4em 5%;
+}
+
+.correct-answer .highlight {
+    color: #3df574; /* Grün für richtig */
+}
+
+.correct-answer.incorrect .highlight {
+    color: #e92f2f; /* Rot für falsch */
 }
 
 .next-button-wrapper {

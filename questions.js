@@ -223,7 +223,7 @@ const questions = [
     },
     { 
         "Kategorie": "Geschichte",
-        "Frage": "Welches ist einer der 7 Weltwunder?",
+        "Frage": "Welches ist einer der 7 antiken Weltwunder?",
         "Antworten": ["Leutturm von Alexandria", "Chinesische Mauer", "Petra", "Machu Picchu"],
         "RichtigeAntwort": "Leutturm von Alexandria",
         "RichtigeAntwortMöglichkeiten": "Pyramide Gizeh Hängenden Gärten Semiramis Zeus Olympia Artemis Ephesos Mausoleum Halikarnassos Koloss Rhodos Leuchtturm Alexandria",
@@ -259,7 +259,7 @@ const questions = [
     },
     { 
         "Kategorie": "Geschichte",
-        "Frage": "Wie viele Antike Weltwunder gibt es?",
+        "Frage": "Wie viele antike Weltwunder gibt es?",
         "Antworten": ["7", "9", "12", "13"],
         "RichtigeAntwort": "7",
         "RichtigeAntwortMöglichkeiten": "7 sieben",
@@ -2861,7 +2861,7 @@ const questions = [
         "Frage": "Welches Land führte den Hundertjährigen Krieg gegen Frankreich?",
         "Antworten": ["Enland", "Spanien", "Schottland", "Italien"],
         "RichtigeAntwort": "Enland",
-        "RichtigeAntwortMöglichkeiten": "Enland Großbrittanien",
+        "RichtigeAntwortMöglichkeiten": "Enland Großbrittanien vereinigtes uk brittisches",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Hundertjährige Krieg dauerte von 1337 bis 1453"
     },
@@ -5017,10 +5017,852 @@ const questions = [
         "Frage": "Wie hieß Österreich vor der Gründung der Doppelmonarchie Österreich-Ungarn im Jahr 1867?",
         "Antworten": ["Kaiserreich Österreich", "Heiliges Römisches Reich", "Kaiserreich Preußen", "Königreich Österreich"],
         "RichtigeAntwort": "Kaiserreich Österreich",
-        "RichtigeAntwortMöglichkeiten": "Kaiserreich kaisertum königreich",
+        "RichtigeAntwortMöglichkeiten": "Kaiserreich kaisertum königreich kaiser könig königtum",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Vor der Doppelmonarchie Österreich-Ungarn hieß das Land das „Kaiserreich Österreich“, das 1804 gegründet wurde."
     },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wofür wurde das Kolosseum im antiken Rom hauptsächlich genutzt?",
+        "Antworten": ["Gladiatorenkämpfe", "Theateraufführungen", "Märkte", "Politische Versammlungen"],
+        "RichtigeAntwort": "Gladiatorenkämpfe",
+        "RichtigeAntwortMöglichkeiten": "Gladiatorenkämpfe Gladiatoren kämpfe",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Kolosseum in Rom war das größte Amphitheater der Antike und diente hauptsächlich zur Austragung von Gladiatorenkämpfen und anderen öffentlichen Spektakeln."
+    },
+
+    ////////////////Erster Weltkrieg////////////////
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Erste Balkankrieg?",
+        "Antworten": ["1912", "1910", "1914", "1908"],
+        "RichtigeAntwort": "1912",
+        "RichtigeAntwortMöglichkeiten": "1912",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Erste Balkankrieg begann 1912, als eine Allianz von Balkanländern gegen das Osmanische Reich kämpfte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Bündnis wurde im Ersten Balkankrieg gegen das Osmanische Reich gebildet?",
+        "Antworten": ["Balkanliga", "Triple Entente", "Dreierbund", "Zentrale Mächte"],
+        "RichtigeAntwort": "Balkanliga",
+        "RichtigeAntwortMöglichkeiten": "Balkanliga",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Balkanliga, bestehend aus Serbien, Montenegro, Griechenland und Bulgarien, kämpfte gegen das Osmanische Reich im Ersten Balkankrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Reich verlor im Ersten Balkankrieg den größten Teil seines europäischen Territoriums?",
+        "Antworten": ["Osmanisches Reich", "Russisches Reich", "Österreich-Ungarn", "Deutsches Reich"],
+        "RichtigeAntwort": "Osmanisches Reich",
+        "RichtigeAntwortMöglichkeiten": "Osmanisches osmanen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Osmanische Reich verlor den größten Teil seines europäischen Territoriums infolge des Ersten Balkankriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Abkommen beendete den Ersten Balkankrieg?",
+        "Antworten": ["Vertrag von London", "Vertrag von Versailles", "Vertrag von Saint-Germain", "Vertrag von Trianon"],
+        "RichtigeAntwort": "Vertrag von London",
+        "RichtigeAntwortMöglichkeiten": "London",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Vertrag von London beendete 1913 den Ersten Balkankrieg und legte neue Grenzen auf dem Balkan fest."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Balkankriege gab es?",
+        "Antworten": ["Zwei", "Drei", "Einer", "Vier"],
+        "RichtigeAntwort": "Zwei",
+        "RichtigeAntwortMöglichkeiten": "Zwei 2",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Es gab zwei Balkankriege, die beide kurz vor dem Ersten Weltkrieg stattfanden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis löste den Ersten Weltkrieg aus?",
+        "Antworten": ["Attentat auf Franz Ferdinand", "Die Russische Revolution", "Die Oktoberrevolution", "Der Versailler Vertrag"],
+        "RichtigeAntwort": "Attentat auf Franz Ferdinand",
+        "RichtigeAntwortMöglichkeiten": "Attentat Franz Ferdinand mord schuss Gavrilo Princip sarajevo",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Attentat auf den österreichischen Erzherzog Franz Ferdinand in Sarajevo am 28. Juni 1914 führte zur Kriegserklärung Österreich-Ungarns an Serbien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erklärte als erstes Serbien den Krieg und begann so den Ersten Weltkrieg?",
+        "Antworten": ["Österreich-Ungarn", "Deutschland", "Russland", "Frankreich"],
+        "RichtigeAntwort": "Österreich-Ungarn",
+        "RichtigeAntwortMöglichkeiten": "Österreich-Ungarn Österreich Ungarn",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Österreich-Ungarn erklärte Serbien am 28. Juli 1914 den Krieg, was eine Kettenreaktion von Bündnisverpflichtungen auslöste."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das Bündnis zwischen Deutschland und Österreich-Ungarn?",
+        "Antworten": ["Zweibund", "Germanischer Bund", "Entente", "Heiliger Bund"],
+        "RichtigeAntwort": "Zweibund",
+        "RichtigeAntwortMöglichkeiten": "Zweibund zwei",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Zweibund wurde 1879 geschlossen und war ein Defensivbündnis zwischen Deutschland und Österreich-Ungarn."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches dritte Land trat dem Bündnis zwischen Deutschland und Österreich-Ungarn bei?",
+        "Antworten": ["Italien", "Russland", "Frankreich", "Osmanisches Reich"],
+        "RichtigeAntwort": "Italien",
+        "RichtigeAntwortMöglichkeiten": "Italien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Italien trat dem Zweibund 1882 bei und bildete damit den Dreibund, der als defensives Militärbündnis konzipiert war."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man das Bündnis von Deutschland, Österreich-Ungarn und Italien im ersten Weltkrieg?",
+        "Antworten": ["Dreibund", "Europäischer Bund", "Entente", "Achse"],
+        "RichtigeAntwort": "Dreibund",
+        "RichtigeAntwortMöglichkeiten": "Dreibund drei",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Dreibund bestand aus Deutschland, Österreich-Ungarn und Italien und war eine Allianz vor dem Ersten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wann wurde die Entente Cordiale zwischen Frankreich und Großbritannien unterzeichnet?",
+        "Antworten": ["1904", "1912", "1895", "1907"],
+        "RichtigeAntwort": "1904",
+        "RichtigeAntwortMöglichkeiten": "1904",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Entente Cordiale wurde 1904 unterzeichnet und markierte einen wichtigen diplomatischen Fortschritt zwischen Frankreich und Großbritannien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land trat 1914 dem Triple Entente-Bündnis bei?",
+        "Antworten": ["Italien", "Osmanisches Reich", "Japan", "USA"],
+        "RichtigeAntwort": "Japan",
+        "RichtigeAntwortMöglichkeiten": "Japan",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Japan trat 1914 der Triple Entente bei und unterstützte die Alliierten im Ersten Weltkrieg gegen die Mittelmächte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das Bündnis zwischen Russland, Frankreich und Großbritannien vor dem Ersten Weltkrieg?",
+        "Antworten": ["Triple Entente", "Triple Alliance", "Zweibund", "Dreibund"],
+        "RichtigeAntwort": "Triple Entente",
+        "RichtigeAntwortMöglichkeiten": "Entente",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Triple Entente war das Bündnis zwischen Russland, Frankreich und Großbritannien, das gegen den Dreibund stand."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land verbündete sich 1914 mit Deutschland im Ersten Weltkrieg?",
+        "Antworten": ["Österreich-Ungarn", "Frankreich", "Italien", "Russland"],
+        "RichtigeAntwort": "Österreich-Ungarn",
+        "RichtigeAntwortMöglichkeiten": "Österreich-Ungarn Österreich Ungarn",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Österreich-Ungarn war 1914 ein wichtiger Verbündeter Deutschlands und bildete zusammen mit Deutschland die Mittelmächte im Ersten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land verbündete sich mit Deutschland und Österreich-Ungarn im Ersten Weltkrieg?",
+        "Antworten": ["Italien", "Osmanisches Reich", "Frankreich", "Russland"],
+        "RichtigeAntwort": "Osmanisches Reich",
+        "RichtigeAntwortMöglichkeiten": "Osmanisches türkei",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Osmanische Reich trat 1914 den Mittelmächten bei und kämpfte an der Seite von Deutschland und Österreich-Ungarn im Ersten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Bündnis kämpfte gegen die Aliierten im Ersten Weltkrieg?",
+        "Antworten": ["Mittelmächte", "Entente", "Alliierte", "Koalition"],
+        "RichtigeAntwort": "Mittelmächte",
+        "RichtigeAntwortMöglichkeiten": "Mittelmächte Mittel mächte",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Mittelmächte, bestehend aus Deutschland, Österreich-Ungarn, dem Osmanischen Reich und Bulgarien, standen im Ersten Weltkrieg gegen die Entente."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Dokument stellte Österreich-Ungarn vor dem Ersten Weltrieg gegen Serbien?",
+        "Antworten": ["Ultimatum", "Friedensvertrag", "Waffenstillstand", "Vertrag von Versailles"],
+        "RichtigeAntwort": "Ultimatum",
+        "RichtigeAntwortMöglichkeiten": "Ultimatum",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Ultimatum von Österreich-Ungarn an Serbien wurde am 23. Juli 1914 überreicht und führte letztlich zur Mobilmachung und zum Beginn des Ersten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Plan verfolgte Deutschland im ersten Weltkrieg gegen Frankreich?",
+        "Antworten": ["Schlieffen-Plan", "Hindenburg-Plan", "Blitzkrieg", "U-boot Krieg"],
+        "RichtigeAntwort": "Schlieffen-Plan",
+        "RichtigeAntwortMöglichkeiten": "Schlieffen-Plan schlieffen schliefen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Schlieffen-Plan war Deutschlands Strategie, um Frankreich schnell zu besiegen, bevor sich die Truppen nach Osten gegen Russland wenden konnten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land trat dem Ersten Weltkrieg ein, nachdem Deutschland in Belgien einmarschiert war?",
+        "Antworten": ["Vereinigtes Königreich", "Italien", "Spanien", "Türkei"],
+        "RichtigeAntwort": "Vereinigtes Königreich",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Vereinigte Königreich erklärte Deutschland am 4. August 1914 den Krieg als Reaktion auf die deutsche Verletzung der Neutralität Belgiens."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land wechselte im ersten Weltkrieg die Seiten?",
+        "Antworten": ["Italien", "Portugal", "Türkei", "Spanien"],
+        "RichtigeAntwort": "Italien",
+        "RichtigeAntwortMöglichkeiten": "Italien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Italien trat 1915 in den Ersten Weltkrieg auf der Seite der Alliierten ein, nachdem es im Vertrag von London den Alliierten Unterstützung zugesagt hatte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land trat 1917 in den Ersten Weltkrieg auf der Seite der Alliierten bei?",
+        "Antworten": ["Vereinigte Staaten", "Spanien", "Schweiz", "Niederlande"],
+        "RichtigeAntwort": "Vereinigte Staaten",
+        "RichtigeAntwortMöglichkeiten": "Staaten amerika us usa",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Vereinigten Staaten traten am 6. April 1917 in den Ersten Weltkrieg ein und unterstützten die Alliierten gegen die Mittelmächte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag beendete offiziell den Ersten Weltkrieg und wurde am 28. Juni 1919 unterzeichnet?",
+        "Antworten": ["Vertrag von Versailles", "Vertrag von Paris", "Vertrag von Potsdam", "Vertrag von London"],
+        "RichtigeAntwort": "Vertrag von Versailles",
+        "RichtigeAntwortMöglichkeiten": "Vertrag von Versailles",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Vertrag von Versailles wurde am 28. Juni 1919 unterzeichnet und beendete offiziell den Ersten Weltkrieg, legte die Bedingungen für Deutschland fest und führte zu erheblichen politischen und wirtschaftlichen Veränderungen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der König von Großbritannien während des Ersten Weltkriegs?",
+        "Antworten": ["George V.", "Edward VII.", "Henry VIII.", "William IV."],
+        "RichtigeAntwort": "George V.",
+        "RichtigeAntwortMöglichkeiten": "George",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "George V. war von 1910 bis 1936 König des Vereinigten Königreichs und führte das Land während des Ersten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher russische Zar regierte während des Ersten Weltkriegs?",
+        "Antworten": ["Nikolaus II.", "Alexander III.", "Peter der Große", "Iwan der Schreckliche"],
+        "RichtigeAntwort": "Nikolaus II.",
+        "RichtigeAntwortMöglichkeiten": "Nikolaus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nikolaus II. war der letzte Zar von Russland und regierte während des Ersten Weltkriegs bis zur Russischen Revolution 1917."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches russische Ereignis 1917 führte zum Ende der Zarenherrschaft?",
+        "Antworten": ["Russische Revolution", "Kriegseintritt Russlands", "Sturz des Zaren", "Erster Weltkrieg"],
+        "RichtigeAntwort": "Russische Revolution",
+        "RichtigeAntwortMöglichkeiten": "Russische Revolution",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Russische Revolution 1917 führte zum Sturz des Zaren Nikolaus II. und zur Errichtung der Bolschewistischen Regierung."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Kaiser von Österreich-Ungarn während des Ersten Weltkriegs?",
+        "Antworten": ["Franz Joseph I.", "Kaiser Wilhelm II.", "Napoleon III.", "Friedrich III."],
+        "RichtigeAntwort": "Franz Joseph I.",
+        "RichtigeAntwortMöglichkeiten": "Franz Joseph",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Franz Joseph I. war von 1848 bis 1916 der Kaiser von Österreich-Ungarn und regierte während des Ersten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Auf wen wurde das Attentat von Sarajevo am 28. Juni 1914 verübt?",
+        "Antworten": ["Erzherzog Franz Ferdinand", "Kaiser Wilhelm II.", "Premierminister David Lloyd George", "Prinz Eugen von Savoyen"],
+        "RichtigeAntwort": "Erzherzog Franz Ferdinand",
+        "RichtigeAntwortMöglichkeiten": "Franz Ferdinand erzherzog prinz",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Attentat von Sarajevo am 28. Juni 1914 richtete sich gegen Erzherzog Franz Ferdinand von Österreich und seine Frau Sophie, was als Auslöser für den Ersten Weltkrieg galt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Waffenmittel nutzte Deutschland im Ersten Weltkrieg ein, obwohl es verboten war?",
+        "Antworten": ["Giftgas", "Panzer", "Flugzeuge", "U-Boote"],
+        "RichtigeAntwort": "Giftgas",
+        "RichtigeAntwortMöglichkeiten": "Chemische chemie gift giftgas gas",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Deutschland setzte im Ersten Weltkrieg chemische Waffen wie Senfgas ein, obwohl der Einsatz solcher Waffen durch das internationale Recht, insbesondere das Haager Abkommen von 1899, verboten war."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Mit welchem Land verbündete sich Bulgarien während des Ersten Weltkriegs?",
+        "Antworten": ["Deutschland", "Russland", "Frankreich", "Vereinigtes Königreich"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland österreich-ungarn österreich ungarn osmanisches mittelmächte deutsches",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bulgarien trat im Ersten Weltkrieg 1915 auf der Seite der Mittelmächte bei, zu denen Deutschland gehörte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher deutsche Kaiser regierte während des Ersten Weltkriegs?",
+        "Antworten": ["Wilhelm II.", "Wilhelm I.", "Friedrich III.", "Kaiser Franz Joseph"],
+        "RichtigeAntwort": "Wilhelm II.",
+        "RichtigeAntwortMöglichkeiten": "Wilhelm",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Wilhelm II. war der letzte Kaiser des Deutschen Reiches und regierte von 1888 bis 1918."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr trat Bulgarien in den Ersten Weltkrieg ein?",
+        "Antworten": ["1915", "1914", "1916", "1917"],
+        "RichtigeAntwort": "1915",
+        "RichtigeAntwortMöglichkeiten": "1915",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bulgarien trat 1915 auf der Seite der Mittelmächte in den Ersten Weltkrieg ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr trat Bulgarien in den Ersten Weltkrieg ein?",
+        "Antworten": ["1915", "1914", "1916", "1917"],
+        "RichtigeAntwort": "1915",
+        "RichtigeAntwortMöglichkeiten": "1915",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Bulgarien trat 1915 auf der Seite der Mittelmächte in den Ersten Weltkrieg ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Erste Weltkrieg?",
+        "Antworten": ["1914", "1915", "1916", "1917"],
+        "RichtigeAntwort": "1914",
+        "RichtigeAntwortMöglichkeiten": "1914",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Erste Weltkrieg begann am 28. Juli 1914 nach der Erklärung des Krieges von Österreich-Ungarn an Serbien."
+    },
+    {
+        "Kategorie": "Sport",
+        "Frage": "Welche Allianz kämpfte im ersten Weltkrieg gegen Deutschland?",
+        "Antworten": ["Alliierten", "Entente und Koalition", "Vereinte Nationen und Achsenmächte", "Sowjetunion und Achsenmächte"],
+        "RichtigeAntwort": "Alliierten",
+        "RichtigeAntwortMöglichkeiten": "Alliierten entente",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Hauptallianzen im Ersten Weltkrieg waren die Alliierten, darunter Großbritannien, Frankreich und Russland, und die Mittelmächte, darunter Deutschland und Österreich-Ungarn."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Allianz kämpfte im Ersten Weltkrieg gegen Deutschland?",
+        "Antworten": ["Alliierte", "Mittelmächte", "Französisch-Englische", "Koalition"],
+        "RichtigeAntwort": "Alliierte",
+        "RichtigeAntwortMöglichkeiten": "Alliierte entente aliierten",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Allianz, die gegen Deutschland kämpfte, bestand aus Ländern wie Großbritannien, Frankreich und Russland, die zusammen als die Alliierten bekannt waren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Waffe setzte Deutschland im Ersten Weltkrieg zur Blockade der feindlichen Seewege ein?",
+        "Antworten": ["U-Boote", "Panzer", "Flugzeuge", "Schiffe"],
+        "RichtigeAntwort": "U-Boote",
+        "RichtigeAntwortMöglichkeiten": "U-Boote boote",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "U-Boote wurden von Deutschland verwendet, um die Handelswege der Alliierten zu stören und ihre Schifffahrt zu unterbrechen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Kriege fanden kurz vor dem Ersten Weltkrieg statt?",
+        "Antworten": ["Balkan-Kriege", "Krim-Kriege", "Amerikanischer Bürgerkrieg", "Napoleonische Kriege"],
+        "RichtigeAntwort": "Balkan-Kriege",
+        "RichtigeAntwortMöglichkeiten": "BalkanKriege balkan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Balkan-Kriege von 1912-1913 führten zu einer Verschärfung der politischen Spannungen in Europa und trugen zur Entstehung des Ersten Weltkriegs bei."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wann traten die USA offiziell in den Ersten Weltkrieg ein?",
+        "Antworten": ["1914", "1915", "1916", "1917"],
+        "RichtigeAntwort": "1917",
+        "RichtigeAntwortMöglichkeiten": "1917",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die USA traten 1917 offiziell in den Ersten Weltkrieg ein, nachdem das Land durch verschiedene Ereignisse, einschließlich des Zimmermann-Telegramms, stark beeinflusst wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wo fand die Friedenskonferenz statt, die den Ersten Weltkrieg beendete?",
+        "Antworten": ["Paris", "London", "Berlin", "Wien"],
+        "RichtigeAntwort": "Paris",
+        "RichtigeAntwortMöglichkeiten": "Paris",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Friedenskonferenz, die den Ersten Weltkrieg beendete, fand 1919 in Paris statt, wo der Vertrag von Versailles unterzeichnet wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag beendete den ersten Weltkrieg?",
+        "Antworten": ["Vertrag von Versailles", "Vertrag von Paris", "Vertrag von London", "Vertrag von Wien"],
+        "RichtigeAntwort": "Vertrag von Versailles",
+        "RichtigeAntwortMöglichkeiten": "Versailles Versaille",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Vertrag von Versailles wurde 1919 unterzeichnet und beendete offiziell den Ersten Weltkrieg, wobei er strenge Bedingungen für die besiegten Mittelmächte festlegte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land trat dem Ersten Weltkrieg bei und half den Alliierten gegen Deutschland?",
+        "Antworten": ["Vereinigte Staaten", "Russland", "Deutschland", "Italien"],
+        "RichtigeAntwort": "Vereinigte Staaten",
+        "RichtigeAntwortMöglichkeiten": "staaten us usa amerika",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Vereinigten Staaten, unter Präsident Woodrow Wilson, spielten eine entscheidende Rolle beim Ende des Ersten Weltkriegs und den Friedensverhandlungen, insbesondere durch Wilsons 14-Punkte-Plan."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land löste beide Weltkriege aus?",
+        "Antworten": ["Deutschland", "Frankreich", "Vereinigtes Königreich", "Russland"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland deutsches deutsch",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Deutschland wird als Hauptverantwortlicher für das Auslösen beider Weltkriege angesehen, aufgrund der Rolle im Ersten Weltkrieg und der Aggressionen, die zum Zweiten Weltkrieg führten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Durch welches Land marschierte Deutschland, um Frankreich im Ersten Weltkrieg anzugreifen?",
+        "Antworten": ["Belgien", "Schweiz", "Niederlande", "Luxemburg"],
+        "RichtigeAntwort": "Belgien",
+        "RichtigeAntwortMöglichkeiten": "Belgien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Deutschland marschierte durch Belgien, was zur britischen Kriegserklärung an Deutschland führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wo erlitten die russischen Truppen 1914 eine schwere Niederlage?",
+        "Antworten": ["Schlacht von Tannenberg", "Schlacht an der Somme", "Schlacht von Verdun", "Schlacht bei Gallipoli"],
+        "RichtigeAntwort": "Schlacht von Tannenberg",
+        "RichtigeAntwortMöglichkeiten": "Tannenberg",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlacht von Tannenberg, die im August 1914 stattfand, war eine schwere Niederlage für die russischen Truppen gegen die deutsche Armee."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer verlor den Ersten Weltkrieg?",
+        "Antworten": ["Deutschland", "Frankreich", "Vereinigtes Königreich", "Russland"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland achsenmächte österreich deutsches",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Deutschland war einer der Hauptverlierer des Ersten Weltkriegs, zusammen mit seinen Verbündeten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Jahre dauerte der Erste Weltkrieg?",
+        "Antworten": ["4 Jahre", "5 Jahre", "6 Jahre", "9 Jahre"],
+        "RichtigeAntwort": "4 Jahre",
+        "RichtigeAntwortMöglichkeiten": "4 Jahre",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Erste Weltkrieg dauerte von 1914 bis 1918, insgesamt 4 Jahre."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welcher stadt setzten die Deutschen erstmals Giftgas im Ersten Weltkrieg ein?",
+        "Antworten": ["Ypern", "Somme", "Verdun", "Gallipoli"],
+        "RichtigeAntwort": "Ypern",
+        "RichtigeAntwortMöglichkeiten": "Ypern ipern",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bei der Schlacht um Ypern setzten die Deutschen erstmals Chlorgas als Waffe ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land trat 1917 aus dem Ersten Weltkrieg aus?",
+        "Antworten": ["Russland", "Frankreich", "Italien", "Österreich-Ungarn"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Russische Revolution von 1917 führte zur Abdankung des Zaren und zum Rückzug Russlands aus dem Krieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Dokument führte zum Eintritt der USA in den Ersten Weltkrieg?",
+        "Antworten": ["Zimmermann-Telegramm", "Wiener Vertrag", "Friedensabkommen von Versailles", "Wahingtoner Vertrag"],
+        "RichtigeAntwort": "Zimmermann-Telegramm",
+        "RichtigeAntwortMöglichkeiten": "Zimmermann-Telegramm Zimmermann Telegramm",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Zimmermann-Telegramm wurde 1917 von Deutschland an Mexiko gesendet und trug zur Entscheidung der USA bei, in den Ersten Weltkrieg einzutreten."
+    },
+    {//Weimarer Republik
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Präsident der Weimarer Republik?",
+        "Antworten": ["Friedrich Ebert", "Paul von Hindenburg", "Gustav Stresemann", "Walther Rathenau"],
+        "RichtigeAntwort": "Friedrich Ebert",
+        "RichtigeAntwortMöglichkeiten": "Friedrich Ebert",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Friedrich Ebert leitete die Übergangsregierung nach dem Ende des Ersten Weltkriegs und war bis 1925 Präsident der Weimarer Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Revolution führte zur Einführung der Weimarer Verfassung?",
+        "Antworten": ["Novemberrevolution", "Münchener Putsch", "Kapp-Lüttwitz-Putsch", "Röhm-Putsch"],
+        "RichtigeAntwort": "Novemberrevolution",
+        "RichtigeAntwortMöglichkeiten": "Novemberrevolution November",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Novemberrevolution 1918 führte zum Sturz des Kaiserreichs und zur Gründung der Weimarer Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Weimarer Republik gegründet?",
+        "Antworten": ["1919", "1920", "1921", "1922"],
+        "RichtigeAntwort": "1919",
+        "RichtigeAntwortMöglichkeiten": "1919",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Weimarer Verfassung wurde am 11. August 1919 verabschiedet und trat am 14. August 1919 in Kraft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das Parlament der Weimarer Republik?",
+        "Antworten": ["Reichstag", "Landtag", "Bundestag", "Senat"],
+        "RichtigeAntwort": "Reichstag",
+        "RichtigeAntwortMöglichkeiten": "Reichstag reichs",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Reichstag war das wichtigste gesetzgebende Organ der Weimarer Republik und wurde durch allgemeine Wahlen gewählt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Nach welche Stadt wurde die Weimarer Republik gegründet?",
+        "Antworten": ["Weimar", "Berlin", "München", "Frankfurt"],
+        "RichtigeAntwort": "Weimar",
+        "RichtigeAntwortMöglichkeiten": "Weimar",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Verfassung der Weimarer Republik wurde am 11. August 1919 in Weimar verabschiedet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß Deutschland vor dem Zweiten Weltkrieg?",
+        "Antworten": ["Weimarer Republik", "Deutsches Kaiserreich", "Drittes Reich", "Bundesrepublik Deutschland"],
+        "RichtigeAntwort": "Weimarer Republik",
+        "RichtigeAntwortMöglichkeiten": "Weimarer Republik",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Weimarer Republik war die Bezeichnung für Deutschland von 1919 bis 1933, bevor das Dritte Reich unter Adolf Hitler etabliert wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der letzte Präsident der Weimarer Republik?",
+        "Antworten": ["Paul von Hindenburg", "Friedrich Ebert", "Gustav Stresemann", "Wilhelm Marx"],
+        "RichtigeAntwort": "Paul von Hindenburg",
+        "RichtigeAntwortMöglichkeiten": "Paul Hindenburg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Paul von Hindenburg war der letzte Präsident der Weimarer Republik von 1925 bis 1934."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei der Weimarer Republik führte 1923 einen gescheiterten Putschversuch in München an?",
+        "Antworten": ["NSDAP", "SPD", "KPD", "Zentrum"],
+        "RichtigeAntwort": "NSDAP",
+        "RichtigeAntwortMöglichkeiten": "NSDAP hitler",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die NSDAP führte 1923 einen gescheiterten Putschversuch in München an, bekannt als Hitlerputsch."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei war die kommunistische Partei der Weimarer Republik?",
+        "Antworten": ["KPD", "SPD", "NSDAP", "Zentrum"],
+        "RichtigeAntwort": "KPD",
+        "RichtigeAntwortMöglichkeiten": "KPD",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die KPD (Kommunistische Partei Deutschlands) war die kommunistische Partei der Weimarer Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei war die rechtsextreme Partei der Weimarer Republik?",
+        "Antworten": ["NSDAP", "SPD", "KPD", "Zentrum"],
+        "RichtigeAntwort": "NSDAP",
+        "RichtigeAntwortMöglichkeiten": "NSDAP",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die NSDAP (Nationalsozialistische Deutsche Arbeiterpartei) war die rechtsextreme Partei der Weimarer Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche große Krise führte zum zweiten Weltkrieg?",
+        "Antworten": ["Weltwirtschaftskrise", "Hyperinflation", "Ölkrise", "Dotcom-Blase"],
+        "RichtigeAntwort": "Weltwirtschaftskrise",
+        "RichtigeAntwortMöglichkeiten": "Weltwirtschaftskrise Weltwirtschafts wirtschafts Welt weltkrise wirtschaftskrise",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Weltwirtschaftskrise von 1929 traf die Weimarer Republik besonders schwer."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Krise traf Deutschland vier Jahre nach dem Ersten Weltkrieg?",
+        "Antworten": ["Hyperinflation", "Weltwirtschaftskrise", "Ölkrise", "Dotcom-Blase"],
+        "RichtigeAntwort": "Hyperinflation",
+        "RichtigeAntwortMöglichkeiten": "Hyperinflation inflation Hyper wirtschaftskrise inflationskrise wirtschafts",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Hyperinflation traf Deutschland 1923, vier Jahre nach dem Ende des Ersten Weltkriegs, besonders hart."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Jahr markiert das Ende der Weimarer Republik?",
+        "Antworten": ["1933", "1919", "1923", "1929"],
+        "RichtigeAntwort": "1933",
+        "RichtigeAntwortMöglichkeiten": "1933",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Jahr 1933 markiert das Ende der Weimarer Republik mit der Machtergreifung Hitlers."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei führte den gescheiterten Kapp-Putsch 1920 an?",
+        "Antworten": ["Reichswehr", "NSDAP", "SPD", "KPD"],
+        "RichtigeAntwort": "Reichswehr",
+        "RichtigeAntwortMöglichkeiten": "Reichswehr",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Reichswehr führte den gescheiterten Kapp-Putsch 1920 an."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß Deutschland vor Hitlers Herrschaft?",
+        "Antworten": ["Weimarer Republik", "Deutsches Reich", "Kaiserreich", "Preußen"],
+        "RichtigeAntwort": "Weimarer Republik",
+        "RichtigeAntwortMöglichkeiten": "Weimarer weimar",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Weimarer Republik war die erste deutsche Demokratie und bestand von 1919 bis 1933, bevor sie von der nationalsozialistischen Diktatur abgelöst wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei gründete Karl Liebknecht?",
+        "Antworten": ["KPD", "SPD", "Zentrum", "NPD"],
+        "RichtigeAntwort": "KPD",
+        "RichtigeAntwortMöglichkeiten": "Kommunistische KPD kdp kommunismus",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die KPD wurde 1918 unteranderem von Rosa Luxemburg gegründet und setzte sich für den Kommunismus in der Weimarer Republik ein"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann die Weltwirtschaftskrise?",
+        "Antworten": ["1929", "1931", "1933", "1927"],
+        "RichtigeAntwort": "1929",
+        "RichtigeAntwortMöglichkeiten": "1929",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Börsenkrach von 1929 in den USA leitete die Weltwirtschaftskrise ein, die weltweite Auswirkungen hatte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher US-Präsident führte Maßnahmen gegen Weltwirtschaftskrise ein?",
+        "Antworten": ["Franklin D. Roosevelt", "Herbert Hoover", "Theodore Roosevelt", "John F. Kennedy"],
+        "RichtigeAntwort": "Franklin D. Roosevelt",
+        "RichtigeAntwortMöglichkeiten": "Franklin D. Roosevelt",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der 'New Deal' von Franklin D. Roosevelt umfasste eine Reihe von Reformen zur Bekämpfung der Krise und zur Wiederbelebung der amerikanischen Wirtschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erlitt die schwersten wirtschaftlichen Schäden während der Weltwirtschaftskrise?",
+        "Antworten": ["Deutschland", "Japan", "Kanada", "Frankreich"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland weimarer weimar deutsches deutsch",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "In Deutschland führte die Weltwirtschaftskrise zu massiver Arbeitslosigkeit und sozialer Unruhe, was den Aufstieg der Nationalsozialisten begünstigte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Tag löste die Weltwirtschaftskrise aus?",
+        "Antworten": ["Schwarzer Donnerstag", "K.Freitag", "Tag der Weltkrise", "Silvester"],
+        "RichtigeAntwort": "Schwarzer Donnerstag freitag",
+        "RichtigeAntwortMöglichkeiten": "Schwarzer Donnerstag 24.oktober 24 25 25.oktober",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der 'Schwarze Dienstag' am 29. Oktober 1929 führte zum Zusammenbruch des Aktienmarktes und leitete die Weltwirtschaftskrise ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wurde die Weltwirtschaftskrise auch bezeichnet?",
+        "Antworten": ["Große Depression", "Große Rezession", "Wirtschaftskollaps", "Finanzkrise"],
+        "RichtigeAntwort": "Große Depression",
+        "RichtigeAntwortMöglichkeiten": "Depression",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Große Depression' beschreibt die weltweite wirtschaftliche Krise, die in den 1930er Jahren auftrat und tiefgreifende soziale und wirtschaftliche Auswirkungen hatte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Deutsche Präsident ernannte Hitler zum Reichskanzler?",
+        "Antworten": ["Paul von Hindenburg", "Friedrich Ebert", "Wilhelm II.", "Kaiser Franz Josef"],
+        "RichtigeAntwort": "Paul von Hindenburg",
+        "RichtigeAntwortMöglichkeiten": "Paul Hindenburg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Paul von Hindenburg, der Präsident der Weimarer Republik, ernannte Hitler am 30. Januar 1933 zum Reichskanzler."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Adolf Hitler zum Reichskanzler Deutschlands ernannt?",
+        "Antworten": ["1933", "1932", "1934", "1935"],
+        "RichtigeAntwort": "1933",
+        "RichtigeAntwortMöglichkeiten": "1933",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Hitler wurde am 30. Januar 1933 zum Reichskanzler ernannt, was den Beginn der nationalsozialistischen Herrschaft markierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Gruppe unterstützte Hitler als 'Sturmabteilung'?",
+        "Antworten": ["SA", "SS", "Gestapo", "HJ"],
+        "RichtigeAntwort": "SA",
+        "RichtigeAntwortMöglichkeiten": "SA",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die SA half Hitler bei der Durchsetzung seiner Macht und der Unterdrückung von Gegnern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Putsch sollte die SA-Führung Hitlers 1934 stürtzen?",
+        "Antworten": ["Röhm-Putsch", "Hitler-Putsch", "Kapp-Putsch", "München-Putsch"],
+        "RichtigeAntwort": "Röhm-Putsch",
+        "RichtigeAntwortMöglichkeiten": "Röhm-Putsch röhm",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Röhm-Putsch, auch 'Nacht der langen Messer', sicherte Hitlers Macht."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß Hitlers gescheiterter Putschversuch von 1923?",
+        "Antworten": ["Hitler-Putsch", "Röhm-Putsch", "Kapp-Putsch", "München-Putsch"],
+        "RichtigeAntwort": "Hitler-Putsch",
+        "RichtigeAntwortMöglichkeiten": "Hitler-Putsch hitler bierkeller-putsch bierkeller",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Hitler-Putsch endete mit Hitlers Haftstrafe und einer Neubewertung seiner Strategie."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Geheimpolizei unter Hitlers Herrschaft?",
+        "Antworten": ["Gestapo", "SA", "SS", "Kripo"],
+        "RichtigeAntwort": "Gestapo",
+        "RichtigeAntwortMöglichkeiten": "Gestapo",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Gestapo war verantwortlich für die Überwachung und Verfolgung von politischen Gegnern und anderen Feinden des Regimes."
+    },
+
+    ////////////////Zweiter Weltkrieg////////////////
+
+    {//einfache fragen
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Führer von Deutschland im Zweiten Weltkrieg?",
+        "Antworten": ["Adolf Hitler", "Winston Churchill", "Franklin D. Roosevelt", "Joseph Stalin"],
+        "RichtigeAntwort": "Adolf Hitler",
+        "RichtigeAntwortMöglichkeiten": "Adolf Hitler",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Adolf Hitler war der Führer des nationalsozialistischen Deutschlands während des Zweiten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land griff Deutschland im Zweiten Weltkrieg zuerst an?",
+        "Antworten": ["Polen", "Frankreich", "Italien", "Schweden"],
+        "RichtigeAntwort": "Polen",
+        "RichtigeAntwortMöglichkeiten": "Polen",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Angriff auf Polen begann am 1. September 1939 und markierte den Beginn des Zweiten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Zweite Weltkrieg?",
+        "Antworten": ["1939", "1941", "1914", "1945"],
+        "RichtigeAntwort": "1939",
+        "RichtigeAntwortMöglichkeiten": "1939",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Zweite Weltkrieg begann am 1. September 1939 mit dem Angriff auf Polen"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete der Zweite Weltkrieg?",
+        "Antworten": ["1945", "1944", "1939", "1950"],
+        "RichtigeAntwort": "1945",
+        "RichtigeAntwortMöglichkeiten": "1945",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Zweite Weltkrieg endete am 8. Mai 1945 in Europa, nach der Kapitulation Deutschlands."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Krieg regierte Adolf Hitler?",
+        "Antworten": ["Zweiter Weltkrieg", "Erster Weltkrieg", "Vietnamkrieg", "Krimkrieg"],
+        "RichtigeAntwort": "Zweiter Weltkrieg",
+        "RichtigeAntwortMöglichkeiten": "Zweiter Weltkrieg 2",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Adolf Hitler war der Führer von Deutschland während des Zweiten Weltkriegs"
+    },
+    {//
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Premierminister von Großbritannien während des Zweiten Weltkriegs?",
+        "Antworten": ["Winston Churchill", "Neville Chamberlain", "Clement Attlee", "Margaret Thatcher"],
+        "RichtigeAntwort": "Winston Churchill",
+        "RichtigeAntwortMöglichkeiten": "Winston Churchill",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Winston Churchill wurde 1940 Premierminister von Großbritannien und führte das Land durch den Großteil des Zweiten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land griff Pearl Harbor im zweiten Weltkrieg an?",
+        "Antworten": ["Japan", "Kanada", "Deutschland", "USA"],
+        "RichtigeAntwort": "Japan",
+        "RichtigeAntwortMöglichkeiten": "Japan",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Pearl Harbor wurde am 7. Dezember 1941 angegriffen XXund führte zu einstieg USA in den Zweiten Weltkrieg"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wo fand der erste Großangriff gegen die USA im Zweiten Weltkrieg statt?",
+        "Antworten": ["Pearl Harbor", "Normandie", "Stalingrad", "Berlin"],
+        "RichtigeAntwort": "Pearl Harbor",
+        "RichtigeAntwortMöglichkeiten": "Pearl Harbor",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Angriff auf Pearl Harbor am 7. Dezember 1941 war der erste Großangriff gegen die USA im Zweiten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte die Sowjetunion während des Zweiten Weltkriegs?",
+        "Antworten": ["Josef Stalin", "Wladimir Lenin", "Nikita Chruschtschow", "Leonid Breschnew"],
+        "RichtigeAntwort": "Josef Stalin",
+        "RichtigeAntwortMöglichkeiten": "Josef Stalin",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Josef Stalin führte die Sowjetunion während des Zweiten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Kriegsstrategie Hitlers im Zweiten Weltkrieg?",
+        "Antworten": ["Blitzkrieg", "Schützengrabenkrieg", "Guerillakrieg", "Seekrieg"],
+        "RichtigeAntwort": "Blitzkrieg",
+        "RichtigeAntwortMöglichkeiten": "Blitzkrieg",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Kriegsstrategie Hitlers, die auf schnellen Vorstößen basierte, wurde Blitzkrieg genannt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man das Bündnis zwischen Deutschland, Japan und Italien im Zweiten Weltkrieg?",
+        "Antworten": ["Achsenmächte", "Alliierte", "Triple Entente", "NATO"],
+        "RichtigeAntwort": "Achsenmächte",
+        "RichtigeAntwortMöglichkeiten": "Achsenmächte achse achsen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Bündnis zwischen Deutschland, Japan und Italien im Zweiten Weltkrieg wurde Achsenmächte genannt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man den Angriff von Deutschland auf die Sowjetunion im Zweiten Weltkrieg?",
+        "Antworten": ["Barbarossa", "Overlord", "Torch", "Weserübung"],
+        "RichtigeAntwort": "Barbarossa",
+        "RichtigeAntwortMöglichkeiten": "Barbarossa",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Angriff von Deutschland auf die Sowjetunion im Zweiten Weltkrieg wurde Unternehmen Barbarossa genannt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Volksgruppe wurde von den Nazis während des Zweiten Weltkriegs verfolgt?",
+        "Antworten": ["Juden", "Muslime", "Polen", "Russland-Deutsche"],
+        "RichtigeAntwort": "Juden",
+        "RichtigeAntwortMöglichkeiten": "Juden sinti Roma",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die jüdische Bevölkerung wurde von den Nazis systematisch verfolgt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Schlacht war der Wendepunkt an der Ostfront im Zweiten Weltkrieg?",
+        "Antworten": ["Schlacht von Stalingrad", "Schlacht von Kursk", "Schlacht von Berlin", "Schlacht von Moskau"],
+        "RichtigeAntwort": "Schlacht von Stalingrad",
+        "RichtigeAntwortMöglichkeiten": "Stalingrad",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlacht von Stalingrad gilt als Wendepunkt an der Ostfront im Zweiten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land schloss kurz vor dem Zweiten Weltkrieg einen Nichtangriffspakt mit Deutschland?",
+        "Antworten": ["Sowjetunion", "Japan", "Polen", "Italien"],
+        "RichtigeAntwort": "Sowjetunion",
+        "RichtigeAntwortMöglichkeiten": "Sowjetunion sowjet sowjet udssr russland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Sowjetunion schloss 1939 den Nichtangriffspakt, bekannt als Molotow-Ribbentrop-Pakt, mit Deutschland."
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
@@ -5028,14 +5870,28 @@ const questions = [
     
     
     
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 ];

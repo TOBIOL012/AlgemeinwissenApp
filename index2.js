@@ -270,27 +270,28 @@ window.addEventListener('resize', function() {
         const micButton = document.querySelector('.mic-button');
         const question = document.querySelector('.question');
         const wrapper = document.querySelector('.next-button-wrapper');
+        const container = document.querySelector('.container');
         const button = document.querySelector('#next-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
-    
+        
         // Optionen für die Fuzzy-Suche
         const options = {
             includeScore: true,
             threshold: 0.8,  // Definiere den Schwellwert für die Fuzzy-Suche
         };
-    
+        
         // Erstelle eine Fuzzy-Suche für die gesamte richtige Antwort
         const fuse = new Fuse([correctAnswer], options);
         const userAnswerWords = userAnswer.toLowerCase().split(/\s+/);  // Teile die Benutzerantwort in Wörter auf
         const correctAnswerWords = correctAnswer.toLowerCase().split(/\s+/);  // Teile die richtige Antwort in Wörter auf
-    
+        
         let isMatch = false;
-    
+        
         // Funktion zur Überprüfung, ob ein String eine Zahl ist
         function isNumber(str) {
             return !isNaN(str) && !isNaN(parseFloat(str));
         }
-    
+        
         if (isNumber(correctAnswer)) {
             if (userAnswer === correctAnswer) {
                 isMatch = true;
@@ -306,7 +307,7 @@ window.addEventListener('resize', function() {
             console.log(`Gesamt - Längenanpassung: ${lengthAdjustmentTotal}`);
             console.log(`Gesamt - Fuzzy-Score: ${fuzzyScore}`);
             console.log(`Gesamt - Gewichteter Score: ${weightedScoreTotal}`);
-    
+        
             if (weightedScoreTotal > 0.7) {
                 isMatch = true;
             } else {
@@ -314,52 +315,52 @@ window.addEventListener('resize', function() {
                 for (let userWord of userAnswerWords) {
                     if (userWord.length < 1) continue;  // Überspringe sehr kurze Wörter
                     console.log(`Benutzerwort: ${userWord}`);
-    
+        
                     for (let correctWord of correctAnswerWords) {
                         if (correctWord.length < 1) continue;  // Überspringe sehr kurze Wörter
-    
+        
                         if (userWord === correctWord) {
                             isMatch = true;
                             break;  // Beende die Schleife, wenn ein Wort übereinstimmt
                         }
-    
+        
                         // Überprüfe, ob beide Wörter numerische Teile enthalten
                         const correctWordNumericMatch = correctWord.match(/(\d+)([a-zA-Z]*)/);
                         const userWordNumericMatch = userWord.match(/(\d+)([a-zA-Z]*)/);
-    
+        
                         if (correctWordNumericMatch && userWordNumericMatch) {
                             const correctWordNumericValue = parseInt(correctWordNumericMatch[1], 10);
                             const userWordNumericValue = parseInt(userWordNumericMatch[1], 10);
-    
+        
                             if (correctWordNumericValue === userWordNumericValue) {
                                 const correctWordText = correctWordNumericMatch[2];
                                 const userWordText = userWordNumericMatch[2];
-    
+        
                                 if (correctWordText === userWordText) {
                                     isMatch = true;
                                     break;  // Beende die Schleife, wenn ein numerischer Teil übereinstimmt
                                 }
                             }
                         }
-    
+        
                         // Berechne den fuzzy Score für das Wortpaar
                         const lengthAdjustment = calculateLengthAdjustment(userWord, correctWord);
                         console.log(`Wortvergleich - Längenanpassung: ${lengthAdjustment}`);
-    
+        
                         const wordFuse = new Fuse([correctWord], options);
                         const wordResult = wordFuse.search(userWord);
                         if (wordResult.length === 0) {
                             console.log(`Keine Fuzzy-Ergebnisse für das Wortpaar ${userWord} und ${correctWord}`);
                             continue;  // Überspringe, wenn keine Ergebnisse gefunden wurden
                         }
-    
+        
                         let fuzzyWordScore = wordResult[0].score;
                         fuzzyWordScore = 1 - fuzzyWordScore;
                         console.log(`Wortvergleich - Fuzzy-Score: ${fuzzyWordScore}`);
-    
+        
                         const weightedWordScore = fuzzyWordScore * lengthAdjustment;
                         console.log(`Wortvergleich - Gewichteter Score: ${weightedWordScore}`);
-    
+        
                         if (weightedWordScore > 0.7) {
                             isMatch = true;
                             break;  // Beende die Schleife, wenn ein Wortpaar übereinstimmt
@@ -369,7 +370,7 @@ window.addEventListener('resize', function() {
                 }
             }
         }
-    
+        
         // Verarbeite die Antwort basierend auf dem Übereinstimmungsstatus
         if (isMatch) {
             correctCount++;
@@ -379,23 +380,29 @@ window.addEventListener('resize', function() {
             question.classList.add('correct');
             wrapper.classList.add('correct');
             button.classList.add('correct');
+            container.classList.add('correct');
             wrapper.classList.remove('no-transition');
-            correctAnswerDisplay.textContent = `Antwort: ${AntwortAnzeige}`;
+            correctAnswerDisplay.innerHTML = `<span class="highlight">Richtig!</span> <span class="highlight">${AntwortAnzeige}</span>`;
+            correctAnswerDisplay.classList.remove('incorrect');
             correctAnswerDisplay.style.display = 'block';
             const bars = document.querySelectorAll('.bar');
             bars.forEach(bar => bar.style.height = '0px');
+            container.disabled = !inputField.value.trim();
         } else {
             console.log('Falsch! Die richtige Antwort wäre:', correctAnswer);
-            correctAnswerDisplay.textContent = `Antwort: ${AntwortAnzeige}`;
+            correctAnswerDisplay.innerHTML = `<span class="highlight">Antwort:</span> <span class="highlight">${AntwortAnzeige}</span>`;
+            correctAnswerDisplay.classList.add('incorrect');
             correctAnswerDisplay.style.display = 'block';
             inputField.classList.add('incorrect');
             micButton.classList.add('incorrect');
             question.classList.add('incorrect');
             wrapper.classList.add('incorrect');
             button.classList.add('incorrect');
+            container.classList.add('incorrect');
             wrapper.classList.remove('no-transition');
             const bars = document.querySelectorAll('.bar');
             bars.forEach(bar => bar.style.height = '0px');
+            container.disabled = !inputField.value.trim();
         }
         document.querySelector('#next-button').textContent = 'Weiter';
     }
@@ -410,18 +417,23 @@ window.addEventListener('resize', function() {
         const button = document.querySelector('#next-button');
         const micButton = document.querySelector('.mic-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
+        const answerBox = document.querySelector('.answer-box'); // Hinzufügen, um die Box auszublenden
         const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
         const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box auszublenden
         const question = document.querySelector('.question');
         const categoryText = document.querySelector('.category-text');
         const categoryIcon = document.querySelector('.category-icon');
+        const container = document.querySelector('.container');
         wrapper.classList.add('no-transition');
         inputField.classList.remove('correct', 'incorrect');
         micButton.classList.remove('correct', 'incorrect');
         question.classList.remove('correct', 'incorrect');
         wrapper.classList.remove('correct', 'incorrect');
         button.classList.remove('correct', 'incorrect');
+        container.classList.remove('correct', 'incorrect');
         correctAnswerDisplay.style.display = 'none';
+        correctAnswerDisplay.classList.remove('incorrect');
+        answerBox.style.display = 'none'; // Die Box ausblenden
         factDisplay.style.display = 'none'; // Fakt ausblenden
         factBox.style.display = 'none'; // Die Box ausblenden
         
@@ -517,6 +529,7 @@ window.addEventListener('resize', function() {
         const inputField = document.querySelector('.text-input');
         const nextButton = document.querySelector('#next-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
+        const answerBox = document.querySelector('.answer-box'); // Hinzufügen, um die Box sichtbar zu machen
         const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
         const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box sichtbar zu machen
         const userAnswer = inputField.value.trim();
@@ -532,7 +545,7 @@ window.addEventListener('resize', function() {
         clickCount++;
         if (clickCount === 1) {
             checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort);
-            correctAnswerDisplay.style.display = 'block';
+            answerBox.style.display = 'block'; // Die Box sichtbar machen
             nextButton.disabled = false;
     
             // Zeigen Sie den Fakt an
@@ -613,5 +626,3 @@ window.addEventListener('resize', function() {
        
 
 });
-
-
