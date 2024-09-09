@@ -1,0 +1,45 @@
+body {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.home-button img {
+    background-color: black;
+    width: 40px;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #38424b;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #e55e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-btn:hover {
+    background-color: #b42727;
+}

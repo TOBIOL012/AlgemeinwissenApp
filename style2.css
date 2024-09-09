@@ -318,6 +318,18 @@ main {
     padding-bottom: calc(5em + 3em + var(--font-size-question));
 }
 
+.note-input {
+    width: 80%;
+    margin: 10px auto;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid #2f4957;
+    background-color: #38424b;
+    color: white;
+    font-size: 1em;
+    outline: none;
+}
+
 .fact {
     color: white;
     font-size: 1.1em;

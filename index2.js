@@ -527,34 +527,42 @@ window.addEventListener('resize', function() {
     function handleNextClick() {
         hidebars();
         const inputField = document.querySelector('.text-input');
+        const noteInput = document.querySelector('.note-input'); // Neues Eingabefeld
         const nextButton = document.querySelector('#next-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
-        const answerBox = document.querySelector('.answer-box'); // Hinzufügen, um die Box sichtbar zu machen
-        const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
-        const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box sichtbar zu machen
+        const answerBox = document.querySelector('.answer-box');
+        const factDisplay = document.querySelector('.fact');
+        const factBox = document.querySelector('.fact-box');
         const userAnswer = inputField.value.trim();
         const randomQuestion = questions.find(q => q.Frage === document.querySelector('.question').textContent);
-        
+    
         if (navigator.vibrate) {
-            // Gerät vibrieren lassen (200ms)
             navigator.vibrate(200);
-        } else {
-            console.log('Vibration API wird nicht unterstützt');
         }
-        
+    
         clickCount++;
         if (clickCount === 1) {
             checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort);
-            answerBox.style.display = 'block'; // Die Box sichtbar machen
+            answerBox.style.display = 'block';
             nextButton.disabled = false;
     
-            // Zeigen Sie den Fakt an
             factDisplay.textContent = randomQuestion.Fakt;
             factDisplay.style.display = 'block';
-            factBox.style.display = 'block'; // Die Box sichtbar machen
+            factBox.style.display = 'block';
         } else if (clickCount === 2) {
+            const note = noteInput.value.trim();
+            if (note) {
+                saveNoteToLocalStorage(randomQuestion.Frage, note);
+            }
             loadNextQuestion();
         }
+    }
+    
+    function saveNoteToLocalStorage(question, note) {
+        let notes = JSON.parse(localStorage.getItem('notes')) || [];
+        notes = notes.filter(n => n.question !== question); // Vorhandene Notiz für die Frage überschreiben
+        notes.push({ question, note });
+        localStorage.setItem('notes', JSON.stringify(notes));
     }
     
     loadNextQuestion();
