@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besserwisser</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="questions.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="Standart.css">
+</head>
+<body>
+    <header>
+        <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%;"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="category-difficulty">
+            <div class="category">
+                <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon">
+                <a class="category-text"></a>
+            </div>
+            <div class="difficulty">
+                <!-- Schwierigkeits-Blocks werden hier durch JS hinzugefügt -->
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question">Frage wird geladen...</p>
+            <div class="answers">
+                <button class="answer">Antwort1</button>
+                <button class="answer">Antwort2</button>
+                <button class="answer">Antwort3</button>
+                <button class="answer">Antwort4</button>
+            </div>
+        </div>
+        
+        <button id="next-button">Weiter</button>
+            <div class="results">
+                <input type="text" class="note-input" placeholder="Fehler">
+                <div class="answer-box">
+                    <a class="correct-answer"></a>
+                </div>
+                <div class="fact-box">
+                    <p class="fact"></p>
+                </div>
+            </div>
+
+
+
+    </main>
+    <script src="/service-worker.js"></script>
+</body>
+</html>

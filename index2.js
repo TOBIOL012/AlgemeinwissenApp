@@ -553,6 +553,7 @@ window.addEventListener('resize', function() {
             const note = noteInput.value.trim();
             if (note) {
                 saveNoteToLocalStorage(randomQuestion.Frage, note);
+                noteInput.value = ''; // Eingabefeld nach dem Speichern leeren
             }
             loadNextQuestion();
         }

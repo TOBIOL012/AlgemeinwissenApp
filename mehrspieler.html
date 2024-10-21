@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allgemeinwissen Quiz App - Mehrspieler</title>
+    <link rel="stylesheet" href="standart.css"> 
     <link rel="stylesheet" href="mehrspieler.css">
     <link rel="stylesheet" href="app.css">
     <link rel="manifest" href="/manifest.json">
@@ -12,7 +13,7 @@
     <div id="spieler-container">
         
         <div class="header">
-            <a href="startseite.html" class="back-arrow">←</a>
+            <img src = "pfeil.png" href="startseite.html" class="back-arrow">
             <div class="erklärung">Spieler hinzufügen</div>
         </div>
         
@@ -31,20 +32,23 @@
         <button id="remove-player-button">-</button>
     </div>
     
-    <div class="overlay-background"></div> <!-- Hintergrundfeld -->
+    <div class="overlay-background"> <!-- Hintergrundfeld -->
     
     <div class="question-regler-container">
+        <div class="design">
         <div class="question-regler-text">Fragen pro Person</div>
         <div class="question-regler">
             <button class="arrow-button" id="decrease-button">◄</button>
             <span id="question-count">20</span>
             <button class="arrow-button" id="increase-button">►</button>
         </div>
+        </div>
     </div>
     
     <div class="button">
         <button class="next-button" id="next-button" >Weiter</button>
     </div>
+</div>
     <script src="mehrspieler.js"></script>
 </body>
 </html>

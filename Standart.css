@@ -4,9 +4,10 @@
     --line-color: #45545c;
     --button-color: #f1730c;
     --button-shade-color: 146, 65, 7;
-    --font-size-question: 1.5em;
-    --font-size-awnsers: 1.3em;
-    --font-size-button: 1.6em;
+    --font-size-header: 1.7rem;
+    --font-size-question: 1.5rem;
+    --font-size-awnsers: 1.3rem;
+    --font-size-button: 1.6rem;
     --icon-size:2.3em;
 }
 
@@ -14,10 +15,10 @@
     background-color: #f1730c;
     color: white;
     border: none;
-    padding: 0.5em;
-    border-radius: 1em;
+    padding: 0.7rem;
+    border-radius: 2rem;
     cursor: pointer;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-family: "Dosis", sans-serif;
     box-shadow: 0px 6px 0px 0px rgb(146, 65, 7);
 }
@@ -26,10 +27,10 @@
     background-color: #38424b;
     color: white;
     border: none;
-    padding: 0.5em;
-    border-radius: 1em;
+    padding: 0.7rem;
+    border-radius: 2rem;
     cursor: pointer;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-family: "Dosis", sans-serif;
     box-shadow: 0px 6px 0px 0px rgb(38, 46, 49);
 }

@@ -38,8 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateContinueButtonState() {
         if (continueButton) {
             continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#f1730c';
+            continueButton.style.boxShadow = selectedCategories.length === 0 ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
             continueButton.disabled = selectedCategories.length === 0;
-        }
+        } 
     }
 
     function getCssVariableValue(variableName) {
