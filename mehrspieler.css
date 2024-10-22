@@ -58,14 +58,14 @@ body {
 }
 
 .spieler-name {
+    border:none;
     padding: 0.8rem 1.2rem;
-    border-radius: 1rem;
-    border: 2px solid #484848;
     background-color:  var(--background-color);
     color: white;
     width: 60%; /* Anpassung an Handyformat */
     font-family: "Dosis", sans-serif;
     outline: none;
+    border-radius: 1rem;
     font-size: var(--font-size-question);
 }
 
@@ -81,6 +81,19 @@ body {
     outline: none;
     outline-offset: -4px;
     font-size: var(--font-size-question);
+}
+
+.input-wrapper {
+    display: flex;
+    border-radius: 1rem;
+    border: 2px solid #484848;
+    justify-content: center;
+    align-items: center;
+}
+
+.kreuz{
+    width: 2.9rem;
+    height: 2.9rem;
 }
 
 .plus-minus-buttons {

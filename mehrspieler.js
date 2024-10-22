@@ -29,22 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const inputContainer = document.createElement('div');
         inputContainer.classList.add('input-container');
 
+        const inputWrapper = document.createElement('div');
+        inputWrapper.classList.add('input-wrapper');
+
         const inputField = document.createElement('input');
         inputField.type = 'text';
         inputField.className = 'spieler-name';
         inputField.maxLength = 15;
 
-        const difficultyButton = document.createElement('button');
-        difficultyButton.className = 'schwierigkeit-button';
-        difficultyButton.textContent = 'Leicht'; // Default difficulty
-        difficultyButton.style.color = difficultyColors['Leicht'];
-
         const deleteButton = document.createElement('img');
         deleteButton.className = 'kreuz';
         deleteButton.src = 'kreuz.png';
         deleteButton.alt = 'Bild';
-        deleteButton.style.position = 'absolute';
-        deleteButton.style.right = '10px';
         deleteButton.style.cursor = 'pointer';
         deleteButton.addEventListener('click', function() {
             const inputContainers = spielerContainer.getElementsByClassName('input-container');
@@ -54,10 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        inputContainer.appendChild(inputField);
+        inputWrapper.appendChild(inputField);
+        inputWrapper.appendChild(deleteButton);
+
+        const difficultyButton = document.createElement('button');
+        difficultyButton.className = 'schwierigkeit-button';
+        difficultyButton.textContent = 'Leicht'; // Default difficulty
+        difficultyButton.style.color = difficultyColors['Leicht'];
+
+        inputContainer.appendChild(inputWrapper);
         inputContainer.appendChild(difficultyButton);
-        inputContainer.style.position = 'relative';
-        inputContainer.appendChild(deleteButton);
         spielerContainer.appendChild(inputContainer);
 
         addDifficultyButtonFunctionality(difficultyButton);
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (playerName === '') {
                     allFilled = false;
                 } else {
-                    const difficulty = input.nextElementSibling.textContent;
+                    const difficulty = input.closest('.input-container').querySelector('.schwierigkeit-button').textContent;
                     const questionCountElement = document.getElementById('question-count');
                     if (questionCountElement) {
                         const questionCount = parseInt(questionCountElement.textContent);
