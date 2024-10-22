@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    const addPlayerButton = document.getElementById('add-player-button');
-    const removePlayerButton = document.getElementById('remove-player-button');
     const spielerContainer = document.getElementById('spieler-container');
     const difficulties = ['Leicht', 'Mittel', 'Schwer', 'Extrem'];
     const difficultyColors = {
@@ -11,89 +8,109 @@ document.addEventListener('DOMContentLoaded', function() {
         'Extrem': '#E55E5E'
     };
 
-    // Standardnamen für Spieler
-    const defaultNames = ['Spieler 1', 'Spieler 2', 'Spieler 3', 'Spieler 4', 'Spieler 5', 'Spieler 6', 'Spieler 7', 'Spieler 8', 'Spieler 9', 'Spieler 10', 'Spieler 11', 'Spieler 12', 'Spieler 13', 'Spieler 14', 'Spieler 15'];
-
     function addDifficultyButtonFunctionality(button) {
         button.addEventListener('click', function() {
             let currentDifficulty = button.textContent;
             let currentIndex = difficulties.indexOf(currentDifficulty);
             let nextIndex = (currentIndex + 1) % difficulties.length;
             button.textContent = difficulties[nextIndex];
-            button.style.color = difficultyColors[difficulties[nextIndex]]; // Farbe ändern
+            button.style.color = difficultyColors[difficulties[nextIndex]];
         });
     }
 
-    if (addPlayerButton) {
-        addPlayerButton.addEventListener('click', function() {
+    function updatePlaceholders() {
+        const inputFields = spielerContainer.getElementsByClassName('spieler-name');
+        Array.from(inputFields).forEach((input, index) => {
+            input.placeholder = `Spieler ${index + 1}`;
+        });
+    }
+
+    function addNewInputField() {
+        const inputContainer = document.createElement('div');
+        inputContainer.classList.add('input-container');
+
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.className = 'spieler-name';
+        inputField.maxLength = 15;
+
+        const difficultyButton = document.createElement('button');
+        difficultyButton.className = 'schwierigkeit-button';
+        difficultyButton.textContent = 'Leicht'; // Default difficulty
+        difficultyButton.style.color = difficultyColors['Leicht'];
+
+        const deleteButton = document.createElement('img');
+        deleteButton.className = 'kreuz';
+        deleteButton.src = 'kreuz.png';
+        deleteButton.alt = 'Bild';
+        deleteButton.style.position = 'absolute';
+        deleteButton.style.right = '10px';
+        deleteButton.style.cursor = 'pointer';
+        deleteButton.addEventListener('click', function() {
             const inputContainers = spielerContainer.getElementsByClassName('input-container');
-            if (inputContainers.length < 15) { // Maximal 15 Spieler insgesamt
-                const inputContainer = document.createElement('div');
-                inputContainer.classList.add('input-container');
+            if (inputContainers.length > 1) {
+                spielerContainer.removeChild(inputContainer);
+                updatePlaceholders();
+            }
+        });
 
-                const inputField = document.createElement('input');
-                inputField.type = 'text';
-                inputField.className = 'spieler-name';
-                // Standardnamen basierend auf der Anzahl der vorhandenen Spieler setzen
-                const playerCount = inputContainers.length + 1;
-                inputField.placeholder = `Spieler ${playerCount}`;
-                inputField.value = defaultNames[inputContainers.length] || `Spieler ${playerCount}`;
-                inputField.maxLength = 15; // Maximal 15 Zeichen
+        inputContainer.appendChild(inputField);
+        inputContainer.appendChild(difficultyButton);
+        inputContainer.style.position = 'relative';
+        inputContainer.appendChild(deleteButton);
+        spielerContainer.appendChild(inputContainer);
 
-                const difficultyButton = document.createElement('button');
-                difficultyButton.className = 'schwierigkeit-button';
-                difficultyButton.textContent = 'Leicht';
-                difficultyButton.style.color = difficultyColors['Leicht']; // Farbe für "Leicht" setzen
+        addDifficultyButtonFunctionality(difficultyButton);
+        updatePlaceholders();
 
-                inputContainer.appendChild(inputField);
-                inputContainer.appendChild(difficultyButton);
-                spielerContainer.appendChild(inputContainer);
+        inputField.addEventListener('input', function() {
+            if (inputField.value.trim() !== '' && spielerContainer.lastElementChild === inputContainer) {
+                if (spielerContainer.getElementsByClassName('input-container').length < 15) {
+                    addNewInputField();
+                }
+            }
+        });
 
-                // Schwierigkeitsbutton-Funktionalität hinzufügen
-                addDifficultyButtonFunctionality(difficultyButton);
-            } else {
-                alert('Die maximale Anzahl von 15 Spielern ist erreicht.');
+        inputField.addEventListener('blur', function() {
+            const inputContainers = spielerContainer.getElementsByClassName('input-container');
+            if (inputField.value.trim() === '' && inputContainers.length > 1) {
+                spielerContainer.removeChild(inputContainer);
+                updatePlaceholders();
             }
         });
     }
 
-    // Funktion zum Entfernen von Spielerfeldern
-    if (removePlayerButton) {
-        removePlayerButton.addEventListener('click', function() {
-            const inputContainers = spielerContainer.getElementsByClassName('input-container');
-            if (inputContainers.length > 2) { // Mindestens zwei Spielerfelder müssen vorhanden sein
-                spielerContainer.removeChild(inputContainers[inputContainers.length - 1]);
-            }
-        });
-    }
+    // Initiales Input-Feld hinzufügen
+    addNewInputField();
 
     // Weiter-Button zur Kategorienseite weiterleiten
     const nextButton = document.getElementById('next-button');
     if (nextButton) {
         nextButton.addEventListener('click', function() {
-            // Überprüfen, ob alle Spielerinput-Felder ausgefüllt sind
             const inputFields = document.querySelectorAll('.spieler-name');
             let allFilled = true;
-            inputFields.forEach(input => {
-                if (input.value.trim() === '') {
-                    allFilled = false;
-                }
-            });
+            let players = [];
 
-            if (allFilled) {
-                // Spielerinformationen speichern
-                let players = [];
-                inputFields.forEach((input, index) => {
-                    const playerName = input.value.trim();
+            inputFields.forEach((input, index) => {
+                const playerName = input.value.trim();
+                if (playerName === '' && index === inputFields.length - 1) {
+                    return; // Skip the last empty input field
+                }
+                if (playerName === '') {
+                    allFilled = false;
+                } else {
                     const difficulty = input.nextElementSibling.textContent;
                     const questionCountElement = document.getElementById('question-count');
                     if (questionCountElement) {
                         const questionCount = parseInt(questionCountElement.textContent);
                         players.push({ name: playerName, difficulty: difficulty, questionCount: questionCount });
                     }
-                });
+                }
+            });
+
+            if (allFilled) {
                 localStorage.setItem('players', JSON.stringify(players));
-                localStorage.setItem('isMultiplayer', 'true'); // Mehrspielermodus speichern
+                localStorage.setItem('isMultiplayer', 'true');
                 window.location.href = 'kategorien-mehrspieler.html';
             } else {
                 alert('Bitte trage für alle Spieler einen Namen ein.');
@@ -105,14 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const decreaseButton = document.getElementById('decrease-button');
     const increaseButton = document.getElementById('increase-button');
     const questionCountElement = document.getElementById('question-count');
-    let questionCount = 5; // Anfangsanzahl der Fragen auf 10 setzen
+    let questionCount = 5;
     if (questionCountElement) {
         questionCountElement.textContent = questionCount;
     }
 
     if (decreaseButton) {
         decreaseButton.addEventListener('click', function() {
-            if (questionCount > 5) {  // Verhindert, dass die Anzahl der Fragen unter 5 fällt
+            if (questionCount > 5) {
                 questionCount--;
                 if (questionCountElement) {
                     questionCountElement.textContent = questionCount;
@@ -123,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (increaseButton) {
         increaseButton.addEventListener('click', function() {
-            if (questionCount < 50) {  // Verhindert, dass die Anzahl der Fragen über 50 steigt
+            if (questionCount < 50) {
                 questionCount++;
                 if (questionCountElement) {
                     questionCountElement.textContent = questionCount;
@@ -135,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initiale Funktionalität für vorhandene Schwierigkeitsbuttons hinzufügen
     const initialDifficultyButtons = document.querySelectorAll('.schwierigkeit-button');
     initialDifficultyButtons.forEach(button => {
-        button.style.color = difficultyColors[button.textContent]; // Anfangsfarbe setzen
+        button.style.color = difficultyColors[button.textContent];
         addDifficultyButtonFunctionality(button);
     });
 
@@ -147,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateContinueButtonState() {
         if (continueButton) {
             continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#e48d45';
+            continueButton.style.boxShadow = selectedCategories.length === 0 ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
             continueButton.disabled = selectedCategories.length === 0;
         }
     }
@@ -195,19 +213,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (continueButton) {
         continueButton.addEventListener('click', function() {
             if (selectedCategories.length > 0) {
-                localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories)); // Speichere alle ausgewählten Kategorien
+                localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
                 window.location.href = 'fragen-mehrspieler.html';
             }
         });
-    }
-
-    // Füge Standardnamen zu den bereits vorhandenen Input-Feldern hinzu
-    const inputContainers = spielerContainer.getElementsByClassName('input-container');
-    for (let i = 0; i < inputContainers.length; i++) {
-        const inputField = inputContainers[i].querySelector('.spieler-name');
-        if (inputField) {
-            inputField.value = defaultNames[i] || `Spieler ${i + 1}`;
-            inputField.maxLength = 15; // Maximal 15 Zeichen
-        }
     }
 });

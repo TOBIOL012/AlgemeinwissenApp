@@ -32,6 +32,12 @@ body {
     font-size: 2rem;
     margin-right: 0.2rem;
     width:2rem;
+    height: 2rem;
+}
+
+.pfeil{
+    height: 2rem;
+    width: 2rem;
 }
 
 .erklärung {
@@ -68,7 +74,7 @@ body {
     color: white;
     border: 2px solid #484848;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 1rem;
     cursor: pointer;
     width: 40%; /* Anpassung an Handyformat */
     font-family: "Dosis", sans-serif;
@@ -85,15 +91,20 @@ body {
     padding-bottom: calc( 30vh + 2em);
 }
 
+.plus{
+    width: 1.6rem;
+}
+.minus{
+    width: 1.6rem;
+}
+
 #add-player-button, #remove-player-button {
     background-color:  var(--background-color);
     color: white;
-    border: 2px solid #484848;
-    padding: 0.5em;
-    border-radius: 1.5em;
+    padding: 0.6em;
+    border-radius: 1.7em;
     cursor: pointer;
     font-size: 1em;
-    width: calc(2.5em); /* 48% der Elternelementbreite für beide Buttons */
     font-family: "Dosis", sans-serif;
     outline: none;
     display: flex;
@@ -102,7 +113,16 @@ body {
 }
 
 #add-player-button{
-    margin-right: 0.6rem;
+    border:none;
+    background-color: rgb(27, 143, 79);
+}
+#remove-player-button{
+    border:none;
+    background-color: rgb(181, 26, 26);
+}
+
+#add-player-button{
+    margin-left: 0.6rem;
 }
 
 .overlay-background {
@@ -211,7 +231,6 @@ body {
     cursor: pointer;
     font-size: 1em;
     font-family: "Dosis", sans-serif;
-    outline: 2px solid #484848;
     outline-offset: -4px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
     width: 100%; /* 100% des übergeordneten Containers */
@@ -226,7 +245,6 @@ body {
     border-radius: 20px;
     cursor: pointer;
     font-family: "Dosis", sans-serif;
-    outline: 2px solid #484848;
     outline-offset: -4px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
     width: 100%; /* 100% des übergeordneten Containers */

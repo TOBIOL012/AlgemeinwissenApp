@@ -11,44 +11,31 @@
 </head>
 <body>
     <div id="spieler-container">
-        
         <div class="header">
-            <img src = "pfeil.png" href="startseite.html" class="back-arrow">
+            <a href="startseite.html" class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
             <div class="erklärung">Spieler hinzufügen</div>
         </div>
         
         <div class="input-container">
-            <input type="text" class="spieler-name" placeholder="Spieler 1" value="Spieler 1" maxlength="15">
-            <button class="schwierigkeit-button">Leicht</button>
-        </div>
-        <div class="input-container">
-            <input type="text" class="spieler-name" placeholder="Spieler 2" value="Spieler 2" maxlength="15">
-            <button class="schwierigkeit-button">Leicht</button>
         </div>
     </div>
     
-    <div class="plus-minus-buttons">
-        <button id="add-player-button">+</button>
-        <button id="remove-player-button">-</button>
-    </div>
-    
-    <div class="overlay-background"> <!-- Hintergrundfeld -->
-    
-    <div class="question-regler-container">
-        <div class="design">
-        <div class="question-regler-text">Fragen pro Person</div>
-        <div class="question-regler">
-            <button class="arrow-button" id="decrease-button">◄</button>
-            <span id="question-count">20</span>
-            <button class="arrow-button" id="increase-button">►</button>
+    <div class="overlay-background">
+        <div class="question-regler-container">
+            <div class="design">
+                <div class="question-regler-text">Fragen pro Person</div>
+                <div class="question-regler">
+                    <button class="arrow-button" id="decrease-button">◄</button>
+                    <span id="question-count">20</span>
+                    <button class="arrow-button" id="increase-button">►</button>
+                </div>
+            </div>
         </div>
+        
+        <div class="button">
+            <button class="next-button" id="next-button">Weiter</button>
         </div>
     </div>
-    
-    <div class="button">
-        <button class="next-button" id="next-button" >Weiter</button>
-    </div>
-</div>
     <script src="mehrspieler.js"></script>
 </body>
 </html>

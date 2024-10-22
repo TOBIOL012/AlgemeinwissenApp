@@ -5,20 +5,24 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #303031;
+    background-color: var(--background-color); 
 }
 
 header {
-    background-color: #303031;
-    padding: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    background-color: var(--background-color);
+    padding: 5%;
+    margin-bottom: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    outline: 2px solid #484848;
+    outline: 2px solid var(--line-color);
+}
+
+.home-button img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-right: 1em;
+    filter: invert(0%);
 }
 
 .player-info {
@@ -29,12 +33,12 @@ header {
 }
 
 .current-player {
-    font-size: 1.2em;
+    font-size: var(--font-size-header);
     color: white;
 }
 
 .question-status {
-    font-size: 1.2em;
+    font-size: var(--font-size-header);
     color: white;
 }
 
@@ -53,13 +57,12 @@ header {
 }
 
 .category-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
+    width: 1.8em;
+    margin-right: 10px;
 }
 
 .category-text {
-    font-size: 1em;
+    font-size: 1.4em;
     color: #e48d45;
     text-decoration: none;
 }
@@ -72,16 +75,16 @@ header {
 }
 
 .difficulty-block {
-    width: 4px;
-    height: 14px;
+    width: 0.4em;
+    height: 1.8em;
     background-color: #5EFC8D;
     border-radius: 5px;
     margin-left: 5px;
 }
 
 .difficulty-block {
-    width: 4px;
-    height: 14px;
+    width: 0.4em;
+    height: 1.2em;
     margin-left: 5px;
     border-radius: 5px;
     background-color: #C3C3C3; /* Standardfarbe */
@@ -108,9 +111,17 @@ header {
     align-items: center;
 }
 
-.home-button img {
-    height: 25px;
-    margin-right: 15px;
+.home-button{
+    height: var(--icon-size);
+    width: var(--icon-size);
+    margin-right: 1em;
+    filter: invert(0%);
+}
+
+.home-button img{
+    height: var(--icon-size);
+    width: var(--icon-size);
+    margin-right: 1em;
     filter: invert(0%);
 }
 
@@ -130,36 +141,38 @@ main {
 }
 
 .question {
-    padding: 20px;
-    font-size: 1.2em;
+    padding: 1em;
+    font-size: var(--font-size-question);
     color: white;
-    background-color: #303031;
+    background-color: var(--background-color);
     border-radius: 20px;
-    width: calc(90% - 40px);
+    width: calc(90% - 2em);
     margin-left: 5%;
-    outline: 2px solid #484848;
+    outline: 2px solid var(--line-color);
 }
+
 
 .answers {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.8em;
     margin-top: 20px;
     align-items: center;
 }
 
 .answer {
-    background-color: #303031;
+    background-color: var(--background-color);
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 0.4em;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: var(--font-size-awnsers);
     width: 90%;
-    outline: 2px solid #484848;
+    outline: 2px solid var(--line-color);
     font-family: "Dosis", sans-serif;
 }
+
 
 .answer-typed {
     padding-left: 5%;
@@ -172,7 +185,7 @@ main {
 .text-input {
     margin-right: 3%;
     border-radius: 25px;
-    background-color: #303031;
+    background-color: var(--background-color);
     color: white;
     border: none;
     padding: 5px 10px;
@@ -180,43 +193,63 @@ main {
     cursor: pointer;
     font-size: 1em;
     width: 90%;
-    outline: 2px solid #484848;
+    outline: 2px solid var(--line-color);
     font-family: "Dosis", sans-serif;
 }
 
-.mic-button {
-    background-color: #303031;
-    border-radius: 25px;
+.fact {
     color: white;
-    border: none;
-    cursor: pointer;
-    outline: 2px solid #484848;
-    padding: 5px 10px;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-align: left;
 }
 
-.mic-button img {
-    width: 19px;
-    height: 19px;
+.fact-box {
+    background-color: #38424b;
+    border-radius: 20px;
+    padding: 0.1rem 1rem;
+    width: calc(90% - 2rem);
+    margin: 0 auto;
+    color: white; 
+    font-weight: normal; 
+    text-align: left;
+    margin-bottom: 1.5rem; 
+    margin-top: 0.8em;
 }
 
-.next-button-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.answer-box {
+    background-color: #38424b;
+    border-radius: 20px;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1em;
 }
 
 .next-button {
-    background-color: #e48d45;
+    background-color: var(--button-color);
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: var(--font-size-question);
     width: 90%; /* Breite auf 90% der Seite eingestellt */
     font-family: "Dosis", sans-serif;
-    outline: 2px solid #484848;
-    outline-offset: -4px;
+}
+
+.note-input {
+    width: 90%;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid #2f4957;
+    background-color: #38424b;
+    color: white;
+    font-size: 1em;
+    outline: none;
 }
 
 .wrong-answer {
@@ -231,39 +264,44 @@ main {
     transition: 0.2s ease-in-out;
 }
 
+
+
 .results {
     display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1em;
+    padding-bottom: 3em;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     animation: slideUp 0.5s forwards;
     text-align: center; /* Zentriert den Inhalt horizontal */
 }
 
 .results.correct {
-    background-color: #484848;
+    background-color: var(--background-color);
+    border-top: 2px solid var(--line-color);
+    transform: translateY(0px);
+    display: block;
 }
 
 .results.wrong {
-    background-color: #484848;
+    background-color: var(--background-color);
+    border-top: 2px solid var(--line-color);
+    transform: translateY(0px);
+    display: block;
 }
+
 
 .correct-button {
     background-color: #e48d45;
     color: white;
-    outline: 2px solid #484848;
-    outline-offset: -4px;
 }
 
 .wrong-button {
-    background-color: #e48d45;
+    background-color: var(--button-color);
     color: white;
-    outline: 2px solid #484848;
-    outline-offset: -4px;
 }
 
 @keyframes slideUp {

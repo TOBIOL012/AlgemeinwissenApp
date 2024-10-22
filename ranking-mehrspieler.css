@@ -4,7 +4,7 @@ body {
     font-family: "Dosis", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #303031;
+    background-color: var(--background-color);
     color: white;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ body {
 
 header {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.5em;
 }
 
 main {
@@ -28,30 +28,34 @@ main {
     overflow: hidden; /* Verhindert das Scrollen des Main-Bereichs */
 }
 
+.Überschrift {
+    font-size: 3em;
+}
+
 #ranking-container {
     width: 100%; /* Balken über 100% des Containers */
     max-height: 40vh; /* Begrenze die Höhe des Containers auf 40% der Viewport-Höhe */
     overflow-y: auto; /* Ermöglicht das vertikale Scrollen */
-    margin-bottom: 20px;
+    margin-bottom: 1em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center; /* Zentriere die Balken horizontal */
 }
 
 .ranking-bar {
+    font-size: 1.6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #484848;
-    border-radius: 20px;
-    margin: 3px 0; /* Verringerter Abstand zwischen den Balken */
+    background-color: var(--line-color);
+    border-radius: 15px;
+    margin: 5px 0; /* Verringerter Abstand zwischen den Balken */
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
     width: 90%; /* Balken über 90% des Containers */
     max-width: 600px; /* Optionale maximale Breite für größere Bildschirme */
-    height: 30px; /* Konstante Höhe der Balken */
+    height: 2.5em; /* Konstante Höhe der Balken */
 }
 
 .ranking-bar span {
@@ -82,16 +86,14 @@ main {
 }
 
 #next-round-button {
-    background-color: #e48d45;
+    background-color: #f1730c;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 0.5em;
+    border-radius: 1em;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.6em;
     font-family: "Dosis", sans-serif;
-    outline: 2px solid #484848;
-    outline-offset: -4px;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
-    width: 100%; /* 100% des übergeordneten Containers */
+    box-shadow: 0px 6px 0px 0px rgb(146, 65, 7);
+    width: 100%;
 }

@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const factDisplay = document.querySelector('.fact');
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button');
+    const wrapper = document.querySelector('.results');
+    const correctAnswerDisplay = document.querySelector('.correct-answer');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
 
     function updateCoinText() {
@@ -28,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Wenn die Seite 'profil.html' ist, aktualisieren Sie den Münztext, XP und Streak
     if (window.location.pathname.endsWith('profil.html')) {
         updateCoinText();
         updateXPText();
@@ -41,10 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             continueButton.style.boxShadow = selectedCategories.length === 0 ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
             continueButton.disabled = selectedCategories.length === 0;
         } 
-    }
-
-    function getCssVariableValue(variableName) {
-        return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
     }
 
     updateContinueButtonState();
@@ -91,11 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (continueButton) {
         continueButton.addEventListener('click', function() {
             if (selectedCategories.length > 0) {
-                // Zurücksetzen der Zustandsvariablen
                 localStorage.removeItem('questionsAsked');
                 localStorage.removeItem('correctCount');
-                // Weitere Variablen, die zurückgesetzt werden sollen, können hier hinzugefügt werden
-
                 window.location.href = 'schwierigkeiten.html';
             }
         });
@@ -106,14 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
     difficultyButtons.forEach(button => {
         button.addEventListener('click', function() {
             const selectedDifficulty = this.getAttribute('data-difficulty');
-            if (selectedDifficulty === 'alle') {
-                localStorage.setItem('selectedDifficulty', 'selectedDifficulty');
-            } else {
-                localStorage.setItem('selectedDifficulty', selectedDifficulty);
-            }
+            localStorage.setItem('selectedDifficulty', selectedDifficulty === 'alle' ? 'selectedDifficulty' : selectedDifficulty);
 
-            if (selectedDifficulty === 'schwer' || selectedDifficulty === 'extrem' || selectedDifficulty === 'expert') {
-                console.log(selectedDifficulty)
+            if (['schwer', 'extrem', 'expert'].includes(selectedDifficulty)) {
                 window.location.href = 'index2.html';
             } else {
                 window.location.href = 'index.html';
@@ -121,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Quiz-Seite
     let currentQuestionIndex = 0;
     let correctCount = 0;
     let askedQuestions = [];
@@ -279,9 +268,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     this.classList.add('correct-answer');
                     document.querySelector('.results').classList.add('correct');
                     document.querySelector('.next-button').classList.add('correct-button');
+                    factDisplay.textContent = randomQuestion.Fakt;
+                    wrapper.classList.add('correct');
+                    factDisplay.style.display = 'block';
                     correctCount++;
                 } else {
                     this.classList.add('wrong-answer');
+                    factDisplay.style.display = 'block';
+                    factDisplay.textContent = randomQuestion.Fakt;
                     document.querySelector('.results').classList.add('wrong');
                     document.querySelector('.next-button').classList.add('wrong-button');
                 }
@@ -298,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, { once: true });
         });
     }
-
+    
     document.querySelector('.next-button').addEventListener('click', loadQuestion);
 
     loadQuestion();
