@@ -52,14 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     difficultyButton.textContent = '';
                     difficultyButton.style.color = 'inherit';
                     difficultyButton.disabled = true;
-                } else {
+                } else if (difficultyButton.textContent === '' || difficultyButton.disabled) {
+                    difficultyButton.textContent = 'Leicht';
+                    difficultyButton.style.color = difficultyColors['Leicht'];
                     difficultyButton.disabled = false;
                 }
             }
         });
     }
 
-    function addNewInputField(initial = false) {
+    function addNewInputField() {
         const inputContainer = document.createElement('div');
         inputContainer.classList.add('input-container');
 
@@ -76,19 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
         deleteButton.src = 'kreuz.png';
         deleteButton.alt = 'Bild';
         deleteButton.style.cursor = 'pointer';
-        deleteButton.style.display = 'none'; // Initially hidden
+        deleteButton.style.display = 'none';
         deleteButton.addEventListener('click', function() {
-            const filledInputs = Array.from(spielerContainer.getElementsByClassName('spieler-name'))
-                .filter(input => input.value.trim() !== '');
-
-            if (filledInputs.length > 2) {
-                spielerContainer.removeChild(inputContainer);
-            } else {
-                inputField.value = '';
-            }
-            updatePlaceholders();
-            updateDeleteButtons();
-            updateDifficultyButtons();
+            handleDelete(inputContainer, inputField);
         });
 
         inputWrapper.appendChild(inputField);
@@ -96,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const difficultyButton = document.createElement('button');
         difficultyButton.className = 'schwierigkeit-button';
-        difficultyButton.textContent = 'Leicht'; // Default difficulty
+        difficultyButton.textContent = 'Leicht';
         difficultyButton.style.color = difficultyColors['Leicht'];
 
         inputContainer.appendChild(inputWrapper);
@@ -108,13 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
         updateDeleteButtons();
         updateDifficultyButtons();
 
-        if (initial) {
-            difficultyButton.textContent = 'Leicht';
-            difficultyButton.style.color = difficultyColors['Leicht'];
-        }
-
         inputField.addEventListener('input', function() {
             deleteButton.style.display = 'inline';
+            updateContinueButtonState();
             if (spielerContainer.lastElementChild === inputContainer) {
                 if (spielerContainer.getElementsByClassName('input-container').length < 15) {
                     addNewInputField();
@@ -123,22 +111,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         inputField.addEventListener('blur', function() {
-            const filledInputs = Array.from(spielerContainer.getElementsByClassName('spieler-name'))
-                .filter(input => input.value.trim() !== '');
-
-            if (inputField.value.trim() === '' && filledInputs.length > 2) {
-                spielerContainer.removeChild(inputContainer);
+            if (inputField.value.trim() === '') {
+                handleDelete(inputContainer, inputField);
             }
-            updateDeleteButtons();
-            updateDifficultyButtons();
         });
     }
 
-    // Zwei initiale Eingabefelder hinzufügen
-    addNewInputField(true);
-    addNewInputField(true);
-    // Ein drittes aktives Eingabefeld hinzufügen
-    addNewInputField();
+    function handleDelete(inputContainer, inputField) {
+        const filledInputs = Array.from(spielerContainer.getElementsByClassName('spieler-name'))
+            .filter(input => input.value.trim() !== '');
+
+        if (filledInputs.length > 2) {
+            spielerContainer.removeChild(inputContainer);
+        } else {
+            inputField.value = '';
+        }
+        updatePlaceholders();
+        updateDeleteButtons();
+        updateDifficultyButtons();
+        updateContinueButtonState();
+    }
+
+    // Add initial input fields
+    for (let i = 0; i < 2; i++) {
+        addNewInputField();
+    }
 
     // Weiter-Button zur Kategorienseite weiterleiten
     const nextButton = document.getElementById('next-button');
@@ -151,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             inputFields.forEach((input, index) => {
                 const playerName = input.value.trim();
                 if (playerName === '' && index === inputFields.length - 1) {
-                    return; // Skip the last empty input field
+                    return;
                 }
                 if (playerName === '') {
                     allFilled = false;
@@ -206,27 +203,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initiale Funktionalität für vorhandene Schwierigkeitsbuttons hinzufügen
-    const initialDifficultyButtons = document.querySelectorAll('.schwierigkeit-button');
-    initialDifficultyButtons.forEach(button => {
-        button.style.color = difficultyColors[button.textContent];
-        addDifficultyButtonFunctionality(button);
-    });
-
     // Kategorie-Seite: Kategorie wählen und speichern
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button-kategorien');
+    const continueButton1 = document.getElementById('next-button-kategorien');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
 
     function updateContinueButtonState() {
+        const inputFields = spielerContainer.getElementsByClassName('spieler-name');
+        const firstTwoFilled = Array.from(inputFields).slice(0, 2).every(input => input.value.trim() !== '');
+
         if (continueButton) {
-            continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#e48d45';
-            continueButton.style.boxShadow = selectedCategories.length === 0 ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
-            continueButton.disabled = selectedCategories.length === 0;
+            const shouldDisable = !firstTwoFilled;
+
+            continueButton1.style.backgroundColor = shouldDisable ? 'gray' : '#f1730c';
+            continueButton1.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
+            continueButton1.disabled = shouldDisable;
         }
     }
-
-    updateContinueButtonState();
 
     categoryImages.forEach(img => {
         const category = img.getAttribute('data-category');
@@ -275,4 +269,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Add event listeners to input fields to update button state
+    const inputFields = spielerContainer.getElementsByClassName('spieler-name');
+    Array.from(inputFields).forEach(input => {
+        input.addEventListener('input', updateContinueButtonState);
+    });
+
+    // Initial update of the button state
+    updateContinueButtonState();
 });

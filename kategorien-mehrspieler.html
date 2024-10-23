@@ -11,9 +11,12 @@
 <body>
     <main>
         
-        <header>
-            <a class="Überschrift">Kategorien</a>
-        </header>
+        <div id="spieler-container">
+            <div class="header">
+                <a href="startseite.html" class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
+                <div class="Überschrift">Kategorien</div>
+            </div>    
+        </div>
 
         <div class="first">
             <img src="Kategorien/ALLES.png" alt="Kategorie ALLES" data-category="Alles">
@@ -37,9 +40,9 @@
             <img src="Kategorien/6.png" alt="Kategorie 6" data-category="Kunst">
         </div>
         <div class="button">
-            <button class="next-button" id="next-button-kategorien" onclick="location.href='fragen-mehrspieler.html'">Spielen</button>
+            <button class="next-button" id="next-button">Weiter</button>
         </div>
     </main>
-    <script src="mehrspieler.js"></script>
+    <script src="kategorien-mehrspieler.js"></script>
 </body>
 </html>

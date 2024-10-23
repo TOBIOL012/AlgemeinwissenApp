@@ -249,6 +249,11 @@ body {
     width: 100%; /* 100% des übergeordneten Containers */
 }
 
+.disabled-button {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
 .next-button-kategorien {
     background-color: #e48d45;
     color: white;
