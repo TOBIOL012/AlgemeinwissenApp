@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const totalQuestions = 20;
+    const totalQuestions =15;
     let currentQuestionIndex = 0;
     let correctCount = 0;
     let askedQuestions = [];
@@ -123,67 +123,68 @@ window.addEventListener('resize', function() {
 
 
 
-    function getRandomQuestion() {
-        const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
-        const selectedDifficulty = localStorage.getItem('selectedDifficulty');
-        let filteredQuestions = questions;
+    
+function getRandomQuestion() {
+    const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
+    const selectedDifficulty = localStorage.getItem('selectedDifficulty');
+    let filteredQuestions = questions;
 
-        if (selectedCategories.length > 0 && !selectedCategories.includes('Alles')) {
-            filteredQuestions = filteredQuestions.filter(q => selectedCategories.includes(q.Kategorie));
+    if (selectedCategories.length > 0 && !selectedCategories.includes('Alles')) {
+        filteredQuestions = filteredQuestions.filter(q => selectedCategories.includes(q.Kategorie));
+    }
+
+    if (selectedDifficulty && selectedDifficulty !== 'alle') {
+        let expertQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'expert');
+        let extremQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'extrem');
+        let schwerQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'schwer');
+        let mittelQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'mittel');
+        let leichtQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'leicht');
+
+        let questionsPool = [];
+
+        if (selectedDifficulty === 'expert') {
+            questionsPool = [
+                ...expertQuestions,
+                ...extremQuestions.slice(0, Math.floor(extremQuestions.length * 0.3)),
+                ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.1))
+            ];
+        } else if (selectedDifficulty === 'extrem') {
+            questionsPool = [
+                ...extremQuestions,
+                ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.3))
+            ];
+        } else if (selectedDifficulty === 'schwer') {
+            questionsPool = [
+                ...schwerQuestions,
+                ...mittelQuestions.slice(0, Math.floor(schwerQuestions.length * 0.4))
+            ];
+        } else if (selectedDifficulty === 'mittel') {
+            questionsPool = [
+                ...mittelQuestions,
+                ...schwerQuestions.slice(0, Math.floor(mittelQuestions.length * 0.4))
+            ];
+        } else {
+            questionsPool = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
         }
 
-        if (selectedDifficulty && selectedDifficulty !== 'alle') {
-            let expertQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'expert');
-            let extremQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'extrem');
-            let schwerQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'schwer');
-            let mittelQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'mittel');
-            let leichtQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'leicht');
-
-            let questionsPool = [];
-
-            if (selectedDifficulty === 'expert') {
-                questionsPool = [
-                    ...expertQuestions,
-                    ...extremQuestions.slice(0, Math.floor(extremQuestions.length * 0.3)),
-                    ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.1))
-                ];
-            } else if (selectedDifficulty === 'extrem') {
-                questionsPool = [
-                    ...extremQuestions,
-                    ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.3))
-                ];
-            } else if (selectedDifficulty === 'schwer') {
-                questionsPool = [
-                    ...schwerQuestions,
-                    ...mittelQuestions.slice(0, Math.floor(schwerQuestions.length * 0.4))
-                ];
-            } else if (selectedDifficulty === 'mittel') {
-                questionsPool = [
-                    ...mittelQuestions,
-                    ...schwerQuestions.slice(0, Math.floor(mittelQuestions.length * 0.4))
-                ];
-            } else {
-                questionsPool = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
-            }
-
-            if (questionsPool.length > 0) {
-                filteredQuestions = questionsPool;
-            }
+        if (questionsPool.length > 0) {
+            filteredQuestions = questionsPool;
         }
+    }
 
-        if (filteredQuestions.length === 0) {
-            return null;
-        }
+    if (filteredQuestions.length === 0) {
+        return null;
+    }
 
-        filteredQuestions = filteredQuestions.filter(q => !askedQuestions.includes(q.Frage));
+    filteredQuestions = filteredQuestions.filter(q => !askedQuestions.includes(q.Frage));
 
-        if (filteredQuestions.length === 0) {
-            return null;
-        }
+    if (filteredQuestions.length === 0) {
+        return null;
+    }
 
-        const question = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
-        askedQuestions.push(question.Frage);
-        return question;
+    const question = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
+    askedQuestions.push(question.Frage);
+    return question;
     }
 
     function updateProgressBar() {
@@ -495,13 +496,13 @@ window.addEventListener('resize', function() {
         // Funktion, die die Farbe basierend auf der Kategorie zurückgibt
         switch (category) {
             case 'Geschichte':
-                return '#FF5733'; // Beispiel-Farbe
+                return '#ECB021'; // Beispiel-Farbe
             case 'Geographie':
-                return '#33FF57'; // Beispiel-Farbe
+                return '#35C1F1'; // Beispiel-Farbe
             case 'Musik':
-                return '#3357FF'; // Beispiel-Farbe
+                return '#90CAF9'; // Beispiel-Farbe
             case 'Sport':
-                return '#F3FF33';
+                return '#FF6F00';
             case 'Wissenschaft':
                 return '#F3FF33';
             case 'Kunst':
@@ -514,12 +515,14 @@ window.addEventListener('resize', function() {
 
     function getCategoryIcon(category) {
         switch (category) {
-            case 'Geschichte': return 'Geschichte.png';
-            case 'Geographie': return 'Geographie.png';
-            case 'Musik': return 'Musik.png';
-            case 'Sport': return 'Sport.png';
-            case 'Wissenschaft': return 'Wissenschaft.png';
+            case 'Geschichte': return 'i-tempel.png';
+            case 'Geographie': return 'i-weltkarte.png';
+            case 'Musik': return 'i-noten.png';
+            case 'Sport': return 'i-basketball.png';
+            case 'Wissenschaft': return 'i-microscop.png';
             case 'Kunst': return 'Kunst.png';
+            case 'Biologie': return 'i-dna.png';
+            case 'Politik': return 'icons8....png';
             default: return 'default.png';
         }
     }

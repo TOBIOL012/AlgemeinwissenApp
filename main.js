@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuestionIndex = 0;
     let correctCount = 0;
     let askedQuestions = [];
-    const totalQuestions = 20;
+    const totalQuestions = 15;
 
     function getRandomQuestion() {
         const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
@@ -232,14 +232,21 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'belohnung.html';
             return;
         }
-
+    
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
             window.location.href = 'kategorien.html';
             return;
         }
-
+    
+        console.log('Random Question:', randomQuestion);
+    
+        if (!randomQuestion.Antworten || randomQuestion.Antworten.length < 4) {
+            console.error('Antworten fehlen oder sind unvollständig:', randomQuestion);
+            return;
+        }
+    
         document.querySelector('.question').textContent = randomQuestion.Frage;
         updateCategoryDisplay(randomQuestion.Kategorie);
         setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
@@ -252,18 +259,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.results').style.display = 'none';
         document.querySelector('.results').classList.remove('correct', 'wrong');
         document.querySelector('.next-button').classList.remove('correct-button', 'wrong-button');
-
+    
         let questionAnswered = false;
-
+    
         answers.forEach(button => {
             button.addEventListener('click', function() {
                 if (questionAnswered) {
                     return;
                 }
                 questionAnswered = true;
-
+    
                 answers.forEach(btn => btn.disabled = true);
-
+    
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
                     this.classList.add('correct-answer');
                     document.querySelector('.results').classList.add('correct');
@@ -279,13 +286,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.querySelector('.results').classList.add('wrong');
                     document.querySelector('.next-button').classList.add('wrong-button');
                 }
-
+    
                 answers.forEach(btn => {
                     if (btn.textContent === randomQuestion.RichtigeAntwort) {
                         btn.classList.add('correct-answer');
                     }
                 });
-
+    
                 document.querySelector('.results').style.display = 'block';
                 currentQuestionIndex++;
                 updateProgressBar();
@@ -298,6 +305,5 @@ document.addEventListener('DOMContentLoaded', function() {
     loadQuestion();
 });
 
-document.getElementById("animated-button").addEventListener("mousedown", function() {
-    navigator.vibrate(200); // Vibriert für 200 Millisekunden
-});
+
+

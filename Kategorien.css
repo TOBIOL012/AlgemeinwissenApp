@@ -25,15 +25,42 @@ header {
     margin-top: 15%;
 }
 
-.Überschrift {
-    font-size: 3em;
-    margin: 0;
-    display: block;
+#spieler-container {
+    width: 90%;
+    padding-left: 5%;
+    padding-top: 7%;
 }
 
-.Unterüberschrift {
-    font-size: 1em;
-    display: block;
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7%; /* Abstand zu den Input-Feldern */
+}
+
+.back-arrow {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+    width:2rem;
+    height: 2rem;
+}
+
+.pfeil{
+    height: 2rem;
+    width: 2rem;
+}
+
+.Überschrift {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: var(--font-size-header);
 }
 
 #buttons-container {
@@ -80,7 +107,7 @@ button:active {
 
 .first img {
     max-width: 27em;
-    margin-top: 10%;
+    margin-top: 2%;
     width: 75%;
     border-radius: 25px;
 }

@@ -69,7 +69,14 @@ self.addEventListener('install', event => {
                 '/fragen-mehrspieler.js',
                 '/fuse.js',
                 '/Albert Einstein.png',
-                '/OIP.jfif'
+                '/OIP.jfif',
+                '/Fragen/geschichte',
+                '/Fragen/geographie',
+                '/Fragen/kunst',
+                '/Fragen/wissenschaft',
+                '/Fragen/sport',
+                '/Fragen/musik',
+
             ]);
         })
     );

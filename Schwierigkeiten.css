@@ -1,16 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-body {
+html, body {
+    height: 100%; /* Stellt sicher, dass der Body die volle Höhe hat */
+    margin: 0;
     font-family: "Dosis", sans-serif;
-    background-color: #141F25;
 }
 
-.main {
+main {
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass die Elemente untereinander sind */
     justify-content: center;
     align-items: center;
+    background-color: #141F25;
+    height: calc(100% - 7% - var(--font-size-header))
+}
+
+.header {
     display: flex;
-    height: 100vh;
-    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+    background-color: #141F25;
+    padding-left: 5%;
+    padding-top: 7%;
+}
+
+.back-arrow {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+    width:2rem;
+    height: 2rem;
+}
+
+.pfeil {
+    height: 2rem;
+    width: 2rem;
 }
 
 .Überschrift {
@@ -23,21 +49,11 @@ body {
     font-size: var(--font-size-header);
 }
 
-.back-arrow {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    font-size: 2rem;
-    margin-right: 0.2rem;
-    width:2rem;
-}
-
 .difficulty-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 22vh;
     gap: 1.2em;
     width: 100%;
 }
@@ -55,20 +71,21 @@ body {
     cursor: pointer;
     font-size: 1.6em;
     font-family: "Dosis", sans-serif;
-    width: 90%;
+    width: 90%; /* 90% der Breite */
     box-shadow: 0px 6px 0px 0px rgb(38, 46, 49);
+    max-width: 400px;
 }
 
 .difficulty-button1 {
-    color: #5EFC8D ;
+    color: #5EFC8D;
 }
 
 .difficulty-button2 {
-    color: #E5E55E ;
+    color: #E5E55E;
 }
 
 .difficulty-button3 {
-    color: #E58A5E ;
+    color: #E58A5E;
 }
 
 .difficulty-button4 {
