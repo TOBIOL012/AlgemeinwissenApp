@@ -226,6 +226,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function saveIncorrectQuestion(question) {
+        let incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+        
+        // Überprüfen, ob die Frage bereits gespeichert ist, um Duplikate zu vermeiden
+        const exists = incorrectQuestions.some(q => q.Frage === question.Frage);
+        if (!exists) {
+            incorrectQuestions.push({
+                Frage: question.Frage,
+                RichtigeAntwort: question.RichtigeAntwort,
+                Antworten: question.Antworten,
+                Kategorie: question.Kategorie,
+                Schwierigkeitsgrad: question.Schwierigkeitsgrad,
+                Fakt: question.Fakt
+            });
+            localStorage.setItem('incorrectQuestions', JSON.stringify(incorrectQuestions));
+        }
+        console.log(incorrectQuestions);
+    }
+
     function loadQuestion() {
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
@@ -285,6 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     factDisplay.textContent = randomQuestion.Fakt;
                     document.querySelector('.results').classList.add('wrong');
                     document.querySelector('.next-button').classList.add('wrong-button');
+                    saveIncorrectQuestion(randomQuestion);
                 }
     
                 answers.forEach(btn => {

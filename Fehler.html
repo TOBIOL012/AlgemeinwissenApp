@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeinwissen Quiz App</title>
+    <link rel="stylesheet" href="fehler.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="Fragen/geschichte.js" defer></script>
+    <script src="Fragen/geographie.js" defer></script>
+    <script src="Fragen/sport.js" defer></script>
+    <script src="Fragen/musik.js" defer></script>
+    <script src="Fragen/wissenschaft.js" defer></script>
+    <script src="Fragen/kunst.js" defer></script>
+    <script src="Fragen/question.js" defer></script>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="Standart.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <header>
+        <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%;"></div>
+            </div>
+        </div>
+    </header>
+    <div class="eintipp">
+        <div class="category-difficulty2">
+            <div class="category2">
+                <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon2">
+                <a class="category-text2">Geographie</a>
+            </div>
+            <div class="difficulty2">
+                <div class="difficulty-block2"></div>
+                <div class="difficulty-block2"></div>
+                <div class="difficulty-block2"></div>
+                <div class="difficulty-block2"></div>
+                <div class="difficulty-block2"></div>
+            </div>
+        </div>
+
+        <div class="question-wrapper2">
+            <p class="question2">Frage wird geladen</p>
+            <div class="answer-typed2">
+                <div class="container2">
+                    <input type="text" class="text-input2" placeholder="Antwort" id="myInput2">
+                    <img class="kreuz2" src="kreuz.png" alt="Bild" id="clearImage2">
+                </div>
+                <button class="mic-button"><img src="icons8-microphone-32.png" alt="Mikrofon"></button>
+            </div>
+            <div class="bars-content2">
+            <div class="volume-bars2">
+                <div class="bar1" id="bar1"></div>
+                <div class="bar1" id="bar2"></div>
+                <div class="bar1" id="bar3"></div>
+                <div class="bar1" id="bar4"></div>
+                <div class="bar1" id="bar5"></div>
+                <div class="bar1" id="bar6"></div>
+                <div class="bar1" id="bar7"></div>
+            </div>  
+            </div>
+
+            <div class="next-button-background">
+            <button id="next-button" class="next-button">Weiter</button>
+        </div>
+            <div class="next-button-wrapper">
+                <div class="answer-box">
+                    <a class="correct-answer"></a>
+                </div>
+                <div class="fact-box">
+                    <p class="fact"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="auswahl">
+        <div class="category-difficulty">
+            <div class="category">
+                <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon">
+                <a class="category-text"></a>
+            </div>
+            <div class="difficulty">
+                <!-- Schwierigkeits-Blocks werden hier durch JS hinzugefügt -->
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question1">Frage wird geladen...</p>
+            <div class="answers">
+                <button class="answer">Antwort1</button>
+                <button class="answer">Antwort2</button>
+                <button class="answer">Antwort3</button>
+                <button class="answer">Antwort4</button>
+            </div>
+        </div>
+
+        <div class="results2">
+            <input type="text" class="note-input2" placeholder="Fehler">
+            <div class="fact-box2">
+                <p class="fact2"></p>
+            </div>
+            <button class="next-button2" id="next-button2">Weiter</button>
+        </div>
+
+    </div>
+    <script src="Fehler.js"></script>
+    
+</body>
+</html>

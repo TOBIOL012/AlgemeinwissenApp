@@ -1,8 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const totalQuestions =15;
+    //localStorage.removeItem('incorrectQuestions');
+    const factDisplay2 = document.querySelector('.fact2');
+    const factDisplay = document.querySelector('.fact');
+    const categoryImages = document.querySelectorAll('img[data-category]');
+    const continueButton = document.querySelector('.next-button2');
+    const wrapper = document.querySelector('.results2');
+    const correctAnswerDisplay = document.querySelector('.correct-answer2');
+    let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
+    const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+    console.log(incorrectQuestions);
+
+
+
+    
+
+    const difficultyButtons = document.querySelectorAll('.difficulty-button1, .difficulty-button2, .difficulty-button3, .difficulty-button4, .difficulty-button5');
+
     let currentQuestionIndex = 0;
     let correctCount = 0;
     let askedQuestions = [];
+    const totalQuestions = 15;
     let clickCount = 0;
     let kleinste = Infinity;
 
@@ -99,7 +116,7 @@ micButton.addEventListener('touchend', function(e) {
 });
 
 
-document.getElementById('clearImage').addEventListener('click', function() {
+document.getElementById('clearImage2').addEventListener('click', function() {
     console.log('hallo');
     document.getElementById('myInput').value = '';
 });
@@ -108,129 +125,17 @@ document.querySelector('input').addEventListener('focus', function() {
     console.log('Tastatur könnte geöffnet sein');
 });
 
-let initialHeight = window.innerHeight;
-
-window.addEventListener('resize', function() {
-    let currentHeight = window.innerHeight;
-    
-    if (currentHeight < initialHeight) {
-        let keyboardHeight = initialHeight - currentHeight;
-        console.log('Ungefähre Tastaturhöhe:', keyboardHeight, 'px');
-        document.getElementById('myInput').value = keyboardHeight;
-    }
-});
-
-
-
-
-    
-function getRandomQuestion() {
-    const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
-    const selectedDifficulty = localStorage.getItem('selectedDifficulty');
-    let filteredQuestions = questions;
-
-    if (selectedCategories.length > 0 && !selectedCategories.includes('Alles')) {
-        filteredQuestions = filteredQuestions.filter(q => selectedCategories.includes(q.Kategorie));
-    }
-
-    if (selectedDifficulty && selectedDifficulty !== 'alle') {
-        let expertQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'expert');
-        let extremQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'extrem');
-        let schwerQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'schwer');
-        let mittelQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'mittel');
-        let leichtQuestions = filteredQuestions.filter(q => q.Schwierigkeitsgrad === 'leicht');
-
-        let questionsPool = [];
-
-        if (selectedDifficulty === 'expert') {
-            questionsPool = [
-                ...expertQuestions,
-                ...extremQuestions.slice(0, Math.floor(extremQuestions.length * 0.3)),
-                ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.1))
-            ];
-        } else if (selectedDifficulty === 'extrem') {
-            questionsPool = [
-                ...extremQuestions,
-                ...schwerQuestions.slice(0, Math.floor(extremQuestions.length * 0.3))
-            ];
-        } else if (selectedDifficulty === 'schwer') {
-            questionsPool = [
-                ...schwerQuestions,
-                ...mittelQuestions.slice(0, Math.floor(schwerQuestions.length * 0.4))
-            ];
-        } else if (selectedDifficulty === 'mittel') {
-            questionsPool = [
-                ...mittelQuestions,
-                ...schwerQuestions.slice(0, Math.floor(mittelQuestions.length * 0.4))
-            ];
-        } else {
-            questionsPool = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
-        }
-
-        if (questionsPool.length > 0) {
-            filteredQuestions = questionsPool;
-        }
-    }
-
-    if (filteredQuestions.length === 0) {
-        return null;
-    }
-
-    filteredQuestions = filteredQuestions.filter(q => !askedQuestions.includes(q.Frage));
-
-    if (filteredQuestions.length === 0) {
-        return null;
-    }
-
-    const question = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
-    askedQuestions.push(question.Frage);
-    console.log(question);
-    currentQuestion = question;
-    return question;
-    
-    }
-
-    function saveIncorrectQuestion() {
-        if (!currentQuestion) {
-            console.error('Keine aktuelle Frage gefunden!');
-            return;
-        }
-    
-        let incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
-    
-        // Überprüfen, ob die Frage bereits gespeichert ist, um Duplikate zu vermeiden
-        const exists = incorrectQuestions.some(q => q.Frage === currentQuestion.Frage);
+    function getRandomQuestion() {
+        const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
         
-        if (!exists) {
-            incorrectQuestions.push({
-                Frage: currentQuestion.Frage,
-                RichtigeAntwort: currentQuestion.RichtigeAntwort,
-                Antworten: currentQuestion.Antworten,
-                Kategorie: currentQuestion.Kategorie,
-                Schwierigkeitsgrad: currentQuestion.Schwierigkeitsgrad,
-                Fakt: currentQuestion.Fakt
-            });
-    
-            localStorage.setItem('incorrectQuestions', JSON.stringify(incorrectQuestions));
+        if (incorrectQuestions.length === 0) {
+            return null;
         }
-        console.log(incorrectQuestions);
-    }
-    
-    function updateProgressBar() {
-        const percentage = (currentQuestionIndex / totalQuestions) * 100;
-        const progressBar = document.querySelector('.progress');
-        if (progressBar) {
-            progressBar.style.width = `${percentage}%`;
 
-            const progressText = progressBar.querySelector('a');
-            if (progressText) {
-                progressText.textContent = `${percentage.toFixed(0)}%`;
-            } else {
-                console.warn('Das Fortschritts-Text-Element konnte nicht gefunden werden.');
-            }
-        } else {
-            console.error('Das Fortschritts-Element konnte nicht gefunden werden.');
-        }
+        const question = incorrectQuestions[Math.floor(Math.random() * incorrectQuestions.length)];
+        askedQuestions.push(question.Frage);
+        console.log(question);
+        return question;
     }
 
     function setDifficultyBlocks(difficulty) {
@@ -258,33 +163,28 @@ function getRandomQuestion() {
                 difficultyLevel = 0;
         }
 
-        for (let i = 4; i > -1; i--) {
+        for (let i = 0; i < difficultyLevel; i++) {
             const block = document.createElement('div');
-            block.classList.add('difficulty-block');
-            if (i < difficultyLevel) {
-                block.classList.add('active');
-                block.style.backgroundColor = getDifficultyColor(difficulty);
-            }
+            block.classList.add('difficulty-block', difficulty);
             difficultyContainer.appendChild(block);
         }
     }
 
-    function getDifficultyColor(difficulty) {
-        switch (difficulty) {
-            case 'leicht':
-                return '#5EFC8D';
-            case 'mittel':
-                return '#E5E55E';
-            case 'schwer':
-                return '#E58A5E';
-            case 'extrem':
-                return '#E55E5E';
-            case 'expert':
-                return '#d969e7';
-            default:
-                return '#141F25';
+    function updateProgressBar() {
+        const percentage = (currentQuestionIndex / totalQuestions) * 100;
+        const progressBar = document.querySelector('.progress');
+        if (progressBar) {
+            progressBar.style.width = `${percentage}%`;
         }
     }
+
+    function updateCategoryDisplay(category) {
+        const categoryTextElement = document.querySelector('.category-text2');
+        if (categoryTextElement) {
+            categoryTextElement.textContent = category;
+        }
+    }
+
 
     function calculateLengthAdjustment(userAnswer, correctAnswer) {
         const lengthDifference = Math.abs(userAnswer.length - correctAnswer.length);
@@ -296,11 +196,11 @@ function getRandomQuestion() {
 
     function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige) {
         hidebars();
-        const inputField = document.querySelector('.text-input');
+        const inputField = document.querySelector('.text-input2');
         const micButton = document.querySelector('.mic-button');
-        const question = document.querySelector('.question');
+        const question = document.querySelector('.question2');
         const wrapper = document.querySelector('.next-button-wrapper');
-        const container = document.querySelector('.container');
+        const container = document.querySelector('.container2');
         const button = document.querySelector('#next-button');
         const correctAnswerDisplay = document.querySelector('.correct-answer');
         
@@ -419,7 +319,6 @@ function getRandomQuestion() {
             bars.forEach(bar => bar.style.height = '0px');
             container.disabled = !inputField.value.trim();
         } else {
-            saveIncorrectQuestion(question);
             console.log('Falsch! Die richtige Antwort wäre:', correctAnswer);
             correctAnswerDisplay.innerHTML = `<span class="highlight">Antwort:</span> <span class="highlight">${AntwortAnzeige}</span>`;
             correctAnswerDisplay.classList.add('incorrect');
@@ -437,91 +336,190 @@ function getRandomQuestion() {
         }
         document.querySelector('#next-button').textContent = 'Weiter';
     }
-    
 
-    function loadNextQuestion() {
-        hidebars();
-        const bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => bar.style.height = '0px');
-        const inputField = document.querySelector('.text-input');
-        const wrapper = document.querySelector('.next-button-wrapper');
-        const button = document.querySelector('#next-button');
-        const micButton = document.querySelector('.mic-button');
-        const correctAnswerDisplay = document.querySelector('.correct-answer');
-        const answerBox = document.querySelector('.answer-box'); // Hinzufügen, um die Box auszublenden
-        const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
-        const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box auszublenden
-        const question = document.querySelector('.question');
-        const categoryText = document.querySelector('.category-text');
-        const categoryIcon = document.querySelector('.category-icon');
-        const container = document.querySelector('.container');
-        wrapper.classList.add('no-transition');
-        inputField.classList.remove('correct', 'incorrect');
-        micButton.classList.remove('correct', 'incorrect');
-        question.classList.remove('correct', 'incorrect');
-        wrapper.classList.remove('correct', 'incorrect');
-        button.classList.remove('correct', 'incorrect');
-        container.classList.remove('correct', 'incorrect');
-        correctAnswerDisplay.style.display = 'none';
-        correctAnswerDisplay.classList.remove('incorrect');
-        answerBox.style.display = 'none'; // Die Box ausblenden
-        factDisplay.style.display = 'none'; // Fakt ausblenden
-        factBox.style.display = 'none'; // Die Box ausblenden
+
+
+    
+    function loadQuestion() {
         
+
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
             window.location.href = 'belohnung.html';
             return;
         }
-        
+    
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
             window.location.href = 'kategorien.html';
             return;
         }
-        
-        document.querySelector('.question').textContent = randomQuestion.Frage;
-        categoryText.textContent = randomQuestion.Kategorie;
-        inputField.value = '';
-        
-        // Setze die Kategorie-spezifische Textfarbe
-        categoryText.style.color = getCategoryColor(randomQuestion.Kategorie);
-        
-        // Setze das Kategorie-spezifische Bild
-        categoryIcon.src = `categorie-icons/${getCategoryIcon(randomQuestion.Kategorie)}`;
-        
-        setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
-        
-        currentQuestionIndex++;
-        updateProgressBar();
-        
-        const nextButton = document.querySelector('#next-button');
-        document.querySelector('#next-button').textContent = 'Einloggen';
-        nextButton.disabled = !inputField.value.trim();
-        button.classList.remove('active');
-        
-        function handleInput() {
-            // Aktivieren oder Deaktivieren des Buttons basierend auf dem Eingabefeldwert
-            nextButton.disabled = !inputField.value.trim();
-            if (inputField.value.trim()) {
-                nextButton.classList.add('active');
-            } else {
-                nextButton.classList.remove('active');
-            }
-            // Ändern des Button-Textes basierend auf dem Eingabefeldwert
-            nextButton.textContent = inputField.value.trim() ? 'Einloggen' : 'Einloggen';
-        }
-        
-        inputField.removeEventListener('input', handleInput);
-        inputField.addEventListener('input', handleInput);
-        
-        nextButton.removeEventListener('click', handleNextClick);
-        nextButton.addEventListener('click', handleNextClick);
-        
-        clickCount = 0;
-    }
     
+        console.log('Random Question:', randomQuestion);
+        
+        if (!randomQuestion.Antworten || randomQuestion.Antworten.length < 4) {
+            console.error('Antworten fehlen oder sind unvollständig:', randomQuestion);
+            return;
+        }
+
+        const auswahl = document.querySelector('.auswahl');
+        const eintipp = document.querySelector('.eintipp');
+
+        if (randomQuestion.Schwierigkeitsgrad === 'leicht' || randomQuestion.Schwierigkeitsgrad === 'mittel') {
+            auswahl.style.display = 'block';
+            eintipp.style.display = 'none';
+            document.querySelector('.question1').textContent = randomQuestion.Frage;
+        updateCategoryDisplay(randomQuestion.Kategorie);
+        setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
+        let answers = document.querySelectorAll('.answer');
+        answers.forEach((button, index) => {
+            button.textContent = randomQuestion.Antworten[index];
+            button.disabled = false;
+            button.classList.remove('correct-answer', 'wrong-answer');
+        });
+        document.querySelector('.results2').style.display = 'none';
+        document.querySelector('.results2').classList.remove('correct', 'wrong');
+        document.querySelector('.next-button').classList.remove('correct-button', 'wrong-button');
+    
+        let questionAnswered = false;
+    
+        answers.forEach(button => {
+            button.addEventListener('click', function() {
+                if (questionAnswered) {
+                    return;
+                }
+                questionAnswered = true;
+    
+                answers.forEach(btn => btn.disabled = true);
+    
+                if (this.textContent === randomQuestion.RichtigeAntwort) {
+                    this.classList.add('correct-answer');
+                    document.querySelector('.results2').classList.add('correct');
+                    document.querySelector('.next-button').classList.add('correct-button');
+                    factDisplay2.textContent = randomQuestion.Fakt;
+                    wrapper.classList.add('correct');
+                    factDisplay2.style.display = 'block';
+                    correctCount++;
+                } else {
+                    factDisplay2.textContent = randomQuestion.Fakt;
+                    console.log("hallo");
+                    this.classList.add('wrong-answer');
+                    factDisplay2.style.display = 'block';
+                    document.querySelector('.results2').classList.add('wrong');
+                    document.querySelector('.next-button').classList.add('wrong-button');
+                }
+    
+                answers.forEach(btn => {
+                    if (btn.textContent === randomQuestion.RichtigeAntwort) {
+                        btn.classList.add('correct-answer');
+                    }
+                });
+    
+                document.querySelector('.results2').style.display = 'block';
+                currentQuestionIndex++;
+                updateProgressBar();
+            }, { once: true });
+        });
+        } else {
+            console.log("hallo");
+            auswahl.style.display = 'none';
+            eintipp.style.display = 'block';
+                hidebars();
+                const bars = document.querySelectorAll('.bar');
+                bars.forEach(bar => bar.style.height = '0px');
+                const inputField = document.querySelector('.text-input2');
+                const wrapper = document.querySelector('.next-button-wrapper');
+                const button = document.querySelector('#next-button');
+                const micButton = document.querySelector('.mic-button');
+                const correctAnswerDisplay = document.querySelector('.correct-answer');
+                const factDisplay = document.querySelector('.fact'); // Vorher existierendes Fact-Element ansprechen
+                const factBox = document.querySelector('.fact-box'); // Hinzufügen, um die Box auszublenden
+                const question = document.querySelector('.question2');
+                const categoryText = document.querySelector('.category-text2');
+                const categoryIcon = document.querySelector('.category-icon2');
+                const container = document.querySelector('.container2');
+                wrapper.classList.add('no-transition');
+                inputField.classList.remove('correct', 'incorrect');
+                micButton.classList.remove('correct', 'incorrect');
+                question.classList.remove('correct', 'incorrect');
+                wrapper.classList.remove('correct', 'incorrect');
+                button.classList.remove('correct', 'incorrect');
+                container.classList.remove('correct', 'incorrect');
+                correctAnswerDisplay.style.display = 'none';
+                correctAnswerDisplay.classList.remove('incorrect');
+                factDisplay.style.display = 'none'; // Fakt ausblenden
+                factBox.style.display = 'none'; // Die Box ausblenden
+                
+                if (currentQuestionIndex >= totalQuestions) {
+                    localStorage.setItem('correctCount', correctCount);
+                    window.location.href = 'belohnung.html';
+                    return;
+                }
+                
+                const randomQuestion = getRandomQuestion();
+                if (!randomQuestion) {
+                    alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
+                    window.location.href = 'kategorien.html';
+                    return;
+                }
+                
+                document.querySelector('.question2').textContent = randomQuestion.Frage;
+                categoryText.textContent = randomQuestion.Kategorie;
+                inputField.value = '';
+                
+                // Setze die Kategorie-spezifische Textfarbe
+                categoryText.style.color = getCategoryColor(randomQuestion.Kategorie);
+                
+                // Setze das Kategorie-spezifische Bild
+                categoryIcon.src = `categorie-icons/${getCategoryIcon(randomQuestion.Kategorie)}`;
+                
+                setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
+                
+                currentQuestionIndex++;
+                updateProgressBar();
+                
+                const nextButton = document.querySelector('#next-button');
+                document.querySelector('#next-button').textContent = 'Einloggen';
+                nextButton.disabled = !inputField.value.trim();
+                button.classList.remove('active');
+                
+                function handleInput() {
+                    // Aktivieren oder Deaktivieren des Buttons basierend auf dem Eingabefeldwert
+                    nextButton.disabled = !inputField.value.trim();
+                    if (inputField.value.trim()) {
+                        nextButton.classList.add('active');
+                    } else {
+                        nextButton.classList.remove('active');
+                    }
+                    // Ändern des Button-Textes basierend auf dem Eingabefeldwert
+                    nextButton.textContent = inputField.value.trim() ? 'Einloggen' : 'Einloggen';
+                }
+                
+                inputField.removeEventListener('input', handleInput);
+                inputField.addEventListener('input', handleInput);
+                
+                nextButton.removeEventListener('click', handleNextClick);
+                nextButton.addEventListener('click', handleNextClick);
+                
+                clickCount = 0;
+            }
+        
+    
+        
+    }
+
+    function hidebars() {
+        const element = document.querySelectorAll('mic-button');
+    const bars = document.querySelectorAll('.bar');
+    if (document.activeElement === element) {
+        console.log('Hallo2')
+    } else {
+        bars.forEach(bar => bar.style.height = '0px');
+        console.log('Hallo1')
+    } 
+    }
+
     function getCategoryColor(category) {
         // Funktion, die die Farbe basierend auf der Kategorie zurückgibt
         switch (category) {
@@ -541,7 +539,6 @@ function getRandomQuestion() {
                 return '#000000'; // Standardfarbe
         }
     }
-    
 
     function getCategoryIcon(category) {
         switch (category) {
@@ -559,15 +556,13 @@ function getRandomQuestion() {
 
     function handleNextClick() {
         hidebars();
-        const inputField = document.querySelector('.text-input');
-        const noteInput = document.querySelector('.note-input'); // Neues Eingabefeld
+        const inputField = document.querySelector('.text-input2');
         const nextButton = document.querySelector('#next-button');
-        const correctAnswerDisplay = document.querySelector('.correct-answer');
-        const answerBox = document.querySelector('.answer-box');
+        const correctAnswerDisplay = document.querySelector('.correct-answer2');
         const factDisplay = document.querySelector('.fact');
         const factBox = document.querySelector('.fact-box');
         const userAnswer = inputField.value.trim();
-        const randomQuestion = questions.find(q => q.Frage === document.querySelector('.question').textContent);
+        const randomQuestion = questions.find(q => q.Frage === document.querySelector('.question2').textContent);
     
         if (navigator.vibrate) {
             navigator.vibrate(200);
@@ -576,145 +571,28 @@ function getRandomQuestion() {
         clickCount++;
         if (clickCount === 1) {
             checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort);
-            answerBox.style.display = 'block';
             nextButton.disabled = false;
     
             factDisplay.textContent = randomQuestion.Fakt;
             factDisplay.style.display = 'block';
             factBox.style.display = 'block';
         } else if (clickCount === 2) {
-            const note = noteInput.value.trim();
-            if (note) {
-                saveNoteToLocalStorage(randomQuestion.Frage, note);
-                noteInput.value = ''; // Eingabefeld nach dem Speichern leeren
-            }
-            loadNextQuestion();
+            loadQuestion();
         }
     }
 
+    
 
-    
-    function saveNoteToLocalStorage(question, note) {
-        let notes = JSON.parse(localStorage.getItem('notes')) || [];
-        notes = notes.filter(n => n.question !== question); // Vorhandene Notiz für die Frage überschreiben
-        notes.push({ question, note });
-        localStorage.setItem('notes', JSON.stringify(notes));
-    }
-    
-    loadNextQuestion();
-
-    function startAudioProcessing() {
-        hidebars();
-        navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            analyser = audioContext.createAnalyser();
-            microphone = audioContext.createMediaStreamSource(stream);
-            scriptProcessor = audioContext.createScriptProcessor(256, 1, 1);
-    
-            analyser.smoothingTimeConstant = 0.3;
-            analyser.fftSize = 32;
-    
-            microphone.connect(analyser);
-            analyser.connect(scriptProcessor);
-            scriptProcessor.connect(audioContext.destination);
-    
-            const barScales = [0.2, 0.5, 0.9, 0.8, 0.4, 0.2, 0.05]; // Prozentuale Höhenverteilung der Balken
-    
-            scriptProcessor.onaudioprocess = function() {
-                const array = new Uint8Array(analyser.frequencyBinCount);
-                analyser.getByteFrequencyData(array);
-                const values = array.reduce((a, b) => a + b) / array.length;
-    
-                // Kleinste Lautstärke aktualisieren, wenn die aktuelle Lautstärke kleiner ist
-                if (values < kleinste && values > 10) {
-                    kleinste = values;
-                    console.log(kleinste);
-                }
-    
-                
-                // Lautstärke auf Balkenhöhen anwenden
-                const bars = document.querySelectorAll('.bar');
-                bars.forEach((bar, index) => {
-                    bar.style.height = `${Math.min(6, Math.max(1, ((values - (kleinste * 0.7)) * barScales[index] * 0.15)))}em`;
-                });
-            };
-        }).catch(error => console.error('Fehler bei der Audioverarbeitung:', error));
-    }
+    continueButton.addEventListener('click', function() {
+        console.log("hallo3")
+        console.log("Button clicked");
+        loadQuestion();
+    });
 
 
-    function hidebars() {
-        const element = document.querySelectorAll('mic-button');
-    const bars = document.querySelectorAll('.bar');
-    if (document.activeElement === element) {
-        console.log('Hallo2')
-    } else {
-        bars.forEach(bar => bar.style.height = '0px');
-        console.log('Hallo1')
-    } 
-    }
 
-
-    function stopAudioProcessing() {
-        if (audioContext) {
-            audioContext.close();
-            audioContext = null;
-        }
-        if (scriptProcessor) {
-            scriptProcessor.disconnect();
-            scriptProcessor = null;
-        }
-        const bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => bar.style.height = '0px'); // Balken zurücksetzen
-    }
-
-       
-
+    loadQuestion();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const wrapper = document.querySelector('.next-button-wrapper');
-    let startY;
-    let currentY = 0;
-    const maxY = 0; // Obere Begrenzung des Wrappers
-    const minY = window.innerHeight / 2; // Maximale Bewegung nach unten
 
-    function onTouchStart(e) {
-        if (!wrapper.classList.contains('correct') && !wrapper.classList.contains('incorrect')) return;
-        startY = e.touches[0].clientY - currentY;
-    }
 
-    function onTouchMove(e) {
-        if (!wrapper.classList.contains('correct') && !wrapper.classList.contains('incorrect')) return;
-        const touchY = e.touches[0].clientY;
-        currentY = touchY - startY;
-
-        // Begrenzen der Bewegung
-        if (currentY < maxY) {
-            currentY = maxY;
-        } else if (currentY > minY) {
-            currentY = minY;
-        }
-
-        wrapper.style.transition = 'none'; // Transition während der Bewegung deaktivieren
-        wrapper.style.transform = `translateY(${currentY}px)`;
-    }
-
-    function onTouchEnd() {
-        // Transition für die Animation aktivieren
-        wrapper.style.transition = 'transform 0.3s ease-out, opacity 0.5s ease-out';
-
-        if (currentY > minY / 2) {
-            // 'Snappen' zur Endposition
-            currentY = minY;
-        } else {
-            // 'Snappen' zur Anfangsposition
-            currentY = 0;
-        }
-        
-        wrapper.style.transform = `translateY(${currentY}px)`;
-    }
-
-    wrapper.addEventListener('touchstart', onTouchStart);
-    wrapper.addEventListener('touchmove', onTouchMove);
-    wrapper.addEventListener('touchend', onTouchEnd);
-});

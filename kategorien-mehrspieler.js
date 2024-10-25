@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
-
+    
     // Funktion zur Aktualisierung des "Weiter"-Buttons (orange/grau)
     function updateContinueButtonState() {
         if (continueButton) {

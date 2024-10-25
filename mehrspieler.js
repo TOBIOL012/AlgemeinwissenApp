@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add initial input fields
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
         addNewInputField();
     }
 
@@ -205,8 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Kategorie-Seite: Kategorie wählen und speichern
     const categoryImages = document.querySelectorAll('img[data-category]');
-    const continueButton = document.getElementById('next-button-kategorien');
-    const continueButton1 = document.getElementById('next-button-kategorien');
+    const continueButton = document.getElementById('next-button');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
 
     function updateContinueButtonState() {
@@ -214,11 +213,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstTwoFilled = Array.from(inputFields).slice(0, 2).every(input => input.value.trim() !== '');
 
         if (continueButton) {
+            console.log("1")
             const shouldDisable = !firstTwoFilled;
-
-            continueButton1.style.backgroundColor = shouldDisable ? 'gray' : '#f1730c';
-            continueButton1.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
-            continueButton1.disabled = shouldDisable;
+            continueButton.style.backgroundColor = shouldDisable ? 'gray' : '#f1730c';
+            continueButton.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
+            continueButton.disabled = shouldDisable;
         }
     }
 

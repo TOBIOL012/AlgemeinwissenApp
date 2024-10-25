@@ -210,7 +210,7 @@ main {
     color: white; 
     font-weight: normal; 
     text-align: left;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.2rem; 
     margin-top: 0.8em;
 }
 
@@ -247,6 +247,7 @@ main {
     color: white;
     font-size: 1em;
     outline: none;
+    display: none;
 }
 
 .wrong-answer {
