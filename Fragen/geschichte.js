@@ -398,7 +398,7 @@ const geschichte = [
         "Antworten": ["Sphinx", "Obelisk", "Kolosseum", "Zikkurat"],
         "RichtigeAntwort": "Sphinx",
         "RichtigeAntwortMöglichkeiten": "Sphinx",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Sphinx von Gizeh wird oft als Wächter der Pyramiden angesehen"
     },
     { 
@@ -406,7 +406,7 @@ const geschichte = [
         "Frage": "Welches alte ägyptische Ritual beinhaltete das Einbalsamieren der Toten?",
         "Antworten": ["Mumifizierung", "Opfergabe", "Feuerbestattung", "Einäscherung"],
         "RichtigeAntwort": "Mumifizierung",
-        "RichtigeAntwortMöglichkeiten": "Mumifizierung Mumie mumiesieren",
+        "RichtigeAntwortMöglichkeiten": "Mumifizierung Mumie mumiesieren mumifizieren",
         "Schwierigkeitsgrad": "leicht",
         "Fakt": "Die Mumifizierung diente zum erhalt des Lebens nach dem Tod"
     }, 
@@ -1490,15 +1490,6 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welches Land wurde nach dem Sieg von Augustus über Kleopatra zur römischen Provinz?",
-        "Antworten": ["Ägypten", "Gallien", "Spanien", "Germanien"],
-        "RichtigeAntwort": "Ägypten",
-        "RichtigeAntwortMöglichkeiten": "Ägypten",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Ägypten wurde 30 v. Chr. zur römischen Provinz"
-    },
-    {
-        "Kategorie": "Geschichte",
         "Frage": "Welche Region eroberte Julius Caesar vollständig?",
         "Antworten": ["Gallien", "Germanien", "Britannien", "Hispanien"],
         "RichtigeAntwort": "Gallien",
@@ -1508,7 +1499,7 @@ const geschichte = [
     },
     {//Europäische Völker
         "Kategorie": "Geschichte",
-        "Frage": "Welches Volk lebte in Griechenland vor der Blütezeit der klassischen griechischen Stadtstaaten?",
+        "Frage": "Welches Volk lebte auf dem Grieschichem Festland vor den Griechen?",
         "Antworten": ["Mykener", "Römer", "Minoer", "Phoenizier"],
         "RichtigeAntwort": "Mykener",
         "RichtigeAntwortMöglichkeiten": "Mykener",
@@ -1724,7 +1715,7 @@ const geschichte = [
     },
     {//Berserker
         "Kategorie": "Geschichte",
-        "Frage": "Wie nannte man die nordischen in Tierfellen gehüllten Krieger in einem unkontrollierbaren Wutrausch?",
+        "Frage": "Wie nannte man die nordischen Krieger in einem unkontrollierbaren Wutrausch einer Droge?",
         "Antworten": ["Berserker", "Jarls", "Druiden", "Skalden"],
         "RichtigeAntwort": "Berserker",
         "RichtigeAntwortMöglichkeiten": "Berserker",
@@ -1925,7 +1916,7 @@ const geschichte = [
         "Frage": "Welches große Reich gründete Karl der Große?",
         "Antworten": ["Fränkisches Reich", "Heiliges Römisches Reich", "Ostfränkisches Reich", "Byzantinisches Reich"],
         "RichtigeAntwort": "Fränkisches Reich",
-        "RichtigeAntwortMöglichkeiten": "Fränkisches Frankenreich Franken franzosen",
+        "RichtigeAntwortMöglichkeiten": "Fränkisches Frankenreich Franken franzosen frankreich",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Das Fränkische Reich unter Karl dem Großen umfasste weite Teile Westeuropas und war eine der mächtigsten politischen Einheiten seiner Zeit."
     },
@@ -2552,7 +2543,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wann wurde der Buchdruck erfunden?",
+        "Frage": "In welchem Jahr wurde der Buchdruck erfunden?",
         "Antworten": ["1440", "1450", "1460", "1470"],
         "RichtigeAntwort": "1440",
         "RichtigeAntwortMöglichkeiten": "1440",
@@ -2685,7 +2676,7 @@ const geschichte = [
         "Schwierigkeitsgrad": "leicht",
         "Fakt": "Thor ist der Gott des Donners im nordischen Glauben"
     },
-    {
+    { // mongolisches reich
         "Kategorie": "Geschichte",
         "Frage": "Welches war nach dem Brittischem das zweitgrößte Reich der Geschichte?",
         "Antworten": ["Mongolisches Reich", "Römisches Reich", "Britisches Empire", "Osmanisches Reich"],
@@ -2738,51 +2729,6 @@ const geschichte = [
         "RichtigeAntwortMöglichkeiten": "Pferd",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Mongolische Armee war für ihre Schnelligkeit und Beweglichkeit bekannt"
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welche Dynastie baute den größten Teil der heutigen Großen Mauer von China?",
-        "Antworten": ["Qin-Dynastie", "Han-Dynastie", "Tang-Dynastie", "Ming-Dynastie"],
-        "RichtigeAntwort": "Ming-Dynastie",
-        "RichtigeAntwortMöglichkeiten": "Ming-Dynastie ming",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Ming-Dynastie exestierte von 1368 bis 1644"
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welche Dynastie ist für die Erfindung des Papiers bekannt?",
-        "Antworten": ["Qin-Dynastie", "Han-Dynastie", "Tang-Dynastie", "Song-Dynastie"],
-        "RichtigeAntwort": "Han-Dynastie",
-        "RichtigeAntwortMöglichkeiten": "Han-Dynastie han",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Han-Dynastie exestierte von 206 v. Chr. bis 220 n. Chr. im heutigen China"
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welche Dynastie begann mit dem Bau der Chinesischen Mauer?",
-        "Antworten": ["Qin-Dynastie", "Han-Dynastie", "Tang-Dynastie", "Song-Dynastie"],
-        "RichtigeAntwort": "Qin-Dynastie",
-        "RichtigeAntwortMöglichkeiten": "Qin-Dynastie qin",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Bau der Chinesischen Mauer begann unter der Qin-Dynastie, um das Reich vor nomadischen Invasoren zu schützen."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welches Material wurde überwiegend beim Bau der Chinesischen Mauer verwendet?",
-        "Antworten": ["Holz", "Stein", "Sand", "Lehm"],
-        "RichtigeAntwort": "Stein",
-        "RichtigeAntwortMöglichkeiten": "Stein",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Die Chinesische Mauer besteht aus mehreren unterschiedlich langen Mauern die nicht verbunden sind und sich durch ganz China verteilen"
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welcher Fluss ist der Urprung der chinesischen Zivilisation?",
-        "Antworten": ["Gelber Fluss", "Yangtze", "Mekong", "Nil"],
-        "RichtigeAntwort": "Gelber Fluss",
-        "RichtigeAntwortMöglichkeiten": "Gelber Fluss Huang",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Gelbe Fluss wird auch Huang He genannt"
     },
     {
         "Kategorie": "Geschichte",
@@ -2861,7 +2807,7 @@ const geschichte = [
         "Frage": "Welches Land führte den Hundertjährigen Krieg gegen Frankreich?",
         "Antworten": ["Enland", "Spanien", "Schottland", "Italien"],
         "RichtigeAntwort": "Enland",
-        "RichtigeAntwortMöglichkeiten": "Enland Großbrittanien vereinigtes uk brittisches",
+        "RichtigeAntwortMöglichkeiten": "Enland Großbritanien vereinigtes uk britisches",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Hundertjährige Krieg dauerte von 1337 bis 1453"
     },
@@ -2928,7 +2874,7 @@ const geschichte = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Edward III. erhebte damals den Anspruch auf den französischen Thron"
     },
-    {
+    {//russland ukraine
         "Kategorie": "Geschichte",
         "Frage": "Welches Reich war die früheste Form des russischen Staates im Mittelalter?",
         "Antworten": ["Kiewer Rus", "Moskowitisches Reich", "Goldene Horde", "Novgoroder Republik"],
@@ -3559,7 +3505,7 @@ const geschichte = [
         "Frage": "Was geschah mit der Stadt Moskau während Napoleons Russlandfeldzug 1812?",
         "Antworten": ["verbrannt", "überschwemmt", "Erdbeeben", "Tornado"],
         "RichtigeAntwort": "verbrannt",
-        "RichtigeAntwortMöglichkeiten": "verlassen evakuiert brand verbrannt feuer zurückgelassen angezündet entzündet gelegt",
+        "RichtigeAntwortMöglichkeiten": "verlassen evakuiert brand verbrannt feuer zurückgelassen angezündet entzündet gelegt verbrannte",
         "Schwierigkeitsgrad": "leicht",
         "Fakt": "Als Napoleon in Moskau eintraf, fand er die Stadt fast leer vor, da die russische Armee und die Bürger sie evakuiert hatten. Zusätzlich wurde ein Großteil der Stadt in Brand gesteckt, um den Eindringlingen die Versorgung zu erschweren."
     },
@@ -4088,7 +4034,7 @@ const geschichte = [
         "Antworten": ["Big Ben", "Tower Bridge", "Buckingham Palace", "Westminster Abbey"],
         "RichtigeAntwort": "Big Ben",
         "RichtigeAntwortMöglichkeiten": "Big Ben",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Glockenturm, heute bekannt als Big Ben, wurde 1858 fertiggestellt und ist ein Symbol Londons."
     },
     {
@@ -4097,7 +4043,7 @@ const geschichte = [
         "Antworten": ["Edward VII.", "George V.", "William IV.", "Elizabeth II."],
         "RichtigeAntwort": "Edward VII.",
         "RichtigeAntwortMöglichkeiten": "Edward",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Nach dem Tod von Queen Victoria im Jahr 1901 wurde ihr Sohn Edward VII. König von Großbritannien"
     },
     {
@@ -4105,13 +4051,13 @@ const geschichte = [
         "Frage": "Was begann 1642 in England?",
         "Antworten": ["Bürgerkrieg", "Industrielle Revolution", "Revolution", "Napoleonische Kriege"],
         "RichtigeAntwort": "Bürgerkrieg",
-        "RichtigeAntwortMöglichkeiten": "Bürgerkrieg",
-        "Schwierigkeitsgrad": "leicht",
+        "RichtigeAntwortMöglichkeiten": "Bürgerkrieg bürger",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Der Englische Bürgerkrieg begann 1642 und war ein Konflikt zwischen den Anhängern des Königs und des Parlaments."
     },
     { //7 jährige Krieg
         "Kategorie": "Geschichte",
-        "Frage": "Wann begann der Siebenjährige Krieg?",
+        "Frage": "In welchem Jahr begann der Siebenjährige Krieg?",
         "Antworten": ["1756", "1740", "1763", "1776"],
         "RichtigeAntwort": "1756",
         "RichtigeAntwortMöglichkeiten": "1756",
@@ -4141,7 +4087,7 @@ const geschichte = [
         "Frage": "Welcher Vertrag beendete den Siebenjährigen Krieg?",
         "Antworten": ["Frieden von Paris", "Vertrag von Versailles", "Frieden von Utrecht", "Vertrag von Tordesillas"],
         "RichtigeAntwort": "Frieden von Paris",
-        "RichtigeAntwortMöglichkeiten": "Frieden Paris",
+        "RichtigeAntwortMöglichkeiten": "Paris pariser",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Im Siebenjährige Krieg (1756–1763) kämpften Großbritannien, Preußen, Portugal gegen Frankreich, Österreich, Russland, Spanien"
     },
@@ -4159,7 +4105,7 @@ const geschichte = [
         "Frage": "Wie hieß der Krieg, in dem im 18. Jahrhundert alle europäischen Großmächte beteiligt waren?",
         "Antworten": ["Siebenjähriger Krieg", "Napoleonischer Krieg", "Dreißigjähriger Krieg", "Krieg der Spanischen Erbfolge"],
         "RichtigeAntwort": "Siebenjähriger Krieg",
-        "RichtigeAntwortMöglichkeiten": "Siebenjähriger 7 sieben",
+        "RichtigeAntwortMöglichkeiten": "Siebenjähriger 7 sieben 7-jähriger",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Im Siebenjährige Krieg (1756–1763) kämpften Großbritannien, Preußen, Portugal gegen Frankreich, Österreich, Russland, Spanien"
     },
@@ -4345,7 +4291,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welches Königreich führte die Vereinigung Deutschlands 1871 an?",
+        "Frage": "Welches Königreich führte zur Vereinigung Deutschlands 1871?",
         "Antworten": ["Preußen", "Bayern", "Sachsen", "Hessen"],
         "RichtigeAntwort": "Preußen",
         "RichtigeAntwortMöglichkeiten": "Preußen",
@@ -4480,6 +4426,15 @@ const geschichte = [
         "RichtigeAntwortMöglichkeiten": "Frankreich",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Algeriens blieb bis zur Unabhängigkeit 1962 unter französischer Kontrolle blieb."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land kolonialisierte Libyen vor dem Zweiten Weltkrieg?",
+        "Antworten": ["Italien", "Frankreich", "Großbritannien", "Spanien"],
+        "RichtigeAntwort": "Italien",
+        "RichtigeAntwortMöglichkeiten": "Italien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Libyen wurde 1912 von Italien kolonialisiert und blieb bis zum Ende des Zweiten Weltkriegs unter italienischer Kontrolle." 
     },
     {
         "Kategorie": "Geschichte",
@@ -4951,7 +4906,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wann fand der Deutsch-Österreichische Krieg statt, der auch als Deutscher Krieg bekannt ist?",
+        "Frage": "In welchem Jahr fand der Deutsch-Österreichische Krieg statt, der auch als Deutscher Krieg bekannt ist?",
         "Antworten": ["1866", "1848", "1871", "1850"],
         "RichtigeAntwort": "1866",
         "RichtigeAntwortMöglichkeiten": "1866",
@@ -4969,7 +4924,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wann wurde die Doppelmonarchie Österreich-Ungarn gegründet?",
+        "Frage": "In waelchem Jahr wurde die Doppelmonarchie Österreich-Ungarn gegründet?",
         "Antworten": ["1867", "1871", "1859", "1889"],
         "RichtigeAntwort": "1867",
         "RichtigeAntwortMöglichkeiten": "1867",
@@ -5041,6 +4996,15 @@ const geschichte = [
         "RichtigeAntwortMöglichkeiten": "1912",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Der Erste Balkankrieg begann 1912, als eine Allianz von Balkanländern gegen das Osmanische Reich kämpfte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man den inoffiziellen Waffenstillstand im Winter 1914 im Ersten Weltkrieg?",
+        "Antworten": ["Weihnachtsfrieden", "Winterfrieden", "Friedensvertrag", "Brest-Litowsk"],
+        "RichtigeAntwort": "Weihnachtsfrieden",
+        "RichtigeAntwortMöglichkeiten": "Weihnachtsfrieden weinachts",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Weihnachtsfrieden von 1914 war ein spontaner Waffenstillstand, bei dem Soldaten beider Seiten gemeinsam Weihnachten feierten." 
     },
     {
         "Kategorie": "Geschichte",
@@ -5125,7 +5089,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wann wurde die Entente Cordiale zwischen Frankreich und Großbritannien unterzeichnet?",
+        "Frage": "In welchem Jahr wurde die Entente Cordiale zwischen Frankreich und Großbritannien unterzeichnet?",
         "Antworten": ["1904", "1912", "1895", "1907"],
         "RichtigeAntwort": "1904",
         "RichtigeAntwortMöglichkeiten": "1904",
@@ -5156,7 +5120,7 @@ const geschichte = [
         "Antworten": ["Österreich-Ungarn", "Frankreich", "Italien", "Russland"],
         "RichtigeAntwort": "Österreich-Ungarn",
         "RichtigeAntwortMöglichkeiten": "Österreich-Ungarn Österreich Ungarn",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Österreich-Ungarn war 1914 ein wichtiger Verbündeter Deutschlands und bildete zusammen mit Deutschland die Mittelmächte im Ersten Weltkrieg."
     },
     {
@@ -5255,7 +5219,7 @@ const geschichte = [
         "Antworten": ["Russische Revolution", "Kriegseintritt Russlands", "Sturz des Zaren", "Erster Weltkrieg"],
         "RichtigeAntwort": "Russische Revolution",
         "RichtigeAntwortMöglichkeiten": "Russische Revolution",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Russische Revolution 1917 führte zum Sturz des Zaren Nikolaus II. und zur Errichtung der Bolschewistischen Regierung."
     },
     {
@@ -5318,7 +5282,7 @@ const geschichte = [
         "Antworten": ["1915", "1914", "1916", "1917"],
         "RichtigeAntwort": "1915",
         "RichtigeAntwortMöglichkeiten": "1915",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Bulgarien trat 1915 auf der Seite der Mittelmächte in den Ersten Weltkrieg ein."
     },
     {
@@ -5368,7 +5332,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wann traten die USA offiziell in den Ersten Weltkrieg ein?",
+        "Frage": "In welchem Jahr traten die USA offiziell in den Ersten Weltkrieg ein?",
         "Antworten": ["1914", "1915", "1916", "1917"],
         "RichtigeAntwort": "1917",
         "RichtigeAntwortMöglichkeiten": "1917",
@@ -5377,11 +5341,11 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Wo fand die Friedenskonferenz statt, die den Ersten Weltkrieg beendete?",
+        "Frage": "In welcher Stadt fand die Friedenskonferenz statt, die den Ersten Weltkrieg beendete?",
         "Antworten": ["Paris", "London", "Berlin", "Wien"],
         "RichtigeAntwort": "Paris",
         "RichtigeAntwortMöglichkeiten": "Paris",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Friedenskonferenz, die den Ersten Weltkrieg beendete, fand 1919 in Paris statt, wo der Vertrag von Versailles unterzeichnet wurde."
     },
     {
@@ -5395,7 +5359,7 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welches Land trat dem Ersten Weltkrieg bei und half den Alliierten gegen Deutschland?",
+        "Frage": "Welches große Land trat Ende des Ersten Weltkrieg ein und half den Alliierten gegen Deutschland?",
         "Antworten": ["Vereinigte Staaten", "Russland", "Deutschland", "Italien"],
         "RichtigeAntwort": "Vereinigte Staaten",
         "RichtigeAntwortMöglichkeiten": "staaten us usa amerika",
@@ -5443,7 +5407,7 @@ const geschichte = [
         "Frage": "Wie viele Jahre dauerte der Erste Weltkrieg?",
         "Antworten": ["4 Jahre", "5 Jahre", "6 Jahre", "9 Jahre"],
         "RichtigeAntwort": "4 Jahre",
-        "RichtigeAntwortMöglichkeiten": "4 Jahre",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Der Erste Weltkrieg dauerte von 1914 bis 1918, insgesamt 4 Jahre."
     },
@@ -5480,7 +5444,7 @@ const geschichte = [
         "Antworten": ["Friedrich Ebert", "Paul von Hindenburg", "Gustav Stresemann", "Walther Rathenau"],
         "RichtigeAntwort": "Friedrich Ebert",
         "RichtigeAntwortMöglichkeiten": "Friedrich Ebert",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Friedrich Ebert leitete die Übergangsregierung nach dem Ende des Ersten Weltkriegs und war bis 1925 Präsident der Weimarer Republik."
     },
     {
@@ -5498,7 +5462,7 @@ const geschichte = [
         "Antworten": ["1919", "1920", "1921", "1922"],
         "RichtigeAntwort": "1919",
         "RichtigeAntwortMöglichkeiten": "1919",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Weimarer Verfassung wurde am 11. August 1919 verabschiedet und trat am 14. August 1919 in Kraft."
     },
     {
@@ -5606,7 +5570,7 @@ const geschichte = [
         "Antworten": ["Weimarer Republik", "Deutsches Reich", "Kaiserreich", "Preußen"],
         "RichtigeAntwort": "Weimarer Republik",
         "RichtigeAntwortMöglichkeiten": "Weimarer weimar",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Weimarer Republik war die erste deutsche Demokratie und bestand von 1919 bis 1933, bevor sie von der nationalsozialistischen Diktatur abgelöst wurde."
     },
     {
@@ -5629,11 +5593,11 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welcher US-Präsident führte Maßnahmen gegen Weltwirtschaftskrise ein?",
+        "Frage": "Welcher US-Präsident führte große Maßnahmen gegen die Weltwirtschaftskrise ein?",
         "Antworten": ["Franklin D. Roosevelt", "Herbert Hoover", "Theodore Roosevelt", "John F. Kennedy"],
         "RichtigeAntwort": "Franklin D. Roosevelt",
-        "RichtigeAntwortMöglichkeiten": "Franklin D. Roosevelt",
-        "Schwierigkeitsgrad": "mittel",
+        "RichtigeAntwortMöglichkeiten": "Franklin Roosevelt",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Der 'New Deal' von Franklin D. Roosevelt umfasste eine Reihe von Reformen zur Bekämpfung der Krise und zur Wiederbelebung der amerikanischen Wirtschaft."
     },
     {
@@ -5683,15 +5647,6 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welche Gruppe unterstützte Hitler als 'Sturmabteilung'?",
-        "Antworten": ["SA", "SS", "Gestapo", "HJ"],
-        "RichtigeAntwort": "SA",
-        "RichtigeAntwortMöglichkeiten": "SA",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die SA half Hitler bei der Durchsetzung seiner Macht und der Unterdrückung von Gegnern."
-    },
-    {
-        "Kategorie": "Geschichte",
         "Frage": "Welcher Putsch sollte die SA-Führung Hitlers 1934 stürtzen?",
         "Antworten": ["Röhm-Putsch", "Hitler-Putsch", "Kapp-Putsch", "München-Putsch"],
         "RichtigeAntwort": "Röhm-Putsch",
@@ -5704,7 +5659,7 @@ const geschichte = [
         "Frage": "Wie hieß Hitlers gescheiterter Putschversuch von 1923?",
         "Antworten": ["Hitler-Putsch", "Röhm-Putsch", "Kapp-Putsch", "München-Putsch"],
         "RichtigeAntwort": "Hitler-Putsch",
-        "RichtigeAntwortMöglichkeiten": "Hitler-Putsch hitler bierkeller-putsch bierkeller",
+        "RichtigeAntwortMöglichkeiten": "Hitler-Putsch hitler bierkeller-putsch bierkeller Hitler-Ludendorff-Putsch Ludendorff-Putsch Ludendorff Hitler-Ludendorff Ludendorff-Hitler",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Der Hitler-Putsch endete mit Hitlers Haftstrafe und einer Neubewertung seiner Strategie."
     },
@@ -5735,7 +5690,7 @@ const geschichte = [
         "Antworten": ["Polen", "Frankreich", "Italien", "Schweden"],
         "RichtigeAntwort": "Polen",
         "RichtigeAntwortMöglichkeiten": "Polen",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Angriff auf Polen begann am 1. September 1939 und markierte den Beginn des Zweiten Weltkriegs."
     },
     {
@@ -5761,7 +5716,7 @@ const geschichte = [
         "Frage": "In welchem Krieg regierte Adolf Hitler?",
         "Antworten": ["Zweiter Weltkrieg", "Erster Weltkrieg", "Vietnamkrieg", "Krimkrieg"],
         "RichtigeAntwort": "Zweiter Weltkrieg",
-        "RichtigeAntwortMöglichkeiten": "Zweiter Weltkrieg 2",
+        "RichtigeAntwortMöglichkeiten": "Zweiter Weltkrieg 2 2ter",
         "Schwierigkeitsgrad": "leicht",
         "Fakt": "Adolf Hitler war der Führer von Deutschland während des Zweiten Weltkriegs"
     },
@@ -5798,7 +5753,7 @@ const geschichte = [
         "Antworten": ["Josef Stalin", "Wladimir Lenin", "Nikita Chruschtschow", "Leonid Breschnew"],
         "RichtigeAntwort": "Josef Stalin",
         "RichtigeAntwortMöglichkeiten": "Josef Stalin",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Josef Stalin führte die Sowjetunion während des Zweiten Weltkriegs."
     },
     {
@@ -5807,7 +5762,7 @@ const geschichte = [
         "Antworten": ["Blitzkrieg", "Schützengrabenkrieg", "Guerillakrieg", "Seekrieg"],
         "RichtigeAntwort": "Blitzkrieg",
         "RichtigeAntwortMöglichkeiten": "Blitzkrieg",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Kriegsstrategie Hitlers, die auf schnellen Vorstößen basierte, wurde Blitzkrieg genannt."
     },
     {
@@ -5830,16 +5785,16 @@ const geschichte = [
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welche Volksgruppe wurde von den Nazis während des Zweiten Weltkriegs verfolgt?",
+        "Frage": "Welche Volksgruppe wurde von den Nazis während des Zweiten Weltkriegs hauptsächlich verfolgt?",
         "Antworten": ["Juden", "Muslime", "Polen", "Russland-Deutsche"],
         "RichtigeAntwort": "Juden",
-        "RichtigeAntwortMöglichkeiten": "Juden sinti Roma",
-        "Schwierigkeitsgrad": "leicht",
+        "RichtigeAntwortMöglichkeiten": "Juden",
+        "Schwierigkeitsgrad": "mittel",
         "Fakt": "Die jüdische Bevölkerung wurde von den Nazis systematisch verfolgt."
     },
     {
         "Kategorie": "Geschichte",
-        "Frage": "Welche Schlacht war der Wendepunkt an der Ostfront im Zweiten Weltkrieg?",
+        "Frage": "Welche war die Brutalste Schlacht im Zweiten Weltkrieg mit Millionen Opfern?",
         "Antworten": ["Schlacht von Stalingrad", "Schlacht von Kursk", "Schlacht von Berlin", "Schlacht von Moskau"],
         "RichtigeAntwort": "Schlacht von Stalingrad",
         "RichtigeAntwortMöglichkeiten": "Stalingrad",
@@ -5854,44 +5809,3246 @@ const geschichte = [
         "RichtigeAntwortMöglichkeiten": "Sowjetunion sowjet sowjet udssr russland",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Sowjetunion schloss 1939 den Nichtangriffspakt, bekannt als Molotow-Ribbentrop-Pakt, mit Deutschland."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Symbol dominierte das offizielle Zeichen der NSDAP?",
+        "Antworten": ["Hakenkreuz", "Eisernes Kreuz", "Hammer und Sichel", "Fasces"],
+        "RichtigeAntwort": "Hakenkreuz",
+        "RichtigeAntwortMöglichkeiten": "Hakenkreuz haken-kreuz",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das Hakenkreuz war das zentrale Symbol der NSDAP und prägte ihre Fahnen und Propaganda."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die NSDAP vor ihrer Umbenennung?",
+        "Antworten": ["DAP", "DNVP", "SPD", "KPD"],
+        "RichtigeAntwort": "DAP",
+        "RichtigeAntwortMöglichkeiten": "Arbeiterpartei DAP",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "kurz für Deutsche Arbeiterpartei"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welcher Stadt veranstaltete die NSDAP ihre großen Parteitage?",
+        "Antworten": ["Nürnberg", "Berlin", "München", "Hamburg"],
+        "RichtigeAntwort": "Nürnberg",
+        "RichtigeAntwortMöglichkeiten": "Nürnberg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die NSDAP hielt ihre Reichsparteitage in Nürnberg ab."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die frühe Kampftruppe der NSDAP?",
+        "Antworten": ["SA", "SS", "Gestapo", "Wehrmacht"],
+        "RichtigeAntwort": "SA",
+        "RichtigeAntwortMöglichkeiten": "SA Sturmabteilung",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die SA (Sturmabteilung) war die erste paramilitärische Organisation der NSDAP."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Organisation war die Elite-Truppe des NS-Regimes?",
+        "Antworten": ["SS", "SA", "Gestapo", "Wehrmacht"],
+        "RichtigeAntwort": "SS",
+        "RichtigeAntwortMöglichkeiten": "SS Schutzstaffel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die SS galt als Elite-Organisation des NS-Regimes."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die geheime Polizei Nazi Deutschlands?",
+        "Antworten": ["Gestapo", "Kriminalpolizei", "SS", "SA"],
+        "RichtigeAntwort": "Gestapo",
+        "RichtigeAntwortMöglichkeiten": "Gestapo",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Gestapo war die geheime Staatspolizei des NS-Regimes."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die deutsche Armee des während des zweiten Weltkrieges?",
+        "Antworten": ["Wehrmacht", "SA", "SS", "Reichswehr"],
+        "RichtigeAntwort": "Wehrmacht",
+        "RichtigeAntwortMöglichkeiten": "Wehrmacht",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Wehrmacht war die reguläre Streitmacht des Deutschen Reiches unter dem NS-Regime."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr übernahm die NSDAP die Macht in Deutschland?",
+        "Antworten": ["1933", "1929", "1939", "1945"],
+        "RichtigeAntwort": "1933",
+        "RichtigeAntwortMöglichkeiten": "1933",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Im Jahr 1933 wurde Adolf Hitler Reichskanzler, und die NSDAP etablierte ihre Herrschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie vertrat die NSDAP?",
+        "Antworten": ["Nationalsozialismus", "Kommunismus", "Liberalismus", "Konservatismus"],
+        "RichtigeAntwort": "Nationalsozialismus",
+        "RichtigeAntwortMöglichkeiten": "Nationalsozialismus nazionalsozialost",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die NSDAP war eine nationalsozialistische Partei, die rassistische und autoritäre Grundsätze vertrat."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Jugendorganisation war der NSDAP unterstellt?",
+        "Antworten": ["Hitlerjugend", "Rote Jungfront", "Zentrumsjugend", "Wandervögel"],
+        "RichtigeAntwort": "Hitlerjugend",
+        "RichtigeAntwortMöglichkeiten": "Hitlerjugend HJ",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Hitlerjugend diente der NSDAP zur ideologischen Erziehung der Jugend."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land verließ 1933 den Völkerbund?",
+        "Antworten": ["Deutschland", "Frankreich", "Großbritannien", "Italien"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland weimarer drittes",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Deutschland trat 1933 unter der NSDAP-Regierung aus dem Völkerbund aus."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wohin marschierte Deutschland 1936 ein?",
+        "Antworten": ["Rheinland", "Saargebiet", "Sudetenland", "Polen"],
+        "RichtigeAntwort": "Rheinland",
+        "RichtigeAntwortMöglichkeiten": "Rheinland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Einmaschieren ins Rheimland brach den Versailler Vertrag"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Mit welchem europäischem land verbündete sich hitler vor dem zweiten Weltkrieg?",
+        "Antworten": ["Italien", "Frankreich", "Sowjetunion", "Polen"],
+        "RichtigeAntwort": "Italien",
+        "RichtigeAntwortMöglichkeiten": "Italien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "1936 schlossen Deutschland und Italien den sogenannten Achse-Berlin-Rom-Pakt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Mit welchem Land schloss Deutschland 1936 den Antikominternpakt?",
+        "Antworten": ["Japan", "Italien", "Sowjetunion", "Spanien"],
+        "RichtigeAntwort": "Japan",
+        "RichtigeAntwortMöglichkeiten": "Japan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Antikominternpakt von 1936 wurde zwischen Deutschland und Japan geschlossen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte Italien während des Zweiten Weltkrieges?",
+        "Antworten": ["Mussolini", "Viktor", "Franco", "Stalin"],
+        "RichtigeAntwort": "Mussolini",
+        "RichtigeAntwortMöglichkeiten": "Mussolini",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Benito Mussolini regierte Italien als Diktator während des Zweiten Weltkrieges."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie verfolgte Italien während des Zweiten Weltkrieges?",
+        "Antworten": ["Faschismus", "Kommunismus", "Liberalismus", "Konservatismus"],
+        "RichtigeAntwort": "Faschismus",
+        "RichtigeAntwortMöglichkeiten": "Faschismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Italien stand unter Mussolinis faschistischer Herrschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war das Symbol Italiens während des Zweiten Weltkrieges?",
+        "Antworten": ["Fasces", "Adler", "Hammer", "Sichel"],
+        "RichtigeAntwort": "Fasces",
+        "RichtigeAntwortMöglichkeiten": "Fasces",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Fasces, ein Rutenbündel mit Axt, waren ein zentrales Symbol des italienischen Faschismus"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand der Anschluss Österreichs an Deutschland statt?",
+        "Antworten": ["1938", "1939", "1941", "1942"],
+        "RichtigeAntwort": "1938",
+        "RichtigeAntwortMöglichkeiten": "1938",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "1938 marschierten deutsche Truppen in Österreich ein und tausende Menschen feierten die Vereinigung auf öffentlichen Plätzen"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches tschechische Gebiet nahm Deutschland vor dem zweiten Weltkrieg ein?",
+        "Antworten": ["Sudetenland", "Böhmen", "Mähren", "Saarland"],
+        "RichtigeAntwort": "Sudetenland",
+        "RichtigeAntwortMöglichkeiten": "Sudetenland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Sudetenland war ein überwiegend deutschsprachiges Gebiet in der Tschechoslowakei, dessen Besetzung durch das Münchner Abkommen ermöglicht wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag führte zum deutschen Einmarsch ins Sudetenland?",
+        "Antworten": ["Münchner Abkommen", "Versailler Vertrag", "Hitler-Stalin-Pakt", "Potsdamer Abkommen"],
+        "RichtigeAntwort": "Münchner Abkommen",
+        "RichtigeAntwortMöglichkeiten": "Münchner münchen müncher",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Münchner Abkommen 1938 erlaubte Deutschland, ins Sudetenland einzumarschieren, ohne auf Widerstand zu stoßen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer lebte vor allem im Sudetenland vor dem zweiten Weltkrieg?",
+        "Antworten": ["Deutsche", "Tschechen", "Ungarn", "Slowaken"],
+        "RichtigeAntwort": "Deutsche",
+        "RichtigeAntwortMöglichkeiten": "Deutsche",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Mehrheit der Bevölkerung im Sudetenland sprach Deutsch, was Hitler als Rechtfertigung für den Einmarsch nutzte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr maschierte Deutschland in ganz Tschechoslowakei ein?",
+        "Antworten": ["1939", "1938", "1940", "1941"],
+        "RichtigeAntwort": "1939",
+        "RichtigeAntwortMöglichkeiten": "1939",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "1939 übernahmen deutsche Truppen die Kontrolle über die Rest-Tschechoslowakei und schufen das Protektorat Böhmen und Mähren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Territorium gliederte sich Deutschland nach einer Volksabstimmung 1935 ein?",
+        "Antworten": ["Saarland", "Memelland", "Danzig", "Elsass-Lothringen"],
+        "RichtigeAntwort": "Saarland",
+        "RichtigeAntwortMöglichkeiten": "Saarland Saargebiet",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Saarland wurde 1935 nach einer Volksabstimmung, bei der die Mehrheit für den Anschluss stimmte, in das Deutsche Reich eingegliedert."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches baltische Gebiet wurde vor dem zweiten Weltkrieg an Deutschland abgetreten?",
+        "Antworten": ["Memelland", "Danzig", "Saarland", "Böhmen und Mähren"],
+        "RichtigeAntwort": "Memelland",
+        "RichtigeAntwortMöglichkeiten": "Memelland",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "1939 trat Litauen das Memelland nach einem deutschen Ultimatum an das Reich ab."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Pakt wurde 1939 zwischen Deutschland und der Sowjetunion geschlossen?",
+        "Antworten": ["Hitler-Stalin-Pakt", "Antikominternpakt", "Münchner Abkommen", "Potsdamer Abkommen"],
+        "RichtigeAntwort": "Hitler-Stalin-Pakt",
+        "RichtigeAntwortMöglichkeiten": "Hitler-Stalin-Pakt Hitler-Stalin Stalin-Hitler Molotow-Ribbentrop-Pakt Molotow-Ribbentrop Ribbentrop-Molotow Nichtangriffspakt",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Hitler-Stalin-Pakt von 1939 beinhaltete ein geheimes Zusatzprotokoll zur Aufteilung Osteuropas zwischen Deutschland und der Sowjetunion."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Soldaten durfte Deutschland laut Versailler Vertrag maximal haben?",
+        "Antworten": ["100.000", "50.000", "500.000", "1.000.000"],
+        "RichtigeAntwort": "100.000",
+        "RichtigeAntwortMöglichkeiten": "100.000 hunderttausend 100000",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Versailler Vertrag von 1919 begrenzte die deutsche Armee auf maximal 100.000 Soldaten, um eine militärische Bedrohung zu verhindern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Wehrmacht unter Hitler gegründet?",
+        "Antworten": ["1935", "1919", "1933", "1940"],
+        "RichtigeAntwort": "1935",
+        "RichtigeAntwortMöglichkeiten": "1935",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Wehrmacht wurde 1935 unter der nationalsozialistischen Regierung gegründet und ersetzte die Reichswehr."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann die deutsche Invasion von Dänemark und Norwegen im zweiten Weltkrieg?",
+        "Antworten": ["1940", "1939", "1941", "1942"],
+        "RichtigeAntwort": "1940",
+        "RichtigeAntwortMöglichkeiten": "1940",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Invasion von Dänemark und Norwegen, Operation Weserübung, begann am 9. April 1940."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die deutsche Militäroperation zur Eroberung von Dänemark und Norwegen im zweiten Weltkrieg?",
+        "Antworten": ["Operation Weserübung", "Operation Barbarossa", "Unternehmen Seelöwe", "Fall Gelb"],
+        "RichtigeAntwort": "Operation Weserübung",
+        "RichtigeAntwortMöglichkeiten": "Weserübung",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Operation Weserübung war der Deckname für die deutsche Invasion von Dänemark und Norwegen im Zweiten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land besetzte Deutschland zur Sicherung der Eisenerzversorgung im zweiten Weltkrieg?",
+        "Antworten": ["Norwegen", "Dänemark", "Polen", "Frankreich"],
+        "RichtigeAntwort": "Norwegen",
+        "RichtigeAntwortMöglichkeiten": "Norwegen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Deutschland besetzte Norwegen 1940, um die Lieferung von schwedischem Eisenerz über norwegische Häfen zu sichern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der deutsche Plan für den Angriff auf Frankreich 1940?",
+        "Antworten": ["Sichelschnitt", "Barbarossa", "Weserübung", "Fall Blau"],
+        "RichtigeAntwort": "Sichelschnitt",
+        "RichtigeAntwortMöglichkeiten": "Sichelschnitt sichel schnitt",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Sichelschnitt-Plan zielte darauf ab, Frankreich schnell durch einen Überraschungsangriff über die Ardennen zu besiegen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der deutsche Frankreichfeldzug?",
+        "Antworten": ["1940", "1939", "1941", "1942"],
+        "RichtigeAntwort": "1940",
+        "RichtigeAntwortMöglichkeiten": "1940",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der deutsche Frankreichfeldzug begann am 10. Mai 1940 und führte innerhalb weniger Wochen zur Kapitulation Frankreichs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der deutsche Balkanfeldzug im zweiten Weltkrieg?",
+        "Antworten": ["1941", "1940", "1939", "1942"],
+        "RichtigeAntwort": "1941",
+        "RichtigeAntwortMöglichkeiten": "1941",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der deutsche Balkanfeldzug begann am 6. April 1941 mit der Invasion Jugoslawiens und Griechenlands."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land wurde während des zweiten Weltkriegs zuerst im Balkanfeldzug angegriffen?",
+        "Antworten": ["Jugoslawien", "Griechenland", "Bulgarien", "Albanien"],
+        "RichtigeAntwort": "Jugoslawien",
+        "RichtigeAntwortMöglichkeiten": "Jugoslawien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Jugoslawien wurde am 6. April 1941 von der deutschen Wehrmacht angegriffen, kurz bevor auch Griechenland ins Visier geriet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Mit wem verbündete sich Rumänien während des Zweiten Weltkriegs?",
+        "Antworten": ["Achsenmächte", "Alliierte", "Jugoslawien", "Sowjetunion"],
+        "RichtigeAntwort": "Achsenmächte",
+        "RichtigeAntwortMöglichkeiten": "Achsenmächte Italien Deutschland Japan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Rumänien schloss sich während des Zweiten Weltkriegs den Achsenmächten an, um Gebietsansprüche zu sichern und sich gegen die Sowjetunion zu stellen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannten die Nationalsozialisten die systematische Tötung von Menschen mit Behinderungen?",
+        "Antworten": ["Euthanasie", "Endlösung", "Lebensborn", "Säuberung"],
+        "RichtigeAntwort": "Euthanasie",
+        "RichtigeAntwortMöglichkeiten": "Euthanasie aktion-T4 T4",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Nationalsozialisten verwendeten den Begriff 'Euthanasie', um die systematische Tötung von Menschen mit Behinderungen zu verschleiern und zu rechtfertigen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Programm führte zur Tötung zehntausender kranker und behinderter Menschen im Nationalsozialismus?",
+        "Antworten": ["Aktion T4", "Lebensborn", "Endlösung", "Generalplan Ost"],
+        "RichtigeAntwort": "Aktion T4",
+        "RichtigeAntwortMöglichkeiten": "T4 aktion-T4",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Aktion T4' war ein zentral organisiertes Programm zur Ermordung von Menschen mit körperlichen und geistigen Behinderungen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Russlandfeldzug der deutschen Wehrmacht?",
+        "Antworten": ["1941", "1940", "1942", "1939"],
+        "RichtigeAntwort": "1941",
+        "RichtigeAntwortMöglichkeiten": "1941",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Russlandfeldzug, auch bekannt als 'Unternehmen Barbarossa', begann am 22. Juni 1941."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der deutsche Angriff auf die Sowjetunion im Zweiten Weltkrieg?",
+        "Antworten": ["Unternehmen Barbarossa", "Operation Weserübung", "Fall Gelb", "Unternehmen Zitadelle"],
+        "RichtigeAntwort": "Unternehmen Barbarossa",
+        "RichtigeAntwortMöglichkeiten": "Unternehmen Barbarossa",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das 'Unternehmen Barbarossa' war der Codename für den deutschen Angriff auf die Sowjetunion im Jahr 1941."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die Schlacht um Stalingrad?",
+        "Antworten": ["1943", "1942", "1944", "1941"],
+        "RichtigeAntwort": "1943",
+        "RichtigeAntwortMöglichkeiten": "1943",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlacht um Stalingrad endete am 2. Februar 1943 mit der Kapitulation der deutschen 6. Armee."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche deutsche Armee kämpfte hauptsächlich in Stalingrad?",
+        "Antworten": ["6. Armee", "4. Panzerarmee", "10. Armee", "1. Armee"],
+        "RichtigeAntwort": "6. Armee",
+        "RichtigeAntwortMöglichkeiten": "6. 6 sechste 6te",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 6. Armee unter General Paulus kapitulierte in Stalingrad, was als eine der größten Niederlagen Deutschlands im Zweiten Weltkrieg gilt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Buch schrieb Adolf Hitler?",
+        "Antworten": ["Mein Kampf", "Das Kapital", "Der Mythus des 20. Jahrhunderts", "Der Kommunistische Manifest"],
+        "RichtigeAntwort": "Mein Kampf",
+        "RichtigeAntwortMöglichkeiten": "Mein-Kampf kampf mein",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "In 'Mein Kampf' beschreibt Hitler seine politischen Vorstellungen und antisemitischen Ideologien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was ist die Abkürzung für Nationalsozialist?",
+        "Antworten": ["Nazi", "NSDAP", "SS", "SA"],
+        "RichtigeAntwort": "Nazi",
+        "RichtigeAntwortMöglichkeiten": "Nazi",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Bezeichnung 'Nazi' ist die gängige Abkürzung für einen Nationalsozialisten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer rief den totalen Krieg für Deutschland aus im zweiten Weltkrieg?",
+        "Antworten": ["Joseph Goebbels", "Adolf Hitler", "Heinrich Himmler", "Hermann Göring"],
+        "RichtigeAntwort": "Joseph Goebbels",
+        "RichtigeAntwortMöglichkeiten": "Joseph Goebbels",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Joseph Goebbels rief in einer Rede im Sportpalast 1943 zum totalen Krieg auf, um die Mobilisierung aller Ressourcen für den Krieg zu erreichen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde der totale Krieg ausgerufen?",
+        "Antworten": ["1943", "1942", "1944", "1941"],
+        "RichtigeAntwort": "1943",
+        "RichtigeAntwortMöglichkeiten": "1943",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der totale Krieg wurde 1943 in einer Rede von Joseph Goebbels ausgerufen, nachdem die Niederlagen an der Ostfront zunahmen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte Deutschland seine vollständige Mobilisierung für den zweiten Weltkrieg?",
+        "Antworten": ["Totaler Krieg", "Blitzkrieg", "Defensivkrieg", "Propagandakrieg"],
+        "RichtigeAntwort": "Totaler Krieg",
+        "RichtigeAntwortMöglichkeiten": "Totaler total",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Deutschland bezeichnete die vollständige Mobilisierung von Wirtschaft, Gesellschaft und Politik für die Kriegsführung als 'totalen Krieg'."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Propagandaminister von Deutschland im Zweiten Weltkrieg?",
+        "Antworten": ["Joseph Goebbels", "Heinrich Himmler", "Hermann Göring", "Adolf Hitler"],
+        "RichtigeAntwort": "Joseph Goebbels",
+        "RichtigeAntwortMöglichkeiten": "Joseph Goebbels",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Joseph Goebbels war der Reichsminister für Propaganda und einer der engsten Vertrauten Hitlers während des Zweiten Weltkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer galt nach Hitler als die Nummer zwei im Nazi-Deutschland?",
+        "Antworten": ["Hermann Göring", "Joseph Goebbels", "Heinrich Himmler", "Rudolf Hess"],
+        "RichtigeAntwort": "Hermann Göring",
+        "RichtigeAntwortMöglichkeiten": "Hermann Göring",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Hermann Göring wurde oft als die Nummer zwei hinter Hitler angesehen, insbesondere in den frühen Jahren des Regimes, bevor er an Einfluss verlor."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wo fand der Anschlag auf Hitler im Jahr 1939 statt?",
+        "Antworten": ["Bürgerbräukeller München", "Reichstag Berlin", "Wolfsschanze", "Berghof"],
+        "RichtigeAntwort": "Bürgerbräukeller München",
+        "RichtigeAntwortMöglichkeiten": "Bürgerbräukeller München",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Anschlag wurde im Münchner Bürgerbräukeller verübt, wo Hitler jährlich am Putschversuch von 1923 erinnerte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer verübte den Anschlag auf Hitler im Jahr 1939?",
+        "Antworten": ["Georg Elser", "Claus von Stauffenberg", "Hans Oster", "Wilhelm Canaris"],
+        "RichtigeAntwort": "Georg Elser",
+        "RichtigeAntwortMöglichkeiten": "Georg Elser",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Georg Elser, ein Schreiner aus Württemberg, baute eine Bombe, die am 8. November 1939 im Münchner Bürgerbräukeller explodierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand der erste bekannte Anschlag auf Hitler statt?",
+        "Antworten": ["1939", "1940", "1938", "1941"],
+        "RichtigeAntwort": "1939",
+        "RichtigeAntwortMöglichkeiten": "1939",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der erste bekannte Anschlag auf Hitler fand am 8. November 1939 im Münchner Bürgerbräukeller statt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte den zweiten großen Anschlag auf Hitler aus?",
+        "Antworten": ["Claus von Stauffenberg", "Georg Elser", "Hans Oster", "Heinrich Himmler"],
+        "RichtigeAntwort": "Claus von Stauffenberg",
+        "RichtigeAntwortMöglichkeiten": "Claus Stauffenberg",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Claus von Stauffenberg platzierte am 20. Juli 1944 eine Bombe in Hitlers Hauptquartier, der Wolfsschanze."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand Claus von Stauffenbergs großer Anschlag auf Hitler statt?",
+        "Antworten": ["1944", "1937", "1939", "1941"],
+        "RichtigeAntwort": "1944",
+        "RichtigeAntwortMöglichkeiten": "1944",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der zweite große Anschlag auf Hitler, bekannt als das Attentat vom 20. Juli, fand 1944 statt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche war die letzte große Offensive Deutschlands im Zweiten Weltkrieg?",
+        "Antworten": ["Ardennenoffensive", "Unternehmen Barbarossa", "Fall Blau", "Operation Weserübung"],
+        "RichtigeAntwort": "Ardennenoffensive",
+        "RichtigeAntwortMöglichkeiten": "Ardennenoffensive",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Ardennenoffensive war der letzte große Angriff Deutschlands im Zweiten Weltkrieg und fand an der Westfront statt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welcher belgischen Stadt wurden über 300.000 alliierte Soldaten im Zweiten Weltkrieg eingekesselt?",
+        "Antworten": ["Dünkirchen", "Brüssel", "Antwerpen", "Lüttich"],
+        "RichtigeAntwort": "Dünkirchen",
+        "RichtigeAntwortMöglichkeiten": "Dünkirchen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "In Dünkirchen wurden über 300.000 alliierte Soldaten festgesetzt, bevor sie während des sogenannten 'Wunders von Dünkirchen' evakuiert wurden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie starb Adolf Hitler?",
+        "Antworten": ["Selbstmord", "Ermordung", "Krankheit", "Unfall"],
+        "RichtigeAntwort": "Selbstmord",
+        "RichtigeAntwortMöglichkeiten": "Selbstmord Gift Schuss Pistole Erschießen Erschießung Suizid Giftkapsel Cyanid Cyanid-Giftkapsel Selbst Sich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Adolf Hitler beging am 30. April 1945 Selbstmord in seinem Bunker in Berlin durch eine Kombination aus Erschießung und Giftkapsel."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer besetzte den Osten Deutschlands nach dem Zweiten Weltkrieg?",
+        "Antworten": ["Sowjetunion", "USA", "Großbritannien", "Frankreich"],
+        "RichtigeAntwort": "Sowjetunion",
+        "RichtigeAntwortMöglichkeiten": "Sowjetunion UdSSR Russland Sowjets",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sowjetunion besetzte den Osten Deutschlands nach dem Zweiten Weltkrieg, der später zur DDR wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Mädchen schrieb ein berühmtes Tagebuch im Zweiten Weltkrieg?",
+        "Antworten": ["Anne Frank", "Sophie Scholl", "Eva Braun", "Hedy Lamarr"],
+        "RichtigeAntwort": "Anne Frank",
+        "RichtigeAntwortMöglichkeiten": "Anne Frank",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Anne Frank schrieb ihr Tagebuch während sie sich mit ihrer Familie in einem Amsterdamer Hinterhaus versteckte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Widerstandsgruppe verteilte Flugblätter gegen die NS-Diktatur in Deutschland?",
+        "Antworten": ["Weiße Rose", "Swing-Jugend", "Edelweißpiraten", "Rote Kapelle"],
+        "RichtigeAntwort": "Weiße Rose",
+        "RichtigeAntwortMöglichkeiten": "Weiße Rose",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Weiße Rose war eine studentische Widerstandsgruppe, die 1942/43 Flugblätter gegen das NS-Regime verteilte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchen Prozessen wurden NS-Kriegsverbrecher nach dem zweiten Weltkrieg verurteilt?",
+        "Antworten": ["Nürnberger Prozesse", "Versailler Prozesse", "Leipziger Prozesse", "Haager Prozesse"],
+        "RichtigeAntwort": "Nürnberger Prozesse",
+        "RichtigeAntwortMöglichkeiten": "Nürnberger nürnberg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Nürnberger Prozesse waren ein Meilenstein des Völkerrechts und setzten neue Maßstäbe für die strafrechtliche Verfolgung von Kriegsverbrechen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wurde Deutschland während des Zweiten Weltkriegs genannt?",
+        "Antworten": ["Drittes Reich", "Weimarer Republik", "Deutsches Kaiserreich", "Bundesrepublik Deutschland"],
+        "RichtigeAntwort": "Drittes Reich",
+        "RichtigeAntwortMöglichkeiten": "Drittes",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Dritte Reich war die Selbstbezeichnung des nationalsozialistischen Deutschlands von 1933 bis 1945."
+    },
+    {//winterkrieg
+        "Kategorie": "Geschichte",
+        "Frage": "Mit welchem Vertrag endete der Winterkrieg zwischen Finnland und der Sowjetunion?",
+        "Antworten": ["Friedensvertrag von Moskau", "Vertrag von Versailles", "Wiener Kongress", "Vertrag von Trianon"],
+        "RichtigeAntwort": "Friedensvertrag von Moskau",
+        "RichtigeAntwortMöglichkeiten": "Moskau moskauer",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Friedensvertrag von Moskau wurde am 13. März 1940 unterzeichnet und beendete den Winterkrieg." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Winterkrieg zwischen Finnland und der Sowjetunion?",
+        "Antworten": ["1939", "1940", "1938", "1941"],
+        "RichtigeAntwort": "1939",
+        "RichtigeAntwortMöglichkeiten": "1939",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Winterkrieg begann am 30. November 1939, nachdem die Sowjetunion Finnland angegriffen hatte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Waffe wurde von den Finnen im Winterkrieg bekannt eingesetzt?",
+        "Antworten": ["Molotow-Cocktail", "Panzer", "Flammenwerfer", "Langbogen"],
+        "RichtigeAntwort": "Molotow-Cocktail",
+        "RichtigeAntwortMöglichkeiten": "Molotow-Cocktail",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Finnen nutzten improvisierte Molotow-Cocktails, um sowjetische Panzer zu zerstören."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land griff die Sowjetunion im Winterkrieg während des zweiten Weltkriegs an?",
+        "Antworten": ["Finnland", "Norwegen", "Schweden", "Estland"],
+        "RichtigeAntwort": "Finnland",
+        "RichtigeAntwortMöglichkeiten": "Finnland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Sowjetunion griff Finnland an, um strategisches Territorium für die Verteidigung von Leningrad zu gewinnen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche selbstgemachte Brandwaffe wurde im Winterkrieg gegen die Rote Armee verwendet?",
+        "Antworten": ["Molotow-Cocktail", "Flammenwerfer", "Brandgranate", "Zündladung"],
+        "RichtigeAntwort": "Molotow-Cocktail",
+        "RichtigeAntwortMöglichkeiten": "Molotow-Cocktail Molotow",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Finnen verwendeten den Molotow-Cocktail effektiv, um sowjetische Panzer zu zerstören." 
+    },
+    {//holocasut
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Menschen wurden ungefähr im Holocaust ermordet?",
+        "Antworten": ["6 Millionen", "3 Millionen", "10 Millionen", "15 Millionen"],
+        "RichtigeAntwort": "6 Millionen",
+        "RichtigeAntwortMöglichkeiten": "6 6millionen 6000000 6.000.000",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Während des Holocaust wurden etwa 6 Millionen Juden systematisch ermordet." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Gruppe war die Hauptzielgruppe des Holocausts?",
+        "Antworten": ["Juden", "Sinti und Roma", "Homosexuelle", "Kriegsgefangene"],
+        "RichtigeAntwort": "Juden",
+        "RichtigeAntwortMöglichkeiten": "Juden",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Juden waren die Hauptopfergruppe des Holocausts, mit etwa 6 Millionen Ermordeten." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wird die systematische Ermordung von Juden während des Zweiten Weltkriegs genannt?",
+        "Antworten": ["Holocaust", "Shoah", "Genozid", "Endlösung"],
+        "RichtigeAntwort": "Holocaust",
+        "RichtigeAntwortMöglichkeiten": "Holocaust",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Holocaust bezeichnet die systematische Vernichtung von etwa 6 Millionen Juden durch die Nationalsozialisten." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr griff Japan Pearl Harbor an?",
+        "Antworten": ["1941", "1942", "1940", "1939"],
+        "RichtigeAntwort": "1941",
+        "RichtigeAntwortMöglichkeiten": "1941",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Japan griff Pearl Harbor am 7. Dezember 1941 an und zog damit die USA in den Zweiten Weltkrieg." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Kaiser Japans im Zweiten Weltkrieg?",
+        "Antworten": ["Hirohito", "Akihito", "Meiji", "Taisho"],
+        "RichtigeAntwort": "Hirohito",
+        "RichtigeAntwortMöglichkeiten": "Hirohito",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kaiser Hirohito regierte Japan während des Zweiten Weltkriegs und blieb auch danach auf dem Thron." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche japanische Stadt wurde durch die erste Atombombe zerstört?",
+        "Antworten": ["Hiroshima", "Nagasaki", "Tokio", "Kyoto"],
+        "RichtigeAntwort": "Hiroshima",
+        "RichtigeAntwortMöglichkeiten": "Hiroshima",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die erste Atombombe wurde am 6. August 1945 auf Hiroshima abgeworfen." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche japanische Stadt wurde als zweite durch eine Atombombe zerstört?",
+        "Antworten": ["Nagasaki", "Hiroshima", "Osaka", "Tokio"],
+        "RichtigeAntwort": "Nagasaki",
+        "RichtigeAntwortMöglichkeiten": "Nagasaki",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die zweite Atombombe wurde am 9. August 1945 auf Nagasaki abgeworfen." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem kapitulierte Japan im Zweiten Weltkrieg?",
+        "Antworten": ["1945", "1944", "1946", "1943"],
+        "RichtigeAntwort": "1945",
+        "RichtigeAntwortMöglichkeiten": "1945",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Japan kapitulierte am 2. September 1945 offiziell und beendete damit den Zweiten Weltkrieg." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man Selbstmordangriffe japanischer Piloten mit Flugzeugen?",
+        "Antworten": ["Kamikaze", "Blitzkrieg", "Guerilla", "Torpedo"],
+        "RichtigeAntwort": "Kamikaze",
+        "RichtigeAntwortMöglichkeiten": "Kamikaze",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kamikaze bezeichnet die Taktik japanischer Piloten, ihre Flugzeuge gezielt auf feindliche Ziele zu stürzen." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welchen Krieg führte die USA gegen Japan während des Zweiten Weltkrieges?",
+        "Antworten": ["Pazifikkrieg", "Asienkrieg", "Inselsprungkrieg", "Ozeanischer Krieg"],
+        "RichtigeAntwort": "Pazifikkrieg",
+        "RichtigeAntwortMöglichkeiten": "Pazifikkrieg pazifik",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Pazifikkrieg war der Teil des Zweiten Weltkriegs, der im Pazifikraum und in Asien ausgefochten wurde." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie heißt das größte Konzentrationslager des Zweiten Weltkriegs?",
+        "Antworten": ["Auschwitz", "Dachau", "Buchenwald", "Treblinka"],
+        "RichtigeAntwort": "Auschwitz",
+        "RichtigeAntwortMöglichkeiten": "Auschwitz",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Auschwitz war das größte und komplexeste Konzentrations- und Vernichtungslager des NS-Regimes, bekannt für seine systematische Tötungsmaschinerie." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land hatte die meisten Opfer im Zweiten Weltkrieg?",
+        "Antworten": ["Sowjetunion", "Deutschland", "China", "Japan"],
+        "RichtigeAntwort": "Sowjetunion",
+        "RichtigeAntwortMöglichkeiten": "Sowjetunion russland udssr su",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sowjetunion hatte mit etwa 27 Millionen Toten die meisten Opfer im Zweiten Weltkrieg." 
+    },
+    {//sowjetunion
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Regierungschef der Sowjetunion?",
+        "Antworten": ["Lenin", "Stalin", "Trotski", "Kerenski"],
+        "RichtigeAntwort": "Lenin",
+        "RichtigeAntwortMöglichkeiten": "Lenin",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Wladimir Lenin wurde nach der Oktoberrevolution 1917 der erste Regierungschef der Sowjetunion." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Sowjetunion offiziell gegründet?",
+        "Antworten": ["1922", "1917", "1920", "1924"],
+        "RichtigeAntwort": "1922",
+        "RichtigeAntwortMöglichkeiten": "1922",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Sowjetunion wurde am 30. Dezember 1922 offiziell gegründet." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie heißt der Vertrag, der Russlands Teilnahme am Ersten Weltkrieg beendete?",
+        "Antworten": ["Brest-Litowsk", "Versailles", "Trianon", "St. Germain"],
+        "RichtigeAntwort": "Brest-Litowsk",
+        "RichtigeAntwortMöglichkeiten": "Brest-Litowsk",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Vertrag von Brest-Litowsk wurde 1918 zwischen Russland und den Mittelmächten geschlossen und beendete Russlands Teilnahme am Ersten Weltkrieg." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie war die Grundlage der Sowjetunion?",
+        "Antworten": ["Kommunismus", "Sozialismus", "Faschismus", "Kapitalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sowjetunion basierte auf der Ideologie des Kommunismus, inspiriert von den Theorien von Karl Marx und Friedrich Engels." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis löste den russischen Bürgerkrieg aus?",
+        "Antworten": ["Oktoberrevolution", "Julikrise", "Vertrag von Brest-Litowsk", "Märzrevolution"],
+        "RichtigeAntwort": "Oktoberrevolution",
+        "RichtigeAntwortMöglichkeiten": "Oktoberrevolution oktober",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Oktoberrevolution von 1917 führte zur Machtübernahme der Bolschewiki und löste den russischen Bürgerkrieg aus." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei führte Lenin während der Oktoberrevolution in Russland an?",
+        "Antworten": ["Bolschewiki", "Menschewiki", "Sozialrevolutionäre", "Kadetten"],
+        "RichtigeAntwort": "Bolschewiki",
+        "RichtigeAntwortMöglichkeiten": "Bolschewiki",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Lenin war der Anführer der Bolschewiki, die sich 1903 von den Menschewiki abspalteten." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Armee der Sowjetunion?",
+        "Antworten": ["Rote Armee", "Revolutionsarmee", "Arbeiterarmee", "Volksarmee"],
+        "RichtigeAntwort": "Rote Armee",
+        "RichtigeAntwortMöglichkeiten": "Rote Armee",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Rote Armee war die Streitkraft der Sowjetunion und wurde 1918 von den Bolschewiki gegründet." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Stadt wurde nach Lenin, dem ersten Regierungschef der Sowjetunion, benannt?",
+        "Antworten": ["Leningrad", "Stalingrad", "Moskau", "Kiew"],
+        "RichtigeAntwort": "Leningrad",
+        "RichtigeAntwortMöglichkeiten": "Leningrad",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Leningrad wurde nach Wladimir Lenin benannt, dem ersten Regierungschef der Sowjetunion." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß das ehemalige Land auf dem Gebiet des heutigen Russlands?",
+        "Antworten": ["Sowjetunion", "UdSSR", "Union der Sozialistischen Sowjetrepubliken", "USSR"],
+        "RichtigeAntwort": "Sowjetunion",
+        "RichtigeAntwortMöglichkeiten": "Sowjetunion UdSSR su",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Sowjetunion, auch bekannt als UdSSR oder Union der Sozialistischen Sowjetrepubliken, entstand 1922 aus den Überresten des Russischen Kaiserreichs nach der Revolution." 
+    },
+    {// Gebietsgewinne
+        "Kategorie": "Geschichte",
+        "Frage": "Welche ehemals deutsche Region erhielt die Sowjetunion nach dem Zweiten Weltkrieg?",
+        "Antworten": ["Königsberg", "Schlesien", "Pommern", "Preußen"],
+        "RichtigeAntwort": "Königsberg",
+        "RichtigeAntwortMöglichkeiten": "Königsberg Kaliningrad Ostpreußen Kaliningrader",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Sowjetunion erhielt nach dem Zweiten Weltkrieg Königsberg, das heute als Kaliningrad bekannt ist." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt Elsass-Lothringen nach dem Ersten Weltkrieg?",
+        "Antworten": ["Frankreich", "Deutschland", "Belgien", "Luxemburg"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Nach dem Ersten Weltkrieg wurde Elsass-Lothringen durch den Versailler Vertrag wieder Frankreich zugesprochen." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Gebiet erlangte Litauen nach dem Ersten Weltkrieg?",
+        "Antworten": ["Memelland", "Kurland", "Masuren", "Pommern"],
+        "RichtigeAntwort": "Memelland",
+        "RichtigeAntwortMöglichkeiten": "Memelland",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Litauen erhielt das Memelland nach dem Ersten Weltkrieg unter der Verwaltung des Völkerbunds und später durch Annexion." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt die Kontrolle über Palästina nach dem Ersten Weltkrieg?",
+        "Antworten": ["Großbritannien", "Frankreich", "Italien", "Deutschland"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Nach dem Ersten Weltkrieg erhielt Großbritannien das Mandat über Palästina gemäß dem Völkerbund." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt das heutige Namibia nach dem Ersten Weltkrieg als Mandat?",
+        "Antworten": ["Südafrika", "Deutschland", "Großbritannien", "Belgien"],
+        "RichtigeAntwort": "Südafrika",
+        "RichtigeAntwortMöglichkeiten": "Südafrika",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Nach dem Ersten Weltkrieg wurde das heutige Namibia als Mandat an Südafrika übertragen." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt die Kontrolle über Ruanda nach dem Ersten Weltkrieg?",
+        "Antworten": ["Belgien", "Deutschland", "Frankreich", "Großbritannien"],
+        "RichtigeAntwort": "Belgien",
+        "RichtigeAntwortMöglichkeiten": "Belgien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nach dem Ersten Weltkrieg wurde Ruanda als Mandat an Belgien übertragen." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt nach dem Ersten Weltkrieg die Kontrolle über den Irak?",
+        "Antworten": ["Großbritannien", "Frankreich", "Deutschland", "Italien"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england vereinigtes-königreich uk Britischen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nach dem Ersten Weltkrieg erhielt Großbritannien das Mandat über den Irak gemäß dem Völkerbund." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt die Kontrolle über Syrien nach dem Ersten Weltkrieg?",
+        "Antworten": ["Frankreich", "Großbritannien", "Italien", "Spanien"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich erhielt nach dem Ersten Weltkrieg das Mandat über Syrien gemäß dem Völkerbund." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land entstand im Balkan nach dem Ersten Weltkrieg?",
+        "Antworten": ["Jugoslawien", "Bulgarien", "Rumänien", "Griechenland"],
+        "RichtigeAntwort": "Jugoslawien",
+        "RichtigeAntwortMöglichkeiten": "Jugoslawien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Jugoslawien wurde 1918 aus der Vereinigung des Königreichs Serbien und anderer Balkanländer gegründet." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt Westthrakien nach dem Ersten Weltkrieg?",
+        "Antworten": ["Griechenland", "Bulgarien", "Türkei", "Serbien"],
+        "RichtigeAntwort": "Griechenland",
+        "RichtigeAntwortMöglichkeiten": "Griechenland",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Westthrakien wurde nach dem Ersten Weltkrieg von Bulgarien an Griechenland abgetreten." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Gebiet erhielt Dänemark nach dem Ersten Weltkrieg?",
+        "Antworten": ["Nordschleswig", "Südtirol", "Elsass", "Pommern"],
+        "RichtigeAntwort": "Nordschleswig",
+        "RichtigeAntwortMöglichkeiten": "Nordschleswig nord-schleswig",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Nach dem Ersten Weltkrieg erhielt Dänemark Nordschleswig durch eine Volksabstimmung zurück." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Grenze trennt Polen und Deutschland seit dem Zweiten Weltkrieg?",
+        "Antworten": ["Oder-Neiße-Linie", "Maginot-Linie", "Hindenburg-Linie", "Eiserner Vorhang"],
+        "RichtigeAntwort": "Oder-Neiße-Linie",
+        "RichtigeAntwortMöglichkeiten": "Oder-Neiße-Linie Oder-Neiße Oder Neiße Neiße-Oder Neiße-Oder-Linie",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Oder-Neiße-Linie wurde nach dem Zweiten Weltkrieg als Grenze zwischen Polen und Deutschland festgelegt." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wurde die wirtschaftliche Hilfe der USA für Europa nach dem Zweiten Weltkrieg genannt?",
+        "Antworten": ["Marshallplan", "Truman-Doktrin", "Containment-Politik", "Atlantik-Charta"],
+        "RichtigeAntwort": "Marshallplan",
+        "RichtigeAntwortMöglichkeiten": "Marshallplan Marshall",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Marshallplan war ein Hilfsprogramm der USA zur Wiederherstellung der europäischen Wirtschaft nach dem Zweiten Weltkrieg." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wurde der Plan der Sowjetunion für den Wiederaufbau Osteuropas genannt?",
+        "Antworten": ["Molotow-Plan", "Marshallplan", "Fünfjahresplan", "Truman-Doktrin"],
+        "RichtigeAntwort": "Molotow-Plan",
+        "RichtigeAntwortMöglichkeiten": "Molotow-Plan Molotow",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Molotow-Plan war die sowjetische Antwort auf den Marshallplan und zielte auf die wirtschaftliche Unterstützung der osteuropäischen Staaten ab." 
+    },
+
+////////////////Kalter Krieg////////////////
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Organisation wurde 1949 zur Verteidigung des Westens gegründet?",
+        "Antworten": ["NATO", "UNO", "Warschauer Pakt", "EU"],
+        "RichtigeAntwort": "NATO",
+        "RichtigeAntwortMöglichkeiten": "NATO",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die NATO wurde 1949 als Verteidigungsbündnis der westlichen Staaten gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Organisation wurde im Kalten Krieg als Gegenstück zur NATO gegründet?",
+        "Antworten": ["Warschauer Pakt", "UNO", "EU", "COMECON"],
+        "RichtigeAntwort": "Warschauer Pakt",
+        "RichtigeAntwortMöglichkeiten": "Warschauer-Pakt Warschauer",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Warschauer Pakt wurde 1955 als militärisches Bündnis sozialistischer Staaten gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Mitglieder hatte die NATO bei ihrer Gründung?",
+        "Antworten": ["12", "10", "14", "8"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die NATO wurde 1949 mit 12 Mitgliedsstaaten gegründet, darunter die USA, Kanada und mehrere westeuropäische Länder."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde der Warschauer Pakt gegründet?",
+        "Antworten": ["1955", "1949", "1950", "1953"],
+        "RichtigeAntwort": "1955",
+        "RichtigeAntwortMöglichkeiten": "1955",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Warschauer Pakt wurde 1955 als Antwort auf die Aufnahme der Bundesrepublik Deutschland in die NATO gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die NATO gegründet?",
+        "Antworten": ["1949", "1950", "1948", "1951"],
+        "RichtigeAntwort": "1949",
+        "RichtigeAntwortMöglichkeiten": "1949",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die NATO wurde 1949 als Militärbündnis zur kollektiven Verteidigung gegen die Sowjetunion gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Politik von Großbritannien und Frankreich an Deutschland vor dem Zweiten Weltkrieg?",
+        "Antworten": ["Appeasement", "Isolationismus", "Expansionismus", "Neutralität"],
+        "RichtigeAntwort": "Appeasement",
+        "RichtigeAntwortMöglichkeiten": "Appeasement Beschwichtigungspolitik Appeasementpolitik Appeasement-politik",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Appeasement-Politik wurde vor allem von Großbritannien unter Premierminister Neville Chamberlain und Frankreich verfolgt, um einen weiteren Krieg zu verhindern, was jedoch zur Stärkung Hitlers führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war die Hauptideologie der westlichen Staaten während des Kalten Krieges?",
+        "Antworten": ["Kapitalismus", "Kommunismus", "Feudalismus", "Sozialismus"],
+        "RichtigeAntwort": "Kapitalismus",
+        "RichtigeAntwortMöglichkeiten": "Kapitalismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Kapitalismus stand im Zentrum der westlichen Ideologie, die auf Marktwirtschaft und individueller Freiheit basierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land führte die östlichen Staaten während des Kalten Krieges an?",
+        "Antworten": ["Sowjetunion", "China", "Kuba", "Nordkorea"],
+        "RichtigeAntwort": "Sowjetunion",
+        "RichtigeAntwortMöglichkeiten": "Sowjetunion UDSSR Russland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sowjetunion war die führende Macht im Ostblock und verfolgte eine kommunistische Ideologie."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In wie viele Besatzungszonen wurde Deutschland nach dem Zweiten Weltkrieg aufgeteilt?",
+        "Antworten": ["Vier", "Drei", "Zwei", "Fünf"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4 vier",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Deutschland wurde nach dem Zweiten Weltkrieg in vier Besatzungszonen aufgeteilt, die von den USA, Großbritannien, der Sowjetunion und Frankreich verwaltet wurden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches internationale Bündnis wurde 1945 gegründet, um den Weltfrieden zu sichern?",
+        "Antworten": ["Vereinte Nationen", "NATO", "Warschauer Pakt", "Europäische Union"],
+        "RichtigeAntwort": "Vereinte Nationen",
+        "RichtigeAntwortMöglichkeiten": "Vereinte Nationen UNO UN United Nations",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Vereinten Nationen wurden gegründet, um internationale Konflikte zu vermeiden und die Zusammenarbeit zwischen den Staaten zu fördern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher politische Konflikt begann direkt nach dem Zweiten Weltkrieg und prägte die Weltpolitik?",
+        "Antworten": ["Kalter Krieg", "Erster Weltkrieg", "Dekolonisation", "Vietnamkrieg"],
+        "RichtigeAntwort": "Kalter Krieg",
+        "RichtigeAntwortMöglichkeiten": "Kalter",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Kalte Krieg war eine Zeit geopolitischer Spannungen zwischen den USA und der Sowjetunion, die die Weltpolitik bis 1991 prägten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Kalte Krieg?",
+        "Antworten": ["1947", "1945", "1949", "1950"],
+        "RichtigeAntwort": "1947",
+        "RichtigeAntwortMöglichkeiten": "1947",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Kalte Krieg begann 1947 mit der Verkündung der Truman-Doktrin, die den Beginn der geopolitischen Spannungen zwischen Ost und West markierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Organisation koordinierte kommunistische Parteien im Kalten Krieg?",
+        "Antworten": ["Kominform", "NATO", "COMECON", "UNO"],
+        "RichtigeAntwort": "Kominform",
+        "RichtigeAntwortMöglichkeiten": "Kominform Kominformbüro",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Kominform (Kommunistisches Informationsbüro) wurde 1947 gegründet, um die kommunistischen Parteien international zu koordinieren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Organisation, die kommunistische Parteien vor dem Zweiten Weltkrieg leitete?",
+        "Antworten": ["Komintern", "Kominform", "COMECON", "UNO"],
+        "RichtigeAntwort": "Komintern",
+        "RichtigeAntwortMöglichkeiten": "Komintern Kommunistische Internationale",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Komintern (Kommunistische Internationale) wurde 1919 gegründet, um kommunistische Parteien weltweit zu vereinen und zu steuern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie will alle Klassen abschaffen?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Feudalismus", "Imperialismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Kommunismus strebt eine klassenlose Gesellschaft an, in der Produktionsmittel gemeinschaftlich genutzt werden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war die Hauptideologie des Ostblocks im Kalten Krieg?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Sozialismus", "Imperialismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Im Kalten Krieg war der Kommunismus die vorherrschende Ideologie in den Staaten des Ostblocks, angeführt von der Sowjetunion."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Griechische Bürgerkrieg?",
+        "Antworten": ["1946", "1944", "1947", "1945"],
+        "RichtigeAntwort": "1946",
+        "RichtigeAntwortMöglichkeiten": "1946",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Griechische Bürgerkrieg begann 1946 und war einer der ersten Konflikte des Kalten Krieges."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte China während des Kalten Krieges?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Imperialismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "China war während des Kalten Krieges ein kommunistischer Staat, besonders nach der Machtübernahme von Mao Zedong 1949."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte Großbritannien während des Kalten Krieges?",
+        "Antworten": ["Kapitalismus", "Kommunismus", "Sozialismus", "Imperialismus"],
+        "RichtigeAntwort": "Kapitalismus",
+        "RichtigeAntwortMöglichkeiten": "Kapitalismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Großbritannien war ein kapitalistisches Land und ein enger Verbündeter der USA im Kalten Krieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte die DDR?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Feudalismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die DDR stand unter kommunistischer Herrschaft und war ein wichtiger Teil des Ostblocks unter der Sowjetunion."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte Polen während des Kalten Krieges?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Feudalismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Polen war ein kommunistischer Staat und Mitglied des Warschauer Paktes, beeinflusst von der Sowjetunion."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte Jugoslawien während des Kalten Krieges?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Sozialismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Jugoslawien war ein kommunistischer Staat, blieb jedoch unabhängig von der Sowjetunion und schloss sich der blockfreien Bewegung an."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte Kuba während des Kalten Krieges?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Feudalismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kuba wurde nach der Revolution von 1959 ein kommunistischer Staat und ein enger Verbündeter der Sowjetunion."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte Vietnam Ende des Kalten Krieges?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Feudalismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nach dem Vietnamkrieg wurde Vietnam ein kommunistischer Staat und Teil des Ostblocks."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte Südkorea während des Kalten Krieges?",
+        "Antworten": ["Kapitalismus", "Kommunismus", "Sozialismus", "Imperialismus"],
+        "RichtigeAntwort": "Kapitalismus",
+        "RichtigeAntwortMöglichkeiten": "Kapitalismus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Südkorea war ein kapitalistischer Staat und ein enger Verbündeter der USA im Pazifik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Ideologie hatte die Tschechoslowakei während des Kalten Krieges?",
+        "Antworten": ["Kommunismus", "Kapitalismus", "Sozialismus", "Liberalismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Tschechoslowakei war ein kommunistischer Staat und ein Mitglied des Warschauer Paktes."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr testete die Sowjetunion ihre erste Atombombe?",
+        "Antworten": ["1949", "1950", "1948", "1951"],
+        "RichtigeAntwort": "1949",
+        "RichtigeAntwortMöglichkeiten": "1949",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Sowjetunion testete ihre erste Atombombe, genannt 'RDS-1', im Jahr 1949 und beendete damit das Monopol der USA auf Atomwaffen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Koreakrieg?",
+        "Antworten": ["1950", "1949", "1951", "1952"],
+        "RichtigeAntwort": "1950",
+        "RichtigeAntwortMöglichkeiten": "1950",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Koreakrieg begann 1950 mit dem Einmarsch nordkoreanischer Truppen in Südkorea."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete der Koreakrieg?",
+        "Antworten": ["1953", "1952", "1951", "1954"],
+        "RichtigeAntwort": "1953",
+        "RichtigeAntwortMöglichkeiten": "1953",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Koreakrieg endete 1953 mit einem Waffenstillstand, der die Teilung Koreas entlang des 38. Breitengrads bestätigte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "An welcher Grenze wurde Korea nach dem zweiten Weltkrieg geteilt?",
+        "Antworten": ["38. Breitengrad", "17. Breitengrad", "49. Breitengrad", "15. Breitengrad"],
+        "RichtigeAntwort": "38. Breitengrad",
+        "RichtigeAntwortMöglichkeiten": "38. 38 38-breitengrad ",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der 38. Breitengrad wurde nach dem Zweiten Weltkrieg als Trennlinie zwischen Nord- und Südkorea festgelegt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Grenze zwischen Ost- und Westeuropa im Kalten Krieg?",
+        "Antworten": ["Eiserner Vorhang", "Berliner Mauer", "Grenzmauer", "Eisengrenze"],
+        "RichtigeAntwort": "Eiserner Vorhang",
+        "RichtigeAntwortMöglichkeiten": "Eiserner Vorhang Eiserner-Vorhang",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Eiserne Vorhang war ein Begriff für die ideologische und physische Trennung zwischen Ost- und Westeuropa im Kalten Krieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Anführer Jugoslawiens während des Kalten Krieges?",
+        "Antworten": ["Josip Broz Tito", "Slobodan Milošević", "Nikola Tesla", "Alexander Dubček"],
+        "RichtigeAntwort": "Josip Broz Tito",
+        "RichtigeAntwortMöglichkeiten": "Josip Broz Tito",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Josip Broz Tito führte Jugoslawien von 1945 bis zu seinem Tod 1980 und verfolgte eine unabhängige Politik zwischen Ost und West."
+    },
+    { //Deutschland
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Bundesrepublik Deutschland gegründet?",
+        "Antworten": ["1949", "1948", "1950", "1947"],
+        "RichtigeAntwort": "1949",
+        "RichtigeAntwortMöglichkeiten": "1949",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Bundesrepublik Deutschland wurde 1949 gegründet, zeitgleich mit der Gründung der Deutschen Demokratischen Republik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die DDR gegründet?",
+        "Antworten": ["1949", "1948", "1950", "1947"],
+        "RichtigeAntwort": "1949",
+        "RichtigeAntwortMöglichkeiten": "1949",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": ""
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Hauptstadt der DDR?",
+        "Antworten": ["Ostberlin", "Leipzig", "Potsdam", "Dresden"],
+        "RichtigeAntwort": "Ostberlin",
+        "RichtigeAntwortMöglichkeiten": "Ostberlin berlin ost-berlin",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ostberlin war die Hauptstadt der DDR und Sitz der Regierung des sozialistischen Staates"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag führte 1990 zur Wiedervereinigung Deutschlands?",
+        "Antworten": ["Zwei-plus-Vier-Vertrag", "Versailler Vertrag", "Potsdamer Abkommen", "Moskauer Vertrag"],
+        "RichtigeAntwort": "Zwei-plus-Vier-Vertrag",
+        "RichtigeAntwortMöglichkeiten": "Zwei-plus-Vier-Vertrag 2+4 Zwei-plus-Vier zwei+vier 2plus4 4+2 vier-plus-zwei-vertrag vier-plus-zwei 4plus2 vier+zwei ",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Zwei-plus-Vier-Vertrag zwischen den Alliierten und beiden deutschen Staaten ermöglichte die Wiedervereinigung Deutschlands."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Mauer trennte Ost- und Westberlin während des Kalten Krieges?",
+        "Antworten": ["Die Berliner Mauer", "Die Große Mauer", "Die Mauer von Potsdam", "Die Eiserne Mauer"],
+        "RichtigeAntwort": "Die Berliner Mauer",
+        "RichtigeAntwortMöglichkeiten": "Berliner",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Berliner Mauer wurde 1961 errichtet, um die Flucht von Ost- nach Westberlin zu verhindern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Berliner Mauer gebaut?",
+        "Antworten": ["1961", "1949", "1953", "1970"],
+        "RichtigeAntwort": "1961",
+        "RichtigeAntwortMöglichkeiten": "1961",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Berliner Mauer wurde 1961 gebaut, um die Flucht von Ost- nach Westberlin zu verhindern."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fiel die Berliner Mauer?",
+        "Antworten": ["1989", "1990", "1987", "1991"],
+        "RichtigeAntwort": "1989",
+        "RichtigeAntwortMöglichkeiten": "1989",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Berliner Mauer fiel 1989, was das Ende des Kalten Krieges und den Beginn der Wiedervereinigung Deutschlands einleitete."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Deutschland wiedervereinigt?",
+        "Antworten": ["1990", "1989", "1991", "1992"],
+        "RichtigeAntwort": "1990",
+        "RichtigeAntwortMöglichkeiten": "1990",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Deutschland wurde 1990 nach dem Zwei-plus-Vier-Vertrag offiziell wiedervereinigt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher US-Präsident hielt die berühmte Rede 'Ich bin ein Berliner'?",
+        "Antworten": ["John F. Kennedy", "Ronald Reagan", "Harry S. Truman", "Richard Nixon"],
+        "RichtigeAntwort": "John F. Kennedy",
+        "RichtigeAntwortMöglichkeiten": "John F. Kennedy Kennedy",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "John F. Kennedy hielt die Rede 1963 in West-Berlin als Zeichen der Unterstützung für die West-Berliner Bevölkerung."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie wurde die DDR offiziell genannt?",
+        "Antworten": ["Deutsche Demokratische Republik", "Demokratische Republik Deutschland", "Deutsche Sozialistische Republik", "Ostdeutsche Föderation"],
+        "RichtigeAntwort": "Deutsche Demokratische Republik",
+        "RichtigeAntwortMöglichkeiten": "Deutsche-Demokratische-Republik",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die DDR war der offizielle Name des sozialistischen Staates, der 1949 gegründet wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war die Hauptstadt der BRD während des Kalten Krieges?",
+        "Antworten": ["Bonn", "Berlin", "Frankfurt", "Hamburg"],
+        "RichtigeAntwort": "Bonn",
+        "RichtigeAntwortMöglichkeiten": "Bonn",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Bonn war die provisorische Hauptstadt der Bundesrepublik Deutschland während des Kalten Krieges."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei war die führende Kraft in der DDR?",
+        "Antworten": ["SED", "CDU", "SPD", "FDP"],
+        "RichtigeAntwort": "SED",
+        "RichtigeAntwortMöglichkeiten": "SED Sozialistische-Einheitspartei-Deutschlands Sozialistische-Einheitspartei",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Sozialistische Einheitspartei Deutschlands (SED) war die führende Partei und bestimmte die Politik der DDR."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann die Berliner Blockade?",
+        "Antworten": ["1948", "1947", "1949", "1950"],
+        "RichtigeAntwort": "1948",
+        "RichtigeAntwortMöglichkeiten": "1948",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Berliner Blockade begann 1948, als die Sowjetunion alle Land- und Wasserwege nach West-Berlin blockierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie reagierten die Alliierten auf die Berliner Blockade?",
+        "Antworten": ["Mit der Luftbrücke", "Mit einem Angriff", "Mit Verhandlungen", "Mit einem Rückzug"],
+        "RichtigeAntwort": "Mit der Luftbrücke",
+        "RichtigeAntwortMöglichkeiten": "Luftbrücke luft-brücke luft brücke",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Luftbrücke versorgte West-Berlin während der Blockade mit Lebensmitteln und Gütern, um die Blockade zu umgehen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr trat die Bundesrepublik Deutschland der NATO bei?",
+        "Antworten": ["1955", "1949", "1950", "1951"],
+        "RichtigeAntwort": "1955",
+        "RichtigeAntwortMöglichkeiten": "1955",
+        "Schwierigkeitsgrad": "s",
+        "Fakt": "Die BRD trat 1955 der NATO bei und wurde damit Teil des westlichen Verteidigungsbündnisses."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vorschlag von Stalin zielte auf einen Friedensvertrag mit Deutschland ab?",
+        "Antworten": ["Stalin-Note", "Potsdamer Erklärung", "Deutschlandvertrag", "Marshall-Plan"],
+        "RichtigeAntwort": "Stalin-Note",
+        "RichtigeAntwortMöglichkeiten": "Stalin-Note stalins-note",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Stalin-Note von 1952 schlug eine Wiedervereinigung Deutschlands unter neutralem Status vor, wurde jedoch von den Westmächten abgelehnt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was fand in der DDR 1953 statt?",
+        "Antworten": ["Aufstand", "Berliner Blockade", "Wiedervereinigung", "Bau der Berliner Mauer"],
+        "RichtigeAntwort": "Aufstand",
+        "RichtigeAntwortMöglichkeiten": "Aufstand Aufstände proteste protest demonstrationen demonstration freiheitskampf befreiungskampf diederstandskampf",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "1953 kam es in der DDR zu einem landesweiten Aufstand, der durch Unzufriedenheit mit den Arbeitsnormen und dem Regime ausgelöst wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis führte 1968 zu Protesten in der BRD?",
+        "Antworten": ["Notstandsgesetze", "Mauerbau", "Wiederbewaffnung", "Olympische Spiele"],
+        "RichtigeAntwort": "Notstandsgesetze",
+        "RichtigeAntwortMöglichkeiten": "Notstandsgesetze 1968",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Verabschiedung der Notstandsgesetze führte 1968 zu massiven Protesten, besonders von Studierenden in der BRD."
+    },
+    { //Deutsche Präsidenten
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+        "Antworten": ["Konrad Adenauer", "Willy Brandt", "Ludwig Erhard", "Theodor Heuss"],
+        "RichtigeAntwort": "Konrad Adenauer",
+        "RichtigeAntwortMöglichkeiten": "Konrad Adenauer Adenauer",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Konrad Adenauer war von 1949 bis 1963 der erste Bundeskanzler der Bundesrepublik Deutschland."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Bundespräsident der Bundesrepublik Deutschland?",
+        "Antworten": ["Theodor Heuss", "Konrad Adenauer", "Walter Scheel", "Gustav Heinemann"],
+        "RichtigeAntwort": "Theodor Heuss",
+        "RichtigeAntwortMöglichkeiten": "Theodor Heuss",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Theodor Heuss war von 1949 bis 1959 der erste Bundespräsident der Bundesrepublik Deutschland."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist seit 2017 Bundespräsident von Deutschland?",
+        "Antworten": ["Frank-Walter Steinmeier", "Joachim Gauck", "Horst Köhler", "Christian Wulff"],
+        "RichtigeAntwort": "Frank-Walter Steinmeier",
+        "RichtigeAntwortMöglichkeiten": "Frank-Walter Steinmeier",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Frank-Walter Steinmeier ist seit 2017 Bundespräsident von Deutschland und wurde 2022 wiedergewählt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war Bundeskanzler während der Wiedervereinigung Deutschlands?",
+        "Antworten": ["Helmut Kohl", "Angela Merkel", "Gerhard Schröder", "Willy Brandt"],
+        "RichtigeAntwort": "Helmut Kohl",
+        "RichtigeAntwortMöglichkeiten": "Helmut Kohl Kohl",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Helmut Kohl war von 1982 bis 1998 Bundeskanzler und führte Deutschland durch die Wiedervereinigung."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war die erste Bundeskanzlerin Deutschlands?",
+        "Antworten": ["Angela Merkel", "Margarete Schmidt", "Helene Fischer", "Theresa Schulz"],
+        "RichtigeAntwort": "Angela Merkel",
+        "RichtigeAntwortMöglichkeiten": "Angela Merkel Merkel",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Angela Merkel war von 2005 bis 2021 die erste Bundeskanzlerin Deutschlands und eine der einflussreichsten Politikerinnen Europas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Region, die Vietnam, Laos und Kambodscha umfasste?",
+        "Antworten": ["Indochina", "Südostasien", "Indien", "China"],
+        "RichtigeAntwort": "Indochina",
+        "RichtigeAntwortMöglichkeiten": "Indochina Indo-China",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Indochina war eine historische Bezeichnung für die Region, die aus Vietnam, Laos und Kambodscha bestand, insbesondere während der französischen Kolonialzeit."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Kolonialmacht war am Ersten Indochinakrieg beteiligt?",
+        "Antworten": ["Frankreich", "Großbritannien", "Spanien", "Portugal"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich kämpfte im Ersten Indochinakrieg, um seine Kolonialherrschaft in Vietnam, Laos und Kambodscha zu bewahren."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Erste Indochinakrieg?",
+        "Antworten": ["1946", "1954", "1945", "1950"],
+        "RichtigeAntwort": "1946",
+        "RichtigeAntwortMöglichkeiten": "1946",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Erste Indochinakrieg begann 1946 zwischen den vietnamesischen Unabhängigkeitskräften und der französischen Kolonialmacht."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Partei regierte China während des Kalten Krieges?",
+        "Antworten": ["Kommunistische Partei", "Nationalistische Partei", "Sozialistische Partei", "Liberale Partei"],
+        "RichtigeAntwort": "Kommunistische Partei",
+        "RichtigeAntwortMöglichkeiten": "Kommunistische KPC KPCh",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Kommunistische Partei Chinas regierte das Land und etablierte eine sozialistische Ordnung."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Anführer der Nationalisten im Chinesischen Bürgerkrieg?",
+        "Antworten": ["Chiang Kai-shek", "Mao Zedong", "Zhou Enlai", "Sun Yat-sen"],
+        "RichtigeAntwort": "Chiang Kai-shek",
+        "RichtigeAntwortMöglichkeiten": "Chiang Kai-shek kaishek",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Chiang Kai-shek war der Anführer der Nationalisten (Kuomintang) im Chinesischen Bürgerkrieg gegen die Kommunisten unter Mao Zedong."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis führte 1971 zur Aufnahme Chinas in die Vereinten Nationen?",
+        "Antworten": ["Resolution 2758", "Gründung der UNO", "Chinesische Revolution", "Koreakrieg"],
+        "RichtigeAntwort": "Resolution 2758",
+        "RichtigeAntwortMöglichkeiten": "Resolution 2758 UN Resolution 2758",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mit Resolution 2758 erkannte die UN 1971 die Volksrepublik China als rechtmäßigen Vertreter Chinas an und Taiwan verlor seinen Sitz."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Beziehungen zwischen der Volksrepublik China und der Sowjetunion in den 1960er Jahren?",
+        "Antworten": ["Sino-sowjetisches Zerwürfnis", "Sino-amerikanische Annäherung", "Ostasienpakt", "Kommunistisches Bündnis"],
+        "RichtigeAntwort": "Sino-sowjetisches Zerwürfnis",
+        "RichtigeAntwortMöglichkeiten": "Sino-sowjetisches Zerwürfnis sino ",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Sino-sowjetische Zerwürfnis bezeichnete die wachsenden Spannungen zwischen China und der Sowjetunion während des Kalten Krieges."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Insel beansprucht sowohl die Volksrepublik China als auch die Republik China?",
+        "Antworten": ["Taiwan", "Hainan", "Macau", "Hongkong"],
+        "RichtigeAntwort": "Taiwan",
+        "RichtigeAntwortMöglichkeiten": "Taiwan",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Taiwan wird sowohl von der Volksrepublik China als auch von der Republik China als eigenes Territorium beansprucht."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer gründete die Volksrepublik China?",
+        "Antworten": ["Mao Zedong", "Chiang Kai-shek", "Deng Xiaoping", "Zhou Enlai"],
+        "RichtigeAntwort": "Mao Zedong",
+        "RichtigeAntwortMöglichkeiten": "Mao Zedong Mao Tse-tung tsetung",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mao Zedong gründete 1949 die Volksrepublik China und war ihr erster Vorsitzender."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis führte zur Teilung Chinas in zwei Regierungen?",
+        "Antworten": ["Chinesischer Bürgerkrieg", "Koreakrieg", "Erster Indochinakrieg", "Opiumkriege"],
+        "RichtigeAntwort": "Chinesischer Bürgerkrieg",
+        "RichtigeAntwortMöglichkeiten": "Chinesischer-Bürgerkrieg Bürgerkrieg",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Der Chinesische Bürgerkrieg zwischen Kommunisten und Nationalisten führte 1949 zur Gründung der Volksrepublik China und der Exilregierung auf Taiwan."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wohin flüchteten die chinesischen Nationalisten nach 1949?",
+        "Antworten": ["Taiwan", "Hongkong", "Macao", "Shanghai"],
+        "RichtigeAntwort": "Taiwan",
+        "RichtigeAntwortMöglichkeiten": "Taiwan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nach ihrer Niederlage im chinesischen Bürgerkrieg zogen sich die Nationalisten unter Chiang Kai-shek nach Taiwan zurück."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem wurde die Volksrepublik China gegründet?",
+        "Antworten": ["1949", "1830", "600v.Chr", "60"],
+        "RichtigeAntwort": "1949",
+        "RichtigeAntwortMöglichkeiten": "1949",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Volksrepublik China wurde 1949 unter Mao Zedong gegründet und markierte den Beginn des kommunistischen Regimes in China."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Sino-sowjetische Bruch zwischen China und der Sowjetunion?",
+        "Antworten": ["1960", "1959", "1965", "1970"],
+        "RichtigeAntwort": "1960",
+        "RichtigeAntwortMöglichkeiten": "1960",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Sino-sowjetische Zerwürfnis begann 1960, als sich die Beziehungen zwischen China und der Sowjetunion verschlechterten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Besatzungszonen gab es in Österreich nach dem Zweiten Weltkrieg?",
+        "Antworten": ["Vier", "Drei", "Zwei", "Fünf"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Österreich war nach dem Zweiten Weltkrieg in vier Besatzungszonen unterteilt, die von den USA, Großbritannien, der Sowjetunion und Frankreich verwaltet wurden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Österreich nach dem zweiten Weltkrieg unabhängig?",
+        "Antworten": ["1955", "1945", "1950", "1960"],
+        "RichtigeAntwort": "1955",
+        "RichtigeAntwortMöglichkeiten": "1955",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Österreich wurde 1955 durch den Staatsvertrag unabhängig und erklärte seine immerwährende Neutralität."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr war die Ungarische Revolution im Kalten Krieg?",
+        "Antworten": ["1956", "1955", "1960", "1948"],
+        "RichtigeAntwort": "1956",
+        "RichtigeAntwortMöglichkeiten": "1956",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Ungarische Revolution von 1956 war ein Volksaufstand gegen die kommunistische Regierung und die sowjetische Kontrolle."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand der Prager Frühling statt?",
+        "Antworten": ["1968", "1967", "1970", "1969"],
+        "RichtigeAntwort": "1968",
+        "RichtigeAntwortMöglichkeiten": "1968",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Prager Frühling 1968 war ein Versuch, in der Tschechoslowakei einen Sozialismus mit menschlichem Antlitz einzuführen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man die Reformbewegung der Tschechoslowakei im Kalten Krieg?",
+        "Antworten": ["Prager Frühling", "Samtene Revolution", "Ungarischer Aufstand", "Berliner Blockade"],
+        "RichtigeAntwort": "Prager Frühling",
+        "RichtigeAntwortMöglichkeiten": "Frühling Prager-Frühling",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Prager Frühling war eine Reformbewegung, die eine Liberalisierung des Sozialismus in der Tschechoslowakei anstrebte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand der Jom-Kippur-Krieg statt?",
+        "Antworten": ["1973", "1967", "1980", "1970"],
+        "RichtigeAntwort": "1973",
+        "RichtigeAntwortMöglichkeiten": "1973",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Jom-Kippur-Krieg begann 1973, als Ägypten und Syrien Israel angriffen, um verlorene Gebiete zurückzugewinnen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man den Krieg zwischen Israel, Ägypten und Syrien während des Kalten Krieges?",
+        "Antworten": ["Jom-Kippur-Krieg", "Sechstagekrieg", "Golfkrieg", "Sinai-Krieg"],
+        "RichtigeAntwort": "Jom-Kippur-Krieg",
+        "RichtigeAntwortMöglichkeiten": "Jom-Kippur-Krieg Jom Kippur kipur",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Jom-Kippur-Krieg von 1973 war ein zentraler Konflikt des Nahen Ostens und zeigte die Rivalität der Supermächte im Kalten Krieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Region wollte Ägypten im Jom-Kippur-Krieg zurückgewinnen?",
+        "Antworten": ["Sinai-Halbinsel", "Golanhöhen", "Westjordanland", "Gazastreifen"],
+        "RichtigeAntwort": "Sinai-Halbinsel",
+        "RichtigeAntwortMöglichkeiten": "Sinai-Halbinsel sinai halbinsel insel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Sinai-Halbinsel war eines der Hauptziele Ägyptens im Jom-Kippur-Krieg, nachdem sie 1967 von Israel erobert worden war."
+    },
+    {//kuba krise
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand die Kuba-Krise statt?",
+        "Antworten": ["1962", "1961", "1959", "1963"],
+        "RichtigeAntwort": "1962",
+        "RichtigeAntwortMöglichkeiten": "1962",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Kuba-Krise begann 1962, als die USA entdeckten, dass die Sowjetunion Raketen auf Kuba stationierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher US-Präsident war während der Kuba-Krise im Amt?",
+        "Antworten": ["John F. Kennedy", "Dwight D. Eisenhower", "Lyndon B. Johnson", "Richard Nixon"],
+        "RichtigeAntwort": "John F. Kennedy",
+        "RichtigeAntwortMöglichkeiten": "John F. Kennedy jon kenedy",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "John F. Kennedy war der US-Präsident, der die Krise durch Verhandlungen mit der Sowjetunion beilegte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches große Ereignis brachte die Welt an den Rand eines Atomkriegs?",
+        "Antworten": ["Kuba-Krise", "Berlin-Krise", "Vietnam-Krieg", "Sechstagekrieg"],
+        "RichtigeAntwort": "Kuba-Krise",
+        "RichtigeAntwortMöglichkeiten": "Kuba-Krise Kubakrise kuba",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Kuba-Krise von 1962 war ein Höhepunkt des Kalten Krieges, als die Sowjetunion Raketen auf Kuba stationierte und die USA eine Blockade verhängten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der sowjetische Führer während der Kuba-Krise?",
+        "Antworten": ["Nikita Chruschtschow", "Josef Stalin", "Leonid Breschnew", "Michail Gorbatschow"],
+        "RichtigeAntwort": "Nikita Chruschtschow",
+        "RichtigeAntwortMöglichkeiten": "Nikita Chruschtschow",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Nikita Chruschtschow war der sowjetische Führer, der die Stationierung der Raketen auf Kuba genehmigte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Führer Kubas während der Kuba-Krise?",
+        "Antworten": ["Fidel Castro", "Raúl Castro", "Che Guevara", "Carlos Prío"],
+        "RichtigeAntwort": "Fidel Castro",
+        "RichtigeAntwortMöglichkeiten": "Fidel Castro",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Fidel Castro war der kubanische Führer, der die Unterstützung der Sowjetunion suchte, was zur Kuba-Krise führte."
+    },
+    {//Vietnamkrieg
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Land kämpften die USA und Frankreich gegen den Kommunismus?",
+        "Antworten": ["Vietnam", "Kambodscha", "Laos", "Kuba"],
+        "RichtigeAntwort": "Vietnam",
+        "RichtigeAntwortMöglichkeiten": "Vietnam",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Vietnam war das Hauptschlachtfeld des Kalten Krieges in Südostasien, wo die USA und Frankreich gegen den Kommunismus kämpften."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem 'Jahr begann der Vietnamkrieg?",
+        "Antworten": ["1945", "1955", "1965", "1975"],
+        "RichtigeAntwort": "1955",
+        "RichtigeAntwortMöglichkeiten": "1955",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Vietnamkrieg begann offiziell 1955 und dauerte zwei Jahrzehnte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte Nordvietnam im Vietnamkrieg an?",
+        "Antworten": ["Ngo Dinh Diem", "Ho Chi Minh", "Lyndon B. Johnson", "Richard Nixon"],
+        "RichtigeAntwort": "Ho Chi Minh",
+        "RichtigeAntwortMöglichkeiten": "Ho Chi Minh",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ho Chi Minh war der Führer Nordvietnams während des Vietnamkriegs und eine Schlüsselfigur im Widerstand gegen die USA."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "in welchem Jahr endete der Vietnamkriegs?",
+        "Antworten": ["1968", "1970", "1973", "1975"],
+        "RichtigeAntwort": "1975",
+        "RichtigeAntwortMöglichkeiten": "1975",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Vietnamkrieg endete 1975 mit dem Fall von Saigon und der Vereinigung Vietnams."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Guerillaverband, der Südvietnam bekämpfte?",
+        "Antworten": ["Vietminh", "Vietcong", "Khmer Rouge", "Red Army"],
+        "RichtigeAntwort": "Vietcong",
+        "RichtigeAntwortMöglichkeiten": "Vietcong",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Vietcong war ein Guerillaverband, der gegen die südvietnamesische Regierung und die USA kämpfte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches chemische Mittel wurde von den USA im Vietnamkrieg eingesetzt?",
+        "Antworten": ["Napalm", "Agent Orange", "Phosphor", "Sarin"],
+        "RichtigeAntwort": "Agent Orange",
+        "RichtigeAntwortMöglichkeiten": "Agent Orange",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Agent Orange war ein Entlaubungsmittel, das von den USA eingesetzt wurde, um den dichten Dschungel Vietnams zu zerstören."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war die Hauptstadt Südvietnams vor Ende des Vietnamkriegs?",
+        "Antworten": ["Hanoi", "Saigon", "Phnom Penh", "Bangkok"],
+        "RichtigeAntwort": "Saigon",
+        "RichtigeAntwortMöglichkeiten": "Saigon",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Saigon war die Hauptstadt Südvietnams und wurde nach dem Ende des Kriegs in Ho-Chi-Minh-Stadt umbenannt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Ideologie Nordvietnams während des Kalten Krieges?",
+        "Antworten": ["Kapitalismus", "Faschismus", "Kommunismus", "Sozialismus"],
+        "RichtigeAntwort": "Kommunismus",
+        "RichtigeAntwortMöglichkeiten": "Kommunismus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nordvietnam war ein kommunistischer Staat, der von der Sowjetunion und China unterstützt wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand die Suez-Krise statt?",
+        "Antworten": ["1956", "1954", "1957", "1960"],
+        "RichtigeAntwort": "1956",
+        "RichtigeAntwortMöglichkeiten": "1956",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Suez-Krise begann 1956, als Ägypten den Suez-Kanal verstaatlichte und Großbritannien, Frankreich und Israel militärisch intervenierten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Hauptgegner der Sowjetunion im Kalten Krieg?",
+        "Antworten": ["USA", "China", "Großbritannien", "Frankreich"],
+        "RichtigeAntwort": "USA",
+        "RichtigeAntwortMöglichkeiten": "USA Vereinigte Staaten Amerika us united states",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die USA waren der Hauptgegner der Sowjetunion im Kalten Krieg, da sie das westliche Bündnis anführten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Hauptgegner der USA im Kalten Krieg?",
+        "Antworten": ["Sowjetunion", "China", "Vietnam", "Nordkorea"],
+        "RichtigeAntwort": "Sowjetunion",
+        "RichtigeAntwortMöglichkeiten": "Sowjetunion UDSSR Russland",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sowjetunion war der Hauptgegner der USA im Kalten Krieg und führte das östliche Bündnis an."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der letzte Präsident der Sowjetunion?",
+        "Antworten": ["Michail Gorbatschow", "Boris Jelzin", "Leonid Breschnew", "Nikita Chruschtschow"],
+        "RichtigeAntwort": "Michail Gorbatschow",
+        "RichtigeAntwortMöglichkeiten": "Michail Gorbatschow",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Michail Gorbatschow war der letzte Präsident der Sowjetunion und leitete Reformen wie Glasnost und Perestroika ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Republiken lösten sich aus der Sowjetunion?",
+        "Antworten": ["15", "12", "10", "20"],
+        "RichtigeAntwort": "15",
+        "RichtigeAntwortMöglichkeiten": "15 fünfzehn",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Sowjetunion bestand aus 15 Republiken, die 1991 unabhängig wurden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fiel die Sowjetunion?",
+        "Antworten": ["1991", "1989", "1990", "1992"],
+        "RichtigeAntwort": "1991",
+        "RichtigeAntwortMöglichkeiten": "1991",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sowjetunion löste sich 1991 offiziell auf, was das Ende des Kalten Krieges markierte."
+    },
+
+
+    ///////////USA///////////
+
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die erste dauerhafte englische Kolonie in Nordamerika?",
+        "Antworten": ["Jamestown", "Plymouth", "Roanoke", "Salem"],
+        "RichtigeAntwort": "Jamestown",
+        "RichtigeAntwortMöglichkeiten": "Jamestown",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Jamestown war die erste dauerhafte englische Kolonie in Nordamerika, gegründet im Jahr 1607."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die erste dauerhafte englische Kolonie in Nordamerika gegründet?",
+        "Antworten": ["1607", "1620", "1585", "1610"],
+        "RichtigeAntwort": "1607",
+        "RichtigeAntwortMöglichkeiten": "1607",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Jamestown wurde 1607 als erste dauerhafte englische Kolonie in Nordamerika gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die erste Kolonie der Pilgerväter in Nordamerika?",
+        "Antworten": ["Plymouth", "Jamestown", "Massachusetts Bay", "Providence"],
+        "RichtigeAntwort": "Plymouth",
+        "RichtigeAntwortMöglichkeiten": "Plymouth",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Plymouth war die erste Kolonie der Pilgerväter und wurde 1620 gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man die englischen Siedler, die das erste Thanksgiving in der USA feierten?",
+        "Antworten": ["Pilgerväter", "Puritaner", "Kolonialisten", "Quäker"],
+        "RichtigeAntwort": "Pilgerväter",
+        "RichtigeAntwortMöglichkeiten": "Pilgerväter pilger väter",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Pilgerväter feierten 1621 das erste Thanksgiving zusammen mit den Wampanoag, um eine erfolgreiche Ernte zu würdigen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Kolonien hatten die Vereinigten Staaten anfangs?",
+        "Antworten": ["13", "10", "15", "20"],
+        "RichtigeAntwort": "13",
+        "RichtigeAntwortMöglichkeiten": "13 dreizehn",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Dreizehn Kolonien waren britische Kolonien in Nordamerika, die sich 1776 von Großbritannien lossagten und die Vereinigten Staaten gründeten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land regierte anfangs über die Vereinigten Staaten?",
+        "Antworten": ["Großbritannien", "Frankreich", "Spanien", "Niederlande"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien Vereinigtes Königreich England uk great brittain brittanien",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Großbritannien regierte über die Dreizehn Kolonien, bis diese ihre Unabhängigkeit erklärten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Anführer der indigenen Völker im King Philip's War gegen Englische Kolonisten?",
+        "Antworten": ["Metacom", "Pocahontas", "Sitting Bull", "Geronimo"],
+        "RichtigeAntwort": "Metacom",
+        "RichtigeAntwortMöglichkeiten": "Metacom Philip",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Metacom, auch bekannt als King Philip, führte die indigenen Stämme im Krieg gegen die englischen Kolonisten an."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man den Konflikt zwischen indigenen Völkern und Kolonisten 1675?",
+        "Antworten": ["King Philip's War", "French and Indian War", "Pequot War", "Bacon's Rebellion"],
+        "RichtigeAntwort": "King Philip's War",
+        "RichtigeAntwortMöglichkeiten": "Philip's philips",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "King Philip's War war einer der blutigsten Konflikte zwischen indigenen Völkern und englischen Kolonisten in Nordamerika."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Stadt war die erste Hauptstadt der USA?",
+        "Antworten": ["New York", "Washington D.C.", "Philadelphia", "Boston"],
+        "RichtigeAntwort": "New York",
+        "RichtigeAntwortMöglichkeiten": "New York",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "New York war die erste Hauptstadt der USA, bevor die Regierung nach Philadelphia zog."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welcher Stadt wurde die Unabhängigkeitserklärung unterzeichnet?",
+        "Antworten": ["Philadelphia", "Boston", "New York", "Washington D.C."],
+        "RichtigeAntwort": "Philadelphia",
+        "RichtigeAntwortMöglichkeiten": "Philadelphia",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Unabhängigkeitserklärung wurde 1776 in Philadelphia im Independence Hall unterzeichnet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Stadt wurde durch den Goldrausch in Kalifornien bekannt?",
+        "Antworten": ["San Francisco", "Los Angeles", "Sacramento", "San Diego"],
+        "RichtigeAntwort": "San Francisco",
+        "RichtigeAntwortMöglichkeiten": "San Francisco",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "San Francisco wuchs während des Kalifornischen Goldrauschs in den 1850er Jahren schnell zu einer bedeutenden Stadt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man das Ereignis in Boston, bei dem Kolonisten aus Protest gegen Steuern Tee ins Wasser warfen?",
+        "Antworten": ["Boston Tea Party", "Unabhängigkeitstag", "Philadelphia Tea Riot", "Boston Massacre"],
+        "RichtigeAntwort": "Boston Tea Party",
+        "RichtigeAntwortMöglichkeiten": "Tea Party",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Boston Tea Party von 1773 war ein Protest der Kolonisten gegen die britische Steuerpolitik."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die Hauptstadt der Konföderierten im Amerikanischen Bürgerkrieg?",
+        "Antworten": ["Richmond", "Atlanta", "Charleston", "Montgomery"],
+        "RichtigeAntwort": "Richmond",
+        "RichtigeAntwortMöglichkeiten": "Richmond",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Richmond war die Hauptstadt der Konföderierten Staaten während des Amerikanischen Bürgerkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welcher Stadt ereignete sich der Große Brand von 1871?",
+        "Antworten": ["Chicago", "New York", "San Francisco", "Boston"],
+        "RichtigeAntwort": "Chicago",
+        "RichtigeAntwortMöglichkeiten": "Chicago",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Große Brand von Chicago zerstörte große Teile der Stadt und führte zu einem umfangreichen Wiederaufbau."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Stadt war als Zentrum der Automobilindustrie der Usa bekannt?",
+        "Antworten": ["Detroit", "Chicago", "Los Angeles", "New York"],
+        "RichtigeAntwort": "Detroit",
+        "RichtigeAntwortMöglichkeiten": "Detroit",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Detroit wird oft als die 'Motor City' bezeichnet, da sie das Zentrum der US-Automobilindustrie ist."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Stadt ist die älteste heutige Stadt in den USA?",
+        "Antworten": ["St. Augustine", "Jamestown", "Santa Fe", "Plymouth"],
+        "RichtigeAntwort": "St. Augustine",
+        "RichtigeAntwortMöglichkeiten": "Augustine",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "St. Augustine wurde 1565 gegründet und ist die älteste dauerhaft bewohnte europäische Siedlung in den Vereinigten Staaten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Amerikanische Unabhängigkeitskrieg?",
+        "Antworten": ["1775", "1776", "1781", "1783"],
+        "RichtigeAntwort": "1775",
+        "RichtigeAntwortMöglichkeiten": "1775",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Amerikanische Unabhängigkeitskrieg begann 1775 mit den Schlachten von Lexington und Concord."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Unabhängigkeitserklärung der USA unterzeichnet?",
+        "Antworten": ["1776", "1775", "1781", "1783"],
+        "RichtigeAntwort": "1776",
+        "RichtigeAntwortMöglichkeiten": "1776",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Unabhängigkeitserklärung der Vereinigten Staaten wurde am 4. Juli 1776 unterzeichnet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Vertrag beendete den Amerikanischen Unabhängigkeitskrieg?",
+        "Antworten": ["Vertrag von Paris", "Vertrag von Versailles", "Friedensvertrag von Ghent", "Vertrag von Utrecht"],
+        "RichtigeAntwort": "Vertrag von Paris",
+        "RichtigeAntwortMöglichkeiten": "Vertrag von Paris",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Vertrag von Paris, unterzeichnet 1783, beendete den Amerikanischen Unabhängigkeitskrieg und erkannte die Unabhängigkeit der Vereinigten Staaten an."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land unterstützte die USA im Unabhängigkeitskrieg gegen Großbritannien?",
+        "Antworten": ["Frankreich", "Spanien", "Deutschland", "Niederlande"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich unterstützte die Vereinigten Staaten mit finanzieller und militärischer Hilfe, die entscheidend für den Sieg war."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete der Amerikanische Unabhängigkeitskrieg?",
+        "Antworten": ["1783", "1781", "1776", "1775"],
+        "RichtigeAntwort": "1783",
+        "RichtigeAntwortMöglichkeiten": "1783",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Amerikanische Unabhängigkeitskrieg endete 1783 mit der Unterzeichnung des Vertrags von Paris."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war das Vorbild der Französischen Revolution?",
+        "Antworten": ["Amerikanische Revolution", "Russische Revolution", "Industrielle Revolution", "Glorious Revolution"],
+        "RichtigeAntwort": "Amerikanische Revolution",
+        "RichtigeAntwortMöglichkeiten": "Amerikanische Unabhängigkeitskrieg USA us amerika Unabhängigkeitserklärung amerikanischer vereinigte staaten",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Amerikanische Revolution war ein Vorbild für die Französische Revolution, da sie die Idee der Unabhängigkeit und Freiheit inspirierte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Neutralitätserklärung der USA verkündet?",
+        "Antworten": ["1793", "1776", "1815", "1783"],
+        "RichtigeAntwort": "1793",
+        "RichtigeAntwortMöglichkeiten": "1793",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Neutralitätserklärung von 1793 wurde unter Präsident George Washington verkündet, um die USA aus europäischen Konflikten herauszuhalten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land verkaufte Louisiana an die USA?",
+        "Antworten": ["Frankreich", "Spanien", "Großbritannien", "Mexiko"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Frankreich verkaufte Louisiana 1803 an die Vereinigten Staaten unter der Führung von Napoleon Bonaparte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr verkaufte Frankreich Louisiana an die USA?",
+        "Antworten": ["1803", "1793", "1812", "1800"],
+        "RichtigeAntwort": "1803",
+        "RichtigeAntwortMöglichkeiten": "1803",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Louisiana Purchase wurde 1803 abgeschlossen und verdoppelte die Fläche der Vereinigten Staaten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Staat war der erste der USA?",
+        "Antworten": ["Delaware", "Virginia", "Pennsylvania", "New York"],
+        "RichtigeAntwort": "Delaware",
+        "RichtigeAntwortMöglichkeiten": "Delaware",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Delaware war der erste Staat, der am 7. Dezember 1787 der Union beitrat."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Staat wurde 1959 zusammen mit Hawaii aufgenommen?",
+        "Antworten": ["Alaska", "Arizona", "New Mexico", "Nevada"],
+        "RichtigeAntwort": "Alaska",
+        "RichtigeAntwortMöglichkeiten": "Alaska",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Alaska trat am 3. Januar 1959 den Vereinigten Staaten bei, wenige Monate vor Hawaii."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr kaufte die USA Alaska von Russland ab?",
+        "Antworten": ["1867", "1848", "1870", "1853"],
+        "RichtigeAntwort": "1867",
+        "RichtigeAntwortMöglichkeiten": "1867",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die USA kauften Alaska 1867 von Russland für 7,2 Millionen Dollar."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Von welchem Land kaufte die USA Alaska?",
+        "Antworten": ["Russland", "Großbritannien", "Frankreich", "Spanien"],
+        "RichtigeAntwort": "Russland",
+        "RichtigeAntwortMöglichkeiten": "Russland russische russiches-reich",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die USA kauften Alaska 1867 von Russland für 7,2 Millionen Dollar, ein Ereignis, das als 'Seward's Folly' bekannt wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land war der Gegner der USA im Krieg von 1812?",
+        "Antworten": ["Großbritannien", "Frankreich", "Spanien", "Mexiko"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien england uk vereinigtes-königreich königreich",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Krieg von 1812 wurde zwischen den USA und Großbritannien ausgetragen und beinhaltete Konflikte um Handelsrechte und Gebietsansprüche."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Doktrin warnte vor europäischer Einmischung in Amerika?",
+        "Antworten": ["Monroe-Doktrin", "Truman-Doktrin", "Marshall-Doktrin", "Roosevelt-Doktrin"],
+        "RichtigeAntwort": "Monroe-Doktrin",
+        "RichtigeAntwortMöglichkeiten": "Monroe-Doktrin monroe",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Monroe-Doktrin definierte die amerikanische Außenpolitik und hielt europäische Mächte von Einmischungen auf dem amerikanischen Kontinent ab."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Präsident ist auf der 1-Dollar-Note abgebildet?",
+        "Antworten": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Alexander Hamilton"],
+        "RichtigeAntwort": "George Washington",
+        "RichtigeAntwortMöglichkeiten": "George Washington",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "George Washington ist auf der 1-Dollar-Note abgebildet und symbolisiert die Gründung der Vereinigten Staaten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde George Washington Präsident?",
+        "Antworten": ["1789", "1776", "1797", "1801"],
+        "RichtigeAntwort": "1789",
+        "RichtigeAntwortMöglichkeiten": "1789",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "George Washington wurde 1789 zum ersten Präsidenten der Vereinigten Staaten gewählt." 
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer schrieb Unabhängigkeitserklärung der USA?",
+        "Antworten": ["Thomas Jefferson", "George Washington", "John Adams", "Benjamin Franklin"],
+        "RichtigeAntwort": "Thomas Jefferson",
+        "RichtigeAntwortMöglichkeiten": "Thomas Jefferson",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Thomas Jefferson war der Hauptautor der Unabhängigkeitserklärung, die 1776 unterzeichnet wurde."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Präsident ist auf der 2-Dollar-Note abgebildet?",
+        "Antworten": ["Thomas Jefferson", "George Washington", "James Madison", "Alexander Hamilton"],
+        "RichtigeAntwort": "Thomas Jefferson",
+        "RichtigeAntwortMöglichkeiten": "Thomas Jefferson",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Thomas Jefferson ist auf der 2-Dollar-Note abgebildet, die in den USA selten im Umlauf ist."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist auf der 5-Dollar-Note abgebildet?",
+        "Antworten": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Ulysses S. Grant"],
+        "RichtigeAntwort": "Abraham Lincoln",
+        "RichtigeAntwortMöglichkeiten": "Abraham Lincoln",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Abraham Lincoln, der 16. Präsident der USA, ist auf der 5-Dollar-Note abgebildet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist auf der 10-Dollar-Note abgebildet?",
+        "Antworten": ["Alexander Hamilton", "Thomas Jefferson", "Benjamin Franklin", "George Washington"],
+        "RichtigeAntwort": "Alexander Hamilton",
+        "RichtigeAntwortMöglichkeiten": "Alexander Hamilton",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Alexander Hamilton, einer der Gründerväter der USA, ist auf der 10-Dollar-Note abgebildet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist auf der 20-Dollar-Note abgebildet?",
+        "Antworten": ["Andrew Jackson", "Thomas Jefferson", "Abraham Lincoln", "George Washington"],
+        "RichtigeAntwort": "Andrew Jackson",
+        "RichtigeAntwortMöglichkeiten": "Andrew Jackson",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Andrew Jackson, der 7. Präsident der USA, ist auf der 20-Dollar-Note abgebildet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist auf der 50-Dollar-Note abgebildet?",
+        "Antworten": ["Ulysses S. Grant", "Abraham Lincoln", "George Washington", "Alexander Hamilton"],
+        "RichtigeAntwort": "Ulysses S. Grant",
+        "RichtigeAntwortMöglichkeiten": "Ulysses S. Grant",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ulysses S. Grant, der General im Amerikanischen Bürgerkrieg und 18. Präsident, ist auf der 50-Dollar-Note abgebildet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist auf der 100-Dollar-Note abgebildet?",
+        "Antworten": ["Benjamin Franklin", "George Washington", "Alexander Hamilton", "Thomas Jefferson"],
+        "RichtigeAntwort": "Benjamin Franklin",
+        "RichtigeAntwortMöglichkeiten": "Benjamin Franklin",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Benjamin Franklin, einer der Gründerväter der USA, ist auf der 100-Dollar-Note abgebildet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Abraham Lincoln Präsident?",
+        "Antworten": ["1861", "1860", "1859", "1865"],
+        "RichtigeAntwort": "1861",
+        "RichtigeAntwortMöglichkeiten": "1861",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Abraham Lincoln wurde 1861 der 16. Präsident der Vereinigten Staaten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Präsident schaffte die Sklaverei in der USA ab?",
+        "Antworten": ["Abraham Lincoln", "Thomas Jefferson", "George Washington", "James Madison"],
+        "RichtigeAntwort": "Abraham Lincoln",
+        "RichtigeAntwortMöglichkeiten": "Abraham Lincoln",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Abraham Lincoln setzte sich für die Abschaffung der Sklaverei ein und unterzeichnete die Emanzipationsproklamation im Jahr 1863."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie ist Abraham Lincoln gestorben?",
+        "Antworten": ["Ermordung", "Schuss", "Mord", "Attentat"],
+        "RichtigeAntwort": "Ermordung",
+        "RichtigeAntwortMöglichkeiten": "Ermordung ermordet Schuss Mord erschossen erschießen erschossener Attentat pistole knarre John Wilkes Booth kopfschuss gehirn kopf tötung todschlag",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Abraham Lincoln wurde 1865 im Ford's Theatre von John Wilkes Booth durch einen Schuss ermordet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Abraham Lincoln ermordet?",
+        "Antworten": ["1865", "1863", "1861", "1867"],
+        "RichtigeAntwort": "1865",
+        "RichtigeAntwortMöglichkeiten": "1865",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Abraham Lincoln wurde 1865 während seiner zweiten Amtszeit ermordet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wo wurde Abraham Lincoln ermordet?",
+        "Antworten": ["Theater", "Weißes Haus", "Capitol", "Mount Vernon"],
+        "RichtigeAntwort": "Theater",
+        "RichtigeAntwortMöglichkeiten": "Ford's Theatre Theater Washington D.C.",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Abraham Lincoln wurde im Ford's Theatre in Washington D.C. ermordet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Präsident der USA während des Ersten Weltkrieg?",
+        "Antworten": ["Woodrow Wilson", "Theodore Roosevelt", "Franklin D. Roosevelt", "William Howard Taft"],
+        "RichtigeAntwort": "Woodrow Wilson",
+        "RichtigeAntwortMöglichkeiten": "Woodrow Wilson Wilson",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Woodrow Wilson führte die USA durch den Ersten Weltkrieg und war ein Verfechter des Völkerbundes."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Präsident stellte den 14-Punkte-Plan für den Frieden vor?",
+        "Antworten": ["Woodrow Wilson", "Franklin D. Roosevelt", "Theodore Roosevelt", "John F. Kennedy"],
+        "RichtigeAntwort": "Woodrow Wilson",
+        "RichtigeAntwortMöglichkeiten": "Woodrow Wilson Wilson",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Woodrow Wilson präsentierte den 14-Punkte-Plan 1918 als Grundlage für den Frieden nach dem Ersten Weltkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der Präsident der USA während des Zweiten Weltkrieg?",
+        "Antworten": ["Franklin D. Roosevelt", "Theodore Roosevelt", "Woodrow Wilson", "Harry S. Truman"],
+        "RichtigeAntwort": "Franklin D. Roosevelt",
+        "RichtigeAntwortMöglichkeiten": "Franklin D. Roosevelt Roosevelt",
+        "Schwierigkeitsgrad": "sch",
+        "Fakt": "Franklin D. Roosevelt führte die USA während des Zweiten Weltkriegs und war der einzige Präsident, der vier Amtszeiten diente."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Präsident befahl den Abwurf der Atombomben auf Japan?",
+        "Antworten": ["Harry S. Truman", "Franklin D. Roosevelt", "Theodore Roosevelt", "Woodrow Wilson"],
+        "RichtigeAntwort": "Harry S. Truman",
+        "RichtigeAntwortMöglichkeiten": "Harry S. Truman",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Harry S. Truman befahl 1945 den Abwurf der Atombomben auf Hiroshima und Nagasaki, um den Zweiten Weltkrieg zu beenden."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Präsident startete das Apollo Raumfahrt Programm?",
+        "Antworten": ["John F. Kennedy", "Dwight D. Eisenhower", "Lyndon B. Johnson", "Richard Nixon"],
+        "RichtigeAntwort": "John F. Kennedy",
+        "RichtigeAntwortMöglichkeiten": "John F. Kennedy Kennedy",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "John F. Kennedy startete das Apollo-Programm, das letztendlich zur ersten Mondlandung führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand das Attentat auf John F. Kennedy statt?",
+        "Antworten": ["1963", "1961", "1962", "1964"],
+        "RichtigeAntwort": "1963",
+        "RichtigeAntwortMöglichkeiten": "1963",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Attentat auf John F. Kennedy fand 1963 während einer Wahlkampftour in Texas statt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie ist John F. Kennedy gestorben?",
+        "Antworten": ["Ermordung", "Schuss", "Attentat", "Mord"],
+        "RichtigeAntwort": "Ermordung",
+        "RichtigeAntwortMöglichkeiten": "getötet knarre pistole gewehr schießen Ermordung Schuss Attentat Mord Erschossen Erschießen Erschossener Tötung Ermorden Lee Harvey", 
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "John F. Kennedy wurde 1963 durch einen Schuss während einer Autokolonne in Dallas, Texas, ermordet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste schwarze Präsident der USA?",
+        "Antworten": ["Barack Obama", "Martin Luther King", "Colin Powell", "Kamala Harris"],
+        "RichtigeAntwort": "Barack Obama",
+        "RichtigeAntwortMöglichkeiten": "Barack Obama",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Barack Obama wurde 2008 zum ersten schwarzen Präsidenten der Vereinigten Staaten gewählt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Amerikanische Bürgerkrieg?",
+        "Antworten": ["1861", "1860", "1865", "1859"],
+        "RichtigeAntwort": "1861",
+        "RichtigeAntwortMöglichkeiten": "1861",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Amerikanische Bürgerkrieg begann 1861 nach der Sezession mehrerer Südstaaten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete der Amerikanische Bürgerkrieg?",
+        "Antworten": ["1865", "1863", "1861", "1867"],
+        "RichtigeAntwort": "1865",
+        "RichtigeAntwortMöglichkeiten": "1865",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Amerikanische Bürgerkrieg endete 1865 mit der Kapitulation der Konföderierten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war Präsident der Vereinigten Staaten während des Bürgerkriegs?",
+        "Antworten": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Ulysses S. Grant"],
+        "RichtigeAntwort": "Abraham Lincoln",
+        "RichtigeAntwortMöglichkeiten": "Abraham Lincoln",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Abraham Lincoln war der Präsident der Vereinigten Staaten während des Bürgerkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Seite verlor den Amerikanischen Bürgerkrieg?",
+        "Antworten": ["Konföderation", "Union", "Nordstaaten", "Sklavenstaaten"],
+        "RichtigeAntwort": "Konföderation",
+        "RichtigeAntwortMöglichkeiten": "Konföderation süden unten",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Konföderation verlor den Amerikanischen Bürgerkrieg."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie viele Staaten bildeten die Konföderation im Amerikansichen Bürgerkrieg?",
+        "Antworten": ["11", "13", "9", "15"],
+        "RichtigeAntwort": "11",
+        "RichtigeAntwortMöglichkeiten": "11 elf",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Konföderation bestand aus 11 Südstaaten, die sich von der Union abspalteten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher General führte die Union zum Sieg im Amerikansichen Bürgerkrieg?",
+        "Antworten": ["Ulysses S. Grant", "Robert E. Lee", "Thomas Jackson", "George McClellan"],
+        "RichtigeAntwort": "Ulysses S. Grant",
+        "RichtigeAntwortMöglichkeiten": "Ulysses S. Grant",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ulysses S. Grant war der führende General der Union, der die Konföderation besiegte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß der Präsident der Konföderation im Amerikanischen Bürgerkrieg?",
+        "Antworten": ["Jefferson Davis", "Robert E. Lee", "Stonewall Jackson", "Andrew Johnson"],
+        "RichtigeAntwort": "Jefferson Davis",
+        "RichtigeAntwortMöglichkeiten": "Jefferson Davis",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Jefferson Davis war der Präsident der Konföderierten Staaten von Amerika während des Bürgerkriegs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Sklaverei in der USA abgeschafft?",
+        "Antworten": ["1865", "1863", "1861", "1867"],
+        "RichtigeAntwort": "1865",
+        "RichtigeAntwortMöglichkeiten": "1865",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Sklaverei im Süden der USA wurde 1865 durch den 13. Verfassungszusatz abgeschafft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Nordstaaten im Amerikanischen Bürgerkrieg?",
+        "Antworten": ["Union", "Konföderation", "Sklavenstaaten", "Freistaaten"],
+        "RichtigeAntwort": "Union",
+        "RichtigeAntwortMöglichkeiten": "Union",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Nordstaaten wurden als Union bezeichnet, die gegen die Konföderation kämpfte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nannte man die Südstaaten im Amerikanischen Bürgerkrieg?",
+        "Antworten": ["Konföderation", "Union", "Freistaaten", "Grenzstaaten"],
+        "RichtigeAntwort": "Konföderation",
+        "RichtigeAntwortMöglichkeiten": "Konföderation",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Südstaaten bildeten die Konföderation, die sich von der Union abspaltete."
+    },
+
+
+
+
+
+    {//dekolonialosoerung
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land wurde 1957 in Afrika unabhängig?",
+        "Antworten": ["Ghana", "Kenia", "Nigeria", "Algerien"],
+        "RichtigeAntwort": "Ghana",
+        "RichtigeAntwortMöglichkeiten": "Ghana",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ghana erlangte 1957 als erstes Land in Afrika südlich der Sahara die Unabhängigkeit."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land in Nordafrika wurde 1962 nach einem Unabhängigkeitskrieg unabhängig?",
+        "Antworten": ["Algerien", "Ägypten", "Libyen", "Marokko"],
+        "RichtigeAntwort": "Algerien",
+        "RichtigeAntwortMöglichkeiten": "Algerien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Algerien wurde 1962 nach einem achtjährigen Unabhängigkeitskrieg gegen Frankreich unabhängig."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt al erstes seine Unabhängigkeit?",
+        "Antworten": ["Liberia", "Ghana", "Ägypten", "Sudan"],
+        "RichtigeAntwort": "Liberia",
+        "RichtigeAntwortMöglichkeiten": "Liberia",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Liberia wurde 1847 von ehemaligen amerikanischen Sklaven gegründet und unabhängig erklärt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt 1956 seine Unabhängigkeit von Großbritannien und Ägypten?",
+        "Antworten": ["Sudan", "Marokko", "Tunesien", "Ghana"],
+        "RichtigeAntwort": "Sudan",
+        "RichtigeAntwortMöglichkeiten": "Sudan",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Sudan wurde 1956 von Großbritannien und Ägypten unabhängig."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt 1956 seine Unabhängigkeit von Frankreich und Spanien?",
+        "Antworten": ["Marokko", "Tunesien", "Libyen", "Guinea"],
+        "RichtigeAntwort": "Marokko",
+        "RichtigeAntwortMöglichkeiten": "Marokko",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Marokko wurde 1956 von Frankreich und Spanien unabhängig."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurden 17 Staaten in Afrika unabhängig?",
+        "Antworten": ["1960", "1956", "1957", "1962"],
+        "RichtigeAntwort": "1960",
+        "RichtigeAntwortMöglichkeiten": "1960",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Jahr 1960 wird als das 'Jahr Afrikas' bezeichnet, in dem 17 afrikanische Staaten ihre Unabhängigkeit erlangten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt 1980 seine Unabhängigkeit von Großbritannien?",
+        "Antworten": ["Simbabwe", "Namibia", "Tansania", "Sambia"],
+        "RichtigeAntwort": "Simbabwe",
+        "RichtigeAntwortMöglichkeiten": "Simbabwe",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Simbabwe wurde 1980 nach einem langen Befreiungskampf von Großbritannien unabhängig."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land erhielt 1990 seine Unabhängigkeit von Südafrika?",
+        "Antworten": ["Namibia", "Simbabwe", "Lesotho", "Botswana"],
+        "RichtigeAntwort": "Namibia",
+        "RichtigeAntwortMöglichkeiten": "Namibia",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Namibia wurde 1990 von Südafrika unabhängig und ist eines der jüngsten unabhängigen Länder Afrikas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche afrikanische Kultur war für ihre beeindruckenden Steinbauten bekannt?",
+        "Antworten": ["Great Zimbabwe", "Axum", "Nok", "Songhai"],
+        "RichtigeAntwort": "Great Zimbabwe",
+        "RichtigeAntwortMöglichkeiten": "Great Zimbabwe groß-zimbabwe ",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Great Zimbabwe war für seine riesigen Steinbauten bekannt und diente als politisches und wirtschaftliches Zentrum im südlichen Afrika."
+    },
+
+
+/////////////Spanien/////////////
+
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Volk besiedelte Spanien vor den Römern?",
+        "Antworten": ["Iberer", "Kelten", "Römer", "Germanen"],
+        "RichtigeAntwort": "Iberer",
+        "RichtigeAntwortMöglichkeiten": "Iberer",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Iberer besiedelten die Halbinsel vor der römischen Eroberung und hatten eine eigenständige Kultur."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem wurde das Westgotische Königreich gegründet?",
+        "Antworten": ["418", "500", "711", "300"],
+        "RichtigeAntwort": "418",
+        "RichtigeAntwortMöglichkeiten": "418",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Westgotische Königreich wurde 418 gegründet und war ein bedeutender Nachfolger des Römischen Reiches."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Stadt war die Hauptstadt des Westgotischen Königreichs?",
+        "Antworten": ["Toledo", "Tarragona", "Sevilla", "Granada"],
+        "RichtigeAntwort": "Toledo",
+        "RichtigeAntwortMöglichkeiten": "Toledo",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Toledo war die Hauptstadt des Westgotischen Königreichs und ein wichtiges politisches Zentrum."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete das Westgotische Königreich durch die islamische Eroberung?",
+        "Antworten": ["711", "418", "800", "650"],
+        "RichtigeAntwort": "711",
+        "RichtigeAntwortMöglichkeiten": "711",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Westgotische Königreich endete 711 durch die islamische Eroberung der Iberischen Halbinsel."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die maurische Herrschaft in Spanien?",
+        "Antworten": ["1492", "1300", "1400", "1500"],
+        "RichtigeAntwort": "1492",
+        "RichtigeAntwortMöglichkeiten": "1492",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die maurische Herrschaft endete 1492 mit der Rückeroberung Granadas durch die Katholischen Könige."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem jahr begann die maurische Herrschaft auf der Iberischen Halbinsel?",
+        "Antworten": ["711", "800", "650", "500"],
+        "RichtigeAntwort": "711",
+        "RichtigeAntwortMöglichkeiten": "711",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die maurische Herrschaft begann 711 mit der Eroberung der Iberischen Halbinsel durch Tariq ibn Ziyad."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was herrschte in Spanien zwischen 700 und 1500?",
+        "Antworten": ["Maurische Herrschaft", "Römische Herrschaft", "Westgotisches Königreich", "Reconquista"],
+        "RichtigeAntwort": "Maurische Herrschaft",
+        "RichtigeAntwortMöglichkeiten": "Maurische Mauren Islamische khalifat islam ai-andalus muslimisch moslem maurischer umayyaden arabisch araber koran muslime",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Zwischen 711 und 1492 herrschten die Mauren über weite Teile Spaniens und prägten Kultur, Architektur und Wissenschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Kastilien und Aragón, das heutige spanien vereint?",
+        "Antworten": ["1492", "1469", "1516", "711"],
+        "RichtigeAntwort": "1492",
+        "RichtigeAntwortMöglichkeiten": "1492",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Spanien wurde 1492 durch die Eroberung Granadas und die Beendigung der Reconquista vereint."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Königin aus Kastilien führte zur Vereinigung Spaniens 1492?",
+        "Antworten": ["Isabella", "Maria", "Katharina", "Joan"],
+        "RichtigeAntwort": "Isabella",
+        "RichtigeAntwortMöglichkeiten": "Isabella",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Isabella von Kastilien heiratete Ferdinand von Aragon und vereinte dadurch Spanien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher König heiratete Isabella von Kastilien, was zur Vereinigung Spanien führte?",
+        "Antworten": ["Ferdinand", "Philip", "Charles", "Henry"],
+        "RichtigeAntwort": "Ferdinand",
+        "RichtigeAntwortMöglichkeiten": "Ferdinand",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ferdinand von Aragon heiratete Isabella von Kastilien und leitete die Vereinigung Spaniens ein."
+    },
+    //{
+       // "Kategorie": "Geschichte",
+        //"Frage": "Welche beiden Königreiche vereinten Spanien durch Heirat?",
+        //"Antworten": ["Kastilien und Aragon", "Granada und León", "Toledo und Barcelona", "Navarra und Valencia"],
+        //"RichtigeAntwort": "Kastilien und Aragon",
+        //"RichtigeAntwortMöglichkeiten": "Kastilien und Aragon Kastilien Aragon",
+        //"Schwierigkeitsgrad": "expert",
+        //"Fakt": "Vor der Vereinigung bestand Spanien aus den Königreichen Kastilien und Aragon, die durch die Heirat von Isabella und Ferdinand verbunden wurden."
+    //},
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Königin ermöglichte Christoph Kolumbus' Fahrt nach Amerika?",
+        "Antworten": ["Isabella", "Maria", "Katharina", "Joan"],
+        "RichtigeAntwort": "Isabella",
+        "RichtigeAntwortMöglichkeiten": "Isabella",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Königin Isabella von Kastilien finanzierte Christoph Kolumbus' Expedition, die zur Entdeckung Amerikas führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Religion wurde während der Rückeroberung Spaniens im Mittelalter verdrängt?",
+        "Antworten": ["Islam", "Judentum", "Christentum", "Hinduismus"],
+        "RichtigeAntwort": "Islam",
+        "RichtigeAntwortMöglichkeiten": "Islam muslime moslems islamisch",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Während der Reconquista wurde der Islam, der über 700 Jahre in Spanien präsent war, verdrängt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Durch welches Land wurde Spanien im 19. Jahrhundert besetzt?",
+        "Antworten": ["Frankreich", "Portugal", "Italien", "Deutschland"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanien wurde im 19. Jahrhundert von Frankreich besetzt, was zu einem Guerillakrieg führte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr beginnt das 19. Jahrhundert?",
+        "Antworten": ["1801", "1800", "1810", "1799"],
+        "RichtigeAntwort": "1801",
+        "RichtigeAntwortMöglichkeiten": "1801",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das 19. Jahrhundert beginnt im Jahr 1801, da jedes Jahrhundert mit dem ersten Jahr beginnt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Kontinent war das Hauptziel der spanischen Kolonisation?",
+        "Antworten": ["Amerika", "Afrika", "Asien", "Europa"],
+        "RichtigeAntwort": "Amerika",
+        "RichtigeAntwortMöglichkeiten": "Amerika süd-amerika",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Spanien konzentrierte seine Kolonisation vor allem auf den amerikanischen Kontinent."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Erste gescheiterte Spanische Republik ausgerufen?",
+        "Antworten": ["1873", "1848", "1900", "1868"],
+        "RichtigeAntwort": "1873",
+        "RichtigeAntwortMöglichkeiten": "1873",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Erste Spanische Republik wurde 1873 ausgerufen, hielt aber nur knapp zwei Jahre."
+    },
+    {//Bürgerkrieg
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr begann der Spanische Bürgerkrieg?",
+        "Antworten": ["1936", "1939", "1925", "1945"],
+        "RichtigeAntwort": "1936",
+        "RichtigeAntwortMöglichkeiten": "1936",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Spanische Bürgerkrieg begann 1936 zwischen Republikanern und Nationalisten."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte die Nationalisten im Spanischen Bürgerkrieg an?",
+        "Antworten": ["Franco", "Castro", "Lenin", "Hitler"],
+        "RichtigeAntwort": "Franco",
+        "RichtigeAntwortMöglichkeiten": "Franco",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Francisco Franco führte die Nationalisten im Spanischen Bürgerkrieg an und wurde später Diktator Spaniens."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche politische Ideologie vertraten die Republikaner im Spanischen Bürgerkrieg?",
+        "Antworten": ["Sozialismus", "Faschismus", "Monarchie", "Liberalismus"],
+        "RichtigeAntwort": "Sozialismus",
+        "RichtigeAntwortMöglichkeiten": "Sozialismus kommunismus Anarchismus",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Republikaner im Spanischen Bürgerkrieg vertraten sozialistische und kommunistische Ideologien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete der Spanische Bürgerkrieg?",
+        "Antworten": ["1939", "1936", "1945", "1929"],
+        "RichtigeAntwort": "1939",
+        "RichtigeAntwortMöglichkeiten": "1939",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Spanische Bürgerkrieg endete 1939 mit dem Sieg der Nationalisten unter Franco."
+    },
+    //{
+        //"Kategorie": "Geschichte",
+        //"Frage": "Welche Parteien kämpften im Spanischen Bürgerkrieg gegeneinander?",
+        //"Antworten": ["Republikaner und Nationalisten", "Kommunisten und Monarchisten", "Faschisten und Liberale", "Demokraten und Sozialisten"],
+        //"RichtigeAntwort": "Republikaner und Nationalisten",
+        //"RichtigeAntwortMöglichkeiten": "Republikaner und Nationalisten Republikaner Nationalisten",
+        //"Schwierigkeitsgrad": "extrem",
+        //"Fakt": "Im Spanischen Bürgerkrieg kämpften die Republikaner gegen die Nationalisten, die von Franco geführt wurden."
+    //}
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was ereignete sich in Spanien kurz vor dem Zweiten Weltkrieg?",
+        "Antworten": ["Bürgerkrieg", "Spanische Grippe", "Reconquista", "Spanische Inquisition"],
+        "RichtigeAntwort": "Spanischer Bürgerkrieg",
+        "RichtigeAntwortMöglichkeiten": "Spanischer Bürgerkrieg Bürgerkrieg",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Vor dem Zweiten Weltkrieg ereignete sich in Spanien der Spanische Bürgerkrieg zwischen 1936 und 1939."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer wurde nach dem Spanischen Bürgerkrieg der Anführer Spaniens?",
+        "Antworten": ["Franco", "Hitler", "Lenin", "Mussolini"],
+        "RichtigeAntwort": "Franco",
+        "RichtigeAntwortMöglichkeiten": "Francisco Franco",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Nach dem Spanischen Bürgerkrieg wurde Francisco Franco der Anführer Spaniens und etablierte eine Diktatur."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Regierungsform führte Franco nach dem Spanischen Bürgerkrieg 1939 ein?",
+        "Antworten": ["Diktatur", "Demokratie", "Monarchie", "Republik"],
+        "RichtigeAntwort": "Diktatur",
+        "RichtigeAntwortMöglichkeiten": "Diktatur",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Francisco Franco etablierte nach dem Bürgerkrieg eine Diktatur in Spanien, die bis zu seinem Tod 1975 andauerte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die Diktakur Francos in Spanien?",
+        "Antworten": ["1975", "1939", "1965", "1980"],
+        "RichtigeAntwort": "1975",
+        "RichtigeAntwortMöglichkeiten": "1975",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Francos Herrschaft endete 1975 mit seinem Tod, woraufhin Spanien zur Demokratie überging."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Regierungsform wurde nach Francos Tod 1975 in Spanien eingeführt?",
+        "Antworten": ["Demokratie", "Diktatur", "Monarchie", "Republik"],
+        "RichtigeAntwort": "Demokratie",
+        "RichtigeAntwortMöglichkeiten": "Demokratie",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Nach Francos Tod wurde Spanien zu einer Demokratie mit einer parlamentarischen Monarchie."
+    },
+
+
+    ///////////Portugal///////////
+
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie hieß die römische Provinz des heutigen Portugal?",
+        "Antworten": ["Lusitanien", "Gallien", "Hispanien", "Italia"],
+        "RichtigeAntwort": "Lusitanien",
+        "RichtigeAntwortMöglichkeiten": "Lusitanien",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Lusitanien war der Name der römischen Provinz, die das heutige Portugal umfasste."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Reich herrschte über Portugal in der Antike?",
+        "Antworten": ["Römisches Reich", "Karthagisches Reich", "Griechisches Reich", "Maurisches Reich"],
+        "RichtigeAntwort": "Römisches Reich",
+        "RichtigeAntwortMöglichkeiten": "Römisches Reich rom römisch italien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "In der Antike herrschte das Römische Reich über das Gebiet des heutigen Portugals."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste König von Portugal?",
+        "Antworten": ["Afonso", "Henrique", "Fernando", "João"],
+        "RichtigeAntwort": "Afonso",
+        "RichtigeAntwortMöglichkeiten": "Afonso",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Afonso I., auch bekannt als Afonso Henriques, war der erste König von Portugal und regierte ab 1139."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde das Königreich Portugal gegründet?",
+        "Antworten": ["1139", "1200", "1100", "1250"],
+        "RichtigeAntwort": "1139",
+        "RichtigeAntwortMöglichkeiten": "1139",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Königreich Portugal wurde 1139 gegründet, nachdem Afonso I. den Titel König annahm."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer entdeckte das Kap der Guten Hoffnung?",
+        "Antworten": ["Bartolomeu Dias", "Vasco da Gama", "Kolumbus", "Cabral"],
+        "RichtigeAntwort": "Bartolomeu Dias",
+        "RichtigeAntwortMöglichkeiten": "Bartolomeu Dias",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bartolomeu Dias entdeckte 1488 das Kap der Guten Hoffnung und bewies, dass es eine südliche Route nach Indien gibt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr verlor Portugal seine Unabhängigkeit an Spanien für 60 Jahre?",
+        "Antworten": ["1580", "1640", "1494", "1700"],
+        "RichtigeAntwort": "1580",
+        "RichtigeAntwortMöglichkeiten": "1580",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Portugal verlor 1580 seine Unabhängigkeit an Spanien und wurde für 60 Jahre in eine Personalunion eingegliedert."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man die 60-jährige Vereinigung von Portugal und Spanien während der Renaissance?",
+        "Antworten": ["Iberische Union", "Tordesillas Union", "Lusitanische Union", "Spanische Föderation"],
+        "RichtigeAntwort": "Iberische Union",
+        "RichtigeAntwortMöglichkeiten": "Iberische Union",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Iberische Union bezeichnet die Personalunion zwischen Portugal und Spanien von 1580 bis 1640."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Portugal unabhängig von Spanien?",
+        "Antworten": ["1640", "1580", "1700", "1494"],
+        "RichtigeAntwort": "1640",
+        "RichtigeAntwortMöglichkeiten": "1640",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Portugal wurde 1640 nach dem Restaurationskrieg unabhängig von Spanien."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Krieg wurde Portugal unabhängig?",
+        "Antworten": ["Restaurationskrieg", "Hundertjähriger Krieg", "Napoleonische Kriege", "Spanischer Erbfolgekrieg"],
+        "RichtigeAntwort": "Restaurationskrieg",
+        "RichtigeAntwortMöglichkeiten": "Restaurationskrieg Restaurations Restauration Restaurations-krieg",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Portugal erlangte seine Unabhängigkeit durch den Restaurationskrieg, der 1640 begann."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Brasilien unabhängig von Portugal?",
+        "Antworten": ["1822", "1800", "1830", "1850"],
+        "RichtigeAntwort": "1822",
+        "RichtigeAntwortMöglichkeiten": "1822",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Brasilien wurde 1822 unabhängig von Portugal und erklärte sich als Kaiserreich."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Erste Portugiesische Republik ausgerufen?",
+        "Antworten": ["1910", "1926", "1900", "1930"],
+        "RichtigeAntwort": "1910",
+        "RichtigeAntwortMöglichkeiten": "1910",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Erste Portugiesische Republik wurde 1910 nach der Abschaffung der Monarchie ausgerufen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Ereignis führte die Demokratie in Portugal ein?",
+        "Antworten": ["Nelkenrevolution", "Französische Revolution", "Industrielle Revolution", "Russische Revolution"],
+        "RichtigeAntwort": "Nelkenrevolution",
+        "RichtigeAntwortMöglichkeiten": "Nelkenrevolution nelken",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Nelkenrevolution von 1974 führte zur Einführung der Demokratie in Portugal."
+    },
+
+
+//////////China//////////
+
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Material wurde für erste chinesische Schriftzeichen verwendet?",
+        "Antworten": ["Knochen", "Ton", "Papyrus", "Papier"],
+        "RichtigeAntwort": "Knochen",
+        "RichtigeAntwortMöglichkeiten": "Knochen Orakelknochen Schildkrötenpanzern schildkröten",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Frühe chinesische Schriftzeichen wurden auf Knochen und Schildkrötenpanzern eingraviert."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie war die erste Kaiserdynastie in China?",
+        "Antworten": ["Qin", "Han", "Zhou", "Tang"],
+        "RichtigeAntwort": "Qin",
+        "RichtigeAntwortMöglichkeiten": "Qin",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Qin-Dynastie war die erste Kaiserdynastie in China und vereinte das Land politisch und kulturell."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie baute den größten Teil der heutigen Großen Mauer von China?",
+        "Antworten": ["Qin-Dynastie", "Han-Dynastie", "Tang-Dynastie", "Ming-Dynastie"],
+        "RichtigeAntwort": "Ming-Dynastie",
+        "RichtigeAntwortMöglichkeiten": "Ming-Dynastie ming",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Ming-Dynastie exestierte von 1368 bis 1644"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie ist für die Erfindung des Papiers bekannt?",
+        "Antworten": ["Qin-Dynastie", "Han-Dynastie", "Tang-Dynastie", "Song-Dynastie"],
+        "RichtigeAntwort": "Han-Dynastie",
+        "RichtigeAntwortMöglichkeiten": "Han-Dynastie han",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Han-Dynastie exestierte von 206 v. Chr. bis 220 n. Chr. im heutigen China"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie begann mit dem Bau der Chinesischen Mauer?",
+        "Antworten": ["Qin-Dynastie", "Han-Dynastie", "Tang-Dynastie", "Song-Dynastie"],
+        "RichtigeAntwort": "Qin-Dynastie",
+        "RichtigeAntwortMöglichkeiten": "Qin-Dynastie qin",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Bau der Chinesischen Mauer begann unter der Qin-Dynastie, um das Reich vor nomadischen Invasoren zu schützen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Material wurde überwiegend beim Bau der Chinesischen Mauer verwendet?",
+        "Antworten": ["Holz", "Stein", "Sand", "Lehm"],
+        "RichtigeAntwort": "Stein",
+        "RichtigeAntwortMöglichkeiten": "Stein",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Chinesische Mauer besteht aus mehreren unterschiedlich langen Mauern die nicht verbunden sind und sich durch ganz China verteilen"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Fluss ist der Urprung der chinesischen Zivilisation?",
+        "Antworten": ["Gelber Fluss", "Yangtze", "Mekong", "Nil"],
+        "RichtigeAntwort": "Gelber Fluss",
+        "RichtigeAntwortMöglichkeiten": "Gelber Fluss Huang huang-he",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Gelbe Fluss wird auch Huang He genannt"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Kaiser in China?",
+        "Antworten": ["Qin Shi Huang", "Han Wudi", "Tang Taizong", "Zhou Gong"],
+        "RichtigeAntwort": "Qin Shi Huang",
+        "RichtigeAntwortMöglichkeiten": "Qin Shi Huang Qin Shihuangdi Ying Zheng",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Qin Shi Huang war der erste Kaiser Chinas und begründete das Kaiserreich unter der Qin-Dynastie."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was wurde als Schutz für das Grab von Qin Shi Huang, dem ersten Kaiser von China, erbaut?",
+        "Antworten": ["Terrakotta-Armee", "Kaiserliche Garde", "Samurai-Armee", "Bronzelegion"],
+        "RichtigeAntwort": "Terrakotta-Armee",
+        "RichtigeAntwortMöglichkeiten": "Terrakotta-Armee Terrakotta armee",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Terrakotta-Armee wurde erschaffen, um Qin Shi Huang im Jenseits zu schützen."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie folgte auf die Qin-Dynastie?",
+        "Antworten": ["Han", "Zhou", "Tang", "Song"],
+        "RichtigeAntwort": "Han",
+        "RichtigeAntwortMöglichkeiten": "Han",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Han-Dynastie folgte auf die Qin-Dynastie und führte viele ihrer Reformen weiter."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Qin-Dynastie gegründet?",
+        "Antworten": ["221 v. Chr.", "200 v. Chr.", "150 v. Chr.", "100 v. Chr."],
+        "RichtigeAntwort": "221 v. Chr.",
+        "RichtigeAntwortMöglichkeiten": "221",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Qin-Dynastie wurde 221 v. Chr. gegründet und war die erste Kaiserdynastie Chinas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Han-Dynastie gegründet?",
+        "Antworten": ["202 v. Chr.", "206 v. Chr.", "54 v. Chr.", "27 v. Chr."],
+        "RichtigeAntwort": "202 v. Chr.",
+        "RichtigeAntwortMöglichkeiten": "202",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Han-Dynastie wurde 202 v. Chr. gegründet und folgte auf die Qin-Dynastie."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die Han-Dynastie?",
+        "Antworten": ["220 n. Chr.", "200 n. Chr.", "150 n. Chr.", "180 n. Chr."],
+        "RichtigeAntwort": "220 n. Chr.",
+        "RichtigeAntwortMöglichkeiten": "220",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Han-Dynastie endete 220 n. Chr. und hinterließ ein geteiltes China."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste Kaiser der Han-Dynastie?",
+        "Antworten": ["Liu Bang", "Qin Shi Huang", "Han Wudi", "Tang Taizong"],
+        "RichtigeAntwort": "Liu Bang",
+        "RichtigeAntwortMöglichkeiten": "Liu Bang",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Liu Bang war der erste Kaiser der Han-Dynastie und begründete ihre lange Herrschaft."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde die Qing-Dynastie in China gegründet?",
+        "Antworten": ["1644", "1500", "1700", "1800"],
+        "RichtigeAntwort": "1644",
+        "RichtigeAntwortMöglichkeiten": "1644",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Qing-Dynastie wurde 1644 gegründet und war die letzte Kaiserdynastie Chinas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie war die letzte Kaiserdynastie Chinas?",
+        "Antworten": ["Qing", "Ming", "Tang", "Han"],
+        "RichtigeAntwort": "Qing",
+        "RichtigeAntwortMöglichkeiten": "Qing qing-dynastie",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Qing-Dynastie war die letzte Kaiserdynastie Chinas und regierte bis 1912."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die Qing-Dynastie?",
+        "Antworten": ["1912", "1900", "1800", "1950"],
+        "RichtigeAntwort": "1912",
+        "RichtigeAntwortMöglichkeiten": "1912",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Qing-Dynastie endete 1912 mit der Ausrufung der Republik China."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Konflikt forderte die zweitmeisten Opfer hinter dem zweiten Welkrieg?",
+        "Antworten": ["Taiping-Rebellion", "Boxeraufstand", "Opiumkriege", "Gelbe Turban-Rebellion"],
+        "RichtigeAntwort": "Taiping-Rebellion",
+        "RichtigeAntwortMöglichkeiten": "Taiping-Rebellion taiping taiping-aufstand",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Taiping-Rebellion wurde von christlichen Ideologien beeinflusst und forderte Millionen Leben."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welcher Konflikt in China drehte sich um den Handel mit einer Droge?",
+        "Antworten": ["Opiumkriege", "Boxeraufstand", "Taiping-Rebellion", "Gelbe Turban-Rebellion"],
+        "RichtigeAntwort": "Opiumkriege",
+        "RichtigeAntwortMöglichkeiten": "Opiumkriege opium opium-kriege opiumhandel",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Opiumkriege waren Konflikte zwischen China und westlichen Mächten über den Handel mit Opium."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Land war hauptsächlich für die Opiumkriege gegen china verantwortlich?",
+        "Antworten": ["Großbritannien", "Frankreich", "Portugal", "Spanien"],
+        "RichtigeAntwort": "Großbritannien",
+        "RichtigeAntwortMöglichkeiten": "Großbritannien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Großbritannien war maßgeblich für den Opiumhandel mit China verantwortlich und führte die Kriege an."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Droge führte zu Kriegen in China?",
+        "Antworten": ["Opium", "Kokain", "Heroin", "Tabak"],
+        "RichtigeAntwort": "Opium",
+        "RichtigeAntwortMöglichkeiten": "Opium",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Opium war die Droge, deren Handel die Opiumkriege zwischen China und westlichen Mächten auslöste."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was war China kurz vor der heutigen Volksrepublik China?",
+        "Antworten": ["Republik China", "Kaiserreich", "Diktatur", "Kolonie"],
+        "RichtigeAntwort": "Republik China",
+        "RichtigeAntwortMöglichkeiten": "Republik roc",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Vor der Gründung der Volksrepublik China 1949 war China die Republik China."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Dynastie regierte China vor der Republik und Volksrepublik?",
+        "Antworten": ["Qing-Dynastie", "Ming-Dynastie", "Han-Dynastie", "Tang-Dynastie"],
+        "RichtigeAntwort": "Qing-Dynastie",
+        "RichtigeAntwortMöglichkeiten": "Qing-Dynastie qing",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Vor der Republik und der Volksrepublik wurde China von der Qing-Dynastie regiert."
+    },
+
+
+//////////Korea//////////
+
+
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Königreich gilt als das älteste in der koreanischen Geschichte?",
+        "Antworten": ["Go-Joseon", "Silla", "Goguryeo", "Baekje"],
+        "RichtigeAntwort": "Go-Joseon",
+        "RichtigeAntwortMöglichkeiten": "Go-Joseon joseon GoJoseon",
+        "Schwierigkeitsgrad": "expert ",
+        "Fakt": "Go-Joseon gilt als das älteste Königreich in der koreanischen Geschichte und wurde der Legende nach von Dangun gegründet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Aus wie vielen Königreichen bestand Korea anfangs im Mittelalter?",
+        "Antworten": ["Drei", "Zwei", "Fünf", "sieben"],
+        "RichtigeAntwort": "Drei",
+        "RichtigeAntwortMöglichkeiten": "Drei 3",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Korea bestand anfangs im Mittelalter aus drei Königreichen: Goguryeo, Baekje und Silla."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was passierte mit Korea im 7. Jahrhundert nach Christus?",
+        "Antworten": ["Vereinigung", "Gründung von Goryeo", "Einführung des Buddhismus", "Japanische Invasion"],
+        "RichtigeAntwort": "Vereinigung ",
+        "RichtigeAntwortMöglichkeiten": "Vereinigung vereinen zusammenschluss verbindung einheit einigung zusammenschließen zusammen verschmelzung wiedervereinigung union",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Im 7. Jahrhundert nach Christus wurden die Drei Königreiche Koreas unter Silla vereint."
+    },
+    //nenne eins der drei königreiche koreas
+    
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Von welchem Land wurde Korea Anfang des 20. Jahrhunderts beherrscht?",
+        "Antworten": ["Japan", "China", "Russland", "USA"],
+        "RichtigeAntwort": "Japan",
+        "RichtigeAntwortMöglichkeiten": "Japan",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Japan beherrschte Korea Anfang des 20. Jahrhunderts und annektierte das Land 1910 offiziell."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In wie viele Gebiete wurde Korea nach dem Zweiten Weltkrieg geteilt?",
+        "Antworten": ["Zwei", "Drei", "Vier", "Fünf"],
+        "RichtigeAntwort": "Zwei",
+        "RichtigeAntwortMöglichkeiten": "2 Zwei",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Nach dem Zweiten Weltkrieg wurde Korea in zwei Gebiete geteilt: Nordkorea und Südkorea."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wie nennt man die Zone, die Nord- und Südkorea trennt?",
+        "Antworten": ["Demilitarisierte Zone", "Pufferzone", "Grenzzone", "Neutralzone"],
+        "RichtigeAntwort": "Demilitarisierte Zone",
+        "RichtigeAntwortMöglichkeiten": "Demilitarisierte Demilitarized",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Demilitarisierte Zone (DMZ) trennt Nord- und Südkorea und ist eine der am stärksten bewachten Grenzen der Welt."
+    },
+
+
+////////////Japan////////////
+    
+    
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer gilt laut Mythos als Gründer Japans?",
+        "Antworten": ["Jimmu", "Amaterasu", "Shotoku", "Minamoto"],
+        "RichtigeAntwort": "Jimmu",
+        "RichtigeAntwortMöglichkeiten": "Jimmu",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Laut Mythos gilt Kaiser Jimmu als erster Kaiser Japans und Begründer des Kaiserreichs."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer ist laut Mythos die Sonnengöttin Japans?",
+        "Antworten": ["Amaterasu", "Susanoo", "Tsukuyomi", "Izanami"],
+        "RichtigeAntwort": "Amaterasu",
+        "RichtigeAntwortMöglichkeiten": "Amaterasu",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ihre Figur inspirierte den Angriff Amaterasu in Naruto mit mächtigen Flammenkräften"
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr fand die lezte große Ritterschlacht von Tannenberg statt?",
+        "Antworten": ["1410", "1914", "1916", "1300"],
+        "RichtigeAntwort": "1410",
+        "RichtigeAntwortMöglichkeiten": "1410",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlacht von Tannenberg fand 1410 zwischen dem Deutschen Orden und einer vereinigten polnisch-litauischen Armee statt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Schlacht gilt als die letzte große Ritterschlacht des Mittelalters?",
+        "Antworten": ["Schlacht von Tannenberg", "Schlacht bei Hastings", "Schlacht von Agincourt", "Schlacht von Grunwald"],
+        "RichtigeAntwort": "Schlacht von Tannenberg",
+        "RichtigeAntwortMöglichkeiten": "Tannenberg Tannenberger tannen berg berger tannenschlacht tannenberger-schlacht",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Schlacht von Tannenberg 1410 gilt als die letzte große Ritterschlacht des Mittelalters, bei der sich Ritter in offener Feldschlacht kämpften."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr endete die Herrschaft der Samurai in Japan?",
+        "Antworten": ["1868", "1720", "1640", "1790"],
+        "RichtigeAntwort": "1868",
+        "RichtigeAntwortMöglichkeiten": "1868",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Herrschaft der Samurai endete 1868 mit der Meiji-Restauration und der Modernisierung Japans."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Was herrschte in Japan vor dem Kaiserreich?",
+        "Antworten": ["Shogunat", "Republik", "Kolonie", "Kommunismus"],
+        "RichtigeAntwort": "Shogunat",
+        "RichtigeAntwortMöglichkeiten": "Shogunat samurai krieger militär soldaten Feudalsystem feudal Bakufu Shogun Tokugawa millitärisch Tokugawa-Shōgunat Militärregierung ",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Vor dem Kaiserreich wurde Japan vom Shogunat regiert, einer militärischen Führung unter den Samurai."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Reform beendete die Militärherrschaft in Japan?",
+        "Antworten": ["Meiji-Restauration", "Tokugawa-Reform", "Edo-Reform", "Kamakura-Reform"],
+        "RichtigeAntwort": "Meiji-Restauration",
+        "RichtigeAntwortMöglichkeiten": "Meiji-Restauration meiji meiji-reform",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Meiji-Restauration beendete die Militärherrschaft in Japan und leitete eine Modernisierungsphase ein."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Korea von Japan annektiert?",
+        "Antworten": ["1910", "1900", "1920", "1890"],
+        "RichtigeAntwort": "1910",
+        "RichtigeAntwortMöglichkeiten": "1910",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Korea wurde 1910 von Japan offiziell annektiert und blieb bis 1945 unter japanischer Kontrolle."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Auf wessen Seite stand Japan im Zweiten Weltkrieg?",
+        "Antworten": ["Deutschland", "Alliierte", "Neutral", "Ostasienpakt"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Achsenmächte deutschland italien hitler",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Japan kämpfte im Zweiten Weltkrieg an der Seite der Achsenmächte, zusammen mit Deutschland und Italien." 
+    },
+    {//Polen
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Herrscherfamilie gilt als Gründer Polens?",
+        "Antworten": ["Piasten", "Habsburger", "Bourbonen", "Wettiner"],
+        "RichtigeAntwort": "Piasten",
+        "RichtigeAntwortMöglichkeiten": "Piasten",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Piasten waren das erste Herrschergeschlecht Polens und legten den Grundstein für das polnische Königreich."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer war der erste König von Polen?",
+        "Antworten": ["Bolesław I", "Mieszko I", "Władysław I", "Kazimierz III"],
+        "RichtigeAntwort": "Bolesław I",
+        "RichtigeAntwortMöglichkeiten": "Bolesław I",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bolesław I, auch bekannt als Bolesław der Tapfere, wurde 1025 zum ersten König von Polen gekrönt."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Wer führte Polen im Mittelalter zusammen?",
+        "Antworten": ["Mieszko I", "Bolesław I", "Władysław I", "Kazimierz III"],
+        "RichtigeAntwort": "Mieszko I",
+        "RichtigeAntwortMöglichkeiten": "Mieszko",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mieszko I war der erste Herrscher, der Polen im Mittelalter vereinte und die Grundlage für das spätere Königreich legte."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Jahr wurde Polen-Litauen gegründet?",
+        "Antworten": ["1569", "1500", "1600", "1400"],
+        "RichtigeAntwort": "1569",
+        "RichtigeAntwortMöglichkeiten": "1569",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Polen-Litauen wurde 1569 durch die Union von Lublin gegründet und war eine der größten politischen Einheiten Europas."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welches Imperium besiegte das Ostgotische Reich?",
+        "Antworten": ["Byzantinisches Reich", "Frankenreich", "Langobardenreich", "Sassanidenreich"],
+        "RichtigeAntwort": "Byzantinisches Reich",
+        "RichtigeAntwortMöglichkeiten": "Byzantinisches Reich",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Ostgotische Reich wurde im 6. Jahrhundert vom Byzantinischen Reich unter Justinian I. erobert."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Währung war im antiken Griechenland gebräuchlich?",
+        "Antworten": ["Drachme", "Denar", "Shekel", "Sesterz"],
+        "RichtigeAntwort": "Drachme",
+        "RichtigeAntwortMöglichkeiten": "Drachme",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Drachme war eine der bekanntesten Währungen im antiken Griechenland und wurde im gesamten Mittelmeerraum verwendet."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "In welchem Gebiet war der Thaler eine wichtige Währung?",
+        "Antworten": ["Mitteleuropa", "Byzantinisches Reich", "Römisches Reich", "Florenz"],
+        "RichtigeAntwort": "Mitteleuropa",
+        "RichtigeAntwortMöglichkeiten": "Mitteleuropa heiliges römisches heiliges-römisches heiliges-römisches-reich deutschland deutsches deutsch europa",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Der Thaler wurde in Mitteleuropa geprägt und war eine weit verbreitete Handelsmünze."
+    },
+    {
+        "Kategorie": "Geschichte",
+        "Frage": "Welche Währung war in Frankreich vor der Revolution gebräuchlich?",
+        "Antworten": ["Livre", "Thaler", "Groschen", "Florin"],
+        "RichtigeAntwort": "Livre",
+        "RichtigeAntwortMöglichkeiten": "Livre",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Livre war die wichtigste Währung in Frankreich vor der Französischen Revolution und wurde durch den Franc ersetzt."
     }
+
+
     
-    
-    
-    
-    
-    
-    
-    
-    
+
+
     
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ];

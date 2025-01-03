@@ -2,21 +2,12 @@ const musik = [
 
         { // Älteste Musik
             "Kategorie": "Musik",
-            "Frage": "Welches Instrument wurde vorallendingen in der Steinzeit verwendet?",
+            "Frage": "Welches Instrument wurde in der Steinzeit vorallendingen verwendet?",
             "Antworten": ["Flöten", "Schlagzeug", "Trompete", "Eine Art Geige"],
             "RichtigeAntwort": "Flöten",
-            "RichtigeAntwortMöglichkeiten": "Flöten Knochenflöte Trommel Rassel",
+            "RichtigeAntwortMöglichkeiten": "Flöten Knochenflöte Trommel",
             "Schwierigkeitsgrad": "leicht",
             "Fakt": "Abgesehen von der Knochenflöte wurden auch schon Trommeln und Rasseln verwendet"
-        },
-        { // Älteste Musik
-            "Kategorie": "Musik",
-            "Frage": "Wofür wurde Musik in der Steinzeit verwendet?",
-            "Antworten": ["Rituale", "Jagd", "Handwerk", "Unterricht"],
-            "RichtigeAntwort": "Rituale",
-            "RichtigeAntwortMöglichkeiten": "Rituale",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Musik hatte in der Steinzeit wahrscheinlich eine wichtige Rolle in religiösen oder sozialen Zeremonien"
         },
         { // Älteste Musik
             "Kategorie": "Musik",
@@ -29,57 +20,12 @@ const musik = [
         },
         { // Älteste Musik
             "Kategorie": "Musik",
-            "Frage": "Welche Art von Musik war in der Steinzeit am wahrscheinlichsten?",
-            "Antworten": ["Vokalmusik", "Oper", "Sinfonie", "Jazz"],
-            "RichtigeAntwort": "Vokalmusik",
-            "RichtigeAntwortMöglichkeiten": "Vokalmusik",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Vokalmusik, also Musik mit der Stimme, war vermutlich eine der ersten Formen von Musik"
-        },
-        { // Älteste Musik
-            "Kategorie": "Musik",
-            "Frage": "Welche Funktion hatten Musikinstrumente in der Steinzeit oft?",
-            "Antworten": ["Kommunikation", "Werkzeug", "Spielzeug", "Schmuck"],
-            "RichtigeAntwort": "Kommunikation",
-            "RichtigeAntwortMöglichkeiten": "Kommunikation",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Musikinstrumente könnten in der Steinzeit zur Kommunikation und für Rituale verwendet worden sein"
-        },
-        { // Älteste Musik
-            "Kategorie": "Musik",
-            "Frage": "Welche Art von Instrument ist eine Knochenflöte?",
-            "Antworten": ["Blasinstrument", "Saiteninstrument", "Schlaginstrument", "Tasteninstrument"],
-            "RichtigeAntwort": "Blasinstrument",
-            "RichtigeAntwortMöglichkeiten": "Blasinstrument",
-            "Schwierigkeitsgrad": "mittel",
-            "Fakt": "Die Knochenflöte ist eines der ältesten bekannten Blasinstrumente"
-        },
-        { // Älteste Musik
-            "Kategorie": "Musik",
-            "Frage": "Was war wahrscheinlich das erste Musikinstrument?",
+            "Frage": "Was war das erste Musikinstrument?",
             "Antworten": ["Flöte", "Harfe", "Laute", "Zither"],
             "RichtigeAntwort": "Flöte",
-            "RichtigeAntwortMöglichkeiten": "Flöte Knochenflöte Trommel Rassel",
+            "RichtigeAntwortMöglichkeiten": "Flöte Knochenflöte Trommel",
             "Schwierigkeitsgrad": "mittel",
             "Fakt": "Trommeln aus einfachen Materialien wie Holz und Tierhaut sind wahrscheinlich eines der ältesten Instrumente"
-        },
-        { // Älteste Musik
-            "Kategorie": "Musik",
-            "Frage": "Welche Rolle spielte Musik in der Steinzeit wahrscheinlich in Gemeinschaften?",
-            "Antworten": ["Soziale Bindung", "Handel", "Bildung", "Arbeit"],
-            "RichtigeAntwort": "Soziale Bindung",
-            "RichtigeAntwortMöglichkeiten": "Soziale Bindung Unterhaltung",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Musik könnte in der Steinzeit eine wichtige Rolle dabei gespielt haben, Gemeinschaften zu verbinden"
-        },
-        { // Älteste Musik
-            "Kategorie": "Musik",
-            "Frage": "Welche Arten von Schlaginstrumenten wurden in der Steinzeit vermutlich benutzt?",
-            "Antworten": ["Trommeln", "Becken", "Xylophon", "Gong"],
-            "RichtigeAntwort": "Trommeln",
-            "RichtigeAntwortMöglichkeiten": "Trommeln",
-            "Schwierigkeitsgrad": "leicht",
-            "Fakt": "Schlaginstrumente wie Trommeln waren in der Steinzeit weit verbreitet"
         },
         { // Älteste Musik
             "Kategorie": "Musik",
@@ -99,7 +45,7 @@ const musik = [
         "Antworten": ["Harfe", "Gitarre", "Violine", "Klavier"],
         "RichtigeAntwort": "Harfe",
         "RichtigeAntwortMöglichkeiten": "Harfe",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Harfe war eines der ältesten und beliebtesten Musikinstrumente in Mesopotamien und Ägypten"
     },
     { // Mesopotamien und Ägypten
@@ -108,7 +54,7 @@ const musik = [
         "Antworten": ["Leier", "Trommel", "Flöte", "Trompete"],
         "RichtigeAntwort": "Leier",
         "RichtigeAntwortMöglichkeiten": "Leier",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Leier war ein häufig verwendetes Musikinstrument in ägyptischen Tempeln und Zeremonien"
     },
     { // Mesopotamien und Ägypten
@@ -117,26 +63,8 @@ const musik = [
         "Antworten": ["Mesopotamien", "Ägypten", "Griechenland", "Rom"],
         "RichtigeAntwort": "Mesopotamien",
         "RichtigeAntwortMöglichkeiten": "Mesopotamien",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die erste bekannte schriftliche Musiknotation wurde in Mesopotamien entdeckt"
-    },
-    { // Mesopotamien und Ägypten
-        "Kategorie": "Musik",
-        "Frage": "Welches Material wurde oft zur Herstellung von Harfen in Ägypten verwendet?",
-        "Antworten": ["Holz", "Metall", "Stein", "Ton"],
-        "RichtigeAntwort": "Holz",
-        "RichtigeAntwortMöglichkeiten": "Holz",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Harfen in Ägypten wurden oft aus Holz gefertigt und waren reich verziert"
-    },
-    { // Mesopotamien und Ägypten
-        "Kategorie": "Musik",
-        "Frage": "Welches Instrument war charakteristisch für die Musik in Mesopotamien?",
-        "Antworten": ["Leier", "Klavier", "Trompete", "Geige"],
-        "RichtigeAntwort": "Leier",
-        "RichtigeAntwortMöglichkeiten": "Leier",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Die Leier war ein charakteristisches Musikinstrument in der Musik Mesopotamiens"
     },
     { // Mesopotamien und Ägypten
         "Kategorie": "Musik",
@@ -146,24 +74,6 @@ const musik = [
         "RichtigeAntwortMöglichkeiten": "Keilschrift-Notation",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die erste Form der schriftlichen Musiknotation stammt aus Mesopotamien und wurde in Keilschrift geschrieben"
-    },
-    { // Mesopotamien und Ägypten
-        "Kategorie": "Musik",
-        "Frage": "Für welche Zwecke wurde Musik in Ägypten häufig verwendet?",
-        "Antworten": ["Religiöse Zeremonien", "Sportveranstaltungen", "Krieg", "Handel"],
-        "RichtigeAntwort": "Religiöse Zeremonien",
-        "RichtigeAntwortMöglichkeiten": "Religiöse Zeremonien Beten",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Musik spielte eine zentrale Rolle in religiösen Zeremonien im alten Ägypten"
-    },
-    { // Mesopotamien und Ägypten
-        "Kategorie": "Musik",
-        "Frage": "Welche Rolle spielte die Leier in der mesopotamischen Musik?",
-        "Antworten": ["Begleitung von Gesang", "Kriegssignal", "Handwerksmusik", "Gerichtsmusik"],
-        "RichtigeAntwort": "Begleitung von Gesang",
-        "RichtigeAntwortMöglichkeiten": "Begleitung Hintergrundmusik Gesang",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Leier wurde häufig zur Begleitung von Gesang in der mesopotamischen Musik verwendet"
     },
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -175,35 +85,8 @@ const musik = [
         "Antworten": ["Lyra", "Harfe", "Klavier", "Trompete"],
         "RichtigeAntwort": "Lyra",
         "RichtigeAntwortMöglichkeiten": "Lyra",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Die Lyra ist ein Musikinstrument, das im alten Griechenland erfunden wurde"
-    },
-    { // Altes Griechenland
-        "Kategorie": "Musik",
-        "Frage": "Welches musikalische Konzept stammt aus dem alten Griechenland?",
-        "Antworten": ["Skalenlehre", "Harmonielehre", "Sonatenform", "Jazzimprovisation"],
-        "RichtigeAntwort": "Skalenlehre",
-        "RichtigeAntwortMöglichkeiten": "Skalenlehre",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Skalenlehre, die verschiedene Tonleitern beschreibt, wurde im alten Griechenland entwickelt"
-    },
-    { // Altes Griechenland
-        "Kategorie": "Musik",
-        "Frage": "Wer war ein bekannter Musiktheoretiker im alten Griechenland?",
-        "Antworten": ["Pythagoras", "Beethoven", "Mozart", "Bach"],
-        "RichtigeAntwort": "Pythagoras",
-        "RichtigeAntwortMöglichkeiten": "Pythagoras",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Pythagoras ist bekannt für seine theoretischen Arbeiten zur Musik im alten Griechenland"
-    },
-    { // Altes Griechenland
-        "Kategorie": "Musik",
-        "Frage": "Welche Rolle spielte die Musik im alten Griechenland?",
-        "Antworten": ["Religiöse Zeremonien", "Sport", "Krieg", "Handel"],
-        "RichtigeAntwort": "Religiöse Zeremonien",
-        "RichtigeAntwortMöglichkeiten": "Religiöse Zeremonien Religion Beten",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Musik spielte eine wichtige Rolle in religiösen Zeremonien und Feierlichkeiten im alten Griechenland"
+        "Fakt": "Die Lyra ist ein Musikinstrument, das im alten Griechenland erfunden wurde"
     },
     { // Altes Griechenland
         "Kategorie": "Musik",
@@ -220,7 +103,7 @@ const musik = [
         "Antworten": ["Harfe", "Geige", "Klavier", "Trompete"],
         "RichtigeAntwort": "Harfe",
         "RichtigeAntwortMöglichkeiten": "Harfe",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Lyra ist ein Saiteninstrument, das der Harfe ähnelt"
     },
     { // Altes Griechenland
@@ -232,24 +115,6 @@ const musik = [
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Im alten Griechenland wurde Musik oft mit Buchstaben notiert, um verschiedene Tonhöhen darzustellen"
     },
-    { // Altes Griechenland
-        "Kategorie": "Musik",
-        "Frage": "Welche Funktion hatte die Lyra in der griechischen Musik?",
-        "Antworten": ["Begleitung von Gesang", "Kriegssignal", "Handwerksmusik", "Gerichtsmusik"],
-        "RichtigeAntwort": "Begleitung von Gesang",
-        "RichtigeAntwortMöglichkeiten": "Begleitung von Gesang",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Lyra wurde häufig zur Begleitung von Gesang in der griechischen Musik verwendet"
-    },
-    { // Altes Griechenland
-        "Kategorie": "Musik",
-        "Frage": "Welche Art von Musik wurde im alten Griechenland für religiöse Zeremonien verwendet?",
-        "Antworten": ["Hymnen", "Sinfonien", "Opern", "Jazz"],
-        "RichtigeAntwort": "Hymnen",
-        "RichtigeAntwortMöglichkeiten": "Hymnen",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Hymnen wurden oft für religiöse Zeremonien im alten Griechenland verwendet"
-    },
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -259,71 +124,17 @@ const musik = [
         "Antworten": ["Orgel", "Geige", "Klavier", "Saxophon"],
         "RichtigeAntwort": "Orgel",
         "RichtigeAntwortMöglichkeiten": "Orgel",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Orgel wurde im Römischen Reich eingeführt und war ein bedeutendes Instrument"
-    },
-    { // Römisches Reich
-        "Kategorie": "Musik",
-        "Frage": "Welche Musik wurde im Römischen Reich stark von den Griechen beeinflusst?",
-        "Antworten": ["Religiöse Musik", "Kriegsmusik", "Handwerksmusik", "Hintergrundmusik"],
-        "RichtigeAntwort": "Religiöse Musik",
-        "RichtigeAntwortMöglichkeiten": "Religiöse Musik Religion Beten",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die römische Musik, insbesondere die religiöse Musik, wurde stark von den Griechen beeinflusst"
     },
     { // Römisches Reich
         "Kategorie": "Musik",
         "Frage": "Welcher Art von Instrumenten wurden im Römischen Reich eingeführt?",
         "Antworten": ["Blasinstrumente", "Saiteninstrumente", "Schlaginstrumente", "Tasteninstrumente"],
         "RichtigeAntwort": "Blasinstrumente",
-        "RichtigeAntwortMöglichkeiten": "Blasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Blasinstrumente Trompeten Flöten Posaunen Tuba",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Im Römischen Reich wurden verschiedene Blasinstrumente wie Trompeten und Flöten eingeführt"
-    },
-    { // Römisches Reich
-        "Kategorie": "Musik",
-        "Frage": "Welche Rolle spielte die Orgel im Römischen Reich?",
-        "Antworten": ["Religiöse Zeremonien", "Kriegssignale", "Handwerksmusik", "Gerichtsmusik"],
-        "RichtigeAntwort": "Religiöse Zeremonien",
-        "RichtigeAntwortMöglichkeiten": "Religiöse Zeremonien Kirche Kirchenmusik",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Orgel spielte eine wichtige Rolle in religiösen Zeremonien im Römischen Reich"
-    },
-    { // Römisches Reich
-        "Kategorie": "Musik",
-        "Frage": "Welche Instrumente wurden häufig in römischen Theatern verwendet?",
-        "Antworten": ["Trompeten", "Gitarren", "Fagotte", "Celli"],
-        "RichtigeAntwort": "Trompeten",
-        "RichtigeAntwortMöglichkeiten": "Trompeten",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Trompeten und andere Blasinstrumente wurden häufig in römischen Theatern verwendet"
-    },
-    { // Römisches Reich
-        "Kategorie": "Musik",
-        "Frage": "Welche kulturelle Einflüsse prägten die Musik des Römischen Reiches?",
-        "Antworten": ["Griechische", "Ägyptische", "Chinesische", "Indische"],
-        "RichtigeAntwort": "Griechische",
-        "RichtigeAntwortMöglichkeiten": "Griechische",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Musik des Römischen Reiches wurde stark von der griechischen Kultur beeinflusst"
-    },
-    { // Römisches Reich
-        "Kategorie": "Musik",
-        "Frage": "Welches Musikinstrument war im römischen Militär verbreitet?",
-        "Antworten": ["Tuba", "Geige", "Klavier", "Harfe"],
-        "RichtigeAntwort": "Tuba",
-        "RichtigeAntwortMöglichkeiten": "Tuba",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Tuba war ein Blasinstrument, das im römischen Militär verwendet wurde"
-    },
-    { // Römisches Reich
-        "Kategorie": "Musik",
-        "Frage": "Welches Musikinstrument wurde häufig in römischen Amphitheatern verwendet?",
-        "Antworten": ["Flöte", "Klavier", "Gitarre", "Violine"],
-        "RichtigeAntwort": "Flöte",
-        "RichtigeAntwortMöglichkeiten": "Flöte",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "In römischen Amphitheatern wurden oft Flöten und andere Blasinstrumente gespielt"
     },
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -339,84 +150,12 @@ const musik = [
     },
     { // Mittelalter
         "Kategorie": "Musik",
-        "Frage": "In welcher Kirche wurde der Gregorianische Choral gesungen?",
-        "Antworten": ["Katholische Kirche", "Orthodoxe Kirche", "Protestantische Kirche", "Anglikanische Kirche"],
-        "RichtigeAntwort": "Katholische Kirche",
-        "RichtigeAntwortMöglichkeiten": "Katholische Kirche",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Gregorianische Choral wurde in der katholischen Kirche gesungen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Art von Musik ist der Gregorianische Choral?",
-        "Antworten": ["Geistlich", "Weltlich", "Tanz", "Oper"],
-        "RichtigeAntwort": "Geistlich",
-        "RichtigeAntwortMöglichkeiten": "Geistlich",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Der Gregorianische Choral ist eine Form des geistlichen Gesangs"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Struktur hat der Gregorianische Choral?",
-        "Antworten": ["Einstimmig", "Zweistimmig", "Dreistimmig", "Vielstimmig"],
-        "RichtigeAntwort": "Einstimmig",
-        "RichtigeAntwortMöglichkeiten": "Einstimmig",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Gregorianische Choral ist einstimmig und wird unisono gesungen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "In welcher Sprache wurde der Gregorianische Choral gesungen?",
-        "Antworten": ["Latein", "Griechisch", "Deutsch", "Italienisch"],
-        "RichtigeAntwort": "Latein",
-        "RichtigeAntwortMöglichkeiten": "Latein",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Der Gregorianische Choral wurde hauptsächlich in lateinischer Sprache gesungen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Wer ist der Namensgeber des Gregorianischen Chorals?",
-        "Antworten": ["Papst Gregor I.", "Kaiser Karl der Große", "Ludwig der Fromme", "Papst Urban II."],
-        "RichtigeAntwort": "Papst Gregor I.",
-        "RichtigeAntwortMöglichkeiten": "Papst Gregor I.",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Der Gregorianische Choral ist nach Papst Gregor I. benannt"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Wie wird der Gregorianische Choral vorgetragen?",
-        "Antworten": ["Unisono", "Kanon", "Fuge", "Polyphon"],
-        "RichtigeAntwort": "Unisono",
-        "RichtigeAntwortMöglichkeiten": "Unisono",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Der Gregorianische Choral wird unisono, also von allen Stimmen gleichzeitig in derselben Tonhöhe, vorgetragen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
         "Frage": "In welchem Zeitalter entwickelte sich der Gregorianische Choral?",
         "Antworten": ["Mittelalter", "Renaissance", "Barock", "Romantik"],
         "RichtigeAntwort": "Mittelalter",
         "RichtigeAntwortMöglichkeiten": "Mittelalter 500 600 700 800 900 1000 1100 1200 1300 1400",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Der Gregorianische Choral entwickelte sich im Mittelalter"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Funktion hatte der Gregorianische Choral in der katholischen Kirche?",
-        "Antworten": ["Liturgisch", "Unterhaltsam", "Bildend", "Gesellschaftlich"],
-        "RichtigeAntwort": "Liturgisch",
-        "RichtigeAntwortMöglichkeiten": "Liturgisch",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Der Gregorianische Choral wurde in Gottesdiensten gesungen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche musikalische Struktur beschreibt den Gregorianischen Choral am besten?",
-        "Antworten": ["Monophon", "Homophon", "Polyphon", "Heterophon"],
-        "RichtigeAntwort": "Monophon",
-        "RichtigeAntwortMöglichkeiten": "Monophon",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Der Gregorianische Choral ist monophon, was bedeutet, dass er einstimmig gesungen wird"
     },
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -427,7 +166,7 @@ const musik = [
         "Antworten": ["Mehrstimmigkeit", "Einstimmigkeit", "Rhythmus", "Harmonielehre"],
         "RichtigeAntwort": "Mehrstimmigkeit",
         "RichtigeAntwortMöglichkeiten": "Mehrstimmigkeit",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Polyphonie bezeichnet Mehrstimmigkeit, bei der mehrere unabhängige Stimmen gleichzeitig erklingen"
     },
     { // Mittelalter
@@ -436,7 +175,7 @@ const musik = [
         "Antworten": ["Kirchliche Musik", "Volksmusik", "Oper", "Instrumentalmusik"],
         "RichtigeAntwort": "Kirchliche Musik",
         "RichtigeAntwortMöglichkeiten": "Kirchliche Kirche Religion Religiöse",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Polyphonie wurde zuerst in der kirchlichen Musik des Mittelalters entwickelt"
     },
     { // Mittelalter
@@ -445,7 +184,7 @@ const musik = [
         "Antworten": ["Mittelalter", "Renaissance", "Barock", "Romantik"],
         "RichtigeAntwort": "Mittelalter",
         "RichtigeAntwortMöglichkeiten": "Mittelalter",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Die Entwicklung der Polyphonie begann im Mittelalter"
     },
     { // Mittelalter
@@ -468,48 +207,12 @@ const musik = [
     },
     { // Mittelalter
         "Kategorie": "Musik",
-        "Frage": "Was ist eine 'stimmlose' Musik?",
+        "Frage": "Wie nennt man 'stimmlose' Musik?",
         "Antworten": ["Instrumentalmusik", "Vokalmusik", "Polyphonie", "Homophonie"],
         "RichtigeAntwort": "Instrumentalmusik",
         "RichtigeAntwortMöglichkeiten": "Instrumentalmusik",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Instrumentalmusik ist Musik ohne Gesangsstimmen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Technik wird in der Polyphonie verwendet?",
-        "Antworten": ["Unabhängige Stimmen", "Einstimmiger Chor", "Solo-Gesang", "Percussion-Effekte"],
-        "RichtigeAntwort": "Unabhängige Stimmen",
-        "RichtigeAntwortMöglichkeiten": "Unabhängige Stimmen",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Polyphonie verwendet mehrere unabhängige Stimmen, die gleichzeitig singen"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "In welchem Land entwickelte sich die Technik des Organums zuerst?",
-        "Antworten": ["Frankreich", "Deutschland", "Italien", "England"],
-        "RichtigeAntwort": "Frankreich",
-        "RichtigeAntwortMöglichkeiten": "Frankreich",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Technik des Organums entwickelte sich zuerst in Frankreich"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "In welcher Art der Musik wurde die Mehrstimmigkeit im Mittelalter zuerst populär?",
-        "Antworten": ["Kirchenmusik", "Hochzeitsmusik", "Kriegsmusik", "Tanzmusik"],
-        "RichtigeAntwort": "Kirchenmusik",
-        "RichtigeAntwortMöglichkeiten": "Kirchenmusik Kriche Religion",
         "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Mehrstimmigkeit wurde zuerst in der Kirchenmusik des Mittelalters populär"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Was erweiterte die Mehrstimmigkeit in der kirchlichen Musik des Mittelalters?",
-        "Antworten": ["Klangspektrum", "Melodien", "Texte", "Instrumente"],
-        "RichtigeAntwort": "Klangspektrum",
-        "RichtigeAntwortMöglichkeiten": "Klangspektrum",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Mehrstimmigkeit half, das Klangspektrum der kirchlichen Musik im Mittelalter zu erweitern"
+        "Fakt": "Instrumentalmusik ist Musik ohne Gesangsstimmen"
     },
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -520,7 +223,7 @@ const musik = [
         "Antworten": ["Liebe", "Krieg", "Arbeit", "Handel"],
         "RichtigeAntwort": "Liebe",
         "RichtigeAntwortMöglichkeiten": "Liebe",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Lieder der Minnesänger behandelten hauptsächlich das Thema Liebe"
     },
     { // Mittelalter
@@ -529,7 +232,7 @@ const musik = [
         "Antworten": ["Mittelalter", "Renaissance", "Barock", "Romantik"],
         "RichtigeAntwort": "Mittelalter",
         "RichtigeAntwortMöglichkeiten": "Mittelalter",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Minnesänger waren hauptsächlich im Mittelalter aktiv"
     },
     { // Mittelalter
@@ -537,7 +240,7 @@ const musik = [
         "Frage": "Welches Thema behandelten die Troubadours oft in ihren Liedern?",
         "Antworten": ["Ritterlichkeit", "Politik", "Wissenschaft", "Handel"],
         "RichtigeAntwort": "Ritterlichkeit",
-        "RichtigeAntwortMöglichkeiten": "Ritterlichkeit",
+        "RichtigeAntwortMöglichkeiten": "Ritterlichkeit Liebe",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Die Troubadours behandelten in ihren Liedern oft das Thema Ritterlichkeit"
     },
@@ -547,57 +250,12 @@ const musik = [
         "Antworten": ["Laute", "Klavier", "Trompete", "Geige"],
         "RichtigeAntwort": "Laute",
         "RichtigeAntwortMöglichkeiten": "Laute",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Minnesänger begleiteten ihre Lieder oft mit der Laute"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "In welchem Land waren die Troubadours hauptsächlich aktiv?",
-        "Antworten": ["Frankreich", "Deutschland", "Italien", "Spanien"],
-        "RichtigeAntwort": "Frankreich",
-        "RichtigeAntwortMöglichkeiten": "Frankreich",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Troubadours waren hauptsächlich in Frankreich aktiv"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Sprache wurde von den Troubadours in ihren Liedern oft verwendet?",
-        "Antworten": ["Okzitanisch", "Latein", "Deutsch", "Italienisch"],
-        "RichtigeAntwort": "Okzitanisch",
-        "RichtigeAntwortMöglichkeiten": "Okzitanisch",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Troubadours schrieben ihre Lieder oft in der okzitanischen Sprache"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche gesellschaftliche Schicht förderte den Minnesang?",
-        "Antworten": ["Adel", "Bauern", "Kaufleute", "Handwerker"],
-        "RichtigeAntwort": "Adel",
-        "RichtigeAntwortMöglichkeiten": "Adel",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Minnesang wurde hauptsächlich vom Adel gefördert"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Was war ein wichtiges Thema in den Liedern der Troubadours?",
-        "Antworten": ["Liebe", "Krieg", "Handel", "Arbeit"],
-        "RichtigeAntwort": "Liebe",
-        "RichtigeAntwortMöglichkeiten": "Liebe",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Ein wichtiges Thema in den Liedern der Troubadours war die Liebe"
     },
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Art von Musik ist Instrumentalmusik?",
-        "Antworten": ["Ohne Gesang", "Klassisch", "Elektronisch", "Kirchlich"],
-        "RichtigeAntwort": "Ohne Gesang",
-        "RichtigeAntwortMöglichkeiten": "Ohne Gesang Nur Instrumente Kein Chor Singen",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Instrumentalmusik ist Musik, die ohne Gesang gespielt wird"
-    },
     { // Mittelalter
         "Kategorie": "Musik",
         "Frage": "Welche Musikart wurde im Mittelalter oft zum Tanzen gespielt?",
@@ -613,26 +271,8 @@ const musik = [
         "Antworten": ["Drehleier", "Klavier", "Orgel", "Saxophon"],
         "RichtigeAntwort": "Drehleier",
         "RichtigeAntwortMöglichkeiten": "Drehleier",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Drehleier war ein beliebtes Instrument für Tanzmusik im Mittelalter"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Welche Funktion hatte Instrumentalmusik im Mittelalter?",
-        "Antworten": ["Begleitmusik", "Kriegsmusik", "Handwerksmusik", "Bildungsmusik"],
-        "RichtigeAntwort": "Begleitmusik",
-        "RichtigeAntwortMöglichkeiten": "Begleitmusik",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Instrumentalmusik diente im Mittelalter häufig als Begleitmusik für Tänze und Feste"
-    },
-    { // Mittelalter
-        "Kategorie": "Musik",
-        "Frage": "Was war eine beliebte Form von Tanzmusik im Mittelalter?",
-        "Antworten": ["Rondeau", "Sinfonie", "Oper", "Kantate"],
-        "RichtigeAntwort": "Rondeau",
-        "RichtigeAntwortMöglichkeiten": "Rondeau",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "Das Rondeau war eine beliebte Form von Tanzmusik im Mittelalter"
+        "Fakt": "Die Drehleier war ein beliebtes Instrument für Tanzmusik im Mittelalter"
     },
     { // Mittelalter
         "Kategorie": "Musik",
@@ -648,20 +288,11 @@ const musik = [
 
     { // Renaissance
         "Kategorie": "Musik",
-        "Frage": "Welche philosophische Strömung beeinflusste die Musik in der Renaissance stark?",
-        "Antworten": ["Humanismus", "Existentialismus", "Surrealismus", "Futurismus"],
-        "RichtigeAntwort": "Humanismus",
-        "RichtigeAntwortMöglichkeiten": "Humanismus",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Humanismus, der die Würde und den Wert des Menschen betont, hatte einen großen Einfluss auf die Musik der Renaissance"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
         "Frage": "Welche Musikform wurde in der Renaissance oft von mehreren Stimmen vorgetragen?",
         "Antworten": ["Madrigale", "Sinfonien", "Opern", "Sonaten"],
         "RichtigeAntwort": "Madrigale",
         "RichtigeAntwortMöglichkeiten": "Madrigale",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Madrigale sind weltliche Lieder, die oft mehrstimmig a cappella gesungen wurden"
     },
     { // Renaissance
@@ -670,7 +301,7 @@ const musik = [
         "Antworten": ["Buchdruck", "Elektrizität", "Fotografie", "Rundfunk"],
         "RichtigeAntwort": "Buchdruck",
         "RichtigeAntwortMöglichkeiten": "Buchdruck",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Erfindung des Buchdrucks ermöglichte die weite Verbreitung von Noten und musikalischen Ideen"
     },
     { // Renaissance
@@ -679,7 +310,7 @@ const musik = [
         "Antworten": ["Giovanni Palestrina", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
         "RichtigeAntwort": "Giovanni Palestrina",
         "RichtigeAntwortMöglichkeiten": "Giovanni Palestrina",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Giovanni Palestrina ist bekannt für seine polyphone Kirchenmusik und gilt als einer der bedeutendsten Komponisten der Renaissance"
     },
     { // Renaissance
@@ -688,7 +319,7 @@ const musik = [
         "Antworten": ["Chormusik", "Jazz", "Rock", "Elektronische Musik"],
         "RichtigeAntwort": "Chormusik",
         "RichtigeAntwortMöglichkeiten": "Chormusik",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Chormusik erlebte in der Renaissance einen großen Aufschwung und wurde oft in mehrstimmigen Sätzen komponiert"
     },
     { // Renaissance
@@ -720,66 +351,12 @@ const musik = [
     },
     { // Renaissance
         "Kategorie": "Musik",
-        "Frage": "Was wurde durch den Buchdruck in der Renaissance leichter zugänglich?",
-        "Antworten": ["Noten", "Schallplatten", "CDs", "MP3"],
-        "RichtigeAntwort": "Noten",
-        "RichtigeAntwortMöglichkeiten": "Noten",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Der Buchdruck ermöglichte den weit verbreiteten Druck und die Verbreitung von Noten"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
-        "Frage": "Was war ein Merkmal der Renaissance-Musik?",
-        "Antworten": ["Harmonischer Wohlklang", "Atonalität", "Dodekaphonie", "Serialismus"],
-        "RichtigeAntwort": "Harmonischer Wohlklang",
-        "RichtigeAntwortMöglichkeiten": "Harmonischer Wohlklang",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Musik der Renaissance zeichnete sich durch harmonischen Wohlklang und ausgeglichene Klangstrukturen aus"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
         "Frage": "Welcher gesellschaftliche Wandel beeinflusste die Musik der Renaissance?",
         "Antworten": ["Humanismus", "Feudalismus", "Industrialismus", "Kolonialismus"],
         "RichtigeAntwort": "Humanismus",
         "RichtigeAntwortMöglichkeiten": "Humanismus",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Der Humanismus, der die Bedeutung des Individuums und der menschlichen Ausdruckskraft betonte, hatte einen großen Einfluss auf die Musik der Renaissance"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
-        "Frage": "Welche Art von Chormusik wurde in der Renaissance oft aufgeführt?",
-        "Antworten": ["Messen", "Opern", "Sinfonien", "Kantaten"],
-        "RichtigeAntwort": "Messen",
-        "RichtigeAntwortMöglichkeiten": "Messen Gottesdienste Kirchen",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Messen, die liturgischen Vertonungen des katholischen Gottesdienstes, wurden in der Renaissance oft als Chormusik aufgeführt"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
-        "Frage": "Wer war ein berühmter Komponist von Kirchenmusik in der Renaissance?",
-        "Antworten": ["Josquin des Prez", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
-        "RichtigeAntwort": "Josquin des Prez",
-        "RichtigeAntwortMöglichkeiten": "Josquin des Prez",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Josquin des Prez war ein berühmter Komponist von Kirchenmusik und gilt als einer der einflussreichsten Musiker der Renaissance"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
-        "Frage": "Welches musikalische Hauptmerkmal zeichnet die Musik der Renaissance aus?",
-        "Antworten": ["Polyphonie", "Monodie", "Tonalität", "Serialismus"],
-        "RichtigeAntwort": "Polyphonie",
-        "RichtigeAntwortMöglichkeiten": "Polyphonie mehrere Melodien",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Musik der Renaissance ist bekannt für ihre Polyphonie, bei der mehrere unabhängige Melodien gleichzeitig gespielt werden"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
-        "Frage": "Welches Instrument war in der Instrumentalmusik der Renaissance am weitesten verbreitet?",
-        "Antworten": ["Laute", "Klavier", "Violine", "Orgel"],
-        "RichtigeAntwort": "Laute",
-        "RichtigeAntwortMöglichkeiten": "Laute",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Laute war in der Instrumentalmusik der Renaissance besonders weit verbreitet und beliebt"
     },
     { // Renaissance
         "Kategorie": "Musik",
@@ -789,15 +366,6 @@ const musik = [
         "RichtigeAntwortMöglichkeiten": "Imitation",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Die Imitation, bei der eine Melodie von verschiedenen Stimmen nacheinander wiederholt wird, war eine häufig verwendete Technik in der Musik der Renaissance"
-    },
-    { // Renaissance
-        "Kategorie": "Musik",
-        "Frage": "Welche Art von Musik entwickelte sich aus den weltlichen Liedern der Renaissance?",
-        "Antworten": ["Madrigale", "Kantaten", "Sinfonien", "Opern"],
-        "RichtigeAntwort": "Madrigale",
-        "RichtigeAntwortMöglichkeiten": "Madrigale",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die weltlichen Lieder der Renaissance entwickelten sich oft zu Madrigalen, die in der Regel a cappella gesungen wurden"
     },
     { // Renaissance
         "Kategorie": "Musik",
@@ -820,32 +388,23 @@ const musik = [
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Oper entstand im Barock und kombiniert Drama, Musik und Bühnenkunst"
     },
-    { // Barock
+    {
         "Kategorie": "Musik",
-        "Frage": "Welche musikalische Struktur entwickelte sich im Barock, die Dur- und Molltonalitäten verwendete?",
+        "Frage": "Welche musikalische Struktur, die auf Dur- und Molltonalitäten basiert, entstand während des Barock?",
         "Antworten": ["Tonalität", "Atonalität", "Polytonalität", "Modalität"],
         "RichtigeAntwort": "Tonalität",
         "RichtigeAntwortMöglichkeiten": "Tonalität",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Im Barock entwickelte sich das System der Tonalität, das Dur- und Molltonalitäten verwendet"
-    },
+    },    
     { // Barock
         "Kategorie": "Musik",
-        "Frage": "Welche Art von Musikensemble (Musikgruppe) bildete sich im Barock?",
+        "Frage": "Welche Art von Musikensemble bildete sich im Barock?",
         "Antworten": ["Orchester", "Quartett", "Chor", "Band"],
         "RichtigeAntwort": "Orchester",
         "RichtigeAntwortMöglichkeiten": "Orchester",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Das Orchester bildete sich im Barock und legte den Grundstein für moderne Orchester"
-    },
-    { // Barock
-        "Kategorie": "Musik",
-        "Frage": "Wer ist einer der bekanntesten Komponisten des Barock?",
-        "Antworten": ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert"],
-        "RichtigeAntwort": "Johann Sebastian Bach",
-        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Johann Sebastian Bach ist einer der bekanntesten Komponisten des Barock"
     },
     { // Barock
         "Kategorie": "Musik",
@@ -876,15 +435,6 @@ const musik = [
     },
     { // Barock
         "Kategorie": "Musik",
-        "Frage": "Welcher Barockkomponist schrieb die berühmten 'Vier Jahreszeiten'?",
-        "Antworten": ["Antonio Vivaldi", "Johann Sebastian Bach", "Georg Friedrich Händel", "Claudio Monteverdi"],
-        "RichtigeAntwort": "Antonio Vivaldi",
-        "RichtigeAntwortMöglichkeiten": "Antonio Vivaldi",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Antonio Vivaldi schrieb die berühmten 'Vier Jahreszeiten'"
-    },
-    { // Barock
-        "Kategorie": "Musik",
         "Frage": "Welche formale Musikstruktur, bei der ein Thema durch verschiedene Stimmen wiederholt wird, war im Barock weit verbreitet?",
         "Antworten": ["Fuge", "Sonate", "Sinfonie", "Konzert"],
         "RichtigeAntwort": "Fuge",
@@ -907,26 +457,8 @@ const musik = [
         "Antworten": ["Barock", "Klassik", "Romantik", "Moderne"],
         "RichtigeAntwort": "Barock",
         "RichtigeAntwortMöglichkeiten": "Barock",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Der barocke Musikstil betonte den Gebrauch von Ornamenten und Verzierungen."
-    },    
-    { // Barock
-        "Kategorie": "Musik",
-        "Frage": "Welcher deutsche Komponist schrieb die 'Brandenburgischen Konzerte'?",
-        "Antworten": ["Johann Sebastian Bach", "Georg Friedrich Händel", "Antonio Vivaldi", "Henry Purcell"],
-        "RichtigeAntwort": "Johann Sebastian Bach",
-        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach",
         "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Johann Sebastian Bach schrieb die berühmten 'Brandenburgischen Konzerte'"
-    },
-    { // Barock
-        "Kategorie": "Musik",
-        "Frage": "Welche Art der Musik wurde im Barock oft für Kirchenzeremonien komponiert?",
-        "Antworten": ["Geistliche Musik", "Oper", "Sinfonie", "Ballett"],
-        "RichtigeAntwort": "Geistliche Musik",
-        "RichtigeAntwortMöglichkeiten": "Geistliche Musik",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Geistliche Musik wurde im Barock oft für Kirchenzeremonien komponiert"
+        "Fakt": "Der barocke Musikstil betonte den Gebrauch von Ornamenten und Verzierungen."
     },
     { // Barock
         "Kategorie": "Musik",
@@ -934,7 +466,7 @@ const musik = [
         "Antworten": ["Gigue", "Walzer", "Tango", "Salsa"],
         "RichtigeAntwort": "Gigue",
         "RichtigeAntwortMöglichkeiten": "Gigue",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Die Gigue war ein lebhafter Tanz und häufige Form der Unterhaltung im Barock"
     },
     { // Barock
@@ -952,7 +484,7 @@ const musik = [
         "Antworten": ["Tanzmusik", "Kirchenmusik", "Opernbegleitung", "Kriegsmusik"],
         "RichtigeAntwort": "Tanzmusik",
         "RichtigeAntwortMöglichkeiten": "Tanzmusik",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Suite diente häufig als Tanzmusik im Barock"
     },
     { // Barock
@@ -996,11 +528,11 @@ const musik = [
 
     { // Klassik
         "Kategorie": "Musik",
-        "Frage": "Welche Stadt ist eng mit der Wiener Klassik verbunden?",
+        "Frage": "Mit welcher Stadt wird die Klassik besonders in Verbindung gebracht?",
         "Antworten": ["Wien", "Berlin", "Paris", "London"],
         "RichtigeAntwort": "Wien",
         "RichtigeAntwortMöglichkeiten": "Wien",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "mittel",
         "Fakt": "Wien ist als Zentrum der Wiener Klassik bekannt"
     },
     { // Klassik
@@ -1009,17 +541,8 @@ const musik = [
         "Antworten": ["Symphonie", "Fuge", "Kantate", "Motette"],
         "RichtigeAntwort": "Symphonie",
         "RichtigeAntwortMöglichkeiten": "Symphonie",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Symphonie, bestehend aus mehreren Sätzen, wurde in der Klassik stark weiterentwickelt"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
-        "Frage": "Wer ist einer der bekanntesten Komponisten der Wiener Klassik?",
-        "Antworten": ["Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Richard Wagner", "Claude Debussy"],
-        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
-        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Wolfgang Amadeus Mozart ist einer der bekanntesten Komponisten der Wiener Klassik"
     },
     { // Klassik
         "Kategorie": "Musik",
@@ -1035,7 +558,7 @@ const musik = [
         "Frage": "Welche Eigenschaft charakterisiert die Musik der Klassik?",
         "Antworten": ["Einfachheit", "Komplexität", "Atonalität", "Dissonanz"],
         "RichtigeAntwort": "Einfachheit",
-        "RichtigeAntwortMöglichkeiten": "Einfachheit Klarheit formale Struktur",
+        "RichtigeAntwortMöglichkeiten": "Einfachheit Klarheit formale Struktur Ausgewogenheit Harmonie Eleganz Leichtigkeit Melodik",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Musik der Klassik ist für ihre Einfachheit und Klarheit bekannt"
     },
@@ -1059,15 +582,6 @@ const musik = [
     },
     { // Klassik
         "Kategorie": "Musik",
-        "Frage": "Welcher Komponist schrieb die berühmte Oper 'Die Zauberflöte'?",
-        "Antworten": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Joseph Haydn", "Johann Sebastian Bach"],
-        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
-        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Wolfgang Amadeus Mozart schrieb die berühmte Oper 'Die Zauberflöte'"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
         "Frage": "Welche Komponistin war eine einflussreiche Figur in der Wiener Klassik?",
         "Antworten": ["Maria Theresia von Paradis", "Clara Schumann", "Hildegard von Bingen", "Fanny Hensel"],
         "RichtigeAntwort": "Maria Theresia von Paradis",
@@ -1081,17 +595,8 @@ const musik = [
         "Antworten": ["Kammermusik", "Opera buffa", "Choralwerke", "Fughetta"],
         "RichtigeAntwort": "Kammermusik",
         "RichtigeAntwortMöglichkeiten": "Kammermusik",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Neben Sinfonien und Sonaten war Kammermusik in der Klassik besonders beliebt"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
-        "Frage": "Welcher Komponist ist als 'Vater der Sinfonie' bekannt?",
-        "Antworten": ["Joseph Haydn", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
-        "RichtigeAntwort": "Joseph Haydn",
-        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Joseph Haydn komponierte über 100 Sinfonien, wofür er diesen Titel bekam"
     },
     { // Klassik
         "Kategorie": "Musik",
@@ -1104,48 +609,12 @@ const musik = [
     },
     { // Klassik
         "Kategorie": "Musik",
-        "Frage": "Welche Komposition von Joseph Haydn wird oft als 'Surprise Symphony' bezeichnet?",
-        "Antworten": ["Sinfonie Nr. 94", "Sinfonie Nr. 101", "Sinfonie Nr. 104", "Sinfonie Nr. 88"],
-        "RichtigeAntwort": "Sinfonie Nr. 94",
-        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 94",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Joseph Haydns Sinfonie Nr. 94 wird oft als 'Surprise Symphony' bezeichnet, wegen des plötzlichen lauten Akkords im zweiten Satz"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
-        "Frage": "Welcher klassische Komponist schrieb 'Die Schöpfung'?",
-        "Antworten": ["Joseph Haydn", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Carl Philipp Emanuel Bach"],
-        "RichtigeAntwort": "Joseph Haydn",
-        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Joseph Haydn schrieb das Oratorium 'Die Schöpfung', das eines seiner berühmtesten Werke ist"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
-        "Frage": "Wer war ein einflussreicher Musiklehrer und Komponist der Wiener Klassik?",
-        "Antworten": ["Joseph Haydn", "Richard Wagner", "Franz Schubert", "Hector Berlioz"],
-        "RichtigeAntwort": "Joseph Haydn",
-        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Joseph Haydn war ein einflussreicher Musiklehrer und Komponist der Wiener Klassik"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
         "Frage": "Welche Epoche folgt direkt auf das Zeitalter der Klassik?",
         "Antworten": ["Romantik", "Barock", "Renaissance", "Moderne"],
         "RichtigeAntwort": "Romantik",
         "RichtigeAntwortMöglichkeiten": "Romantik",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Die Romantik folgt direkt auf das Zeitalter der Klassik"
-    },
-    { // Klassik
-        "Kategorie": "Musik",
-        "Frage": "Welcher Komponist der Klassik schrieb die Oper 'Don Giovanni'?",
-        "Antworten": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Joseph Haydn", "Johann Sebastian Bach"],
-        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
-        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Wolfgang Amadeus Mozart schrieb die berühmte Oper 'Don Giovanni'"
+        "Fakt": "Die Romantik folgt direkt auf das Zeitalter der Klassik"
     },
     { // Klassik
         "Kategorie": "Musik",
@@ -1153,7 +622,7 @@ const musik = [
         "Antworten": ["Sonate", "Konzert", "Sinfonie", "Rondo"],
         "RichtigeAntwort": "Sonate",
         "RichtigeAntwortMöglichkeiten": "Sonate",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Die Sonate war eine besonders beliebte musikalische Form während der Klassik und folgte oft dem Schema schnell-langsam-schnell"
     },
 
@@ -1165,7 +634,7 @@ const musik = [
         "Antworten": ["Franz Schubert", "Ludwig van Beethoven", "Johannes Brahms", "Hector Berlioz"],
         "RichtigeAntwort": "Franz Schubert",
         "RichtigeAntwortMöglichkeiten": "Franz Schubert",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Franz Schubert ist bekannt für seine unvollendete Symphonie"
     },
     { // Romantik
@@ -1183,7 +652,7 @@ const musik = [
         "Antworten": ["Frédéric Chopin", "Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Joseph Haydn"],
         "RichtigeAntwort": "Frédéric Chopin",
         "RichtigeAntwortMöglichkeiten": "Frédéric Chopin",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Frédéric Chopin ist bekannt für seine virtuose Klaviermusik in der Romantik"
     },
     { // Romantik
@@ -1192,7 +661,7 @@ const musik = [
         "Antworten": ["Programmmusik", "Sinfonie", "Oper", "Fuge"],
         "RichtigeAntwort": "Programmmusik",
         "RichtigeAntwortMöglichkeiten": "Programmmusik",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Programmmusik beschreibt oft Geschichten oder Szenen durch musikalische Elemente"
     },
     { // Romantik
@@ -1201,7 +670,7 @@ const musik = [
         "Antworten": ["Hector Berlioz", "Ludwig van Beethoven", "Franz Schubert", "Johannes Brahms"],
         "RichtigeAntwort": "Hector Berlioz",
         "RichtigeAntwortMöglichkeiten": "Hector Berlioz",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Hector Berlioz ist bekannt für seine Sinfonie 'Fantastique', ein Beispiel für Programmmusik"
     },
     { // Romantik
@@ -1210,7 +679,7 @@ const musik = [
         "Antworten": ["Richard Wagner", "Giuseppe Verdi", "Georges Bizet", "Franz Schubert"],
         "RichtigeAntwort": "Richard Wagner",
         "RichtigeAntwortMöglichkeiten": "Richard Wagner",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Richard Wagner schrieb die Oper 'Der fliegende Holländer'"
     },
     { // Romantik
@@ -1219,7 +688,7 @@ const musik = [
         "Antworten": ["Johannes Brahms", "Franz Liszt", "Frédéric Chopin", "Gustav Mahler"],
         "RichtigeAntwort": "Johannes Brahms",
         "RichtigeAntwortMöglichkeiten": "Johannes Brahms",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Johannes Brahms schrieb die berühmten 'Ungarischen Tänze'"
     },
     { // Romantik
@@ -1237,7 +706,7 @@ const musik = [
         "Antworten": ["Clara Schumann", "Fanny Mendelssohn", "Maria Theresia von Paradis", "Hildegard von Bingen"],
         "RichtigeAntwort": "Clara Schumann",
         "RichtigeAntwortMöglichkeiten": "Clara Schumann",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Clara Schumann war eine bedeutende Pianistin und Komponistin der Romantik"
     },
     { // Romantik
@@ -1246,7 +715,7 @@ const musik = [
         "Antworten": ["Leitmotive", "Crescendos", "Staccato", "Ostinato"],
         "RichtigeAntwort": "Leitmotive",
         "RichtigeAntwortMöglichkeiten": "Leitmotive",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Leitmotive wurden oft verwendet, um bestimmte Emotionen und Charaktere in der Musik der Romantik darzustellen"
     },
     { // Romantik
@@ -1255,7 +724,7 @@ const musik = [
         "Antworten": ["Giuseppe Verdi", "Richard Wagner", "Georges Bizet", "Johann Strauss"],
         "RichtigeAntwort": "Giuseppe Verdi",
         "RichtigeAntwortMöglichkeiten": "Giuseppe Verdi",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Giuseppe Verdi schrieb die Oper 'La Traviata'"
     },
     { // Romantik
@@ -1264,25 +733,16 @@ const musik = [
         "Antworten": ["Franz Liszt", "Frédéric Chopin", "Clara Schumann", "Johannes Brahms"],
         "RichtigeAntwort": "Franz Liszt",
         "RichtigeAntwortMöglichkeiten": "Franz Liszt",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Franz Liszt ist bekannt für seine virtuosen Klavierwerke und schrieb das berühmte Stück 'Liebestraum'"
-    },
-    { // Romantik
-        "Kategorie": "Musik",
-        "Frage": "Welches Nationalgefühl wurde in der Romantik oft musikalisch ausgedrückt?",
-        "Antworten": ["Nationalismus", "Globalismus", "Feudalismus", "Kommunismus"],
-        "RichtigeAntwort": "Nationalismus",
-        "RichtigeAntwortMöglichkeiten": "Nationalismus",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Nationalismus wurde in der Romantik oft musikalisch ausgedrückt, indem Volkslieder und nationale Themen verwendet wurden"
-    },
+    },   
     { // Romantik
         "Kategorie": "Musik",
         "Frage": "Welcher Komponist schrieb die Oper 'Carmen'?",
         "Antworten": ["Georges Bizet", "Giuseppe Verdi", "Richard Wagner", "Franz Schubert"],
         "RichtigeAntwort": "Georges Bizet",
         "RichtigeAntwortMöglichkeiten": "Georges Bizet",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Georges Bizet schrieb die berühmte Oper 'Carmen'"
     },
     { // Romantik
@@ -1291,7 +751,7 @@ const musik = [
         "Antworten": ["Gustav Mahler", "Johannes Brahms", "Richard Wagner", "Franz Liszt"],
         "RichtigeAntwort": "Gustav Mahler",
         "RichtigeAntwortMöglichkeiten": "Gustav Mahler",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Gustav Mahler schrieb das Werk 'Kindertotenlieder', eine Vertonung von Friedrich Rückerts Gedichten"
     },
     { // Romantik
@@ -1300,17 +760,8 @@ const musik = [
         "Antworten": ["Bilder einer Ausstellung", "Nacht auf dem kahlen Berge", "Boris Godunow", "Chowanschtschina"],
         "RichtigeAntwort": "Bilder einer Ausstellung",
         "RichtigeAntwortMöglichkeiten": "Bilder einer Ausstellung",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Maurice Ravel orchestrierte Modest Mussorgskys Klavierzyklus 'Bilder einer Ausstellung'"
-    },
-    { // Romantik
-        "Kategorie": "Musik",
-        "Frage": "Welche Form der Kunst ist typisch für den musikalischen Ausdruck der Romantik?",
-        "Antworten": ["Lied", "Sinfonie", "Oper", "Ballett"],
-        "RichtigeAntwort": "Lied",
-        "RichtigeAntwortMöglichkeiten": "Lied",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Das Kunstlied ist eine typische Form des musikalischen Ausdrucks der Romantik, oft basierend auf Gedichten"
     },
     { // Romantik
         "Kategorie": "Musik",
@@ -1318,26 +769,8 @@ const musik = [
         "Antworten": ["Richard Strauss", "Richard Wagner", "Gustav Mahler", "Johannes Brahms"],
         "RichtigeAntwort": "Richard Strauss",
         "RichtigeAntwortMöglichkeiten": "Richard Strauss",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Richard Strauss schrieb die 'Alpensinfonie', ein Beispiel für Programmmusik"
-    },
-    { // Romantik
-        "Kategorie": "Musik",
-        "Frage": "Welches Publikum begeisterte die Virtuosität der Musiker in der Romantik besonders?",
-        "Antworten": ["Klavierkonzerte", "Orgelkonzerte", "Chorkonzerte", "Streichquartette"],
-        "RichtigeAntwort": "Klavierkonzerte",
-        "RichtigeAntwortMöglichkeiten": "Klavierkonzerte",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Virtuosität der Musiker in der Romantik begeisterte besonders das Publikum in Klavierkonzerten"
-    },
-    { // Romantik
-        "Kategorie": "Musik",
-        "Frage": "Welche Musikform entwickelte sich in der Romantik, um nationale Identität auszudrücken?",
-        "Antworten": ["Nationaloper", "Kunstlied", "Sinfonie", "Fuge"],
-        "RichtigeAntwort": "Nationaloper",
-        "RichtigeAntwortMöglichkeiten": "Nationaloper",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Nationaloper entwickelte sich in der Romantik, um die nationale Identität und kulturelle Eigenheiten auszudrücken"
     },
     { // Romantik
         "Kategorie": "Musik",
@@ -1357,7 +790,7 @@ const musik = [
         "Antworten": ["Claude Debussy", "Igor Strawinsky", "Arnold Schönberg", "Maurice Ravel"],
         "RichtigeAntwort": "Claude Debussy",
         "RichtigeAntwortMöglichkeiten": "Claude Debussy",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Claude Debussy ist bekannt für seinen impressionistischen Musikstil"
     },
     { // Moderne Musik
@@ -1366,26 +799,17 @@ const musik = [
         "Antworten": ["Expressionismus", "Impressionismus", "Klassizismus", "Minimalismus"],
         "RichtigeAntwort": "Expressionismus",
         "RichtigeAntwortMöglichkeiten": "Expressionismus",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Expressionismus entwickelte sich zu Beginn des 20. Jahrhunderts und betonte starke emotionale Ausdruckskraft"
-    },
+    },  
     { // Moderne Musik
         "Kategorie": "Musik",
         "Frage": "Wer gilt als einer der Begründer des Jazz?",
         "Antworten": ["Louis Armstrong", "Charlie Parker", "Duke Ellington", "Miles Davis"],
         "RichtigeAntwort": "Louis Armstrong",
         "RichtigeAntwortMöglichkeiten": "Louis Armstrong",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Louis Armstrong gilt als einer der Begründer des Jazz und beeinflusste viele nachfolgende Musiker"
-    },
-    { // Moderne Musik
-        "Kategorie": "Musik",
-        "Frage": "Welche musikalische Bewegung nutzte unkonventionelle Tonalitäten und Klangfarben?",
-        "Antworten": ["Neue Klangwelten", "Klassizismus", "Romantik", "Barock"],
-        "RichtigeAntwort": "Neue Klangwelten",
-        "RichtigeAntwortMöglichkeiten": "Neue Klangwelten",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Bewegung 'Neue Klangwelten' nutzte unkonventionelle Tonalitäten und Klangfarben"
     },
     { // Moderne Musik
         "Kategorie": "Musik",
@@ -1411,7 +835,7 @@ const musik = [
         "Antworten": ["Robert Johnson", "B.B. King", "Muddy Waters", "John Lee Hooker"],
         "RichtigeAntwort": "Robert Johnson",
         "RichtigeAntwortMöglichkeiten": "Robert Johnson",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Robert Johnson ist bekannt für seinen Einfluss auf den Blues und schrieb das berühmte Lied 'Cross Road Blues'"
     },
     { // Moderne Musik
@@ -1420,18 +844,19 @@ const musik = [
         "Antworten": ["Igor Strawinsky", "Arnold Schönberg", "Claude Debussy", "Béla Bartók"],
         "RichtigeAntwort": "Igor Strawinsky",
         "RichtigeAntwortMöglichkeiten": "Igor Strawinsky",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Igor Strawinsky schrieb das bekannte Ballett 'Le Sacre du Printemps', das bei der Uraufführung 1913 einen Skandal auslöste"
     },
-    { // Moderne Musik
+    { 
+        // Moderne Musik
         "Kategorie": "Musik",
-        "Frage": "Welche Bewegung in der Musik des frühen 20. Jahrhunderts wollte atmosphärische Stimmungen und Farben darstellen?",
+        "Frage": "Welche Stilrichtung in der Musik des frühen 20. Jahrhunderts legte besonderen Wert auf Klangfarben und Stimmung?",
         "Antworten": ["Impressionismus", "Expressionismus", "Klassizismus", "Minimalismus"],
         "RichtigeAntwort": "Impressionismus",
         "RichtigeAntwortMöglichkeiten": "Impressionismus",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Impressionismus in der Musik wollte atmosphärische Stimmungen und Farben darstellen"
-    },
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Impressionismus in der Musik legte besonderen Wert auf Klangfarben und Stimmung."
+    },        
     { // Moderne Musik
         "Kategorie": "Musik",
         "Frage": "Welche Technik ist charakteristisch für die Zwölftonmusik?",
@@ -1447,13 +872,13 @@ const musik = [
         "Antworten": ["Charlie Parker", "Duke Ellington", "Louis Armstrong", "John Coltrane"],
         "RichtigeAntwort": "Charlie Parker",
         "RichtigeAntwortMöglichkeiten": "Charlie Parker",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Charlie Parker war ein bedeutender Jazzmusiker, der eine zentrale Rolle in der Entwicklung des Bebop spielte"
     },
     { // Moderne Musik
         "Kategorie": "Musik",
         "Frage": "Welche Musikrichtung entwickelte sich parallel zur Entwicklung von Jazz in den frühen 1900er Jahren und hatte Wurzeln in der afroamerikanischen Kultur?",
-        "Antworten": ["Blues", "Rock", "Klassik", "Pop"],
+        "Antworten": ["Blues", "Hiphop", "Rock", "Pop"],
         "RichtigeAntwort": "Blues",
         "RichtigeAntwortMöglichkeiten": "Blues",
         "Schwierigkeitsgrad": "mittel",
@@ -1465,7 +890,7 @@ const musik = [
         "Antworten": ["George Gershwin", "Igor Strawinsky", "Arnold Schönberg", "Claude Debussy"],
         "RichtigeAntwort": "George Gershwin",
         "RichtigeAntwortMöglichkeiten": "George Gershwin",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "George Gershwin ist bekannt für seine Werke 'Rhapsody in Blue' und 'An American in Paris'"
     },
     { // Moderne Musik
@@ -1483,7 +908,7 @@ const musik = [
         "Antworten": ["Erik Satie", "Igor Strawinsky", "Claude Debussy", "Béla Bartók"],
         "RichtigeAntwort": "Erik Satie",
         "RichtigeAntwortMöglichkeiten": "Erik Satie",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Erik Satie ist bekannt für seine minimalistische Musik und seine experimentellen Kompositionen"
     },
     { // Moderne Musik
@@ -1510,7 +935,7 @@ const musik = [
         "Antworten": ["Samuel Coleridge-Taylor", "Scott Joplin", "Duke Ellington", "George Gershwin"],
         "RichtigeAntwort": "Samuel Coleridge-Taylor",
         "RichtigeAntwortMöglichkeiten": "Samuel Coleridge-Taylor",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Samuel Coleridge-Taylor integrierte afrikanische Rhythmen in seine Werke und schrieb die 'African Suite'"
     },
     { // Moderne Musik
@@ -1518,8 +943,8 @@ const musik = [
         "Frage": "Welche Komposition von Maurice Ravel ist bekannt für ihre repetitive Struktur und wachsende Intensität?",
         "Antworten": ["Boléro", "Daphnis et Chloé", "La Valse", "Pavane pour une infante défunte"],
         "RichtigeAntwort": "Boléro",
-        "RichtigeAntwortMöglichkeiten": "Boléro",
-        "Schwierigkeitsgrad": "extrem",
+        "RichtigeAntwortMöglichkeiten": "Boléro bolero",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Maurice Ravels 'Boléro' ist bekannt für seine repetitive Struktur und wachsende Intensität"
     },
     { // Moderne Musik
@@ -1558,7 +983,7 @@ const musik = [
         "Antworten": ["Techno", "Swing", "Reggae", "Folk"],
         "RichtigeAntwort": "Techno",
         "RichtigeAntwortMöglichkeiten": "Techno",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "leicht",
         "Fakt": "Techno, ein Musikstil, der elektronische Klänge und Beats verwendet, wurde in den 1980er Jahren populär"
     },
     { // Zeitgenössische Musik
@@ -1566,7 +991,7 @@ const musik = [
         "Frage": "Welche weltbekannte Band wurde 1960 in Liverpool gegründet und beeinflusste die Pop- und Rockmusik maßgeblich?",
         "Antworten": ["The Beatles", "The Rolling Stones", "Led Zeppelin", "Pink Floyd"],
         "RichtigeAntwort": "The Beatles",
-        "RichtigeAntwortMöglichkeiten": "The Beatles",
+        "RichtigeAntwortMöglichkeiten": "Beatles",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "The Beatles wurden 1960 in Liverpool gegründet und beeinflussten die Pop- und Rockmusik maßgeblich"
     },
@@ -1576,17 +1001,8 @@ const musik = [
         "Antworten": ["Bob Dylan", "Johnny Cash", "Elvis Presley", "Paul Simon"],
         "RichtigeAntwort": "Bob Dylan",
         "RichtigeAntwortMöglichkeiten": "Bob Dylan",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Bob Dylan ist bekannt für seine Protestsongs in den 1960er Jahren, darunter 'Blowin' in the Wind'"
-    },
-    { // Zeitgenössische Musik
-        "Kategorie": "Musik",
-        "Frage": "Welche Musikrichtung verbindet westliche und nicht-westliche Musikstile?",
-        "Antworten": ["Weltmusik", "Jazz", "Blues", "Klassik"],
-        "RichtigeAntwort": "Weltmusik",
-        "RichtigeAntwortMöglichkeiten": "Weltmusik",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Weltmusik verbindet westliche und nicht-westliche Musikstile und wird oft als 'Weltmusik' bezeichnet"
     },
     { // Zeitgenössische Musik
         "Kategorie": "Musik",
@@ -1594,7 +1010,7 @@ const musik = [
         "Antworten": ["Aphex Twin", "Daft Punk", "Skrillex", "Deadmau5"],
         "RichtigeAntwort": "Aphex Twin",
         "RichtigeAntwortMöglichkeiten": "Aphex Twin",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Aphex Twin ist bekannt für seinen Einfluss auf die elektronische Musik und gründete das Plattenlabel 'Warp Records'"
     },
     { // Zeitgenössische Musik
@@ -1603,17 +1019,8 @@ const musik = [
         "Antworten": ["Stevie Wonder", "James Brown", "Prince", "Marvin Gaye"],
         "RichtigeAntwort": "Stevie Wonder",
         "RichtigeAntwortMöglichkeiten": "Stevie Wonder",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Stevie Wonder prägte den Funk und ist bekannt für Songs wie 'Superstition' und 'Sir Duke'"
-    },
-    { // Zeitgenössische Musik
-        "Kategorie": "Musik",
-        "Frage": "Welche Musikrichtung aus Jamaika wurde in den 1960er Jahren weltweit populär, u.a. durch Bob Marley?",
-        "Antworten": ["Reggae", "Ska", "Rocksteady", "Calypso"],
-        "RichtigeAntwort": "Reggae",
-        "RichtigeAntwortMöglichkeiten": "Reggae",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Reggae aus Jamaika wurde in den 1960er Jahren weltweit populär, u.a. durch Bob Marley"
     },
     { // Zeitgenössische Musik
         "Kategorie": "Musik",
@@ -1621,7 +1028,7 @@ const musik = [
         "Antworten": ["Nirvana", "Pearl Jam", "Soundgarden", "Alice in Chains"],
         "RichtigeAntwort": "Nirvana",
         "RichtigeAntwortMöglichkeiten": "Nirvana",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Nirvana ist bekannt für ihre Grunge-Musik und das Album 'Nevermind', das in den 1990er Jahren herauskam"
     },
     { // Zeitgenössische Musik
@@ -1630,7 +1037,7 @@ const musik = [
         "Antworten": ["Michael Jackson", "Prince", "Madonna", "Elton John"],
         "RichtigeAntwort": "Michael Jackson",
         "RichtigeAntwortMöglichkeiten": "Michael Jackson",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "leicht",
         "Fakt": "Michael Jackson, bekannt für Hits wie 'Thriller' und 'Billie Jean', wird oft als 'King of Pop' bezeichnet"
     },
     { // Zeitgenössische Musik
@@ -1665,7 +1072,7 @@ const musik = [
         "Frage": "Welche Musikrichtung, die sich durch improvisierte Rhythmen und poetische Texte auszeichnet, entstand in den 1970er Jahren in den USA?",
         "Antworten": ["Hip-Hop", "Blues", "Jazz", "Country"],
         "RichtigeAntwort": "Hip-Hop",
-        "RichtigeAntwortMöglichkeiten": "Hip-Hop",
+        "RichtigeAntwortMöglichkeiten": "Hip-Hop rap",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Hip-Hop, bekannt für improvisierte Rhythmen und poetische Texte, entstand in den 1970er Jahren in den USA"
     },
@@ -1702,17 +1109,8 @@ const musik = [
         "Antworten": ["Leonard Cohen", "Bob Dylan", "Bruce Springsteen", "Paul Simon"],
         "RichtigeAntwort": "Leonard Cohen",
         "RichtigeAntwortMöglichkeiten": "Leonard Cohen",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Leonard Cohen ist bekannt für seine markante Stimme und das Lied 'Hallelujah'"
-    },
-    { // Zeitgenössische Musik
-        "Kategorie": "Musik",
-        "Frage": "Welches Musikgenre entstand in den 1980er Jahren und kombinierte Elemente des Punk und elektronischer Musik?",
-        "Antworten": ["New Wave", "Grunge", "Hip-Hop", "Blues"],
-        "RichtigeAntwort": "New Wave",
-        "RichtigeAntwortMöglichkeiten": "New Wave Neue Welle",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "New Wave entstand in den 1980er Jahren und kombinierte Elemente des Punk und elektronischer Musik"
     },
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1748,7 +1146,7 @@ const musik = [
         "Antworten": ["Kirchenmusik", "Oper", "Ballett", "Sinfonie"],
         "RichtigeAntwort": "Kirchenmusik",
         "RichtigeAntwortMöglichkeiten": "Kirchenmusik",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Giovanni Pierluigi da Palestrina ist besonders bekannt für seine Kirchenmusik"
     },
     { // Giovanni Pierluigi da Palestrina
@@ -1778,24 +1176,6 @@ const musik = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Giovanni Pierluigi da Palestrina wurde im Jahr 1525 geboren"
     },
-    { // Giovanni Pierluigi da Palestrina
-        "Kategorie": "Musik",
-        "Frage": "Welchen Beruf hatte Giovanni Pierluigi da Palestrina neben dem Komponieren?",
-        "Antworten": ["Kapellmeister", "Opernsänger", "Violinist", "Dirigent"],
-        "RichtigeAntwort": "Kapellmeister",
-        "RichtigeAntwortMöglichkeiten": "Kapellmeister",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Neben seiner Tätigkeit als Komponist war Giovanni Pierluigi da Palestrina auch als Kapellmeister tätig"
-    },
-    { // Giovanni Pierluigi da Palestrina
-        "Kategorie": "Musik",
-        "Frage": "Wie viele Messen wird angenommen, dass Giovanni Pierluigi da Palestrina komponiert hat?",
-        "Antworten": ["über 100", "50", "25", "200"],
-        "RichtigeAntwort": "über 100",
-        "RichtigeAntwortMöglichkeiten": "über 100",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Man nimmt an, dass Giovanni Pierluigi da Palestrina über 100 Messen komponiert hat"
-    },
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1805,7 +1185,7 @@ const musik = [
         "Antworten": ["Renaissance", "Barock", "Klassik", "Romantik"],
         "RichtigeAntwort": "Renaissance",
         "RichtigeAntwortMöglichkeiten": "Renaissance",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Josquin des Prez war ein bedeutender Komponist der Renaissance"
     },
     { // Josquin des Prez
@@ -1814,7 +1194,7 @@ const musik = [
         "Antworten": ["Kirchenmusik", "Oper", "Ballett", "Sinfonie"],
         "RichtigeAntwort": "Kirchenmusik",
         "RichtigeAntwortMöglichkeiten": "Kirchenmusik",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Josquin des Prez ist besonders bekannt für seine Kirchenmusik"
     },
     { // Josquin des Prez
@@ -1835,6 +1215,15 @@ const musik = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Josquin des Prez ist besonders berühmt für seine Motetten"
     },
+    { // Renaissance
+        "Kategorie": "Musik",
+        "Frage": "Wer war ein berühmter Komponist von Kirchenmusik in der Renaissance?",
+        "Antworten": ["Josquin des Prez", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
+        "RichtigeAntwort": "Josquin des Prez",
+        "RichtigeAntwortMöglichkeiten": "Josquin des Prez",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Josquin des Prez war ein berühmter Komponist von Kirchenmusik und gilt als einer der einflussreichsten Musiker der Renaissance"
+    },
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1853,24 +1242,24 @@ const musik = [
         "Antworten": ["Orgelmusik", "Oper", "Ballett", "Lied"],
         "RichtigeAntwort": "Orgelmusik",
         "RichtigeAntwortMöglichkeiten": "Orgelmusik",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Johann Sebastian Bach ist besonders bekannt für seine Orgelmusik"
     },
     { // Johann Sebastian Bach
         "Kategorie": "Musik",
-        "Frage": "Wie heißt das berühmte Werk von Bach, das aus zwei Büchern mit insgesamt 48 Präludien und Fugen besteht?",
+        "Frage": "Wie heißt das berühmte Werk von Bach, das Präludien und Fugen in allen Dur- und Molltonarten umfasst?",
         "Antworten": ["Das Wohltemperierte Klavier", "Die Kunst der Fuge", "Brandenburgische Konzerte", "Goldberg-Variationen"],
         "RichtigeAntwort": "Das Wohltemperierte Klavier",
         "RichtigeAntwortMöglichkeiten": "Wohltemperierte Klavier",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Das 'Wohltemperierte Klavier' besteht aus zwei Büchern mit insgesamt 48 Präludien und Fugen"
-    },
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das 'Wohltemperierte Klavier' enthält Präludien und Fugen in allen Dur- und Molltonarten."
+    },    
     { // Johann Sebastian Bach
         "Kategorie": "Musik",
         "Frage": "Welches Werk von Bach gilt als exemplarisch für die barocke Fugenkomposition?",
         "Antworten": ["Die Kunst der Fuge", "Das Wohltemperierte Klavier", "Brandenburgische Konzerte", "Matthäuspassion"],
         "RichtigeAntwort": "Die Kunst der Fuge",
-        "RichtigeAntwortMöglichkeiten": "Die Kunst der Fuge",
+        "RichtigeAntwortMöglichkeiten": "Kunst Fuge",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die 'Kunst der Fuge' gilt als exemplarisches Werk der barocken Fugenkomposition"
     },
@@ -1889,7 +1278,7 @@ const musik = [
         "Antworten": ["Goldberg-Variationen", "Das Wohltemperierte Klavier", "Matthäuspassion", "Musikalisches Opfer"],
         "RichtigeAntwort": "Goldberg-Variationen",
         "RichtigeAntwortMöglichkeiten": "Goldberg-Variationen",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Die 'Goldberg-Variationen' sind ein berühmtes Werk von Bach, das ursprünglich für Cembalo komponiert wurde"
     },
     { // Johann Sebastian Bach
@@ -1904,7 +1293,7 @@ const musik = [
     { // Johann Sebastian Bach
         "Kategorie": "Musik",
         "Frage": "Wie viele Kinder hatte Johann Sebastian Bach?",
-        "Antworten": ["20", "5", "10", "15"],
+        "Antworten": ["20", "4", "keine", "2"],
         "RichtigeAntwort": "20",
         "RichtigeAntwortMöglichkeiten": "20",
         "Schwierigkeitsgrad": "extrem",
@@ -1935,7 +1324,7 @@ const musik = [
         "Antworten": ["1685", "1700", "1725", "1750"],
         "RichtigeAntwort": "1685",
         "RichtigeAntwortMöglichkeiten": "1685",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Johann Sebastian Bach wurde im Jahr 1685 geboren"
     },
     { // Johann Sebastian Bach
@@ -1944,7 +1333,7 @@ const musik = [
         "Antworten": ["1750", "1730", "1780", "1800"],
         "RichtigeAntwort": "1750",
         "RichtigeAntwortMöglichkeiten": "1750",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Johann Sebastian Bach starb im Jahr 1750"
     },
     { // Johann Sebastian Bach
@@ -1953,7 +1342,7 @@ const musik = [
         "Antworten": ["65", "70", "55", "60"],
         "RichtigeAntwort": "65",
         "RichtigeAntwortMöglichkeiten": "65",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Johann Sebastian Bach wurde 65 Jahre alt"
     },
     { // Johann Sebastian Bach
@@ -1962,7 +1351,7 @@ const musik = [
         "Antworten": ["Leipzig", "Weimar", "Eisenach", "Köthen"],
         "RichtigeAntwort": "Leipzig",
         "RichtigeAntwortMöglichkeiten": "Leipzig",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Johann Sebastian Bach arbeitete als Kantor in Leipzig und komponierte dort viele seiner Kirchenwerke"
     },
     { // Johann Sebastian Bach
@@ -1980,7 +1369,7 @@ const musik = [
         "Antworten": ["Carl Philipp Emanuel Bach", "Wilhelm Friedemann Bach", "Johann Christian Bach", "Johann Christoph Bach"],
         "RichtigeAntwort": "Carl Philipp Emanuel Bach",
         "RichtigeAntwortMöglichkeiten": "Carl Philipp Emanuel Bach",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Carl Philipp Emanuel Bach, einer von Bachs Söhnen, wurde ebenfalls ein berühmter Komponist"
     },
     { // Johann Sebastian Bach
@@ -1991,6 +1380,44 @@ const musik = [
         "RichtigeAntwortMöglichkeiten": "Matthäuspassion",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die 'Matthäuspassion' erlangte erst im 19. Jahrhundert durch eine Aufführung von Felix Mendelssohn Berühmtheit"
+    },
+    { // Barock
+        "Kategorie": "Musik",
+        "Frage": "Wer ist der bekannteste Komponiste des Barock?",
+        "Antworten": ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Johann Sebastian Bach ist einer der bekanntesten Komponisten des Barock"
+    },
+    { // Barock
+        "Kategorie": "Musik",
+        "Frage": "Welcher deutsche Komponist schrieb die 'Brandenburgischen Konzerte'?",
+        "Antworten": ["Johann Sebastian Bach", "Georg Friedrich Händel", "Antonio Vivaldi", "Henry Purcell"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Johann Sebastian Bach schrieb die berühmten 'Brandenburgischen Konzerte'"
+    },
+    { 
+        // Johann Sebastian Bach
+        "Kategorie": "Musik",
+        "Frage": "Welcher deutsche Komponist schrieb die 'Goldberg-Variationen'?",
+        "Antworten": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Joseph Haydn"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Johann Sebastian Bach schrieb die 'Goldberg-Variationen', ein Meisterwerk der Variationskunst."
+    },
+    { 
+        // Johann Sebastian Bach
+        "Kategorie": "Musik",
+        "Frage": "Welcher deutsche Komponist schrieb die 'Matthäuspassion'?",
+        "Antworten": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Joseph Haydn"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Johann Sebastian Bach schrieb die 'Matthäuspassion', eines der bedeutendsten Werke geistlicher Musik."
     },
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2003,6 +1430,15 @@ const musik = [
         "RichtigeAntwortMöglichkeiten": "Barock",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Antonio Vivaldi war ein bedeutender Komponist des Barock"
+    },
+    { // Barock
+        "Kategorie": "Musik",
+        "Frage": "Welcher Barockkomponist schrieb die berühmten 'Vier Jahreszeiten'?",
+        "Antworten": ["Antonio Vivaldi", "Johann Sebastian Bach", "Georg Friedrich Händel", "Claudio Monteverdi"],
+        "RichtigeAntwort": "Antonio Vivaldi",
+        "RichtigeAntwortMöglichkeiten": "Antonio Vivaldi",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Antonio Vivaldi schrieb die berühmten 'Vier Jahreszeiten'"
     },
     { // Antonio Vivaldi
         "Kategorie": "Musik",
@@ -2018,8 +1454,8 @@ const musik = [
         "Frage": "Welchen Beinamen trug Antonio Vivaldi aufgrund seiner Haarfarbe und seines Berufs als Priester?",
         "Antworten": ["Der Rote Priester", "Der Schwarze Violinist", "Der Weiße Komponist", "Der Blaue Dirigent"],
         "RichtigeAntwort": "Der Rote Priester",
-        "RichtigeAntwortMöglichkeiten": "Der Rote Priester",
-        "Schwierigkeitsgrad": "mittel",
+        "RichtigeAntwortMöglichkeiten": "Rote Priester",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi trug den Beinamen 'Der Rote Priester' aufgrund seiner roten Haare und seines Berufs als Priester"
     },
     { // Antonio Vivaldi
@@ -2027,26 +1463,26 @@ const musik = [
         "Frage": "Welche musikalische Gattung dominierte Vivaldis Werk?",
         "Antworten": ["Konzert", "Oper", "Sinfonie", "Lied"],
         "RichtigeAntwort": "Konzert",
-        "RichtigeAntwortMöglichkeiten": "Konzert",
-        "Schwierigkeitsgrad": "leicht",
+        "RichtigeAntwortMöglichkeiten": "Konzert Solokonzert",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Konzert war die musikalische Gattung, die Vivaldis Werk dominierte"
     },
-    { // Antonio Vivaldi
+    { // Antonio Vivaldi /A
         "Kategorie": "Musik",
         "Frage": "Wie viele Konzerte wird angenommen, dass Vivaldi komponiert hat?",
         "Antworten": ["Über 500", "Über 100", "Über 50", "Über 1000"],
         "RichtigeAntwort": "Über 500",
         "RichtigeAntwortMöglichkeiten": "Über 500",
-        "Schwierigkeitsgrad": "schwer",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi soll über 500 Konzerte komponiert haben"
     },
-    { // Antonio Vivaldi
+    { // Antonio Vivaldi /A
         "Kategorie": "Musik",
         "Frage": "Wann wurde Antonio Vivaldi geboren?",
         "Antworten": ["1678", "1700", "1725", "1750"],
         "RichtigeAntwort": "1678",
         "RichtigeAntwortMöglichkeiten": "1678",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Antonio Vivaldi wurde im Jahr 1678 geboren"
     },
     { // Antonio Vivaldi
@@ -2055,7 +1491,7 @@ const musik = [
         "Antworten": ["Venedig", "Rom", "Mailand", "Florenz"],
         "RichtigeAntwort": "Venedig",
         "RichtigeAntwortMöglichkeiten": "Venedig",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi wurde in Venedig geboren"
     },
     { // Antonio Vivaldi
@@ -2064,34 +1500,542 @@ const musik = [
         "Antworten": ["Priester", "Arzt", "Rechtsanwalt", "Lehrer"],
         "RichtigeAntwort": "Priester",
         "RichtigeAntwortMöglichkeiten": "Priester",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi arbeitete neben seiner Tätigkeit als Komponist auch als Priester"
     },
-    { // Antonio Vivaldi
+    { // Antonio Vivaldi /A
         "Kategorie": "Musik",
         "Frage": "Wann starb Antonio Vivaldi?",
         "Antworten": ["1741", "1750", "1725", "1700"],
         "RichtigeAntwort": "1741",
         "RichtigeAntwortMöglichkeiten": "1741",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Antonio Vivaldi starb im Jahr 1741"
     },
-    { // Antonio Vivaldi
+    { // Antonio Vivaldi /A
         "Kategorie": "Musik",
         "Frage": "Wie alt wurde Antonio Vivaldi?",
         "Antworten": ["63", "70", "55", "50"],
         "RichtigeAntwort": "63",
         "RichtigeAntwortMöglichkeiten": "63",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi wurde 63 Jahre alt"
     },
 
-
-
-
-
-
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Epoche war Georg Friedrich Händel ein bedeutender Komponist?",
+        "Antworten": ["Barock", "Klassik", "Romantik", "Renaissance"],
+        "RichtigeAntwort": "Barock",
+        "RichtigeAntwortMöglichkeiten": "Barock",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Georg Friedrich Händel war einer der bedeutendsten Komponisten des Barock und prägte besonders die Oper und das Oratorium."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Oratorium von Händel enthält den berühmten Chor \"Hallelujah\"?",
+        "Antworten": ["Messiah", "Judas Maccabaeus", "Israel in Egypt", "Samson"],
+        "RichtigeAntwort": "Messiah",
+        "RichtigeAntwortMöglichkeiten": "Messiah Messias",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Oratorium \"Messiah\" ist eines von Händels bekanntesten Werken und wird besonders zur Weihnachtszeit häufig aufgeführt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Land wurde der Musiker Georg Friedrich Händel geboren?",
+        "Antworten": ["Deutschland", "England", "Italien", "Frankreich"],
+        "RichtigeAntwort": "Deutschland",
+        "RichtigeAntwortMöglichkeiten": "Deutschland",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Georg Friedrich Händel wurde in Halle an der Saale, Deutschland, geboren und verbrachte später den Großteil seines Lebens in England."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Staatsbürgerschaft nahm Georg Friedrich Händel im Jahr 1727 an?",
+        "Antworten": ["Britische", "Deutsche", "Französische", "Italienische"],
+        "RichtigeAntwort": "Britische",
+        "RichtigeAntwortMöglichkeiten": "Britische England englisch",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Händel wurde 1727 britischer Staatsbürger und war ein angesehener Komponist am englischen Königshof."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Händel wurde zur Krönung von König George II. komponiert?",
+        "Antworten": ["Zadok the Priest", "Water Music", "Music for the Royal Fireworks", "Messiah"],
+        "RichtigeAntwort": "Zadok the Priest",
+        "RichtigeAntwortMöglichkeiten": "Zadok the Priest Zadok",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "\"Zadok the Priest\" wurde 1727 für die Krönung von König George II. komponiert und ist seitdem ein fester Bestandteil britischer Krönungszeremonien."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie heißt Händels Suite, die für eine königliche Bootsfahrt auf der Themse komponiert wurde?",
+        "Antworten": ["Water Music", "Music for the Royal Fireworks", "Messiah", "Solomon"],
+        "RichtigeAntwort": "Water Music",
+        "RichtigeAntwortMöglichkeiten": "Water Music Wassermusik",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die \"Water Music\" wurde 1717 für eine Bootsfahrt von König George I. auf der Themse komponiert und gilt als Meisterwerk der barocken Instrumentalmusik."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wann wurde Georg Friedrich Händel geboren?",
+        "Antworten": ["1685", "1700", "1660", "1725"],
+        "RichtigeAntwort": "1685",
+        "RichtigeAntwortMöglichkeiten": "1685",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Georg Friedrich Händel wurde 1685 geboren, im selben Jahr wie Johann Sebastian Bach und Domenico Scarlatti."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wann starb Georg Friedrich Händel?",
+        "Antworten": ["1759", "1740", "1770", "1720"],
+        "RichtigeAntwort": "1759",
+        "RichtigeAntwortMöglichkeiten": "1759",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Georg Friedrich Händel starb 1759 in London und wurde in der Westminster Abbey beigesetzt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche beiden berühmten Komponisten wurden 1685 geboren?",
+        "Antworten": ["Johann Sebastian Bach, Georg Friedrich Händel", "Wolfgang Amadeus Mozart, Joseph Haydn", "Antonio Vivaldi, Franz Schubert", "Richard Wagner, Franz Liszt"],
+        "RichtigeAntwort": "Johann Sebastian Bach und Georg Friedrich Händel",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach Georg Friedrich Händel Domenico Scarlatti",
+        "Schwierigkeitsgrad": "expert ",
+        "Fakt": "1685 ist ein bedeutendes Jahr in der Musikgeschichte, da in diesem Jahr drei herausragende Komponisten geboren wurden: Bach in Deutschland, Händel in Deutschland (später England) und Scarlatti in Italien."
+    },
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Stück gilt als die erste Oper der Musikgeschichte?",
+        "Antworten": ["Dafne", "L'Orfeo", "Don Giovanni", "Die Zauberflöte"],
+        "RichtigeAntwort": "Dafne",
+        "RichtigeAntwortMöglichkeiten": "Dafne",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Oper \"Dafne\" von Jacopo Peri, die um 1598 entstand, wird als die erste Oper der Musikgeschichte angesehen, obwohl die Partitur nur fragmentarisch erhalten ist."
+    },
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Welche Komposition von Joseph Haydn wird oft als 'Surprise Symphony' bezeichnet?",
+        "Antworten": ["Sinfonie Nr. 94", "Sinfonie Nr. 101", "Sinfonie Nr. 104", "Sinfonie Nr. 88"],
+        "RichtigeAntwort": "Sinfonie Nr. 94",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 94",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Joseph Haydns Sinfonie Nr. 94 wird oft als 'Surprise Symphony' bezeichnet, wegen des plötzlichen lauten Akkords im zweiten Satz"
+    },
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Welcher klassische Komponist schrieb 'Die Schöpfung'?",
+        "Antworten": ["Joseph Haydn", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Carl Philipp Emanuel Bach"],
+        "RichtigeAntwort": "Joseph Haydn",
+        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Joseph Haydn schrieb das Oratorium 'Die Schöpfung', das eines seiner berühmtesten Werke ist"
+    },
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Wer war ein einflussreicher Musiklehrer und Komponist der Wiener Klassik?",
+        "Antworten": ["Joseph Haydn", "Richard Wagner", "Franz Schubert", "Hector Berlioz"],
+        "RichtigeAntwort": "Joseph Haydn",
+        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Joseph Haydn war ein einflussreicher Musiklehrer und Komponist der Wiener Klassik"
+    },
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist ist als 'Vater der Sinfonie' bekannt?",
+        "Antworten": ["Joseph Haydn", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
+        "RichtigeAntwort": "Joseph Haydn",
+        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Joseph Haydn komponierte über 100 Sinfonien, wofür er diesen Titel bekam"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist war ein Schüler von Joseph Haydn?",
+        "Antworten": ["Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Franz Schubert", "Richard Wagner"],
+        "RichtigeAntwort": "Ludwig van Beethoven",
+        "RichtigeAntwortMöglichkeiten": "Ludwig van Beethoven",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ludwig van Beethoven nahm Unterricht bei Joseph Haydn, obwohl ihre Zusammenarbeit nicht immer reibungslos verlief."
+    },
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker gilt als der bekanntesten Komponist der Wiener Klassik?",
+        "Antworten": ["Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Richard Wagner", "Claude Debussy"],
+        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
+        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Wolfgang Amadeus Mozart ist einer der bekanntesten Komponisten der Wiener Klassik"
+    },
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist schrieb die berühmte Oper 'Die Zauberflöte'?",
+        "Antworten": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Joseph Haydn", "Johann Sebastian Bach"],
+        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
+        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Wolfgang Amadeus Mozart schrieb die berühmte Oper 'Die Zauberflöte'"
+    },
+    { // Klassik
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist der Klassik schrieb die Oper 'Don Giovanni'?",
+        "Antworten": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Joseph Haydn", "Johann Sebastian Bach"],
+        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
+        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Wolfgang Amadeus Mozart schrieb die berühmte Oper 'Don Giovanni'"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Epoche war Wolfgang Amadeus Mozart ein bedeutender Komponist?",
+        "Antworten": ["Klassik", "Barock", "Romantik", "Renaissance"],
+        "RichtigeAntwort": "Klassik",
+        "RichtigeAntwortMöglichkeiten": "Klassik",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Wolfgang Amadeus Mozart war einer der wichtigsten Komponisten der Wiener Klassik."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Oper von Mozart enthält die berühmte 'Königin der Nacht'-Arie?",
+        "Antworten": ["Die Zauberflöte", "Don Giovanni", "Figaros Hochzeit", "Cosi fan tutte"],
+        "RichtigeAntwort": "Die Zauberflöte",
+        "RichtigeAntwortMöglichkeiten": "Zauberflöte",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Arie 'Der Hölle Rache' aus der Oper 'Die Zauberflöte' gehört zu den bekanntesten Koloraturarien der Musikgeschichte."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Alter komponierte Mozart seine erste Sinfonie?",
+        "Antworten": ["8 Jahre", "12 Jahre", "15 Jahre", "18 Jahre"],
+        "RichtigeAntwort": "8 Jahre",
+        "RichtigeAntwortMöglichkeiten": "8 Jahre",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Mozart komponierte seine erste Sinfonie, die Sinfonie Nr. 1 in Es-Dur, im Alter von nur 8 Jahren."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Oper von Mozart basiert auf der berühmten Geschichte des Don Juan?",
+        "Antworten": ["Don Giovanni", "Die Hochzeit des Figaro", "Die Zauberflöte", "Cosi fan tutte"],
+        "RichtigeAntwort": "Don Giovanni",
+        "RichtigeAntwortMöglichkeiten": "Don Giovanni",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Oper 'Don Giovanni' erzählt die Geschichte des Frauenhelden Don Juan und wird oft als eines von Mozarts Meisterwerken betrachtet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Stadt wurde Wolfgang Amadeus Mozart geboren?",
+        "Antworten": ["Salzburg", "Wien", "Prag", "München"],
+        "RichtigeAntwort": "Salzburg",
+        "RichtigeAntwortMöglichkeiten": "Salzburg",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mozart wurde 1756 in Salzburg geboren und begann schon früh, als musikalisches Wunderkind zu gelten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Mit welchem anderen berühmten Komponisten war Mozart befreundet und beeinflusste sich gegenseitig?",
+        "Antworten": ["Joseph Haydn", "Ludwig van Beethoven", "Johann Sebastian Bach", "Franz Schubert"],
+        "RichtigeAntwort": "Joseph Haydn",
+        "RichtigeAntwortMöglichkeiten": "Joseph Haydn",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mozart und Haydn waren nicht nur Zeitgenossen, sondern auch enge Freunde, die sich gegenseitig sehr schätzten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Sinfonien schrieb Wolfgang Amadeus Mozart insgesamt?",
+        "Antworten": ["41", "40", "30", "50"],
+        "RichtigeAntwort": "41",
+        "RichtigeAntwortMöglichkeiten": "41",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mozart schrieb insgesamt 41 Sinfonien, wobei die letzte, die 'Jupiter-Sinfonie', als eine seiner größten gilt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk Mozarts wurde zur Einweihung der Wiener Freiheitsoper aufgeführt?",
+        "Antworten": ["Die Zauberflöte", "Cosi fan tutte", "Don Giovanni", "Figaros Hochzeit"],
+        "RichtigeAntwort": "Die Zauberflöte",
+        "RichtigeAntwortMöglichkeiten": "Die Zauberflöte Zauberflöte",
+        "Schwierigkeitsgrad": "experts",
+        "Fakt": "Die 'Zauberflöte' wurde 1791 zur Eröffnung der Freiheitsoper in Wien uraufgeführt und gilt als eines seiner populärsten Werke."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Alter starb Wolfgang Amadeus Mozart?",
+        "Antworten": ["35", "40", "50", "45"],
+        "RichtigeAntwort": "35",
+        "RichtigeAntwortMöglichkeiten": "35",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Mozart starb tragischerweise im Alter von nur 35 Jahren, hinterließ jedoch ein musikalisches Erbe von über 600 Werken."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Sinfonie Mozarts wird als 'Jupiter-Sinfonie' bezeichnet?",
+        "Antworten": ["Sinfonie Nr. 41", "Sinfonie Nr. 40", "Sinfonie Nr. 39", "Sinfonie Nr. 38"],
+        "RichtigeAntwort": "Sinfonie Nr. 41",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 41 Jupiter-Sinfonie",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Jupiter-Sinfonie' ist Mozarts letzte Sinfonie und wird für ihre brillante Struktur und meisterhafte Komposition gefeiert."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrumentalstück Mozarts wurde später durch einen Film weltberühmt?",
+        "Antworten": ["Klavierkonzert Nr. 21", "Eine kleine Nachtmusik", "Sinfonie Nr. 41", "Sonate Nr. 11"],
+        "RichtigeAntwort": "Klavierkonzert Nr. 21",
+        "RichtigeAntwortMöglichkeiten": "Klavierkonzert Nr. 21 Elvira Madigan",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das zweite Adagio des Klavierkonzerts Nr. 21 wurde durch den Film 'Elvira Madigan' berühmt und wird oft mit dem Film in Verbindung gebracht."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk Mozarts wurde in seinem letzten Lebensjahr vollendet?",
+        "Antworten": ["Die Zauberflöte", "Requiem", "Cosi fan tutte", "Die Hochzeit des Figaro"],
+        "RichtigeAntwort": "Die Zauberflöte",
+        "RichtigeAntwortMöglichkeiten": "Die Zauberflöte Zauberflöte",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Mozarts letzte vollständig vollendete Oper war 'Die Zauberflöte', die 1791, wenige Monate vor seinem Tod, uraufgeführt wurde."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Mozart blieb unvollendet und wurde von einem Schüler fertiggestellt?",
+        "Antworten": ["Requiem", "Die Zauberflöte", "Don Giovanni", "Sinfonie Nr. 41"],
+        "RichtigeAntwort": "Requiem",
+        "RichtigeAntwortMöglichkeiten": "Requiem",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mozarts Requiem blieb unvollendet, als er starb, und wurde später von seinem Schüler Franz Xaver Süssmayr vollendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Jahr wurde Wolfgang Amadeus Mozart geboren?",
+        "Antworten": ["1756", "1760", "1745", "1770"],
+        "RichtigeAntwort": "1756",
+        "RichtigeAntwortMöglichkeiten": "1756",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Mozart wurde am 27. Januar 1756 in Salzburg geboren."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Kinder hatte Mozart insgesamt?",
+        "Antworten": ["6", "1", "21", "2"],
+        "RichtigeAntwort": "6",
+        "RichtigeAntwortMöglichkeiten": "6",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Wolfgang Amadeus Mozart hatte insgesamt sechs Kinder, von denen jedoch nur zwei das Erwachsenenalter erreichten."
+    },
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Jahr wurde Ludwig van Beethoven geboren?",
+        "Antworten": ["1770", "1756", "1780", "1791"],
+        "RichtigeAntwort": "1770",
+        "RichtigeAntwortMöglichkeiten": "1770",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ludwig van Beethoven wurde am 17. Dezember 1770 in Bonn getauft."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Beethoven ist als 'Schicksalssinfonie' bekannt?",
+        "Antworten": ["Sinfonie Nr. 5", "Sinfonie Nr. 9", "Sinfonie Nr. 3", "Sinfonie Nr. 7"],
+        "RichtigeAntwort": "Sinfonie Nr. 5",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 5 5. Sinfonie Schicksalssinfonie",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die 5. Sinfonie Beethovens wird aufgrund ihres markanten Anfangsmotivs oft als 'Schicksalssinfonie' bezeichnet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie lautet der vollständige Name von Beethoven?",
+        "Antworten": ["Ludwig van Beethoven", "Ludwig Johann van Beethoven", "Johann Ludwig van Beethoven", "Ludwig Wolfgang van Beethoven"],
+        "RichtigeAntwort": "Ludwig van Beethoven",
+        "RichtigeAntwortMöglichkeiten": "Ludwig van Beethoven",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der vollständige Name von Beethoven ist Ludwig van Beethoven, wobei 'van' auf seine flämische Herkunft hinweist."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beethoven-Werk ist die Europahymne?",
+        "Antworten": ["Ode an die Freude", "Für Elise", "Mondscheinsonate", "Pastorale"],
+        "RichtigeAntwort": "Ode an die Freude",
+        "RichtigeAntwortMöglichkeiten": "Ode an die Freude Freude schöner Götterfunken",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die 'Ode an die Freude' aus Beethovens 9. Sinfonie wurde zur Hymne der Europäischen Union."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches bekannte Klavierwerk Beethovens ist als 'Mondscheinsonate' bekannt?",
+        "Antworten": ["Sonate Nr. 14", "Sonate Nr. 8", "Sonate Nr. 23", "Sonate Nr. 21"],
+        "RichtigeAntwort": "Sonate Nr. 14",
+        "RichtigeAntwortMöglichkeiten": "Sonate Nr. 14 Mondscheinsonate",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Mondscheinsonate' verdankt ihren Namen dem Dichter Ludwig Rellstab, der sie mit dem Mondschein über dem Vierwaldstättersee verglich."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Sinfonien hat Beethoven insgesamt geschrieben?",
+        "Antworten": ["9", "8", "10", "7"],
+        "RichtigeAntwort": "9",
+        "RichtigeAntwortMöglichkeiten": "9",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Beethoven komponierte neun Sinfonien, wobei die letzte, die 9. Sinfonie, die berühmte 'Ode an die Freude' enthält."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Krankheit beeinträchtigte Beethovens Leben und Werk erheblich?",
+        "Antworten": ["Taubheit", "Blindheit", "Lähmung", "Epilepsie"],
+        "RichtigeAntwort": "Taubheit",
+        "RichtigeAntwortMöglichkeiten": "Taubheit Gehörverlust Schwerhörigkeit",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Beethoven litt unter zunehmendem Gehörverlust und komponierte viele seiner Meisterwerke, obwohl er taub war."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Klaviersonaten komponierte Beethoven?",
+        "Antworten": ["32", "29", "30", "35"],
+        "RichtigeAntwort": "32",
+        "RichtigeAntwortMöglichkeiten": "32",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Beethoven komponierte 32 Klaviersonaten, darunter die berühmte 'Mondscheinsonate' und 'Appassionata'."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Stadt verbrachte Beethoven den Großteil seines Lebens?",
+        "Antworten": ["Wien", "Bonn", "Berlin", "Salzburg"],
+        "RichtigeAntwort": "Wien",
+        "RichtigeAntwortMöglichkeiten": "Wien",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Beethoven zog 1792 nach Wien, wo er den Rest seines Lebens verbrachte und als Komponist berühmt wurde."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches war Beethovens einziges Opernwerk?",
+        "Antworten": ["Fidelio", "Don Giovanni", "Die Zauberflöte", "La Traviata"],
+        "RichtigeAntwort": "Fidelio",
+        "RichtigeAntwortMöglichkeiten": "Fidelio",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'Fidelio' ist Beethovens einzige Oper und handelt von Mut, Freiheit und Treue."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Komposition widmete Beethoven Napoleon Bonaparte?",
+        "Antworten": ["Sinfonie Nr. 3", "Sinfonie Nr. 5", "Sinfonie Nr. 7", "Sinfonie Nr. 9"],
+        "RichtigeAntwort": "Sinfonie Nr. 3",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 3 Eroica",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Beethoven widmete die 3. Sinfonie Napoleon, zog die Widmung aber zurück, als Napoleon sich zum Kaiser krönte."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Jahr starb Ludwig van Beethoven?",
+        "Antworten": ["1827", "1830", "1820", "1835"],
+        "RichtigeAntwort": "1827",
+        "RichtigeAntwortMöglichkeiten": "1827",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Beethoven starb am 26. März 1827 in Wien."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beethoven-Werk wurde durch die Mondlandung der Apollo 11 Mission weltweit berühmt?",
+        "Antworten": ["Sinfonie Nr. 9", "Sonate Nr. 14", "Für Elise", "Sinfonie Nr. 5"],
+        "RichtigeAntwort": "Sonate Nr. 14",
+        "RichtigeAntwortMöglichkeiten": "Sonate Nr. 14 Mondscheinsonate",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Mondscheinsonate von Beethoven wurde oft mit der Apollo 11 Mission in Verbindung gebracht und weltweit gespielt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nannte Beethoven seine Sinfonie Nr. 8?",
+        "Antworten": ["Die kleine Sinfonie", "Die große Sinfonie", "Die humorvolle Sinfonie", "Die heroische Sinfonie"],
+        "RichtigeAntwort": "Die kleine Sinfonie",
+        "RichtigeAntwortMöglichkeiten": "Die kleine Sinfonie",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Beethoven bezeichnete seine 8. Sinfonie als 'die kleine Sinfonie', im Gegensatz zu der 7., die größer und intensiver war."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche berühmte Missa von Beethoven wird als eines seiner größten Werke angesehen?",
+        "Antworten": ["Missa Solemnis", "Missa Brevis", "Requiem", "Missa Cantata"],
+        "RichtigeAntwort": "Missa Solemnis",
+        "RichtigeAntwortMöglichkeiten": "Missa Solemnis",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Missa Solemnis' wurde von Beethoven als eines seiner bedeutendsten Werke betrachtet und gilt als Meilenstein der sakralen Musik."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Freund und Mäzen unterstützte Beethoven während seiner schwierigsten Jahre?",
+        "Antworten": ["Erzherzog Rudolph", "Joseph Haydn", "Ferdinand Ries", "Karl Czerny"],
+        "RichtigeAntwort": "Erzherzog Rudolph",
+        "RichtigeAntwortMöglichkeiten": "Erzherzog Rudolph",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Erzherzog Rudolph, ein Schüler Beethovens, war ein enger Freund und wichtiger Unterstützer während seiner Schaffenskrisen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Technik ist in Beethovens späteren Streichquartetten besonders bemerkenswert?",
+        "Antworten": ["Kontrapunkt", "Fuge", "Variation", "Sonatenform"],
+        "RichtigeAntwort": "Kontrapunkt",
+        "RichtigeAntwortMöglichkeiten": "Kontrapunkt",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die späten Streichquartette Beethovens, insbesondere Op. 131 und Op. 132, zeigen seine Meisterschaft im Kontrapunkt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Sinfonie verwendete Beethoven erstmals ein Chor?",
+        "Antworten": ["Sinfonie Nr. 9", "Sinfonie Nr. 6", "Sinfonie Nr. 5", "Sinfonie Nr. 8"],
+        "RichtigeAntwort": "Sinfonie Nr. 9",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9 Chor",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Beethovens 9. Sinfonie war die erste, die einen Chor in großem Stil einsetzte, insbesondere in der 'Ode an die Freude'."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Bedeutung hatte der Brief 'An die unsterbliche Geliebte' in Beethovens Leben?",
+        "Antworten": ["Er zeigt seine tiefe Liebe zu einer anonymen Frau.", "Er war eine Widmung für Napoleon.", "Er erklärt seine Taubheit.", "Er war ein Dankesschreiben an einen Mäzen."],
+        "RichtigeAntwort": "Er zeigt seine tiefe Liebe zu einer anonymen Frau.",
+        "RichtigeAntwortMöglichkeiten": "tiefe Liebe unsterbliche Geliebte",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der berühmte Brief 'An die unsterbliche Geliebte' enthüllt Beethovens intensive Gefühle, jedoch bleibt die Identität der Frau ein Rätsel."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Werke von Beethoven gelten als Meilensteine der Klaviermusik?",
+        "Antworten": ["Appassionata und Waldsteinsonate", "Pastorale und Eroica", "Fidelio und Ode an die Freude", "Missa Solemnis und Für Elise"],
+        "RichtigeAntwort": "Appassionata und Waldsteinsonate",
+        "RichtigeAntwortMöglichkeiten": "Appassionata Waldsteinsonate",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die 'Appassionata' und die 'Waldsteinsonate' gehören zu den herausragendsten Klavierwerken Beethovens und der Musikgeschichte."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Sinfonie Beethovens wurde bei seiner letzten öffentlichen Aufführung uraufgeführt?",
+        "Antworten": ["Sinfonie Nr. 9", "Sinfonie Nr. 8", "Sinfonie Nr. 7", "Sinfonie Nr. 5"],
+        "RichtigeAntwort": "Sinfonie Nr. 9",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die 9. Sinfonie war Beethovens letztes großes öffentlich aufgeführtes Werk und gilt als Höhepunkt seines Schaffens."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Verbindung hatte Beethoven zur Heiligenstädter Erklärung?",
+        "Antworten": ["Es war ein Dokument, das seine Verzweiflung über seine Taubheit ausdrückte.", "Es war eine musikalische Widmung an die Natur.", "Es war ein Brief an seinen Bruder.", "Es war ein Konzertprogramm."],
+        "RichtigeAntwort": "Es war ein Dokument, das seine Verzweiflung über seine Taubheit ausdrückte.",
+        "RichtigeAntwortMöglichkeiten": "Verzweiflung Taubheit Heiligenstädter Erklärung",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "In der Heiligenstädter Erklärung offenbarte Beethoven seine Verzweiflung über seine fortschreitende Taubheit und sein Ringen mit seinem Schicksal."
+    }
+
+
+
+
 
 
 

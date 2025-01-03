@@ -675,8 +675,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const wrapper = document.querySelector('.next-button-wrapper');
     let startY;
     let currentY = 0;
-    const maxY = 0; // Obere Begrenzung des Wrappers
-    const minY = window.innerHeight / 2; // Maximale Bewegung nach unten
 
     function onTouchStart(e) {
         if (!wrapper.classList.contains('correct') && !wrapper.classList.contains('incorrect')) return;
@@ -684,37 +682,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onTouchMove(e) {
-        if (!wrapper.classList.contains('correct') && !wrapper.classList.contains('incorrect')) return;
         const touchY = e.touches[0].clientY;
         currentY = touchY - startY;
-
-        // Begrenzen der Bewegung
-        if (currentY < maxY) {
-            currentY = maxY;
-        } else if (currentY > minY) {
-            currentY = minY;
-        }
-
-        wrapper.style.transition = 'none'; // Transition während der Bewegung deaktivieren
+        currentY = Math.max(0, currentY);
+        currentY = Math.min(window.innerHeight * 0.6, currentY);
         wrapper.style.transform = `translateY(${currentY}px)`;
     }
 
     function onTouchEnd() {
-        // Transition für die Animation aktivieren
-        wrapper.style.transition = 'transform 0.3s ease-out, opacity 0.5s ease-out';
-
-        if (currentY > minY / 2) {
-            // 'Snappen' zur Endposition
-            currentY = minY;
+        if (currentY > window.innerHeight * 0.3) {
+            currentY = window.innerHeight * 0.6;
         } else {
-            // 'Snappen' zur Anfangsposition
             currentY = 0;
         }
-        
         wrapper.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function resetWrapper() {
+        wrapper.style.transition = 'transform 0.3s ease-out';
+        wrapper.style.transform = 'translateY(100%)';
+    }
+
+    function loadNextQuestionWrapper() {
+        resetWrapper();
+        setTimeout(() => {
+            wrapper.classList.add('correct'); // Position auf sichtbar setzen
+        }, 100);
     }
 
     wrapper.addEventListener('touchstart', onTouchStart);
     wrapper.addEventListener('touchmove', onTouchMove);
     wrapper.addEventListener('touchend', onTouchEnd);
+
+    // Simulation der nächsten Frage
+    function loadNextQuestion() {
+        loadNextQuestionWrapper();
+        // Logik zum Laden der nächsten Frage...
+    }
 });
