@@ -11,7 +11,7 @@ const geographie = [
         "RichtigeAntwort": "5",
         "RichtigeAntwortMöglichkeiten": "5",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Es gibt fünf Ozeane auf der Erde: den Pazifischen Ozean, den Atlantischen Ozean, den Indischen Ozean, den Arktischen Ozean und den Südlichen Ozean"
+        "Fakt": "Der Pazifische Ozean, der Atlantische Ozean, der Indische Ozean, der Arktische Ozean und der Südliche Ozean"
     },
     { //Größter Ozean der Welt
         "Kategorie": "Geographie",
@@ -22,24 +22,24 @@ const geographie = [
         "Schwierigkeitsgrad": "leicht",
         "Fakt": "Der Pazifische Ozean ist mit einer Fläche von etwa 168 Millionen Quadratkilometern der größte Ozean der Welt"
     },
-    { //Kleinster Ozean der Welt
+    { 
         "Kategorie": "Geographie",
         "Frage": "Welches ist der kleinste Ozean der Welt?",
         "Antworten": ["Indischer Ozean", "Südlicher Ozean", "Arktischer Ozean", "Atlantischer Ozean"],
         "RichtigeAntwort": "Arktischer Ozean",
-        "RichtigeAntwortMöglichkeiten": "Arktischer Ozean",
-        "Schwierigkeitsgrad": "mittel",
+        "RichtigeAntwortMöglichkeiten": "Arktischer Arktik",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Arktische Ozean hat trotzdem eine Fläche von etwa 14 Millionen Quadratkilometern"
-    },
+    },    
     { //Wasserstrom im Pazifik
         "Kategorie": "Geographie",
         "Frage": "Welcher große Wasserstrom fließt durch den Pazifischen Ozean?",
         "Antworten": ["Golfstrom", "Humboldtstrom", "Nordatlantikstrom", "Ostgrönlandstrom"],
         "RichtigeAntwort": "Humboldtstrom",
         "RichtigeAntwortMöglichkeiten": "Humboldtstrom",
-        "Schwierigkeitsgrad": "expert",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Der Humboldtstrom ist ein kalter Meeresstrom, der entlang der Westküste Südamerikas durch den Pazifischen Ozean fließt"
-    },
+    }, 
     { //Pazifik Bedeutung des Namens
         "Kategorie": "Geographie",
         "Frage": "Was bedeutet der Name 'Pazifik'?",
@@ -53,10 +53,10 @@ const geographie = [
         "Kategorie": "Geographie",
         "Frage": "Wie tief ist der tiefste Punkt des Marianengrabens?",
         "Antworten": ["8.848 Meter", "10.994 Meter", "11.034 Meter", "12.000 Meter"],
-        "RichtigeAntwort": "11.034 Meter",
-        "RichtigeAntwortMöglichkeiten": "11.034 11.000",
+        "RichtigeAntwort": "11.034 Meter", 
+        "RichtigeAntwortMöglichkeiten": "11.034 11.000 11k elftausend",
         "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Der tiefste Punkt des Marianengrabens, bekannt als das Challenger-Tief, liegt etwa 11.034 Meter unter dem Meeresspiegel"
+        "Fakt": "Im Challenger-Tief herrscht ein Druck von über 1.000 Bar, etwa das Tausendfache des Luftdrucks an der Erdoberfläche."
     },
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -97,15 +97,16 @@ const geographie = [
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Der Name 'Atlantik' leitet sich vom griechischen Gott Atlas ab und bedeutet 'Ozean des Atlas'"
     },
-    { //Anzahl der Kontinente, die an den Atlantik grenzen
+    { 
+        //Anzahl der Kontinente, die an den Atlantik grenzen
         "Kategorie": "Geographie",
         "Frage": "Wie viele Kontinente grenzen an den Atlantischen Ozean?",
         "Antworten": ["3", "4", "5", "6"],
         "RichtigeAntwort": "4",
-        "RichtigeAntwortMöglichkeiten": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Vier Kontinente grenzen an den Atlantischen Ozean: Nordamerika, Südamerika, Europa und Afrika"
-    },
+        "Fakt": "Vier Kontinente grenzen an den Atlantischen Ozean: Nordamerika, Südamerika, Europa und Afrika."
+    },    
     { //Größte Insel im Atlantik
         "Kategorie": "Geographie",
         "Frage": "Welche ist die größte Insel im Atlantischen Ozean?",
@@ -792,7 +793,7 @@ const geographie = [
         "Frage": "Was ist die größte Wüste der Welt?",
         "Antworten": ["Sahara", "Gobi", "Antarktische Wüste", "Arktische Wüste"],
         "RichtigeAntwort": "Antarktische Wüste",
-        "RichtigeAntwortMöglichkeiten": "Antarktische Wüste",
+        "RichtigeAntwortMöglichkeiten": "Antarktische Antarktis",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Die Antarktische Wüste ist die größte Wüste der Welt, obwohl sie aus Eis und Schnee besteht"
     },
@@ -847,6 +848,8 @@ const geographie = [
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Grönland ist die größte Insel der Welt und befindet sich im Nordatlantik"
     },
+
+
     { //Politischer Status von Grönland
         "Kategorie": "Geographie",
         "Frage": "Zu welchem Land gehört Grönland politisch?",
@@ -4522,7 +4525,7 @@ const geographie = [
         "RichtigeAntwortMöglichkeiten": "Argentinien Chile",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Argentinien und Chile teilen die längste Landgrenze in Südamerika, die etwa 5.308 Kilometer lang ist"
-    },
+    },   
     { //Landgrenzen
         "Kategorie": "Geographie",
         "Frage": "Welches Land hat die längste Landgrenze mit Brasilien?",
@@ -7203,7 +7206,7 @@ const geographie = [
         "Frage": "Zwischen welchen zwei Ländern liegen die Victoriafälle?",
         "Antworten": ["Sambia und Simbabwe", "Tansania und Kenia", "Botswana und Namibia", "Mosambik und Malawi"],
         "RichtigeAntwort": "Sambia und Simbabwe",
-        "RichtigeAntwortMöglichkeiten": "Sambia und Simbabwe",
+        "RichtigeAntwortMöglichkeiten": "Sambia Simbabwe",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Victoriafälle liegen an der Grenze zwischen Sambia und Simbabwe und sind einer der größten Wasserfälle der Welt"
     },
@@ -7913,18 +7916,6 @@ const geographie = [
         "RichtigeAntwortMöglichkeiten": "Lava-Röhren",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Auf der Jeju-Vulkaninsel sind besonders die Lava-Röhren bekannt, die durch erkaltete Lavaströme entstanden sind"
-    },
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    { //Naturwunder
-        "Kategorie": "Geographie",
-        "Frage": "In welchem Land befindet sich der Lake Baikal?",
-        "Antworten": ["China", "Mongolei", "Kasachstan", "Russland"],
-        "RichtigeAntwort": "Russland",
-        "RichtigeAntwortMöglichkeiten": "Russland",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Baikalsee ist der tiefste und älteste Süßwassersee der Welt"
     },
 
 
@@ -8642,7 +8633,7 @@ const geographie = [
 
     { //Hauptgebirgszüge
         "Kategorie": "Geographie",
-        "Frage": "Welches ist das höchste Gebirge Afrikas?",
+        "Frage": "Welcher ist der höchste Berg in Afrikas?",
         "Antworten": ["Atlas", "Ruwenzori", "Drakensberge", "Kilimandscharo"],
         "RichtigeAntwort": "Kilimandscharo",
         "RichtigeAntwortMöglichkeiten": "Kilimandscharo",
@@ -9093,15 +9084,6 @@ const geographie = [
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die Oka ist der größte Nebenfluss der Wolga"
     },
-    { //Flüsse und deren Einzugsgebiete
-        "Kategorie": "Geographie",
-        "Frage": "Welcher Fluss bildet die Grenze zwischen Frankreich und Deutschland?",
-        "Antworten": ["Elbe", "Oder", "Rhein", "Mosel"],
-        "RichtigeAntwort": "Rhein",
-        "RichtigeAntwortMöglichkeiten": "Rhein",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Der Rhein bildet teilweise die Grenze zwischen Frankreich und Deutschland"
-    },
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -9543,7 +9525,7 @@ const geographie = [
         "Antworten": ["Norwegen", "Island", "Deutschland", "Brasilien"],
         "RichtigeAntwort": "Island",
         "RichtigeAntwortMöglichkeiten": "Island",
-        "Schwierigkeitsgrad": "expert",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Island hat den höchsten Anteil an erneuerbaren Energien in seiner Energieerzeugung"
     },
     { //Entwicklungsindikatoren
@@ -9584,7 +9566,7 @@ const geographie = [
         "Antworten": ["Indonesien", "Brasilien", "Kongo", "Malaysia"],
         "RichtigeAntwort": "Brasilien",
         "RichtigeAntwortMöglichkeiten": "Brasilien",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Brasilien hat die größte Fläche an abgeholztem Regenwald, insbesondere im Amazonasgebiet"
     },
     { //Umweltprobleme
@@ -9592,7 +9574,7 @@ const geographie = [
         "Frage": "Welches Meer ist am stärksten von Plastikverschmutzung betroffen?",
         "Antworten": ["Nordsee", "Ostsee", "Mittelmeer", "Pazifischer Ozean"],
         "RichtigeAntwort": "Pazifischer Ozean",
-        "RichtigeAntwortMöglichkeiten": "Pazifischer Ozean",
+        "RichtigeAntwortMöglichkeiten": "Pazifischer",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Der Pazifische Ozean ist stark von Plastikverschmutzung betroffen, besonders im Great Pacific Garbage Patch"
     },
@@ -9769,5 +9751,213 @@ const geographie = [
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Der Flughafen Frankfurt ist der größte Flughafen Deutschlands und einer der verkehrsreichsten in Europa"
     },
+
+
+    ///////////////////////////////////////////////////////////////Weitere Fragen//////////////////////////////////////////////////////////////////////////////
+
+    { 
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der tiefste See der Welt?",
+        "Antworten": ["Baikalsee", "Victoriasee", "Tanganjikasee", "Kaspisches Meer"],
+        "RichtigeAntwort": "Baikalsee",
+        "RichtigeAntwortMöglichkeiten": "Baikalsee",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Baikalsee in Russland ist mit einer maximalen Tiefe von 1.642 Metern der tiefste See der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt der höchste Wasserfall der Welt?",
+        "Antworten": ["Niagarafälle", "Victoriafälle", "Salto Ángel", "Kaieteur-Fälle"],
+        "RichtigeAntwort": "Salto Ángel",
+        "RichtigeAntwortMöglichkeiten": "Salto Ángel Angel Falls",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Salto Ángel in Venezuela hat eine Fallhöhe von 979 Metern und ist damit der höchste Wasserfall der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der größte Gletscher der Welt?",
+        "Antworten": ["Lambert-Gletscher", "Vatnajökull", "Pine-Island-Gletscher", "Perito-Moreno-Gletscher"],
+        "RichtigeAntwort": "Lambert-Gletscher",
+        "RichtigeAntwortMöglichkeiten": "Lambert-Gletscher",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Lambert-Gletscher in der Antarktis ist der größte Gletscher der Welt mit einer Länge von über 400 Kilometern"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welche Insel hat die meisten Einwohner weltweit?",
+        "Antworten": ["Java", "Honshu", "Great Britain", "Sumatra"],
+        "RichtigeAntwort": "Java",
+        "RichtigeAntwortMöglichkeiten": "Java",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Java in Indonesien ist die bevölkerungsreichste Insel der Welt mit über 140 Millionen Einwohnern"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kanal verbindet die Nordsee mit dem Schwarzen Meer?",
+        "Antworten": ["Suezkanal", "Panamakanal", "Rhein-Main-Donau-Kanal", "Korinthkanal"],
+        "RichtigeAntwort": "Rhein-Main-Donau-Kanal",
+        "RichtigeAntwortMöglichkeiten": "Rhein-Main-Donau-Kanal",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Rhein-Main-Donau-Kanal verbindet die Nordsee mit dem Schwarzen Meer und ist eine wichtige Handelsroute"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Was versteht man unter einer Megastadt?",
+        "Antworten": ["Städte mit über 10 Millionen Einwohnern", "Hauptstädte", "Historische Städte", "Touristenstädte"],
+        "RichtigeAntwort": "Städte mit über 10 Millionen Einwohnern",
+        "RichtigeAntwortMöglichkeiten": "10",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Beispiele für Megastädte sind Tokio, Jakarta und São Paulo"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welche ist die derzeit am schnellsten wachsende Stadt der Welt?",
+        "Antworten": ["Gwagwalada", "Shanghai", "Shenzhen", "Dubai"],
+        "RichtigeAntwort": "Gwagwalada",
+        "RichtigeAntwortMöglichkeiten": "Gwagwalada",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Gwagwalada in Nigeria ist eine der am schnellsten wachsenden Städte der Welt aufgrund von Urbanisierung und Bevölkerungszuwachs"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt die größte Höhle der Welt?",
+        "Antworten": ["Sơn-Đoòng-Höhle", "Eisriesenwelt", "Mammoth Cave", "Postojna-Höhle"],
+        "RichtigeAntwort": "Sơn-Đoòng-Höhle",
+        "RichtigeAntwortMöglichkeiten": "Sơn-Đoòng Son Doong",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Sơn-Đoòng-Höhle in Vietnam ist die größte bekannte Höhle der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt die höchste befahrbare Straße der Welt?",
+        "Antworten": ["Khardung La", "Great Ocean Road", "Death Road", "Tianmen Mountain Road"],
+        "RichtigeAntwort": "Khardung La",
+        "RichtigeAntwortMöglichkeiten": "Khardung La",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Khardung La in Indien ist mit über 5.359 Metern die höchste befahrbare Straße der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt die größte künstliche Insel der Welt?",
+        "Antworten": ["Palm Jumeirah", "The World", "Sentosa", "Venetian Islands"],
+        "RichtigeAntwort": "Palm Jumeirah",
+        "RichtigeAntwortMöglichkeiten": "Palm Jumeirah",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Palm Jumeirah in Dubai ist die größte künstliche Insel der Welt und bekannt für ihre markante Form"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welche Straße der Welt hat die meisten Spuren?",
+        "Antworten": ["Katy Freeway, USA", "Autobahn A8, Deutschland", "Highway 401, Kanada", "M1, Großbritannien"],
+        "RichtigeAntwort": "Katy Freeway, USA",
+        "RichtigeAntwortMöglichkeiten": "Katy Freeway Katy Freeway USA",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Katy Freeway in Houston, USA, ist mit bis zu 26 Spuren die breiteste Straße der Welt"
+    },    
+    {
+        "Kategorie": "Geographie",
+        "Frage": "In welchem Land liegt Stonehenge?",
+        "Antworten": ["England", "Schottland", "Wales", "Irland"],
+        "RichtigeAntwort": "England",
+        "RichtigeAntwortMöglichkeiten": "England",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Stonehenge ist ein prähistorisches Monument in England und ein UNESCO-Weltkulturerbe"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wo liegt das Bermuda-Dreieck?",
+        "Antworten": ["Atlantik", "Pazifik", "Indischer Ozean", "Arktischer Ozean"],
+        "RichtigeAntwort": "Atlantik",
+        "RichtigeAntwortMöglichkeiten": "Atlantik Bochum",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Bermuda-Dreieck liegt im Atlantik und ist bekannt für verschwundene Schiffe und Flugzeuge"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt das größte Korallenriff der Welt?",
+        "Antworten": ["Great Barrier Reef", "Rotes Meer Riff", "Belize Barrier Reef", "Tubbataha-Riff"],
+        "RichtigeAntwort": "Great Barrier Reef",
+        "RichtigeAntwortMöglichkeiten": "Great Barrier Reef",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Great Barrier Reef vor der Küste Australiens ist das größte Korallenriff der Welt und erstreckt sich über 2.300 Kilometer"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Inselstaat besteht aus über 7.000 Inseln?",
+        "Antworten": ["Philippinen", "Indonesien", "Malediven", "Japan"],
+        "RichtigeAntwort": "Philippinen",
+        "RichtigeAntwortMöglichkeiten": "Philippinen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Philippinen bestehen aus mehr als 7.000 Inseln und liegen im westlichen Pazifik"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt die längste Gebirgskette der Welt?",
+        "Antworten": ["Anden", "Himalaya", "Rocky Mountains", "Atlasgebirge"],
+        "RichtigeAntwort": "Anden",
+        "RichtigeAntwortMöglichkeiten": "Anden",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Anden erstrecken sich über etwa 7.200 Kilometer entlang der Westküste Südamerikas und sind die längste Gebirgskette der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Was ist die nördlichste Stadt der Welt?",
+        "Antworten": ["Longyearbyen", "Barrow", "Reykjavík", "Tromsø"],
+        "RichtigeAntwort": "Longyearbyen",
+        "RichtigeAntwortMöglichkeiten": "Longyearbyen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Longyearbyen liegt auf der Insel Spitzbergen in Norwegen und ist die nördlichste Stadt der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welches ist der flächenmäßig größte Binnenstaat der Welt?",
+        "Antworten": ["Kasachstan", "Mongolei", "Bolivien", "Tschad"],
+        "RichtigeAntwort": "Kasachstan",
+        "RichtigeAntwortMöglichkeiten": "Kasachstan",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kasachstan ist der größte Binnenstaat der Welt mit einer Fläche von etwa 2,7 Millionen Quadratkilometern"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Wie heißt der längste Tunnel der Welt?",
+        "Antworten": ["Gotthard-Basistunnel", "Eurotunnel", "Seikan-Tunnel", "Channel Tunnel"],
+        "RichtigeAntwort": "Gotthard-Basistunnel",
+        "RichtigeAntwortMöglichkeiten": "Gotthard-Basis",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Gotthard-Basistunnel in der Schweiz ist mit einer Länge von 57,1 Kilometern der längste Eisenbahntunnel der Welt"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welcher ist der weltweit größte künstliche See?",
+        "Antworten": ["Lake Volta", "Three Gorges Reservoir", "Lake Mead", "Kariba-Stausee"],
+        "RichtigeAntwort": "Lake Volta",
+        "RichtigeAntwortMöglichkeiten": "Lake Volta Volta-See",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Volta-See in Ghana ist der größte künstliche See der Welt nach Fläche und wurde durch den Bau des Akosombo-Damms geschaffen"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welcher Kontinent hat die meisten Binnenstaaten?",
+        "Antworten": ["Afrika", "Europa", "Asien", "Südamerika"],
+        "RichtigeAntwort": "Afrika",
+        "RichtigeAntwortMöglichkeiten": "Afrika",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Afrika hat mit 16 Binnenstaaten mehr als jeder andere Kontinent, darunter Länder wie Tschad, Mali und Uganda"
+    },
+    {
+        "Kategorie": "Geographie",
+        "Frage": "Welches Land ist am weitesten vom Meer entfernt?",
+        "Antworten": ["Kasachstan", "Mongolei", "Usbekistan", "Tschad"],
+        "RichtigeAntwort": "Kasachstan",
+        "RichtigeAntwortMöglichkeiten": "Kasachstan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Kasachstan ist der am weitesten vom Meer entfernte Staat der Welt, mit einigen Gebieten über 3.000 Kilometer vom nächsten Meer entfernt"
+    },
+    
+    
+    
+    
+    
+    
 
 ]; 

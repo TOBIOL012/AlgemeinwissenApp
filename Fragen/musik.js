@@ -1992,18 +1992,9 @@ const musik = [
         "Frage": "In welcher Sinfonie verwendete Beethoven erstmals ein Chor?",
         "Antworten": ["Sinfonie Nr. 9", "Sinfonie Nr. 6", "Sinfonie Nr. 5", "Sinfonie Nr. 8"],
         "RichtigeAntwort": "Sinfonie Nr. 9",
-        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9 Chor",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9 Ode an die Freude Freude schöner Götterfunke",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Beethovens 9. Sinfonie war die erste, die einen Chor in großem Stil einsetzte, insbesondere in der 'Ode an die Freude'."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welche Bedeutung hatte der Brief 'An die unsterbliche Geliebte' in Beethovens Leben?",
-        "Antworten": ["Er zeigt seine tiefe Liebe zu einer anonymen Frau.", "Er war eine Widmung für Napoleon.", "Er erklärt seine Taubheit.", "Er war ein Dankesschreiben an einen Mäzen."],
-        "RichtigeAntwort": "Er zeigt seine tiefe Liebe zu einer anonymen Frau.",
-        "RichtigeAntwortMöglichkeiten": "tiefe Liebe unsterbliche Geliebte",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Der berühmte Brief 'An die unsterbliche Geliebte' enthüllt Beethovens intensive Gefühle, jedoch bleibt die Identität der Frau ein Rätsel."
     },
     {
         "Kategorie": "Musik",
@@ -2019,7 +2010,7 @@ const musik = [
         "Frage": "Welche Sinfonie Beethovens wurde bei seiner letzten öffentlichen Aufführung uraufgeführt?",
         "Antworten": ["Sinfonie Nr. 9", "Sinfonie Nr. 8", "Sinfonie Nr. 7", "Sinfonie Nr. 5"],
         "RichtigeAntwort": "Sinfonie Nr. 9",
-        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9 Ode an die Freude Freude schöner Götterfunke",
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Die 9. Sinfonie war Beethovens letztes großes öffentlich aufgeführtes Werk und gilt als Höhepunkt seines Schaffens."
     },
@@ -2031,7 +2022,7 @@ const musik = [
         "RichtigeAntwortMöglichkeiten": "Verzweiflung Taubheit Heiligenstädter Erklärung",
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "In der Heiligenstädter Erklärung offenbarte Beethoven seine Verzweiflung über seine fortschreitende Taubheit und sein Ringen mit seinem Schicksal."
-    }
+    },
 
 
 
