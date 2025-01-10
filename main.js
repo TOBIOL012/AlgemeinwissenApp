@@ -326,6 +326,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+function togglePopup(popupId) {
+    // Alle Popups ausblenden
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach(popup => {
+        if (popup.id === popupId) {
+            // Popup ein- oder ausblenden
+            popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+        } else {
+            popup.style.display = 'none';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     function updateTopBar() {
         const coins = parseInt(localStorage.getItem('totalCoins') || '0', 10);
@@ -344,12 +357,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Optional: Funktion, die aufgerufen werden kann, wenn sich Werte ändern
     window.updateStats = updateTopBar;
-
-    // Beispiel: Klick auf Benachrichtigungssymbol
-    const notificationIcon = document.getElementById('notifications');
-    notificationIcon.addEventListener('click', function() {
-        alert('Benachrichtigungen öffnen!');
-    });
 });
 
 

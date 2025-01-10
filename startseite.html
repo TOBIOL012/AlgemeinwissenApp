@@ -10,24 +10,31 @@
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="stat" id="streak">
-            <img src="streak.png" alt="Streak">
-            <span class="stat-value" id="streak-value">0</span>
-        </div>
-        <div class="stat" id="coins">
-            <img src="coin.png" alt="Coins">
-            <span class="stat-value" id="coins-value">0</span>
-        </div>
-        <div class="stat" id="xp">
-            <img src="XP.png" alt="XP">
-            <span class="stat-value" id="xp-value">0</span>
-        </div>
-        <div class="stat" id="notifications">
-            <img src="icons8-nachricht-96.png" alt="Benachrichtigungen">
-            <span class="stat-value" id="notifications-value">0</span>
-        </div>
+    <!-- HTML: Leiste oben -->
+<div class="top-bar">
+    <div class="stat" id="streak" onclick="togglePopup('streak-popup')">
+        <img src="streak.png" alt="Streak" class="streak-img">
+        <span class="stat-value" id="streak-value">0</span>
     </div>
+    <div class="stat" id="coins" onclick="togglePopup('coins-popup')">
+        <img src="icons8-smaragd-60.png" alt="Coins" class="coins-img">
+        <span class="stat-value" id="coins-value">0</span>
+    </div>
+    <div class="stat" id="xp" onclick="togglePopup('xp-popup')">
+        <img src="icons8-bücher-64.png" alt="XP" class="xp-img">
+        <span class="stat-value" id="xp-value">0</span>
+    </div>
+    <div class="stat" id="notifications" onclick="togglePopup('notifications-popup')">
+        <img src="icons8-nachricht-96 (1).png" alt="Benachrichtigungen" class="notifications-img">
+        <span class="stat-value" id="notifications-value">0</span>
+    </div>
+</div>
+
+<!-- Pop-up-Felder -->
+<div class="popup" id="streak-popup" style="display: none;">Streak-Details<br><br><br><br><br><br></div>
+<div class="popup" id="coins-popup" style="display: none;">Coins-Details<br><br><br><br><br><br></div>
+<div class="popup" id="xp-popup" style="display: none;">XP-Details<br><br><br><br><br><br></div>
+<div class="popup" id="notifications-popup" style="display: none;">Benachrichtigungen<br><br><br><br><br><br></div>
 
     <div class="buttons-container" id="buttons-container">
         <button class="animated-button"  id="animated-button" onclick="location.href='Kategorien.html'">Spielen</button>

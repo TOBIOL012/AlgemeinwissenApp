@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
     const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
     console.log(incorrectQuestions);
+    
 
 
 
@@ -34,6 +35,7 @@ if ('webkitSpeechRecognition' in window) {
     recognition.continuous = true; // Kontinuierliche Erkennung aktivieren
     recognition.interimResults = false; // Keine Zwischenergebnisse
     recognition.lang = 'de-DE'; // Sprache auf Deutsch setzen
+    
 
     recognition.onstart = function() {
         isRecognizing = true;
@@ -65,6 +67,8 @@ if ('webkitSpeechRecognition' in window) {
 // Sprachaufnahme beim Drücken des Mikrofon-Buttons starten und stoppen
 const micButton = document.querySelector('.mic-button');
 
+console.log("1");
+loadQuestion();
 
 micButton.addEventListener('mousedown', function() {
     isMouseDown = true; // Maus gedrückt
@@ -341,6 +345,7 @@ document.querySelector('input').addEventListener('focus', function() {
 
     
     function loadQuestion() {
+        console.log("loaded");
         
 
         if (currentQuestionIndex >= totalQuestions) {
@@ -363,9 +368,15 @@ document.querySelector('input').addEventListener('focus', function() {
             return;
         }
 
+        if (!randomQuestion || !randomQuestion.Schwierigkeitsgrad) {
+            console.error('Fehler: randomQuestion oder Schwierigkeitsgrad ist nicht geladen.');
+            alert('Die Daten konnten nicht geladen werden. Bitte überprüfe die Datenquelle.');
+            return; // Beende die Funktion, um Fehler zu vermeiden
+        }
+
         const auswahl = document.querySelector('.auswahl');
         const eintipp = document.querySelector('.eintipp');
-
+    
         if (randomQuestion.Schwierigkeitsgrad === 'leicht' || randomQuestion.Schwierigkeitsgrad === 'mittel') {
             console.log("auswahl");
             auswahl.style.display = 'block';
@@ -579,6 +590,7 @@ document.querySelector('input').addEventListener('focus', function() {
             factBox.style.display = 'block';
         } else if (clickCount === 2) {
             loadQuestion();
+            console.log("2");
         }
     }
 
@@ -591,17 +603,7 @@ document.querySelector('input').addEventListener('focus', function() {
         console.log('Alle Fehler wurden aus der Datenbank entfernt.');
     });
 
-    
-
-    continueButton.addEventListener('click', function() {
-        console.log("hallo3")
-        console.log("Button clicked");
-        loadQuestion();
-    });
-
-
-
-    loadQuestion();
+    console.log("problem");
 });
 
 
