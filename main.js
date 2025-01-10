@@ -323,7 +323,33 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.next-button').addEventListener('click', loadQuestion);
 
     loadQuestion();
+
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    function updateTopBar() {
+        const coins = parseInt(localStorage.getItem('totalCoins') || '0', 10);
+        const xp = parseInt(localStorage.getItem('totalXP') || '0', 10);
+        const streak = parseInt(localStorage.getItem('streakCount') || '0', 10);
+        const notifications = parseInt(localStorage.getItem('notifications') || '0', 10);
+
+        document.getElementById('coins-value').textContent = coins;
+        document.getElementById('xp-value').textContent = xp;
+        document.getElementById('streak-value').textContent = streak;
+        document.getElementById('notifications-value').textContent = notifications;
+    }
+
+    // Initiale Werte laden
+    updateTopBar();
+
+    // Optional: Funktion, die aufgerufen werden kann, wenn sich Werte ändern
+    window.updateStats = updateTopBar;
+
+    // Beispiel: Klick auf Benachrichtigungssymbol
+    const notificationIcon = document.getElementById('notifications');
+    notificationIcon.addEventListener('click', function() {
+        alert('Benachrichtigungen öffnen!');
+    });
+});
 
 

@@ -367,6 +367,7 @@ document.querySelector('input').addEventListener('focus', function() {
         const eintipp = document.querySelector('.eintipp');
 
         if (randomQuestion.Schwierigkeitsgrad === 'leicht' || randomQuestion.Schwierigkeitsgrad === 'mittel') {
+            console.log("auswahl");
             auswahl.style.display = 'block';
             eintipp.style.display = 'none';
             document.querySelector('.question1').textContent = randomQuestion.Frage;
@@ -422,7 +423,7 @@ document.querySelector('input').addEventListener('focus', function() {
             }, { once: true });
         });
         } else {
-            console.log("hallo");
+            console.log("eintipp");
             auswahl.style.display = 'none';
             eintipp.style.display = 'block';
                 hidebars();
@@ -580,6 +581,15 @@ document.querySelector('input').addEventListener('focus', function() {
             loadQuestion();
         }
     }
+
+    document.getElementById('deleteErrorsButton').addEventListener('click', function () {
+        // Lösche die Einträge aus dem Local Storage
+        localStorage.removeItem('incorrectQuestions');
+        
+        // Optionale Rückmeldung an den Benutzer
+        alert('Alle Fehler wurden erfolgreich gelöscht!');
+        console.log('Alle Fehler wurden aus der Datenbank entfernt.');
+    });
 
     
 
