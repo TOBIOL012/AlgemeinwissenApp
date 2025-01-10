@@ -346,6 +346,7 @@ document.querySelector('input').addEventListener('focus', function() {
 
     
     function loadQuestion() {
+        isAnswerChecked = false;
         console.log("loaded");
         
 
@@ -470,7 +471,6 @@ document.querySelector('input').addEventListener('focus', function() {
                     return;
                 }
                 
-                const randomQuestion = getRandomQuestion();
                 if (!randomQuestion) {
                     alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
                     window.location.href = 'kategorien.html';
@@ -574,25 +574,32 @@ document.querySelector('input').addEventListener('focus', function() {
         const correctAnswerDisplay = document.querySelector('.correct-answer2');
         const factDisplay = document.querySelector('.fact');
         const factBox = document.querySelector('.fact-box');
-        const userAnswer = inputField.value.trim();
         const randomQuestion = questions.find(q => q.Frage === document.querySelector('.question2').textContent);
     
-        if (navigator.vibrate) {
-            navigator.vibrate(200);
+        if (!randomQuestion) {
+            console.error('Frage konnte nicht gefunden werden.');
+            return;
         }
     
-        clickCount++;
-        if (clickCount === 1) {
+        if (!isAnswerChecked) {
+            // Zustand: Antwort überprüfen
+            const userAnswer = inputField.value.trim();
             checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort);
-            nextButton.disabled = false;
     
             factDisplay.textContent = randomQuestion.Fakt;
             factDisplay.style.display = 'block';
             factBox.style.display = 'block';
-        } else if (clickCount === 2) {
+    
+            // Button für den nächsten Zustand vorbereiten
+            nextButton.textContent = 'Weiter zur nächsten Frage';
+            isAnswerChecked = true; // Antwort wurde geprüft
+        } else {
+            // Zustand: Nächste Frage laden
             loadQuestion();
-            clickCount = 0;
-            console.log("2");
+    
+            // Button für den ursprünglichen Zustand zurücksetzen
+            nextButton.textContent = 'Einloggen';
+            isAnswerChecked = false; // Zurücksetzen auf den ursprünglichen Zustand
         }
     }
 

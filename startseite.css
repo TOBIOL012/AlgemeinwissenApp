@@ -27,12 +27,12 @@ body {
 
 .top-bar {
     position: fixed;
-    top: 6px;
+    top: 2px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     background-color: #141F25;
-    border: 2px solid #2f4957;
+    border: 3px solid #2f4957;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
@@ -51,7 +51,7 @@ body {
     background-color: #141F25;
     border: 2px solid #2f4957;
     border-radius: 20px;
-    padding: 10px;
+    padding: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     color: white;
     font-family: "Dosis", sans-serif;
@@ -66,31 +66,31 @@ body {
 }
 
 .streak-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+}
+
+.coins-img {
+    width: 31px;
+    height: 31px;
+    margin-right: 4px;
+}
+
+.xp-img {
     width: 30px;
     height: 30px;
     margin-right: 4px;
 }
 
-.coins-img {
-    width: 29px;
-    height: 29px;
-    margin-right: 4px;
-}
-
-.xp-img {
-    width: 28px;
-    height: 28px;
-    margin-right: 4px;
-}
-
 .notifications-img {
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     margin-right: 4px;
 }
 
 .stat-value {
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 #notifications img {
@@ -131,7 +131,10 @@ body {
     padding: 1em 0;
     padding-bottom: 2em;
     border-top: 3px solid #2f4957;
-}s
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
 
 .nav-button {
     display: inline-flex;
@@ -139,7 +142,7 @@ body {
     justify-content: center;
     width: 2.3em;
     height: 2.3em;
-    background-color: #303031;
+    background-color: #141F25;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
