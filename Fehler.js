@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const wrapper = document.querySelector('.results2');
     const correctAnswerDisplay = document.querySelector('.correct-answer2');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
+    let isAnswerChecked = false;
     const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
     console.log(incorrectQuestions);
     
@@ -590,6 +591,7 @@ document.querySelector('input').addEventListener('focus', function() {
             factBox.style.display = 'block';
         } else if (clickCount === 2) {
             loadQuestion();
+            clickCount = 0;
             console.log("2");
         }
     }
@@ -601,6 +603,10 @@ document.querySelector('input').addEventListener('focus', function() {
         // Optionale Rückmeldung an den Benutzer
         alert('Alle Fehler wurden erfolgreich gelöscht!');
         console.log('Alle Fehler wurden aus der Datenbank entfernt.');
+    });
+    const nextButton = document.querySelector('.next-button2');
+    nextButton.addEventListener('click', function() {
+        loadQuestion();
     });
 
     console.log("problem");
