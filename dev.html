@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fehler Entfernen</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fehlerverwaltung</h1>
+        <p>Hier können Sie die gespeicherten Fehler im LocalStorage löschen.</p>
+        <button id="deleteErrorsButton">Fehler löschen</button>
+    </div>
+
+    <script >
+
+    document.getElementById('deleteErrorsButton').addEventListener('click', function () {
+        // Lösche die Einträge aus dem Local Storage
+        localStorage.removeItem('incorrectQuestions');
+        
+        // Optionale Rückmeldung an den Benutzer
+        alert('Alle Fehler wurden erfolgreich gelöscht!');
+        console.log('Alle Fehler wurden aus der Datenbank entfernt.');
+    });
+
+    </script> <!-- Verknüpfung mit der Fehler.js -->
+</body>
+</html>

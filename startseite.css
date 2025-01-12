@@ -30,32 +30,38 @@ body {
     top: 2px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 88%;
     background-color: #141F25;
     border: 3px solid #2f4957;
     border-radius: 20px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    transition: height 0.3s ease;
+    overflow: hidden;
 }
 
-.popup {
-    position: fixed;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+.top-bar-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.top-bar-content {
+    display: none;
+    width: 100%;
     background-color: #141F25;
-    border: 2px solid #2f4957;
-    border-radius: 20px;
-    padding: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     color: white;
-    font-family: "Dosis", sans-serif;
-    z-index: 999;
+    text-align: left;
+    padding: 10px;
+}
+
+.top-bar.expanded .top-bar-content {
+    display: block;
 }
 
 .stat {
@@ -96,6 +102,67 @@ body {
 #notifications img {
     cursor: pointer;
 }
+
+.week-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.week-calendar .days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: calc(100% - 10px);
+    background-color: #141F25;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.week-calendar .day {
+    text-align: center;
+    flex: 1;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.week-calendar .day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: calc(100% - 10px); /* Gleiche Breite wie die Wochentage */
+    background-color: #2f4957;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.week-calendar .day .active {
+    color: red;
+    font-weight: bold;
+}
+
+.week-calendar .day .inactive {
+    color: white;
+}
+
+.week-calendar .day.current-day div {
+    color: blue !important;
+    font-weight: bold;
+}
+
 
 
 
