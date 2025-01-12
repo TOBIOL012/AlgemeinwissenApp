@@ -1,74 +1,83 @@
 const wissenschaft = [
-    {//Weltraumrennen/ganz Weltraum
-        "Kategorie": "Geschichte",
-        "Frage": "In welchem Jahr war der Start des ersten Satelliten?",
-        "Antworten": ["1957", "1960", "1955", "1962"],
-        "RichtigeAntwort": "1957",
-        "RichtigeAntwortMöglichkeiten": "1957",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Der sowjetische Satellit Sputnik 1 wurde 1957 gestartet und war der erste künstliche Satellit im Weltraum."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Wie hieß der erste Mensch im Weltall?",
-        "Antworten": ["Juri Gagarin", "Neil Armstrong", "Buzz Aldrin", "John Glenn"],
-        "RichtigeAntwort": "Juri Gagarin",
-        "RichtigeAntwortMöglichkeiten": "Juri Gagarin Gagarin",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Juri Gagarin war 1961 der erste Mensch, der die Erde vom Weltraum aus sah."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "In welchem Jahr war die erste Mondlandung?",
-        "Antworten": ["1969", "1968", "1970", "1967"],
-        "RichtigeAntwort": "1969",
-        "RichtigeAntwortMöglichkeiten": "1969",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Neil Armstrong und Buzz Aldrin landeten 1969 als erste Menschen auf dem Mond während der Apollo-11-Mission."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welche Nation schickte das erste Tier in den Weltraum?",
-        "Antworten": ["Sowjetunion", "USA", "China", "Frankreich"],
-        "RichtigeAntwort": "Sowjetunion",
-        "RichtigeAntwortMöglichkeiten": "Sowjetunion UDSSR Russland",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Die Sowjetunion schickte 1957 den Hund Laika an Bord von Sputnik 2 in den Weltraum."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Welches Land schickte den ersten Menschen ins All",
-        "Antworten": ["Sowjetunion", "USA", "China", "Frankreich"],
-        "RichtigeAntwort": "Sowjetunion",
-        "RichtigeAntwortMöglichkeiten": "Sowjetunion UDSSR Russland",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Die Sowjetunion schickte 1957 den Hund Laika an Bord von Sputnik 2 in den Weltraum."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Wie hieß das amerikanische Programm der ersten Mondlandung?",
-        "Antworten": ["Apollo", "Gemini", "Mercury", "Artemis"],
-        "RichtigeAntwort": "Apollo",
-        "RichtigeAntwortMöglichkeiten": "Apollo",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Das Apollo-Programm der NASA führte 1969 mit Apollo 11 zur ersten bemannten Mondlandung."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Wie hieß das erste bemannte Raumschiff?",
-        "Antworten": ["Wostok 1", "Apollo 11", "Gemini 3", "Sputnik 1"],
-        "RichtigeAntwort": "Wostok 1",
-        "RichtigeAntwortMöglichkeiten": "Wostok",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Die Wostok 1 war das Raumschiff, mit dem Juri Gagarin 1961 als erster Mensch ins All flog."
-    },
-    {
-        "Kategorie": "Geschichte",
-        "Frage": "Wie hieß die erste Raumstation der Welt?",
-        "Antworten": ["Saljut 1", "Mir", "Skylab", "ISS"],
-        "RichtigeAntwort": "Saljut 1",
-        "RichtigeAntwortMöglichkeiten": "Saljut 1",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Saljut 1, gestartet 1971, war die erste Raumstation der Welt und wurde von der Sowjetunion gebaut."
-    },
+    
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Chemie//////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+////Periodensystem Algemein////
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Wie viele Elemente enthält das Periodensystem?",
+    "Antworten": ["118", "120", "112", "108"],
+    "RichtigeAntwort": "118",
+    "RichtigeAntwortMöglichkeiten": "118 einhundertachtzehn",
+    "Schwierigkeitsgrad": "leicht",
+    "Fakt": "Das Periodensystem enthält derzeit 118 bestätigte chemische Elemente, von denen einige künstlich hergestellt wurden."
+},
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Wie viele Perioden hat das Periodensystem?",
+    "Antworten": ["7", "8", "6", "9"],
+    "RichtigeAntwort": "7",
+    "RichtigeAntwortMöglichkeiten": "7 sieben",
+    "Schwierigkeitsgrad": "leicht",
+    "Fakt": "Das Periodensystem ist in sieben Perioden unterteilt, die den Energieniveaus der Elektronen in den Atomen entsprechen."
+},
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Was beschreibt die Hauptgruppe im Periodensystem?",
+    "Antworten": ["Außenelektronen", "Masse", "Kernprotonen", "Schmelzpunkt"],
+    "RichtigeAntwort": "Außenelektronen",
+    "RichtigeAntwortMöglichkeiten": "Außenelektronen Elektronen Valenzelektronen",
+    "Schwierigkeitsgrad": "mittel",
+    "Fakt": "Die Hauptgruppe gibt an, wie viele Elektronen sich in der äußersten Schale eines Atoms befinden."
+},
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Welche Elemente befinden sich in der ersten Hauptgruppe?",
+    "Antworten": ["Alkalimetalle", "Edelgase", "Halogene", "Übergangsmetalle"],
+    "RichtigeAntwort": "Alkalimetalle",
+    "RichtigeAntwortMöglichkeiten": "Alkalimetalle erste Gruppe",
+    "Schwierigkeitsgrad": "mittel",
+    "Fakt": "Die Elemente der ersten Hauptgruppe, die Alkalimetalle, reagieren sehr leicht mit Wasser und bilden dabei Alkalilösungen."
+},
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Welches ist das leichteste Element im Periodensystem?",
+    "Antworten": ["Wasserstoff", "Helium", "Lithium", "Beryllium"],
+    "RichtigeAntwort": "Wasserstoff",
+    "RichtigeAntwortMöglichkeiten": "Wasserstoff H",
+    "Schwierigkeitsgrad": "leicht",
+    "Fakt": "Wasserstoff hat nur ein Proton und ist das leichteste und häufigste Element im Universum."
+},
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Wie nennt man die waagerechten Reihen im Periodensystem?",
+    "Antworten": ["Perioden", "Hauptgruppen", "Blöcke", "Familien"],
+    "RichtigeAntwort": "Perioden",
+    "RichtigeAntwortMöglichkeiten": "Perioden Reihen",
+    "Schwierigkeitsgrad": "mittel",
+    "Fakt": "Die Perioden im Periodensystem repräsentieren die Energieniveaus der Elektronen in den Atomen."
+},
+{
+    "Kategorie": "Wissenschaft",
+    "Frage": "Was gibt die Ordnungszahl eines Elements an?",
+    "Antworten": ["Die Anzahl der Protonen", "Die Atommasse", "Die Elektronenschale", "Die Reaktivität"],
+    "RichtigeAntwort": "Die Anzahl der Protonen",
+    "RichtigeAntwortMöglichkeiten": "Anzahl Protonen Ordnungszahl",
+    "Schwierigkeitsgrad": "leicht",
+    "Fakt": "Die Ordnungszahl eines Elements entspricht der Anzahl der Protonen im Atomkern und bestimmt die Position des Elements im Periodensystem."
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];

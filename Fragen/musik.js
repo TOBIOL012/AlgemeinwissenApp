@@ -85,7 +85,7 @@ const musik = [
         "Antworten": ["Lyra", "Harfe", "Klavier", "Trompete"],
         "RichtigeAntwort": "Lyra",
         "RichtigeAntwortMöglichkeiten": "Lyra",
-        "Schwierigkeitsgrad": "expert",
+        "Schwierigkeitsgrad": "extre",
         "Fakt": "Die Lyra ist ein Musikinstrument, das im alten Griechenland erfunden wurde"
     },
     { // Altes Griechenland
@@ -1764,8 +1764,8 @@ const musik = [
         "Frage": "Welches Werk Mozarts wurde zur Einweihung der Wiener Freiheitsoper aufgeführt?",
         "Antworten": ["Die Zauberflöte", "Cosi fan tutte", "Don Giovanni", "Figaros Hochzeit"],
         "RichtigeAntwort": "Die Zauberflöte",
-        "RichtigeAntwortMöglichkeiten": "Die Zauberflöte Zauberflöte",
-        "Schwierigkeitsgrad": "experts",
+        "RichtigeAntwortMöglichkeiten": "Zauberflöte",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Die 'Zauberflöte' wurde 1791 zur Eröffnung der Freiheitsoper in Wien uraufgeführt und gilt als eines seiner populärsten Werke."
     },
     {
@@ -1782,7 +1782,7 @@ const musik = [
         "Frage": "Welche Sinfonie Mozarts wird als 'Jupiter-Sinfonie' bezeichnet?",
         "Antworten": ["Sinfonie Nr. 41", "Sinfonie Nr. 40", "Sinfonie Nr. 39", "Sinfonie Nr. 38"],
         "RichtigeAntwort": "Sinfonie Nr. 41",
-        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 41 Jupiter-Sinfonie",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 41",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Die 'Jupiter-Sinfonie' ist Mozarts letzte Sinfonie und wird für ihre brillante Struktur und meisterhafte Komposition gefeiert."
     },
@@ -1800,7 +1800,7 @@ const musik = [
         "Frage": "Welches Werk Mozarts wurde in seinem letzten Lebensjahr vollendet?",
         "Antworten": ["Die Zauberflöte", "Requiem", "Cosi fan tutte", "Die Hochzeit des Figaro"],
         "RichtigeAntwort": "Die Zauberflöte",
-        "RichtigeAntwortMöglichkeiten": "Die Zauberflöte Zauberflöte",
+        "RichtigeAntwortMöglichkeiten": "Zauberflöte",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Mozarts letzte vollständig vollendete Oper war 'Die Zauberflöte', die 1791, wenige Monate vor seinem Tod, uraufgeführt wurde."
     },
@@ -1848,7 +1848,7 @@ const musik = [
         "Frage": "Welches Werk von Beethoven ist als 'Schicksalssinfonie' bekannt?",
         "Antworten": ["Sinfonie Nr. 5", "Sinfonie Nr. 9", "Sinfonie Nr. 3", "Sinfonie Nr. 7"],
         "RichtigeAntwort": "Sinfonie Nr. 5",
-        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 5 5. Sinfonie Schicksalssinfonie",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 5 5. fünfte ",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die 5. Sinfonie Beethovens wird aufgrund ihres markanten Anfangsmotivs oft als 'Schicksalssinfonie' bezeichnet."
     },
@@ -1998,37 +1998,491 @@ const musik = [
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Welche Werke von Beethoven gelten als Meilensteine der Klaviermusik?",
-        "Antworten": ["Appassionata und Waldsteinsonate", "Pastorale und Eroica", "Fidelio und Ode an die Freude", "Missa Solemnis und Für Elise"],
-        "RichtigeAntwort": "Appassionata und Waldsteinsonate",
-        "RichtigeAntwortMöglichkeiten": "Appassionata Waldsteinsonate",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Die 'Appassionata' und die 'Waldsteinsonate' gehören zu den herausragendsten Klavierwerken Beethovens und der Musikgeschichte."
-    },
-    {
-        "Kategorie": "Musik",
         "Frage": "Welche Sinfonie Beethovens wurde bei seiner letzten öffentlichen Aufführung uraufgeführt?",
         "Antworten": ["Sinfonie Nr. 9", "Sinfonie Nr. 8", "Sinfonie Nr. 7", "Sinfonie Nr. 5"],
         "RichtigeAntwort": "Sinfonie Nr. 9",
         "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9 Ode an die Freude Freude schöner Götterfunke",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Die 9. Sinfonie war Beethovens letztes großes öffentlich aufgeführtes Werk und gilt als Höhepunkt seines Schaffens."
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man Schuberts nicht fertiggestellte Sinfonie?",
+        "Antworten": ["Die Unvollendete", "Die Große", "Die Schöne", "Die Letzte"],
+        "RichtigeAntwort": "Die Unvollendete",
+        "RichtigeAntwortMöglichkeiten": "Unvollendete",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die 8. Sinfonie von Franz Schubert wird als 'Die Unvollendete' bezeichnet, da sie unvollständig blieb."
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches bekannte Lied von Schubert vertont eine Ballade von Goethe?",
+        "Antworten": ["Erlkönig", "Die Forelle", "Winterreise", "Ave Maria"],
+        "RichtigeAntwort": "Erlkönig",
+        "RichtigeAntwortMöglichkeiten": "Erlkönig",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Schuberts Lied 'Erlkönig' setzt Goethes gleichnamige Ballade in dramatische Musik um und gilt als Meilenstein der Liedkunst."
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Sammlung von Liedern komponierte Schubert als Vertonung von Gedichten von Wilhelm Müllers?",
+        "Antworten": ["Winterreise", "Die schöne Müllerin", "Schwanengesang", "Erlkönig"],
+        "RichtigeAntwort": "Winterreise",
+        "RichtigeAntwortMöglichkeiten": "Winterreise",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Winterreise' ist ein Liederzyklus von Schubert, der Wilhelm Müllers Gedichte in 24 Liedern vertont."
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Welche Verbindung hatte Beethoven zur Heiligenstädter Erklärung?",
-        "Antworten": ["Es war ein Dokument, das seine Verzweiflung über seine Taubheit ausdrückte.", "Es war eine musikalische Widmung an die Natur.", "Es war ein Brief an seinen Bruder.", "Es war ein Konzertprogramm."],
-        "RichtigeAntwort": "Es war ein Dokument, das seine Verzweiflung über seine Taubheit ausdrückte.",
-        "RichtigeAntwortMöglichkeiten": "Verzweiflung Taubheit Heiligenstädter Erklärung",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "In der Heiligenstädter Erklärung offenbarte Beethoven seine Verzweiflung über seine fortschreitende Taubheit und sein Ringen mit seinem Schicksal."
+        "Frage": "In welchem Alter starb Franz Schubert?",
+        "Antworten": ["31", "32", "33", "30"],
+        "RichtigeAntwort": "31",
+        "RichtigeAntwortMöglichkeiten": "31",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Franz Schubert starb tragisch jung im Alter von 31 Jahren, hinterließ jedoch ein beeindruckendes Werk."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Sinfonien komponierte Franz Schubert?",
+        "Antworten": ["9", "7", "8", "10"],
+        "RichtigeAntwort": "9",
+        "RichtigeAntwortMöglichkeiten": "9",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Franz Schubert komponierte insgesamt neun Sinfonien, darunter die berühmte 'Unvollendete'."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Schubert wurde für seine Freunde während privater Aufführungen bekannt?",
+        "Antworten": ["Schwanengesang", "Forellenquintett", "Winterreise", "Die schöne Müllerin"],
+        "RichtigeAntwort": "Schwanengesang",
+        "RichtigeAntwortMöglichkeiten": "Schwanengesang",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Schwanengesang' ist eine posthume Sammlung von Liedern Schuberts, die bei seinen Freunden beliebt war."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielt eine zentrale Rolle in Schuberts Forellenquintett?",
+        "Antworten": ["Klavier", "Violine", "Cello", "Kontrabass"],
+        "RichtigeAntwort": "Klavier",
+        "RichtigeAntwortMöglichkeiten": "Klavier",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Klavier ist das zentrale Instrument im 'Forellenquintett', das Schuberts Virtuosität zeigt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Schubert wurde erst nach seinem Tod als Meisterwerk anerkannt?",
+        "Antworten": ["Sinfonie Nr. 9", "Die schöne Müllerin", "Erlkönig", "Winterreise"],
+        "RichtigeAntwort": "Sinfonie Nr. 9",
+        "RichtigeAntwortMöglichkeiten": "Sinfonie Nr. 9",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Große C-Dur-Sinfonie' wurde erst nach Schuberts Tod als eines seiner bedeutendsten Werke erkannt."
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Stadt wurde Franz Schubert geboren?",
+        "Antworten": ["Wien", "Salzburg", "Linz", "Graz"],
+        "RichtigeAntwort": "Wien",
+        "RichtigeAntwortMöglichkeiten": "Wien",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Franz Schubert wurde 1797 in Wien geboren, einer Stadt, die sein musikalisches Schaffen stark beeinflusste."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument steht im Mittelpunkt von Frédéric Chopins Werken?",
+        "Antworten": ["Klavier", "Violine", "Cello", "Orgel"],
+        "RichtigeAntwort": "Klavier",
+        "RichtigeAntwortMöglichkeiten": "Klavier",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Klavier ist das zentrale Instrument in Frédéric Chopins Werk, und er wird oft als einer der bedeutendsten Klavierkomponisten der Musikgeschichte angesehen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Klavierkonzerte schrieb Frédéric Chopin?",
+        "Antworten": ["2", "3", "4", "1"],
+        "RichtigeAntwort": "2",
+        "RichtigeAntwortMöglichkeiten": "2",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Frédéric Chopin schrieb zwei Klavierkonzerte: das Klavierkonzert Nr. 1 in e-Moll und das Klavierkonzert Nr. 2 in f-Moll."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Mit welchem Komponisten war Chopin in Paris befreundet?",
+        "Antworten": ["Franz Liszt", "Ludwig van Beethoven", "Richard Wagner", "Johannes Brahms"],
+        "RichtigeAntwort": "Franz Liszt",
+        "RichtigeAntwortMöglichkeiten": "Franz Liszt",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "In Paris war Chopin eng mit Franz Liszt befreundet, und die beiden inspirierten sich gegenseitig."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Krankheit beeinflusste Chopins Leben und Werk erheblich?",
+        "Antworten": ["Tuberkulose", "Diabetes", "Epilepsie", "Herzprobleme"],
+        "RichtigeAntwort": "Tuberkulose",
+        "RichtigeAntwortMöglichkeiten": "Tuberkulose",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Chopin litt fast sein ganzes Leben an Tuberkulose, was seine körperliche Gesundheit beeinträchtigte, jedoch nicht seine musikalische Kreativität."
     },
 
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches monumentale Opernwerk wird oft als Wagners Hauptwerk bezeichnet?",
+        "Antworten": ["Der Ring des Nibelungen", "Tristan und Isolde", "Die Meistersinger von Nürnberg", "Tannhäuser"],
+        "RichtigeAntwort": "Der Ring des Nibelungen",
+        "RichtigeAntwortMöglichkeiten": "Der Ring des Nibelungen Ringzyklus",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der 'Ring des Nibelungen' ist ein vierteiliges Opernwerk und wird als eines der ehrgeizigsten Projekte der Operngeschichte angesehen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches revolutionäre Theater baute Wagner in Bayreuth?",
+        "Antworten": ["Bayreuther Festspielhaus", "Semperoper", "Berliner Staatsoper", "Wiener Staatsoper"],
+        "RichtigeAntwort": "Bayreuther Festspielhaus",
+        "RichtigeAntwortMöglichkeiten": "Bayreuther Festspielhaus Festspielhaus Bayreuth",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Bayreuther Festspielhaus wurde speziell für die Aufführung von Wagners Werken entworfen und ist berühmt für seine einzigartige Akustik."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Jahr wurde Richard Wagner geboren?",
+        "Antworten": ["1813", "1809", "1820", "1818"],
+        "RichtigeAntwort": "1813",
+        "RichtigeAntwortMöglichkeiten": "1813",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Richard Wagner wurde am 22. Mai 1813 in Leipzig geboren."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Oper von Wagner basiert auf einer mittelalterlichen Liebestragödie?",
+        "Antworten": ["Tristan und Isolde", "Lohengrin", "Tannhäuser", "Parsifal"],
+        "RichtigeAntwort": "Tristan und Isolde",
+        "RichtigeAntwortMöglichkeiten": "Tristan Isolde",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Tristan und Isolde' gilt als eines der einflussreichsten Werke der Musikgeschichte und markiert den Übergang zur Moderne."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk Tschaikowskys wird traditionell zu Weihnachten aufgeführt?",
+        "Antworten": ["Der Nussknacker", "Schwanensee", "Dornröschen", "1812 Ouvertüre"],
+        "RichtigeAntwort": "Der Nussknacker",
+        "RichtigeAntwortMöglichkeiten": "Der Nussknacker",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Der Nussknacker' ist eines der bekanntesten Ballette und wird oft während der Weihnachtszeit aufgeführt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Tschaikowsky-Komposition basiert auf Shakespeares Tragödie 'Romeo und Julia'?",
+        "Antworten": ["Romeo und Julia Fantasie-Ouvertüre", "Hamlet", "Der Sturm", "1812 Ouvertüre"],
+        "RichtigeAntwort": "Romeo und Julia Fantasie-Ouvertüre",
+        "RichtigeAntwortMöglichkeiten": "Fantasie-Ouvertüre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Fantasie-Ouvertüre 'Romeo und Julia' von Tschaikowsky setzt Shakespeares Tragödie in dramatische Musik um."
+    },
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Brahms basiert auf einem deutschen Volkslied?",
+        "Antworten": ["Ungarische Tänze", "Ein deutsches Requiem", "Alt-Rhapsodie", "Haydn-Variationen"],
+        "RichtigeAntwort": "Ungarische Tänze",
+        "RichtigeAntwortMöglichkeiten": "Ungarische Tänze",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Ungarischen Tänze' von Brahms basieren auf Melodien ungarischer Volkslieder und sind für ihre Energie und Rhythmik bekannt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Brahms-Werk ist eines der bedeutendsten Requien der Musikgeschichte?",
+        "Antworten": ["Ein deutsches Requiem", "Requiem Op. 45", "Requiem für Klavier", "Requiem in C-Moll"],
+        "RichtigeAntwort": "Ein deutsches Requiem",
+        "RichtigeAntwortMöglichkeiten": "Ein deutsches Requiem",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Ein deutsches Requiem' von Brahms ist ein spirituelles Werk, das sich mit Themen wie Trost und Vergänglichkeit befasst."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk von Claude Debussy gilt als Meilenstein des Impressionismus?",
+        "Antworten": ["Prélude à l'après-midi d'un faune", "Clair de Lune", "La Mer", "Nocturnes"],
+        "RichtigeAntwort": "Prélude à l'après-midi d'un faune",
+        "RichtigeAntwortMöglichkeiten": "Prélude à l'après-midi d'un faune",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Prélude à l'après-midi d'un faune' markiert den Beginn des musikalischen Impressionismus und inspirierte zahlreiche Komponisten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Land wurde Claude Debussy geboren?",
+        "Antworten": ["Frankreich", "Deutschland", "Italien", "Belgien"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Claude Debussy wurde 1862 in Frankreich geboren und gilt als einer der bedeutendsten französischen Komponisten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk gilt als das bekannteste von Claude Debussy?",
+        "Antworten": ["Clair de Lune", "La Mer", "Prélude à l'après-midi d'un faune", "Pelléas et Mélisande"],
+        "RichtigeAntwort": "Clair de Lune",
+        "RichtigeAntwortMöglichkeiten": "Clair de Lune",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'Clair de Lune' ist eines der bekanntesten und am häufigsten gespielten Werke von Debussy, bekannt für seine lyrische Schönheit."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
 
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Ganztöne hat eine Oktave?",
+        "Antworten": ["6", "7", "5", "8"],
+        "RichtigeAntwort": "6",
+        "RichtigeAntwortMöglichkeiten": "6 sechs",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Oktave hat 6 Ganztöne, die jeweils aus zwei Halbtonschritten bestehen."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Vierteltöne hat eine Oktave?",
+        "Antworten": ["24", "12", "16", "20"],
+        "RichtigeAntwort": "24",
+        "RichtigeAntwortMöglichkeiten": "24 vierundzwanzig",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Eine Oktave enthält 24 Vierteltöne, wenn man sie mikrotonal betrachtet."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtöne hat eine Oktave?",
+        "Antworten": ["12", "8", "10", "14"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Eine Oktave hat 12 Halbtonschritte, die aufeinander folgen."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele große Terzen hat eine Dur-Tonleiter?",
+        "Antworten": ["4", "5", "6", "3"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "In einer Dur-Tonleiter gibt es genau 4 große Terzen zwischen den verschiedenen Tönen."
+    },    
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Quarten hat eine Oktave?",
+        "Antworten": ["3", "4", "5", "6"],
+        "RichtigeAntwort": "3",
+        "RichtigeAntwortMöglichkeiten": "3 drei",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Es gibt 3 reine Quarten innerhalb einer Oktave, die sich durch ihre harmonische Stabilität auszeichnen."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Quinten hat eine Dur-Tonleiter?",
+        "Antworten": ["5", "4", "3", "6"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5 fünf",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eine Dur-Tonleiter enthält 5 Quinten, die sich aus den Tönen der Tonleiter zusammensetzen."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Töne hat eine Oktave?",
+        "Antworten": ["12", "8", "7", "10"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Oktave besteht aus 12 Halbtonschritten, die die Grundlage der westlichen Musik bilden."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Töne hat eine Dur-Tonleiter?",
+        "Antworten": ["7", "8", "6", "12"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7 sieben",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Dur-Tonleiter hat 7 unterschiedliche Töne, bevor sie auf den Ausgangston zurückkehrt."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie nennt man den ersten Ton einer Tonleiter?",
+        "Antworten": ["Grundton", "Leitton", "Dominante", "Subdominante"],
+        "RichtigeAntwort": "Grundton",
+        "RichtigeAntwortMöglichkeiten": "Grundton",
+        "Schwierigkeitsgrad": "scwer",
+        "Fakt": "Der Grundton ist der erste Ton einer Tonleiter und gibt ihr ihren Namen."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Welche Tonarten haben keine Vorzeichen?",
+        "Antworten": ["C-Dur", "a-Moll", "G-Dur", "F-Dur"],
+        "RichtigeAntwort": "C-Dur a-Moll",
+        "RichtigeAntwortMöglichkeiten": "C-Dur Cdur C a-Moll amoll",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "C-Dur und a-Moll haben keine Vorzeichen, da ihre Tonleitern ausschließlich weiße Tasten auf dem Klavier verwenden."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine Quinte?",
+        "Antworten": ["7", "5", "6", "8"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7 sieben",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eine Quinte besteht aus 7 Halbtonschritten und ist eines der wichtigsten Intervalle in der Musik."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie nennt man zwei Töne, die gleichzeitig erklingen?",
+        "Antworten": ["Intervall", "Akkord", "Melodie", "Harmonie"],
+        "RichtigeAntwort": "Intervall",
+        "RichtigeAntwortMöglichkeiten": "Intervall",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ein Intervall beschreibt den Abstand zwischen zwei Tönen, die gleichzeitig erklingen."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie nennt man drei oder mehr Töne, die gleichzeitig erklingen und eine harmonische Einheit bilden?",
+        "Antworten": ["Akkord", "Intervall", "Melodie", "Harmonie"],
+        "RichtigeAntwort": "Akkord",
+        "RichtigeAntwortMöglichkeiten": "Akkord",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ein Akkord besteht aus mindestens drei Tönen, die zusammen eine harmonische Einheit bilden."
+    },
+    
+{
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine große Sekunde?",
+        "Antworten": ["2", "1", "3", "4"],
+        "RichtigeAntwort": "2",
+        "RichtigeAntwortMöglichkeiten": "2 zwei",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine große Sekunde besteht aus zwei Halbtonschritten und ist das Intervall zwischen benachbarten Tönen in einer Dur-Tonleiter."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine kleine Terz?",
+        "Antworten": ["3", "2", "4", "5"],
+        "RichtigeAntwort": "3",
+        "RichtigeAntwortMöglichkeiten": "3 drei",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine kleine Terz besteht aus drei Halbtonschritten und wird oft als traurig klingendes Intervall empfunden."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine reine Quarte?",
+        "Antworten": ["5", "4", "6", "7"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5 fünf",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine reine Quarte umfasst fünf Halbtonschritte und wird als sehr stabil empfunden."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine Quinte?",
+        "Antworten": ["7", "5", "6", "8"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7 sieben",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine Quinte umfasst sieben Halbtonschritte und ist eines der wichtigsten Intervalle in der Musik."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine Oktave?",
+        "Antworten": ["12", "10", "8", "14"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Oktave besteht aus zwölf Halbtonschritten und bildet den gleichen Ton eine Stufe höher."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine große Sekunde?",
+        "Antworten": ["2", "1", "3", "4"],
+        "RichtigeAntwort": "2",
+        "RichtigeAntwortMöglichkeiten": "2 zwei",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eine große Sekunde besteht aus zwei Halbtonschritten und ist das Intervall zwischen benachbarten Tönen in einer Dur-Tonleiter."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine kleine Terz?",
+        "Antworten": ["3", "2", "4", "5"],
+        "RichtigeAntwort": "3",
+        "RichtigeAntwortMöglichkeiten": "3 drei",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine kleine Terz besteht aus drei Halbtonschritten und wird oft als traurig klingendes Intervall empfunden."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine reine Quarte?",
+        "Antworten": ["5", "4", "6", "7"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5 fünf",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine reine Quarte umfasst fünf Halbtonschritte und wird als sehr stabil empfunden."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine Quinte?",
+        "Antworten": ["7", "5", "6", "8"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7 sieben",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Eine Quinte umfasst sieben Halbtonschritte und ist eines der wichtigsten Intervalle in der Musik."
+    },
+    {
+        "Kategorie": "Musiktheorie",
+        "Frage": "Wie viele Halbtonschritte hat eine Oktave?",
+        "Antworten": ["12", "10", "8", "14"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Oktave besteht aus zwölf Halbtonschritten und bildet den gleichen Ton eine Stufe höher."
+    }
+    
+    
+    
 
 
 

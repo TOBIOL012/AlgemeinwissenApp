@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const continueButton = document.querySelector('.next-button2');
     const wrapper = document.querySelector('.results2');
     const correctAnswerDisplay = document.querySelector('.correct-answer2');
+    const correctAnswerDisplay2 = document.querySelector('.answer-box2');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
     let isAnswerChecked = false;
+    let currentRandomQuestion = null;
     const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
     console.log(incorrectQuestions);
     
@@ -130,23 +132,49 @@ document.querySelector('input').addEventListener('focus', function() {
     console.log('Tastatur könnte geöffnet sein');
 });
 
-    function getRandomQuestion() {
-        const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
-        
-        if (incorrectQuestions.length === 0) {
-            return null;
-        }
+function getRandomQuestion() {
+    // Lade die fehlerhaften Fragen aus dem LocalStorage
+    const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+    const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
 
-        const question = incorrectQuestions[Math.floor(Math.random() * incorrectQuestions.length)];
-        askedQuestions.push(question.Frage);
-        console.log(question);
-        return question;
+    // Prüfe, ob fehlerhafte Fragen existieren
+    if (incorrectQuestions.length === 0) {
+        console.warn('Keine fehlerhaften Fragen vorhanden.');
+        return null; // Keine Fragen verfügbar
     }
 
-    function setDifficultyBlocks(difficulty) {
-        const difficultyContainer = document.querySelector('.difficulty');
-        difficultyContainer.innerHTML = '';
+    // Filtere die Fragen basierend auf den ausgewählten Kategorien
+    let filteredQuestions = incorrectQuestions;
+    if (selectedCategories.length > 0 && !selectedCategories.includes('Alles')) {
+        filteredQuestions = incorrectQuestions.filter(q => selectedCategories.includes(q.Kategorie));
+    }
 
+    // Prüfe, ob nach der Filterung Fragen übrig sind
+    if (filteredQuestions.length === 0) {
+        console.warn('Keine fehlerhaften Fragen in den ausgewählten Kategorien vorhanden.');
+        return null; // Keine passenden Fragen verfügbar
+    }
+
+    // Wähle eine zufällige Frage aus den gefilterten Fragen
+    const question = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
+
+    // Markiere die Frage als gestellt
+    askedQuestions.push(question.Frage);
+
+    console.log('Zufällige Frage:', question); // Debugging
+    return question; // Gebe die Frage zurück
+}
+
+    function setDifficultyBlocks(difficulty) {
+        // HTML-Container auswählen
+        const auswahlContainer = document.querySelector('.difficulty'); // Für 'auswahl'
+        const eintippContainer = document.querySelector('.difficulty2'); // Für 'eintipp'
+    
+        // Container leeren
+        auswahlContainer.innerHTML = '';
+        eintippContainer.innerHTML = '';
+    
+        // Schwierigkeit zu Level mappen
         let difficultyLevel;
         switch (difficulty) {
             case 'leicht':
@@ -167,12 +195,17 @@ document.querySelector('input').addEventListener('focus', function() {
             default:
                 difficultyLevel = 0;
         }
-
+    
+        // Blöcke erstellen basierend auf Schwierigkeit
+        const targetContainer = (difficulty === 'leicht' || difficulty === 'mittel') ? auswahlContainer : eintippContainer;
+    
         for (let i = 0; i < difficultyLevel; i++) {
             const block = document.createElement('div');
-            block.classList.add('difficulty-block', difficulty);
-            difficultyContainer.appendChild(block);
+            block.classList.add('difficulty-block', difficulty); // CSS-Klassen hinzufügen
+            targetContainer.appendChild(block); // Blöcke in den passenden Container einfügen
         }
+    
+        console.log(`Schwierigkeit: ${difficulty} | Blöcke erstellt in: ${targetContainer.className}`);
     }
 
     function updateProgressBar() {
@@ -185,8 +218,10 @@ document.querySelector('input').addEventListener('focus', function() {
 
     function updateCategoryDisplay(category) {
         const categoryTextElement = document.querySelector('.category-text2');
+        const categoryTextElement2 = document.querySelector('.category-text');
         if (categoryTextElement) {
             categoryTextElement.textContent = category;
+            categoryTextElement2.textContent = category;
         }
     }
 
@@ -199,7 +234,7 @@ document.querySelector('input').addEventListener('focus', function() {
         return Math.max(0, adjustmentFactor); // Sicherstellen, dass der Faktor nicht negativ ist
     }
 
-    function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige) {
+    function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige, randomQuestion) {
         hidebars();
         const inputField = document.querySelector('.text-input2');
         const micButton = document.querySelector('.mic-button');
@@ -310,6 +345,9 @@ document.querySelector('input').addEventListener('focus', function() {
         if (isMatch) {
             correctCount++;
             console.log('Richtig! Aktuelle Anzahl der richtigen Antworten:', correctCount);
+            const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+            const updatedQuestions = incorrectQuestions.filter(q => q.Frage !== currentRandomQuestion);
+            localStorage.setItem('incorrectQuestions', JSON.stringify(updatedQuestions));
             inputField.classList.add('correct');
             micButton.classList.add('correct');
             question.classList.add('correct');
@@ -345,7 +383,7 @@ document.querySelector('input').addEventListener('focus', function() {
 
 
     
-    function loadQuestion() {
+    function loadQuestion(AntwortAnzeige) {
         isAnswerChecked = false;
         console.log("loaded");
         
@@ -386,13 +424,16 @@ document.querySelector('input').addEventListener('focus', function() {
             document.querySelector('.question1').textContent = randomQuestion.Frage;
         updateCategoryDisplay(randomQuestion.Kategorie);
         setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
+        const factDisplay2 = document.querySelector('.fact2');
+        factDisplay2.textContent = randomQuestion.Fakt;
+        factDisplay2.style.display = 'flex';
         let answers = document.querySelectorAll('.answer');
         answers.forEach((button, index) => {
             button.textContent = randomQuestion.Antworten[index];
             button.disabled = false;
             button.classList.remove('correct-answer', 'wrong-answer');
         });
-        document.querySelector('.results2').style.display = 'none';
+        document.querySelector('.results2').style.display = 'flex';
         document.querySelector('.results2').classList.remove('correct', 'wrong');
         document.querySelector('.next-button').classList.remove('correct-button', 'wrong-button');
     
@@ -406,12 +447,17 @@ document.querySelector('input').addEventListener('focus', function() {
                 questionAnswered = true;
     
                 answers.forEach(btn => btn.disabled = true);
-    
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
                     this.classList.add('correct-answer');
                     document.querySelector('.results2').classList.add('correct');
                     document.querySelector('.next-button').classList.add('correct-button');
                     factDisplay2.textContent = randomQuestion.Fakt;
+                    correctAnswerDisplay2.innerHTML = `<span class="highlight">Richtig!</span> <span class="highlight">${randomQuestion.RichtigeAntwort}</span>`;
+                    correctAnswerDisplay2.classList.remove('incorrect');
+                    correctAnswerDisplay2.style.display = 'block';
+                    const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+                    const updatedQuestions = incorrectQuestions.filter(q => q.Frage !== randomQuestion.Frage);
+                    localStorage.setItem('incorrectQuestions', JSON.stringify(updatedQuestions));
                     wrapper.classList.add('correct');
                     factDisplay2.style.display = 'block';
                     correctCount++;
@@ -420,17 +466,20 @@ document.querySelector('input').addEventListener('focus', function() {
                     console.log("hallo");
                     this.classList.add('wrong-answer');
                     factDisplay2.style.display = 'block';
+                    correctAnswerDisplay2.innerHTML = `<span class="highlight">Antwort:</span> <span class="highlight">${randomQuestion.RichtigeAntwort}</span>`;
+                    correctAnswerDisplay2.classList.add('incorrect');
+                    correctAnswerDisplay2.style.display = 'block';
                     document.querySelector('.results2').classList.add('wrong');
                     document.querySelector('.next-button').classList.add('wrong-button');
                 }
-    
+
                 answers.forEach(btn => {
                     if (btn.textContent === randomQuestion.RichtigeAntwort) {
                         btn.classList.add('correct-answer');
                     }
                 });
     
-                document.querySelector('.results2').style.display = 'block';
+                document.querySelector('.results2').style.display = 'flex';
                 currentQuestionIndex++;
                 updateProgressBar();
             }, { once: true });
@@ -488,7 +537,7 @@ document.querySelector('input').addEventListener('focus', function() {
                 categoryIcon.src = `categorie-icons/${getCategoryIcon(randomQuestion.Kategorie)}`;
                 
                 setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
-                
+                currentRandomQuestion = randomQuestion.Frage;
                 currentQuestionIndex++;
                 updateProgressBar();
                 
@@ -591,7 +640,6 @@ document.querySelector('input').addEventListener('focus', function() {
             factBox.style.display = 'block';
     
             // Button für den nächsten Zustand vorbereiten
-            nextButton.textContent = 'Weiter zur nächsten Frage';
             isAnswerChecked = true; // Antwort wurde geprüft
         } else {
             // Zustand: Nächste Frage laden
@@ -603,18 +651,24 @@ document.querySelector('input').addEventListener('focus', function() {
         }
     }
 
-    document.getElementById('deleteErrorsButton').addEventListener('click', function () {
-        // Lösche die Einträge aus dem Local Storage
-        localStorage.removeItem('incorrectQuestions');
-        
-        // Optionale Rückmeldung an den Benutzer
-        alert('Alle Fehler wurden erfolgreich gelöscht!');
-        console.log('Alle Fehler wurden aus der Datenbank entfernt.');
-    });
+    
     const nextButton = document.querySelector('.next-button2');
     nextButton.addEventListener('click', function() {
         loadQuestion();
     });
+
+
+    const showNextButton = () => {
+        const wrapper = document.querySelector('.results2');
+        wrapper.classList.add('correct');
+    };
+    
+    document.querySelectorAll('.answer').forEach(button => {
+        button.addEventListener('click', function () {
+            showNextButton(); // Direkt anzeigen, ohne Prüfung der Antwort
+        });
+    });
+
 
     console.log("problem");
 });

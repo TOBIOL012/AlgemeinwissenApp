@@ -566,6 +566,15 @@ function getRandomQuestion() {
         const answerBox = document.querySelector('.answer-box');
         const factDisplay = document.querySelector('.fact');
         const factBox = document.querySelector('.fact-box');
+        const wrapper = document.querySelector('.next-button-wrapper');
+
+// Prüfen, ob das Element existiert
+if (wrapper) {
+    // Prüfen, ob das Element die Klassen `correct` oder `incorrect` hat
+    if (wrapper.classList.contains('correct') || wrapper.classList.contains('incorrect')) {
+        wrapper.removeAttribute('style');
+    } 
+} 
         const userAnswer = inputField.value.trim();
         const randomQuestion = questions.find(q => q.Frage === document.querySelector('.question').textContent);
     
@@ -588,6 +597,7 @@ function getRandomQuestion() {
                 saveNoteToLocalStorage(randomQuestion.Frage, note);
                 noteInput.value = ''; // Eingabefeld nach dem Speichern leeren
             }
+            wrapper.removeAttribute('style');
             loadNextQuestion();
         }
     }

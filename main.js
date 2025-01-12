@@ -326,37 +326,85 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-function togglePopup(popupId) {
-    // Alle Popups ausblenden
-    const popups = document.querySelectorAll('.popup');
-    popups.forEach(popup => {
-        if (popup.id === popupId) {
-            // Popup ein- oder ausblenden
-            popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    function toggleContent(contentId) {
+        const topBar = document.getElementById('top-bar');
+        const contentDiv = document.getElementById('top-bar-content');
+
+        if (contentDiv.dataset.activeContent === contentId) {
+            contentDiv.style.display = 'none';
+            contentDiv.dataset.activeContent = '';
+            topBar.classList.remove('expanded');
         } else {
-            popup.style.display = 'none';
+            contentDiv.innerHTML = getContent(contentId);
+            contentDiv.style.display = 'block';
+            contentDiv.dataset.activeContent = contentId;
+            topBar.classList.add('expanded');
         }
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    function updateTopBar() {
-        const coins = parseInt(localStorage.getItem('totalCoins') || '0', 10);
-        const xp = parseInt(localStorage.getItem('totalXP') || '0', 10);
-        const streak = parseInt(localStorage.getItem('streakCount') || '0', 10);
-        const notifications = parseInt(localStorage.getItem('notifications') || '0', 10);
-
-        document.getElementById('coins-value').textContent = coins;
-        document.getElementById('xp-value').textContent = xp;
-        document.getElementById('streak-value').textContent = streak;
-        document.getElementById('notifications-value').textContent = notifications;
     }
 
-    // Initiale Werte laden
-    updateTopBar();
+    function getContent(contentId) {
+        if (contentId === 'streak-content') {
+            return generateWeekCalendar();
+        }
+        switch (contentId) {
+            case 'coins-content':
+                return '<p>Coins Details: Verdiene Münzen durch Quiz!</p>';
+            case 'xp-content':
+                return '<p>XP Details: Sammle Erfahrungspunkte!</p>';
+            case 'notifications-content':
+                return '<p>Benachrichtigungen: Neuigkeiten und Updates!</p>';
+            default:
+                return '';
+        }
+    }
 
-    // Optional: Funktion, die aufgerufen werden kann, wenn sich Werte ändern
-    window.updateStats = updateTopBar;
-});
+    function generateWeekCalendar() {
+        const weekDays = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+        const today = new Date();
+        const currentDay = today.getDay(); // 0 = Sonntag, 1 = Montag, ...
+        const startOfWeek = new Date(today);
+        startOfWeek.setDate(today.getDate() - currentDay + 1); // Start bei Montag
 
+        console.log("Aktuelles Datum:", today);
 
+        let streakData = JSON.parse(localStorage.getItem('streakData')) || [0, 0, 1, 1, 1, 0, 1];
+        if (streakData.length < 7) {
+            streakData = Array(7).fill(0);
+        }
+
+        let calendarHTML = '<div class="week-calendar">';
+
+        calendarHTML += '<p>Streak Übersicht</p>';
+        calendarHTML += '<div class="days">';
+
+        weekDays.forEach(day => {
+            calendarHTML += `<div class="day">${day}</div>`;
+        });
+        calendarHTML += '</div>';
+
+        calendarHTML += '<div class="day-row">';
+        for (let i = 0; i < 7; i++) {
+            const date = new Date(startOfWeek);
+            date.setDate(startOfWeek.getDate() + i);
+            const isActive = streakData[i] === 1;
+            const isCurrent = today.toDateString() === date.toDateString();
+            console.log(`Tag: ${date.toDateString()}, ist aktuell: ${isCurrent}`);
+            calendarHTML += `<div class="day">
+                <div class="${isCurrent ? 'current-day' : ''} ${isActive ? 'active' : 'inactive'}">${date.getDate()}</div>
+            </div>`;
+        }
+        calendarHTML += '</div>';
+        calendarHTML += '</div>';
+
+        return calendarHTML;
+    }
+
+    document.addEventListener('click', function (event) {
+        const topBar = document.getElementById('top-bar');
+        const contentDiv = document.getElementById('top-bar-content');
+        if (!topBar.contains(event.target)) {
+            contentDiv.style.display = 'none';
+            contentDiv.dataset.activeContent = '';
+            topBar.classList.remove('expanded');
+        }
+    });

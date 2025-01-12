@@ -15,7 +15,7 @@
     <script src="Fragen/kunst.js" defer></script>
     <script src="Fragen/question.js" defer></script>
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="Standart.css">
+    <link rel="stylesheet" href="standartfehler.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
@@ -27,7 +27,6 @@
             </div>
         </div>
     </header>
-    <button id="deleteErrorsButton">Fehler löschen</button>
     <div class="eintipp">
         <div class="category-difficulty2">
             <div class="category2">
@@ -65,8 +64,8 @@
             </div>
 
             <div class="next-button-background">
-            <button id="next-button" class="next-button">Weiter</button>
-        </div>
+                <button class="next-button" id="next-button">Weiter</button>
+            </div>
             <div class="next-button-wrapper">
                 <div class="answer-box">
                     <a class="correct-answer"></a>
@@ -98,14 +97,17 @@
                 <button class="answer">Antwort4</button>
             </div>
         </div>
-
         <div class="results2">
-            <input type="text" class="note-input2" placeholder="Fehler">
+            <div class="answer-box2">
+                <a class="correct-answer2"></a>
+            </div>
             <div class="fact-box2">
                 <p class="fact2"></p>
             </div>
             <button class="next-button2" id="next-button2">Weiter</button>
         </div>
+
+    
 
     </div>
     <script src="Fehler.js"></script>
