@@ -127,3 +127,34 @@ button:active {
     cursor: pointer;
     z-index: 1000;
 }
+
+/* Fehler css*/
+.category-container {
+    position: relative; /* Wichtiger Bezugspunkt für die roten Punkte */
+    display: inline-block; /* Für korrekte Positionierung der Elemente */
+}
+
+/* Roter Punkt */
+.notification-dot {
+    position: absolute;
+    top: 8px; /* Abstand von oben */
+    right: -8px; /* Abstand von rechts */
+    background-color: rgb(237, 73, 73); /* Hintergrundfarbe */
+    border-radius: 0.8rem; /* Rundung für den Punkt */
+    padding: 0 0.3rem; /* Seitenabstand */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optionaler Schatten */
+    color: white; /* Schriftfarbe */
+    font-size: 1rem; /* Schriftgröße */
+    font-weight: bold; /* Fettschrift */
+    text-align: center; /* Textausrichtung */
+    display: flex; /* Flexbox für Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    min-width: 1.1rem; /* Mindestbreite für Ein-Zeichen-Zahlen */
+    height: 1.6rem; /* Feste Höhe */
+    line-height: 1.5rem; /* Setzt die Zeilenhöhe auf die Schriftgröße */
+    white-space: nowrap; /* Verhindert Zeilenumbrüche */
+    vertical-align: middle; /* Zusätzliche Sicherstellung */
+}
+
+/* Styling für die Kategorie-Bilder (optional, falls nötig) */

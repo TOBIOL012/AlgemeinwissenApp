@@ -1,5 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const spielerContainer = document.getElementById('spieler-container');
+    const addPlayerButton = document.getElementById('add-player-button'); // Button für Spieler hinzufügen
+    const maxPlayers = 15; // Maximale Anzahl von Spielern
     const difficulties = ['Leicht', 'Mittel', 'Schwer', 'Extrem'];
     const difficultyColors = {
         'Leicht': '#5EFC8D',
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function addDifficultyButtonFunctionality(button) {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             let currentDifficulty = button.textContent;
             let currentIndex = difficulties.indexOf(currentDifficulty);
             let nextIndex = (currentIndex + 1) % difficulties.length;
@@ -27,17 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateDeleteButtons() {
         const inputContainers = spielerContainer.getElementsByClassName('input-container');
-        const filledInputs = Array.from(spielerContainer.getElementsByClassName('spieler-name'))
-            .filter(input => input.value.trim() !== '');
-
         Array.from(inputContainers).forEach((container) => {
             const deleteButton = container.querySelector('.kreuz');
             const inputField = container.querySelector('.spieler-name');
             if (deleteButton) {
-                if (inputField.value.trim() !== '' || filledInputs.length > 2) {
+                if (inputContainers.length > 2) {
                     deleteButton.style.display = 'inline';
                 } else {
-                    deleteButton.style.display = 'none';
+                    deleteButton.style.display = inputField.value.trim() !== '' ? 'inline' : 'none';
                 }
             }
         });
@@ -45,14 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateDifficultyButtons() {
         const inputContainers = spielerContainer.getElementsByClassName('input-container');
-        Array.from(inputContainers).forEach((container, index) => {
+        Array.from(inputContainers).forEach((container) => {
             const difficultyButton = container.querySelector('.schwierigkeit-button');
             if (difficultyButton) {
-                if (index === inputContainers.length - 1) {
-                    difficultyButton.textContent = '';
-                    difficultyButton.style.color = 'inherit';
-                    difficultyButton.disabled = true;
-                } else if (difficultyButton.textContent === '' || difficultyButton.disabled) {
+                if (difficultyButton.textContent === '' || difficultyButton.disabled) {
                     difficultyButton.textContent = 'Leicht';
                     difficultyButton.style.color = difficultyColors['Leicht'];
                     difficultyButton.disabled = false;
@@ -64,83 +59,93 @@ document.addEventListener('DOMContentLoaded', function() {
     function addNewInputField() {
         const inputContainer = document.createElement('div');
         inputContainer.classList.add('input-container');
-
+    
         const inputWrapper = document.createElement('div');
         inputWrapper.classList.add('input-wrapper');
-
+    
         const inputField = document.createElement('input');
         inputField.type = 'text';
         inputField.className = 'spieler-name';
         inputField.maxLength = 15;
-
+    
         const deleteButton = document.createElement('img');
         deleteButton.className = 'kreuz';
         deleteButton.src = 'kreuz.png';
         deleteButton.alt = 'Bild';
         deleteButton.style.cursor = 'pointer';
-        deleteButton.style.display = 'none';
-        deleteButton.addEventListener('click', function() {
+        deleteButton.addEventListener('click', function () {
             handleDelete(inputContainer, inputField);
         });
-
+    
+        // Lösche Block nur beim Verlassen des Feldes (Blur)
+        inputField.addEventListener('blur', function () {
+            const inputContainers = spielerContainer.getElementsByClassName('input-container');
+            if (inputContainers.length > 2 && inputField.value.trim() === '') {
+                spielerContainer.removeChild(inputContainer);
+                updatePlaceholders();
+                updateDeleteButtons();
+                updateDifficultyButtons();
+                updateContinueButtonState();
+            }
+        });
+    
         inputWrapper.appendChild(inputField);
         inputWrapper.appendChild(deleteButton);
-
+    
         const difficultyButton = document.createElement('button');
         difficultyButton.className = 'schwierigkeit-button';
         difficultyButton.textContent = 'Leicht';
         difficultyButton.style.color = difficultyColors['Leicht'];
-
+    
         inputContainer.appendChild(inputWrapper);
         inputContainer.appendChild(difficultyButton);
         spielerContainer.appendChild(inputContainer);
-
+    
         addDifficultyButtonFunctionality(difficultyButton);
         updatePlaceholders();
         updateDeleteButtons();
         updateDifficultyButtons();
-
-        inputField.addEventListener('input', function() {
-            deleteButton.style.display = 'inline';
+    
+        inputField.addEventListener('input', function () {
             updateContinueButtonState();
-            if (spielerContainer.lastElementChild === inputContainer) {
-                if (spielerContainer.getElementsByClassName('input-container').length < 15) {
-                    addNewInputField();
-                }
-            }
-        });
-
-        inputField.addEventListener('blur', function() {
-            if (inputField.value.trim() === '') {
-                handleDelete(inputContainer, inputField);
-            }
+            updateDeleteButtons(); // Aktualisiere das Kreuz-Button-Display
         });
     }
 
     function handleDelete(inputContainer, inputField) {
-        const filledInputs = Array.from(spielerContainer.getElementsByClassName('spieler-name'))
-            .filter(input => input.value.trim() !== '');
-
-        if (filledInputs.length > 2) {
+        const inputContainers = spielerContainer.getElementsByClassName('input-container');
+        if (inputContainers.length > 2) {
+            // Löschen des gesamten Blocks
             spielerContainer.removeChild(inputContainer);
-        } else {
+        } else if (inputField.value.trim() !== '') {
+            // Löschen des Textes, wenn nur zwei Blöcke vorhanden sind
             inputField.value = '';
         }
+
         updatePlaceholders();
         updateDeleteButtons();
         updateDifficultyButtons();
         updateContinueButtonState();
     }
 
-    // Add initial input fields
-    for (let i = 0; i < 3; i++) {
-        addNewInputField();
+    // Spieler hinzufügen Button Logik
+    if (addPlayerButton) {
+        addPlayerButton.addEventListener('click', function () {
+            const inputContainers = spielerContainer.getElementsByClassName('input-container');
+            if (inputContainers.length < maxPlayers) {
+                addNewInputField();
+            }
+            if (inputContainers.length >= maxPlayers) {
+                addPlayerButton.disabled = true;
+                addPlayerButton.style.cursor = 'not-allowed';
+            }
+        });
     }
 
     // Weiter-Button zur Kategorienseite weiterleiten
     const nextButton = document.getElementById('next-button');
     if (nextButton) {
-        nextButton.addEventListener('click', function() {
+        nextButton.addEventListener('click', function () {
             const inputFields = document.querySelectorAll('.spieler-name');
             let allFilled = true;
             let players = [];
@@ -182,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (decreaseButton) {
-        decreaseButton.addEventListener('click', function() {
+        decreaseButton.addEventListener('click', function () {
             if (questionCount > 5) {
                 questionCount--;
                 if (questionCountElement) {
@@ -193,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (increaseButton) {
-        increaseButton.addEventListener('click', function() {
+        increaseButton.addEventListener('click', function () {
             if (questionCount < 50) {
                 questionCount++;
                 if (questionCountElement) {
@@ -203,78 +208,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Kategorie-Seite: Kategorie wählen und speichern
-    const categoryImages = document.querySelectorAll('img[data-category]');
-    const continueButton = document.getElementById('next-button');
-    let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
-
     function updateContinueButtonState() {
         const inputFields = spielerContainer.getElementsByClassName('spieler-name');
         const firstTwoFilled = Array.from(inputFields).slice(0, 2).every(input => input.value.trim() !== '');
 
-        if (continueButton) {
-            console.log("1")
+        if (nextButton) {
             const shouldDisable = !firstTwoFilled;
-            continueButton.style.backgroundColor = shouldDisable ? 'gray' : '#f1730c';
-            continueButton.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
-            continueButton.disabled = shouldDisable;
+            nextButton.style.backgroundColor = shouldDisable ? 'gray' : '#f1730c';
+            nextButton.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
+            nextButton.disabled = shouldDisable;
         }
     }
 
-    categoryImages.forEach(img => {
-        const category = img.getAttribute('data-category');
-        img.style.opacity = selectedCategories.includes(category) ? 1.0 : 0.5;
-
-        img.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            if (category === 'Alles') {
-                if (selectedCategories.includes('Alles')) {
-                    selectedCategories.length = 0;
-                    categoryImages.forEach(img => img.style.opacity = 0.5);
-                } else {
-                    selectedCategories.length = 0;
-                    categoryImages.forEach(img => {
-                        selectedCategories.push(img.getAttribute('data-category'));
-                        img.style.opacity = 1.0;
-                    });
-                }
-            } else {
-                if (selectedCategories.includes(category)) {
-                    selectedCategories.splice(selectedCategories.indexOf(category), 1);
-                    this.style.opacity = 0.5;
-                } else {
-                    selectedCategories.push(category);
-                    this.style.opacity = 1.0;
-                }
-                if (selectedCategories.includes('Alles')) {
-                    selectedCategories.splice(selectedCategories.indexOf('Alles'), 1);
-                    categoryImages.forEach(img => {
-                        if (img.getAttribute('data-category') === 'Alles') {
-                            img.style.opacity = 0.5;
-                        }
-                    });
-                }
-            }
-            localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
-            updateContinueButtonState();
-        });
-    });
-
-    if (continueButton) {
-        continueButton.addEventListener('click', function() {
-            if (selectedCategories.length > 0) {
-                localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
-                window.location.href = 'fragen-mehrspieler.html';
-            }
-        });
+    // Add initial input fields
+    for (let i = 0; i < 2; i++) {
+        addNewInputField();
     }
 
-    // Add event listeners to input fields to update button state
-    const inputFields = spielerContainer.getElementsByClassName('spieler-name');
-    Array.from(inputFields).forEach(input => {
-        input.addEventListener('input', updateContinueButtonState);
-    });
-
-    // Initial update of the button state
+    // Initial Update der Button-States
     updateContinueButtonState();
 });
