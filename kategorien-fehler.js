@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('filteredQuestions', JSON.stringify(filteredQuestions));
                     localStorage.removeItem('questionsAsked');
                     localStorage.removeItem('correctCount');
-                    window.location.href = 'fehler.html';
+                    window.location.href = 'Fehler.html';
                 }
             }
         });
