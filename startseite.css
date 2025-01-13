@@ -57,7 +57,6 @@ body {
     background-color: #141F25;
     color: white;
     text-align: left;
-    padding: 10px;
 }
 
 .top-bar.expanded .top-bar-content {
@@ -108,7 +107,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 10px;
-    padding: 5px;
 }
 
 .week-calendar .days {
@@ -128,7 +126,7 @@ body {
     text-align: center;
     flex: 1;
     color: white;
-    font-size: 14px;
+    font-size: 1.1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,7 +141,7 @@ body {
     max-width: calc(100% - 10px); /* Gleiche Breite wie die Wochentage */
     background-color: #2f4957;
     border-radius: 10px;
-    padding: 5px;
+    padding: 2px;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;

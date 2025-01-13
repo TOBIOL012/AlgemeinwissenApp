@@ -141,7 +141,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: calc(14% + 5.8rem); /* Passt die Höhe an, um den Bereich abzudecken */
+    height: calc(17% + 5.8rem); /* Passt die Höhe an, um den Bereich abzudecken */
     background-color:  var(--background-color);
     z-index: 900; /* Unter dem Question Regler und dem Button */
     outline: 2px solid #484848;
@@ -245,7 +245,10 @@ body {
     outline-offset: -4px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
     width: 100%; /* 100% des übergeordneten Containers */
+    bottom: 2rem;
 }
+
+
 
 .disabled-button {
     background-color: grey;
