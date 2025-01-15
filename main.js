@@ -385,7 +385,7 @@ function generateWeekCalendar() {
 
     let calendarHTML = '<div class="week-calendar">';
 
-    calendarHTML += '<p>Streak Übersicht</p>';
+    calendarHTML += '<p>Streak Übersicht</p>'; 
     calendarHTML += '<div class="days">';
 
     weekDays.forEach(day => {
