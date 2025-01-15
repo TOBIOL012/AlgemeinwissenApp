@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ausloggen</title>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        const logoutButton = document.getElementById("logout-button");
+    
+        logoutButton.addEventListener("click", () => {
+            // LocalStorage löschen
+            localStorage.removeItem("username");
+    
+            // Weiterleitung zur Profilseite
+        });
+    });</script>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Willkommen zurück!</h1>
+        <p>Möchten Sie sich wirklich ausloggen?</p>
+        <button id="logout-button">Ausloggen</button>
+    </div>
+</body>
+</html>

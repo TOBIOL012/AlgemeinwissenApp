@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>Allgemeinwissen Quiz App - Profil</title>
     <link rel="stylesheet" href="profil.css">
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="app.css">
-    <link rel="manifest" href="/manifest.json">
+    <script src="profil.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
     <div class="back-arrow-container">
@@ -20,9 +22,25 @@
             <img src="Albert Einstein.png" alt="Profilbild" class="Profilbild-groß">
         </a>
     </div>
+
+    <!-- Hier wird der Name angezeigt, wenn der Benutzer eingeloggt ist -->
+    <div class="name" style="display: none;"></div>
+
+    <!-- Hier sind die Login- und Registrierungsfelder -->
     <div class="Benutzerdaten">
-        <input type="text" id="Benutzername" class="Benutzername" placeholder="Benutzername">
+        <div class="tabs">
+            <button class="tab-login">EINLOGGEN</button>
+            <button class="tab-register">REGISTRIEREN</button>
+        </div>
+        <div class="Register">
+            <input type="text" id="Benutzername" class="Benutzername" placeholder="Benutzername">
+            <input type="email" id="E-Mail" class="E-Mail" placeholder="E-Mail">
+            <input type="password" id="Passwort" class="Passwort" placeholder="Passwort">
+        </div>
+        <button class="submit-btn" disabled>Einloggen</button>
+        <p class="error-message"></p>
     </div>
+
     <div class="Übersicht">
         <div class="XP">
             <img src="XP.png" alt="XP Icon">
@@ -37,6 +55,11 @@
             <span>17</span>
         </div>
     </div>
+
+    <div class="XP-Pfad-Container">
+        <a href="xp-pfad.html" class="xp-pfad-button">XP-Pfad ></a>
+    </div>
+
     <div class="nav-bar">
         <a href="startseite.html" class="nav-button">
             <img src="icons8-home.svg" alt="Home">

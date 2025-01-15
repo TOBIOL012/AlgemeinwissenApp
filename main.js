@@ -326,6 +326,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
+
+
+
+
+
+
+
+
+
+
 function toggleContent(contentId) {
     const topBar = document.getElementById('top-bar');
     const contentDiv = document.getElementById('top-bar-content');

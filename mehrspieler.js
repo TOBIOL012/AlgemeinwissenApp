@@ -112,6 +112,108 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+
+
+
+
+
+
+    
+
+    const sliderTrack = document.getElementById('sliderTrack');
+    const min = 5;
+    const max = 50;
+    const step = 5;
+    let currentIndex = 0;
+
+    for (let i = min; i <= max; i += step) {
+        const item = document.createElement('div');
+        item.className = 'slider-item';
+        item.textContent = i;
+        sliderTrack.appendChild(item);
+    }
+
+    const items = Array.from(document.querySelectorAll('.slider-item'));
+
+    function updateActiveItem(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+
+        const offset = (index * (items[0].offsetWidth + 20)) - (sliderTrack.parentElement.offsetWidth / 2 - items[0].offsetWidth / 2);
+        sliderTrack.style.transform = `translateX(${-offset}px)`;
+    }
+
+    updateActiveItem(currentIndex);
+
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+
+    sliderTrack.addEventListener('mousedown', startDrag);
+    sliderTrack.addEventListener('touchstart', startDrag);
+
+    sliderTrack.addEventListener('mousemove', drag);
+    sliderTrack.addEventListener('touchmove', drag);
+
+    sliderTrack.addEventListener('mouseup', endDrag);
+    sliderTrack.addEventListener('touchend', endDrag);
+    sliderTrack.addEventListener('mouseleave', endDrag);
+
+    function startDrag(event) {
+        isDragging = true;
+        startX = getPositionX(event);
+        sliderTrack.style.transition = 'none';
+        prevTranslate = currentTranslate;
+    } 
+
+    function drag(event) {
+        if (!isDragging) return;
+        const currentPosition = getPositionX(event);
+        const movedBy = currentPosition - startX;
+        currentTranslate = prevTranslate + movedBy;
+        sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function endDrag() {
+        isDragging = false;
+        sliderTrack.style.transition = 'transform 0.3s';
+
+        const itemWidth = items[0].offsetWidth + 20;
+        currentIndex = Math.round(-currentTranslate / itemWidth);
+
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+
+        updateActiveItem(currentIndex);
+    }
+
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     function handleDelete(inputContainer, inputField) {
         const inputContainers = spielerContainer.getElementsByClassName('input-container');
         if (inputContainers.length > 2) {
@@ -224,7 +326,8 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < 2; i++) {
         addNewInputField();
     }
-
+    document.documentElement.style.height = 'auto';
+    document.body.style.height = 'auto';
     // Initial Update der Button-States
     updateContinueButtonState();
 });

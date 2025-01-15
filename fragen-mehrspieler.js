@@ -55,6 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
     function loadQuestion() {
         console.log('Questions Asked:', questionsAsked, 'Total Questions:', totalQuestions);
         if (questionsAsked >= totalQuestions) {
@@ -82,9 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.category-text').textContent = randomQuestion.Kategorie; // Zeigt die tatsächliche Kategorie der Frage an
         setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
 
+        const shuffledAnswers = shuffleArray([...randomQuestion.Antworten]);
+
         let answers = document.querySelectorAll('.answer');
-        answers.forEach((button, index) => {
-            button.textContent = randomQuestion.Antworten[index];
+            answers.forEach((button, index) => {
+            button.textContent = shuffledAnswers[index];
             button.disabled = false;
             button.classList.remove('correct-answer', 'wrong-answer');
         });

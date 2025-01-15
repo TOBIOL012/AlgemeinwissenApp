@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication</title>
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <h1>Firebase Authentication</h1>
+    <div id="auth-container">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <br><br>
+        <button id="register-btn">Register</button>
+        <button id="login-btn">Login</button>
+        <p id="message" style="color: red;"></p>
+    </div>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
+            authDomain: "besserwisser-95b63.firebaseapp.com",
+            projectId: "besserwisser-95b63",
+            storageBucket: "besserwisser-95b63.firebasestorage.app",
+            messagingSenderId: "522066225262",
+            appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
+            measurementId: "G-P8SBRHWS84"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // DOM Elements
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const registerButton = document.getElementById("register-btn");
+        const loginButton = document.getElementById("login-btn");
+        const message = document.getElementById("message");
+
+        // Register event
+        registerButton.addEventListener("click", () => {
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    message.style.color = "green";
+                    message.textContent = `Registration successful! Welcome, ${user.email}.`;
+                })
+                .catch((error) => {
+                    message.style.color = "red";
+                    message.textContent = error.message;
+                });
+        });
+
+        // Login event
+        loginButton.addEventListener("click", () => {
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    message.style.color = "green";
+                    message.textContent = `Login successful! Welcome back, ${user.email}.`;
+                })
+                .catch((error) => {
+                    message.style.color = "red";
+                    message.textContent = error.message;
+                });
+        });
+    </script>
+</body>
+</html>
