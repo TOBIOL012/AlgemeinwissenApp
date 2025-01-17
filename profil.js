@@ -1,19 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Firebase-Konfiguration
-    const firebaseConfig = {
-        apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
-        authDomain: "besserwisser-95b63.firebaseapp.com",
-        projectId: "besserwisser-95b63",
-        storageBucket: "besserwisser-95b63.appspot.com",
-        messagingSenderId: "522066225262",
-        appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
-        measurementId: "G-P8SBRHWS84",
-    };
-
-    // Firebase initialisieren
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const firestore = firebase.firestore();
+    // Importiere globale Funktionen
+    
+    const { increaseValue, decreaseValue, setValue } = window;
 
     // DOM-Elemente
     const tabLogin = document.querySelector(".tab-login");
@@ -27,28 +15,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameDisplay = document.querySelector(".name");
     const xpDisplay = document.querySelector("#xp-total");
     const coinsDisplay = document.querySelector(".coin-text");
+    const streakDisplay = document.querySelector(".streak-text");
 
     let currentMode = "login";
 
-    // Initiale Werte aus localStorage
-    let localCoins = parseInt(localStorage.getItem("totalCoins")) || 0;
-    let localXp = parseInt(localStorage.getItem("totalXP")) || 0;
-
-    // Anzeige initialisieren
-    xpDisplay.textContent = localXp;
-    coinsDisplay.textContent = localCoins;
-
-    // Prüfen, ob der Benutzer bereits eingeloggt ist
+    // Benutzerstatus prüfen und Daten synchronisieren
     window.onload = () => {
+        const savedUID = localStorage.getItem("uid");
         const savedUsername = localStorage.getItem("username");
+
         if (savedUsername) {
             showUsername(savedUsername);
-            updateStatsFromLocalStorage();
-        } else {
-            userDetails.style.display = "block";
-            nameDisplay.style.display = "none";
-            updateStatsFromLocalStorage();
         }
+
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                if (!savedUID) {
+                    localStorage.setItem("uid", user.uid);
+                }
+                syncUserData(user.uid);
+            } else {
+                resetUI();
+                console.error("Benutzer nicht eingeloggt.");
+            }
+        });
     };
 
     // Tabs wechseln
@@ -99,64 +89,46 @@ document.addEventListener("DOMContentLoaded", () => {
             auth.createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    saveUserToFirestore(user.uid, username, localCoins, localXp);
+                    saveUserToFirestore(user.uid, username);
                 })
                 .catch(handleError);
         } else {
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    fetchAndSyncUserData(user.uid);
+                    localStorage.setItem("uid", user.uid);
+                    syncUserData(user.uid);
+                    showUsername(localStorage.getItem("username"));
                 })
                 .catch(handleError);
         }
     });
 
-    // Benutzer und Statistiken in Firestore speichern
-    function saveUserToFirestore(uid, username, coins, xp) {
-        firestore.collection("users").doc(uid).set({ username, coins, xp })
+    // Benutzer in Firestore speichern
+    function saveUserToFirestore(uid, username) {
+        firestore.collection("users").doc(uid).set({ username, coins: 0, xp: 0, streak: 0 })
             .then(() => {
-                saveUserSession(username, coins, xp);
+                localStorage.setItem("uid", uid);
+                localStorage.setItem("username", username);
                 showUsername(username);
+                syncUserData(uid);
             })
             .catch(handleError);
     }
 
-    // Benutzer und Statistiken aus Firestore abrufen und synchronisieren
-    function fetchAndSyncUserData(uid) {
-        firestore.collection("users").doc(uid).get()
-            .then((doc) => {
-                if (doc.exists) {
-                    const data = doc.data();
-                    const syncedCoins = (data.coins || 0) + localCoins;
-                    const syncedXp = (data.xp || 0) + localXp;
-
-                    // Daten in Firestore aktualisieren
-                    firestore.collection("users").doc(uid).set({
-                        coins: syncedCoins,
-                        xp: syncedXp
-                    }).then(() => {
-                        saveUserSession(data.username, syncedCoins, syncedXp);
-                        updateStats(syncedCoins, syncedXp);
-                        resetLocalStats(); // Lokale Münzen und XP zurücksetzen
-                    });
-                } else {
-                    handleError({ message: "Benutzer konnte nicht geladen werden." });
-                }
-            })
-            .catch(handleError);
-    }
-
-    // Benutzername und Statistiken in localStorage speichern
-    function saveUserSession(username, coins, xp) {
-        localStorage.setItem("username", username);
-        localStorage.setItem("totalCoins", coins);
-        localStorage.setItem("totalXP", xp);
-    }
-
-    function resetLocalStats() {
-        localCoins = 0;
-        localXp = 0;
+    // Benutzer und Statistiken synchronisieren
+    function syncUserData(uid) {
+        firestore.collection("users").doc(uid).onSnapshot((doc) => {
+            if (doc.exists) {
+                const data = doc.data();
+                localStorage.setItem("username", data.username);
+                updateStats(data.coins, data.xp, data.streak, data.username);
+            } else {
+                console.error("Dokument existiert nicht.");
+            }
+        }, (error) => {
+            console.error("Fehler bei onSnapshot: ", error);
+        });
     }
 
     // Benutzername anzeigen
@@ -166,16 +138,22 @@ document.addEventListener("DOMContentLoaded", () => {
         nameDisplay.textContent = username;
     }
 
-    // Statistiken aktualisieren
-    function updateStats(coins, xp) {
-        coinsDisplay.textContent = coins;
-        xpDisplay.textContent = xp;
+    // UI zurücksetzen
+    function resetUI() {
+        userDetails.style.display = "block";
+        nameDisplay.style.display = "none";
+        nameDisplay.textContent = "";
+        localStorage.removeItem("uid");
+        localStorage.removeItem("username");
+        updateStats(0, 0, 0);
     }
 
-    // Statistiken aus localStorage anzeigen
-    function updateStatsFromLocalStorage() {
-        xpDisplay.textContent = localXp;
-        coinsDisplay.textContent = localCoins;
+    // Statistiken aktualisieren
+    function updateStats(coins, xp, streak, username) {
+        if (coinsDisplay) coinsDisplay.textContent = coins;
+        if (xpDisplay) xpDisplay.textContent = xp;
+        if (streakDisplay) streakDisplay.textContent = streak
+        if (nameDisplay) nameDisplay.textContent = username;
     }
 
     // Fehler behandeln
@@ -190,11 +168,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     tabLogin.click();
-
-    // Synchronisation bei Netzwerkverbindung
-    window.addEventListener("online", () => {
-        if (auth.currentUser) {
-            fetchAndSyncUserData(auth.currentUser.uid);
-        }
-    });
 });

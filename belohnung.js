@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    
+
+    const uid = localStorage.getItem("uid");
+    console.log(uid);
+    
     // Firebase-Konfiguration
     const firebaseConfig = {
         apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
@@ -10,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
         measurementId: "G-P8SBRHWS84",
     };
 
+    const { increaseValue, decreaseValue, setValue, readData } = window;
+        
     // Firebase initialisieren
     const app = firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
@@ -20,11 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const earnedCoins = correctCount; // 1 Münze pro richtiger Frage
     const earnedXP = 20 + (2 * correctCount); // 20 XP + 2 XP pro richtiger Frage
 
-    const previousTotalCoins = parseInt(localStorage.getItem('totalCoins') || '0', 10);
-    const previousTotalXP = parseInt(localStorage.getItem('totalXP') || '0', 10);
+    const xpElement = document.getElementById('xp-total');
+    const coinsElement = document.getElementById('coins-total');
+    xpElement.textContent = `+${earnedXP}`;
+    xpElement.style.opacity = '1';
+    coinsElement.textContent = `+${earnedCoins}`;
+    coinsElement.style.opacity = '1';
 
-    let newTotalCoins = previousTotalCoins + earnedCoins;
-    let newTotalXP = previousTotalXP + earnedXP;
 
     // Fortschrittsanzeige
     const percentage = (correctCount / 20) * 100;
@@ -38,39 +48,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Funktion: Münzen und XP synchronisieren
     function syncCoinsAndXP() {
-        const user = auth.currentUser;
-        if (user) {
-            const userDoc = firestore.collection('users').doc(user.uid);
+        readData("coins", (currentCoins) => {
+            readData("xp", (currentXP) => {
+                // Erhöhe die Coins und XP mit den globalen Funktionen
+                console.log("oioioi");
+                increaseValue("coins", earnedCoins);
+                increaseValue("xp", earnedXP);
+                console.log(currentXP);
+                console.log(currentXP + earnedXP);
 
-            // Abrufen und Aktualisieren
-            userDoc.get().then((doc) => {
-                let syncedCoins = earnedCoins;
-                let syncedXP = earnedXP;
-
-                if (doc.exists) {
-                    const data = doc.data();
-                    syncedCoins += data.coins || 0;
-                    syncedXP += data.xp || 0;
-                }
-
-                // Firebase aktualisieren
-                userDoc.set({
-                    username: doc.exists ? doc.data().username : user.email,
-                    coins: syncedCoins,
-                    xp: syncedXP,
-                }).then(() => {
-                    saveToLocal(syncedCoins, syncedXP);
-                    animateStats(syncedCoins, syncedXP);
-                }).catch((error) => {
-                    console.error("Fehler beim Aktualisieren der Firebase-Daten:", error);
-                });
-            }).catch((error) => {
-                console.error("Fehler beim Abrufen der Firebase-Daten:", error);
+                // Aktualisiere die Anzeige
+                animateStats(currentCoins + earnedCoins, currentXP + earnedXP, currentCoins, currentXP, earnedCoins, earnedXP);
             });
-        } else {
-            saveToLocal(newTotalCoins, newTotalXP);
-            animateStats(newTotalCoins, newTotalXP);
-        }
+        });
     }
 
     // Funktion: Lokale Werte speichern
@@ -80,72 +70,47 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Funktion: Statistiken mit Animation aktualisieren
-    function animateStats(coins, xp) {
+    function animateStats(coins, xp, coinsbefore, xpbefore) {
         const xpElement = document.getElementById('xp-total');
         const coinsElement = document.getElementById('coins-total');
-
-        // XP-Anzeige
-        xpElement.textContent = `+${earnedXP}`;
-        xpElement.style.opacity = '1';
-
-        setTimeout(() => {
-            xpElement.style.opacity = '0.5';
-            xpElement.textContent = previousTotalXP;
-
-            let startXP = previousTotalXP;
-            const duration = 800;
-            const startTime = performance.now();
-
-            function animateXP(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const currentXP = Math.floor(startXP + (xp - startXP) * progress);
-                xpElement.textContent = currentXP;
-
-                if (progress < 1) {
-                    requestAnimationFrame(animateXP);
-                } else {
-                    xpElement.style.opacity = '1';
-                }
+    
+        // XP-Animation
+        let startXP = xpbefore;
+        const xpDuration = 800;
+        const xpStartTime = performance.now();
+    
+        function animateXP(currentTime) {
+            const elapsed = currentTime - xpStartTime;
+            const progress = Math.min(elapsed / xpDuration, 1);
+            const currentXP = Math.floor(startXP + (xp - startXP) * progress);
+            xpElement.textContent = currentXP;
+    
+            if (progress < 1) {
+                requestAnimationFrame(animateXP);
             }
-            requestAnimationFrame(animateXP);
-        }, 2000);
-
-        // Münzen-Anzeige
-        coinsElement.textContent = `+${earnedCoins}`;
-        coinsElement.style.opacity = '1';
-
-        setTimeout(() => {
-            coinsElement.style.opacity = '0.5';
-            coinsElement.textContent = previousTotalCoins;
-
-            let startCoins = previousTotalCoins;
-            const duration = 800;
-            const startTime = performance.now();
-
-            function animateCoins(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const currentCoins = Math.floor(startCoins + (coins - startCoins) * progress);
-                coinsElement.textContent = currentCoins;
-
-                if (progress < 1) {
-                    requestAnimationFrame(animateCoins);
-                } else {
-                    coinsElement.style.opacity = '1';
-                }
+        }
+        requestAnimationFrame(animateXP);
+    
+        // Münzen-Animation
+        let startCoins = coinsbefore;
+        const coinsDuration = 800;
+        const coinsStartTime = performance.now();
+    
+        function animateCoins(currentTime) {
+            const elapsed = currentTime - coinsStartTime;
+            const progress = Math.min(elapsed / coinsDuration, 1);
+            const currentCoins = Math.floor(startCoins + (coins - startCoins) * progress);
+            coinsElement.textContent = currentCoins;
+    
+            if (progress < 1) {
+                requestAnimationFrame(animateCoins);
             }
-            requestAnimationFrame(animateCoins);
-        }, 2000);
+        }
+        requestAnimationFrame(animateCoins);
     }
 
     // Synchronisation prüfen und ausführen
-    if (navigator.onLine && auth.currentUser) {
-        syncCoinsAndXP();
-    } else {
-        saveToLocal(newTotalCoins, newTotalXP);
-        animateStats(newTotalCoins, newTotalXP);
-    }
+    syncCoinsAndXP();
 
     // Online-Synchronisation bei Verbindung
     window.addEventListener('online', () => {
