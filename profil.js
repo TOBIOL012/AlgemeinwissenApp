@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Importiere globale Funktionen
     
     const { increaseValue, decreaseValue, setValue } = window;
 

@@ -20,11 +20,19 @@ html, body {
     top: 5vw; /* Abstand vom oberen Rand */
     right: 5vw; /* Abstand vom rechten Rand */
     cursor: pointer;
+    width: 2.3rem;
+    height: 2.3rem;
 }
 
 .settings-icon img {
-    height: 2.3em;
+    height: 2.3rem;
 }
+
+
+body {
+    opacity: 1; /* Standardzustand */
+}
+
 
 .Profilbild-container {
     display: flex;
@@ -177,7 +185,6 @@ html, body {
     justify-content: center;
     width: 2.3em;
     height: 2.3em;
-    background-color: #303031;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
@@ -216,5 +223,29 @@ html, body {
     background-color: #e48d45;
     box-shadow: none;
     transform: translateY(4px);
+}
+
+#einstellung {
+    display: block;
+    background-color: #141F25;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.6rem 0.6rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    width: calc(90vw - 1.4rem);
+    margin-top: 1rem;
+    margin-left: 5vw;
+}
+
+.ausloggen{
+    color: #c52323;
+    text-align: center;
+}
+
+.einstellungen{
+    width:100%;
+    margin-top:4.5rem;
 }
 

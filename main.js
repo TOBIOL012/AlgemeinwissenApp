@@ -419,3 +419,72 @@ document.addEventListener('click', function (event) {
         topBar.classList.remove('expanded');
     }
 });
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.getElementById('progress-bar');
+    const indicator = document.getElementById('indicator');
+
+    // Firebase Auth und Firestore Setup (falls benötigt)
+    const firestore = firebase.firestore();
+    const auth = firebase.auth();
+
+    // Benutzer UID aus localStorage laden
+    const uid = localStorage.getItem('uid');
+
+    // Maximale XP für eine Belohnung (1000 XP pro Abschnitt)
+    const maxXP = 10000;
+
+    // Anzahl der Marker pro Abschnitt (alle 100 XP)
+    const markerInterval = 100;
+
+    // Dynamische Marker hinzufügen
+    for (let i = markerInterval; i <= maxXP; i += markerInterval) {
+        const marker = document.createElement('div');
+        marker.classList.add('marker');
+        marker.style.top = `${(i / maxXP) * 100}%`;
+        progressBar.appendChild(marker);
+    }
+
+    // Fortschrittsanzeige aktualisieren
+    function updateProgressBar(xp) {
+        const progressHeight = Math.min((xp / maxXP) * 100, 100); // Maximal 100%
+        indicator.style.height = `${progressHeight}%`;
+
+        // XP-Anzeige mit Pfeil im Indicator platzieren
+        indicator.innerHTML = `<span style="display: flex; align-items: center;"><span style="font-size: 1.5rem; margin-left: 90px;">&#9664;</span>${xp}</span>`;
+        indicator.style.display = 'flex';
+        indicator.style.justifyContent = 'center';
+        indicator.style.alignItems = 'flex-end';
+        indicator.style.color = 'white';
+        indicator.style.fontSize = '1.2rem';
+        indicator.style.fontFamily = 'Dosis, sans-serif';
+        indicator.style.textShadow = '1px 1px 2px black';
+    }
+
+    // XP aus Firestore abrufen und Fortschrittsanzeige aktualisieren
+    if (uid) {
+        firestore.collection('users').doc(uid).onSnapshot((doc) => {
+            if (doc.exists) {
+                const data = doc.data();
+                const totalXP = data.xp || 0;
+                updateProgressBar(totalXP);
+            } else {
+                console.error('Benutzerdaten nicht gefunden.');
+            }
+        }, (error) => {
+            console.error('Fehler beim Abrufen der XP-Daten:', error);
+        });
+    } else {
+        console.error('Keine Benutzer-UID gefunden.');
+    }
+});
+
+

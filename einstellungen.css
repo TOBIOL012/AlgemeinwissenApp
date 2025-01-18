@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+.einstellung {
+    display: block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.6rem 0.6rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    width: calc(90vw - 1.4rem);
+    margin-top: 1rem;
+    margin-left: 5vw;
+}
+
+.einstellungen{
+    width:100%;
+    margin-top:4.5rem;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Verhindert horizontales und vertikales Scrollen */
+    font-family: "Dosis", sans-serif;
+    background-color: #141F25;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Für die absolute Positionierung des Back Arrows und des Settings Icons */
+}
+
+.settings-icon {
+    position: absolute;
+    top: 5vw; /* Abstand vom oberen Rand */
+    right: 5vw; /* Abstand vom rechten Rand */
+    cursor: pointer;
+}
+
+.settings-icon img {
+    height: 2.3em;
+}
+
+body {
+    opacity: 1; /* Standardzustand */
+}
+
+.einstellung {
+    opacity: 0; /* Standardzustand: Unsichtbar */
+    transform: translateY(-50%); /* Bewegung von oben */
+}
