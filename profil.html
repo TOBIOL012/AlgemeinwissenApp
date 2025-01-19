@@ -13,6 +13,20 @@
     <script src="profil.js" defer></script>
     <script src="einstellungen.js" defer></script>
     <script src="global.js" defer></script>
+    <script>
+        const preloadWebPFrames = (totalFrames) => {
+    for (let i = 1; i <= totalFrames; i++) {
+        const paddedFrame = String(i).padStart(3, '0');
+        const img = new Image();
+        img.src = `output_images/rotated_${paddedFrame}.webp`;
+    }
+};
+
+// Vorladen der Frames beim Laden der Seite
+document.addEventListener("DOMContentLoaded", () => {
+    preloadWebPFrames(30); // Anzahl der Frames
+});
+    </script>
 </head>
 <body>
     <div class="einstellungen">
