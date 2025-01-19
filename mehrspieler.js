@@ -143,34 +143,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const pickerItems = document.querySelectorAll(".picker-item");
 
     // Funktion, um das mittige Element hervorzuheben
-    function updateActiveItem() {
-        // Berechne die Mitte des Containers
-        const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
+function updateActiveItem() {
+    const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
 
-        let closestItem = null; // Das Element, das der Mitte am nächsten liegt
-        let closestDistance = Infinity; // Kleinster Abstand zur Mitte
+    let closestItem = null;
+    let closestDistance = Infinity;
 
-        pickerItems.forEach((item) => {
-            // Berechne die Mitte jedes Elements
-            const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-            const distance = Math.abs(containerCenter - itemCenter);
+    pickerItems.forEach((item) => {
+        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+        const distance = Math.abs(containerCenter - itemCenter);
 
-            // Aktualisiere das nächstgelegene Element
-            if (distance < closestDistance) {
-                closestDistance = distance;
-                closestItem = item;
-            }
-        });
-
-        // Setze die aktive Klasse für alle Items zurück
-        pickerItems.forEach((item) => item.classList.remove("active"));
-
-        // Füge die aktive Klasse dem nächstgelegenen Element hinzu
-        if (closestItem) {
-            closestItem.classList.add("active");
-            console.log("Mittige Zahl:", closestItem.textContent); // Debugging: Zeige die aktive Zahl an
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestItem = item;
         }
+    });
+
+    // Setze die aktive Klasse und Farbe für alle Items zurück
+    pickerItems.forEach((item) => {
+        item.classList.remove("active");
+        item.style.color = "white"; // Standardfarbe
+    });
+
+    // Füge die aktive Klasse und die neue Farbe dem nächstgelegenen Element hinzu
+    if (closestItem) {
+        closestItem.classList.add("active");
+        closestItem.style.color = "red"; // Neue Farbe für das aktive Element
+        console.log("Mittige Zahl:", closestItem.textContent); // Debugging
     }
+}
+
 
     // Überwache das Scroll-Event im Picker-Container
     pickerContainer.addEventListener("scroll", () => {

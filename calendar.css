@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #141F25;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 75%;
+    max-width: 20em;
+    text-align: left;
+    margin-top: 15%;
+}
+
+#spieler-container {
+    width: 90%;
+    padding-left: 5%;
+    padding-top: 7%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7%; /* Abstand zu den Input-Feldern */
+}
+
+.back-arrow {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 999;
+}
+
+.pfeil {
+    height: 2rem;
+    width: 2rem;
+}
+
+.Überschrift {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: var(--font-size-header);
+}

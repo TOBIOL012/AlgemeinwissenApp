@@ -32,17 +32,14 @@ body {
     transform: translateX(-50%);
     width: 88%;
     background-color: #141F25;
-    border: 3px solid #2f4957;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: height 0.3s ease;
-    overflow: hidden;
 }
 
 .top-bar-icons {
@@ -51,17 +48,108 @@ body {
     width: 100%;
 }
 
+/* Keine Umrandung im Standardzustand */
 .top-bar-content {
     display: none;
     width: 100%;
     background-color: #141F25;
     color: white;
     text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    border: none; /* Standard: keine Umrandung */
 }
 
+/* Umrandung nur bei .expanded */
 .top-bar.expanded .top-bar-content {
     display: block;
+    border: 3px solid #2f4957; /* Umrandung bei Aktivierung */
 }
+
+
+.streak-button {
+    display: flex;
+    align-items: center;
+    background-color: #2f4957;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.streak-button:hover {
+    background-color: #f1730c;
+}
+
+.streak-button:active {
+    transform: scale(0.95);
+}
+
+
+.streak-icon{
+    width: 20px;
+}
+
+
+.streak-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.streak-header p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.XP-Pfad-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Abstand nach oben */
+    width: 100%; /* Breite der Top-Bar */
+}
+
+/* XP-Pfad-Button */
+.xp-pfad-button {
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #2f4957;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding: 10px 10px;
+    font-size: 1.2em;
+    font-family: "Dosis", sans-serif;
+    text-align: left;
+    cursor: pointer;
+    width: 90%; /* Breite anpassen */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Interaktionsstil für den Button */
+.xp-pfad-button:hover {
+    background-color: #2f4957;
+}
+
+.xp-pfad-button:active {
+    background-color: #e48d45;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+
+
+
 
 .stat {
     display: flex;
@@ -106,7 +194,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .week-calendar .days {
@@ -142,7 +230,6 @@ body {
     background-color: #2f4957;
     border-radius: 10px;
     padding: 2px;
-    margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
 }

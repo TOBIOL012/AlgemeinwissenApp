@@ -343,19 +343,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
 function toggleContent(contentId) {
     const topBar = document.getElementById('top-bar');
     const contentDiv = document.getElementById('top-bar-content');
 
     if (contentDiv.dataset.activeContent === contentId) {
+        // Verstecke den Inhalt und entferne die Klasse "expanded"
         contentDiv.style.display = 'none';
         contentDiv.dataset.activeContent = '';
         topBar.classList.remove('expanded');
     } else {
+        // Zeige den Inhalt und füge die Klasse "expanded" hinzu
         contentDiv.innerHTML = getContent(contentId);
         contentDiv.style.display = 'block';
         contentDiv.dataset.activeContent = contentId;
@@ -363,21 +361,37 @@ function toggleContent(contentId) {
     }
 }
 
+
+
 function getContent(contentId) {
     if (contentId === 'streak-content') {
-        return generateWeekCalendar();
+        return `
+            <div class="streak-header">
+                <p>Streak Übersicht</p>
+                <button class="streak-button" onclick="location.href='calendar.html'">
+                    <img src="streak-icon.png" alt="Details" class="streak-icon">
+                </button>
+            </div>
+            ${generateWeekCalendar()}
+        `;
+    }
+    if (contentId === 'xp-content') {
+        return `
+            <div class="XP-Pfad-Container">
+                <a href="xp-pfad.html" class="xp-pfad-button">XP-Pfad ></a>
+            </div>
+        `;
     }
     switch (contentId) {
         case 'coins-content':
             return '<p>Coins Details: Verdiene Münzen durch Quiz!</p>';
-        case 'xp-content':
-            return '<p>XP Details: Sammle Erfahrungspunkte!</p>';
         case 'notifications-content':
             return '<p>Benachrichtigungen: Neuigkeiten und Updates!</p>';
         default:
             return '';
     }
 }
+
 
 function generateWeekCalendar() {
     const weekDays = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
@@ -386,18 +400,13 @@ function generateWeekCalendar() {
     const startOfWeek = new Date(today);
     startOfWeek.setDate(today.getDate() - currentDay + 1); // Start bei Montag
 
-    console.log("Aktuelles Datum:", today);
-
     let streakData = JSON.parse(localStorage.getItem('streakData')) || [0, 0, 1, 1, 1, 0, 1];
     if (streakData.length < 7) {
         streakData = Array(7).fill(0);
     }
 
     let calendarHTML = '<div class="week-calendar">';
-
-    calendarHTML += '<p>Streak Übersicht</p>'; 
     calendarHTML += '<div class="days">';
-
     weekDays.forEach(day => {
         calendarHTML += `<div class="day">${day}</div>`;
     });
@@ -409,7 +418,6 @@ function generateWeekCalendar() {
         date.setDate(startOfWeek.getDate() + i);
         const isActive = streakData[i] === 1;
         const isCurrent = today.toDateString() === date.toDateString();
-        console.log(`Tag: ${date.toDateString()}, ist aktuell: ${isCurrent}`);
         calendarHTML += `<div class="day">
             <div class="${isCurrent ? 'current-day' : ''} ${isActive ? 'active' : 'inactive'}">${date.getDate()}</div>
         </div>`;

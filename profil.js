@@ -105,14 +105,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Benutzer in Firestore speichern
     function saveUserToFirestore(uid, username) {
-        firestore.collection("users").doc(uid).set({ username, coins: 0, xp: 0, streak: 0 })
-            .then(() => {
-                localStorage.setItem("uid", uid);
-                localStorage.setItem("username", username);
-                showUsername(username);
-                syncUserData(uid);
-            })
-            .catch(handleError);
+        const creationDate = new Date().toISOString().split("T")[0]; // Aktuelles Datum
+        firestore.collection("users").doc(uid).set({
+            username,
+            coins: 0,
+            xp: 0,
+            streak: 0,
+            streakOnIce: 3, // Standardwert für "Streak auf Eis"
+            creationDate, // Datum der Kontoerstellung
+            streakHistory: [] // Initialer leerer Verlauf
+        }).then(() => {
+            localStorage.setItem("uid", uid);
+            localStorage.setItem("username", username);
+            showUsername(username);
+            syncUserData(uid);
+        }).catch(handleError);
     }
 
     // Benutzer und Statistiken synchronisieren
@@ -121,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (doc.exists) {
                 const data = doc.data();
                 localStorage.setItem("username", data.username);
-                updateStats(data.coins, data.xp, data.streak, data.username);
+                updateStats(data.coins, data.xp, data.streak, data.username, data.creationDate, data.streakHistory, data.streakOnIce);
             } else {
                 console.error("Dokument existiert nicht.");
             }
@@ -148,11 +155,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Statistiken aktualisieren
-    function updateStats(coins, xp, streak, username) {
+    function updateStats(coins, xp, streak, username, creationDate, streakHistory, streakOnIce) {
         if (coinsDisplay) coinsDisplay.textContent = coins;
         if (xpDisplay) xpDisplay.textContent = xp;
-        if (streakDisplay) streakDisplay.textContent = streak
+        if (streakDisplay) streakDisplay.textContent = streak;
         if (nameDisplay) nameDisplay.textContent = username;
+    
+        console.log("Konto erstellt am:", creationDate);
+        console.log("Streak-Verlauf:", streakHistory);
+        console.log("Streak auf Eis verfügbar:", streakOnIce);
     }
 
     // Fehler behandeln

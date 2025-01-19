@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
         measurementId: "G-P8SBRHWS84",
     };
 
-    const { increaseValue, decreaseValue, setValue, readData } = window;
-        
+    const { increaseValue, decreaseValue, setValue, readData, extendStreak} = window;
+    
     // Firebase initialisieren
     const app = firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     xpElement.style.opacity = '1';
     coinsElement.textContent = `+${earnedCoins}`;
     coinsElement.style.opacity = '1';
+
+    extendStreak();
 
 
     // Fortschrittsanzeige
