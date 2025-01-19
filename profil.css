@@ -26,6 +26,7 @@ html, body {
 
 .settings-icon img {
     height: 2.3rem;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -203,7 +204,7 @@ body {
 .XP-Pfad-Container {
     justify-content: center;
     margin-top: 20px;
-    width: 90%;
+    width: calc(90% + 3px);
 }
 
 .xp-pfad-button {
