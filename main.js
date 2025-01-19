@@ -269,9 +269,19 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.question').textContent = randomQuestion.Frage;
         updateCategoryDisplay(randomQuestion.Kategorie);
         setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        const shuffledAnswers = shuffleArray([...randomQuestion.Antworten]);
+
         let answers = document.querySelectorAll('.answer');
         answers.forEach((button, index) => {
-            button.textContent = randomQuestion.Antworten[index];
+            button.textContent = shuffledAnswers[index];
             button.disabled = false;
             button.classList.remove('correct-answer', 'wrong-answer');
         });

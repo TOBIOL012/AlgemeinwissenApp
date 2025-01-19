@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
     function addNewInputField() {
+        console.log("oioioi");
         const inputContainer = document.createElement('div');
         inputContainer.classList.add('input-container');
     
@@ -121,79 +121,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 
-    const sliderTrack = document.getElementById('sliderTrack');
-    const min = 5;
-    const max = 50;
-    const step = 5;
-    let currentIndex = 0;
+    
 
-    for (let i = min; i <= max; i += step) {
-        const item = document.createElement('div');
-        item.className = 'slider-item';
-        item.textContent = i;
-        sliderTrack.appendChild(item);
-    }
 
-    const items = Array.from(document.querySelectorAll('.slider-item'));
 
-    function updateActiveItem(index) {
-        items.forEach((item, i) => {
-            item.classList.toggle('active', i === index);
+      
+
+
+
+
+   
+
+    
+    
+    
+    
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    // Wähle den Picker-Container und die einzelnen Picker-Items aus
+    const pickerContainer = document.querySelector(".picker-container");
+    const pickerItems = document.querySelectorAll(".picker-item");
+
+    // Funktion, um das mittige Element hervorzuheben
+    function updateActiveItem() {
+        // Berechne die Mitte des Containers
+        const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
+
+        let closestItem = null; // Das Element, das der Mitte am nächsten liegt
+        let closestDistance = Infinity; // Kleinster Abstand zur Mitte
+
+        pickerItems.forEach((item) => {
+            // Berechne die Mitte jedes Elements
+            const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+            const distance = Math.abs(containerCenter - itemCenter);
+
+            // Aktualisiere das nächstgelegene Element
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestItem = item;
+            }
         });
 
-        const offset = (index * (items[0].offsetWidth + 20)) - (sliderTrack.parentElement.offsetWidth / 2 - items[0].offsetWidth / 2);
-        sliderTrack.style.transform = `translateX(${-offset}px)`;
+        // Setze die aktive Klasse für alle Items zurück
+        pickerItems.forEach((item) => item.classList.remove("active"));
+
+        // Füge die aktive Klasse dem nächstgelegenen Element hinzu
+        if (closestItem) {
+            closestItem.classList.add("active");
+            console.log("Mittige Zahl:", closestItem.textContent); // Debugging: Zeige die aktive Zahl an
+        }
     }
 
-    updateActiveItem(currentIndex);
+    // Überwache das Scroll-Event im Picker-Container
+    pickerContainer.addEventListener("scroll", () => {
+        updateActiveItem(); // Aktualisiere die aktive Zahl beim Scrollen
+    });
 
-    let isDragging = false;
-    let startX = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
+    // Initial: Setze die erste Zahl aktiv
+    updateActiveItem();
+});
 
-    sliderTrack.addEventListener('mousedown', startDrag);
-    sliderTrack.addEventListener('touchstart', startDrag);
-
-    sliderTrack.addEventListener('mousemove', drag);
-    sliderTrack.addEventListener('touchmove', drag);
-
-    sliderTrack.addEventListener('mouseup', endDrag);
-    sliderTrack.addEventListener('touchend', endDrag);
-    sliderTrack.addEventListener('mouseleave', endDrag);
-
-    function startDrag(event) {
-        isDragging = true;
-        startX = getPositionX(event);
-        sliderTrack.style.transition = 'none';
-        prevTranslate = currentTranslate;
-    } 
-
-    function drag(event) {
-        if (!isDragging) return;
-        const currentPosition = getPositionX(event);
-        const movedBy = currentPosition - startX;
-        currentTranslate = prevTranslate + movedBy;
-        sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-    }
-
-    function endDrag() {
-        isDragging = false;
-        sliderTrack.style.transition = 'transform 0.3s';
-
-        const itemWidth = items[0].offsetWidth + 20;
-        currentIndex = Math.round(-currentTranslate / itemWidth);
-
-        if (currentIndex < 0) currentIndex = 0;
-        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
-
-        updateActiveItem(currentIndex);
-    }
-
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
-
+    
+    
 
 
 
@@ -324,6 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add initial input fields
     for (let i = 0; i < 2; i++) {
+        console.log("oioiooioioooioioio");
         addNewInputField();
     }
     document.documentElement.style.height = 'auto';
@@ -331,3 +321,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial Update der Button-States
     updateContinueButtonState();
 });
+

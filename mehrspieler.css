@@ -3,7 +3,6 @@
 body {
     font-family: "Dosis", sans-serif;
     margin: 0;
-    padding: 0;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -268,6 +267,57 @@ body {
     outline-offset: -4px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
     width: 100%; /* 100% des übergeordneten Containers */
+}
+
+
+
+
+
+.picker-container {
+    width: 120px; /* Breite des Containers */
+    height: 50px; /* Höhe des Containers */
+    overflow-x: scroll; /* Horizontal scrollen */
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory; /* Zentrierung aktivieren */
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Automatische Zentrierung */
+    position: absolute; /* Absolut positioniert */
+    bottom: 7%; /* Vertikale Mitte */
+    left: 50%; /* Horizontale Mitte */
+    transform: translate(-50%, -50%); /* Exakte Mitte */
+    -ms-overflow-style: none; /* Scroll-Leiste ausblenden (IE und Edge) */
+    scrollbar-width: none; /* Scroll-Leiste ausblenden (Firefox) */
+}
+
+.picker-container::-webkit-scrollbar {
+    display: none; /* Scroll-Leiste ausblenden (Chrome, Safari) */
+}
+
+.picker {
+    display: flex; /* Elemente horizontal ausrichten */
+    flex-direction: row; /* Waagerechte Elemente */
+    align-items: center;
+    width: 100%;
+    padding-left: 110px; /* Platz für Start- und End-Scrollbereiche */
+}
+
+.picker-item {
+    scroll-snap-align: center; /* Immer zentrieren */
+    text-align: center;
+    padding: 6px; /* Abstand zwischen den Items */
+    font-size: 16px;
+    color: white; /* Standardfarbe: Grau */
+    white-space: nowrap; /* Kein Zeilenumbruch */
+    transition: font-size 0.3s, color 0.3s; /* Sanfte Übergänge */
+}
+
+.picker-item.active {
+    font-size: 25px; /* Größere Schrift für aktive Zahl */
+    color: red; /* Weiße Schrift für aktive Zahl */
+    font-weight: bold;
 }
 
 
