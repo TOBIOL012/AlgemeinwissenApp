@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Service Worker Registrierung fehlgeschlagen:', error);
             });
     }
+    
     const factDisplay = document.querySelector('.fact');
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button');
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateXPText() {
+        console.log("was");
         const xpElement = document.getElementById('xp-total');
         const totalXP = parseInt(localStorage.getItem('totalXP') || '0', 10);
         if (xpElement) {
@@ -562,19 +564,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // XP aus Firestore abrufen und Fortschrittsanzeige aktualisieren
     if (uid) {
-        firestore.collection('users').doc(uid).onSnapshot((doc) => {
-            if (doc.exists) {
-                const data = doc.data();
-                const totalXP = data.xp || 0;
-                updateProgressBar(totalXP);
-            } else {
-                console.error('Benutzerdaten nicht gefunden.');
-            }
-        }, (error) => {
-            console.error('Fehler beim Abrufen der XP-Daten:', error);
-        });
+        console.log("Daten vom Service Worker abrufen...");
+    
+        // Nachricht an den Service Worker senden, um die XP-Daten zu erhalten
+        if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({
+                type: 'getData',
+                key: 'xp'  // Wir möchten die XP-Daten
+            });
+    
+            // Warten auf die Antwort des Service Workers
+            navigator.serviceWorker.addEventListener('message', function(event) {
+                if (event.data.type === 'dataResponse' && event.data.key === 'xp') {
+                    const totalXP = event.data.value || 0;  // Die XP-Werte aus dem Service Worker
+    
+                    // Fortschrittsanzeige aktualisieren
+                    updateProgressBar(totalXP);
+                }
+            });
+        } else {
+            console.error("Kein Service Worker gefunden.");
+        }
     } else {
-        console.error('Keine Benutzer-UID gefunden.');
+        console.error("Keine Benutzer-UID gefunden.");
     }
 });
 
