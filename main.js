@@ -463,7 +463,7 @@ document.addEventListener('click', function (event) {
         topBar.classList.remove('expanded');
     }
 });
-
+console.log("was machst diu");
 
 function highlightStreakDays() {
     auth.onAuthStateChanged((user) => {
