@@ -488,7 +488,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     
-console.log("was machst diu");
     const progressBar = document.getElementById('progress-bar');
     const indicator = document.getElementById('indicator');
 
@@ -510,6 +509,8 @@ console.log("was machst diu");
         marker.style.top = `${(i / maxXP) * 100}%`;
         progressBar.appendChild(marker);
     }
+    
+console.log("was machst diu");
 
     // Fortschrittsanzeige aktualisieren
     function updateProgressBar(xp) {
