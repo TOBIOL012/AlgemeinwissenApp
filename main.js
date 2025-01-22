@@ -1,20 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./service-worker.js')
-            .then((registration) => {
-                console.log('Service Worker registriert:', registration);
-    
-                // Starte das Logging, sobald der Service Worker aktiv ist
-                navigator.serviceWorker.ready.then((swRegistration) => {
-                    swRegistration.active.postMessage('start-logging');
-                });
-            })
-            .catch((error) => {
-                console.error('Service Worker Registrierung fehlgeschlagen:', error);
-            });
-    }
-    console.log("Daten vom Service Worker abrufen...");
-    
     const factDisplay = document.querySelector('.fact');
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button');
@@ -32,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateXPText() {
-        console.log("was");
         const xpElement = document.getElementById('xp-total');
         const totalXP = parseInt(localStorage.getItem('totalXP') || '0', 10);
         if (xpElement) {
@@ -465,6 +448,42 @@ document.addEventListener('click', function (event) {
 });
 
 
+function highlightStreakDays() {
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            const uid = user.uid;
+            firestore.collection("users").doc(uid).get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    const streakHistory = data.streakHistory || [];
+                    
+                    const today = new Date();
+                    const startOfWeek = new Date(today);
+                    startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7)); // Montag der aktuellen Woche
+
+                    const days = document.querySelectorAll('.day-row .day div');
+                    
+                    days.forEach((day, index) => {
+                        const date = new Date(startOfWeek);
+                        date.setDate(startOfWeek.getDate() + index);
+                        const formattedDate = date.toISOString().split("T")[0];
+
+                        if (streakHistory.includes(formattedDate)) {
+                            day.classList.add('streak-day'); // Streak-Tag markieren
+                        }
+                    });
+                } else {
+                    console.error("Benutzerdokument nicht gefunden.");
+                }
+            }).catch((error) => {
+                console.error("Fehler beim Abrufen des Benutzerdokuments:", error);
+            });
+        } else {
+            console.error("Benutzer nicht eingeloggt.");
+        }
+    });
+}
+
 // Diese Funktion nach dem Rendern des Kalenders aufrufen
 document.addEventListener('DOMContentLoaded', function () {
     highlightStreakDays();
@@ -487,11 +506,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    
     const progressBar = document.getElementById('progress-bar');
     const indicator = document.getElementById('indicator');
 
     // Firebase Auth und Firestore Setup (falls benötigt)
+    const firestore = firebase.firestore();
+    const auth = firebase.auth();
 
     // Benutzer UID aus localStorage laden
     const uid = localStorage.getItem('uid');
@@ -509,7 +529,6 @@ document.addEventListener('DOMContentLoaded', function() {
         marker.style.top = `${(i / maxXP) * 100}%`;
         progressBar.appendChild(marker);
     }
-    
 
     // Fortschrittsanzeige aktualisieren
     function updateProgressBar(xp) {
@@ -529,28 +548,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // XP aus Firestore abrufen und Fortschrittsanzeige aktualisieren
     if (uid) {
-        console.log("Daten vom Service Worker abrufen...");
-    
-        // Fetch Anfrage an den Service Worker senden
-        fetch('/getUserData')  // Hier gehen wir davon aus, dass der Service Worker auf diese Anfrage antwortet
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP-Fehler: ${response.status}`);
-                }
-                return response.json();  // Antwort als JSON
-            })
-            .then(data => {
-                const totalXP = data.xp || 0;  // Die XP-Daten aus dem Service Worker
-    
-                // Fortschrittsanzeige aktualisieren
+        firestore.collection('users').doc(uid).onSnapshot((doc) => {
+            if (doc.exists) {
+                const data = doc.data();
+                const totalXP = data.xp || 0;
                 updateProgressBar(totalXP);
-            })
-            .catch(error => {
-                console.error("Fehler beim Abrufen der Daten vom Service Worker:", error);
-            });
-    
+            } else {
+                console.error('Benutzerdaten nicht gefunden.');
+            }
+        }, (error) => {
+            console.error('Fehler beim Abrufen der XP-Daten:', error);
+        });
     } else {
-        console.error("Keine Benutzer-UID gefunden.");
+        console.error('Keine Benutzer-UID gefunden.');
     }
 });
 
