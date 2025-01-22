@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registriert:', registration);
+    
+                // Starte das Logging, sobald der Service Worker aktiv ist
+                navigator.serviceWorker.ready.then((swRegistration) => {
+                    swRegistration.active.postMessage('start-logging');
+                });
+            })
+            .catch((error) => {
+                console.error('Service Worker Registrierung fehlgeschlagen:', error);
+            });
+    }
     const factDisplay = document.querySelector('.fact');
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button');
