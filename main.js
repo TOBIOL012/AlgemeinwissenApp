@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Service Worker Registrierung fehlgeschlagen:', error);
             });
     }
+    console.log("Daten vom Service Worker abrufen...");
     
     const factDisplay = document.querySelector('.fact');
     const categoryImages = document.querySelectorAll('img[data-category]');
@@ -563,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // XP aus Firestore abrufen und Fortschrittsanzeige aktualisieren
-    
+    if (uid) {
         console.log("Daten vom Service Worker abrufen...");
     
         // Nachricht an den Service Worker senden, um die XP-Daten zu erhalten
@@ -585,6 +586,9 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             console.error("Kein Service Worker gefunden.");
         }
+    } else {
+        console.error("Keine Benutzer-UID gefunden.");
+    }
 });
 
 
