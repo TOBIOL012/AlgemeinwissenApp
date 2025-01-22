@@ -21,6 +21,7 @@ const auth = firebase.auth();
 
 // Lokale Werte sofort laden
 function loadLocalStats() {
+    console.log("hallo");
     const coins = localStorage.getItem("lastCoins") || 0;
     const xp = localStorage.getItem("lastXp") || 0;
     const streak = localStorage.getItem("lastStreak") || 0;
