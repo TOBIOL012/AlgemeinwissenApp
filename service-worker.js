@@ -1,4 +1,4 @@
 self.addEventListener('fetch', (event) => {
-    // Leite alle Anfragen standardmäßig weiter
+    console.log('Fetching:', event.request.url);
     event.respondWith(fetch(event.request));
 });
