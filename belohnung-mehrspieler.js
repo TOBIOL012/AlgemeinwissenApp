@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', function() {
-        window.location.href = 'startseite.html';
+        parent.document.getElementById('main-iframe').src = 'startseite.html';
     });
 
     // Calculate earned coins and XP

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
     const { increaseValue, decreaseValue, setValue } = window;
 
     // DOM-Elemente
@@ -12,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorMessage = document.querySelector(".error-message");
     const userDetails = document.querySelector(".Benutzerdaten");
     const nameDisplay = document.querySelector(".name");
+    const usernameDisplay = document.querySelector("#username-display");
     const xpDisplay = document.querySelector("#xp-total");
     const coinsDisplay = document.querySelector(".coin-text");
     const streakDisplay = document.querySelector(".streak-text");
@@ -137,18 +137,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Benutzername anzeigen
+    // Benutzername und Share-Button anzeigen
     function showUsername(username) {
         userDetails.style.display = "none";
-        nameDisplay.style.display = "block";
-        nameDisplay.textContent = username;
+        nameDisplay.style.display = "flex";
+        usernameDisplay.textContent = username;
     }
 
     // UI zurücksetzen
     function resetUI() {
         userDetails.style.display = "block";
         nameDisplay.style.display = "none";
-        nameDisplay.textContent = "";
+        usernameDisplay.textContent = "";
         localStorage.removeItem("uid");
         localStorage.removeItem("username");
         updateStats(0, 0, 0);
@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (coinsDisplay) coinsDisplay.textContent = coins;
         if (xpDisplay) xpDisplay.textContent = xp;
         if (streakDisplay) streakDisplay.textContent = streak;
-        if (nameDisplay) nameDisplay.textContent = username;
-    
+        if (usernameDisplay) usernameDisplay.textContent = username;
+
         console.log("Konto erstellt am:", creationDate);
         console.log("Streak-Verlauf:", streakHistory);
         console.log("Streak auf Eis verfügbar:", streakOnIce);
@@ -171,6 +171,18 @@ document.addEventListener("DOMContentLoaded", () => {
         errorMessage.textContent = error.message || "Unbekannter Fehler";
     }
 
+    // Share-Funktion
+    function shareProfile() {
+        const username = usernameDisplay.textContent;
+        if (username) {
+            navigator.clipboard.writeText(`Schau dir ${username}'s Profil in der Quiz-App an!`)
+                .then(() => alert("Profil-Link kopiert!"))
+                .catch((err) => alert("Fehler beim Kopieren des Links: " + err));
+        } else {
+            alert("Benutzername nicht verfügbar.");
+        }
+    }
+
     // Tab aktivieren
     function activateTab(activeTab, inactiveTab) {
         activeTab.classList.add("active");
@@ -179,3 +191,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabLogin.click();
 });
+
+

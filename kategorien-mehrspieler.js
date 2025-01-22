@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.removeItem('questionsAsked');
                 localStorage.removeItem('correctCount');
                 // Navigiere zur nächsten Seite
-                window.location.href = 'fragen-mehrspieler.html';
+                parent.document.getElementById('main-iframe').src = 'fragen-mehrspieler.html';
             }
         });
     }

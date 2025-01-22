@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Redirecting to endranking-mehrspieler.html');
             questionsAsked = 0;
             localStorage.setItem('questionsAsked', questionsAsked);
-            window.location.href = 'endranking-mehrspieler.html';
+            parent.document.getElementById('main-iframe').src = 'endranking-mehrspieler.html';
             return;
         }
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (filteredQuestions.length === 0) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            window.location.href = 'kategorien-mehrspieler.html';
+            parent.document.getElementById('main-iframe').src = 'kategorien-mehrspieler.html';
             return;
         }
 
@@ -185,11 +185,11 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Redirecting to endranking-mehrspieler.html');
             questionsAsked = 0;
             localStorage.setItem('questionsAsked', questionsAsked);
-            window.location.href = 'endranking-mehrspieler.html';
+            parent.document.getElementById('main-iframe').src = 'endranking-mehrspieler.html';
         } else if ((currentPlayerIndex + 1) % players.length === 0 && questionsAsked < totalQuestions) {
             localStorage.setItem('players', JSON.stringify(players));
             console.log('Redirecting to ranking-mehrspieler.html');
-            window.location.href = 'ranking-mehrspieler.html';
+            parent.document.getElementById('main-iframe').src = 'ranking-mehrspieler.html';
         } else {
             getNextPlayer();
             loadQuestion();

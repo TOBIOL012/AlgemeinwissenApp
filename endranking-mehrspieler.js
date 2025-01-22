@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     nextRoundButton.addEventListener('click', function() {
-        window.location.href = 'belohnung-mehrspieler.html';
+        parent.document.getElementById('main-iframe').src = 'belohnung-mehrspieler.html';
     });
 
     updateRanking();

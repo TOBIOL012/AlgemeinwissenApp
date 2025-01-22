@@ -470,14 +470,14 @@ function getRandomQuestion() {
         
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
-            window.location.href = 'belohnung.html';
+            parent.document.getElementById('main-iframe').src = 'belohnung.html';
             return;
         }
         
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            window.location.href = 'kategorien.html';
+            parent.document.getElementById('main-iframe').src = 'kategorien.html';
             return;
         }
         

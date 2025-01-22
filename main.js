@@ -343,6 +343,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
+
+
 function toggleContent(contentId) {
     const topBar = document.getElementById('top-bar');
     const contentDiv = document.getElementById('top-bar-content');
@@ -397,13 +405,9 @@ function generateWeekCalendar() {
     const weekDays = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
     const today = new Date();
     const currentDay = today.getDay(); // 0 = Sonntag, 1 = Montag, ...
-    const startOfWeek = new Date(today);
-    startOfWeek.setDate(today.getDate() - currentDay + 1); // Start bei Montag
 
-    let streakData = JSON.parse(localStorage.getItem('streakData')) || [0, 0, 1, 1, 1, 0, 1];
-    if (streakData.length < 7) {
-        streakData = Array(7).fill(0);
-    }
+    const startOfWeek = new Date(today);
+    startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7)); // Start bei Montag
 
     let calendarHTML = '<div class="week-calendar">';
     calendarHTML += '<div class="days">';
@@ -416,17 +420,22 @@ function generateWeekCalendar() {
     for (let i = 0; i < 7; i++) {
         const date = new Date(startOfWeek);
         date.setDate(startOfWeek.getDate() + i);
-        const isActive = streakData[i] === 1;
-        const isCurrent = today.toDateString() === date.toDateString();
+    
+        const isCurrent = today.toDateString() === date.toDateString(); // Vergleich aktueller Tag
+        const formattedDate = date.toISOString().split("T")[0];
+
         calendarHTML += `<div class="day">
-            <div class="${isCurrent ? 'current-day' : ''} ${isActive ? 'active' : 'inactive'}">${date.getDate()}</div>
+            <div data-date="${formattedDate}" class="${isCurrent ? 'current-day' : ''}">${date.getDate()}</div>
         </div>`;
     }
+    
     calendarHTML += '</div>';
     calendarHTML += '</div>';
 
     return calendarHTML;
 }
+
+
 
 document.addEventListener('click', function (event) {
     const topBar = document.getElementById('top-bar');
@@ -437,6 +446,56 @@ document.addEventListener('click', function (event) {
         topBar.classList.remove('expanded');
     }
 });
+
+
+function highlightStreakDays() {
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            const uid = user.uid;
+            firestore.collection("users").doc(uid).get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    const streakHistory = data.streakHistory || [];
+                    
+                    const today = new Date();
+                    const startOfWeek = new Date(today);
+                    startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7)); // Montag der aktuellen Woche
+
+                    const days = document.querySelectorAll('.day-row .day div');
+                    
+                    days.forEach((day, index) => {
+                        const date = new Date(startOfWeek);
+                        date.setDate(startOfWeek.getDate() + index);
+                        const formattedDate = date.toISOString().split("T")[0];
+
+                        if (streakHistory.includes(formattedDate)) {
+                            day.classList.add('streak-day'); // Streak-Tag markieren
+                        }
+                    });
+                } else {
+                    console.error("Benutzerdokument nicht gefunden.");
+                }
+            }).catch((error) => {
+                console.error("Fehler beim Abrufen des Benutzerdokuments:", error);
+            });
+        } else {
+            console.error("Benutzer nicht eingeloggt.");
+        }
+    });
+}
+
+// Diese Funktion nach dem Rendern des Kalenders aufrufen
+document.addEventListener('DOMContentLoaded', function () {
+    highlightStreakDays();
+});
+
+
+
+
+
+
+
+
 
 
 
