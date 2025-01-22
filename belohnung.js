@@ -4,24 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const uid = localStorage.getItem("uid");
     console.log(uid);
-    
-    // Firebase-Konfiguration
-    const firebaseConfig = {
-        apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
-        authDomain: "besserwisser-95b63.firebaseapp.com",
-        projectId: "besserwisser-95b63",
-        storageBucket: "besserwisser-95b63.appspot.com",
-        messagingSenderId: "522066225262",
-        appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
-        measurementId: "G-P8SBRHWS84",
-    };
+ 
 
-    const { increaseValue, decreaseValue, setValue, readData, extendStreak} = window;
+    const { increaseValue, extendStreak} = window;
     
-    // Firebase initialisieren
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const firestore = firebase.firestore();
 
     // Berechnungen für Münzen und XP
     const correctCount = parseInt(localStorage.getItem('correctCount') || '0', 10);
@@ -45,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', function () {
-        parent.document.getElementById('main-iframe').src = 'startseite.html';
+        window.location.href = 'startseite.html';
     });
 
     // Funktion: Münzen und XP synchronisieren

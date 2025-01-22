@@ -48,7 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- Hier wird der Name angezeigt, wenn der Benutzer eingeloggt ist -->
-    <div class="name" style="display: none;"></div>
+
+    <div class="name" style="display: none;">
+        <span id="username-display"></span>
+        <button class="share-button" onclick="shareProfile()">
+            <img src="share-icon.png" alt="Teilen" class="share-icon">
+        </button>
+    </div>
+    
+
 
     <!-- Hier sind die Login- und Registrierungsfelder -->
     <div class="Benutzerdaten">

@@ -40,10 +40,11 @@ body {
     justify-content: center;
     width: 100%;
     margin-top: 5%;
+    border-bottom: 3px solid #2f4957;
 }
 
 .Profilbild-container a {
-    display: block;
+    display: flex;
 }
 
 .Profilbild-groß {
@@ -52,6 +53,7 @@ body {
 }
 
 .Benutzerdaten {
+    margin-top: 15px;
     width: 90%;
     display: block;
     justify-content: center;
@@ -65,12 +67,60 @@ body {
     align-items: center;
     justify-content: center;
     padding-top:0.8rem;
+    margin-bottom: 3px;
 }
 
 .name{
-    padding: 0.5rem;
     font-size: 1.6rem;
+    width: 90%;
+    padding-top: 12px;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
 }
+
+#username-display {
+    align-items: center;
+}
+
+
+
+
+
+
+
+.share-button {
+    display: inline-flex;
+    align-items: right;
+    justify-content: center;
+    margin-left: 10px; /* Abstand zum Benutzernamen */
+    border: 3px solid #2f4957;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #141F25;
+    transition: all 0.3s ease;
+}
+
+.share-button img {
+    width:25px;
+    height: 25px;
+}
+
+.share-button:hover {
+    background-color: #e48d45;
+}
+
+.username-container {
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
 
 .tab-register, .tab-login{
     border-bottom: none;
@@ -101,6 +151,10 @@ body {
     font-family: "Dosis", sans-serif;
 }
 
+.Passwort{
+    margin-bottom: 5px;
+}
+
 .Benutzername,  .E-Mail{
     border-bottom: 2px solid #2f4957;
 }
@@ -109,7 +163,7 @@ body {
     color: white;
     border: none;
     padding: 0.7rem;
-    margin-bottom: calc(0.8rem + 6px);
+    margin-bottom: 5px;
     border-radius: 2rem;
     cursor: pointer;
     font-size: 1.6rem;
@@ -124,14 +178,13 @@ body {
 
 .Übersicht {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     background-color: #141F25;
     border: 3px solid #2f4957;
     border-radius: 15px;
     padding: 1em 0em;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .XP, .Coins, .Streak {
