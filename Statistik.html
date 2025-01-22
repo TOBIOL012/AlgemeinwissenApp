@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="Statistik.css">
+    <link rel="stylesheet" href="Standart.css"> 
+    <script src="Fragen/geschichte.js" defer></script>
+    <script src="Fragen/geographie.js" defer></script>
+    <script src="Fragen/sport.js" defer></script>
+    <script src="Fragen/musik.js" defer></script>
+    <script src="Fragen/wissenschaft.js" defer></script>
+    <script src="Fragen/kunst.js" defer></script>
+    <script src="Fragen/question.js" defer></script>
+    <script src="Statistik.js" defer></script>   
+</head>
+<body>
+    <div id="spieler-container">
+        <div class="header">
+            <a href="profil.html" class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
+            <div class="Überschrift">Statistik</div>
+        </div>
+        <div class="Statistik-Container">
+                <div class="Fragen-Anzeige">
+                    <div class="Kreis-Anzeige">
+                        <svg class="circle-chart" viewBox="0 0 36 36">
+                            <path class="circle-bg"
+                                  d="M18 2.0845
+                                     a 15.9155 15.9155 0 0 1 0 31.831
+                                     a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle-beantwortet"
+                                  d="M18 2.0845
+                                     a 15.9155 15.9155 0 0 1 0 31.831
+                                     a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle-richtig"
+                                  d="M18 2.0845
+                                     a 15.9155 15.9155 0 0 1 0 31.831
+                                     a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        </svg>
+                        <div class="circle-text">
+                            <div class="fragen-text" id="flex">
+                                <div class="fragen-richtig-farbe"></div>
+                                <div class="fragen-richtig-Text" id="text"></div>
+                            </div>
+                            <div class="fragen-text" id="flex">
+                                <div class="fragen-beantwortet-farbe"></div>
+                                <div class="fragen-beantwortet-Text" id="text"></div>
+                            </div>
+                            <div class="fragen-text" id="flex">
+                                <div class="fragen-gesamt-farbe"></div>
+                                <div class="fragen-gesamt-Text" id="text"></div>
+                            </div>
+                        </div>
+                    </div>
+            </a>
+        </div> 
+        <div class="kategorien-Graph">
+            <div class="geschichte" id="kategorie1">
+                <div class="geschichte-balken" id="balken"></div>
+                <img class="geschichte-icon" id="icon" src="categorie-icons/i-tempel.png">
+            </div>
+            <div class="geographie" id="kategorie1">
+                <div class="geographie-balken" id="balken"></div>
+                <img class="geographie-icon" id="icon" src="categorie-icons/i-weltkarte.png">
+            </div>
+            <div class="musik" id="kategorie1">
+                <div class="musik-balken" id="balken"></div>
+                <img class="musik-icon" id="icon" src="categorie-icons/i-noten.png">
+            </div>
+            <div class="sport" id="kategorie1">
+                <div class="sport-balken" id="balken"></div>
+                <img class="sport-icon" id="icon" src="categorie-icons/i-basketball.png">
+            </div>
+            <div class="wissenschaft" id="kategorie1">
+                <div class="wissenschaft-balken" id="balken"></div>
+                <img class="wissenschaft-icon" id="icon" src="categorie-icons/i-microscop.png">
+            </div>
+            <div class="kunst" id="kategorie1">
+                <div class="kunst-balken" id="balken"></div>
+                <img class="kunst-icon" id="icon" src="categorie-icons/i-bibel.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

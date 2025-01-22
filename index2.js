@@ -294,7 +294,7 @@ function getRandomQuestion() {
         return Math.max(0, adjustmentFactor); // Sicherstellen, dass der Faktor nicht negativ ist
     }
 
-    function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige) {
+    function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige, Kategorie, Schwierigkeit) {
         hidebars();
         const inputField = document.querySelector('.text-input');
         const micButton = document.querySelector('.mic-button');
@@ -401,6 +401,80 @@ function getRandomQuestion() {
             }
         }
         
+        let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
+let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
+
+let questionText = question.textContent; // Der Text der aktuellen Frage
+let questionCategory = Kategorie; // Die Kategorie der aktuellen Frage
+let questionSchwierigkeit = Schwierigkeit;
+// Allgemeine Prüfungen für beantwortete und korrekt beantwortete Fragen
+if (!answeredQuestions.includes(questionText)) {
+    answeredQuestions.push(questionText);
+    localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+}
+
+if (isMatch && !correctAnswers.includes(questionText)) {
+    correctAnswers.push(questionText);
+    localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
+}
+
+// Spezielle Arrays für jede Kategorie
+const categories = ['Geschichte', 'Geographie', 'Musik', 'Wissenschaft', 'Kunst', 'Sport'];
+categories.forEach(category => {
+    console.log("ist");
+    // Initialisiere oder hole die aktuellen Kategoriedaten
+    let answeredCategoryQuestions = JSON.parse(localStorage.getItem(category + 'Answered')) || [];
+    let correctCategoryAnswers = JSON.parse(localStorage.getItem(category + 'Correct')) || [];
+
+    
+    if (questionCategory === category) {
+        if (!answeredCategoryQuestions.includes(questionText)) {
+            answeredCategoryQuestions.push(questionText);
+            localStorage.setItem(category + 'Answered', JSON.stringify(answeredCategoryQuestions));
+        }
+
+        if (isMatch && !correctCategoryAnswers.includes(questionText)) {
+            console.log("richtig");
+            correctCategoryAnswers.push(questionText);
+            localStorage.setItem(category + 'Correct', JSON.stringify(correctCategoryAnswers));
+        }
+    }
+
+    // Ausgabe der kategoriespezifischen Statistik
+    console.log(`Beantwortete Fragen in ${category}: ${answeredCategoryQuestions.length}`);
+    console.log(`Richtige Antworten in ${category}: ${correctCategoryAnswers.length}`);
+});
+
+const schwierigkeiten = ['leicht', 'mittel', 'schwer', 'extrem', 'expert'];
+schwierigkeiten.forEach(schwierigkeiten => {
+    console.log("ist");
+    // Initialisiere oder hole die aktuellen Kategoriedaten
+    let answeredCategoryQuestions = JSON.parse(localStorage.getItem(schwierigkeiten + 'Answered')) || [];
+    let correctCategoryAnswers = JSON.parse(localStorage.getItem(schwierigkeiten + 'Correct')) || [];
+
+    
+    if (questionSchwierigkeit === schwierigkeiten) {
+        if (!answeredCategoryQuestions.includes(questionText)) {
+            answeredCategoryQuestions.push(questionText);
+            localStorage.setItem(schwierigkeiten + 'Answered', JSON.stringify(answeredCategoryQuestions));
+        }
+
+        if (isMatch && !correctCategoryAnswers.includes(questionText)) {
+            console.log("richtig");
+            correctCategoryAnswers.push(questionText);
+            localStorage.setItem(schwierigkeiten + 'Correct', JSON.stringify(correctCategoryAnswers));
+        }
+    }
+
+    // Ausgabe der kategoriespezifischen Statistik
+    console.log(`Beantwortete Fragen in ${schwierigkeiten}: ${answeredCategoryQuestions.length}`);
+    console.log(`Richtige Antworten in ${schwierigkeiten}: ${correctCategoryAnswers.length}`);
+});
+
+// Ausgabe der allgemeinen Statistik
+console.log(`Beantwortete Fragen: ${answeredQuestions.length}`);
+console.log(`Richtige Antworten: ${correctAnswers.length}`);
+
         // Verarbeite die Antwort basierend auf dem Übereinstimmungsstatus
         if (isMatch) {
             correctCount++;
@@ -584,7 +658,7 @@ if (wrapper) {
     
         clickCount++;
         if (clickCount === 1) {
-            checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort);
+            checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort, randomQuestion.Kategorie, randomQuestion.Schwierigkeitsgrad);
             answerBox.style.display = 'block';
             nextButton.disabled = false;
     

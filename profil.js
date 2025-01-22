@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    function updateStatistics() {
+        let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
+        let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
+
+        let totalQuestions = questions.length;
+        let totalanswered = answeredQuestions.length;
+        let totalright = correctAnswers.length;
+
+        // Berechne die Prozentsätze
+        let answeredPercentage = totalQuestions > 0 ? (totalanswered / totalQuestions * 100) : 0;
+        let rightPercentage = totalright > 0 ? (totalright / totalanswered * 100) : 0;
+
+        // Setze die Breite der Elemente
+        let beantwortetDiv = document.querySelector('.Beantwortet');
+        let richtigDiv = document.querySelector('.Richtig');
+
+        if (beantwortetDiv && richtigDiv) {
+            beantwortetDiv.style.width = `${answeredPercentage}%`; // Die Breite basiert auf der Anzahl der beantworteten Fragen
+            richtigDiv.style.width = `${rightPercentage}%`; // Die Breite in Prozent der richtigen Antworten
+        }
+    }
+
+    // Führe die Funktion beim Laden der Seite aus
+    updateStatistics();
+
     const { increaseValue, decreaseValue, setValue } = window;
 
     const firebaseConfig = {
@@ -133,7 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
             streak: 0,
             streakOnIce: 3, // Standardwert für "Streak auf Eis"
             creationDate, // Datum der Kontoerstellung
-            streakHistory: [] // Initialer leerer Verlauf
+            streakHistory: [], // Initialer leerer Verlauf
+            xpHistory: []
         }).then(() => {
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);

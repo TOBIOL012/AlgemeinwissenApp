@@ -234,7 +234,7 @@ function getRandomQuestion() {
         return Math.max(0, adjustmentFactor); // Sicherstellen, dass der Faktor nicht negativ ist
     }
 
-    function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige, randomQuestion) {
+    function checkAnswer(userAnswer, correctAnswer, AntwortAnzeige, Kategorie, Schwierigkeit) {
         hidebars();
         const inputField = document.querySelector('.text-input2');
         const micButton = document.querySelector('.mic-button');
@@ -340,6 +340,81 @@ function getRandomQuestion() {
                 }
             }
         }
+
+        let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
+let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
+
+let questionText = question.textContent; // Der Text der aktuellen Frage
+let questionCategory = Kategorie; // Die Kategorie der aktuellen Frage
+let questionSchwierigkeit = Schwierigkeit;
+// Allgemeine Prüfungen für beantwortete und korrekt beantwortete Fragen
+if (!answeredQuestions.includes(questionText)) {
+    answeredQuestions.push(questionText);
+    localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+}
+
+if (isMatch && !correctAnswers.includes(questionText)) {
+    correctAnswers.push(questionText);
+    localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
+}
+
+// Spezielle Arrays für jede Kategorie
+const categories = ['Geschichte', 'Geographie', 'Musik', 'Wissenschaft', 'Kunst', 'Sport'];
+categories.forEach(category => {
+    console.log("ist");
+    // Initialisiere oder hole die aktuellen Kategoriedaten
+    let answeredCategoryQuestions = JSON.parse(localStorage.getItem(category + 'Answered')) || [];
+    let correctCategoryAnswers = JSON.parse(localStorage.getItem(category + 'Correct')) || [];
+
+    
+    if (questionCategory === category) {
+        if (!answeredCategoryQuestions.includes(questionText)) {
+            answeredCategoryQuestions.push(questionText);
+            localStorage.setItem(category + 'Answered', JSON.stringify(answeredCategoryQuestions));
+        }
+
+        if (isMatch && !correctCategoryAnswers.includes(questionText)) {
+            console.log("richtig");
+            correctCategoryAnswers.push(questionText);
+            localStorage.setItem(category + 'Correct', JSON.stringify(correctCategoryAnswers));
+        }
+    }
+
+    // Ausgabe der kategoriespezifischen Statistik
+    console.log(`Beantwortete Fragen in ${category}: ${answeredCategoryQuestions.length}`);
+    console.log(`Richtige Antworten in ${category}: ${correctCategoryAnswers.length}`);
+});
+
+const schwierigkeiten = ['leicht', 'mittel', 'schwer', 'extrem', 'expert'];
+schwierigkeiten.forEach(schwierigkeiten => {
+    console.log("ist");
+    // Initialisiere oder hole die aktuellen Kategoriedaten
+    let answeredCategoryQuestions = JSON.parse(localStorage.getItem(schwierigkeiten + 'Answered')) || [];
+    let correctCategoryAnswers = JSON.parse(localStorage.getItem(schwierigkeiten + 'Correct')) || [];
+
+    
+    if (questionSchwierigkeit === schwierigkeiten) {
+        if (!answeredCategoryQuestions.includes(questionText)) {
+            answeredCategoryQuestions.push(questionText);
+            localStorage.setItem(schwierigkeiten + 'Answered', JSON.stringify(answeredCategoryQuestions));
+        }
+
+        if (isMatch && !correctCategoryAnswers.includes(questionText)) {
+            console.log("richtig");
+            correctCategoryAnswers.push(questionText);
+            localStorage.setItem(schwierigkeiten + 'Correct', JSON.stringify(correctCategoryAnswers));
+        }
+    }
+
+    // Ausgabe der kategoriespezifischen Statistik
+    console.log(`Beantwortete Fragen in ${schwierigkeiten}: ${answeredCategoryQuestions.length}`);
+    console.log(`Richtige Antworten in ${schwierigkeiten}: ${correctCategoryAnswers.length}`);
+});
+
+// Ausgabe der allgemeinen Statistik
+console.log(`Beantwortete Fragen: ${answeredQuestions.length}`);
+console.log(`Richtige Antworten: ${correctAnswers.length}`);
+
         
         // Verarbeite die Antwort basierend auf dem Übereinstimmungsstatus
         if (isMatch) {
@@ -390,14 +465,14 @@ function getRandomQuestion() {
 
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
-            parent.document.getElementById('main-iframe').src = 'belohnung.html';
+            window.location.href = 'belohnung.html';
             return;
         }
     
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            parent.document.getElementById('main-iframe').src = 'kategorien.html';
+            window.location.href = 'kategorien.html';
             return;
         }
     
@@ -457,7 +532,8 @@ function getRandomQuestion() {
                     return;
                 }
                 questionAnswered = true;
-    
+                const isMatch = this.textContent === randomQuestion.RichtigeAntwort;
+                updateStats(randomQuestion, isMatch);
                 answers.forEach(btn => btn.disabled = true);
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
                     this.classList.add('correct-answer');
@@ -483,6 +559,57 @@ function getRandomQuestion() {
                     correctAnswerDisplay2.style.display = 'block';
                     document.querySelector('.results2').classList.add('wrong');
                     document.querySelector('.next-button').classList.add('wrong-button');
+                }
+
+                function updateStats(question, isMatch) {
+                    let questionText = question.Frage;
+                    let questionCategory = question.Kategorie;
+                    let questionSchwierigkeit = question.Schwierigkeitsgrad;
+                
+                    let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
+                    let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
+                
+                    // Allgemeine Statistiken
+                    if (!answeredQuestions.includes(questionText)) {
+                        answeredQuestions.push(questionText);
+                        localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+                    }
+                    if (isMatch && !correctAnswers.includes(questionText)) {
+                        correctAnswers.push(questionText);
+                        localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
+                    }
+                
+                    const categories = ['Geschichte', 'Geographie', 'Musik', 'Wissenschaft', 'Kunst', 'Sport'];
+                    const difficulties = ['leicht', 'mittel', 'schwer', 'extrem', 'expert'];
+                
+                    // Kategoriespezifische und Schwierigkeitsgradspezifische Statistiken
+                    updateCategoryAndDifficultyStats(categories, 'Category', questionCategory, questionText, isMatch);
+                    updateCategoryAndDifficultyStats(difficulties, 'Difficulty', questionSchwierigkeit, questionText, isMatch);
+                
+                    // Ausgabe der allgemeinen Statistik
+                    console.log(`Beantwortete Fragen: ${answeredQuestions.length}`);
+                    console.log(`Richtige Antworten: ${correctAnswers.length}`);
+                }
+                
+                function updateCategoryAndDifficultyStats(arr, type, questionAttribute, questionText, isMatch) {
+                    arr.forEach(item => {
+                        if (questionAttribute === item) {
+                            let answered = JSON.parse(localStorage.getItem(item + type + 'Answered')) || [];
+                            let correct = JSON.parse(localStorage.getItem(item + type + 'Correct')) || [];
+                
+                            if (!answered.includes(questionText)) {
+                                answered.push(questionText);
+                                localStorage.setItem(item + type + 'Answered', JSON.stringify(answered));
+                            }
+                            if (isMatch && !correct.includes(questionText)) {
+                                correct.push(questionText);
+                                localStorage.setItem(item + type + 'Correct', JSON.stringify(correct));
+                            }
+                
+                            console.log(`Beantwortete Fragen in ${item} (${type}): ${answered.length}`);
+                            console.log(`Richtige Antworten in ${item} (${type}): ${correct.length}`);
+                        }
+                    });
                 }
 
                 answers.forEach(btn => {
@@ -528,13 +655,13 @@ function getRandomQuestion() {
                 
                 if (currentQuestionIndex >= totalQuestions) {
                     localStorage.setItem('correctCount', correctCount);
-                    parent.document.getElementById('main-iframe').src = 'belohnung.html';
+                    window.location.href = 'belohnung.html';
                     return;
                 }
                 
                 if (!randomQuestion) {
                     alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-                    parent.document.getElementById('main-iframe').src = 'kategorien.html';
+                    window.location.href = 'kategorien.html';
                     return;
                 }
                 
@@ -645,7 +772,7 @@ function getRandomQuestion() {
         if (!isAnswerChecked) {
             // Zustand: Antwort überprüfen
             const userAnswer = inputField.value.trim();
-            checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort);
+            checkAnswer(userAnswer, randomQuestion.RichtigeAntwortMöglichkeiten, randomQuestion.RichtigeAntwort, randomQuestion.Kategorie, randomQuestion.Schwierigkeitsgrad);
     
             factDisplay.textContent = randomQuestion.Fakt;
             factDisplay.style.display = 'block';

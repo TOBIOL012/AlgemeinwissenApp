@@ -16,60 +16,45 @@
 <body>
     <div id="spieler-container">
         <div class="header">
-            <a href="profil.html" class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
+            <a href="profil.html" class="pfeil" aria-label="Zurück zum Profil">
+                <img src="pfeil.png" class="back-arrow" alt="Zurück">
+            </a>
             <div class="erklärung">XP-Pfad</div>
         </div>    
     </div>
 
     <div class="xp-pfad-container">
-
+        <div class="leer"></div>
         <div class="Teil1">
             <div class="progress-bar" id="progress-bar">
-                <div class="indicator" id="indicator" style="height: 0;"></div>
-            </div>
+                <div class="indicator" id="indicator"></div>
+                <div class="xp-box" id="xp-box">0</div>
+            </div>                        
             <div id="xp-display"></div>
         </div>
 
         <div class="Teil2">
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
-            <div class="reward">
-            </div>
+            <!-- Belohnungen -->
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
+            <div class="reward"></div>
         </div>
-
     </div>
 
-    
-
-
-    <script src="main.js"></script>
-    
+    <script src="main.js" defer></script>
 </body>
 </html>
+
 
