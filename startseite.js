@@ -15,7 +15,8 @@ function loadLocalStats() {
 }
 
 // Cloud-Daten synchronisieren
-function syncStatsFromFirestore() {
+function syncStatsFromServiceWorker() {
+    // UID aus dem localStorage holen
     const uid = localStorage.getItem("uid");
 
     if (!uid) {
@@ -23,25 +24,36 @@ function syncStatsFromFirestore() {
         return;
     }
 
-    firestore.collection("users").doc(uid).onSnapshot((doc) => {
-        if (doc.exists) {
-            const data = doc.data();
+    console.log("Daten vom Service Worker abrufen...");
 
-            // Cloud-Daten in die UI aktualisieren
-            coinsElement.textContent = data.coins || 0;
-            xpElement.textContent = data.xp || 0;
-            streakElement.textContent = data.streak || 0;
+    // Anfrage an den Service Worker senden
+    fetch('/getUserData')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP-Fehler: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                // Cloud-Daten in die UI aktualisieren
+                coinsElement.textContent = data.coins || 0;
+                xpElement.textContent = data.xp || 0;
+                streakElement.textContent = data.streak || 0;
 
-            // Cloud-Daten lokal speichern
-            localStorage.setItem("lastCoins", data.coins || 0);
-            localStorage.setItem("lastXp", data.xp || 0);
-            localStorage.setItem("lastStreak", data.streak || 0);
-        } else {
-            console.error("Benutzerdaten nicht gefunden.");
-        }
-    }, (error) => {
-        console.error("Fehler beim Synchronisieren mit Firestore:", error);
-    });
+                // Cloud-Daten lokal speichern
+                localStorage.setItem("lastCoins", data.coins || 0);
+                localStorage.setItem("lastXp", data.xp || 0);
+                localStorage.setItem("lastStreak", data.streak || 0);
+
+                console.log("Synchronisation erfolgreich:", data);
+            } else {
+                console.error("Keine Daten vom Service Worker erhalten.");
+            }
+        })
+        .catch(error => {
+            console.error("Fehler beim Abrufen der Daten vom Service Worker:", error);
+        });
 }
 
 // Initiale Synchronisation starten

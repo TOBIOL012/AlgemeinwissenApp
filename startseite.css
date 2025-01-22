@@ -22,6 +22,10 @@ body {
     margin-bottom: 8em; /* Vergrößerter Abstand zur Navigationsleiste */
 }
 
+.top-bar-content{
+    display:none;
+}
+
 
 
 
@@ -55,19 +59,13 @@ body {
     background-color: #141F25;
     color: white;
     text-align: left;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 10px;
     padding-bottom: 15px;
+    padding-top: 8px;
     margin-top: 10px;
-    border: none; /* Standard: keine Umrandung */
+    border: 3px solid #2f4957;
 }
-
-/* Umrandung nur bei .expanded */
-.top-bar.expanded .top-bar-content {
-    display: block;
-    border: 3px solid #2f4957; /* Umrandung bei Aktivierung */
-}
-
 
 .streak-button {
     display: flex;
@@ -190,63 +188,63 @@ body {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
 .week-calendar {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 15px;
+    align-items: center;
+    margin-top: 28px;
+    color: white;
 }
 
 .week-calendar .days {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-    max-width: calc(100% - 10px);
-    background-color: #141F25;
-    border-radius: 10px;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 0.9em;
 }
 
 .week-calendar .day {
-    text-align: center;
     flex: 1;
-    color: white;
+    text-align: center;
     font-size: 1.1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .week-calendar .day-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
-    max-width: calc(100% - 10px); /* Gleiche Breite wie die Wochentage */
+    margin-top: 5px;
     background-color: #2f4957;
-    border-radius: 10px;
-    padding: 2px;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 15px;
 }
 
-.week-calendar .day .active {
-    color: red;
-    font-weight: bold;
-}
-
-.week-calendar .day .inactive {
+.week-calendar .day div {
+    font-size: 1.1em;
     color: white;
 }
 
-.week-calendar .day.current-day div {
-    color: blue !important;
+.week-calendar .day div.streak-day {
+    background-color: orange;
+    border-radius: 15px;
+    color: white;
     font-weight: bold;
 }
+
+.week-calendar .day div.current-day {
+    background-color: white;
+    color: #2f4957;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+
+
 
 
 

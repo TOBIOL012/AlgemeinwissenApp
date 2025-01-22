@@ -123,18 +123,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Benutzer und Statistiken synchronisieren
-    function syncUserData(uid) {
-        firestore.collection("users").doc(uid).onSnapshot((doc) => {
-            if (doc.exists) {
-                const data = doc.data();
-                localStorage.setItem("username", data.username);
-                updateStats(data.coins, data.xp, data.streak, data.username, data.creationDate, data.streakHistory, data.streakOnIce);
-            } else {
-                console.error("Dokument existiert nicht.");
-            }
-        }, (error) => {
-            console.error("Fehler bei onSnapshot: ", error);
-        });
+    function syncUserData() {
+        console.log("Daten vom Service Worker abrufen...");
+    
+        // Anfrage an den Service Worker
+        fetch('/getUserData')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP-Fehler: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data) {
+                    localStorage.setItem("username", data.username || "");
+                    updateStats(
+                        data.coins || 0,
+                        data.xp || 0,
+                        data.streak || 0,
+                        data.username || "Unbekannt",
+                        data.creationDate || "Nicht verfügbar",
+                        data.streakHistory || [],
+                        data.streakOnIce || false
+                    );
+                } else {
+                    console.error("Keine Daten vom Service Worker erhalten.");
+                }
+            })
+            .catch(error => {
+                console.error("Fehler beim Abrufen der Daten vom Service Worker:", error);
+            });
     }
 
     // Benutzername und Share-Button anzeigen
