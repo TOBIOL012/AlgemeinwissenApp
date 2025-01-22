@@ -534,6 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Nachricht an den Service Worker senden, um die XP-Daten zu erhalten
         if (navigator.serviceWorker.controller) {
+            console.log("was machst du!!!!!uwu");
             navigator.serviceWorker.controller.postMessage({
                 type: 'getData',
                 key: 'xp'  // Wir möchten die XP-Daten
