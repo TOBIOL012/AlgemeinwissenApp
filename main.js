@@ -511,7 +511,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 
-
     // Fortschrittsanzeige aktualisieren
     function updateProgressBar(xp) {
         const progressHeight = Math.min((xp / maxXP) * 100, 100); // Maximal 100%
@@ -532,28 +531,24 @@ document.addEventListener('DOMContentLoaded', function() {
     if (uid) {
         console.log("Daten vom Service Worker abrufen...");
     
-        // Nachricht an den Service Worker senden, um die XP-Daten zu erhalten
-        if (navigator.serviceWorker.controller) {
-            
-            navigator.serviceWorker.controller.postMessage({
-                type: 'getData',
-                key: 'xp'  // Wir möchten die XP-Daten
-            });
-            console.log("was machst du!!!!!uwuuwuwuwuwu");
-    
-            // Warten auf die Antwort des Service Workers
-            navigator.serviceWorker.addEventListener('message', function(event) {
-                console.log("was machst du!!!!!");
-                if (event.data.type === 'dataResponse' && event.data.key === 'xp') {
-                    const totalXP = event.data.value || 0;  // Die XP-Werte aus dem Service Worker
-    
-                    // Fortschrittsanzeige aktualisieren
-                    updateProgressBar(totalXP);
+        // Fetch Anfrage an den Service Worker senden
+        fetch('/getUserData')  // Hier gehen wir davon aus, dass der Service Worker auf diese Anfrage antwortet
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP-Fehler: ${response.status}`);
                 }
+                return response.json();  // Antwort als JSON
+            })
+            .then(data => {
+                const totalXP = data.xp || 0;  // Die XP-Daten aus dem Service Worker
+    
+                // Fortschrittsanzeige aktualisieren
+                updateProgressBar(totalXP);
+            })
+            .catch(error => {
+                console.error("Fehler beim Abrufen der Daten vom Service Worker:", error);
             });
-        } else {
-            console.error("Kein Service Worker gefunden.");
-        }
+    
     } else {
         console.error("Keine Benutzer-UID gefunden.");
     }
