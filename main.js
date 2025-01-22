@@ -463,43 +463,7 @@ document.addEventListener('click', function (event) {
         topBar.classList.remove('expanded');
     }
 });
-console.log("was machst diu");
 
-function highlightStreakDays() {
-    auth.onAuthStateChanged((user) => {
-        if (user) {
-            const uid = user.uid;
-            firestore.collection("users").doc(uid).get().then((doc) => {
-                if (doc.exists) {
-                    const data = doc.data();
-                    const streakHistory = data.streakHistory || [];
-                    
-                    const today = new Date();
-                    const startOfWeek = new Date(today);
-                    startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7)); // Montag der aktuellen Woche
-
-                    const days = document.querySelectorAll('.day-row .day div');
-                    
-                    days.forEach((day, index) => {
-                        const date = new Date(startOfWeek);
-                        date.setDate(startOfWeek.getDate() + index);
-                        const formattedDate = date.toISOString().split("T")[0];
-
-                        if (streakHistory.includes(formattedDate)) {
-                            day.classList.add('streak-day'); // Streak-Tag markieren
-                        }
-                    });
-                } else {
-                    console.error("Benutzerdokument nicht gefunden.");
-                }
-            }).catch((error) => {
-                console.error("Fehler beim Abrufen des Benutzerdokuments:", error);
-            });
-        } else {
-            console.error("Benutzer nicht eingeloggt.");
-        }
-    });
-}
 
 // Diese Funktion nach dem Rendern des Kalenders aufrufen
 document.addEventListener('DOMContentLoaded', function () {
@@ -523,12 +487,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    
+console.log("was machst diu");
     const progressBar = document.getElementById('progress-bar');
     const indicator = document.getElementById('indicator');
 
     // Firebase Auth und Firestore Setup (falls benötigt)
-    const firestore = firebase.firestore();
-    const auth = firebase.auth();
 
     // Benutzer UID aus localStorage laden
     const uid = localStorage.getItem('uid');
