@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.appendChild(marker);
     }
     
-console.log("was machst diu");
+
 
     // Fortschrittsanzeige aktualisieren
     function updateProgressBar(xp) {
@@ -541,6 +541,7 @@ console.log("was machst diu");
     
             // Warten auf die Antwort des Service Workers
             navigator.serviceWorker.addEventListener('message', function(event) {
+                console.log("was machst du!!!!!");
                 if (event.data.type === 'dataResponse' && event.data.key === 'xp') {
                     const totalXP = event.data.value || 0;  // Die XP-Werte aus dem Service Worker
     
