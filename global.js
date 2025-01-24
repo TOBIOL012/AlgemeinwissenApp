@@ -195,10 +195,13 @@ function changeIframeSrc(iframeId, url) {
     }
 }
 
-window.navigate = function(url) {
+window.navigate = function (url) {
+    // Prüfen, ob wir uns auf der Hauptseite befinden
     if (window.location.href.indexOf('haupt.html') > -1) {
-        parent.changeIframeSrc('mainIframe', url);
+        // Nutze `changeIframeSrc`, um das Ziel vorzubereiten
+        changeIframeSrc('mainIframe', url);
     } else {
+        // Fallback: Standardmäßige Navigation
         window.location.href = url;
     }
 };

@@ -33,6 +33,15 @@
         iframe {
             font-size: 20px; /* Standard-Schriftgröße für den Inhalt des iframes */
         }
+
+        iframe.active {
+            display: block;
+            opacity: 1;
+        }
+
+        iframe.hidden {
+            opacity: 0;
+        }
     </style>
     <script>
         function changeIframeSrc(iframeId, newSrc) {
@@ -66,6 +75,43 @@
         function zeigeIframe(id) {
             document.querySelectorAll('iframe').forEach(iframe => iframe.classList.remove('active'));
             document.getElementById(id).classList.add('active');
+        }
+    </script>
+    <script>
+        /**
+         * Funktion zum Wechseln des iframe-Inhalts mit Vorladen und sanftem Übergang.
+         * @param {string} iframeId - Die ID des iframes.
+         * @param {string} url - Die neue URL für den iframe.
+         */
+        function changeIframeSrc(iframeId, url) {
+            const iframe = document.getElementById(iframeId);
+            if (iframe) {
+                // Blende den aktuellen iframe aus
+                iframe.classList.add('hidden');
+
+                // Lade die neue URL vor
+                const tempIframe = document.createElement('iframe');
+                tempIframe.src = url;
+                tempIframe.style.display = 'none';
+
+                // Füge das vorübergehende iframe hinzu, um die Seite zu laden
+                document.body.appendChild(tempIframe);
+
+                tempIframe.onload = () => {
+                    // Wechsel zu der neuen URL nach dem Laden
+                    iframe.src = url;
+
+                    // Entferne das temporäre iframe
+                    tempIframe.remove();
+
+                    // Blende den iframe wieder ein
+                    setTimeout(() => {
+                        iframe.classList.remove('hidden');
+                    }, 50); // Kleine Verzögerung für die Animation
+                };
+            } else {
+                console.error(`Iframe mit ID ${iframeId} nicht gefunden.`);
+            }
         }
     </script>
 </body>
