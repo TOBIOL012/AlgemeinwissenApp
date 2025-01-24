@@ -185,3 +185,11 @@ window.setValue = setValue;
 // Lokale Werte laden und Synchronisation starten
 loadLocalStats();
 syncStats();
+
+window.navigate = function(url) {
+    if (window.location.href.indexOf('haupt.html') > -1) {
+        parent.changeIframeSrc('mainIframe', url);
+    } else {
+        window.location.href = url;
+    }
+};

@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Überprüfen, ob alle Fragen beantwortet wurden
         const allQuestionsAnswered = players.every(player => player.questionsAnswered >= totalQuestionsPerPlayer);
         if (allQuestionsAnswered) {
-            window.location.href = 'startseite.html';
+            navigate('startseite.html');
         } else {
-            window.location.href = 'fragen-mehrspieler.html';
+            navigate('fragen-mehrspieler.html');
         }
     });
 

@@ -29,7 +29,16 @@
         iframe.active {
             display: block;
         }
+
+        iframe {
+            font-size: 20px; /* Standard-Schriftgröße für den Inhalt des iframes */
+        }
     </style>
+    <script>
+        function changeIframeSrc(iframeId, newSrc) {
+            document.getElementById(iframeId).src = newSrc;
+        }
+    </script>
 </head>
 
 <body>

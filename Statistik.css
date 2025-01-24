@@ -164,16 +164,138 @@ header {
     align-items: center;
     justify-content: center;
     background-color: #141F25;
-    border-top: 3px solid #2f4957;
-    padding: 0.5rem 0em;
-    width: 85%;
-    margin-top: 3rem;
+    padding-top: 0.5rem;
+    width: 82%;
+    margin-top: 1.5rem;
 }
 
 #icon{
     width: 1.6rem;
+    margin-top: 0.5rem;
 }
 
 #kategorie1{
     width: 16.6667%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
+
+#balken{
+    height: 6rem;
+    width: 1.7rem;
+    background-color: #21333d;
+    border-top-left-radius: 0.4rem; /* Obere linke Ecke abrunden */
+    border-top-right-radius: 0.4rem;
+    display: flex;
+    flex-direction: column; /* Elemente werden vertikal gestapelt */
+    justify-content: flex-end;
+}
+
+#border{
+    border-top: 3px solid #2f4957;
+    width: 100%;
+}
+
+#richtig{
+    width: 1.7rem;
+    background-color: #21333d;
+    border-top-left-radius: 0.4rem; /* Obere linke Ecke abrunden */
+    border-top-right-radius: 0.4rem;
+    background: #3abb61;
+    transition: 0.5s ease;
+}
+
+#beantwortet{
+    width: 1.7rem;
+    background-color: #21333d;
+    border-top-left-radius: 0.4rem; /* Obere linke Ecke abrunden */
+    border-top-right-radius: 0.4rem;
+    background: #3f6174;
+    display: flex;
+    flex-direction: column; /* Elemente werden vertikal gestapelt */
+    justify-content: flex-end;
+    transition: 0.5s ease;
+}
+
+.Schwachpunkt{
+    width: auto;
+    padding:0.7rem;
+    border: 3px solid #2f4957;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1.8rem;
+    font-size: 1rem;
+}
+
+
+.Ausrufezeichen{
+    width: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.difficulty-bar-container {
+    position: relative;
+    width: 82%;
+    height: 1.4rem;
+    border-radius: 15px;
+    border: 3px solid #2f4957;
+    overflow: visible; /* Ermöglicht das Hervorstehen des Balkens */
+}
+
+.overlay-bar {
+    position: absolute;
+    width: 8px; /* Sehr dünner Balken */
+    height: calc(100% + 4px); /* 2px oben und unten über den Rand hinausragend */
+    background-color: white;
+    border-radius: 4px;
+    top: -2px; /* Verschiebt den Balken nach oben */
+}
+
+.label {
+    margin-top: 0.2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+#label{
+    margin-bottom: 2.8rem;
+    font-size: 1.1rem;
+}
+
+.label{
+    font-size: 1.1rem;
+}
+
+.difficulty-bar-container .strich {
+    position: absolute;
+    top: 0;
+    width: 5px; /* Breite der Striche */
+    height: 100%; /* Striche über die ganze Höhe */
+    background-color: #2f4957; /* Farbe der Striche */
+    z-index: -10;
+}
+
+/* Platzierung der Striche */
+.strich-1 {
+    left: 20%; /* 1. Strich */
+}
+
+.strich-2 {
+    left: 40%; /* 2. Strich */
+}
+
+.strich-3 {
+    left: 60%; /* 3. Strich */
+}
+
+.strich-4 {
+    left: 80%; /* 4. Strich */
+}
+
+
+
+
