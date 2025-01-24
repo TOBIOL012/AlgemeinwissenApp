@@ -492,7 +492,8 @@ function generateWeekCalendar() {
 document.addEventListener('click', function (event) {
     const topBar = document.getElementById('top-bar');
     const contentDiv = document.getElementById('top-bar-content');
-    if (!topBar.contains(event.target)) {
+
+    if (topBar && contentDiv && !topBar.contains(event.target)) {
         contentDiv.style.display = 'none';
         contentDiv.dataset.activeContent = '';
         topBar.classList.remove('expanded');
