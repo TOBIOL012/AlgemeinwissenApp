@@ -4087,7 +4087,7 @@ const geschichte = [
             "Antworten": ["Der Achtzigjährige Krieg", "Der Dreißigjährige Krieg", "Der Siebenjährige Krieg", "Der Napoleonskrieg"],
             "RichtigeAntwort": "Der Achtzigjährige Krieg",
             "RichtigeAntwortMöglichkeiten": "Achtzigjährige Krieg",
-            "Schwierigkeitsgrad": "extrems",
+            "Schwierigkeitsgrad": "extrem",
             "Fakt": "Der Achtzigjährige Krieg dauerte von 1568 bis 1648 und führte zur Unabhängigkeit der Niederlande.",
         },
         {//Deutsche Geschichte
@@ -8764,7 +8764,7 @@ const geschichte = [
             "Antworten": ["Go-Joseon", "Silla", "Goguryeo", "Baekje"],
             "RichtigeAntwort": "Go-Joseon",
             "RichtigeAntwortMöglichkeiten": "Go-Joseon joseon GoJoseon",
-            "Schwierigkeitsgrad": "expert ",
+            "Schwierigkeitsgrad": "expert",
             "Fakt": "Go-Joseon, Koreas erstes Königreich, wurde 2333 v. Chr. von Dangun Wanggeom gegründet.",
         },
         {

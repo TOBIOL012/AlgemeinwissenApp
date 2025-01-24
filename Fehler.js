@@ -465,14 +465,14 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
 
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
-            window.location.href = 'belohnung.html';
+            navigate('belohnung.html');
             return;
         }
     
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            window.location.href = 'kategorien.html';
+            navigate('kategorien.html');
             return;
         }
     
@@ -655,13 +655,13 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
                 
                 if (currentQuestionIndex >= totalQuestions) {
                     localStorage.setItem('correctCount', correctCount);
-                    window.location.href = 'belohnung.html';
+                    navigate('belohnung.html');
                     return;
                 }
                 
                 if (!randomQuestion) {
                     alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-                    window.location.href = 'kategorien.html';
+                    navigate('kategorien.html');
                     return;
                 }
                 
