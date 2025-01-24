@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hauptseite</title>
+    <style>
+        /* Entferne Standard-Abstände */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Verhindert Scrollen */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Stellt sicher, dass alle iframes den gesamten Bildschirm einnehmen */
+        iframe {
+            display: none; /* Standardmäßig ausgeblendet */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Sichtbarer iframe */
+        iframe.active {
+            display: block;
+        }
+
+        iframe {
+            font-size: 20px; /* Standard-Schriftgröße für den Inhalt des iframes */
+        }
+    </style>
+    <script>
+        function changeIframeSrc(iframeId, newSrc) {
+            document.getElementById(iframeId).src = newSrc;
+        }
+    </script>
+</head>
+
+<body>
+    <iframe id="mainIframe" src="startseite.html" class="active"></iframe>
+    <iframe id="mainIframe" src="belohnung.html"></iframe>
+    <iframe id="mainIframe" src="belohnung-mehrspieler.html"></iframe>
+    <iframe id="mainIframe" src="calendar.html"></iframe>
+    <iframe id="mainIframe" src="einstellungen.html"></iframe>
+    <iframe id="mainIframe" src="endranking-mehrspieler.html"></iframe>
+    <iframe id="mainIframe" src="einstellungen.html"></iframe>
+    <iframe id="mainIframe" src="index.html"></iframe>
+    <iframe id="mainIframe" src="index2.html"></iframe>
+    <iframe id="mainIframe" src="kategorien-fehler.html"></iframe>
+    <iframe id="mainIframe" src="kategorien-mehrspieler.html"></iframe>
+    <iframe id="mainIframe" src="Kategorien.html"></iframe>
+    <iframe id="mainIframe" src="mehrspieler.html"></iframe>
+    <iframe id="mainIframe" src="profil-auswahl.html"></iframe>
+    <iframe id="mainIframe" src="profil.html"></iframe>
+    <iframe id="mainIframe src="ranking-mehrspieler.html"></iframe>
+    <iframe id="mainIframe" src="Schwierigkeiten.html"></iframe>
+    <iframe id="mainIframe" src="xp-pfad.html"></iframe>
+
+    <script>
+        // Beispiel-Script: Aktiviert einen bestimmten iframe
+        function zeigeIframe(id) {
+            document.querySelectorAll('iframe').forEach(iframe => iframe.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
