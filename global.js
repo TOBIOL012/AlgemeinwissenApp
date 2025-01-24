@@ -186,10 +186,11 @@ window.setValue = setValue;
 loadLocalStats();
 syncStats();
 
-window.navigate = function(url) {
-    if (window.location.href.indexOf('haupt.html') > -1) {
-        parent.changeIframeSrc('mainIframe', url);
+function changeIframeSrc(iframeId, url) {
+    const iframe = document.getElementById(iframeId);
+    if (iframe) {
+        iframe.src = url;
     } else {
-        window.location.href = url;
+        console.error(`Iframe mit ID ${iframeId} nicht gefunden.`);
     }
-};
+}
