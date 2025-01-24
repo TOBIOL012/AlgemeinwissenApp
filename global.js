@@ -194,3 +194,11 @@ function changeIframeSrc(iframeId, url) {
         console.error(`Iframe mit ID ${iframeId} nicht gefunden.`);
     }
 }
+
+window.navigate = function(url) {
+    if (window.location.href.indexOf('haupt.html') > -1) {
+        parent.changeIframeSrc('mainIframe', url);
+    } else {
+        window.location.href = url;
+    }
+};
