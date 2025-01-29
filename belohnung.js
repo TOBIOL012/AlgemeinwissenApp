@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', function () {
-        navigate('startseite.html');
+        window.location.href = 'startseite.html';
     });
 
     // Funktion: Münzen und XP synchronisieren

@@ -263,7 +263,7 @@ function updateActiveItem() {
             if (allFilled) {
                 localStorage.setItem('players', JSON.stringify(players));
                 localStorage.setItem('isMultiplayer', 'true');
-                navigate('kategorien-mehrspieler.html');
+                window.location.href = 'kategorien-mehrspieler.html';
             } else {
                 alert('Bitte trage für alle Spieler einen Namen ein.');
             }

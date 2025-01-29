@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedCategories.length > 0) {
                 localStorage.removeItem('questionsAsked');
                 localStorage.removeItem('correctCount');
-                navigate('schwierigkeiten.html');
+                window.location.href = 'schwierigkeiten.html';
             }
         });
     }
@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('selectedDifficulty', selectedDifficulty === 'alle' ? 'selectedDifficulty' : selectedDifficulty);
 
             if (['schwer', 'extrem', 'expert'].includes(selectedDifficulty)) {
-                navigate('index2.html');
+                window.location.href = 'index2.html';
             } else {
-                navigate('index.html');
+                window.location.href = 'index.html';
             }
         });
     });
@@ -248,14 +248,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadQuestion() {
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
-            navigate('belohnung.html');
+            window.location.href = 'belohnung.html';
             return;
         }
     
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            navigate('kategorien.html');
+            window.location.href = 'kategorien.html';
             return;
         }
     
@@ -266,7 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
     
-        document.querySelector('.question').textContent = randomQuestion.Frage;
+        if (document.querySelector('.question')) {
+            document.querySelector('.question').textContent = randomQuestion.Frage;
+        }
         updateCategoryDisplay(randomQuestion.Kategorie);
         setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
         function shuffleArray(array) {
@@ -382,7 +384,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    document.querySelector('.next-button').addEventListener('click', loadQuestion);
+    if (document.querySelector('.next-button')) {
+        document.querySelector('.next-button').addEventListener('click', loadQuestion);
+    }
 
     loadQuestion();
 
