@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="startseite.css">
     <link rel="stylesheet" href="app.css">
     <link rel="manifest" href="/manifest.json">
+    <script src="Fragen/geschichte.js" defer></script>
+    <script src="Fragen/geographie.js" defer></script>
+    <script src="Fragen/sport.js" defer></script>
+    <script src="Fragen/musik.js" defer></script>
+    <script src="Fragen/wissenschaft.js" defer></script>
+    <script src="Fragen/kunst.js" defer></script>
+    <script src="Fragen/question.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
@@ -45,15 +52,15 @@
 
     
     <div class="buttons-container" id="buttons-container">
-        <button class="animated-button"  id="animated-button" onclick="navigate('Kategorien.html')">Spielen</button>
-        <button class="animated-button"  id="animated-button" onclick="lnavigate('mehrspieler.html')">Mehrspieler</button>
-        <button class="animated-button"  id="animated-button" onclick="navigate('kategorien-fehler.html')">Fehler</button>
+        <button class="animated-button" onclick="location.href='Kategorien.html'">Spielen</button>
+        <button class="animated-button" onclick="location.href='mehrspieler.html'">Mehrspieler</button>
+        <button class="animated-button" onclick="location.href='kategorien-fehler.html'">Fehler</button>
     </div>
     <div class="nav-bar">
-        <a onclick="navigate('startseite.html')" class="nav-button">
+        <a href = 'startseite.html' class="nav-button">
             <img src="icons8-home.svg" alt="Home">
         </a>
-        <a href="profil.html" class="nav-button">
+        <a href = 'profil.html' class="nav-button">
             <img src="Profilbildfake.png" alt="Profil">
         </a>
     </div>

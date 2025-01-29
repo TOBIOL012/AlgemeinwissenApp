@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="Statistik.css">
-    <link rel="stylesheet" href="Standart.css"> 
+    <link rel="stylesheet" href="Standart.css">
     <script src="Fragen/geschichte.js" defer></script>
     <script src="Fragen/geographie.js" defer></script>
     <script src="Fragen/sport.js" defer></script>
@@ -14,11 +14,16 @@
     <script src="Fragen/kunst.js" defer></script>
     <script src="Fragen/question.js" defer></script>
     <script src="Statistik.js" defer></script>   
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+    <script src="global.js" defer></script>
 </head>
 <body>
     <div id="spieler-container">
         <div class="header">
-            <a honclick="navigate('profil.html')" class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
+            <a href='profil.html' class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
             <div class="Überschrift">Statistik</div>
         </div>
         <div class="Statistik-Container">

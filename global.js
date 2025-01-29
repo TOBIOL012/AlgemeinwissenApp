@@ -1,3 +1,4 @@
+
 // Firebase-Konfiguration
 const firebaseConfig = {
     apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
@@ -185,23 +186,3 @@ window.setValue = setValue;
 // Lokale Werte laden und Synchronisation starten
 loadLocalStats();
 syncStats();
-
-function changeIframeSrc(iframeId, url) {
-    const iframe = document.getElementById(iframeId);
-    if (iframe) {
-        iframe.src = url;
-    } else {
-        console.error(`Iframe mit ID ${iframeId} nicht gefunden.`);
-    }
-}
-
-window.navigate = function (url) {
-    // Prüfen, ob wir uns auf der Hauptseite befinden
-    if (window.location.href.indexOf('haupt.html') > -1) {
-        // Nutze `changeIframeSrc`, um das Ziel vorzubereiten
-        changeIframeSrc('mainIframe', url);
-    } else {
-        // Fallback: Standardmäßige Navigation
-        window.location.href = url;
-    }
-};
