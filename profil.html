@@ -18,7 +18,6 @@
     <script src="Fragen/question.js" defer></script>
     <link rel="manifest" href="/manifest.json">
     <script src="profil.js" defer></script>
-    <script src="global.js" defer></script>
     <script src="einstellungen.js" defer></script>
     <script>
         const preloadWebPFrames = (totalFrames) => {
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
 </head>
 <body>
-    <div class="einstellungen">
+    <div class="einstellungen" style="display: none;">
         <div class="einstellung" id="einstellung"></div>
         <div class="einstellung" id="einstellung"></div>
         <div class="ausloggen" id="einstellung">Ausloggen</div>
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     <!-- Hier sind die Login- und Registrierungsfelder -->
-    <div class="Benutzerdaten">
+    <div class="Benutzerdaten" style="display: none;">
         <div class="tabs">
             <button class="tab-login">EINLOGGEN</button>
             <button class="tab-register">REGISTRIEREN</button>

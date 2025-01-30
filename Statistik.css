@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
 body {
+    overflow-x: hidden;
     font-family: "Dosis", sans-serif;
     margin: 0;
     padding: 0;
@@ -166,7 +167,7 @@ header {
     background-color: #141F25;
     padding-top: 0.5rem;
     width: 82%;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 #icon{
@@ -227,8 +228,10 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 1.8rem;
+    margin-top: 2.5rem;
     font-size: 1rem;
+    width: calc(82% - 1.4rem);
+    margin-bottom: 5rem;
 }
 
 
@@ -262,7 +265,7 @@ header {
 }
 
 #label{
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.5rem;
     font-size: 1.1rem;
 }
 
@@ -295,6 +298,142 @@ header {
 .strich-4 {
     left: 80%; /* 4. Strich */
 }
+
+.streak-stats-container, .highest-streak-stats-container {
+    display:block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    width: calc(33vw - 1.6rem);
+}
+
+.streak-stats-container{
+    margin-right: 6vw;
+}
+
+.streak-stats{
+    display: flex;
+    align-items: left;
+    margin-top: 1.5rem;
+}
+
+.streak-stats-anzeige{
+    display:flex;
+    align-items: center;
+}
+
+#streakicon{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.streak-stats-text{
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 0.3rem;
+}
+
+#number{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+.title {
+    margin-bottom: 20px;
+}
+
+.graph-container {
+    width: 98%;
+    max-width: 600px;
+    position: relative;
+    touch-action: pan-x; /* Ermöglicht horizontales Swipen */
+}
+
+.week-label {
+    font-size: 1.2em;
+    margin: 10px;
+    display: flex;
+}
+
+/* Tooltip */
+.toggle-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2f4957;
+    border-radius: 10px 10px 0 0; /* Nur oben abgerundet */
+    padding: 4px;
+    width: 160px;
+    padding-bottom:1px;
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    color: white;
+    background: transparent;
+}
+
+.toggle-button.active {
+    background: #9f2fdf;
+}
+
+/* Tooltip */
+.custom-tooltip {
+    position: absolute;
+    background: rgba(100, 100, 100, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    display: none;
+}
+#dot {
+    border-radius: 5px;
+    width: 8px;
+    height: 8px;
+    background: #55595f;
+}
+.dot1 ,.dot2 , .dot3, .dot4, .dot5, .dot6{
+    margin-right: 4px;
+}
+
+.xp-pfad {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.8rem 0.3rem;
+    padding-bottom:0rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    width: calc(82% - 0.6rem);
+}
+
+
+
 
 
 

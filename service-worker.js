@@ -1,9 +1,6 @@
-// Firebase-SDKs importieren
 importScripts('https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js');
-importScripts('https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js');
 
-// Firebase-Konfiguration
 const firebaseConfig = {
     apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
     authDomain: "besserwisser-95b63.firebaseapp.com",
@@ -15,48 +12,57 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
 const firestore = firebase.firestore();
-const auth = firebase.auth();
 
-let globalUserData = {};
+const cacheFiles = [
+    "index.html", "index2.html", "index3.html", "index10.html", "haupt.html", "startseite.html", "mehrspieler.html", "profil.html", "ranking-mehrspieler.html", "fragen-mehrspieler.html", "fragen-fehler.html", "kategorien.html", "kategorien-fehler.html", "kategorien-mehrspieler.html", "schwierigkeiten.html", "statistik.html", "abmelden.html", "anmelden.html", "belohnung.html", "belohnung-mehrspieler.html", "calendar.html", "endranking-mehrspieler.html", "einstellungen.html", "dev.html", "xp-pfad.html", "fehler.html",
+    "main.js", "global.js", "startseite.js", "mehrspieler.js", "profil.js", "ranking-mehrspieler.js", "fragen-mehrspieler.js", "fragen-fehler.js", "kategorien-fehler.js", "kategorien-mehrspieler.js", "statistik.js", "belohnung.js", "belohnung-mehrspieler.js", "endranking-mehrspieler.js", "einstellungen.js", "fehler.js", "index2.js", "service-worker.js"
+];
 
-// Benutzerdaten synchronisieren und speichern
-function syncUserData() {
-    auth.onAuthStateChanged(user => {
-        if (user) {
-            const uid = user.uid;
-            firestore.collection("users").doc(uid).onSnapshot(doc => {
-                if (doc.exists) {
-                    globalUserData = doc.data();
-                    console.log('Benutzerdaten aktualisiert:', globalUserData);
-                } else {
-                    console.error("Dokument nicht gefunden.");
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open('app-cache').then(async (cache) => {
+            for (const file of cacheFiles) {
+                try {
+                    await cache.add(file);
+                    console.log(`✅ Gecached: ${file}`);
+                } catch (error) {
+                    console.error(`❌ Fehler beim Caching von: ${file}`, error);
                 }
-            }, error => {
-                console.error("Fehler bei der Synchronisation:", error);
-            });
-        } else {
-            console.log("Kein Benutzer angemeldet.");
-            globalUserData = {};
-        }
-    });
-}
+            }
+        })
+    );
+});
 
-// Synchronisierung starten
-syncUserData();
+self.addEventListener('message', (event) => {
+    console.log("📩 Nachricht im Service Worker erhalten:", event.data);
+    
 
-// Datenanfragen im Fetch-Event abfangen
-self.addEventListener('fetch', (event) => {
-    if (event.request.url.endsWith('/getUserData')) {
-        console.log('Anfrage nach Benutzerdaten empfangen.');
-        event.respondWith(
-            new Response(JSON.stringify(globalUserData), {
-                headers: { 'Content-Type': 'application/json' }
-            })
-        );
-    } else {
-        console.log('Fetching:', event.request.url);
-        event.respondWith(fetch(event.request));
+    if (!event.data) {
+        console.error("❌ Nachricht war leer!");
+        return;
+    }
+
+    if (event.data.type === "initUserData") {
+        console.log("✅ Nachricht korrekt empfangen, starte Firestore-Abfrage");
+
+        const uid = event.data.uid;
+        console.log("🔍 Firestore-Daten für UID abrufen:", uid);
+
+        firestore.collection("users").doc(uid).onSnapshot((doc) => {
+            if (doc.exists) {
+                console.log("📨 Sende Benutzerdaten an Client:", doc.data());
+
+                self.clients.matchAll().then((clients) => {
+                    console.log(`👀 ${clients.length} Clients gefunden`);
+                    clients.forEach((client) => {
+                        console.log("📤 Sende Daten an Client:", client);
+                        client.postMessage({ type: "userDataUpdated", data: doc.data() });
+                    });
+                });
+            } else {
+                console.warn("❌ Kein Dokument gefunden für UID:", uid);
+            }
+        });
     }
 });

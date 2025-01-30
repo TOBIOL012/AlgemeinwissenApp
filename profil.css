@@ -53,6 +53,7 @@ body {
 }
 
 .Benutzerdaten {
+    transition: height 0.5s ease;
     margin-top: 15px;
     width: 90%;
     display: block;

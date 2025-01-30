@@ -18,7 +18,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
-    <script src="global.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div id="spieler-container">
@@ -26,6 +26,7 @@
             <a href='profil.html' class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
             <div class="Überschrift">Statistik</div>
         </div>
+
         <div class="Statistik-Container">
                 <div class="Fragen-Anzeige">
                     <div class="Kreis-Anzeige">
@@ -60,6 +61,44 @@
                     </div>
             </a>
         </div> 
+
+        <div class="streak-stats">
+            <div class="streak-stats-container">
+                <div class="streak-stats-anzeige">
+                    <img src="streak.png" id="streakicon">
+                    <div class="streak-stats-number" id="number">-</div>
+                </div>
+                <div class="streak-stats-text">Streak</div>
+            </div>
+            <div class="highest-streak-stats-container">
+                <div class="streak-stats-anzeige">
+                    <img src="streakgold.png" id="streakicon">
+                    <div class="highest-streak-stats-number" id="number">-</div>
+                </div>
+                <div class="streak-stats-text">Höchste Streak</div>
+            </div>
+        </div>
+
+    <div class="toggle-container">
+    <button id="weekButton" class="toggle-button active">Week</button>
+    <button id="monthButton" class="toggle-button">Month</button>
+</div>
+<div class="xp-pfad">
+<div class="graph-container">
+    <canvas id="xpChart"></canvas>
+</div>
+
+<div class="week-label" id="weekLabel">
+    <div class="dot1" id="dot"></div>
+    <div class="dot2" id="dot"></div>
+    <div class="dot3" id="dot"></div>
+    <div class="dot4" id="dot"></div>
+    <div class="dot5" id="dot"></div>
+    <div class="dot6" id="dot"></div>
+    <div class="dot7" id="dot"></div>
+</div>
+</div>
+
         <div class="kategorien-Graph">
             <div class="geschichte" id="kategorie1">
                 <div class="geschichte-balken" id="balken">

@@ -134,6 +134,8 @@ function extendStreak() {
                     if (lastUpdateDate !== today) {
                         // Verlängere die Streak
                         const updatedStreak = (data.streak || 0) + 1;
+                        const highestStreak = data.higheststreak || 0;
+                        const newHighestStreak = updatedStreak > highestStreak ? updatedStreak : highestStreak;
 
                         // Füge `1` zum Verlauf hinzu
                         const updatedStreakHistory = [...(data.streakHistory || []), 1];
@@ -141,10 +143,11 @@ function extendStreak() {
                         // Aktualisiere Firestore
                         firestore.collection("users").doc(uid).update({
                             streak: updatedStreak,
+                            higheststreak: newHighestStreak,
                             lastUpdateDate: today,
                             streakHistory: updatedStreakHistory
                         }).then(() => {
-                            console.log("Streak verlängert und Verlauf aktualisiert.");
+                            console.log("Streak verlängert, Verlauf und höchste Streak aktualisiert.");
                         }).catch((error) => {
                             console.error("Fehler beim Aktualisieren der Streak:", error);
                         });
@@ -168,15 +171,7 @@ window.readData = readData;
 window.extendStreak = extendStreak;
 
 // Coins, XP und Streak in der UI aktualisieren
-function updateStats(coins, xp, streak) {
-    const coinsDisplay = document.querySelector(".coin-text");
-    const xpDisplay = document.querySelector("#xp-total");
-    const streakDisplay = document.querySelector(".streak-text");
 
-    if (coinsDisplay) coinsDisplay.textContent = coins;
-    if (xpDisplay) xpDisplay.textContent = xp;
-    if (streakDisplay) streakDisplay.textContent = streak;
-}
 
 // Globale Funktionen verfügbar machen
 window.increaseValue = increaseValue;

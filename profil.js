@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then((reg) => {
+                console.log("Service Worker registriert:", reg);
+                if (navigator.serviceWorker.controller) {
+                    console.log("Service Worker aktiv, sende Nachricht");
+                    navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid: localStorage.getItem("uid") });
+                } else {
+                    console.warn("Service Worker ist registriert, aber noch nicht aktiv.");
+                }
+            })
+            .catch((err) => console.error("Service Worker Registrierung fehlgeschlagen:", err));
+    }
+
     function updateStatistics() {
         let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
         let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
@@ -25,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Führe die Funktion beim Laden der Seite aus
     updateStatistics();
 
-    const { increaseValue, decreaseValue, setValue } = window;
 
     const firebaseConfig = {
         apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
@@ -61,12 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const xpDisplay = document.querySelector("#xp-total");
     const coinsDisplay = document.querySelector(".coin-text");
     const streakDisplay = document.querySelector(".streak-text");
-
+    
     let currentMode = "login";
 
     // Benutzerstatus prüfen und Daten synchronisieren
+    const savedUID = localStorage.getItem("uid");
     window.onload = () => {
-        const savedUID = localStorage.getItem("uid");
         const savedUsername = localStorage.getItem("username");
 
         if (savedUsername) {
@@ -157,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             coins: 0,
             xp: 0,
             streak: 0,
+            higheststreak: 0,
             streakOnIce: 3, // Standardwert für "Streak auf Eis"
             creationDate, // Datum der Kontoerstellung
             streakHistory: [], // Initialer leerer Verlauf
@@ -165,22 +179,38 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);
             showUsername(username);
-            syncUserData(uid);
+            // syncUserData(uid); // This call is unnecessary and causes an error
         }).catch(handleError);
     }
 
     // Benutzer und Statistiken synchronisieren
     function syncUserData(uid) {
-        firestore.collection("users").doc(uid).onSnapshot((doc) => {
-            if (doc.exists) {
-                const data = doc.data();
+        console.log("syncUserData gestartet für UID:", uid);
+    
+        if (!navigator.serviceWorker.controller) {
+            console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
+            return;
+        }
+    
+        console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid });
+    
+        try {
+            navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
+            console.log("✅ Nachricht erfolgreich gesendet!");
+        } catch (error) {
+            console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
+        }
+    
+        navigator.serviceWorker.addEventListener("message", (event) => {
+            console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
+    
+            if (event.data.type === "userDataUpdated") {
+                const data = event.data.data;
+                console.log("✅ Aktualisierte Benutzerdaten:", data);
+    
                 localStorage.setItem("username", data.username);
                 updateStats(data.coins, data.xp, data.streak, data.username, data.creationDate, data.streakHistory, data.streakOnIce);
-            } else {
-                console.error("Dokument existiert nicht.");
             }
-        }, (error) => {
-            console.error("Fehler bei onSnapshot: ", error);
         });
     }
 
@@ -203,14 +233,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Statistiken aktualisieren
     function updateStats(coins, xp, streak, username, creationDate, streakHistory, streakOnIce) {
+        console.log("updateStats aufgerufen mit Daten:");
+        console.log("Coins:", coins, "XP:", xp, "Streak:", streak, "Username:", username, "Creation Date:", creationDate, "Streak History:", streakHistory, "Streak On Ice:", streakOnIce);
+
+        const coinsDisplay = document.querySelector(".coin-text");
+        const xpDisplay = document.querySelector("#xp-total");
+        const streakDisplay = document.querySelector(".streak-text");
+        const usernameDisplay = document.querySelector("#username-display");
+
         if (coinsDisplay) coinsDisplay.textContent = coins;
         if (xpDisplay) xpDisplay.textContent = xp;
         if (streakDisplay) streakDisplay.textContent = streak;
         if (usernameDisplay) usernameDisplay.textContent = username;
-
-        console.log("Konto erstellt am:", creationDate);
-        console.log("Streak-Verlauf:", streakHistory);
-        console.log("Streak auf Eis verfügbar:", streakOnIce);
     }
 
     // Fehler behandeln
@@ -237,6 +271,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     tabLogin.click();
+    // Call syncUserData with the saved UID
+    if (savedUID) {
+        console.log("Gefundene UID im LocalStorage:", savedUID);
+        syncUserData(savedUID);
+    } else {
+        console.warn("Keine UID im LocalStorage gefunden.");
+    }
 });
 
 
