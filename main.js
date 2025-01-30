@@ -569,103 +569,126 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const firestore = firebase.firestore();
     const uid = localStorage.getItem('uid');
-    const maxXP = 10000; // Maximale XP
-    const stepXP = 500; // XP-Schrittgröße für Marker und Rewards
+    const maxXP = 10000;
+    const stepXP = 500;
+    const rewardLevels = Array.from({ length: 21 }, (_, i) => i * 500);
 
-    // Funktion für die Number Counter Animation
+    const orangeColor = "#E48D45";
+
+    // **Letzten XP-Stand aus localStorage holen**
+    let lastSavedXP = localStorage.getItem("lastSavedXP");
+    if (lastSavedXP === null) {
+        lastSavedXP = 0; // Falls noch nichts gespeichert wurde
+    } else {
+        lastSavedXP = parseInt(lastSavedXP); // Stelle sicher, dass es eine Zahl ist
+    }
+
+    function addMarkers() {
+        rewardLevels.forEach(xpValue => {
+            if (xpValue === 0) return;
+
+            const positionPercent = (xpValue / maxXP) * 100;
+
+            const marker = document.createElement('div');
+            marker.classList.add('marker');
+            marker.style.position = "absolute";
+            marker.style.left = "0";
+            marker.style.width = "15px";
+            marker.style.height = "4px";
+            marker.style.backgroundColor = "#2F4957";
+            marker.style.top = `${positionPercent}%`;
+
+            const label = document.createElement('div');
+            label.classList.add('marker-label');
+            label.style.position = "absolute";
+            label.style.color = "#2F4957";
+            label.style.fontSize = "1rem";
+            label.style.left = "40px"; 
+            label.style.top = `${positionPercent}%`;
+            label.textContent = xpValue;
+
+            progressBar.appendChild(marker);
+            progressBar.appendChild(label);
+        });
+    }
+
+    function addRewards() {
+        rewardLevels.forEach(xpValue => {
+            if (xpValue === 0) return;
+            const positionPercent = (xpValue / maxXP) * 100;
+
+            const reward = document.createElement('div');
+            reward.classList.add('reward');
+            reward.style.top = `${positionPercent}%`;
+            reward.dataset.xp = xpValue;
+            reward.textContent = "GE";
+
+            progressBar.appendChild(reward);
+        });
+    }
+
+    function updateProgressBar(xp) {
+        const progressHeight = Math.min((xp / maxXP) * 100, 100);
+        const lastProgressHeight = Math.min((lastSavedXP / maxXP) * 100, 100);
+
+        // **Setze den Indicator auf den gespeicherten Wert, bevor er animiert wird**
+        indicator.style.height = `${lastProgressHeight}%`;
+        xpBox.style.top = `${lastProgressHeight}%`;
+
+        setTimeout(() => {
+            indicator.style.transition = "height 2s ease-in-out";
+            indicator.style.height = `${progressHeight}%`;
+            xpBox.style.top = `${progressHeight}%`;
+        }, 100); 
+
+        // **XP-Box Wert animieren**
+        animateCounter(xpBox, lastSavedXP, xp, 2000);
+
+        document.querySelectorAll('.reward').forEach(reward => {
+            const rewardXP = parseInt(reward.dataset.xp);
+            if (xp >= rewardXP) {
+                reward.style.backgroundColor = orangeColor;
+            }
+        });
+
+        // **Neuen XP-Stand in localStorage speichern**
+        localStorage.setItem("lastSavedXP", xp);
+    }
+
     function animateCounter(element, start, end, duration) {
         const range = end - start;
-        const increment = range / (duration / 16); // Schrittweite pro Frame (16ms bei ~60fps)
+        const increment = range / (duration / 16);
         let current = start;
 
-        const updateCounter = () => {
+        function updateCounter() {
             current += increment;
             if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
                 current = end;
             }
-            element.textContent = Math.floor(current); // XP-Wert anzeigen
+            element.textContent = Math.floor(current);
             if (current !== end) {
                 requestAnimationFrame(updateCounter);
             }
-        };
+        }
         updateCounter();
     }
 
-    // Striche und Zahlen in die Progress-Bar einfügen
-    function addMarkers() {
-        for (let xp = 500; xp <= maxXP; xp += stepXP) {
-            const positionPercent = (xp / maxXP) * 100; // Position basierend auf Prozent
+    
+    addMarkers();
+    addRewards();
 
-            // Strich erstellen
-            const marker = document.createElement('div');
-            marker.classList.add('marker');
-            marker.style.top = `${positionPercent}%`;
-
-            // Zahl erstellen
-            const label = document.createElement('div');
-            label.classList.add('marker-label');
-            label.style.top = `${positionPercent}%`;
-            label.textContent = xp; // XP-Wert als Text
-
-            // Beide in die Progress-Bar einfügen
-            progressBar.appendChild(marker);
-            progressBar.appendChild(label);
-        }
-    }
-
-    // Rewards dynamisch zur Progress-Bar hinzufügen
-    function addRewards() {
-        for (let xp = 500; xp <= maxXP; xp += stepXP) {
-            const positionPercent = (xp / maxXP) * 100; // Position basierend auf Prozent
-
-            // Reward erstellen
-            const reward = document.createElement('div');
-            reward.classList.add('reward');
-            reward.style.top = `${positionPercent}%`; // Setze Position entsprechend XP
-            reward.textContent = `🎁`; // Symbol oder Text für die Belohnung
-
-            // Reward zur Progress-Bar hinzufügen
-            progressBar.appendChild(reward);
-        }
-    }
-
-    // Fortschrittsanzeige aktualisieren
-    function updateProgressBar(xp) {
-        const progressHeight = Math.min((xp / maxXP) * 100, 100); // Höhe als Prozentsatz
-
-        // Indicator-Animation
-        indicator.style.height = `${progressHeight}%`;
-
-        // XP-Box-Position synchronisieren
-        xpBox.style.top = `${progressHeight}%`;
-
-        // Number Counter Animation starten
-        const currentXP = parseInt(xpBox.textContent) || 0; // Aktueller XP-Wert (start)
-        animateCounter(xpBox, currentXP, xp, 2000); // 2000ms = 2s Dauer der Animation
-    }
-
-    // Marker und Rewards hinzufügen
-    addMarkers(); // Markierungen hinzufügen
-    addRewards(); // Rewards hinzufügen
-
-    // XP aus Firestore abrufen und aktualisieren
     if (uid) {
-        firestore.collection('users').doc(uid).onSnapshot(
-            (doc) => {
-                if (doc.exists) {
-                    const data = doc.data();
-                    const totalXP = data.xp || 0;
-                    updateProgressBar(totalXP); // Fortschrittsanzeige aktualisieren
-                } else {
-                    console.error('Benutzerdaten nicht gefunden.');
-                }
-            },
-            (error) => {
-                console.error('Fehler beim Abrufen der XP-Daten:', error);
+        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
+
+        navigator.serviceWorker.addEventListener("message", (event) => {
+            if (event.data.type === "userDataUpdated") {
+                const data = event.data.data;
+                const totalXP = data.xp || 0;
+                updateProgressBar(totalXP);
             }
-        );
+        });
     } else {
-        console.error('Keine Benutzer-UID gefunden.');
+        console.error("Keine Benutzer-UID gefunden.");
     }
 });
 
@@ -677,76 +700,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-function addMarkers() {
-    const stepXP = 500; // XP-Schrittgröße für Marker
-    const maxXP = 10000; // Maximale XP
-    const progressBar = document.getElementById('progress-bar');
-
-    for (let xp = 500; xp <= maxXP; xp += stepXP) { // Schleife startet bei 500 XP
-        const positionPercent = (xp / maxXP) * 100; // Position in Prozent berechnen
-
-        // Strich erstellen
-        const marker = document.createElement('div');
-        marker.classList.add('marker');
-        marker.style.top = `${positionPercent}%`;
-
-        // Label erstellen
-        const label = document.createElement('div');
-        label.classList.add('marker-label');
-        label.style.top = `${positionPercent}%`;
-        label.textContent = xp; // XP-Wert als Text
-
-        // Marker und Label zur Progress-Bar hinzufügen
-        progressBar.appendChild(marker);
-        progressBar.appendChild(label);
-    }
-}
-
-
-
-
-function addRewards() {
-    const stepXP = 500; // XP-Schrittgröße für Rewards
-    const maxXP = 10000; // Maximale XP
-    const progressBar = document.getElementById('progress-bar');
-
-    for (let xp = 500; xp <= maxXP; xp += stepXP) { // Beginne bei 500 XP
-        const positionPercent = (xp / maxXP) * 100; // Position basierend auf Prozent
-
-        // Reward erstellen
-        const reward = document.createElement('div');
-        reward.classList.add('reward');
-        reward.style.top = `${positionPercent}%`; // Setze Position entsprechend XP
-        reward.textContent = `🎁`; // Symbol oder Text für die Belohnung
-
-        // Reward zur Progress-Bar hinzufügen
-        progressBar.appendChild(reward);
-    }
-}
-
-
-
-
-
-
-
-function animateCounter(element, start, end, duration) {
-    const range = end - start; // Differenz zwischen Start- und Endwert
-    const increment = range / (duration / 16); // Schrittweite pro Frame (16ms bei ~60fps)
-    let current = start;
-    const updateCounter = () => {
-        current += increment;
-        if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-            current = end; // Zahl darf den Endwert nicht überschreiten
-        }
-        element.textContent = Math.floor(current); // Aktuelle Zahl aktualisieren
-        if (current !== end) {
-            requestAnimationFrame(updateCounter); // Nächster Frame
-        }
-    };
-    updateCounter();
-}
 
 
 
