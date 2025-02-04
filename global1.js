@@ -41,3 +41,7 @@ function clearOldPage() {
 
 // Initialer Seitenaufruf
 navigate('profil.html');
+
+
+
+

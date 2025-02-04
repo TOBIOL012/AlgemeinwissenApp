@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
             higheststreak: 0,
             streakOnIce: 3, // Standardwert für "Streak auf Eis"
             creationDate, // Datum der Kontoerstellung
-            streakHistory: [], // Initialer leerer Verlauf
+            streakHistory: [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], // Initialer leerer Verlauf
             xpHistory: []
         }).then(() => {
             localStorage.setItem("uid", uid);
@@ -281,5 +281,64 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const xpIndicator = document.querySelector('.xp-indicator');
+    const xpBox = document.getElementById('xp-box');
+    const xpContainer = document.querySelector('.XP-Pfad-Container');
+    const firestore = firebase.firestore();
+    const uid = localStorage.getItem('uid');
+    const maxXP = 10000;
+
+    function updateXPProgress(xp) {
+        const progressWidth = Math.min((xp / maxXP) * 100, 100);
+        xpIndicator.style.width = `${progressWidth}%`;
+
+        const currentXP = parseInt(xpBox.textContent) || 0;
+        animateCounter(xpBox, currentXP, xp, 1500);
+    }
+
+    function animateCounter(element, start, end, duration) {
+        const range = end - start;
+        const increment = range / (duration / 16);
+        let current = start;
+
+        function updateCounter() {
+            current += increment;
+            if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                current = end;
+            }
+            element.textContent = Math.floor(current);
+            if (current !== end) {
+                requestAnimationFrame(updateCounter);
+            }
+        }
+        updateCounter();
+    }
+
+    if (uid) {
+        navigator.serviceWorker.controller?.postMessage({ type: "initUserData", uid });
+
+        navigator.serviceWorker.addEventListener("message", (event) => {
+            if (event.data.type === "userDataUpdated") {
+                const data = event.data.data;
+                const totalXP = data.xp || 0;
+                updateXPProgress(totalXP);
+            }
+        });
+    } else {
+        console.error("Keine Benutzer-UID gefunden.");
+    }
+
+    if (xpContainer) {
+        xpContainer.addEventListener('click', function () {
+            window.location.href = 'xp-pfad.html';
+        });
+    }
+});
 
 

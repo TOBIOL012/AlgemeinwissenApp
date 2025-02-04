@@ -131,8 +131,11 @@ header {
     border-radius: 4px;
     position: absolute;
     top: 0;
-    height: 0; /* Startpunkt: keine Höhe */
     transition: height 2s ease; /* Sanfte Animation der Höhe */
+}
+
+.xp-box{
+    z-index: 999;
 }
 
 .progress-bar .xp-box {
@@ -151,7 +154,6 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    top: 0; /* Startpunkt oben */
     left: calc(100% + 6px); /* Position rechts der Progress-Bar */
     transform: translate(0, -50%);
     transition: top 2s ease; /* Gleiche Animation wie Indicator */

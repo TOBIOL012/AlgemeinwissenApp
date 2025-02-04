@@ -93,3 +93,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("global.js bereit.");
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const xpButton = document.getElementById('xp-button');
+    const xpDisplay = document.getElementById('xp-total');
+
+    xpButton.addEventListener('click', function () {
+        let currentXP = parseInt(localStorage.getItem('lastSavedXP')) || 0;
+        let newXP = Math.min(currentXP + 50, 10000); // XP darf max. 10000 sein
+
+        localStorage.setItem('lastSavedXP', newXP);
+        xpDisplay.textContent = newXP;
+
+        // Fortschritt im XP-Pfad aktualisieren
+        if (typeof updateProgressBar === 'function') {
+            updateProgressBar(newXP);
+        }
+    });
+});

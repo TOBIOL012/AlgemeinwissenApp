@@ -299,7 +299,7 @@ header {
     left: 80%; /* 4. Strich */
 }
 
-.streak-stats-container, .highest-streak-stats-container {
+.streak-stats-container, .highest-streak-stats-container{
     display:block;
     background-color: #141F25;
     color: white;

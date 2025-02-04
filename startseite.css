@@ -74,7 +74,6 @@ body {
     border: none;
     padding: 5px;
     border-radius: 5px;
-    cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
@@ -128,7 +127,6 @@ body {
     font-size: 1.2em;
     font-family: "Dosis", sans-serif;
     text-align: left;
-    cursor: pointer;
     width: 90%; /* Breite anpassen */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -184,10 +182,6 @@ body {
     font-size: 1.4em;
 }
 
-#notifications img {
-    cursor: pointer;
-}
-
 
 
 
@@ -214,6 +208,9 @@ body {
     flex: 1;
     text-align: center;
     font-size: 1.1em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .week-calendar .day-row {
@@ -221,27 +218,130 @@ body {
     width: 100%;
     margin-top: 5px;
     background-color: #2f4957;
-    border-radius: 15px;
+    border-radius: 3rem;
 }
 
 .week-calendar .day div {
-    font-size: 1.1em;
+    border-radius: 3rem;
+    padding: 0.15rem;
+    font-size: 0.95em;
     color: white;
+    width: 100%;
 }
 
-.week-calendar .day div.streak-day {
-    background-color: orange;
-    border-radius: 15px;
-    color: white;
-    font-weight: bold;
-}
+
+
 
 .week-calendar .day div.current-day {
-    background-color: white;
-    color: #2f4957;
-    border-radius: 15px;
+    background-color: #4f7d95;
+    color: #ffffff;
     font-weight: bold;
 }
+
+.week-calendar .day div.streak-done.first {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(139, 69, 19, 0.8), rgba(190, 90, 40, 0.8)); /* Braun -> Dunkles Orange-Braun */
+    color: white;
+    font-weight: bold;
+}
+
+.week-calendar .day div.streak-done.second {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(190, 90, 40, 0.8), rgba(215, 110, 45, 0.8)); /* Dunkles Orange-Braun -> Warmes Orange */
+    color: white;
+    font-weight: bold;
+}
+
+.week-calendar .day div.streak-done.third {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(215, 110, 45, 0.8), rgba(235, 130, 50, 0.8)); /* Warmes Orange -> Sattes Orange */
+    color: white;
+    font-weight: bold;
+}
+
+.week-calendar .day div.streak-done.fourth {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(235, 130, 50, 0.8), rgba(245, 100, 40, 0.8)); /* Sattes Orange -> Kräftiges Orange-Rot */
+    color: white;
+    font-weight: bold;
+}
+
+.week-calendar .day div.streak-done.second.fifth {
+    border-radius: 0;
+    background: rgba(245, 100, 40, 0.8); /* Endstufe in Orange-Rot */
+    color: white;
+    font-weight: bold;
+}
+
+#end{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+}
+
+#start{
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+#start-end{
+    border-radius: 3rem !important;
+}
+
+#streak-freeze-start{
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+#streak-freeze-end{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+}
+
+#streak-freeze-start-end{
+    border-radius: 3rem !important;
+}
+
+.week-calendar .day #streak-freeze, .week-calendar .day #streak-freeze-start, .week-calendar .day #streak-freeze-end, .week-calendar .day #streak-freeze-start-end {
+    border-radius:0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    color: #2f4957;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 1; /* Text bleibt über dem Hintergrund */
+}
+
+.week-calendar .day #streak-freeze::before, .week-calendar .day #streak-freeze-start::before, .week-calendar .day #streak-freeze-end::before, .week-calendar .day #streak-freeze-start-end::before {
+    content: "";
+    position: absolute;
+    top: -35%; /* Falls es über den Rand hinausragen soll */
+    bottom: -35%;
+    left:10%;
+    right: 10%;
+    background-image: url('ice.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% auto;
+    transform: rotate(45deg); /* Hier kannst du den Winkel anpassen */
+    z-index: -1; /* Bild bleibt im Hintergrund */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,7 +356,6 @@ body {
     border: none;
     padding: 0.8em;
     border-radius: 1em;
-    cursor: pointer;
     font-size: 1.6em;
     width: 90%;
     font-family: "Dosis", sans-serif;

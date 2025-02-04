@@ -16,7 +16,7 @@ const firestore = firebase.firestore();
 
 const cacheFiles = [
     "index.html", "index2.html", "index3.html", "index10.html", "haupt.html", "startseite.html", "mehrspieler.html", "profil.html", "ranking-mehrspieler.html", "fragen-mehrspieler.html", "fragen-fehler.html", "kategorien.html", "kategorien-fehler.html", "kategorien-mehrspieler.html", "schwierigkeiten.html", "statistik.html", "abmelden.html", "anmelden.html", "belohnung.html", "belohnung-mehrspieler.html", "calendar.html", "endranking-mehrspieler.html", "einstellungen.html", "dev.html", "xp-pfad.html", "fehler.html",
-    "main.js", "global.js", "startseite.js", "mehrspieler.js", "profil.js", "ranking-mehrspieler.js", "fragen-mehrspieler.js", "fragen-fehler.js", "kategorien-fehler.js", "kategorien-mehrspieler.js", "statistik.js", "belohnung.js", "belohnung-mehrspieler.js", "endranking-mehrspieler.js", "einstellungen.js", "fehler.js", "index2.js", "service-worker.js"
+    "main.js", "global.js", "startseite.js", "mehrspieler.js", "profil.js", "ranking-mehrspieler.js", "fragen-mehrspieler.js", "fragen-fehler.js", "kategorien-fehler.js", "kategorien-mehrspieler.js", "statistik.js", "belohnung.js", "belohnung-mehrspieler.js", "endranking-mehrspieler.js", "einstellungen.js", "fehler.js", "index2.js", "service-worker.js", "mini-kalendar.js"
 ];
 
 self.addEventListener('install', (event) => {

@@ -6,13 +6,44 @@
     <title>Calendar</title>
     <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="Standart.css">
+    <script src="calendar.js" defer></script>
+
 </head>
 <body>
     <div id="spieler-container">
         <div class="header">
-            <a window.location.href = 'startseite.html' class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
+            <a href = 'startseite.html' class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
             <div class="Überschrift">Kalendar</div>
-        </div>    
+        </div>
+        
+        <div class="streak-stats-container">
+            <div class="streak-stats-anzeige">
+                <img src="streak.png">
+                <div class="streak-stats-number" id="number">-</div>
+            </div>
+        </div>
+        <div class="anzeige">
+        <div class="streak-stats">
+            
+            <div class="highest-streak-stats-container">
+                <div class="streak-stats-anzeige">
+                    <img src="streakgold.png" id="streakicon">
+                    <div class="highest-streak-stats-number" id="number">-</div>
+                </div>
+                <div class="streak-stats-text">Höchste Streak</div>
+            </div>
+            <div class="tage-stats-container">
+                <div class="streak-stats-anzeige">
+                    <img src="streakgold.png" id="streakicon">
+                    <div class="tage-stats-number" id="number">-</div>
+                </div>
+                <div class="streak-stats-text">Tage gelernt</div>
+            </div>
+        </div>
+        <div class="kalendar" style="overflow-y: scroll;">
+
+        </div>
+        </div>
     </div>
 </body>
 </html>

@@ -181,3 +181,6 @@ window.setValue = setValue;
 // Lokale Werte laden und Synchronisation starten
 loadLocalStats();
 syncStats();
+
+
+

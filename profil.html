@@ -18,22 +18,9 @@
     <script src="Fragen/question.js" defer></script>
     <link rel="manifest" href="/manifest.json">
     <script src="profil.js" defer></script>
+    <script src="anzeige.js" defer></script>
     <script src="einstellungen.js" defer></script>
-    <script>
-        const preloadWebPFrames = (totalFrames) => {
-    for (let i = 1; i <= totalFrames; i++) {
-        const paddedFrame = String(i).padStart(3, '0');
-        const img = new Image();
-        img.src = `output_images/rotated_${paddedFrame}.webp`;
-    }
-};
-
-// Vorladen der Frames beim Laden der Seite
-document.addEventListener("DOMContentLoaded", () => {
-    preloadWebPFrames(30); // Anzahl der Frames
-});
-    </script>
-    
+    <script src="anzeige.js" defer></script>
 </head>
 <body>
     <div class="einstellungen" style="display: none;">
@@ -55,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- Hier wird der Name angezeigt, wenn der Benutzer eingeloggt ist -->
 
-    <div class="name" style="display: none;">
+    <div class="name" style="display: flex;">
         <span id="username-display"></span>
         <button class="share-button" onclick="shareProfile()">
             <img src="share-icon.png" alt="Teilen" class="share-icon">
@@ -90,13 +77,23 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="Streak">
             <img src="streak.png" alt="Streak Icon">
-            <span>17</span>
+            <span class="streak-text">17</span>
         </div>
     </div>
 
     <div class="XP-Pfad-Container">
-        <a href = 'xp-pfad.html' class="xp-pfad-button">XP-Pfad ></a>
+        <div class="xp-header">
+            <span id="xp-title">XP-Pfad</span>
+            <span id="xp-box">150</span>
+        </div>
+        <div class="xp-pfad-button">
+            <div class="xp-progress-bar">
+                <div class="xp-indicator"></div>
+            </div>
+        </div>
     </div>
+    
+
     <div class="Statistik-Container">
         <a href = 'Statistik.html' class="Statistik-button">
             <div class="Fragen-Anzeige">

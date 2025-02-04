@@ -36,7 +36,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 7%; /* Abstand zu den Input-Feldern */
+    margin-bottom: 2rem; /* Abstand zu den Input-Feldern */
 }
 
 .back-arrow {
@@ -64,3 +64,266 @@ header {
     text-align: center;
     font-size: var(--font-size-header);
 }
+
+.streak-stats-container{
+    display:block;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    width: calc(33vw - 1.6rem);
+}   
+
+.streak-stats-container img{
+    width: 3rem;
+}
+
+.highest-streak-stats-container, .tage-stats-container {
+    display:block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    width: calc(40vw - 1.6rem);
+}
+
+.streak-stats-container, .highest-streak-stats-container {
+    margin-right: 6vw;
+}
+
+.streak-stats{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-top: 1.5rem;
+}
+
+.streak-stats-anzeige{
+    display:flex;
+    align-items: center;
+}
+
+#streakicon{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.streak-stats-text{
+    color:#a3bcc6;
+    font-size: 0.9rem;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 0.3rem;
+}
+
+#number{
+    font-size: 1.2rem;
+}
+
+.anzeige{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.kalendar{
+    padding: 0.5rem;
+    display:block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    width: calc(90% - 1rem - 6px);
+    margin-top: 2rem;
+    height: calc(100vh - 19rem - 7vw - 10px);
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.kalendar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+
+
+
+
+.month-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen den Elementen */
+    margin-top: 0.6rem;
+    color: white;
+}
+
+.month-calendar .days {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.month-calendar .day {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.month-calendar .day-row {
+    display: flex;
+    width: 100%;
+    background-color: #2f4957;
+    border-radius: 3rem;
+}
+
+.month {
+    background-color: #2f4957;
+    border-radius: 1.25rem;
+}
+
+.month-calendar .day div {
+    width: 14.29%;
+    border-radius: 3rem;
+    padding: 0.15rem;
+    font-size: 0.95em;
+    color: white;
+    width: 100%;
+}
+
+.month-calendar .day div.current-day {
+    background-color: #4f7d95;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.first {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(139, 69, 19, 0.8), rgba(190, 90, 40, 0.8)); /* Braun -> Dunkles Orange-Braun */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.second {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(190, 90, 40, 0.8), rgba(215, 110, 45, 0.8)); /* Dunkles Orange-Braun -> Warmes Orange */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.third {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(215, 110, 45, 0.8), rgba(235, 130, 50, 0.8)); /* Warmes Orange -> Sattes Orange */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.fourth {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(235, 130, 50, 0.8), rgba(245, 100, 40, 0.8)); /* Sattes Orange -> Kräftiges Orange-Rot */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.second.fifth {
+    border-radius: 0;
+    background: rgba(245, 100, 40, 0.8); /* Endstufe in Orange-Rot */
+    color: white;
+    font-weight: bold;
+}
+
+#end{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+}
+
+#start{
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+#start-end{
+    border-radius: 3rem !important;
+}
+
+#streak-freeze-start{
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+#streak-freeze-end{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+}
+
+#streak-freeze-start-end{
+    border-radius: 3rem !important;
+}
+
+.month-calendar .day #streak-freeze, .month-calendar .day #streak-freeze-start, .month-calendar .day #streak-freeze-end, .month-calendar .day #streak-freeze-start-end {
+    border-radius:0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    color: #2f4957;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 1; /* Text bleibt über dem Hintergrund */
+}
+
+.month-calendar .day #streak-freeze::before, .month-calendar .day #streak-freeze-start::before, .month-calendar .day #streak-freeze-end::before, .week-calendar .day #streak-freeze-start-end::before {
+    content: "";
+    position: absolute;
+    top: -35%; /* Falls es über den Rand hinausragen soll */
+    bottom: -35%;
+    left:10%;
+    right: 10%;
+    background-image: url('ice.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% auto;
+    transform: rotate(45deg); /* Hier kannst du den Winkel anpassen */
+    z-index: -1; /* Bild bleibt im Hintergrund */
+}
+
+.streak-all{
+    background-color: #141F25;
+    color: white;
+    text-align: left;
+    border-radius: 12px;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 8px;
+    padding-top: 0;
+}
+
+.newmonth{
+    background-color: #141F25;
+    width: 100%;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.streak-stats-number{
+    font-size: 2.5rem !important;
+    font-weight: bold;
+}
+
+
