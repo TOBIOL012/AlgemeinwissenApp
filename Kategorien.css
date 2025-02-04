@@ -88,7 +88,6 @@ button:active {
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
-    cursor: pointer;
     z-index: 1000;
 }
 
@@ -124,7 +123,6 @@ button:active {
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
-    cursor: pointer;
     z-index: 1000;
 }
 
@@ -136,6 +134,7 @@ button:active {
 
 /* Roter Punkt */
 .notification-dot {
+    display: none;
     position: absolute;
     top: 8px; /* Abstand von oben */
     right: -8px; /* Abstand von rechts */

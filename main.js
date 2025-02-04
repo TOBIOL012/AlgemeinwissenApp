@@ -430,13 +430,15 @@ function toggleContent(contentId) {
 function getContent(contentId) {
     if (contentId === 'streak-content') {
         return `
+            <div class="streak-all" onclick="window.location.href='calendar.html'">
             <div class="streak-header">
                 <p>Streak Übersicht</p>
-                <button class="streak-button" onclick="location.href='calendar.html'">
+                <button class="streak-button">
                     <img src="streak-icon.png" alt="Details" class="streak-icon">
                 </button>
             </div>
             ${generateWeekCalendar()}
+            </div>
         `;
     }
     if (contentId === 'xp-content') {
@@ -457,39 +459,7 @@ function getContent(contentId) {
 }
 
 
-function generateWeekCalendar() {
-    const weekDays = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
-    const today = new Date();
-    const currentDay = today.getDay(); // 0 = Sonntag, 1 = Montag, ...
 
-    const startOfWeek = new Date(today);
-    startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7)); // Start bei Montag
-
-    let calendarHTML = '<div class="week-calendar">';
-    calendarHTML += '<div class="days">';
-    weekDays.forEach(day => {
-        calendarHTML += `<div class="day">${day}</div>`;
-    });
-    calendarHTML += '</div>';
-
-    calendarHTML += '<div class="day-row">';
-    for (let i = 0; i < 7; i++) {
-        const date = new Date(startOfWeek);
-        date.setDate(startOfWeek.getDate() + i);
-    
-        const isCurrent = today.toDateString() === date.toDateString(); // Vergleich aktueller Tag
-        const formattedDate = date.toISOString().split("T")[0];
-
-        calendarHTML += `<div class="day">
-            <div data-date="${formattedDate}" class="${isCurrent ? 'current-day' : ''}">${date.getDate()}</div>
-        </div>`;
-    }
-    
-    calendarHTML += '</div>';
-    calendarHTML += '</div>';
-
-    return calendarHTML;
-}
 
 
 
@@ -505,46 +475,6 @@ document.addEventListener('click', function (event) {
 });
 
 
-function highlightStreakDays() {
-    auth.onAuthStateChanged((user) => {
-        if (user) {
-            const uid = user.uid;
-            firestore.collection("users").doc(uid).get().then((doc) => {
-                if (doc.exists) {
-                    const data = doc.data();
-                    const streakHistory = data.streakHistory || [];
-                    
-                    const today = new Date();
-                    const startOfWeek = new Date(today);
-                    startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7)); // Montag der aktuellen Woche
-
-                    const days = document.querySelectorAll('.day-row .day div');
-                    
-                    days.forEach((day, index) => {
-                        const date = new Date(startOfWeek);
-                        date.setDate(startOfWeek.getDate() + index);
-                        const formattedDate = date.toISOString().split("T")[0];
-
-                        if (streakHistory.includes(formattedDate)) {
-                            day.classList.add('streak-day'); // Streak-Tag markieren
-                        }
-                    });
-                } else {
-                    console.error("Benutzerdokument nicht gefunden.");
-                }
-            }).catch((error) => {
-                console.error("Fehler beim Abrufen des Benutzerdokuments:", error);
-            });
-        } else {
-            console.error("Benutzer nicht eingeloggt.");
-        }
-    });
-}
-
-// Diese Funktion nach dem Rendern des Kalenders aufrufen
-document.addEventListener('DOMContentLoaded', function () {
-    highlightStreakDays();
-});
 
 
 
@@ -566,29 +496,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressBar = document.getElementById('progress-bar');
     const indicator = document.getElementById('indicator');
     const xpBox = document.getElementById('xp-box');
+    
 
     const firestore = firebase.firestore();
     const uid = localStorage.getItem('uid');
     const maxXP = 10000;
     const stepXP = 500;
-    const rewardLevels = Array.from({ length: 21 }, (_, i) => i * 500);
+    const rewardLevels = Array.from({ length: 21 }, (_, i) => i * 500); // XP-Stufen von 0 bis 10.000
 
-    const orangeColor = "#E48D45";
+    // **Exakte Orange-Farbe festlegen**
+    const orangeColor = "#E48D45"; // Falls eine andere Farbe besser passt, kannst du sie mir sagen
 
-    // **Letzten XP-Stand aus localStorage holen**
-    let lastSavedXP = localStorage.getItem("lastSavedXP");
-    if (lastSavedXP === null) {
-        lastSavedXP = 0; // Falls noch nichts gespeichert wurde
-    } else {
-        lastSavedXP = parseInt(lastSavedXP); // Stelle sicher, dass es eine Zahl ist
-    }
-
+    // **Marker für XP-Werte hinzufügen**
     function addMarkers() {
         rewardLevels.forEach(xpValue => {
             if (xpValue === 0) return;
 
             const positionPercent = (xpValue / maxXP) * 100;
 
+            // **Marker-Strich erstellen**
             const marker = document.createElement('div');
             marker.classList.add('marker');
             marker.style.position = "absolute";
@@ -598,12 +524,13 @@ document.addEventListener('DOMContentLoaded', function () {
             marker.style.backgroundColor = "#2F4957";
             marker.style.top = `${positionPercent}%`;
 
+            // **XP-Wert als Label**
             const label = document.createElement('div');
             label.classList.add('marker-label');
             label.style.position = "absolute";
             label.style.color = "#2F4957";
             label.style.fontSize = "1rem";
-            label.style.left = "40px"; 
+            label.style.left = "25px"; // **Mehr Abstand von der Bar**
             label.style.top = `${positionPercent}%`;
             label.textContent = xpValue;
 
@@ -612,6 +539,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // **Rewards hinzufügen**
     function addRewards() {
         rewardLevels.forEach(xpValue => {
             if (xpValue === 0) return;
@@ -627,38 +555,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    if (window.location.pathname.includes("xp-pfad.html")) {
+        let xplast = localStorage.getItem('xplast') || "0"; // Falls null, setze auf "0"
+        console.log(xplast);
+        indicator.style.height = `${Math.min((xplast / maxXP) * 100, 100)}%`;
+        xpBox.style.top = `${Math.min((xplast / maxXP) * 100, 100)}%`;
+    }
+
+    // **XP-Fortschritt aktualisieren & Rewards färben**
     function updateProgressBar(xp) {
         const progressHeight = Math.min((xp / maxXP) * 100, 100);
-        const lastProgressHeight = Math.min((lastSavedXP / maxXP) * 100, 100);
+        let xplast = parseFloat(localStorage.getItem('xplast')) || 0;  // Falls null, setze auf "0"
 
-        // **Setze den Indicator auf den gespeicherten Wert, bevor er animiert wird**
-        indicator.style.height = `${lastProgressHeight}%`;
-        xpBox.style.top = `${lastProgressHeight}%`;
-
-        setTimeout(() => {
-            indicator.style.transition = "height 2s ease-in-out";
-            indicator.style.height = `${progressHeight}%`;
-            xpBox.style.top = `${progressHeight}%`;
-        }, 100); 
+        indicator.style.height = `${progressHeight}%`;
+        console.log("uwuwuwneger");
+        xpBox.style.top = `${progressHeight}%`;
 
         // **XP-Box Wert animieren**
-        animateCounter(xpBox, lastSavedXP, xp, 2000);
+        const currentXP = parseInt(xpBox.textContent) || 0;
+        console.log(xplast);
+        console.log(xp);
+        if (xplast !== xp){
+            console.log("was zum sigma");
+            animateCounter(xpBox, xplast, xp, 2000);
+            localStorage.setItem('xplast', xp);
+        } else {
+            xpBox.textContent = xp;
+        }
 
+
+        // **Rewards färben mit dem exakt gleichen Orange**
         document.querySelectorAll('.reward').forEach(reward => {
             const rewardXP = parseInt(reward.dataset.xp);
             if (xp >= rewardXP) {
                 reward.style.backgroundColor = orangeColor;
             }
         });
-
-        // **Neuen XP-Stand in localStorage speichern**
-        localStorage.setItem("lastSavedXP", xp);
     }
 
+    // **XP-Box Animation**
     function animateCounter(element, start, end, duration) {
         const range = end - start;
         const increment = range / (duration / 16);
         let current = start;
+        console.log(increment);
 
         function updateCounter() {
             current += increment;
@@ -673,10 +613,11 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCounter();
     }
 
-    
+    // **Initialisierung**
     addMarkers();
     addRewards();
 
+    // **XP aus Firestore abrufen & Fortschritt updaten**
     if (uid) {
         navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
 
@@ -684,6 +625,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (event.data.type === "userDataUpdated") {
                 const data = event.data.data;
                 const totalXP = data.xp || 0;
+                localStorage.setItem("lastXp", totalXP);
                 updateProgressBar(totalXP);
             }
         });
@@ -691,15 +633,6 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error("Keine Benutzer-UID gefunden.");
     }
 });
-
-
-
-
-
-
-
-
-
 
 
 

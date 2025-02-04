@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+
     //localStorage.removeItem('incorrectQuestions');
     const factDisplay2 = document.querySelector('.fact2');
     const factDisplay = document.querySelector('.fact');
@@ -810,7 +810,7 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
 
 
     console.log("problem");
-});
+
 
 
 

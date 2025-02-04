@@ -136,20 +136,21 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
-    
-    document.addEventListener("DOMContentLoaded", () => {
     // Wähle den Picker-Container und die einzelnen Picker-Items aus
     const pickerContainer = document.querySelector(".picker-container");
     const pickerItems = document.querySelectorAll(".picker-item");
 
     // Funktion, um das mittige Element hervorzuheben
 function updateActiveItem() {
+    console.log("Item:"); // Debugging
     const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
 
     let closestItem = null;
     let closestDistance = Infinity;
+    
 
     pickerItems.forEach((item) => {
+        console.log("Item:", item); // Debugging
         const itemCenter = item.offsetLeft + item.offsetWidth / 2;
         const distance = Math.abs(containerCenter - itemCenter);
 
@@ -162,26 +163,21 @@ function updateActiveItem() {
     // Setze die aktive Klasse und Farbe für alle Items zurück
     pickerItems.forEach((item) => {
         item.classList.remove("active");
-        item.style.color = "white"; // Standardfarbe
+        item.style.color = "#cfcfcf"; // Standardfarbe
     });
 
     // Füge die aktive Klasse und die neue Farbe dem nächstgelegenen Element hinzu
     if (closestItem) {
         closestItem.classList.add("active");
-        closestItem.style.color = "red"; // Neue Farbe für das aktive Element
+        closestItem.style.color = "#cfcfcf"; // Neue Farbe für das aktive Element
         console.log("Mittige Zahl:", closestItem.textContent); // Debugging
     }
 }
-
-
     // Überwache das Scroll-Event im Picker-Container
     pickerContainer.addEventListener("scroll", () => {
         updateActiveItem(); // Aktualisiere die aktive Zahl beim Scrollen
     });
 
-    // Initial: Setze die erste Zahl aktiv
-    updateActiveItem();
-});
 
     
     
@@ -315,7 +311,6 @@ function updateActiveItem() {
 
     // Add initial input fields
     for (let i = 0; i < 2; i++) {
-        console.log("oioiooioioooioioio");
         addNewInputField();
     }
     document.documentElement.style.height = 'auto';
@@ -323,4 +318,137 @@ function updateActiveItem() {
     // Initial Update der Button-States
     updateContinueButtonState();
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const pickerContainer = document.querySelector(".picker-container");
+    const pickerItems = document.querySelectorAll(".picker-item");
+
+    function updateActiveItem() {
+        const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
+
+        let closestItem = null;
+        let closestDistance = Infinity;
+
+        pickerItems.forEach((item) => {
+            const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+            const distance = Math.abs(containerCenter - itemCenter);
+
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestItem = item;
+            }
+        });
+
+        pickerItems.forEach((item) => {
+            item.classList.remove("active", "active-2", "active-3", "active-4");
+            item.style.color = "#cfcfcf"; // Standardfarbe
+            item.style.opacity = "0"; // Unsichtbar machen
+        });
+
+        if (closestItem) {
+            closestItem.classList.add("active");
+            closestItem.style.color = "#cfcfcf";
+            closestItem.style.opacity = "1";
+
+            const closestIndex = Array.from(pickerItems).indexOf(closestItem);
+            
+            // **Links und rechts daneben als "active-2" setzen**
+            if (pickerItems[closestIndex - 1]) {
+                pickerItems[closestIndex - 1].classList.add("active-2");
+                pickerItems[closestIndex - 1].style.color = "#BBBBBB";
+                pickerItems[closestIndex - 1].style.opacity = "1";
+            }
+            if (pickerItems[closestIndex + 1]) {
+                pickerItems[closestIndex + 1].classList.add("active-2");
+                pickerItems[closestIndex + 1].style.color = "#BBBBBB";
+                pickerItems[closestIndex + 1].style.opacity = "1";
+            }
+
+            // **Zwei Stellen daneben als "active-3" setzen**
+            if (pickerItems[closestIndex - 2]) {
+                pickerItems[closestIndex - 2].classList.add("active-3");
+                pickerItems[closestIndex - 2].style.color = "#BBBBBB";
+                pickerItems[closestIndex - 2].style.opacity = "1";
+            }
+            if (pickerItems[closestIndex + 2]) {
+                pickerItems[closestIndex + 2].classList.add("active-3");
+                pickerItems[closestIndex + 2].style.color = "#BBBBBB";
+                pickerItems[closestIndex + 2].style.opacity = "1";
+            }
+
+            // **Drei Stellen daneben als "active-4" setzen**
+            if (pickerItems[closestIndex - 3]) {
+                pickerItems[closestIndex - 3].classList.add("active-4");
+                pickerItems[closestIndex - 3].style.color = "#BBBBBB";
+                pickerItems[closestIndex - 3].style.opacity = "1";
+            }
+            if (pickerItems[closestIndex + 3]) {
+                pickerItems[closestIndex + 3].classList.add("active-4");
+                pickerItems[closestIndex + 3].style.color = "#BBBBBB";
+                pickerItems[closestIndex + 3].style.opacity = "1";
+            }
+        }
+    }
+
+    // **Setze die 5 als Startwert in der Mitte**
+    function setInitialPickerPosition() {
+        const targetItem = Array.from(pickerItems).find(item => item.textContent === "10");
+
+        if (targetItem) {
+            const scrollOffset = targetItem.offsetLeft - pickerContainer.offsetWidth / 2 + targetItem.offsetWidth / 2;
+            pickerContainer.scrollLeft = scrollOffset;
+            targetItem.classList.add("active");
+            targetItem.style.color = "#cfcfcf";
+            targetItem.style.opacity = "1";
+
+            const targetIndex = Array.from(pickerItems).indexOf(targetItem);
+            
+            if (pickerItems[targetIndex - 1]) {
+                pickerItems[targetIndex - 1].classList.add("active-2");
+                pickerItems[targetIndex - 1].style.color = "#BBBBBB";
+                pickerItems[targetIndex - 1].style.opacity = "1";
+            }
+            if (pickerItems[targetIndex + 1]) {
+                pickerItems[targetIndex + 1].classList.add("active-2");
+                pickerItems[targetIndex + 1].style.color = "#BBBBBB";
+                pickerItems[targetIndex + 1].style.opacity = "1";
+            }
+
+            if (pickerItems[targetIndex - 2]) {
+                pickerItems[targetIndex - 2].classList.add("active-3");
+                pickerItems[targetIndex - 2].style.color = "#BBBBBB";
+                pickerItems[targetIndex - 2].style.opacity = "1";
+            }
+            if (pickerItems[targetIndex + 2]) {
+                pickerItems[targetIndex + 2].classList.add("active-3");
+                pickerItems[targetIndex + 2].style.color = "#BBBBBB";
+                pickerItems[targetIndex + 2].style.opacity = "1";
+            }
+
+            if (pickerItems[targetIndex - 3]) {
+                pickerItems[targetIndex - 3].classList.add("active-4");
+                pickerItems[targetIndex - 3].style.color = "#BBBBBB";
+                pickerItems[targetIndex - 3].style.opacity = "1";
+            }
+            if (pickerItems[targetIndex + 3]) {
+                pickerItems[targetIndex + 3].classList.add("active-4");
+                pickerItems[targetIndex + 3].style.color = "#BBBBBB";
+                pickerItems[targetIndex + 3].style.opacity = "1";
+            }
+        }
+    }
+
+    pickerContainer.addEventListener("scroll", updateActiveItem);
+
+    // **Nach Laden der Seite ausführen**
+    setTimeout(setInitialPickerPosition, 100);
+});
+
+
+
+
+
 
