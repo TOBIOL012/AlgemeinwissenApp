@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addPlayerButton = document.getElementById('add-player-button'); // Button für Spieler hinzufügen
     const maxPlayers = 15; // Maximale Anzahl von Spielern
     const difficulties = ['Leicht', 'Mittel', 'Schwer', 'Extrem'];
+    let closestItem = null;
     const difficultyColors = {
         'Leicht': '#5EFC8D',
         'Mittel': '#E5E55E',
@@ -145,7 +146,7 @@ function updateActiveItem() {
     console.log("Item:"); // Debugging
     const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
 
-    let closestItem = null;
+    
     let closestDistance = Infinity;
     
 
@@ -249,15 +250,15 @@ function updateActiveItem() {
                 } else {
                     const difficulty = input.closest('.input-container').querySelector('.schwierigkeit-button').textContent;
                     const questionCountElement = document.getElementById('question-count');
-                    if (questionCountElement) {
-                        const questionCount = parseInt(questionCountElement.textContent);
-                        players.push({ name: playerName, difficulty: difficulty, questionCount: questionCount });
-                    }
+                    const questionCount = parseInt(closestItem.textContent);
+                    players.push({ name: playerName, difficulty: difficulty, questionCount: questionCount });
                 }
             });
 
             if (allFilled) {
+                console.log('Players:', JSON.stringify(players));
                 localStorage.setItem('players', JSON.stringify(players));
+                console.log('local:', JSON.parse(localStorage.getItem('players')) || []);
                 localStorage.setItem('isMultiplayer', 'true');
                 window.location.href = 'kategorien-mehrspieler.html';
             } else {

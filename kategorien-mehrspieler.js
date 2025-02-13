@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoryImages = document.querySelectorAll('img[data-category]');
     const continueButton = document.getElementById('next-button');
     let selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
-    
+    console.log('players:', JSON.parse(localStorage.getItem('players')));
     // Funktion zur Aktualisierung des "Weiter"-Buttons (orange/grau)
     function updateContinueButtonState() {
         if (continueButton) {
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.removeItem('questionsAsked');
                 localStorage.removeItem('correctCount');
                 // Navigiere zur nächsten Seite
-                parent.document.getElementById('main-iframe').src = 'fragen-mehrspieler.html';
+                window.location.href = 'fragen-mehrspieler.html';
             }
         });
     }

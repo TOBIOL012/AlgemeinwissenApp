@@ -325,41 +325,44 @@ body {
     flex-direction: row; /* Waagerechte Elemente */
     align-items: center;
     width: 100%;
-    padding-left: 125px;
+    padding-left: 3rem; /* Zentriert die Elemente */
     z-index: 100; /* Über der Bottom-Leiste */
 }
 
 
 .picker-item {
+    font-size: 0.7rem;
     scroll-snap-align: center; /* Immer zentrieren */
     text-align: center;
     padding: 4px; /* Abstand zwischen den Items */
     color: white; /* Standardfarbe: Grau */
     white-space: nowrap; /* Kein Zeilenumbruch */
     opacity: 0;
+    transition: font-size 0.1s ease-in-out;
 }
 
 .picker-item.active {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
     color: #cfcfcf; /* Hauptfarbe */
     opacity: 1;
 }
 
 .picker-item.active-2 {
-    font-size: 22px;
+    font-size: 1.5rem;
     opacity: 1;
 }
 
 .picker-item.active-3 {
-    font-size: 18px;
+    font-size: 1.1rem;
     opacity: 1;
 }
 
 .picker-item.active-4 {
-    font-size: 14px;
+    font-size:  0.7rem;
     opacity: 1;
 }
+
 
 
  
