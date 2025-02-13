@@ -106,11 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoutButton = document.querySelector(".ausloggen");
 
     logoutButton.addEventListener("click", () => {
-        showGlobalModal("Einstellungen", "Hier kannst du deine Optionen ändern.", "kreuz.png", function (status) {
-            console.log("neger")
-            console.log("Modal geschlossen mit Status:", status);
-        });
-        showGlobalModal();
 
         // Entferne alle Benutzerdaten aus localStorage
         localStorage.removeItem("uid");

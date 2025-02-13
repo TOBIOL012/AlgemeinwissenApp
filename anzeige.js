@@ -1,15 +1,17 @@
-
 function showGlobalModal(title, text, imageUrl, callback) {
-    console.log("hallo neger");
+    console.log("Modal wird angezeigt");
     // Existierendes Modal entfernen, falls vorhanden
     const existingModal = document.getElementById("global-modal");
     if (existingModal) existingModal.remove();
 
     // Hintergrund abdunkeln
     const overlay = document.createElement("div");
+
+    
+    console.log("uwu");
+    
     overlay.id = "global-overlay";
     overlay.classList.add("global-overlay");
-
     // Modal erstellen
     const modal = document.createElement("div");
     modal.id = "global-modal";
@@ -74,3 +76,7 @@ function showGlobalModal(title, text, imageUrl, callback) {
     document.body.appendChild(overlay);
     document.body.appendChild(modal);
 }
+
+showGlobalModal("title", "text", "kreuz.png", () => {
+    console.log("callback");
+});
