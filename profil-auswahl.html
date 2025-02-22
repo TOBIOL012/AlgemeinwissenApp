@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allgemeinwissen Quiz App - Startseite</title>
-    <link rel="stylesheet" href="startseite.css">
-    <link rel="stylesheet" href="app.css">
-    <link rel="manifest" href="/manifest.json">
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
-    <script src="global.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allgemeinwissen Quiz App - Profil</title>
+  <link rel="stylesheet" href="profil-auswahl.css">
+  <link rel="stylesheet" href="Standart.css">
+  <link rel="prerender" href="profil.html">
+  <link rel="prefetch" href="profil.js">
+  <link rel="prefetch" href="profil.css">
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+  <!-- Inline-Skript, um das große Profilbild sofort zu setzen -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const profilbildGross = document.querySelector('.Profilbild-groß');
+      const storedProfile = localStorage.getItem("currentprofile"); // z. B. "isaac_newton.jpg"
+      if (profilbildGross && storedProfile) {
+        profilbildGross.src = `/Profilbilder/${storedProfile}`;
+      }
+    });
+  </script>
+  <script src="anzeige.js" defer></script>
+  <script src="profil-auswahl.js" defer></script>
+  <link rel="manifest" href="/manifest.json">
 </head>
-<body>
-    <h1>Profil Auswahl</h1>
-    <script src="main.js"></script>
+<body style="opacity: 0;">
+  <div id="spieler-container">
+    <div class="header">
+      <a class="pfeil">
+        <img src="pfeil.png" class="back-arrow" alt="weiter">
+      </a>
+    </div>
+  </div>
+  <div class="Profilbild-container">
+    <a href="profil-auswahl.html">
+      <img src="Profilbilder/Albert Einstein.png" alt="Profilbild" class="Profilbild-groß">
+    </a>
+  </div>
+  <div class="name" style="display: flex;">
+    <span id="username-display"></span>
+  </div>
+  <!-- Farbauswahl -->
+  <div class="farben">
+    <div class="farbe" data-color="#e25d5d" style="background-color: #e25d5d; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#e27a53" style="background-color: #e27a53; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#e2ca5d" style="background-color: #e2ca5d; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#abdd90" style="background-color: #abdd90; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#5da571" style="background-color: #5da571; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#5d8ee2" style="background-color: #5d8ee2; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#995de2" style="background-color: #995de2; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#de83da" style="background-color: #de83da; opacity: 0.5;"></div>
+    <div class="farbe" data-color="#a1dee5" style="background-color: #a1dee5; opacity: 0.5;"></div>
+  </div>
+  <!-- Profilbilderauswahl -->
+  <div class="profilbilder"></div>
 </body>
 </html>

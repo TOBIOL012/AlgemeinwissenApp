@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     function addNewInputField() {
-        console.log("oioioi");
         const inputContainer = document.createElement('div');
         inputContainer.classList.add('input-container');
     
@@ -143,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Funktion, um das mittige Element hervorzuheben
 function updateActiveItem() {
-    console.log("Item:"); // Debugging
     const containerCenter = pickerContainer.scrollLeft + pickerContainer.offsetWidth / 2;
 
     
@@ -151,7 +149,6 @@ function updateActiveItem() {
     
 
     pickerItems.forEach((item) => {
-        console.log("Item:", item); // Debugging
         const itemCenter = item.offsetLeft + item.offsetWidth / 2;
         const distance = Math.abs(containerCenter - itemCenter);
 
@@ -171,7 +168,6 @@ function updateActiveItem() {
     if (closestItem) {
         closestItem.classList.add("active");
         closestItem.style.color = "#cfcfcf"; // Neue Farbe für das aktive Element
-        console.log("Mittige Zahl:", closestItem.textContent); // Debugging
     }
 }
     // Überwache das Scroll-Event im Picker-Container
@@ -256,9 +252,7 @@ function updateActiveItem() {
             });
 
             if (allFilled) {
-                console.log('Players:', JSON.stringify(players));
                 localStorage.setItem('players', JSON.stringify(players));
-                console.log('local:', JSON.parse(localStorage.getItem('players')) || []);
                 localStorage.setItem('isMultiplayer', 'true');
                 window.location.href = 'kategorien-mehrspieler.html';
             } else {

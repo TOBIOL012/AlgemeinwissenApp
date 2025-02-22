@@ -7,9 +7,6 @@ function showGlobalModal(title, text, imageUrl, callback) {
     // Hintergrund abdunkeln
     const overlay = document.createElement("div");
 
-    
-    console.log("uwu");
-    
     overlay.id = "global-overlay";
     overlay.classList.add("global-overlay");
     // Modal erstellen
@@ -21,10 +18,11 @@ function showGlobalModal(title, text, imageUrl, callback) {
     const header = document.createElement("div");
     header.classList.add("global-modal-header");
 
-    const titleElem = document.createElement("h2");
+    const titleElem = document.createElement("a");
     titleElem.textContent = title;
 
-    const closeButton = document.createElement("span");
+    const closeButton = document.createElement("img");
+    closeButton.src = "kreuz.png";
     closeButton.innerHTML = "&times;";
     closeButton.classList.add("global-close");
     closeButton.onclick = function () {
@@ -40,17 +38,10 @@ function showGlobalModal(title, text, imageUrl, callback) {
     const content = document.createElement("div");
     content.classList.add("global-modal-content");
 
-    const textElem = document.createElement("p");
+    const textElem = document.createElement("a");
     textElem.textContent = text;
 
     content.appendChild(textElem);
-
-    if (imageUrl) {
-        const imgElem = document.createElement("img");
-        imgElem.src = imageUrl;
-        imgElem.classList.add("global-modal-image");
-        content.appendChild(imgElem);
-    }
 
     // Footer mit OK-Button
     const footer = document.createElement("div");
@@ -77,6 +68,5 @@ function showGlobalModal(title, text, imageUrl, callback) {
     document.body.appendChild(modal);
 }
 
-showGlobalModal("title", "text", "kreuz.png", () => {
-    console.log("callback");
-});
+window.showGlobalModal = showGlobalModal;
+

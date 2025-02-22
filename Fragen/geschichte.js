@@ -30,7 +30,7 @@ const geschichte = [
         },
         {
             "Kategorie": "Geschichte",
-            "Frage": "Welcher Dinosaurier war der größte Fleischfresser?", //JA... Der größte bekannte fleischfressende Dinosaurier ist Spinosaurus, nicht Tyrannosaurus rex.
+            "Frage": "Welcher Dinosaurier war der größte Fleischfresser?",
             "Antworten": ["Velociraptor", "Brachiosaurus", "Stegosaurus", "Spinosaurus"],
             "RichtigeAntwort": "Spinosaurus",
             "RichtigeAntwortMöglichkeiten": "Spinosaurus",
@@ -86,7 +86,7 @@ const geschichte = [
     
         { //Menschengeschichte
             "Kategorie": "Geschichte",
-            "Frage": "Wie nennt man das Zeitalter der Altsteinzeit?", //JA... Das Paläozoikum ist ein Abschnitt des Erdzeitalters, die Altsteinzeit gehört zur Ur- und Frühgeschichte und wird Paläolithikum genannt.
+            "Frage": "Wie nennt man das Zeitalter der Altsteinzeit?",
             "Antworten": ["Eisenzeit", "Paläozoikum", "Bronzezeit", "Paläolithikum"],
             "RichtigeAntwort": "Paläolithikum",
             "RichtigeAntwortMöglichkeiten": "Paläolithikum",
@@ -132,7 +132,7 @@ const geschichte = [
     
         { 
             "Kategorie": "Geschichte",
-            "Frage": "Welche Zivilisation entwickelte das erste Kalendersystem?", //JA... Die Sumerer im alten Mesopotamien entwickelten eines der ersten Kalendersysteme.
+            "Frage": "Welche Zivilisation entwickelte das erste Kalendersystem?",
             "Antworten": ["Ägypter", "Griechen", "Kelten", "Sumerer"],
             "RichtigeAntwort": "Sumerer",
             "RichtigeAntwortMöglichkeiten": "Sumerer Sumer mesopotamien irak",
@@ -141,10 +141,10 @@ const geschichte = [
         },
         { 
             "Kategorie": "Geschichte",
-            "Frage": "Wo entstand die Indus Zivilation?", //JA... Die Indus-Zivilisation erstreckte sich hauptsächlich über das moderne Pakistan sowie Teile von Nordwestindien und Ostafghanistan.
-            "Antworten": ["Mesopotamien", "Pakistan", "China", "Irak"],
-            "RichtigeAntwort": "Pakistan",
-            "RichtigeAntwortMöglichkeiten": "Indien Pakistan Nordwestindien nordindien nord-west-indien westindien",
+            "Frage": "Wo entstand die Indus Zivilation?",
+            "Antworten": ["Mesopotamien", "Pakistan/Indien", "China/Korea", "Irak"],
+            "RichtigeAntwort": "Pakistan/Indien",
+            "RichtigeAntwortMöglichkeiten": "Indien Pakistan Nordwestindien nordindien nord-west-indien westindien Pakistan/Indien Indien/Pakistan",
             "Schwierigkeitsgrad": "expert",
             "Fakt": "Die Indus-Zivilisation entstand etwa 3300 v. Chr. im heutigen Pakistan und Nordwestindien.",
         },
@@ -330,7 +330,7 @@ const geschichte = [
         },
         {
             "Kategorie": "Geschichte",
-            "Frage": "Wie nannte man die Handelstraße, die durch das gesamte Perserreich führte?", //JA... Die Straße, die durch das Perserreich führte, wird als "Königsweg" oder "Royal Road" bezeichnet, nicht "Königstraße".
+            "Frage": "Wie nannte man die Handelstraße, die durch das gesamte Perserreich führte?",
             "Antworten": ["Die Königstraße", "Die Seidenstraße", "Die Via Appia", "Die Perserstraße"],
             "RichtigeAntwort": "Die Königstraße",
             "RichtigeAntwortMöglichkeiten": "Königstraße, Königsstraße, Perser Königsstraße königsweg royal royal-road könig",
@@ -456,7 +456,7 @@ const geschichte = [
         },
         { 
             "Kategorie": "Geschichte",
-            "Frage": "Wer war der letzte Pharao?", //JA... Der letzte amtierende Pharao von Ägypten war Kleopatra VII.
+            "Frage": "Wer war der letzte Pharao?",
             "Antworten": ["Kleopatra", "Tutanchamun", "Ramses", "Gizeh"],
             "RichtigeAntwort": "Kleopatra",
             "RichtigeAntwortMöglichkeiten": "Kleopatra Cleopatra Kleopatra-VII",
@@ -490,15 +490,6 @@ const geschichte = [
             "Schwierigkeitsgrad": "expert",
             "Fakt": "Amenhotep IV., auch Echnaton, regierte Ägypten von 1353 bis 1336 v. Chr. als Pharao.",
         },
-        {
-            "Kategorie": "Geschichte",
-            "Frage": "Welcher Pharao war der erste, der den Titel 'Pharao' offiziell annahm?", //JA... Der Titel "Pharao" wurde erst in der Zeit des Neuen Reiches zur offiziellen Bezeichnung der ägyptischen Könige, und es gibt Hinweise darauf, dass Thutmosis III. den Titel als erster systematisch benutzte.
-            "Antworten": ["Ahmose I.", "Tutanchamun", "Amenhotep I.", "Thutmosis III."],
-            "RichtigeAntwort": "Thutmosis III.",
-            "RichtigeAntwortMöglichkeiten": "Thutmosis Thutmosis-III.",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Der erste Pharao, der den Titel Pharao offiziell trug, war Thutmosis III. um 1479 v. Chr.",
-        },
         { 
             "Kategorie": "Geschichte",
             "Frage": "Welcher Pharao ließ den monumentalen Obelisken in Karnak errichten?",
@@ -510,12 +501,12 @@ const geschichte = [
         },
         { 
             "Kategorie": "Geschichte",
-            "Frage": "Welcher Pharao ließ die Große Sphinx von Gizeh errichten?", //JA... Die Große Sphinx von Gizeh wird oft dem Pharao Chephren zugeschrieben, aber es gibt keine definitive historische Beweise, die bestätigen, dass er sie errichten ließ.
+            "Frage": "Welcher Pharao ließ die Große Sphinx von Gizeh errichten?", 
             "Antworten": ["Cheops", "Menkaure", "Djoser", "Chefren"],
             "RichtigeAntwort": "Chefren",
             "RichtigeAntwortMöglichkeiten": "Chefren",
             "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Die Große Sphinx von Gizeh wurde etwa 2500 v. Chr. während der 4. Dynastie errichtet.",
+            "Fakt": "Die Große Sphinx von Gizeh wurde etwa 2500 v. Chr. errichtet und wird dem Pharao Chephren zugeschrieben, was allerdings nicht historische Bewewiesen ist",
         },
         { 
             "Kategorie": "Geschichte",
@@ -555,7 +546,7 @@ const geschichte = [
         },
         { 
             "Kategorie": "Geschichte",
-            "Frage": "Welcher antike griechische Anführer leitete die Invasion von Persien?", //JA... Alexander der Große war kein "antiker griechischer Anführer" im Sinne eines Stadtstaates, sondern König von Makedonien, welches ein Königreich im Norden Griechenlands war.
+            "Frage": "Welcher antike Makedonische Anführer leitete die Invasion von Persien?", 
             "Antworten": ["Alexander der Große", "Perikles", "Leonidas", "Lysander"],
             "RichtigeAntwort": "Alexander der Große",
             "RichtigeAntwortMöglichkeiten": "Alexander der Große",
@@ -861,7 +852,7 @@ const geschichte = [
         },
         { 
             "Kategorie": "Geschichte",
-            "Frage": "Welcher Berg in Griechenland galt als der höchste und wurde als Sitz der Götter angesehen?", //JA... Der höchste Berg in Griechenland ist der Olymp, und er wurde in der Antike als Sitz der Götter angesehen. Der Fehler liegt im Namen des Berges, der korrekt "Olymp" und nicht "Olymp" sein sollte.
+            "Frage": "Welcher Berg in Griechenland galt als der höchste und wurde als Sitz der Götter angesehen?", 
             "Antworten": ["Olymp", "Parnass", "Taygetos", "Ida"],
             "RichtigeAntwort": "Olymp",
             "RichtigeAntwortMöglichkeiten": "Olymp",
@@ -922,15 +913,6 @@ const geschichte = [
             "Schwierigkeitsgrad": "extrem",
             "Fakt": "Die erste dokumentierte Demokratie entstand 508 v. Chr. in der griechischen Polis Athen.",
         },
-        {
-            "Kategorie": "Geschichte",
-            "Frage": "Wie heißt das berühmte Theater in Athen?", //JA... 
-            "Antworten": ["Epidaurus", "Kolosseum", "Odeon", "Gladiatorium"],
-            "RichtigeAntwort": "Epidaurus",
-            "RichtigeAntwortMöglichkeiten": "Epidaurus",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Das bekannteste antike Theater in Athen ist das Dionysostheater, erbaut im 6. Jahrhundert v. Chr.",
-        }, 
         {//Persien
             "Kategorie": "Geschichte",
             "Frage": "Wer war der persische König, der die zweite Invasion in Griechenland im Jahr 480 v. Chr. anführte?",
@@ -970,15 +952,6 @@ const geschichte = [
             "RichtigeAntwortMöglichkeiten": "Aeneas",
             "Schwierigkeitsgrad": "expert",
             "Fakt": "Aeneas, gemäß Vergil, gründete Lavinium nach seiner Flucht im 12. Jahrhundert v. Chr. aus Troja.",
-        },
-        {
-            "Kategorie": "Geschichte",
-            "Frage": "Welcher König führte die ersten Gladiatorenspiele ein?", //JA... 
-            "Antworten": ["Tarquinius Priscus", "Romulus", "Servius Tullius", "Ancus Marcius"],
-            "RichtigeAntwort": "Tarquinius Priscus",
-            "RichtigeAntwortMöglichkeiten": "Lucius Tarquinius Priscus",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Tarquinius Priscus regierte Rom als fünfter König von 616 bis 579 v. Chr.",
         },
         {
             "Kategorie": "Geschichte",
@@ -8137,7 +8110,7 @@ const geschichte = [
         },
         {
             "Kategorie": "Geschichte",
-            "Frage": "Welches Land erhielt 1956 seine Unabhängigkeit von Frankreich und Spanien?", //JA... Marokko erhielt seine Unabhängigkeit von Frankreich im Jahr 1956, aber die nördlichen Regionen standen unter spanischer Kontrolle, daher erlangte es von beiden Kolonialmächten die Unabhängigkeit.
+            "Frage": "Welches Land erhielt 1956 seine Unabhängigkeit von Frankreich und Spanien?",
             "Antworten": ["Marokko", "Tunesien", "Libyen", "Guinea"],
             "RichtigeAntwort": "Marokko",
             "RichtigeAntwortMöglichkeiten": "Marokko",

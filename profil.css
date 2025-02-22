@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
 html, body {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Verhindert horizontales und vertikales Scrollen */
+    overflow-x: hidden;
     font-family: "Dosis", sans-serif;
     background-color: #141F25;
     color: white;
@@ -13,7 +14,18 @@ html, body {
     flex-direction: column;
     align-items: center;
     position: relative; /* Für die absolute Positionierung des Back Arrows und des Settings Icons */
+    overflow-y: scroll;
 }
+
+.iframe1 , .iframe2, .iframe3, .iframe4 {
+    height: calc(100vh - 55vw - 5rem - 4px); /* Container-Höhe bleibt 500px */
+    overflow: hidden; /* Alles, was über den Rand hinausgeht, wird abgeschnitten */
+}
+
+
+
+
+
 
 .settings-icon {
     position: absolute;
@@ -35,11 +47,13 @@ body {
 }
 
 
+
 .Profilbild-container {
+    margin-top: min(0, 10vh);
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 5%;
+    padding-top: 5%;
     border-bottom: 3px solid #2f4957;
 }
 
@@ -72,7 +86,7 @@ body {
 }
 
 .name{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     width: 90%;
     padding-top: 12px;
     text-align: left;
@@ -94,22 +108,16 @@ body {
     display: inline-flex;
     align-items: right;
     justify-content: center;
-    margin-left: 10px; /* Abstand zum Benutzernamen */
-    border: 3px solid #2f4957;
-    border-radius: 10px;
     padding: 5px;
     cursor: pointer;
+    border: none;
     background-color: #141F25;
     transition: all 0.3s ease;
 }
 
 .share-button img {
-    width:25px;
-    height: 25px;
-}
-
-.share-button:hover {
-    background-color: #e48d45;
+    width: 30px;
+    height: 30px;
 }
 
 .username-container {
@@ -232,6 +240,7 @@ body {
     padding: 1em 0;
     padding-bottom: 2em;
     border-top: 3px solid #2f4957;
+    left:0;
 }
 
 .nav-button {
@@ -248,10 +257,6 @@ body {
     width: 2.3em;
     height: 2.3em;
     color: white;
-}
-
-.nav-button:hover {
-    background-color: #e48d45;
 }
 
 
@@ -319,10 +324,16 @@ body {
 
 
 
+.iframe4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 .Statistik-Container {
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     width: calc(90% + 3px);
 }
 
@@ -345,7 +356,6 @@ body {
     width: 100%;
     height: 1.8rem;
     border-radius: 6px;
-    background-color: #2f4957;
     margin-bottom:0.5rem
 }
 
@@ -390,4 +400,878 @@ body {
     width:100%;
     margin-top:4.5rem;
 }
+
+#profilOverlay{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Dosis", sans-serif;
+    background-color: #141F25;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Für die absolute Positionierung des Back Arrows und des Settings Icons */
+}
+
+a img{
+    height: 50vw;
+}
+
+.navigation{
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navigation img{
+    width: 1.75rem;
+}
+
+.iframe1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.beigetreten{
+    font-size:1rem;
+    color: #adc3cf;
+}
+
+.navigation1 .strich{
+    margin-top: 0.7rem;
+    height: 4px;
+    border-radius: 3px;
+    width: 4rem;
+    transition: left ease-in-out;
+    background-color: #476e83;
+    position: relative;
+    left: calc(12.5% - 2rem);
+    transition: width 0.15s ease, left 0.3s ease; /* Animation für width & left */
+}
+.navigation1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    padding-bottom: 0.7rem;
+}
+
+.iframe1, .iframe2, .iframe3, .iframe4 {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.iframe1{
+    transform: translateX(-50%);
+}
+
+.iframe2{
+    transform: translateX(50%);
+}
+
+.iframe3{
+    transform: translateX(150%);
+}
+
+.iframe4{
+    transform: translateX(250%);
+}
+
+.navigation1 {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+
+.iframe3 .streak-stats-container{
+    display:block;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    width: calc(33vw - 1.6rem);
+}   
+
+.iframe3 .streak-stats-container img{
+    width: 3rem;
+}
+
+.iframe3 .highest-streak-stats-container, .tage-stats-container {
+    display:block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    width: calc(40vw - 1.6rem);
+}
+
+.iframe3 .streak-stats-container, .iframe3 .highest-streak-stats-container {
+    margin-right: 6vw;
+}
+
+.iframe3 .streak-stats{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-top: 1.5rem;
+}
+
+.iframe3 .streak-stats-anzeige{
+    display:flex;
+    align-items: center;
+}
+
+.iframe3 #streakicon{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.iframe3 .streak-stats-text{
+    color:#a3bcc6;
+    font-size: 0.9rem;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 0.3rem;
+}
+
+#number{
+    font-size: 1.2rem;
+}
+
+.anzeige{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.kalendar{
+    padding: 0.5rem;
+    display:block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    width: calc(90% - 1rem - 6px);
+    margin-top: 2rem;
+    height: calc(100vh - 19rem - 7vw - 10px);
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.kalendar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+
+
+
+
+.month-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen den Elementen */
+    margin-top: 0.6rem;
+    color: white;
+}
+
+.month-calendar .days {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.month-calendar .day {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.month-calendar .day-row {
+    display: flex;
+    width: 100%;
+    background-color: #2f4957;
+    border-radius: 3rem;
+}
+
+.month {
+    background-color: #2f4957;
+    border-radius: 1.25rem;
+}
+
+.month-calendar .day div {
+    width: 14.29%;
+    border-radius: 3rem;
+    padding: 0.15rem;
+    font-size: 0.95em;
+    color: white;
+    width: 100%;
+}
+
+.month-calendar .day div.current-day {
+    background-color: #4f7d95;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.first {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(139, 69, 19, 0.8), rgba(190, 90, 40, 0.8)); /* Braun -> Dunkles Orange-Braun */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.second {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(190, 90, 40, 0.8), rgba(215, 110, 45, 0.8)); /* Dunkles Orange-Braun -> Warmes Orange */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.third {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(215, 110, 45, 0.8), rgba(235, 130, 50, 0.8)); /* Warmes Orange -> Sattes Orange */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.fourth {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(235, 130, 50, 0.8), rgba(245, 100, 40, 0.8)); /* Sattes Orange -> Kräftiges Orange-Rot */
+    color: white;
+    font-weight: bold;
+}
+
+.month-calendar .day div.streak-done.second.fifth {
+    border-radius: 0;
+    background: rgba(245, 100, 40, 0.8); /* Endstufe in Orange-Rot */
+    color: white;
+    font-weight: bold;
+}
+
+#end{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+}
+
+#start{
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+#start-end{
+    border-radius: 3rem !important;
+}
+
+#streak-freeze-start{
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+#streak-freeze-end{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+}
+
+#streak-freeze-start-end{
+    border-radius: 3rem !important;
+}
+
+.month-calendar .day #streak-freeze, .month-calendar .day #streak-freeze-start, .month-calendar .day #streak-freeze-end, .month-calendar .day #streak-freeze-start-end {
+    border-radius:0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    color: #2f4957;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 1; /* Text bleibt über dem Hintergrund */
+}
+
+.month-calendar .day #streak-freeze::before, .month-calendar .day #streak-freeze-start::before, .month-calendar .day #streak-freeze-end::before, .week-calendar .day #streak-freeze-start-end::before {
+    content: "";
+    position: absolute;
+    top: -35%; /* Falls es über den Rand hinausragen soll */
+    bottom: -35%;
+    left:10%;
+    right: 10%;
+    background-image: url('ice.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% auto;
+    transform: rotate(45deg); /* Hier kannst du den Winkel anpassen */
+    z-index: -1; /* Bild bleibt im Hintergrund */
+}
+
+.streak-all{
+    background-color: #141F25;
+    color: white;
+    text-align: left;
+    border-radius: 12px;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 8px;
+    padding-top: 0;
+}
+
+.newmonth{
+    background-color: #141F25;
+    width: 100%;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.iframe3 .streak-stats-number{
+    font-size: 2.5rem !important;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#spieler-container {
+    width: 100%;
+    padding-left: 10vw;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7%; /* Abstand zu den Input-Feldern */
+}
+
+.back-arrow {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 999;
+}
+
+.pfeil {
+    height: 2rem;
+    width: 2rem;
+}
+
+.Überschrift {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: var(--font-size-header);
+}
+
+.Statistik-Container {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Fragen-Anzeige {
+    width: 75vw;
+    height: 75vw;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.Kreis-Anzeige {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-chart {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* Startpunkt bei oben */
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #2f4957; /* Hintergrundfarbe */
+    stroke-width: 2.8;
+}
+
+.circle-beantwortet {
+    fill: none;
+    stroke: #55859f; /* Farbe der beantworteten Fragen */
+    stroke-width: 2.8;
+    stroke-dasharray: 0, 100; /* Initiale Länge */
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.circle-richtig {
+    fill: none;
+    stroke: #3cc967; /* Farbe der richtigen Antworten */
+    stroke-width: 2.8;
+    stroke-dasharray: 0, 100; /* Initiale Länge */
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+.fragen-text{
+    display: block;
+}
+#flex{
+    display: flex;
+}
+
+.fragen-gesamt-farbe{
+    width: 0.8rem;
+    height: 1.2rem;
+    background-color: #2f4957;
+    border-radius: 1rem;
+}
+
+.fragen-beantwortet-farbe{
+    width: 0.8rem;
+    height: 1.2rem;
+    background-color: #55859f;
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.fragen-richtig-farbe{
+    width: 0.8rem;
+    height: 1.2rem;
+    background-color: #3cc967;
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+#text{
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+.kategorien-Graph{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141F25;
+    padding-top: 0.5rem;
+    width: 82%;
+    padding-top: 2rem;
+    border-top: 1px solid #2f4957;
+    margin-top: 2rem;
+}
+
+#icon{
+    width: 1.6rem;
+    margin-top: 0.5rem;
+}
+
+#kategorie1{
+    width: 16.6667%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#balken{
+    height: 6rem;
+    width: 1.7rem;
+    background-color: #21333d;
+    border-top-left-radius: 0.4rem; /* Obere linke Ecke abrunden */
+    border-top-right-radius: 0.4rem;
+    display: flex;
+    flex-direction: column; /* Elemente werden vertikal gestapelt */
+    justify-content: flex-end;
+}
+
+#border{
+    border-top: 3px solid #2f4957;
+    width: 100%;
+}
+
+#richtig{
+    width: 1.7rem;
+    background-color: #21333d;
+    border-top-left-radius: 0.4rem; /* Obere linke Ecke abrunden */
+    border-top-right-radius: 0.4rem;
+    background: #3abb61;
+    transition: 0.5s ease;
+}
+
+#beantwortet{
+    width: 1.7rem;
+    background-color: #21333d;
+    border-top-left-radius: 0.4rem; /* Obere linke Ecke abrunden */
+    border-top-right-radius: 0.4rem;
+    background: #3f6174;
+    display: flex;
+    flex-direction: column; /* Elemente werden vertikal gestapelt */
+    justify-content: flex-end;
+    transition: 0.5s ease;
+}
+
+.Schwachpunkt{
+    width: auto;
+    padding:0.7rem;
+    border: 3px solid #2f4957;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    width: calc(82% - 1.4rem);
+    margin-bottom: 5rem;
+}
+
+
+.Ausrufezeichen{
+    width: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.difficulty-bar-container {
+    position: relative;
+    width: 82%;
+    height: 1.4rem;
+    border-radius: 15px;
+    border: 3px solid #2f4957;
+    overflow: visible; /* Ermöglicht das Hervorstehen des Balkens */
+}
+
+.overlay-bar {
+    position: absolute;
+    width: 8px; /* Sehr dünner Balken */
+    height: calc(100% + 4px); /* 2px oben und unten über den Rand hinausragend */
+    background-color: white;
+    border-radius: 4px;
+    top: -2px; /* Verschiebt den Balken nach oben */
+}
+
+.label {
+    margin-top: 0.2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+#label{
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2f4957;
+    width: 82%;
+    text-align: center;
+}
+
+.label{
+    font-size: 1.1rem;
+}
+
+.difficulty-bar-container .strich {
+    position: absolute;
+    top: 0;
+    width: 5px; /* Breite der Striche */
+    height: 100%; /* Striche über die ganze Höhe */
+    background-color: #2f4957; /* Farbe der Striche */
+    z-index: -10;
+}
+
+/* Platzierung der Striche */
+.strich-1 {
+    left: 20%; /* 1. Strich */
+}
+
+.strich-2 {
+    left: 40%; /* 2. Strich */
+}
+
+.strich-3 {
+    left: 60%; /* 3. Strich */
+}
+
+.strich-4 {
+    left: 80%; /* 4. Strich */
+}
+
+.iframe4 .streak-stats-container, .highest-streak-stats-container{
+    display:block;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    width: calc(33vw - 1.6rem);
+}
+
+.iframe4 .streak-stats-container{
+    margin-right: 6vw;
+}
+
+.iframe4 .streak-stats{
+    display: flex;
+    align-items: left;
+    padding-top: 2rem;
+    border-top: 1px solid #2f4957;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2f4957;
+}
+
+.iframe4 .streak-stats-anzeige{
+    display:flex;
+    align-items: center;
+}
+
+.iframe4 #streakicon{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.iframe4 .streak-stats-text{
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 0.3rem;
+}
+
+#number{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+.title {
+    margin-bottom: 20px;
+}
+
+.graph-container {
+    width: 98%;
+    max-width: 600px;
+    position: relative;
+    touch-action: pan-x; /* Ermöglicht horizontales Swipen */
+}
+
+.week-label {
+    font-size: 1.2em;
+    margin: 10px;
+    display: flex;
+}
+
+/* Tooltip */
+.toggle-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2f4957;
+    border-radius: 10px 10px 0 0; /* Nur oben abgerundet */
+    padding: 4px;
+    width: 160px;
+    padding-bottom:1px;
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    color: white;
+    background: transparent;
+}
+
+.toggle-button.active {
+    background: #577da0;
+}
+
+/* Tooltip */
+.custom-tooltip {
+    position: absolute;
+    background: rgba(100, 100, 100, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    display: none;
+}
+#dot {
+    border-radius: 5px;
+    width: 8px;
+    height: 8px;
+    background: #55595f;
+}
+.dot1 ,.dot2 , .dot3, .dot4, .dot5, .dot6{
+    margin-right: 4px;
+}
+
+.xp-pfad {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141F25;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #2f4957;
+    border-radius: 15px;
+    padding: 0.8rem 0.3rem;
+    padding-bottom:0rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    width: calc(82% - 0.6rem);
+}
+
+
+
+#xp-container {
+    display: block;
+    margin: auto;
+}
+
+.xp-line {
+    stroke: #2F4957;
+    stroke-width: 20px;
+    fill: transparent;
+    stroke-linecap: round;
+}
+
+.xp-progress {
+    stroke: #E48D45;
+    stroke-width: 20px;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 10000;
+    transition: stroke-dasharray 1.5s ease;
+}
+
+
+
+.checkpoint {
+    opacity: 1;
+    fill: #141F25;
+    stroke: #2F4957;
+    stroke-width: 4px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.checkpoint.active {
+    stroke: #E48D45;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.checkpoint.collected {
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Start-Checkpoint */
+.start-checkpoint {
+    fill: #141F25;
+    stroke: #E48D45;
+    stroke-width: 9px;
+    width: 38px;
+    height: 38px;
+    rx: 16px;
+    ry: 16px;
+}
+
+/* Ready = Noch nicht genug XP → Deaktiviert */
+.checkpoint.ready {
+    pointer-events: none;
+}
+
+
+
+/* Anpassung für exakte Ausrichtung */
+.checkpoint image {
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.reward-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E48D45;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
