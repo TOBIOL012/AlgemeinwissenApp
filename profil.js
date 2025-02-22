@@ -1,4 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
+
+    const snapshot = sessionStorage.getItem("profilSnapshot");
+    if (snapshot) {
+      const overlay = document.createElement("div");
+      overlay.id = "profilOverlay";
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.zIndex = "9999";
+      // Der Snapshot enthält jetzt den gesamten HTML-Zustand inkl. Inline-Styles (auch des Bodys)
+      overlay.innerHTML = snapshot;
+      document.body.appendChild(overlay);
+    }
+
+  
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
@@ -79,25 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Benutzerstatus prüfen und Daten synchronisieren
     const savedUID = localStorage.getItem("uid");
-    window.onload = () => {
         const savedUsername = localStorage.getItem("username");
 
         if (savedUsername) {
             showUsername(savedUsername);
         }
-
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                if (!savedUID) {
-                    localStorage.setItem("uid", user.uid);
-                }
-                syncUserData(user.uid);
-            } else {
-                resetUI();
-                console.error("Benutzer nicht eingeloggt.");
-            }
-        });
-    };
 
     // Tabs wechseln
     tabLogin.addEventListener("click", () => {
@@ -174,7 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
             streakOnIce: 3, // Standardwert für "Streak auf Eis"
             creationDate, // Datum der Kontoerstellung
             streakHistory: [], // Initialer leerer Verlauf
-            xpHistory: []
+            xpHistory: [],
+            profilepictures: [Albert_Einstein],
+            currentprofile: Albert_Einstein.png,
+            profilecolor: 1,
         }).then(() => {
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);
@@ -184,35 +189,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Benutzer und Statistiken synchronisieren
-    function syncUserData(uid) {
-        console.log("syncUserData gestartet für UID:", uid);
-    
-        if (!navigator.serviceWorker.controller) {
-            console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-            return;
-        }
-    
-        console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid });
-    
-        try {
-            navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
-            console.log("✅ Nachricht erfolgreich gesendet!");
-        } catch (error) {
-            console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
-        }
-    
+    let isEventListenerAdded = false;
+
+function syncUserData(uid) {
+    console.log("syncUserData gestartet für UID:", uid);
+
+    if (!navigator.serviceWorker.controller) {
+        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
+        return;
+    }
+
+    console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid });
+
+    try {
+        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
+        console.log("✅ Nachricht erfolgreich gesendet!");
+    } catch (error) {
+        console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
+    }
+
+    if (!isEventListenerAdded) {
         navigator.serviceWorker.addEventListener("message", (event) => {
             console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
-    
+
             if (event.data.type === "userDataUpdated") {
                 const data = event.data.data;
                 console.log("✅ Aktualisierte Benutzerdaten:", data);
-    
+
                 localStorage.setItem("username", data.username);
-                updateStats(data.coins, data.xp, data.streak, data.username, data.creationDate, data.streakHistory, data.streakOnIce);
+                updateStats(data.coins, data.xp, data.streak, data.username, data.creationDate, data.streakHistory, data.streakOnIce, data.currentprofile, data.creationDate, data.profilecolor);
             }
         });
+        isEventListenerAdded = true;
     }
+}
 
     // Benutzername und Share-Button anzeigen
     function showUsername(username) {
@@ -232,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Statistiken aktualisieren
-    function updateStats(coins, xp, streak, username, creationDate, streakHistory, streakOnIce) {
+    function updateStats(coins, xp, streak, username, creationDate, streakHistory, streakOnIce,currentprofile, beigetreten, color) {
         console.log("updateStats aufgerufen mit Daten:");
         console.log("Coins:", coins, "XP:", xp, "Streak:", streak, "Username:", username, "Creation Date:", creationDate, "Streak History:", streakHistory, "Streak On Ice:", streakOnIce);
 
@@ -240,11 +250,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const xpDisplay = document.querySelector("#xp-total");
         const streakDisplay = document.querySelector(".streak-text");
         const usernameDisplay = document.querySelector("#username-display");
+        const beigetretenDisplay = document.querySelector(".beigetreten");
+
+        
+        const profilbildGross = document.querySelector('.Profilbild-groß');
+        const color1 = document.querySelector('.Profilbild-container');
+        profilbildGross.src = `/Profilbilder/${currentprofile}`;
+        color1.style.background = color;
+        console.log(currentprofile);
+        
 
         if (coinsDisplay) coinsDisplay.textContent = coins;
         if (xpDisplay) xpDisplay.textContent = xp;
         if (streakDisplay) streakDisplay.textContent = streak;
         if (usernameDisplay) usernameDisplay.textContent = username;
+        if (beigetretenDisplay) beigetretenDisplay.textContent = `Beigetreten: ${beigetreten}`;
+        console.log("currentprofile");
+        const overlay = document.getElementById("profilOverlay");
+        if (overlay) {
+            overlay.remove();
+            sessionStorage.removeItem("profilSnapshot");
+        }
+        document.body.style.opacity = "1";
     }
 
     // Fehler behandeln
@@ -277,8 +304,10 @@ document.addEventListener("DOMContentLoaded", () => {
         syncUserData(savedUID);
     } else {
         console.warn("Keine UID im LocalStorage gefunden.");
+        userDetails.style.display = "block";
+        nameDisplay.style.display = "none";
+        usernameDisplay.style.display = "none";
     }
-});
 
 
 
@@ -332,6 +361,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } else {
         console.error("Keine Benutzer-UID gefunden.");
+        const overlay = document.getElementById("profilOverlay");
+        if (overlay) {
+            overlay.remove();
+            sessionStorage.removeItem("profilSnapshot");
+        }
+        document.body.style.opacity = "1";
     }
 
     if (xpContainer) {
@@ -339,6 +374,208 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = 'xp-pfad.html';
         });
     }
+});
+
+let strichvoher = 1;
+let strichvoher2 = 1;
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+
+function updateIndicator(nummer) {
+    const strich = document.querySelector(".strich");
+    const positions = ["12.5%", "37.5%", "62.5%", "87.5%"];
+    strich.style.left = `calc(${positions[nummer - 1]} - 2rem)`;
+    strichvoher = nummer;
+}
+
+function navigate(nummer, duration = 200) {
+    const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
+    strichvoher2 = nummer;
+    iframes.forEach(iframe => {
+        iframe.style.transition = `transform ${duration}ms ease-in-out`;
+    });
+
+    iframes.forEach((iframe, index) => {
+        iframe.style.transform = `translateX(${(index - nummer + 1) * 100 - 50}%)`;
+    });
+
+    if(nummer == 1){
+        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+            el.style.height = "calc(100vh - 55vw - 4.3rem - 4px)";
+            el.style.overflow = "hidden";
+        });
+    } else if(nummer == 2){
+        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+            el.style.height = "auto";
+            el.style.overflow = "auto";
+        });
+    } else if(nummer == 3){
+        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+            el.style.height = "100vh";
+            el.style.overflow = "hidden";
+        });
+    } else if(nummer == 4){
+        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+            el.style.height = "calc(75vw + 34rem + 600px - 55vw - 4.3rem - 4px)";
+            el.style.overflow = "hidden";
+        });
+    }
+
+    // Nach der Navigation: Alle iframes auf display flex setzen
+    setTimeout(() => {
+        iframes.forEach((iframe) => {
+            console.log("uwu");
+            iframe.style.opacity = "1";
+        });
+    }, 100);
+}
+
+document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((iframe, index) => {
+    iframe.addEventListener('touchstart', event => {
+        isDragging = true;
+        startX = event.touches[0].clientX;
+        currentX = startX;
+        iframe.style.transition = 'none'; // Disable transition during drag
+        const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
+        iframes.forEach(iframe => {
+            iframe.style.transition = 'none';
+        });
+    });
+
+    // Hier: Live-Update des transform für ALLE iframes beim Scrollen
+    iframe.addEventListener('touchmove', event => {
+        if (isDragging) {
+            currentX = event.touches[0].clientX;
+            const deltaX = currentX - startX;
+            if (!isDragging) return;
+
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            window.scrollTo(-100, -100);
+            if (document.body.scrollTop / window.innerHeight * 100 < 5) {
+            document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
+                const baseTranslate = (idx - strichvoher + 1) * 100;
+                if (idx === 0) {
+                    frame.style.transform = `translateX(clamp(-200%, calc(${deltaX}px + ${baseTranslate - 50}%), -50%))`;
+                } else if (idx === 1) {
+                    frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
+                } else if (idx === 2) {
+                    frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
+                } else {
+                    frame.style.transform = `translateX(clamp(-50%, calc(${deltaX}px + ${baseTranslate - 50}%), 200%))`;
+                }
+            });
+            
+        } else{
+            navigate(strichvoher2);
+        }
+        }
+    });
+
+    
+
+
+    iframe.addEventListener('touchend', (event) => {
+        // Prüfen, ob das Touch-Event innerhalb von .xp-pfad passiert ist
+        const touchedElement = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
+        
+        if (touchedElement && touchedElement.closest('.xp-pfad')) {
+            return; // Falls .xp-pfad berührt wurde, nichts tun
+        }
+    
+        isDragging = false;
+        const deltaX = currentX - startX;
+        const threshold = window.innerWidth / 4; // Threshold for swipe
+    
+        // Bestimme die nächste Position basierend auf der Swipe-Richtung
+        if (deltaX < -threshold && strichvoher < 4) {
+            navigate(strichvoher + 1);
+            updateIndicator(strichvoher + 1);
+        } else if (deltaX > threshold && strichvoher > 1) {
+            navigate(strichvoher - 1);
+            updateIndicator(strichvoher - 1);
+        } else {
+            // Zurück zur ursprünglichen Position
+            navigate(strichvoher);
+        }
+    });
+});
+
+// Handle navigation button clicks to update the indicator only
+document.querySelectorAll('.navigation img').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        updateIndicator(index + 1);
+    });
+});
+
+
+
+
+
+
+function cloneWithInlineStyles(element) {
+    const clone = element.cloneNode(true);
+
+    function copyComputedStyle(src, dest) {
+        const computed = window.getComputedStyle(src);
+        for (let i = 0; i < computed.length; i++) {
+            const key = computed[i];
+            dest.style.setProperty(key, computed.getPropertyValue(key), computed.getPropertyPriority(key));
+        }
+
+        // Pseudo-Elemente (::before und ::after) kopieren
+        ['::before', '::after'].forEach(pseudo => {
+            const pseudoStyle = window.getComputedStyle(src, pseudo);
+            let cssText = "";
+
+            for (let i = 0; i < pseudoStyle.length; i++) {
+                const prop = pseudoStyle[i];
+                cssText += `${prop}: ${pseudoStyle.getPropertyValue(prop)}; `;
+            }
+
+            if (cssText.trim() !== "") {
+                // Sicherstellen, dass das Ziel eine eindeutige Klasse hat
+                if (!dest.classList.contains("clonedInline")) {
+                    dest.classList.add("clonedInline");
+                }
+
+                // Korrekte Klassennamen verwenden
+                const classNames = [...dest.classList].map(cls => `.${cls}`).join("");
+
+                // Prüfen, ob ein <style>-Element bereits existiert
+                let existingStyle = dest.querySelector("style");
+                if (!existingStyle) {
+                    existingStyle = document.createElement("style");
+                    dest.appendChild(existingStyle);
+                }
+
+                existingStyle.textContent = `${classNames}${pseudo} { ${cssText} }`;
+            }
+        });
+    }
+
+    function traverse(src, dest) {
+        if (!src || !dest) return;
+
+        copyComputedStyle(src, dest);
+
+        for (let i = 0; i < src.children.length; i++) {
+            if (dest.children[i]) {
+                traverse(src.children[i], dest.children[i]);
+            }
+        }
+    }
+
+    traverse(element, clone);
+    return clone;
+}
+
+document.querySelector('.Profilbild-container').addEventListener('click', function () {
+    const clone = cloneWithInlineStyles(document.body);
+  const snapshot = clone.outerHTML;
+  sessionStorage.setItem("profilSnapshot", snapshot);
+  // Weiterleitung zur nächsten Seite
+  window.location.href = "profil-auswahl.html";
 });
 
 

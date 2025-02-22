@@ -8,51 +8,9 @@
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Firebase-Konfiguration
-            const firebaseConfig = {
-                apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
-                authDomain: "besserwisser-95b63.firebaseapp.com",
-                projectId: "besserwisser-95b63",
-                storageBucket: "besserwisser-95b63.appspot.com",
-                messagingSenderId: "522066225262",
-                appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
-                measurementId: "G-P8SBRHWS84",
-            };
-
-            // Firebase initialisieren (nur, wenn es noch nicht initialisiert wurde)
-            if (!firebase.apps.length) {
-                firebase.initializeApp(firebaseConfig);
-            }
-
-            const auth = firebase.auth();
-
-            const logoutButton = document.getElementById("logout-button");
-
-            logoutButton.addEventListener("click", () => {
-                // Entferne alle Benutzerdaten aus localStorage
-                localStorage.removeItem("uid");
-                localStorage.removeItem("username");
-                localStorage.removeItem("lastCoins");
-                localStorage.removeItem("lastXp");
-                localStorage.removeItem("lastStreak");
-
-                // Firebase-Logout
-                auth.signOut().then(() => {
-                    console.log("Benutzer erfolgreich abgemeldet.");
-                }).catch((error) => {
-                    console.error("Fehler beim Abmelden:", error);
-                });
-            });
-        });
-    </script>
+    <script src="anzeige.js" defer></script>
+    <link rel="stylesheet" href="Standart.css">
 </head>
 <body>
-    <div class="logout-container">
-        <h1>Willkommen zurück!</h1>
-        <p>Möchten Sie sich wirklich ausloggen?</p>
-        <button id="logout-button">Ausloggen</button>
-    </div>
 </body>
 </html>

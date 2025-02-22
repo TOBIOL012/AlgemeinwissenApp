@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonsAndLinks = document.querySelectorAll("button, a");
     let isSettingsOpen = false;
 
+
     // WebP Animationsteuerung
     const setWebPFrame = (frame) => {
         const paddedFrame = String(frame).padStart(3, '0'); // Frames mit führenden Nullen formatieren
@@ -107,18 +108,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     logoutButton.addEventListener("click", () => {
 
+        window.meineFunktion = function() { console.log("Globale Funktion!"); };
         // Entferne alle Benutzerdaten aus localStorage
-        localStorage.removeItem("uid");
-        localStorage.removeItem("username");
-        localStorage.removeItem("lastCoins");
-        localStorage.removeItem("lastXp");
-        localStorage.removeItem("lastStreak");
+        showGlobalModal("Wirklich Ausloggen", "Beim Ausloggen werden Statistiken und Gemachte Fehler gelöscht. Du kannst sie nicht wiederrufen.", "kreuz.png", (result) => {
+            if (result === "ok") {
+            localStorage.removeItem("uid");
+            localStorage.removeItem("username");
+            localStorage.removeItem("lastCoins");
+            localStorage.removeItem("lastXp");
+            localStorage.removeItem("lastStreak");
 
-        // Firebase-Logout
-        auth.signOut().then(() => {
-            console.log("Benutzer erfolgreich abgemeldet.");
-        }).catch((error) => {
-            console.error("Fehler beim Abmelden:", error);
+            // Firebase-Logout
+            auth.signOut().then(() => {
+                console.log("Benutzer erfolgreich abgemeldet.");
+            }).catch((error) => {
+                console.error("Fehler beim Abmelden:", error);
+            });
+            }
         });
     });
 });

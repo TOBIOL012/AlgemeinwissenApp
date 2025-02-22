@@ -79,6 +79,7 @@ header {
     height: 75vw;
     position: relative;
     margin: 0 auto;
+    margin-bottom: 1.5rem;
 }
 
 .Kreis-Anzeige {
@@ -167,7 +168,9 @@ header {
     background-color: #141F25;
     padding-top: 0.5rem;
     width: 82%;
-    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2f4957;
+    margin-top: 2rem;
 }
 
 #icon{
@@ -267,6 +270,10 @@ header {
 #label{
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2f4957;
+    width: 82%;
+    text-align: center;
 }
 
 .label{
@@ -320,7 +327,10 @@ header {
 .streak-stats{
     display: flex;
     align-items: left;
-    margin-top: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2f4957;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2f4957;
 }
 
 .streak-stats-anzeige{
@@ -390,7 +400,7 @@ header {
 }
 
 .toggle-button.active {
-    background: #9f2fdf;
+    background: #577da0;
 }
 
 /* Tooltip */

@@ -31,7 +31,12 @@ function syncRankingData(uid) {
 
 function createPlayerElement(player, rank) {
     const playerDiv = document.createElement('div');
-    playerDiv.className = 'spieler';
+    console.log("🔢 Rang:", userRank);
+    if (rank === userRank) {
+        playerDiv.className = 'ich';
+    } else {
+        playerDiv.className = 'spieler';
+    }
     if (rank === 0) {
         playerDiv.innerHTML = `<img class="spieler-platz-img" src="gold.png"></div>`;
     } else if (rank === 1) {
@@ -84,6 +89,57 @@ document.querySelector('.scroll-button').addEventListener('click', () => {
     } else {
         console.error("❌ Benutzer-Rang ist nicht definiert!");
     }
+});
+
+function cloneWithInlineStyles(element) {
+    const clone = element.cloneNode(true);
+  
+    function copyComputedStyle(src, dest) {
+      const computed = window.getComputedStyle(src);
+      for (let i = 0; i < computed.length; i++) {
+        const key = computed[i];
+        dest.style.setProperty(key, computed.getPropertyValue(key), computed.getPropertyPriority(key));
+      }
+      // Für ::before und ::after Pseudo-Elemente:
+      ['::before', '::after'].forEach(pseudo => {
+        const pseudoStyle = window.getComputedStyle(src, pseudo);
+        let cssText = "";
+        for (let i = 0; i < pseudoStyle.length; i++) {
+          const prop = pseudoStyle[i];
+          cssText += `${prop}: ${pseudoStyle.getPropertyValue(prop)}; `;
+        }
+        if (cssText.trim() !== "") {
+          // Stelle sicher, dass das Ziel eine eindeutige Klasse hat:
+          if (!dest.classList.contains("clonedInline")) {
+            dest.classList.add("clonedInline");
+          }
+          // Füge ein <style>-Element ein, das die Pseudo-Regeln für dieses Element definiert:
+          const styleEl = document.createElement("style");
+          // Verwende die Klassen des Elements als Selektor:
+          styleEl.textContent = `.${dest.className.split(" ").join(".")}${pseudo} { ${cssText} }`;
+          dest.appendChild(styleEl);
+        }
+      });
+    }
+  
+    function traverse(src, dest) {
+      copyComputedStyle(src, dest);
+      for (let i = 0; i < src.children.length; i++) {
+        traverse(src.children[i], dest.children[i]);
+      }
+    }
+  
+    traverse(element, clone);
+    return clone;
+  }
+  
+
+  document.getElementById('profil').addEventListener('click', function () {
+    const clone = cloneWithInlineStyles(document.body);
+    const snapshot = clone.outerHTML;
+    sessionStorage.setItem("profilSnapshot", snapshot);
+    // Weiterleitung zur nächsten Seite
+    window.location.href = "profil.html";
 });
 
 

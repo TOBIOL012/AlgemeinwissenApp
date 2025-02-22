@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Albert Einstein",
+      "datei": "Albert Einstein.png",
+      "preis": 500
+    },
+    {
+      "name": "Donald Trump",
+      "datei": "Donald Trump.png",
+      "preis": 600
+    },
+    {
+      "name": "Tutanchamun",
+      "datei": "Tutanchamun.png",
+      "preis": 700
+    }
+  ]

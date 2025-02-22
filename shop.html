@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <script src="shop.js" defer></script>
+</head>
+<body>
+
+    <header class="shop-header">
+        <h1>Shop</h1>
+        <div class="currency">
+            <span id="coins">301</span>
+            <img src="coin.png" alt="Münzen">
+        </div>
+    </header>
+
+    <section class="inventory">
+        <div class="inventory-item1">
+            <img src="streak.png" alt="Streak auf Eis">
+            <span id="streak-count">1/2</span>
+        </div>
+        <div class="inventory-item2">
+            <img src="streak.png" alt="Tokens">
+            <span id="token-count">10/200</span>
+        </div>
+    </section>
+
+    <section class="shop-items">
+        <div class="shop-item1" onclick="buyStreak()">
+            <span>1x</span>
+            <img src="streak.png" alt="Streak auf Eis">
+            <span class="price">200</span>
+            <img src="coin.png" alt="Münzen">
+        </div>
+        <div class="shop-item2" onclick="buyTokens()">
+            <span>10x</span>
+            <img src="streak.png" alt="Tokens">
+            <span class="price">200</span>
+            <img src="coin.png" alt="Münzen">
+        </div>
+    </section>
+
+    <section class="profile-picture-shop">
+        <h2>Profilbilder</h2>
+        <div class="profile-picture-container">
+            <div class="profile-picture-track">
+                <div class="profile-picture"><img src="avatar1.png" alt="Profilbild 1"></div>
+                <div class="profile-picture"><img src="avatar2.png" alt="Profilbild 2"></div>
+                <div class="profile-picture"><img src="avatar3.png" alt="Profilbild 3"></div>
+                <div class="profile-picture"><img src="avatar4.png" alt="Profilbild 4"></div>
+                <div class="profile-picture"><img src="avatar5.png" alt="Profilbild 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="nav-bar">
+        <a href="startseite.html" class="nav-button"><img src="icons8-home.svg" alt="Home"></a>
+        <a href="shop.html" class="nav-button"><img src="icons8-shop.svg" alt="Shop"></a>
+        <a href="profil.html" class="nav-button"><img src="Profilbildfake.png" alt="Profil"></a>
+    </nav>
+
+</body>
+</html>

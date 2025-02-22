@@ -1,5 +1,6 @@
-// Überprüfung und Definition der Funktion updateStatistics
-if (typeof updateStatistics !== 'function') {
+
+
+
     function updateStatistics() {
         let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
         let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
@@ -40,7 +41,7 @@ if (typeof updateStatistics !== 'function') {
 
     // Führe die Funktion beim Laden der Seite aus
     updateStatistics();
-}
+
 
 // Überprüfung und Definition der Funktion updateCategoryGraph
 if (typeof updateCategoryGraph !== 'function') {
@@ -215,23 +216,6 @@ function syncStreakDataFromServiceWorker() {
     }
 }
 
-navigator.serviceWorker.addEventListener("message", (event) => {
-    if (!event.data || !event.data.type) return;
-
-    if (event.data.type === "userDataUpdated") {
-        console.log("✅ Streak-Daten aktualisiert:", event.data.data);
-
-        const data = event.data.data;
-        const streakValue = data.streak || 0;
-        const highestStreakValue = data.higheststreak || 0;
-
-        localStorage.setItem("lastStreak", streakValue);
-        localStorage.setItem("lastHighestStreak", highestStreakValue);
-
-        document.querySelector(".streak-stats-number").textContent = streakValue;
-        document.querySelector(".highest-streak-stats-number").textContent = highestStreakValue;
-    }
-});
 
 syncStreakDataFromServiceWorker();
 
@@ -460,16 +444,16 @@ function updateChart() {
 }
 
 // **Swipen für Wochen/Monate**
-let startX = 0;
+let startXY = 0;
 document.querySelector('.graph-container').addEventListener('touchstart', (event) => {
-    startX = event.touches[0].clientX;
+    startXY = event.touches[0].clientX;
 });
 
 document.querySelector('.graph-container').addEventListener('touchend', (event) => {
     if (isAnimating) return;
 
     const endX = event.changedTouches[0].clientX;
-    const diff = startX - endX;
+    const diff = startXY - endX;
 
     if (Math.abs(diff) > 50) {
         if (diff > 0) {
