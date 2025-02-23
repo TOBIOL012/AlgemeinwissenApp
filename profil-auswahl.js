@@ -258,6 +258,19 @@ function updateColorDisplay() {
     console.log(selectedColor);
     container.style.backgroundColor = selectedColor;
   }
+  let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.setAttribute('name', 'theme-color');
+      document.head.appendChild(metaThemeColor);
+  }
+  metaThemeColor.setAttribute('content', selectedColor);
+
+  // Für Safari (iOS) - Hintergrundfarbe über Notch setzen
+  document.documentElement.style.setProperty('--status-bar-color', selectedColor);
+  
+  // Falls kein safe-area-Inset-Top verwendet wird, als Fallback
+  document.documentElement.style.backgroundColor = selectedColor;
 }
 
 // Fügt den Farbeingabe-Klick-Listener hinzu

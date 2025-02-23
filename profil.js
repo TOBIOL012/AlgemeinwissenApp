@@ -258,6 +258,20 @@ function syncUserData(uid) {
         profilbildGross.src = `/Profilbilder/${currentprofile}`;
         color1.style.background = color;
         console.log(currentprofile);
+
+        let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (!metaThemeColor) {
+            metaThemeColor = document.createElement('meta');
+            metaThemeColor.setAttribute('name', 'theme-color');
+            document.head.appendChild(metaThemeColor);
+        }
+        metaThemeColor.setAttribute('content', color);
+    
+        // Für Safari (iOS) - Hintergrundfarbe über Notch setzen
+        document.documentElement.style.setProperty('--status-bar-color', color);
+        
+        // Falls kein safe-area-Inset-Top verwendet wird, als Fallback
+        document.documentElement.style.backgroundColor = color;
         
 
         if (coinsDisplay) coinsDisplay.textContent = coins;
