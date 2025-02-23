@@ -446,12 +446,13 @@ document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((ifr
     // Hier: Live-Update des transform für ALLE iframes beim Scrollen
     iframe.addEventListener('touchmove', event => {
         if (isDragging) {
+            event.preventDefault();
             currentX = event.touches[0].clientX;
             const deltaX = currentX - startX;
             if (!isDragging) return;
 
             const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            window.scrollTo(-100, -100);
+            window.scrollTo(0, 0);
             if (document.body.scrollTop / window.innerHeight * 100 < 5) {
             document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
                 const baseTranslate = (idx - strichvoher + 1) * 100;
