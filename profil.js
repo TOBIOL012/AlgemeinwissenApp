@@ -418,7 +418,7 @@ function navigate(nummer, duration = 200) {
         });
     } else if(nummer == 4){
         document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-            el.style.height = "calc(75vw + 34rem + 600px - 55vw - 4.3rem - 4px)";
+            el.style.height = "100vh";
             el.style.overflow = "hidden";
         });
     }

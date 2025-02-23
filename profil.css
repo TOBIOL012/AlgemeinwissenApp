@@ -6,9 +6,6 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-y: auto; /* Nur vertikales Scrollen, wenn nötig */
-    touch-action: none;
-    -webkit-overflow-scrolling: touch; /* Sanftes Scrollen für iOS */
     overflow-x: hidden;
     font-family: "Dosis", sans-serif;
     background-color: #141F25;
@@ -16,7 +13,8 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: relative; /* Für die absolute Positionierung des Back Arrows und des Settings Icons */
+    overflow-y: scroll;
 }
 
 .iframe1 , .iframe2, .iframe3, .iframe4 {
@@ -331,6 +329,8 @@ body {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    z-index: 1;  /* Sollte nicht höher als andere sein */
+    pointer-events: auto;
 }
 
 .Statistik-Container {
