@@ -537,67 +537,45 @@ document.querySelectorAll('.navigation img').forEach((button, index) => {
 
 function cloneWithInlineStyles(element) {
     const clone = element.cloneNode(true);
+    const styles = {};
 
-    function copyComputedStyle(src, dest) {
+    function copyComputedStyle(src, dest, path) {
         const computed = window.getComputedStyle(src);
+        const styleObject = {};
+
         for (let i = 0; i < computed.length; i++) {
             const key = computed[i];
-            dest.style.setProperty(key, computed.getPropertyValue(key), computed.getPropertyPriority(key));
+            const value = computed.getPropertyValue(key);
+            if (value !== '') styleObject[key] = value; // Nur nicht-leere Werte speichern
         }
 
-        // Pseudo-Elemente (::before und ::after) kopieren
-        ['::before', '::after'].forEach(pseudo => {
-            const pseudoStyle = window.getComputedStyle(src, pseudo);
-            let cssText = "";
-
-            for (let i = 0; i < pseudoStyle.length; i++) {
-                const prop = pseudoStyle[i];
-                cssText += `${prop}: ${pseudoStyle.getPropertyValue(prop)}; `;
-            }
-
-            if (cssText.trim() !== "") {
-                // Sicherstellen, dass das Ziel eine eindeutige Klasse hat
-                if (!dest.classList.contains("clonedInline")) {
-                    dest.classList.add("clonedInline");
-                }
-
-                // Korrekte Klassennamen verwenden
-                const classNames = [...dest.classList].map(cls => `.${cls}`).join("");
-
-                // Prüfen, ob ein <style>-Element bereits existiert
-                let existingStyle = dest.querySelector("style");
-                if (!existingStyle) {
-                    existingStyle = document.createElement("style");
-                    dest.appendChild(existingStyle);
-                }
-
-                existingStyle.textContent = `${classNames}${pseudo} { ${cssText} }`;
-            }
-        });
+        if (Object.keys(styleObject).length > 0) {
+            styles[path] = styleObject;
+        }
     }
 
-    function traverse(src, dest) {
+    function traverse(src, dest, path = '') {
         if (!src || !dest) return;
-
-        copyComputedStyle(src, dest);
+        copyComputedStyle(src, dest, path);
 
         for (let i = 0; i < src.children.length; i++) {
-            if (dest.children[i]) {
-                traverse(src.children[i], dest.children[i]);
-            }
+            traverse(src.children[i], dest.children[i], `${path} > ${src.children[i].tagName.toLowerCase()}:nth-child(${i + 1})`);
         }
     }
 
     traverse(element, clone);
+
+    // Speicherplatzfreundliche Speicherung der CSS-Stile
+    sessionStorage.setItem("profilStyles", JSON.stringify(styles));
+    sessionStorage.setItem("profilHTML", clone.outerHTML);
+
     return clone;
 }
 
+// Klickevent mit weniger Speicherverbrauch
 document.querySelector('.Profilbild-container').addEventListener('click', function () {
-    const clone = cloneWithInlineStyles(document.body);
-  const snapshot = clone.outerHTML;
-  sessionStorage.setItem("profilSnapshot", snapshot);
-  // Weiterleitung zur nächsten Seite
-  window.location.href = "profil-auswahl.html";
+    cloneWithInlineStyles(document.querySelector('.Profilbild-container'));
+    window.location.href = "profil-auswahl.html";
 });
 
 
