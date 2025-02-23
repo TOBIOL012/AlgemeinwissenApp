@@ -379,6 +379,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let strichvoher = 1;
 let strichvoher2 = 1;
 let startX = 0;
+let startY = 0;
 let currentX = 0;
 let isDragging = false;
 
@@ -435,6 +436,7 @@ document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((ifr
     iframe.addEventListener('touchstart', event => {
         isDragging = true;
         startX = event.touches[0].clientX;
+        startY = event.touches[0].clientY;
         currentX = startX;
         iframe.style.transition = 'none'; // Disable transition during drag
         const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
@@ -445,15 +447,21 @@ document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((ifr
 
     // Hier: Live-Update des transform für ALLE iframes beim Scrollen
     iframe.addEventListener('touchmove', event => {
-        if (isDragging) {
-            event.preventDefault();
-            currentX = event.touches[0].clientX;
-            const deltaX = currentX - startX;
-            if (!isDragging) return;
+    if (isDragging) {
+        currentX = event.touches[0].clientX;
+        const deltaX = currentX - startX;
+        const deltaY = event.touches[0].clientY - startY; // Vertikale Bewegung
 
-            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            window.scrollTo(0, 0);
-            if (document.body.scrollTop / window.innerHeight * 100 < 5) {
+        // Nur verhindern, wenn die Bewegung eher horizontal als vertikal ist
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            event.preventDefault();
+        }
+
+        if (!isDragging) return;
+
+        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        
+        if (document.body.scrollTop / window.innerHeight * 100 < 5) {
             document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
                 const baseTranslate = (idx - strichvoher + 1) * 100;
                 if (idx === 0) {
@@ -466,12 +474,11 @@ document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((ifr
                     frame.style.transform = `translateX(clamp(-50%, calc(${deltaX}px + ${baseTranslate - 50}%), 200%))`;
                 }
             });
-            
-        } else{
+        } else {
             navigate(strichvoher2);
         }
-        }
-    });
+    }
+});
 
     
 
