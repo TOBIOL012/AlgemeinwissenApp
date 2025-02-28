@@ -139,8 +139,8 @@ button:active {
     top: 8px; /* Abstand von oben */
     right: -8px; /* Abstand von rechts */
     background-color: rgb(237, 73, 73); /* Hintergrundfarbe */
-    border-radius: 0.8rem; /* Rundung für den Punkt */
-    padding: 0 0.3rem; /* Seitenabstand */
+    border-radius: 1.5rem; /* Rundung für den Punkt */
+    padding: 0.2rem 0.5rem; /* Seitenabstand */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optionaler Schatten */
     color: white; /* Schriftfarbe */
     font-size: 1rem; /* Schriftgröße */

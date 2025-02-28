@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            window.location.href = 'kategorien.html';
+            window.location.href = 'Kategorien.html';
             return;
         }
     

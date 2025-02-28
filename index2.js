@@ -544,14 +544,14 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
         
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
-            parent.document.getElementById('main-iframe').src = 'belohnung.html';
+            window.location.href = 'belohnung.html';
             return;
         }
         
         const randomQuestion = getRandomQuestion();
         if (!randomQuestion) {
             alert('Keine Fragen für die ausgewählte Kategorie oder Schwierigkeit gefunden.');
-            parent.document.getElementById('main-iframe').src = 'kategorien.html';
+            window.location.href = 'kategorien.html';
             return;
         }
         

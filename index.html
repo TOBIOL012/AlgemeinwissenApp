@@ -18,6 +18,24 @@
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
     <script src="global.js" defer></script>
     <script src="main.js" defer></script>
+    <script>
+        document.addEventListener("deviceready", function() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => {
+                        console.log('✅ Service Worker registriert:', reg);
+                        if (navigator.serviceWorker.controller) {
+                            console.log('✅ Service Worker aktiv.');
+                        } else {
+                            console.warn('⚠️ Service Worker noch nicht aktiv.');
+                        }
+                    })
+                    .catch(error => console.error('❌ Fehler beim Registrieren des Service Workers:', error));
+            } else {
+                console.warn('❌ Service Worker werden in diesem Browser nicht unterstützt.');
+            }
+        });
+        </script>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="Standart.css">
