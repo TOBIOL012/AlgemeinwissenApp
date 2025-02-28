@@ -4,8 +4,10 @@ body {
     font-family: 'Dosis', sans-serif;
     background-color: #141F25;
     color: white;
-    font-family: "Dosis", sans-serif;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    padding-bottom: 0;
+    height: 100%;
+    margin: 0; /* Entfernt das Standard-Margin des Browsers */
 }
 
 /* Header */
@@ -13,10 +15,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-h1 {
+.title{
+    font-size: 3rem;
+    margin: 0px;
+}
+
+.shop-title {
     font-size: 2.8rem;
     margin: 0;
 }
@@ -33,116 +40,260 @@ h1 {
     margin-left: 8px;
 }
 
-/* Inventar */
+/* ✅ Neue Überschrift für das Inventar */
+.inventory-title {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+/* ✅ Inventar jetzt über die volle Breite */
 .inventory {
     display: flex;
-    align-items: left;
-    margin-bottom: 15px;
+    gap: 10px;
+    margin-bottom: 35px;
 }
 
+/* ✅ Inventar 1 links (Streak auf Eis) */
 .inventory-item1 {
+    flex: 1;
     display: flex;
     align-items: center;
     background-color: #141F25;
     border: 3px solid #1F2B36;
-    padding: 25px;
-    margin-right: 15px;
-    border-radius: 10px;
-}
-
-.inventory-item2 {
-    display: flex;
-    align-items: center;
-    background-color: #141F25;
-    border: 3px solid #1F2B36;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    justify-content: center;
 }
 
 .inventory-item1 img {
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
+    width: 36px;
+    height: 36px;
+    margin-right: 6px;
+}
+
+#streak-count {
+    font-size: 1.5rem;
+}
+
+/* ✅ Inventar 2 rechts (Tokens) */
+.inventory-item2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #141F25;
+    border: 3px solid #1F2B36;
+    padding: 10px 15px;
+    border-radius: 12px;
+    justify-content: center;
 }
 
 .inventory-item2 img {
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
+    width: 36px;
+    height: 36px;
+    margin-right: 6px;
+}
+
+#token-count {
+    font-size: 1.5rem;
 }
 
 /* Shop-Items */
 .shop-items {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    margin-bottom: 35px;
 }
 
+/* ✅ Überschrift für die Shop-Items */
+.shop-items-title {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* ✅ Shop-Item: Bessere Padding & Ausrichtung */
 .shop-item1 {
     display: flex;
     align-items: center;
-    background-color: #141F25;
-    border: 3px solid #1F2B36;
-    padding: 10px;
-    border-radius: 10px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+    background-color: #1F2B36;
+    border: 3px solid #2f4957;
+    padding: 15px 20px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .shop-item2 {
     display: flex;
     align-items: center;
-    background-color: #141F25;
-    border: 3px solid #1F2B36;
-    padding: 10px;
-    border-radius: 10px;
+    justify-content: space-between;
+    background-color: #1F2B36;
+    border: 3px solid #2f4957;
+    padding: 15px 20px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.shop-item1 img {
-    width: 32px;
-    height: 32px;
+/* Hover-Effekt für Shop-Items */
+.shop-item:hover {
+    background-color: #2a3a4a;
 }
 
-.shop-item2 img {
-    width: 32px;
-    height: 32px;
+/* Links: Gekauftes Item */
+.shop-item1 .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Rechts: Preis */
+.shop-item1 .right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1rem;
+}
+
+.right1 img {
+    width: 15px;
+    height: 15px;
+}
+
+.left1 img {
+    width: 30px;
+    height: 30px;
+}
+
+.left1, .left2 {
+    display: flex;
+    align-items: center; /* Zentriert die "1x" und "10x" mit den Icons */
+    gap: 8px; /* Optional: Abstand zwischen Text und Icon */
+}
+
+.einmal, .zehnmal {
+    font-size: 1.5rem;
+    line-height: 1; /* Verhindert, dass Text nach oben oder unten rutscht */
+}
+
+
+
+
+
+
+/* Links: Gekauftes Item */
+.shop-item2 .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2rem;
+}
+
+/* Rechts: Preis */
+.shop-item2 .right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1rem;
+}
+
+.right2 img {
+    width: 15px;
+    height: 15px;
+}
+
+.left2 img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+.profilbilder-title {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* ✅ Einheitliches Styling für alle Überschriften */
+.section-title {
+    margin-bottom: 8px;
+    margin-top: 25px;
+    font-size: 1.5rem;
 }
 
 .profile-picture-container {
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    padding-bottom: 10px;
+    -ms-overflow-style: none;  /* Für Internet Explorer & Edge */
+    scrollbar-width: none;  /* Für Firefox */
+    margin-left: -15px; /* Korrigiert das body-Padding links */
+    margin-right: -15px; /* Korrigiert das body-Padding rechts */
+    padding-left: 15px; /* Fügt den Abstand links wieder hinzu */
+    padding-right: 15px; /* Fügt den Abstand rechts wieder hinzu */
 }
 
+.profile-picture-container::-webkit-scrollbar {
+    display: none;  /* Scrollbar in Chrome & Safari ausblenden */
+}
+
+/* ✅ Der Track enthält jetzt korrekten Abstand */
 .profile-picture-track {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    padding-right: 15px; /* Abstand zum rechten Rand */
 }
 
 .profile-picture {
     background-color: #1F2B36;
-    padding: 8px;
-    border-radius: 10px;
+    border: 2px solid #2f4957;
+    padding: 4px;
+    border-radius: 12px;
 }
 
 .profile-picture img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
+
 
 /* Navigation */
 .nav-bar {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    background-color: #141F25;
     display: flex;
     justify-content: space-around;
-    background-color: #1F2B36;
-    padding: 10px;
+    padding: 1em 0;
+    padding-bottom: 2em; /* Falls nötig, für bessere Klickbarkeit */
+    border-top: 3px solid #2f4957;
+    z-index: 1000; /* Stellt sicher, dass sie nicht von anderen Elementen überdeckt wird */
+}
+
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
 .nav-button img {
-    width: 32px;
-    height: 32px;
+    width: 2.3rem;
+    height: 2.3rem;
 }

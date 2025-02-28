@@ -177,9 +177,10 @@
             creationDate, // Datum der Kontoerstellung
             streakHistory: [], // Initialer leerer Verlauf
             xpHistory: [],
-            profilepictures: [Albert_Einstein],
-            currentprofile: Albert_Einstein.png,
-            profilecolor: 1,
+            profilepictures: ["AlbertEinstein.png"],
+            currentprofile: "AlbertEinstein.png",
+            profilecolor: "#5d8ee2",
+            token: 0
         }).then(() => {
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);
@@ -390,145 +391,150 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-let strichvoher = 1;
-let strichvoher2 = 1;
-let startX = 0;
-let startY = 0;
-let currentX = 0;
-let isDragging = false;
 
-function updateIndicator(nummer) {
-    const strich = document.querySelector(".strich");
-    const positions = ["12.5%", "37.5%", "62.5%", "87.5%"];
-    strich.style.left = `calc(${positions[nummer - 1]} - 2rem)`;
-    strichvoher = nummer;
-}
+    let strichvoher = 1;
+    let strichvoher2 = 1;
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let isDragging = false;
 
-function navigate(nummer, duration = 200) {
-    const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
-    strichvoher2 = nummer;
-    iframes.forEach(iframe => {
-        iframe.style.transition = `transform ${duration}ms ease-in-out`;
-    });
-
-    iframes.forEach((iframe, index) => {
-        iframe.style.transform = `translateX(${(index - nummer + 1) * 100 - 50}%)`;
-    });
-
-    if(nummer == 1){
-        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-            el.style.height = "calc(100vh - 55vw - 4.3rem - 4px)";
-            el.style.overflow = "hidden";
-        });
-    } else if(nummer == 2){
-        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-            el.style.height = "auto";
-            el.style.overflow = "auto";
-        });
-    } else if(nummer == 3){
-        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-            el.style.height = "100vh";
-            el.style.overflow = "hidden";
-        });
-    } else if(nummer == 4){
-        document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-            el.style.height = "calc(105vw + 50rem)";
-            el.style.overflow = "hidden";
-        });
+    function updateIndicator(nummer) {
+        const strich = document.querySelector(".strich");
+        const positions = ["12.5%", "37.5%", "62.5%", "87.5%"];
+        strich.style.left = `calc(${positions[nummer - 1]} - 2rem)`;
+        strichvoher = nummer;
     }
 
-    // Nach der Navigation: Alle iframes auf display flex setzen
-    setTimeout(() => {
-        iframes.forEach((iframe) => {
-            console.log("uwu");
-            iframe.style.opacity = "1";
-        });
-    }, 100);
-}
-
-document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((iframe, index) => {
-    iframe.addEventListener('touchstart', event => {
-        isDragging = true;
-        startX = event.touches[0].clientX;
-        startY = event.touches[0].clientY;
-        currentX = startX;
-        iframe.style.transition = 'none'; // Disable transition during drag
+    function navigate(nummer, duration = 200) {
+        console.log("wat");
         const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
+        strichvoher2 = nummer;
         iframes.forEach(iframe => {
-            iframe.style.transition = 'none';
+            iframe.style.transition = `transform ${duration}ms ease-in-out`;
+        });
+
+        iframes.forEach((iframe, index) => {
+            iframe.style.transform = `translateX(${(index - nummer + 1) * 100 - 50}%)`;
+        });
+
+        if (nummer == 1) {
+            document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+                el.style.height = "calc(100vh - 55vw - 4.3rem - 4px)";
+                el.style.overflow = "hidden";
+            });
+        } else if (nummer == 2) {
+            updatexpbar();
+            document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+                el.style.height = "calc(100vh - 55vw - 4.3rem - 4px)";
+                el.style.overflow = "auto";
+            });
+        } else if (nummer == 3) {
+            document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+                el.style.height = "100vh";
+                el.style.overflow = "hidden";
+            });
+        } else if (nummer == 4) {
+            document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
+                el.style.height = "calc(105vw + 50rem)";
+                el.style.overflow = "hidden";
+            });
+        }
+
+        // Nach der Navigation: Alle iframes auf display flex setzen
+        setTimeout(() => {
+            iframes.forEach((iframe) => {
+                console.log("uwu");
+                iframe.style.opacity = "1";
+            });
+        }, 100);
+    }
+
+
+setTimeout(() => {
+    document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((iframe, index) => {
+        iframe.addEventListener('touchstart', event => {
+            isDragging = true;
+            startX = event.touches[0].clientX;
+            startY = event.touches[0].clientY;
+            currentX = startX;
+            iframe.style.transition = 'none'; // Disable transition during drag
+            const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
+            iframes.forEach(iframe => {
+                iframe.style.transition = 'none';
+            });
+        });
+
+        // Hier: Live-Update des transform für ALLE iframes beim Scrollen
+        iframe.addEventListener('touchmove', event => {
+            if (isDragging) {
+                currentX = event.touches[0].clientX;
+                const deltaX = currentX - startX;
+                const deltaY = event.touches[0].clientY - startY; // Vertikale Bewegung
+
+                // Nur verhindern, wenn die Bewegung eher horizontal als vertikal ist
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    event.preventDefault();
+                }
+
+                if (!isDragging) return;
+
+                const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                const element = document.querySelector(".iframe2");
+
+                if (document.body.scrollTop / window.innerHeight * 100 < 5) {
+                    document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
+                        const baseTranslate = (idx - strichvoher + 1) * 100;
+                        if (idx === 0) {
+                            frame.style.transform = `translateX(clamp(-200%, calc(${deltaX}px + ${baseTranslate - 50}%), -50%))`;
+                        } else if (idx === 1) {
+                            frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
+                        } else if (idx === 2) {
+                            frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
+                        } else {
+                            frame.style.transform = `translateX(clamp(-50%, calc(${deltaX}px + ${baseTranslate - 50}%), 200%))`;
+                        }
+                    });
+                } else {
+                    navigate(strichvoher2);
+                }
+            }
+        });
+
+        iframe.addEventListener('touchend', (event) => {
+            // Prüfen, ob das Touch-Event innerhalb von .xp-pfad passiert ist
+            const touchedElement = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
+
+            if (touchedElement && touchedElement.closest('.xp-pfad')) {
+                return; // Falls .xp-pfad berührt wurde, nichts tun
+            }
+
+            isDragging = false;
+            const deltaX = currentX - startX;
+            const threshold = window.innerWidth / 4; // Threshold for swipe
+
+            // Bestimme die nächste Position basierend auf der Swipe-Richtung
+            if (deltaX < -threshold && strichvoher < 4) {
+                navigate(strichvoher + 1);
+                updateIndicator(strichvoher + 1);
+            } else if (deltaX > threshold && strichvoher > 1) {
+                navigate(strichvoher - 1);
+                updateIndicator(strichvoher - 1);
+            } else {
+                // Zurück zur ursprünglichen Position
+                navigate(strichvoher);
+            }
         });
     });
 
-    // Hier: Live-Update des transform für ALLE iframes beim Scrollen
-    iframe.addEventListener('touchmove', event => {
-    if (isDragging) {
-        currentX = event.touches[0].clientX;
-        const deltaX = currentX - startX;
-        const deltaY = event.touches[0].clientY - startY; // Vertikale Bewegung
-
-        // Nur verhindern, wenn die Bewegung eher horizontal als vertikal ist
-        if (Math.abs(deltaX) > Math.abs(deltaY)) {
-            event.preventDefault();
-        }
-
-        if (!isDragging) return;
-
-        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-        
-        if (document.body.scrollTop / window.innerHeight * 100 < 5) {
-            document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
-                const baseTranslate = (idx - strichvoher + 1) * 100;
-                if (idx === 0) {
-                    frame.style.transform = `translateX(clamp(-200%, calc(${deltaX}px + ${baseTranslate - 50}%), -50%))`;
-                } else if (idx === 1) {
-                    frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
-                } else if (idx === 2) {
-                    frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
-                } else {
-                    frame.style.transform = `translateX(clamp(-50%, calc(${deltaX}px + ${baseTranslate - 50}%), 200%))`;
-                }
-            });
-        } else {
-            navigate(strichvoher2);
-        }
-    }
-});
-
-    
-
-
-    iframe.addEventListener('touchend', (event) => {
-        // Prüfen, ob das Touch-Event innerhalb von .xp-pfad passiert ist
-        const touchedElement = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
-        
-        if (touchedElement && touchedElement.closest('.xp-pfad')) {
-            return; // Falls .xp-pfad berührt wurde, nichts tun
-        }
-    
-        isDragging = false;
-        const deltaX = currentX - startX;
-        const threshold = window.innerWidth / 4; // Threshold for swipe
-    
-        // Bestimme die nächste Position basierend auf der Swipe-Richtung
-        if (deltaX < -threshold && strichvoher < 4) {
-            navigate(strichvoher + 1);
-            updateIndicator(strichvoher + 1);
-        } else if (deltaX > threshold && strichvoher > 1) {
-            navigate(strichvoher - 1);
-            updateIndicator(strichvoher - 1);
-        } else {
-            // Zurück zur ursprünglichen Position
-            navigate(strichvoher);
-        }
+    // Handle navigation button clicks to update the indicator only
+    document.querySelectorAll('.navigation img').forEach((button, index) => {
+        button.addEventListener('click', () => {
+            updateIndicator(index + 1);
+        });
     });
-});
 
-// Handle navigation button clicks to update the indicator only
-document.querySelectorAll('.navigation img').forEach((button, index) => {
-    button.addEventListener('click', () => {
-        updateIndicator(index + 1);
-    });
-});
+}, 300); // **Warte 0.1 Sekunden bevor der Code ausgeführt wird**
 
 
 

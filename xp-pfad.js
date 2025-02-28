@@ -54,10 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateXPProgress(xp, maxXP) {
         const progressLength = Math.min((xp / maxXP) * totalLength, totalLength);
         progressPath.style.strokeDasharray = `${progressLength}, ${totalLength}`;
-
+        progressPath.style.transition = "stroke-dasharray 1.5s ease";
+        localStorage.setItem("lastxp", xp);
+        console.log("sigma");
+    
         checkpoints.forEach(checkpoint => {
             let rewardData = JSON.parse(checkpoint.element.getAttribute("data-reward"));
-
+    
             // **Check ob die Fortschrittslinie den Checkpoint überschritten hat**
             if (progressLength >= checkpoint.position) {
                 checkpoint.element.classList.add("active");
@@ -69,19 +72,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    let xp = null;
+
     function fetchXP() {
+        const progressLength = Math.min((localStorage.getItem("lastxp") / 6000) * totalLength, totalLength);
+        progressPath.style.strokeDasharray = `${progressLength}, ${totalLength}`;
+        console.log(`uwu ${progressLength}, ${totalLength}`);
         const uid = localStorage.getItem('uid');
         if (!uid) return console.error("Keine Benutzer-UID gefunden.");
-        
+    
         firebase.firestore().collection("users").doc(uid).get().then(doc => {
             if (doc.exists) {
-                const xp = doc.data().xp || 0;
+                xp = doc.data().xp || 0;
                 const umgerechnetxp = berechneProzent(xp);
-                console.log(berechneProzent(xp));
-                updateXPProgress(berechneProzent(xp), 6000);
+    
+                // **Direkt zum umgerechneten XP-Wert scrollen**
+                const iframe2 = document.querySelector(".iframe2");
+                if (iframe2) {
+                    const totalHeight = Math.min((umgerechnetxp / 6000) * totalLength, totalLength);
+                    const scrollOffset = totalHeight - iframe2.offsetHeight / 2;
+                    iframe2.scrollTop = scrollOffset; // Setzt den Scroll-Offset direkt basierend auf umgerechnetxp
+                }
             }
         });
     }
+
+    window.updatexpbar = function() {
+        const umgerechnetxp = berechneProzent(xp);
+        updateXPProgress(umgerechnetxp, 6000);
+    };
+
+
 
     fetchXP();
 
@@ -184,3 +205,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000);
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const xpDisplay = document.getElementById("xp-display");
+
+    function animateXP(start, end, duration) {
+        let startTime = null;
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let progress = timestamp - startTime;
+            let current = Math.min(start + (end - start) * (progress / duration), end);
+            xpDisplay.textContent = Math.floor(current) + " XP";
+            if (current < end) {
+                requestAnimationFrame(step);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    function updateXPDisplay(newXP) {
+        let oldXP = parseInt(xpDisplay.textContent) || 0;
+        animateXP(oldXP, newXP, 2000); // Animation dauert 2 Sekunden
+    }
+
+    function fetchAndDisplayXP() {
+        const uid = localStorage.getItem('uid');
+        if (!uid) return console.error("Keine Benutzer-UID gefunden.");
+
+        firebase.firestore().collection("users").doc(uid).get().then(doc => {
+            if (doc.exists) {
+                let currentXP = doc.data().xp || 0;
+                updateXPDisplay(currentXP);
+            }
+        });
+    }
+
+    fetchAndDisplayXP();
+});
+
+
+
+

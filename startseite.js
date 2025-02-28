@@ -2,11 +2,31 @@
 const coinsElement = document.getElementById("coins-value");
 const xpElement = document.getElementById("xp-value");
 const streakElement = document.getElementById("streak-value");
+const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+const categoryErrors = incorrectQuestions.length;
+const dot = document.querySelector(".notification-dot");
+if (categoryErrors > 0) {
+    dot.textContent = categoryErrors;
+    dot.style.display = 'block'; // Punkt anzeigen
+} else {
+    dot.textContent = '';
+    dot.style.display = 'none'; // Punkt ausblenden
+}
 
 if ('serviceWorker' in navigator) {
+    // Normale Registrierung für Browser
     navigator.serviceWorker.register('service-worker.js')
         .then(reg => console.log('Service Worker registriert:', reg))
         .catch(err => console.error('Service Worker Fehler:', err));
+} else if (window.cordova && cordova.plugins && cordova.plugins.serviceWorker) {
+    // Registrierung für Cordova mit Plugin
+    document.addEventListener("deviceready", function () {
+        cordova.plugins.serviceWorker.register('service-worker.js')
+            .then(reg => console.log('Cordova Service Worker registriert:', reg))
+            .catch(err => console.error('Cordova Service Worker Fehler:', err));
+    });
+} else {
+    console.warn('Service Worker wird nicht unterstützt.');
 }
 
 // Lokale Werte laden
