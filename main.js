@@ -388,7 +388,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.next-button').addEventListener('click', loadQuestion);
     }
 
-    loadQuestion();
+    if (window.location.pathname.endsWith('index.html')) {
+        loadQuestion();
+    }
 
 });
 
