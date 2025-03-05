@@ -1,56 +1,30 @@
 let streakHistory = [1, 1, 1, 1, 1, 1, 1];
 const contentDiv = document.querySelector('.kalendar');
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('Service Worker registriert:', reg))
-        .catch(err => console.error('Service Worker Fehler:', err));
-}
 
-function syncStreakFromServiceWorker() {
-    if (!navigator.serviceWorker.controller) {
-        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-        return;
-    }
-
-    console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid: localStorage.getItem("uid") });
-
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid: localStorage.getItem("uid") });
-        console.log("✅ Nachricht erfolgreich gesendet!");
-    } catch (error) {
-        console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
-    }
-
-    navigator.serviceWorker.addEventListener("message", (event) => {
-        console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
-
-        if (event.data.type === "userDataUpdated") {
-            const data = event.data.data;
-            console.log("✅ Aktualisierte Benutzerdaten streak:", data.streakHistory);
-            streakHistory = data.streakHistory;
-
-            // Streak-Daten aktualisieren
-            document.querySelector(".streak-stats-number").textContent = data.streak || 0;
-            document.querySelector(".highest-streak-stats-number").textContent = data.higheststreak || 0;
-            document.querySelector(".tage-stats-number").textContent = streakHistory.filter(day => day === 1).length;
-
-            // Kalender aktualisieren
-            const contentDiv = document.querySelector(".kalendar");
-            contentDiv.innerHTML = `
-                <div class="streak-all">
-                    <p>${new Date(new Date().setDate(new Date().getDate() - streakHistory.length)).toLocaleString('default', { month: 'long' })}, ${new Date(new Date().setDate(new Date().getDate() - streakHistory.length)).getFullYear()}</p>
-                    ${generateMonthCalendar()}
-                </div>
-            `;
-
-            // Nach ganz unten scrollen
-            setTimeout(() => {
-                contentDiv.scrollTop = contentDiv.scrollHeight;
-            }, 0);
-        }
-    });
-}
+document.addEventListener("firebaseDataLoaded", function () {
+    const data = window.userData;
+    console.log("✅ Aktualisierte Benutzerdaten streak:", data.streakHistory);
+    streakHistory = window.userData.streakHistory;
+    
+    // Streak-Daten aktualisieren
+    document.querySelector(".streak-stats-number").textContent = window.userData.streak || 0;
+    document.querySelector(".highest-streak-stats-number").textContent = window.userData.higheststreak || 0;
+    document.querySelector(".tage-stats-number").textContent = streakHistory.filter(day => day === 1).length;
+    
+    // Kalender aktualisieren
+    contentDiv.innerHTML = `
+        <div class="streak-all">
+            <p>${new Date(new Date().setDate(new Date().getDate() - streakHistory.length)).toLocaleString('default', { month: 'long' })}, ${new Date(new Date().setDate(new Date().getDate() - streakHistory.length)).getFullYear()}</p>
+            ${generateMonthCalendar()}
+        </div>
+    `;
+    
+    // Nach ganz unten scrollen
+    setTimeout(() => {
+        contentDiv.scrollTop = contentDiv.scrollHeight;
+    }, 0);
+});
 
 function addDays(date, days) {
     const result = new Date(date);
@@ -206,8 +180,3 @@ function generateMonthCalendar() {
     return calendarHTML;
     
 }
-
-// Start synchronization
-document.addEventListener("DOMContentLoaded", () => {
-    syncStreakFromServiceWorker(); // Fetch data from the Service Worker
-});

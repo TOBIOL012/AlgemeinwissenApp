@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         measurementId: "G-P8SBRHWS84",
     };
 
-    const { increaseValue, decreaseValue, setValue, readData, extendStreak} = window;
+    const { increaseValue, readData, extendStreak} = window;
     
     // Firebase initialisieren
     const app = firebase.initializeApp(firebaseConfig);
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Berechnungen für Münzen und XP
     const correctCount = parseInt(localStorage.getItem('correctCount') || '0', 10);
     const earnedCoins = correctCount; // 1 Münze pro richtiger Frage
-    const earnedXP = 20 + (2 * correctCount); // 20 XP + 2 XP pro richtiger Frage
+    const earnedXP = 10 + (2 * correctCount); // 20 XP + 2 XP pro richtiger Frage
 
     const xpElement = document.getElementById('xp-total');
     const coinsElement = document.getElementById('coins-total');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Fortschrittsanzeige
-    const percentage = (correctCount / 20) * 100;
+    const percentage = Math.round((correctCount / 15) * 100);
     document.querySelector('.progress').style.width = `${percentage}%`;
     document.querySelector('.progress a').textContent = `${percentage}%`;
 

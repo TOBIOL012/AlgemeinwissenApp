@@ -2041,7 +2041,7 @@ const geschichte = [
             "Frage": "Welches berühmte Reich im Mittelalter war der Vorläufer des Heiligen Römischen Reiches?",
             "Antworten": ["Frankenreich", "Byzantinisches Reich", "Osmanisches Reich", "Weströmisches Reich"],
             "RichtigeAntwort": "Frankenreich",
-            "RichtigeAntwortMöglichkeiten": "Frankenreich frankenreich fränkisches franken fränkischesreich",
+            "RichtigeAntwortMöglichkeiten": "Frankenreich frankenreich fränkisches franken fränkischesreich Ostfränkischen Ostfränkisches ostfrankenreich ostfrankreich",
             "Schwierigkeitsgrad": "schwer",
             "Fakt": "Das Frankenreich, gegründet von Chlodwig I. im 5. Jahrhundert, wurde unter Karl dem Großen groß.",
         },

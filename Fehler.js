@@ -533,7 +533,7 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
                 }
                 questionAnswered = true;
                 const isMatch = this.textContent === randomQuestion.RichtigeAntwort;
-                updateStats(randomQuestion, isMatch);
+                updateStats(randomQuestion, isMatch);  
                 answers.forEach(btn => btn.disabled = true);
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
                     this.classList.add('correct-answer');

@@ -1,48 +1,94 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allgemeinwissen Quiz App - Mehrspieler</title>
-    <link rel="stylesheet" href="fragen-mehrspieler.css">
-    <link rel="stylesheet" href="Standart.css">
-    <script src="Fragen/geschichte.js" defer></script>
-    <script src="Fragen/geographie.js" defer></script>
-    <script src="Fragen/sport.js" defer></script>
-    <script src="Fragen/musik.js" defer></script>
-    <script src="Fragen/wissenschaft.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
-    <script src="Fragen/kunst.js" defer></script>
-    <script src="Fragen/question.js" defer></script>
-    <script src="fragen-mehrspieler.js" defer></script>
-    <link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Allgemeinwissen Quiz App - Mehrspieler</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+  <link rel="stylesheet" href="fragen-mehrspieler.css">
+  <link rel="stylesheet" href="Standart.css">
+  <script src="Fragen/geschichte.js" defer></script>
+  <script src="Fragen/geographie.js" defer></script>
+  <script src="Fragen/sport.js" defer></script>
+  <script src="Fragen/musik.js" defer></script>
+  <script src="Fragen/wissenschaft.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+  <script src="Fragen/kunst.js" defer></script>
+  <script src="Fragen/question.js" defer></script>
+  <script src="fragen-mehrspieler.js" defer></script>
+  <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-    <header>
-        <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
-        
-        <div class="player-info">
-            <div class="current-player"></div>
-            <div class="question-status"></div>
-        </div>
-        
-    </header>
-    <main>
-        <div class="category-difficulty">
-            <div class="category">
-                <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon">
-                <a class="category-text"></a>
-            </div>
-            <div class="difficulty">
-                <!-- Schwierigkeits-Blocks werden hier durch JS hinzugefügt -->
-            </div>
-        </div>
+  <header>
+    <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
+    <div class="player-info">
+      <div class="current-player"></div>
+      <div class="question-status"></div>
+    </div>
+  </header>
+  <main>
+    <div class="category-difficulty">
+      <div class="category">
+        <img src="icons8-world-48.png" alt="Geo-Icon" class="category-icon">
+        <!-- Für Auswahl-Modus -->
+        <span class="category-text"></span>
+        <!-- Für Eintipp-Modus -->
+        <span class="category-text2"></span>
+      </div>
+      <!-- Schwierigkeit-Blöcke für beide Modi -->
+      <div class="difficulty">
+        <!-- Hier werden im Auswahl-Modus die Blöcke per JS erzeugt -->
+      </div>
+      <div class="difficulty2">
+        <!-- Hier werden im Eintipp-Modus die Blöcke per JS erzeugt -->
+      </div>
+    </div>
 
+    <!-- Mehrspieler: Auswahl-Modus (für "leicht" & "mittel") -->
+    <div class="eintipp">
+
+        <div class="question-wrapper2">
+            <p class="question2">Frage wird geladen</p>
+            <div class="answer-typed2">
+                <div class="container2">
+                    <input type="text" class="text-input2" placeholder="Antwort" id="myInput2">
+                    <img class="kreuz2" src="kreuz.png" alt="Bild" id="clearImage2">
+                </div>
+                <button class="mic-button"><img src="icons8-microphone-32.png" alt="Mikrofon"></button>
+            </div>
+            <div class="bars-content2">
+            <div class="volume-bars2">
+                <div class="bar1" id="bar1"></div>
+                <div class="bar1" id="bar2"></div>
+                <div class="bar1" id="bar3"></div>
+                <div class="bar1" id="bar4"></div>
+                <div class="bar1" id="bar5"></div>
+                <div class="bar1" id="bar6"></div>
+                <div class="bar1" id="bar7"></div>
+            </div>  
+            </div>
+
+            <div class="next-button-background">
+                <button class="next-button" id="next-button">Weiter</button>
+            </div>
+            <div class="next-button-wrapper">
+                <div class="answer-box">
+                    <a class="correct-answer"></a>
+                </div>
+                <div class="fact-box">
+                    <p class="fact"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="auswahl">
         <div class="question-wrapper">
-            <p class="question">Frage wird geladen...</p>
+            <p class="question1">Frage wird geladen...</p>
             <div class="answers">
                 <button class="answer">Antwort1</button>
                 <button class="answer">Antwort2</button>
@@ -50,15 +96,16 @@
                 <button class="answer">Antwort4</button>
             </div>
         </div>
-
-        <div class="results">
-            <input type="text" class="note-input" placeholder="Fehler">
-            <div class="fact-box">
-                <p class="fact"></p>
+        <div class="results2">
+            <div class="fact-box2">
+                <p class="fact2"></p>
             </div>
-            <button class="next-button">Weiter</button>
+            <button class="next-button2" id="next-button2">Weiter</button>
         </div>
-        
-    </main>
+
+    
+
+    </div>
+  </main>
 </body>
 </html>

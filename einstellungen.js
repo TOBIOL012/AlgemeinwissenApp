@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const settingsIcon = document.querySelector(".settings-icon img");
     const einstellungen = document.querySelector(".einstellungen");
-    const allElements = document.querySelectorAll("body > *:not(.back-arrow-container):not(.einstellungen):not(.nav-bar)");
+    const allElements = document.querySelectorAll(".profil > *:not(.back-arrow-container):not(.einstellungen):not(.nav-bar)");
     const buttonsAndLinks = document.querySelectorAll("button, a");
     let isSettingsOpen = false;
 
@@ -87,20 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
-        authDomain: "besserwisser-95b63.firebaseapp.com",
-        projectId: "besserwisser-95b63",
-        storageBucket: "besserwisser-95b63.appspot.com",
-        messagingSenderId: "522066225262",
-        appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
-        measurementId: "G-P8SBRHWS84",
-    };
 
-    // Firebase initialisieren (nur, wenn es noch nicht initialisiert wurde)
-    if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-    }
+    
 
     const auth = firebase.auth();
 
@@ -124,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }).catch((error) => {
                 console.error("Fehler beim Abmelden:", error);
             });
+            window.location.reload();
             }
         });
     });
