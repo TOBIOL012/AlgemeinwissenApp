@@ -1,37 +1,13 @@
-let streakHistory = [1, 1, 1, 1, 1, 1, 1]; 
 
 const calendarDays = document.querySelectorAll('.day-row .day div');
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('Service Worker registriert:', reg))
-        .catch(err => console.error('Service Worker Fehler:', err));
-}
-
-function syncStreakFromServiceWorker() {
-    if (!navigator.serviceWorker.controller) {
-        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-        return;
+function syncStreakFromGlobal() {
+    if (window.userData && window.userData.streakHistory) {
+        streakHistory = window.userData.streakHistory;
+        console.log("✅ Aktualisierte Benutzerdaten streak (aus globalen Variablen):", streakHistory);
+    } else {
+        console.warn("❌ Keine globalen streakHistory-Daten gefunden, verwende Standardwert.");
     }
-
-    console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid: localStorage.getItem("uid") });
-
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid: localStorage.getItem("uid") });
-        console.log("✅ Nachricht erfolgreich gesendet!");
-    } catch (error) {
-        console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
-    }
-
-    navigator.serviceWorker.addEventListener("message", (event) => {
-        console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
-
-        if (event.data.type === "userDataUpdated") {
-            const data = event.data.data;
-            console.log("✅ Aktualisierte Benutzerdaten streak:", data.streakHistory);
-            streakHistory = data.streakHistory;
-        }
-    });
 }
 
 function generateWeekCalendar() {
@@ -44,7 +20,6 @@ function generateWeekCalendar() {
     const startOfWeek = new Date(today);
     startOfWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7));
 
-
     const lastSevenElements = [...streakHistory];
 
     const weekDay = new Date().getDay(); // 0 (So) - 6 (Sa)
@@ -55,7 +30,6 @@ function generateWeekCalendar() {
     for (let i = 0; i < zerosToAdd; i++) {
         lastSevenElements.push(0);
     }
-
 
     console.log(lastSevenElements);
 
@@ -71,7 +45,7 @@ function generateWeekCalendar() {
     calendarHTML += '<div class="day-row">';
     let o = 0;
     
-    for (let i = (lastSevenElements.length - 7); i < (lastSevenElements.length - 0); i++) {
+    for (let i = (lastSevenElements.length - 7); i < (lastSevenElements.length); i++) {
         const date = new Date(startOfWeek);
         date.setDate(startOfWeek.getDate() + o);
         o++;
@@ -99,7 +73,7 @@ function generateWeekCalendar() {
         if (third) classList.push('third');
         if (fourth) classList.push('fourth');
         if (fifth) classList.push('fifth');
-        elementId = '';
+        let elementId = '';
         let start = 0;
         let end = 0;
         let freeze = 0;
@@ -129,8 +103,6 @@ function generateWeekCalendar() {
             elementId = 'streak-freeze';
         } 
         
-
-
         calendarHTML += `<div class="day">
             <div data-date="${formattedDate}" id="${elementId}" class="${classList.join(' ')}">${date.getDate()}</div>
         </div>`;
@@ -142,10 +114,13 @@ function generateWeekCalendar() {
     return calendarHTML;
 }
 
+window.generateWeekCalendar = generateWeekCalendar;
+
 // Initiale Synchronisation starten
 document.addEventListener("DOMContentLoaded", () => {
-    syncStreakFromServiceWorker(); // Daten vom Service Worker holen
+    syncStreakFromGlobal(); // Daten aus den globalen Variablen holen
 });
+
 
 
 

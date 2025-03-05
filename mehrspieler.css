@@ -285,7 +285,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 130px;
+    height: 8.5rem;
     background: var(--background-color);
     border-top: 2px solid grey;
     display: flex;
@@ -297,7 +297,7 @@ body {
 
 .picker-container {
     position: fixed;
-    bottom: 4.5rem; /* Höher gesetzt, damit kein Overlap */
+    bottom: 5rem; /* Höher gesetzt, damit kein Overlap */
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
@@ -338,7 +338,7 @@ body {
     color: white; /* Standardfarbe: Grau */
     white-space: nowrap; /* Kein Zeilenumbruch */
     opacity: 0;
-    transition: font-size 0.1s ease-in-out;
+    transition: font-size 0.07s ease-in-out;
 }
 
 .picker-item.active {

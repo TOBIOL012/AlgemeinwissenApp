@@ -498,10 +498,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressBar = document.getElementById('progress-bar');
     const indicator = document.getElementById('indicator');
     const xpBox = document.getElementById('xp-box');
-    
-
-    const firestore = firebase.firestore();
-    const uid = localStorage.getItem('uid');
     const maxXP = 10000;
     const stepXP = 500;
     const rewardLevels = Array.from({ length: 21 }, (_, i) => i * 500); // XP-Stufen von 0 bis 10.000
@@ -620,20 +616,7 @@ document.addEventListener('DOMContentLoaded', function () {
     addRewards();
 
     // **XP aus Firestore abrufen & Fortschritt updaten**
-    if (uid) {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
-
-        navigator.serviceWorker.addEventListener("message", (event) => {
-            if (event.data.type === "userDataUpdated") {
-                const data = event.data.data;
-                const totalXP = data.xp || 0;
-                localStorage.setItem("lastXp", totalXP);
-                updateProgressBar(totalXP);
-            }
-        });
-    } else {
-        console.error("Keine Benutzer-UID gefunden.");
-    }
+    updateProgressBar(window.userData.xp);
 });
 
 
