@@ -3,26 +3,6 @@ const xpElement = document.getElementById("xp-value");
 const streakElement = document.getElementById("streak-value");
 const dot = document.querySelector(".notification-dot");
 
-// ❗ Beobachter für Änderungen an window.userData
-const userDataObserver = new MutationObserver(syncStatsFromFirestore);
-userDataObserver.observe(document.documentElement, { attributes: true, childList: true, subtree: true });
-
-// ❗ MutationObserver für localStorage-Änderungen (falls aus anderen Tabs)
-window.addEventListener("storage", () => {
-    loadLocalStats();
-});
-
-// ❗ Beobachter für globale Variable window.userData (aus firebase.js)
-Object.defineProperty(window, "userData", {
-    set(value) {
-        this._userData = value;
-        syncStatsFromFirestore(); // Werte sofort aktualisieren
-    },
-    get() {
-        return this._userData;
-    },
-});
-
 // ❗ Falsche Fragen aus dem Speicher holen und Punktanzeige aktualisieren
 function updateNotificationDot() {
     const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
@@ -64,9 +44,12 @@ function syncStatsFromFirestore() {
 // ❗ Initiale Synchronisation beim Laden
 document.addEventListener("DOMContentLoaded", () => {
     loadLocalStats(); // Lokale Werte anzeigen
-    syncStatsFromFirestore(); // Firestore-Werte abrufen
 });
 
+document.addEventListener("firebaseDataLoaded", () => {
+    console.log("🔄 Neue hallo:", value);
+    syncStatsFromFirestore(); // Firestore-Werte abrufen
+}); 
 /* Navigation
 const frames = document.querySelectorAll("div[id='iframe']");
 const navButtons = document.querySelectorAll(".nav-bar .nav-button");
