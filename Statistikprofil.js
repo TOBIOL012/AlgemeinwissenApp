@@ -219,43 +219,20 @@ function syncStreakDataFromServiceWorker() {
 
 syncStreakDataFromServiceWorker();
 
-let xpHistory = []; // Start with an empty array
+let xpHistory = []; // Initialisiere mit einem leeren Array
 
-function syncXpHistoryFromServiceWorker() {
-    if (!navigator.serviceWorker.controller) {
-        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-        return;
-    }
-
-    console.log("📨 Sende Nachricht an Service Worker zur XP-Verlauf-Abfrage:", { type: "fetchXpHistory", uid: localStorage.getItem("uid") });
-
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "fetchXpHistory", uid: localStorage.getItem("uid") });
-        console.log("✅ XP-History-Anfrage erfolgreich gesendet!");
-    } catch (error) {
-        console.error("❌ Fehler beim Senden der XP-History-Anfrage an den Service Worker:", error);
-    }
-}
-
-navigator.serviceWorker.addEventListener("message", (event) => {
-    if (!event.data || !event.data.type) return;
-
-    if (event.data.type === "userDataUpdated") {
-        console.log("✅ XP-History aktualisiert:", event.data.data);
-
-        if (event.data.data.xpHistory) {
-            xpHistory = [...event.data.data.xpHistory]; // Ensure the array is replaced
-            console.log("XP-History loaded:", xpHistory);
-            localStorage.setItem("xpHistory", JSON.stringify(xpHistory));
-            prepareChartData(); // Prepare data before updating chart
-            updateChart(); // Ensure the graph is updated with the new data
-        } else {
-            console.warn("❌ Keine XP-History gefunden!");
-        }
+// Statt den Service Worker zu nutzen, warten wir auf das Event, wenn Firebase-Daten geladen wurden:
+document.addEventListener("firebaseDataLoaded", function () {
+    if (window.userData && window.userData.xpHistory) {
+        xpHistory = [...window.userData.xpHistory]; // xpHistory aus Firebase übernehmen
+        console.log("XP-History geladen:", xpHistory);
+        localStorage.setItem("xpHistory", JSON.stringify(xpHistory));
+        prepareChartData(); // Daten für das Diagramm vorbereiten
+        updateChart();      // Diagramm aktualisieren
+    } else {
+        console.warn("❌ Keine XP-History in den Firebase-Daten gefunden!");
     }
 });
-
-syncXpHistoryFromServiceWorker();
 
 const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
 
@@ -268,6 +245,7 @@ let weeks = [];
 let months = [];
 
 function prepareChartData() {
+    // Berechne den täglichen XP-Zuwachs:
     const dailyXp = xpHistory.map((xp, i) => i === 0 ? xp : xp - xpHistory[i - 1]);
 
     weeks = [];
@@ -292,9 +270,11 @@ function prepareChartData() {
         }
     }
 
+    // Beispielsweise kannst du hier aktuelle Indizes für Woche und Monat setzen:
     currentWeekIndex = weeks.length - 1;
     currentMonthIndex = months.length - 1;
 }
+
 
 let currentWeekIndex = 0;
 let currentMonthIndex = 0;

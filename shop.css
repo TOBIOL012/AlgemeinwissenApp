@@ -1,26 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-body {
+.shop {
+    width: 90%;
+    flex-direction: column;
     font-family: 'Dosis', sans-serif;
     background-color: #141F25;
     color: white;
-    padding: 5px 15px;
-    padding-bottom: 0;
+    padding: 0;
     height: 100%;
-    margin: 0; /* Entfernt das Standard-Margin des Browsers */
+    margin: 0;
 }
 
 /* Header */
 .shop-header {
+    position: relative; /* Ermöglicht die absolute Positionierung der Münzen */
     display: flex;
-    justify-content: space-between;
+    margin-left: -19px;
+    margin-right: -19px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    background-color: #141F25;
+    border-bottom: 1px solid white;
 }
 
 .title{
-    font-size: 3rem;
-    margin: 0px;
+    padding-top: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .shop-title {
@@ -29,72 +37,85 @@ body {
 }
 
 .currency {
+    position: absolute; /* Positionierung relativ zum Header */
+    right: 10px;      /* Abstand vom rechten Rand – anpassbar */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.7rem;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.kohle {
     display: flex;
     align-items: center;
-    font-size: 1.7rem;
+    padding: 5px 7px;
+}
+
+.coins-shop {
+    padding-right: 0px;
+}
+
+.coinse-img {
+    padding-right: 4px;
 }
 
 .currency img {
-    width: 30px;
-    height: 30px;
-    margin-left: 8px;
+    width: 22px;
+    height: 22px;
 }
 
 /* ✅ Neue Überschrift für das Inventar */
 .inventory-title {
+    margin-top: 35px;
     margin-bottom: 8px;
     font-size: 1.5rem;
 }
 
 /* ✅ Inventar jetzt über die volle Breite */
 .inventory {
+    width: 50%;
     display: flex;
     gap: 10px;
     margin-bottom: 35px;
 }
 
-/* ✅ Inventar 1 links (Streak auf Eis) */
 .inventory-item1 {
     flex: 1;
-    display: flex;
     align-items: center;
     background-color: #141F25;
     border: 3px solid #1F2B36;
     padding: 10px 15px;
     border-radius: 12px;
-    justify-content: center;
+    text-align: center;
 }
 
 .inventory-item1 img {
-    width: 36px;
-    height: 36px;
-    margin-right: 6px;
+    width: 50px;
+    height: 50px;
 }
 
 #streak-count {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
-/* ✅ Inventar 2 rechts (Tokens) */
 .inventory-item2 {
     flex: 1;
-    display: flex;
     align-items: center;
     background-color: #141F25;
     border: 3px solid #1F2B36;
     padding: 10px 15px;
     border-radius: 12px;
-    justify-content: center;
+    text-align: center;
 }
 
 .inventory-item2 img {
-    width: 36px;
-    height: 36px;
-    margin-right: 6px;
+    width: 50px;
+    height: 50px;
 }
 
 #token-count {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 /* Shop-Items */
@@ -117,8 +138,8 @@ body {
     align-items: center;
     margin-bottom: 8px;
     justify-content: space-between;
-    background-color: #1F2B36;
-    border: 3px solid #2f4957;
+    background-color: none;
+    border: 2px solid #2f4957;
     padding: 15px 20px;
     border-radius: 12px;
     cursor: pointer;
@@ -129,8 +150,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1F2B36;
-    border: 3px solid #2f4957;
+    background-color: none;
+    border: 2px solid #2f4957;
     padding: 15px 20px;
     border-radius: 12px;
     cursor: pointer;
@@ -170,7 +191,13 @@ body {
 .left1, .left2 {
     display: flex;
     align-items: center; /* Zentriert die "1x" und "10x" mit den Icons */
-    gap: 8px; /* Optional: Abstand zwischen Text und Icon */
+    gap: 2px; /* Optional: Abstand zwischen Text und Icon */
+}
+
+.right1, .right2 {
+    display: flex;
+    align-items: center;
+    gap: 2px;
 }
 
 .einmal, .zehnmal {
@@ -250,16 +277,51 @@ body {
 /* ✅ Der Track enthält jetzt korrekten Abstand */
 .profile-picture-track {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     padding-right: 15px; /* Abstand zum rechten Rand */
 }
 
+.profile-picture-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile-picture {
-    background-color: #1F2B36;
+    background: rgb(153, 93, 226);
     border: 2px solid #2f4957;
     padding: 4px;
+    padding-top: 8px;
+    padding-bottom: 0;
     border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px; /* Falls nötig */
 }
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 3px;
+}
+
+.profile-price {
+    display: flex;
+    align-items: center;
+    gap: 3px; /* Kleiner Abstand zwischen Zahl und Icon */
+    font-size: 0.9rem;
+    color: white;
+}
+
+.coin-icon {
+    width: 12px; /* Viel kleiner */
+    height: 12px;
+}
+
+
 
 .profile-picture img {
     width: 80px;
@@ -267,33 +329,3 @@ body {
 }
 
 
-/* Navigation */
-.nav-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #141F25;
-    display: flex;
-    justify-content: space-around;
-    padding: 1em 0;
-    padding-bottom: 2em; /* Falls nötig, für bessere Klickbarkeit */
-    border-top: 3px solid #2f4957;
-    z-index: 1000; /* Stellt sicher, dass sie nicht von anderen Elementen überdeckt wird */
-}
-
-
-.nav-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.3em;
-    height: 2.3em;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button img {
-    width: 2.3rem;
-    height: 2.3rem;
-}

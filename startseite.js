@@ -1,84 +1,124 @@
-// DOM-Elemente
 const coinsElement = document.getElementById("coins-value");
 const xpElement = document.getElementById("xp-value");
 const streakElement = document.getElementById("streak-value");
-const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
-const categoryErrors = incorrectQuestions.length;
 const dot = document.querySelector(".notification-dot");
-if (categoryErrors > 0) {
-    dot.textContent = categoryErrors;
-    dot.style.display = 'block'; // Punkt anzeigen
-} else {
-    dot.textContent = '';
-    dot.style.display = 'none'; // Punkt ausblenden
-}
 
-if ('serviceWorker' in navigator) {
-    // Normale Registrierung für Browser
-    navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('Service Worker registriert:', reg))
-        .catch(err => console.error('Service Worker Fehler:', err));
-} else if (window.cordova && cordova.plugins && cordova.plugins.serviceWorker) {
-    // Registrierung für Cordova mit Plugin
-    document.addEventListener("deviceready", function () {
-        cordova.plugins.serviceWorker.register('service-worker.js')
-            .then(reg => console.log('Cordova Service Worker registriert:', reg))
-            .catch(err => console.error('Cordova Service Worker Fehler:', err));
-    });
-} else {
-    console.warn('Service Worker wird nicht unterstützt.');
-}
+// ❗ Beobachter für Änderungen an window.userData
+const userDataObserver = new MutationObserver(syncStatsFromFirestore);
+userDataObserver.observe(document.documentElement, { attributes: true, childList: true, subtree: true });
 
-// Lokale Werte laden
-function loadLocalStats() {
-    const lastCoins = localStorage.getItem("lastCoins") || 0;
-    const lastXp = localStorage.getItem("lastXp") || 0;
-    const lastStreak = localStorage.getItem("lastStreak") || 0;
-
-    coinsElement.textContent = lastCoins;
-    xpElement.textContent = lastXp;
-    streakElement.textContent = lastStreak;
-}
-
-// Cloud-Daten synchronisieren
-function syncStatsFromServiceWorker() {
-    if (!navigator.serviceWorker.controller) {
-        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-        return;
-    }
-
-    console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid: localStorage.getItem("uid") });
-    
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid: localStorage.getItem("uid") });
-        console.log("✅ Nachricht erfolgreich gesendet!");
-    } catch (error) {
-        console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
-    }
-    
-    navigator.serviceWorker.addEventListener("message", (event) => {
-        console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
-        
-        if (event.data.type === "userDataUpdated") {
-            const data = event.data.data;
-            console.log("✅ Aktualisierte Benutzerdaten:", data);
-            
-            // Cloud-Daten in die UI aktualisieren
-            coinsElement.textContent = data.coins || 0;
-            xpElement.textContent = data.xp || 0;
-            streakElement.textContent = data.streak || 0;
-            
-            // Cloud-Daten lokal speichern
-            localStorage.setItem("lastCoins", data.coins || 0);
-            localStorage.setItem("lastXp", data.xp || 0);
-            localStorage.setItem("lastStreak", data.streak || 0);
-        }
-    });
-}
-
-// Initiale Synchronisation starten
-document.addEventListener("DOMContentLoaded", () => {
-    loadLocalStats(); // Lokale Werte laden
-    syncStatsFromServiceWorker(); // Daten vom Service Worker holen
+// ❗ MutationObserver für localStorage-Änderungen (falls aus anderen Tabs)
+window.addEventListener("storage", () => {
+    loadLocalStats();
 });
 
+// ❗ Beobachter für globale Variable window.userData (aus firebase.js)
+Object.defineProperty(window, "userData", {
+    set(value) {
+        this._userData = value;
+        syncStatsFromFirestore(); // Werte sofort aktualisieren
+    },
+    get() {
+        return this._userData;
+    },
+});
+
+// ❗ Falsche Fragen aus dem Speicher holen und Punktanzeige aktualisieren
+function updateNotificationDot() {
+    const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
+    const categoryErrors = incorrectQuestions.length;
+    if (categoryErrors > 0) {
+        dot.textContent = categoryErrors;
+        dot.style.display = 'block';
+    } else {
+        dot.textContent = '';
+        dot.style.display = 'none';
+    }
+}
+
+// ❗ Lokale Werte laden
+function loadLocalStats() {
+    coinsElement.textContent = localStorage.getItem("lastCoins") || 0;
+    xpElement.textContent = localStorage.getItem("lastXp") || 0;
+    streakElement.textContent = localStorage.getItem("lastStreak") || 0;
+    updateNotificationDot();
+}
+
+// ❗ Cloud-Daten aus Firebase.js synchronisieren
+function syncStatsFromFirestore() {
+    if (!window.userData) {
+        console.error("❌ Keine Benutzerdaten von Firebase vorhanden.");
+        return;
+    }
+    console.log("✅ Live-Daten synchronisiert:", window.userData);
+
+    coinsElement.textContent = window.userData.coins || 0;
+    xpElement.textContent = window.userData.xp || 0;
+    streakElement.textContent = window.userData.streak || 0;
+
+    localStorage.setItem("lastCoins", window.userData.coins || 0);
+    localStorage.setItem("lastXp", window.userData.xp || 0);
+    localStorage.setItem("lastStreak", window.userData.streak || 0);
+}
+
+// ❗ Initiale Synchronisation beim Laden
+document.addEventListener("DOMContentLoaded", () => {
+    loadLocalStats(); // Lokale Werte anzeigen
+    syncStatsFromFirestore(); // Firestore-Werte abrufen
+});
+
+/* Navigation
+const frames = document.querySelectorAll("div[id='iframe']");
+const navButtons = document.querySelectorAll(".nav-bar .nav-button");
+
+navButtons.forEach((button, index) => {
+    button.addEventListener("click", function () {
+        frames.forEach(frame => frame.style.display = "none");
+        if (frames[index]) {
+            frames[index].style.display = "flex";
+        }
+    });
+});
+*/
+
+//Navigation Test
+const frames = document.querySelectorAll("div[id='iframe']");
+const navButtons = document.querySelectorAll(".nav-bar .nav-button");
+
+// Letzten aktiven Frame aus localStorage abrufen
+const lastActiveFrameIndex = localStorage.getItem("activeFrameIndex");
+
+// Falls vorhanden, den gespeicherten Frame aktivieren
+if (lastActiveFrameIndex !== null && frames[lastActiveFrameIndex]) {
+    frames.forEach(frame => frame.style.display = "none");
+    frames[lastActiveFrameIndex].style.display = "flex";
+}
+
+// Event-Listener für die Navigation setzen
+navButtons.forEach((button, index) => {
+    button.addEventListener("click", function () {
+        frames.forEach(frame => frame.style.display = "none");
+
+        if (frames[index]) {
+            if (index === 3) {
+                frames[index].style.display = "block";
+            } else{
+                frames[index].style.display = "flex";
+            }
+            localStorage.setItem("activeFrameIndex", index); // Aktiven Frame speichern
+        }
+    });
+});
+
+function themeColor(color) {
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (!metaThemeColor) {
+            metaThemeColor = document.createElement('meta');
+            metaThemeColor.setAttribute('name', 'theme-color');
+            document.head.appendChild(metaThemeColor);
+        }
+        metaThemeColor.setAttribute('content', color);
+
+    }
+
+    window.themeColor = themeColor;

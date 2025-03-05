@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allgemeinwissen Quiz App - Startseite</title>
     <link rel="stylesheet" href="startseite.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="ranking.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="profil-auswahl.css">
+    <link rel="stylesheet" href="Standart.css">
     <link rel="manifest" href="/manifest.json">
-    <script src="startseite.js" defer></script>
-    <script src="mini-kalendar.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+    <script src="firebase.js" defer></script>
     <script src="Fragen/geschichte.js" defer></script>
     <script src="Fragen/geographie.js" defer></script>
     <script src="Fragen/sport.js" defer></script>
@@ -16,15 +23,21 @@
     <script src="Fragen/wissenschaft.js" defer></script>
     <script src="Fragen/kunst.js" defer></script>
     <script src="Fragen/question.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
-    
-    
+    <script src="startseite.js" defer></script>
+    <script src="anzeige.js" defer></script>
+    <script src="calendar.js" defer></script>
+    <script src="profil.js" defer></script>
+    <script src="ranking.js" defer></script>
+    <script src="shop.js" defer></script>
+    <script src="profil-auswahl.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Statistikprofil.js" defer></script>
+    <script src="einstellungen.js" defer></script>
+    <script src="xp-pfad.js" defer></script>
+    <script src="mini-kalendar.js" defer></script>
 </head>
 <body>
-
+  <div class="startseite" id="iframe">
     <div class="top-bar expanded" id="top-bar">
         <div class="top-bar-icons">
             <div class="stat" id="streak" onclick="toggleContent('streak-content')">
@@ -60,20 +73,482 @@
           <div class="notification-dot"></div>
         </div>
     </div>
-    <div class="nav-bar">
-        <a class="nav-button">
-          <img src="icons8-home.svg" alt="Home">
-        </a>
-        <a href="ranking.html" class="nav-button">
-          <img src="ranking.png" alt="Ranking" style="width: 2.8rem; height: 2.8rem; margin-bottom: -0.6rem;">
-        </a>
-        <a href="shop.html" class="nav-button">
-          <img src="shop.png" alt="Shop">
-        </a>
-        <a href="profil.html" class="nav-button">
-          <img src="Profilbildfake.png" alt="Profil">
+  
+  </div>
+
+  <div class="missions" id="iframe" style="display:none;">
+
+  </div>
+
+    
+
+  <div class="rangliste" id="iframe" style="display:none;">
+    <div id="spieler-container">
+      <div class="header">
+        <div class="Überschrift">Rangliste</div>
+      </div>
+    </div>
+
+    <div class="spieler-container">
+
+    </div>
+    <div class="scroll-button"></div>
+  </div>
+
+  
+  
+  
+  
+  
+  
+  <div class="shop" id="iframe" style="display:none;">
+    <header class="shop-header">
+      <h1 class="title">Shop</h1>
+      <div class="currency">
+        <div class="kohle">
+          <img class="coinse-img" src="coin.png" alt="Münzen">
+          <span id="coins" class="coins-shop">...</span>
+        </div>
+      </div>
+    </header>
+    
+
+  <h2 class="inventory-title">Aktuell auf Lager</h2>
+<section class="inventory">
+  <div class="inventory-item1">
+      <img src="icons8-kalender-96 (1).png" alt="Streak auf Eis">
+      <span id="streak-count">...</span>
+  </div>
+  <div class="inventory-item2">
+      <img src="token.png" alt="Tokens">
+      <span id="token-count">...</span>
+  </div>
+</section>
+
+
+  <section class="shop-items">
+    <h2 class="shop-items-title">Shop-Items</h2> <!-- Neue Überschrift -->
+    <div class="shop-item1" onclick="buyStreak()">
+        <div class="left1">
+            <span class="einmal">1x</span>
+            <img src="icons8-kalender-96 (1).png" alt="Streak auf Eis">
+        </div>
+        <div class="right1">
+            <span class="price">200</span>
+            <img src="coin.png" alt="Münzen">
+        </div>
+    </div>
+    
+    <div class="shop-item2" onclick="buyTokens()">
+        <div class="left2">
+            <span class="zehnmal">10x</span>
+            <img src="token.png" alt="Tokens">
+        </div>
+        <div class="right2">
+            <span class="price">200</span>
+            <img src="coin.png" alt="Münzen">
+        </div>
+    </div>
+</section>
+
+
+
+  <section class="profile-picture-shop">
+      <h2 class="profilbilder-title">Profilbilder</h2>
+      <div class="profile-picture-container">
+          <div class="profile-picture-track">
+              
+              <div class="profile-picture-wrapper">
+                  <div class="profile-picture">
+                      <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+                  </div>
+                  <div class="profile-name">Albert Einstein</div>
+                  <div class="profile-price">
+                      <span class="price-amount">100</span>
+                      <img src="coin.png" alt="Münzen" class="coin-icon">
+                  </div>
+              </div>
+              
+              <div class="profile-picture-wrapper">
+                  <div class="profile-picture">
+                      <img src="/Profilbilder/DonaldTrump.png" alt="Profilbild 2">
+                  </div>
+                  <div class="profile-name">Donald Trump</div>
+                  <div class="profile-price">
+                      <span class="price-amount">250</span>
+                      <img src="coin.png" alt="Münzen" class="coin-icon">
+                  </div>
+              </div>
+
+              <div class="profile-picture-wrapper">
+                  <div class="profile-picture">
+                      <img src="/Profilbilder/Tutanchamun.png" alt="Profilbild 3">
+                  </div>
+                  <div class="profile-name">Tutanchamun</div>
+                  <div class="profile-price">
+                      <span class="price-amount">250</span>
+                      <img src="coin.png" alt="Münzen" class="coin-icon">
+                  </div>
+              </div>
+              
+              <div class="profile-picture-wrapper">
+                <div class="profile-picture">
+                    <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+                </div>
+                <div class="profile-name">Albert Einstein</div>
+                <div class="profile-price">
+                    <span class="price-amount">100</span>
+                    <img src="coin.png" alt="Münzen" class="coin-icon">
+                </div>
+            </div>
+
+            <div class="profile-picture-wrapper">
+              <div class="profile-picture">
+                  <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+              </div>
+              <div class="profile-name">Albert Einstein</div>
+              <div class="profile-price">
+                  <span class="price-amount">100</span>
+                  <img src="coin.png" alt="Münzen" class="coin-icon">
+              </div>
+          </div>
+              
+          <div class="profile-picture-wrapper">
+            <div class="profile-picture">
+                <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+            </div>
+            <div class="profile-name">Albert Einstein</div>
+            <div class="profile-price">
+                <span class="price-amount">100</span>
+                <img src="coin.png" alt="Münzen" class="coin-icon">
+            </div>
+        </div>
+              
+              
+              
+          </div>
+      </div>
+  </section>
+  </div>
+
+  <div class="profil" id="iframe" style="display:none;">
+    <div class="einstellungen" style="display: none;">
+      <div class="ausloggen" id="einstellung">Ausloggen <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAe0lEQVR4nO3VMQqAIBSAYYdoDJqiG3noGnPqFLbXEf5wCBryUemb9J+ffqCgxtS+BFhg438+7CEBYSA1LwHRzLsTkGfLAYARaDSBA3BApwVcrUCfBRCatYFJ84jc/R5yAjuwaF7yALSx9clArDIAj/JzbRMRL344NfPQCYXdh8uFVAL0AAAAAElFTkSuQmCC"></div>
+    </div>
+  
+    <div class="back-arrow-container">
+      <div class="settings-icon">
+        <img src="output_images/rotated_000.webp" alt="Einstellungen">
+      </div>
+    </div>
+    <div class="Profilbild-container">
+      <a>
+        <!-- Standardwert wird nur angezeigt, wenn kein Wert in localStorage ist -->
+        <img class="Profilbild-groß">
+      </a>
+    </div>
+  
+    <div class="navigation1">
+      <div class="navigation">
+        <img onclick="navigate(1)" class="profile-img" src="https://img.icons8.com/fluency-systems-filled/80/FFFFFF/user.png">
+        <img onclick="navigate(2)" class="xp-img" src="https://img.icons8.com/material-sharp/80/FFFFFF/track-order.png">
+        <img onclick="navigate(3)" class="streak-img" src="https://img.icons8.com/fluency-systems-regular/80/FFFFFF/calendar--v1.png">
+        <img onclick="navigate(4)" class="stats-img" src="https://img.icons8.com/material-rounded/80/FFFFFF/graph.png">
+      </div>
+      <div class="strich"></div>
+    </div>
+  
+  
+  
+    <div class="behälter">
+    <div class="iframe1">
+    <!-- Hier wird der Name angezeigt, wenn der Benutzer eingeloggt ist -->
+    <div class="name" style="display: flex;">
+    <div class="Infos" style="display: flex; flex-direction: column;">
+      <span id="username-display"></span>
+      <a class="beigetreten">Beigetreten: 24-02-2024</a>
+    </div>
+      <button class="share-button" onclick="shareProfile()">
+        <img src="share-icon.png" alt="Teilen" class="share-icon">
+      </button>
+    </div>
+  
+    <!-- Hier sind die Login- und Registrierungsfelder -->
+    <div class="Benutzerdaten" style="display: none;">
+      <div class="tabs">
+        <button class="tab-login">EINLOGGEN</button>
+        <button class="tab-register">REGISTRIEREN</button>
+      </div>
+      <div class="Register">
+        <input type="text" id="Benutzername" class="Benutzername" placeholder="Benutzername">
+        <input type="email" id="E-Mail" class="E-Mail" placeholder="E-Mail">
+        <input type="password" id="Passwort" class="Passwort" placeholder="Passwort">
+      </div>
+      <button class="submit-btn" disabled>Einloggen</button>
+      <p class="error-message"></p>
+    </div>
+  
+    <div class="Übersicht">
+      <div class="XP">
+        <img src="XP.png" alt="XP Icon">
+        <span id="xp-total">0</span>
+      </div>
+      <div class="Coins">
+        <img src="coin.png" alt="Coin Icon">
+        <span class="coin-text">301</span>
+      </div>
+      <div class="Streak">
+        <img src="streak.png" alt="Streak Icon">
+        <span class="streak-text">17</span>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="iframe2">
+    <svg id="xp-container" width="400" height="2200">
+      <!-- Hintergrundlinie -->
+      <path id="xp-path" class="xp-line" d="
+          M 200 50 
+          Q 350 250, 200 450 
+          Q 50 650, 200 850 
+          Q 350 1050, 200 1250
+          Q 50 1450, 200 1650
+          Q 350 1850, 200 2050
+          Q 50 2250, 200 2450" />
+  
+      <!-- Fortschrittslinie -->
+      <path id="xp-progress" class="xp-progress" d="" />
+   
+      <!-- Checkpoints: Jetzt nach der Fortschrittslinie platziert -->
+      <g id="checkpoints"></g>
+  </svg>
+   
+  
+  <div id="xp-display">0 XP</div>
+  </div>
+  
+  
+  
+  
+  <div class="iframe3">
+    <div class="streak-stats-container">
+      <div class="streak-stats-anzeige">
+          <img src="streak.png">
+          <div class="streak-stats-number" id="number">-</div>
+      </div>
+  </div>
+  <div class="anzeige">
+  <div class="streak-stats">
+      
+      <div class="highest-streak-stats-container">
+          <div class="streak-stats-anzeige">
+              <img src="streakgold.png" id="streakicon">
+              <div class="highest-streak-stats-number" id="number">-</div>
+          </div>
+          <div class="streak-stats-text">Höchste Streak</div>
+      </div>
+      <div class="tage-stats-container">
+          <div class="streak-stats-anzeige">
+              <img src="streakgold.png" id="streakicon">
+              <div class="tage-stats-number" id="number">-</div>
+          </div>
+          <div class="streak-stats-text">Tage gelernt</div>
+      </div>
+  </div>
+  <div class="kalendar" style="overflow-y: scroll;">
+  
+  </div>
+  </div>
+  </div>
+  
+  <div class="iframe4">
+    <div id="spieler-container">
+  
+      <div class="Statistik-Container">
+              <div class="Fragen-Anzeige">
+                  <div class="Kreis-Anzeige">
+                      <svg class="circle-chart" viewBox="0 0 36 36">
+                          <path class="circle-bg"
+                                d="M18 2.0845
+                                   a 15.9155 15.9155 0 0 1 0 31.831
+                                   a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                          <path class="circle-beantwortet"
+                                d="M18 2.0845
+                                   a 15.9155 15.9155 0 0 1 0 31.831
+                                   a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                          <path class="circle-richtig"
+                                d="M18 2.0845
+                                   a 15.9155 15.9155 0 0 1 0 31.831
+                                   a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                      </svg>
+                      <div class="circle-text">
+                          <div class="fragen-text" id="flex">
+                              <div class="fragen-richtig-farbe"></div>
+                              <div class="fragen-richtig-Text" id="text"></div>
+                          </div>
+                          <div class="fragen-text" id="flex">
+                              <div class="fragen-beantwortet-farbe"></div>
+                              <div class="fragen-beantwortet-Text" id="text"></div>
+                          </div>
+                          <div class="fragen-text" id="flex">
+                              <div class="fragen-gesamt-farbe"></div>
+                              <div class="fragen-gesamt-Text" id="text"></div>
+                          </div>
+                      </div>
+                  </div>
+          </a>
+      </div> 
+  
+  <div class="toggle-container">
+  <button id="weekButton" class="toggle-button active">Week</button>
+  <button id="monthButton" class="toggle-button">Month</button>
+  </div>
+  <div class="xp-pfad">
+  <div class="graph-container">
+  <canvas id="xpChart"></canvas>
+  </div>
+  
+  <div class="week-label" id="weekLabel">
+  <div class="dot1" id="dot"></div>
+  <div class="dot2" id="dot"></div>
+  <div class="dot3" id="dot"></div>
+  <div class="dot4" id="dot"></div>
+  <div class="dot5" id="dot"></div>
+  <div class="dot6" id="dot"></div>
+  <div class="dot7" id="dot"></div>
+  </div>
+  </div>
+  
+      <div class="kategorien-Graph">
+          <div class="geschichte" id="kategorie1">
+              <div class="geschichte-balken" id="balken">
+                  <div class="geschichte-beantwortet" id="beantwortet">
+                      <div class="geschichte-richtig" id="richtig"></div>
+                  </div>
+              </div>
+              <div id="border"><img class="geschichte-icon" id="icon" src="categorie-icons/i-tempel.png"></div>
+          </div>
+          <div class="geographie" id="kategorie1">
+              <div class="geographie-balken" id="balken">
+                  <div class="geographie-beantwortet" id="beantwortet">
+                      <div class="geographie-richtig" id="richtig"></div>
+                  </div>
+              </div>
+              <div id="border"><img class="geographie-icon" id="icon" src="categorie-icons/i-weltkarte.png"></div>
+          </div>
+          <div class="musik" id="kategorie1">
+              <div class="musik-balken" id="balken">
+                  <div class="musik-beantwortet" id="beantwortet">
+                      <div class="musik-richtig" id="richtig"></div>
+                  </div>
+              </div>
+              <div id="border"><img class="musik-icon" id="icon" src="categorie-icons/i-noten.png"></div>
+          </div>
+          <div class="sport" id="kategorie1">
+              <div class="sport-balken" id="balken">
+                  <div class="sport-beantwortet" id="beantwortet">
+                      <div class="sport-richtig" id="richtig"></div>
+                  </div>
+              </div>
+              <div id="border"><img class="sport-icon" id="icon" src="categorie-icons/i-basketball.png"></div>
+          </div>
+          <div class="wissenschaft" id="kategorie1">
+              <div class="wissenschaft-balken" id="balken">
+                  <div class="wissenschaft-beantwortet" id="beantwortet">
+                      <div class="wissenschaft-richtig" id="richtig"></div>
+                  </div>
+              </div>
+              <div id="border"><img class="wissenschaft-icon" id="icon" src="categorie-icons/i-microscop.png"></div>
+          </div>
+          <div class="kunst" id="kategorie1">
+              <div class="kunst-balken" id="balken">
+                  <div class="kunst-beantwortet" id="beantwortet">
+                      <div class="kunst-richtig" id="richtig"></div>
+                  </div>
+              </div>
+              <div id="border"><img class="kunst-icon" id="icon" src="categorie-icons/i-bibel.png"></div>
+          </div>
+      </div>
+      <div class="label" id="label">Fragen nach Kategorie</div>
+      <div class="difficulty-bar-container">
+          <div class="overlay-bar" id="overlay-bar"></div>
+          <div class="strich strich-1"></div>
+          <div class="strich strich-2"></div>
+          <div class="strich strich-3"></div>
+          <div class="strich strich-4"></div>
+      </div>
+      <div class="label" id="average-difficulty-label">Durchschnittliche Schwierigkeit</div>
+      <div class="Schwachpunkt">
+          <img class="Ausrufezeichen" src="wichtig.png">
+          <a class="Schwachpunkttext"></a>
+      </div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+
+
+  <div class="profil-auswahl" id="iframe" style="display:none;">
+    <div id="spieler-container">
+        <div class="header">
+          <a class="pfeil">
+            <img src="pfeil.png" class="back-arrow" alt="weiter">
+          </a>
+        </div>
+      </div>
+      <div class="Profilbild-container1">
+        <a href="profil-auswahl.html">
+          <img src="Profilbilder/Albert Einstein.png" alt="Profilbild" class="Profilbild-groß">
         </a>
       </div>
-    <script src="main.js"></script> 
+      <div class="name" style="display: flex;">
+        <span id="username-display"></span>
+      </div>
+      <!-- Farbauswahl -->
+      <div class="farben">
+        <div class="farbe" data-color="#e25d5d" style="background-color: #e25d5d; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#e27a53" style="background-color: #e27a53; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#e2ca5d" style="background-color: #e2ca5d; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#abdd90" style="background-color: #abdd90; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#5da571" style="background-color: #5da571; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#5d8ee2" style="background-color: #5d8ee2; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#995de2" style="background-color: #995de2; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#de83da" style="background-color: #de83da; opacity: 0.5;"></div>
+        <div class="farbe" data-color="#a1dee5" style="background-color: #a1dee5; opacity: 0.5;"></div>
+      </div>
+      <!-- Profilbilderauswahl -->
+      <div class="profilbilder"></div>
+  </div>
+
+  
+
+  
+
+
+
+  <div class="nav-bar">
+    <a class="nav-button">
+      <img src="nav-bar-icons/icons8-home.svg" alt="Home" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+    </a>
+    <a class="nav-button">
+      <img src="https://img.icons8.com/material-rounded/80/FFFFFF/star--v1.png" alt="Missions" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+    </a>
+    <a class="nav-button">
+      <img src="nav-bar-icons/ranking.png" alt="Ranking" style="width: 2.4rem; height: 2.4rem; margin-bottom: -0.3rem;" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+    </a>
+    <a class="nav-button">
+      <img src="nav-bar-icons/shop.png" alt="Shop" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+    </a>
+    <a class="nav-button">
+      <img src="https://img.icons8.com/fluency-systems-filled/80/FFFFFF/user.png" alt="Profil">
+    </a>
+  </div>
+
+  <script src="main.js"></script> 
 </body>
 </html>

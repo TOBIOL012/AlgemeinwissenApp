@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-html, body {
+.profil-auswahl {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -16,12 +16,7 @@ html, body {
 }
 
 
-body {
-    opacity: 1; /* Standardzustand */
-}
-
-
-.Profilbild-container {
+.Profilbild-container1 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -29,7 +24,7 @@ body {
     border-bottom: 3px solid #2f4957;
 }
 
-.Profilbild-container a {
+.Profilbild-container1 a {
     display: flex;
 }
 
@@ -107,28 +102,28 @@ body {
 
 
 
-header {
+.profil-auswahl header {
     width: 75%;
     max-width: 20em;
     text-align: left;
     margin-top: 15%;
 }
 
-#spieler-container {
+.profil-auswahl #spieler-container {
     position: fixed;
     width: 90%;
     padding-left: 5%;
     padding-top: 7%;
 }
 
-.header {
+.profil-auswahl .header {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 2rem; /* Abstand zu den Input-Feldern */
 }
 
-.back-arrow {
+.profil-auswahl .back-arrow {
     color: white;
     text-decoration: none;
     position: relative;
@@ -139,12 +134,12 @@ header {
     z-index: 999;
 }
 
-.pfeil {
+.profil-auswahl .pfeil {
     height: 2rem;
     width: 2rem;
 }
 
-.Überschrift {
+.profil-auswahl .Überschrift {
     color: white;
     position: absolute;
     left: 50%;

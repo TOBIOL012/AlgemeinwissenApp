@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-html, body {
+.profil {
     position: relative;
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ html, body {
 
 .iframe1 , .iframe2, .iframe3, .iframe4 {
     height: calc(100vh - 55vw - 5rem - 4px); /* Container-Höhe bleibt 500px */
-    overflow: hidden; /* Alles, was über den Rand hinausgeht, wird abgeschnitten */
+    overflow:scroll;
 }
 
 
@@ -34,10 +34,31 @@ html, body {
     cursor: pointer;
     width: 2.3rem;
     height: 2.3rem;
+    opacity: 1 !important; 
+    z-index: 1000;
+}
+
+.setting-icon::before {
+    content: " ";
+    position: absolute;
+    top: -0.8rem;  /* Oben vergrößern */
+    right: -0.8rem; /* Rechts vergrößern */
+    bottom: -0.8rem; /* Unten vergrößern */
+    left: -0.8rem; /* Links vergrößern */
+    background: transparent; /* Unsichtbar */
+}
+
+.back-arrow-conatiner{
+    opacity: 1 !important; 
+}
+
+.setting-icon img{
+    opacity: 1 !important; 
 }
 
 .settings-icon img {
     height: 2.3rem;
+    width: 2.3rem;
     transition: all 0.5s ease-in-out;
 }
 
@@ -230,35 +251,6 @@ body {
     padding-top: 5px;
 }
 
-.nav-bar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #141F25;
-    display: flex;
-    justify-content: space-around;
-    padding: 1em 0;
-    padding-bottom: 2em;
-    border-top: 3px solid #2f4957;
-    left:0;
-}
-
-.nav-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.3em;
-    height: 2.3em;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button img {
-    width: 2.3em;
-    height: 2.3em;
-    color: white;
-}
-
 
 .XP-Pfad-Container {
     display: block;
@@ -320,18 +312,45 @@ body {
 }
 
 #xp-display {
-    position: fixed;
-    bottom: 4rem; /* Abstand von der Nav-Bar */
-    left: 1rem; /* Abstand vom linken Rand */
-    background-color: #2F4957; /* Grau */
+    position: sticky;
+    bottom: 6.5rem; /* Leicht über der Nav-Bar */
+    left: 1rem;
+    width: 20%;
+    background-color: #2F4957;
     color: white;
-    font-size: 1.5rem;
-    padding: 0.8rem 1.2rem;
-    border-radius: 12px;
+    font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
 }
+
+#xp-display {
+    position: sticky;
+    bottom: 6.5rem; /* Über der Nav-Bar */
+    left: 1rem;
+    width: 7rem; /* Feste Breite */
+    height: 2.5rem; /* Angepasste Höhe */
+    background-color: #2F4957;
+    color: white;
+    font-size: 1.6rem; /* Größere Schrift */
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Vertikal mittig */
+    justify-content: center; /* Horizontal mittig */
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+
+
+
+
+
 
 
 
@@ -400,9 +419,9 @@ body {
 
 #einstellung {
     display: block;
-    background-color: #141F25;
+    background-color: #fa8e29;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    gap: 0.6rem;
     border-radius: 15px;
     padding: 0.6rem 0.6rem;
     font-size: 1.5em;
@@ -410,11 +429,29 @@ body {
     width: calc(90vw - 1.4rem);
     margin-top: 1rem;
     margin-left: 5vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.ausloggen{
-    color: #c52323;
-    text-align: center;
+.ausloggen {
+    background-color: #fa8e29;
+    color: white;
+    border: none;
+    padding: 1.2em 0.8rem;
+    border-radius: 1em;
+    font-size: 1.6em;
+    width: 90%;
+    font-family: "Dosis", sans-serif;
+    box-shadow: 0px 6px 0px 0px #bb691d;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.ausloggen:active {
+    box-shadow: none;
+    top: 6px;
+    transform: translate(0, 0); 
 }
 
 .einstellungen{
@@ -449,6 +486,7 @@ a img{
 
 .navigation img{
     width: 1.75rem;
+    height: 1.75rem;
 }
 
 .iframe1{
@@ -748,7 +786,7 @@ a img{
     z-index: -1; /* Bild bleibt im Hintergrund */
 }
 
-.streak-all{
+.profil .streak-all{
     background-color: #141F25;
     color: white;
     text-align: left;
@@ -1220,7 +1258,6 @@ a img{
     stroke: #2F4957;
     stroke-width: 4px;
     pointer-events: none;
-    transition: all 0.3s ease;
 }
 
 .checkpoint.active {

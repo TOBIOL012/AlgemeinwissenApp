@@ -1,46 +1,21 @@
 
 let userRank =  null;
 
-function syncRankingData(uid) {
-    console.log("syncRankingData gestartet für UID:", uid);
-
-    if (!navigator.serviceWorker.controller) {
-        return;
-    }
-
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
-    } catch (error) {
-        console.error("Fehler beim Senden der Nachricht an den Service Worker:", error);
-    }
-
-    navigator.serviceWorker.addEventListener("message", (event) => {
-        console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
-
-        const ranking = event.data.ranking;
-        userRank = event.data.userRank;
-        const username = localStorage.getItem("username");
-        console.log("🏆 Aktualisierte Rangliste:", ranking);
-        console.log("📊 Benutzer-Rang:", userRank);
-        
-        updateRankingUI(ranking, userRank, username);
-        
-        
-    });
+function syncRankingData() {
+    const username = localStorage.getItem("username");
+    updateRankingUI(window.ranking, window.userRank, username);
+    userRank = window.userData.userRank;
 }
 
 function createPlayerElement(player, rank) {
     const playerDiv = document.createElement('div');
     console.log("🔢 Rang:", userRank);
-    if (rank === userRank) {
-        playerDiv.className = 'ich';
-    } else {
-        playerDiv.className = 'spieler';
-    }
+
     if (rank === 0) {
         playerDiv.innerHTML = `<img class="spieler-platz-img" src="gold.png"></div>`;
     } else if (rank === 1) {
         playerDiv.innerHTML = `<img class="spieler-platz-img" src="silver.png"></div>`;
+        playerDiv.classList.add('center');
     } else if (rank === 2) {
         playerDiv.innerHTML = `<img class="spieler-platz-img" src="bronce.png"></div>`;
     } else if (rank > 2) {
@@ -50,96 +25,74 @@ function createPlayerElement(player, rank) {
         <div class="spieler-name">${player.Name}</div>
         <div class="spieler-punkte">${player.XP}</div>
     `;
+    if (rank === userRank) {
+        playerDiv.className = 'ich';
+    } else {
+        playerDiv.className = 'spieler';
+    }
+
+    if (rank === 0) {
+        playerDiv.id = 'spieler1';
+    } else if (rank === 1) {
+        playerDiv.id = 'spieler2';
+    } else if (rank === 2) {
+        playerDiv.id = 'spieler3';
+    }
+
     return playerDiv;
 }
 
 function loadAllPlayers(ranking) {
+    console.log(window.ranking);
     const container = document.querySelector('.spieler-container');
     container.innerHTML = ''; // Clear existing players
 
     const fragment = document.createDocumentFragment();
-    ranking.forEach((player, index) => {
-        const playerElement = createPlayerElement(player, index);
+    const podium = document.createElement('div');
+    podium.className = 'podest';
+
+    const firstPlace = createPlayerElement(ranking[0], 0);
+    const secondPlace = createPlayerElement(ranking[1], 1);
+    const thirdPlace = createPlayerElement(ranking[2], 2);
+
+    [secondPlace, firstPlace, thirdPlace].forEach((place, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'podest-wrapper';
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'img-div';
+        if (place === firstPlace) imgDiv.innerHTML = `<img src="Profilbilder/${ranking[0].Currentprofile}">`;
+        if (place === secondPlace) imgDiv.innerHTML = `<img src="Profilbilder/${ranking[1].Currentprofile}">`;
+        if (place === thirdPlace) imgDiv.innerHTML = `<img src="Profilbilder/${ranking[2].Currentprofile}">`;
+        wrapper.appendChild(imgDiv);
+        wrapper.appendChild(place);
+        podium.appendChild(wrapper);
+    });
+
+    ranking.slice(3).forEach((player, index) => {
+        const playerElement = createPlayerElement(player, index + 3);
         fragment.appendChild(playerElement);
     });
+
+    container.appendChild(podium);
     container.appendChild(fragment);
 }
 
 function updateRankingUI(ranking, userRank, username) {
     console.log(username);
-    document.querySelector('.scroll-button').textContent = `${username}: ${userRank}`;
+    document.querySelector('.scroll-button').textContent = `${window.userData.username}: Rang ${window.userRank}`;
     console.log("🔄 Aktualisiere UI mit Rangliste und Benutzer-Rang");
     loadAllPlayers(ranking);
-
-}
-
-const savedUID = localStorage.getItem("uid");
-if (savedUID) {
-    syncRankingData(savedUID);
-} else {
-    console.error("❌ Keine UID im LocalStorage gefunden!");
 }
 
 document.querySelector('.scroll-button').addEventListener('click', () => {
-    if (userRank !== null) {
-        const playerElement = document.querySelectorAll('.spieler')[userRank];
-        if (playerElement) {
-            playerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    } else {
-        console.error("❌ Benutzer-Rang ist nicht definiert!");
+    const playerElement = document.querySelectorAll('.spieler')[window.userRank];
+    if (playerElement) {
+        playerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 });
 
-function cloneWithInlineStyles(element) {
-    const clone = element.cloneNode(true);
-  
-    function copyComputedStyle(src, dest) {
-      const computed = window.getComputedStyle(src);
-      for (let i = 0; i < computed.length; i++) {
-        const key = computed[i];
-        dest.style.setProperty(key, computed.getPropertyValue(key), computed.getPropertyPriority(key));
-      }
-      // Für ::before und ::after Pseudo-Elemente:
-      ['::before', '::after'].forEach(pseudo => {
-        const pseudoStyle = window.getComputedStyle(src, pseudo);
-        let cssText = "";
-        for (let i = 0; i < pseudoStyle.length; i++) {
-          const prop = pseudoStyle[i];
-          cssText += `${prop}: ${pseudoStyle.getPropertyValue(prop)}; `;
-        }
-        if (cssText.trim() !== "") {
-          // Stelle sicher, dass das Ziel eine eindeutige Klasse hat:
-          if (!dest.classList.contains("clonedInline")) {
-            dest.classList.add("clonedInline");
-          }
-          // Füge ein <style>-Element ein, das die Pseudo-Regeln für dieses Element definiert:
-          const styleEl = document.createElement("style");
-          // Verwende die Klassen des Elements als Selektor:
-          styleEl.textContent = `.${dest.className.split(" ").join(".")}${pseudo} { ${cssText} }`;
-          dest.appendChild(styleEl);
-        }
-      });
-    }
-  
-    function traverse(src, dest) {
-      copyComputedStyle(src, dest);
-      for (let i = 0; i < src.children.length; i++) {
-        traverse(src.children[i], dest.children[i]);
-      }
-    }
-  
-    traverse(element, clone);
-    return clone;
-  }
-  
-
-  document.getElementById('profil').addEventListener('click', function () {
-    const clone = cloneWithInlineStyles(document.body);
-    const snapshot = clone.outerHTML;
-    sessionStorage.setItem("profilSnapshot", snapshot);
-    // Weiterleitung zur nächsten Seite
-    window.location.href = "profil.html";
+document.addEventListener("rankingDataLoaded", function () {
+    syncRankingData();
 });
 
 

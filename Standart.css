@@ -64,6 +64,15 @@ html::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
 
+#iframe{
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+iframe::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
 .global-overlay {
     position: fixed;
     top: 0;

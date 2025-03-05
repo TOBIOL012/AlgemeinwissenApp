@@ -1,35 +1,3 @@
-
-    const snapshot = sessionStorage.getItem("profilSnapshot");
-    if (snapshot) {
-      const overlay = document.createElement("div");
-      overlay.id = "profilOverlay";
-      overlay.style.position = "fixed";
-      overlay.style.top = "0";
-      overlay.style.left = "0";
-      overlay.style.width = "100%";
-      overlay.style.height = "100%";
-      overlay.style.zIndex = "9999";
-      // Der Snapshot enthält jetzt den gesamten HTML-Zustand inkl. Inline-Styles (auch des Bodys)
-      overlay.innerHTML = snapshot;
-      document.body.appendChild(overlay);
-    }
-
-  
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-            .then((reg) => {
-                console.log("Service Worker registriert:", reg);
-                if (navigator.serviceWorker.controller) {
-                    console.log("Service Worker aktiv, sende Nachricht");
-                    navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid: localStorage.getItem("uid") });
-                } else {
-                    console.warn("Service Worker ist registriert, aber noch nicht aktiv.");
-                }
-            })
-            .catch((err) => console.error("Service Worker Registrierung fehlgeschlagen:", err));
-    }
-
     function updateStatistics() {
         let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
         let correctAnswers = JSON.parse(localStorage.getItem('correctAnswers')) || [];
@@ -56,24 +24,6 @@
     updateStatistics();
 
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
-        authDomain: "besserwisser-95b63.firebaseapp.com",
-        projectId: "besserwisser-95b63",
-        storageBucket: "besserwisser-95b63.appspot.com",
-        messagingSenderId: "522066225262",
-        appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
-        measurementId: "G-P8SBRHWS84",
-    };
-    
-    console.log("Firebase wird initialisiert...");
-    
-    // Firebase initialisieren (falls nicht bereits initialisiert)
-    if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-    }
-    
-    const firestore = firebase.firestore();
     const auth = firebase.auth();
 
     // DOM-Elemente
@@ -157,8 +107,11 @@
                 .then((userCredential) => {
                     const user = userCredential.user;
                     localStorage.setItem("uid", user.uid);
-                    syncUserData(user.uid);
-                    showUsername(localStorage.getItem("username"));
+                    window.location.reload();
+                    document.addEventListener("firebaseDataLoaded", () => {
+                        updateStats(window.userData.coins, window.userData.xp, window.userData.streak, window.userData.username, window.userData.creationDate, window.userData.streakHistory, window.userData.streakOnIce, window.userData.currentprofile, window.userData.creationDate, window.userData.profilecolor);
+                        showUsername(window.userData.username);
+                    });  
                 })
                 .catch(handleError);
         }
@@ -173,7 +126,7 @@
             xp: 0,
             streak: 0,
             higheststreak: 0,
-            streakOnIce: 3, // Standardwert für "Streak auf Eis"
+            streakOnIce: 1, // Standardwert für "Streak auf Eis"
             creationDate, // Datum der Kontoerstellung
             streakHistory: [], // Initialer leerer Verlauf
             xpHistory: [],
@@ -185,6 +138,7 @@
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);
             showUsername(username);
+            window.location.reload();
             // syncUserData(uid); // This call is unnecessary and causes an error
         }).catch(handleError);
     }
@@ -192,38 +146,7 @@
     // Benutzer und Statistiken synchronisieren
     let isEventListenerAdded = false;
 
-function syncUserData(uid) {
-    console.log("syncUserData gestartet für UID:", uid);
 
-    if (!navigator.serviceWorker.controller) {
-        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-        return;
-    }
-
-    console.log("📨 Sende Nachricht an Service Worker:", { type: "initUserData", uid });
-
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid });
-        console.log("✅ Nachricht erfolgreich gesendet!");
-    } catch (error) {
-        console.error("❌ Fehler beim Senden der Nachricht an den Service Worker:", error);
-    }
-
-    if (!isEventListenerAdded) {
-        navigator.serviceWorker.addEventListener("message", (event) => {
-            console.log("📩 Nachricht vom Service Worker erhalten:", event.data);
-
-            if (event.data.type === "userDataUpdated") {
-                const data = event.data.data;
-                console.log("✅ Aktualisierte Benutzerdaten:", data);
-
-                localStorage.setItem("username", data.username);
-                updateStats(data.coins, data.xp, data.streak, data.username, data.creationDate, data.streakHistory, data.streakOnIce, data.currentprofile, data.creationDate, data.profilecolor);
-            }
-        });
-        isEventListenerAdded = true;
-    }
-}
 
     // Benutzername und Share-Button anzeigen
     function showUsername(username) {
@@ -316,7 +239,6 @@ function syncUserData(uid) {
     // Call syncUserData with the saved UID
     if (savedUID) {
         console.log("Gefundene UID im LocalStorage:", savedUID);
-        syncUserData(savedUID);
     } else {
         console.warn("Keine UID im LocalStorage gefunden.");
         userDetails.style.display = "block";
@@ -324,6 +246,11 @@ function syncUserData(uid) {
         usernameDisplay.style.display = "none";
     }
 
+    
+    document.addEventListener("firebaseDataLoaded", () => {
+        updateStats(window.userData.coins, window.userData.xp, window.userData.streak, window.userData.username, window.userData.creationDate, window.userData.streakHistory, window.userData.streakOnIce, window.userData.currentprofile, window.userData.creationDate, window.userData.profilecolor);
+        console.log("Benutzerdaten geladen:", window.userData);
+    });
 
 
 
@@ -364,25 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCounter();
     }
 
-    if (uid) {
-        navigator.serviceWorker.controller?.postMessage({ type: "initUserData", uid });
 
-        navigator.serviceWorker.addEventListener("message", (event) => {
-            if (event.data.type === "userDataUpdated") {
-                const data = event.data.data;
-                const totalXP = data.xp || 0;
-                updateXPProgress(totalXP);
-            }
-        });
-    } else {
-        console.error("Keine Benutzer-UID gefunden.");
-        const overlay = document.getElementById("profilOverlay");
-        if (overlay) {
-            overlay.remove();
-            sessionStorage.removeItem("profilSnapshot");
-        }
-        document.body.style.opacity = "1";
-    }
 
     if (xpContainer) {
         xpContainer.addEventListener('click', function () {
@@ -407,7 +316,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function navigate(nummer, duration = 200) {
-        console.log("wat");
         const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
         strichvoher2 = nummer;
         iframes.forEach(iframe => {
@@ -420,34 +328,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (nummer == 1) {
             document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-                el.style.height = "calc(100vh - 55vw - 4.3rem - 4px)";
-                el.style.overflow = "hidden";
+                document.querySelector(".iframe1").style.height = "calc(100vh - 58vw - 4rem)";
             });
         } else if (nummer == 2) {
-            updatexpbar();
+            if (strichvoher !== 2) {
+                updatexpbar();
+            }
+            
             document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-                el.style.height = "calc(100vh - 55vw - 4.3rem - 4px)";
+                el.style.height = "calc(100vh - 58vw - 4.3rem - 4px)";
                 el.style.overflow = "auto";
             });
         } else if (nummer == 3) {
             document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-                el.style.height = "100vh";
-                el.style.overflow = "hidden";
+                document.querySelector(".iframe3").style.height = "100vh";
             });
         } else if (nummer == 4) {
             document.querySelectorAll(".iframe1, .iframe2, .iframe3, .iframe4").forEach(el => {
-                el.style.height = "calc(105vw + 50rem)";
-                el.style.overflow = "hidden";
+                document.querySelector(".iframe4").style.height = "calc(105vw + 50rem)";
             });
         }
 
         // Nach der Navigation: Alle iframes auf display flex setzen
         setTimeout(() => {
             iframes.forEach((iframe) => {
-                console.log("uwu");
                 iframe.style.opacity = "1";
+                if (nummer == 1) {
+                    fetchXP();
+                } else if (nummer == 3) {
+                    fetchXP();
+                } else if (nummer == 4) {
+                    fetchXP();
+                }
             });
-        }, 100);
+        }, 300);
     }
 
 
@@ -480,9 +394,9 @@ setTimeout(() => {
                 if (!isDragging) return;
 
                 const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-                const element = document.querySelector(".iframe2");
+                const element = document.querySelector(".profil");
 
-                if (document.body.scrollTop / window.innerHeight * 100 < 5) {
+                if (element.scrollTop / window.innerHeight * 100 < 5) {
                     document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
                         const baseTranslate = (idx - strichvoher + 1) * 100;
                         if (idx === 0) {
@@ -502,18 +416,18 @@ setTimeout(() => {
         });
 
         iframe.addEventListener('touchend', (event) => {
-            // Prüfen, ob das Touch-Event innerhalb von .xp-pfad passiert ist
             const touchedElement = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
-
+        
             if (touchedElement && touchedElement.closest('.xp-pfad')) {
-                return; // Falls .xp-pfad berührt wurde, nichts tun
+                // Falls .xp-pfad berührt wurde, vertikales Scrollen erlauben, aber nichts weiter tun
+                return;
             }
-
+        
             isDragging = false;
             const deltaX = currentX - startX;
-            const threshold = window.innerWidth / 4; // Threshold for swipe
-
-            // Bestimme die nächste Position basierend auf der Swipe-Richtung
+            const threshold = window.innerWidth / 4; // Threshold für Swipe
+        
+            // Swipe-Erkennung nur, wenn nicht in .xp-pfad
             if (deltaX < -threshold && strichvoher < 4) {
                 navigate(strichvoher + 1);
                 updateIndicator(strichvoher + 1);
@@ -521,7 +435,6 @@ setTimeout(() => {
                 navigate(strichvoher - 1);
                 updateIndicator(strichvoher - 1);
             } else {
-                // Zurück zur ursprünglichen Position
                 navigate(strichvoher);
             }
         });
@@ -537,51 +450,11 @@ setTimeout(() => {
 }, 300); // **Warte 0.1 Sekunden bevor der Code ausgeführt wird**
 
 
-
-
-
-
-function cloneWithInlineStyles(element) {
-    const clone = element.cloneNode(true);
-    const styles = {};
-
-    function copyComputedStyle(src, dest, path) {
-        const computed = window.getComputedStyle(src);
-        const styleObject = {};
-
-        for (let i = 0; i < computed.length; i++) {
-            const key = computed[i];
-            const value = computed.getPropertyValue(key);
-            if (value !== '') styleObject[key] = value; // Nur nicht-leere Werte speichern
-        }
-
-        if (Object.keys(styleObject).length > 0) {
-            styles[path] = styleObject;
-        }
-    }
-
-    function traverse(src, dest, path = '') {
-        if (!src || !dest) return;
-        copyComputedStyle(src, dest, path);
-
-        for (let i = 0; i < src.children.length; i++) {
-            traverse(src.children[i], dest.children[i], `${path} > ${src.children[i].tagName.toLowerCase()}:nth-child(${i + 1})`);
-        }
-    }
-
-    traverse(element, clone);
-
-    // Speicherplatzfreundliche Speicherung der CSS-Stile
-    sessionStorage.setItem("profilStyles", JSON.stringify(styles));
-    sessionStorage.setItem("profilHTML", clone.outerHTML);
-
-    return clone;
-}
-
 // Klickevent mit weniger Speicherverbrauch
 document.querySelector('.Profilbild-container').addEventListener('click', function () {
-    cloneWithInlineStyles(document.querySelector('.Profilbild-container'));
-    window.location.href = "profil-auswahl.html";
+    const frames = document.querySelectorAll("div[id='iframe']");
+    frames.forEach(frame => frame.style.display = "none");
+    document.querySelector(".profil-auswahl").style.display = "flex";
 });
 
 
