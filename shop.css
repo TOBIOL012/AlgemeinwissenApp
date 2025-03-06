@@ -15,14 +15,13 @@
 .shop-header {
     position: relative; /* Ermöglicht die absolute Positionierung der Münzen */
     display: flex;
-    margin-left: -19px;
-    margin-right: -19px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     justify-content: center;
     align-items: center;
     background-color: #141F25;
     border-bottom: 1px solid white;
+    color: white;
 }
 
 .title{
@@ -54,15 +53,16 @@
 
 .coins-shop {
     padding-right: 0px;
+    font-size: 1.4rem;
 }
 
 .coinse-img {
-    padding-right: 4px;
+    padding-left: 4px;
 }
 
 .currency img {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
 }
 
 /* ✅ Neue Überschrift für das Inventar */
@@ -74,55 +74,59 @@
 
 /* ✅ Inventar jetzt über die volle Breite */
 .inventory {
-    width: 50%;
     display: flex;
-    gap: 10px;
+    gap: 5%;
     margin-bottom: 35px;
+    width: 100%;
 }
 
 .inventory-item1 {
-    flex: 1;
+    display: flex;
     align-items: center;
-    background-color: #141F25;
-    border: 3px solid #1F2B36;
-    padding: 10px 15px;
+    justify-content: center;
+    gap: 0.25rem;
+    background-color: #2f4957;
+    padding: 0.6rem 0;
     border-radius: 12px;
     text-align: center;
+    width: 47.5%;
 }
 
 .inventory-item1 img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 #streak-count {
-    font-size: 1rem;
+    font-size: 1.75rem;
 }
 
 .inventory-item2 {
-    flex: 1;
+    display: flex;
     align-items: center;
-    background-color: #141F25;
-    border: 3px solid #1F2B36;
-    padding: 10px 15px;
+    justify-content: center;
+    gap: 0.25rem;
+    background-color: #2f4957;
+    padding: 0.6rem 0;
     border-radius: 12px;
     text-align: center;
+    width: 47.5%;
 }
 
 .inventory-item2 img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 #token-count {
-    font-size: 1rem;
+    font-size: 1.75rem;
 }
 
 /* Shop-Items */
 .shop-items {
     display: flex;
     flex-direction: column;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 /* ✅ Überschrift für die Shop-Items */
@@ -132,13 +136,13 @@
     font-size: 1.5rem;
 }
 
-/* ✅ Shop-Item: Bessere Padding & Ausrichtung */
 .shop-item1 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch; /* Damit nehmen die inneren Container die volle Breite ein */
+    text-align: left;
     margin-bottom: 8px;
     justify-content: space-between;
-    background-color: none;
     border: 2px solid #2f4957;
     padding: 15px 20px;
     border-radius: 12px;
@@ -148,9 +152,11 @@
 
 .shop-item2 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch; /* Damit nehmen die inneren Container die volle Breite ein */
+    text-align: left;
+    margin-bottom: 8px;
     justify-content: space-between;
-    background-color: none;
     border: 2px solid #2f4957;
     padding: 15px 20px;
     border-radius: 12px;
@@ -204,6 +210,23 @@
     font-size: 1.5rem;
     line-height: 1; /* Verhindert, dass Text nach oben oder unten rutscht */
 }
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Volle Breite für korrekte Links-/Rechtsausrichtung */
+}
+  
+  .shop-item-description {
+    text-align: left;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #ccc; /* Beispiel: etwas helleres Grau */
+    max-width: 75%;
+  }
+  
+  
 
 
 
@@ -285,27 +308,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #2a3a4a;
+    border-radius: 23px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    z-index: 999;
+
 }
 
 .profile-picture {
-    background: rgb(153, 93, 226);
-    border: 2px solid #2f4957;
-    padding: 4px;
-    padding-top: 8px;
+    background: var(--profile-bg, rgb(153, 93, 226)); /* Default-Farbe, wenn keine Variable gesetzt ist */
+    padding: 1.5rem;
+    padding-top: 0.7rem;
     padding-bottom: 0;
-    border-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90px; /* Falls nötig */
+    width: 90px;
+}
+
+
+.profile-bottom {
+    text-align: center;
+    justify-content: center;
 }
 
 .profile-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: white;
-    margin-top: 3px;
+    margin-top: 0.3rem;
 }
 
 .profile-price {
@@ -317,15 +354,37 @@
 }
 
 .coin-icon {
-    width: 12px; /* Viel kleiner */
-    height: 12px;
+    width: 15px; /* Viel kleiner */
+    height: 15px;
 }
 
 
 
 .profile-picture img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
 }
+
+.buy-button {
+    display: flex;
+    background-color: rgb(94, 233, 136);
+    border: none;
+    width: 7.3rem;
+    border-radius: 8px;
+    margin-top: 0.7rem;
+    margin-bottom: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
 
 

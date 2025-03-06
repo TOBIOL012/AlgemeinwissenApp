@@ -1,0 +1,211 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    padding-top:1.5rem;
+    width: 100%;
+}
+
+.Überschrift-missions {
+    position:relative;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid white;
+    color: white;
+    background-color: #141F25;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    text-align: center;
+    font-size: var(--font-size-header);
+}
+
+.missions {
+    height: 100%;
+    width: 100%;
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #141F25;
+    color: white;
+    align-items: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+}
+
+.daily-missions{
+    padding: 1rem 0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mission{
+    max-width: 30rem;
+    max-height: 9.4rem;
+    font-size:1.4rem;
+    color:#141F25;
+    width: 90vw;
+    height: 28vw;
+    padding: 0.1rem;
+    margin-bottom:1rem;
+    background-image: url('schriftrolle.png');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ü-daily-missions{
+    font-size: 1.4rem;
+    width: 84vw;
+    text-align: left;
+}
+
+.mission-header{
+    display:flex;
+    width: 84%;
+    margin-left:4%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:4%;
+}
+
+.reward-header{
+    font-size: 1.2rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reward-header img{
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Fortschrittsbalken-Container */
+.progress-bar {
+    width: 82%;
+    margin-left: 3%;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: #927457; /* Hintergrund */
+    overflow: hidden;
+    appearance: none; /* Standard-Styling entfernen */
+    position: relative;
+}
+
+/* Fortschritt (für Chrome, Edge, Safari) */
+.progress-bar::-webkit-progress-value {
+    border-radius: 0.5rem;
+    background-color: #E48D45; /* Farbe des Fortschritts */
+    transition: width 0.5s ease-in-out;
+}
+
+/* Hintergrund (für Chrome, Edge, Safari) */
+.progress-bar::-webkit-progress-bar {
+    background-color: #927457;
+    border-radius: 0.5rem;
+}
+
+/* Fortschritt (für Firefox) */
+.progress-bar::-moz-progress-bar {
+    background-color: #E48D45;
+    border-radius: 0.5rem;
+}
+
+.progress-bar::-webkit-progress-value::after {
+    content: "";
+    position: absolute;
+    right: 0px; /* Am Ende der Fortschrittsleiste */
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.abzeichen{
+    font-size: 1.2rem;
+    display:flex;
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:0.5rem;
+}
+
+.progress-bar-abzeichen {
+    width: 94%;
+    margin-left: 3%;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: #1f3e4f; /* Hintergrund */
+    overflow: hidden;
+    appearance: none; /* Standard-Styling entfernen */
+    position: relative;
+}
+
+.progress-bar-abzeichen::-webkit-progress-value {
+    border-radius: 0.5rem;
+    background-color: #7f9bb6; /* Farbe des Fortschritts */
+    transition: width 0.5s ease-in-out;
+}
+
+/* Hintergrund (für Chrome, Edge, Safari) */
+.progress-bar-abzeichen::-webkit-progress-bar {
+    background-color: #1f3e4f;
+    border-radius: 0.5rem;
+}
+
+/* Fortschritt (für Firefox) */
+.progress-bar-abzeichen::-moz-progress-bar {
+    background-color: #7f9bb6;
+    border-radius: 0.5rem;
+}
+
+.progress-bar-abzeichen::-webkit-progress-value::after {
+    content: "";
+    position: absolute;
+    right: 0px; /* Am Ende der Fortschrittsleiste */
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.abzeichen-header{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+
+}
+
+.abzeichen-container{
+    padding: 1rem 0;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.abzeichen-title{
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom:0.5rem;
+}
+

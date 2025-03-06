@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="ranking.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="profil-auswahl.css">
+    <link rel="stylesheet" href="missions.css">
     <link rel="stylesheet" href="Standart.css">
     <link rel="manifest" href="/manifest.json">
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
@@ -77,7 +78,34 @@
   </div>
 
   <div class="missions" id="iframe" style="display:none;">
-
+    <header>
+      <div class="header">
+        <div class="Überschrift-missions">Missionen</div>
+      </div>
+    </header>
+    <a class="ü-daily-missions">Tägliche Missionen</a>
+    <div class="daily-missions">
+      <div class="mission">
+        <div class="mission-header">
+          <a class="mission-title">Mission 1</a>
+          <div class="reward-header">
+              <a class="reward-amount">+100</a>
+              <img src="icons8-smaragd-64.png" alt="Münzen">
+          </div>
+        </div>
+        <progress class="progress-bar" value="30" max="100"></progress>
+      </div>
+    </div>
+    <a class="ü-daily-missions">Abzeichen</a>
+    <div class="abzeichen-container">
+      <div class="abzeichen">
+        <div class="abzeichen-header">
+          <a class="abzeichen-title">Mission 1</a>
+          <progress class="progress-bar-abzeichen" value="30" max="100"></progress>
+        </div>
+        <img src="icons8-smaragd-64.png" alt="Münzen">
+      </div>
+    </div>
   </div>
 
     
@@ -99,19 +127,17 @@
   
   
   
-  
-  
-  <div class="shop" id="iframe" style="display:none;">
-    <header class="shop-header">
-      <h1 class="title">Shop</h1>
-      <div class="currency">
-        <div class="kohle">
-          <img class="coinse-img" src="coin.png" alt="Münzen">
-          <span id="coins" class="coins-shop">...</span>
-        </div>
+  <header class="shop-header">
+    <h1 class="title">Shop</h1>
+    <div class="currency">
+      <div class="kohle">
+        <span id="coins" class="coins-shop">...</span>
+        <img class="coinse-img" src="coin.png" alt="Münzen">
       </div>
-    </header>
-    
+    </div>
+  </header>
+  
+  <div class="shop" id="iframe" style="display:none;">    
 
   <h2 class="inventory-title">Aktuell auf Lager</h2>
 <section class="inventory">
@@ -126,109 +152,144 @@
 </section>
 
 
-  <section class="shop-items">
-    <h2 class="shop-items-title">Shop-Items</h2> <!-- Neue Überschrift -->
-    <div class="shop-item1" onclick="buyStreak()">
-        <div class="left1">
-            <span class="einmal">1x</span>
-            <img src="icons8-kalender-96 (1).png" alt="Streak auf Eis">
-        </div>
-        <div class="right1">
-            <span class="price">200</span>
-            <img src="coin.png" alt="Münzen">
-        </div>
+<section class="shop-items"> 
+  <h2 class="shop-items-title">Shop-Items</h2> <!-- Neue Überschrift -->
+  
+  <div class="shop-item1" onclick="buyStreak()">
+    <div class="top-row">
+      <div class="left1">
+        <span class="einmal">1x</span>
+        <img src="icons8-kalender-96 (1).png" alt="Streak auf Eis">
+      </div>
+      <div class="right1">
+        <span class="price">200</span>
+        <img src="coin.png" alt="Münzen">
+      </div>
     </div>
-    
-    <div class="shop-item2" onclick="buyTokens()">
-        <div class="left2">
-            <span class="zehnmal">10x</span>
-            <img src="token.png" alt="Tokens">
-        </div>
-        <div class="right2">
-            <span class="price">200</span>
-            <img src="coin.png" alt="Münzen">
-        </div>
+    <!-- Neue Zeile für den Beschreibungstext -->
+    <div class="shop-item-description">
+      <a>Mit dem Urlaubstag kannst du dich ein Tag entspannen</a>
     </div>
+  </div>
+  
+  <div class="shop-item2" onclick="buyTokens()">
+    <div class="top-row">
+      <div class="left2">
+        <span class="zehnmal">10x</span>
+        <img src="token.png" alt="Streak auf Eis">
+      </div>
+      <div class="right2">
+        <span class="price">200</span>
+        <img src="coin.png" alt="Münzen">
+      </div>
+    </div>
+    <!-- Neue Zeile für den Beschreibungstext -->
+    <div class="shop-item-description">
+      <a>Mit Tokens kannst du eine Frage leichter beantworten</a>
+    </div>
+  </div>
 </section>
 
 
 
-  <section class="profile-picture-shop">
-      <h2 class="profilbilder-title">Profilbilder</h2>
-      <div class="profile-picture-container">
-          <div class="profile-picture-track">
-              
-              <div class="profile-picture-wrapper">
-                  <div class="profile-picture">
-                      <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-                  </div>
-                  <div class="profile-name">Albert Einstein</div>
-                  <div class="profile-price">
-                      <span class="price-amount">100</span>
-                      <img src="coin.png" alt="Münzen" class="coin-icon">
-                  </div>
-              </div>
-              
-              <div class="profile-picture-wrapper">
-                  <div class="profile-picture">
-                      <img src="/Profilbilder/DonaldTrump.png" alt="Profilbild 2">
-                  </div>
-                  <div class="profile-name">Donald Trump</div>
-                  <div class="profile-price">
-                      <span class="price-amount">250</span>
-                      <img src="coin.png" alt="Münzen" class="coin-icon">
-                  </div>
-              </div>
-
-              <div class="profile-picture-wrapper">
-                  <div class="profile-picture">
-                      <img src="/Profilbilder/Tutanchamun.png" alt="Profilbild 3">
-                  </div>
-                  <div class="profile-name">Tutanchamun</div>
-                  <div class="profile-price">
-                      <span class="price-amount">250</span>
-                      <img src="coin.png" alt="Münzen" class="coin-icon">
-                  </div>
-              </div>
-              
-              <div class="profile-picture-wrapper">
-                <div class="profile-picture">
-                    <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-                </div>
-                <div class="profile-name">Albert Einstein</div>
-                <div class="profile-price">
-                    <span class="price-amount">100</span>
-                    <img src="coin.png" alt="Münzen" class="coin-icon">
-                </div>
-            </div>
-
-            <div class="profile-picture-wrapper">
-              <div class="profile-picture">
-                  <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-              </div>
-              <div class="profile-name">Albert Einstein</div>
-              <div class="profile-price">
-                  <span class="price-amount">100</span>
-                  <img src="coin.png" alt="Münzen" class="coin-icon">
-              </div>
-          </div>
-              
-          <div class="profile-picture-wrapper">
-            <div class="profile-picture">
-                <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-            </div>
-            <div class="profile-name">Albert Einstein</div>
-            <div class="profile-price">
-                <span class="price-amount">100</span>
-                <img src="coin.png" alt="Münzen" class="coin-icon">
-            </div>
+<section class="profile-picture-shop">
+  <h2 class="profilbilder-title">Profilbilder</h2>
+  <div class="profile-picture-container">
+    <div class="profile-picture-track">
+      
+      <!-- Erster Eintrag -->
+      <div class="profile-picture-wrapper">
+        <div class="profile-picture" style="--profile-bg: rgb(93, 142, 226);">
+          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
         </div>
-              
-              
-              
-          </div>
+        <div class="profile-bottom">
+          <div class="profile-name">Albert Einstein</div>
+          <button class="buy-button">
+            <span class="price-amount">100</span>
+            <img src="coin.png" alt="Münzen" class="coin-icon">
+          </button>
+        </div>
       </div>
-  </section>
+      
+      <!-- Zweiter Eintrag -->
+      <div class="profile-picture-wrapper">
+        <div class="profile-picture" style="--profile-bg: rgb(222, 131, 218);">
+          <img src="/Profilbilder/DonaldTrump.png" alt="Profilbild 2">
+        </div>
+        <div class="profile-bottom">
+          <div class="profile-name">Donald Trump</div>
+          <button class="buy-button">
+            <span class="price-amount">250</span>
+            <img src="coin.png" alt="Münzen" class="coin-icon">
+          </button>
+        </div>
+      </div>
+
+      <!-- Dritter Eintrag -->
+      <div class="profile-picture-wrapper">
+        <div class="profile-picture" style="--profile-bg: rgb(153, 93, 226);">
+          <img src="/Profilbilder/Tutanchamun.png" alt="Profilbild 3">
+        </div>
+        <div class="profile-bottom">
+          <div class="profile-name">Tutanchamun</div>
+          <button class="buy-button">
+            <span class="price-amount">250</span>
+            <img src="coin.png" alt="Münzen" class="coin-icon">
+          </button>
+        </div>
+      </div>
+      
+      <!-- Vierter Eintrag -->
+      <div class="profile-picture-wrapper">
+        <div class="profile-picture" style="--profile-bg: #ff5733;">
+          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+        </div>
+        <div class="profile-bottom">
+          <div class="profile-name">Albert Einstein</div>
+          <button class="buy-button">
+            <span class="price-amount">100</span>
+            <img src="coin.png" alt="Münzen" class="coin-icon">
+          </button>
+        </div>
+      </div>
+
+      <!-- Fünfter Eintrag -->
+      <div class="profile-picture-wrapper">
+        <div class="profile-picture" style="--profile-bg: #ff5733;">
+          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+        </div>
+        <div class="profile-bottom">
+          <div class="profile-name">Albert Einstein</div>
+          <button class="buy-button">
+            <span class="price-amount">100</span>
+            <img src="coin.png" alt="Münzen" class="coin-icon">
+          </button>
+        </div>
+      </div>
+
+      <!-- Sechster Eintrag -->
+      <div class="profile-picture-wrapper">
+        <div class="profile-picture" style="--profile-bg: #ff5733;">
+          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
+        </div>
+        <div class="profile-bottom">
+          <div class="profile-name">Albert Einstein</div>
+          <button class="buy-button">
+            <span class="price-amount">100</span>
+            <img src="coin.png" alt="Münzen" class="coin-icon">
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
   </div>
 
   <div class="profil" id="iframe" style="display:none;">
@@ -545,7 +606,7 @@
       <img src="nav-bar-icons/shop.png" alt="Shop" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
     </a>
     <a class="nav-button">
-      <img src="https://img.icons8.com/fluency-systems-filled/80/FFFFFF/user.png" alt="Profil">
+      <img src="https://img.icons8.com/fluency-systems-filled/80/FFFFFF/user.png" alt="Profil" onclick="window.themeColor(window.userData.profilecolor || '#141F25');">
     </a>
   </div>
 
