@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("firebaseDataLoaded", () => {
-    console.log("🔄 Neue hallo:", value);
     syncStatsFromFirestore(); // Firestore-Werte abrufen
 }); 
 /* Navigation
@@ -81,6 +80,8 @@ if (lastActiveFrameIndex !== null && frames[lastActiveFrameIndex]) {
 navButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
         frames.forEach(frame => frame.style.display = "none");
+        navButtons.forEach(button => button.style.opacity = "0.75");
+        button.style.opacity = "1";
 
         if (frames[index]) {
             if (index === 3) {
@@ -92,6 +93,11 @@ navButtons.forEach((button, index) => {
         }
     });
 });
+
+navButtons.forEach(button => button.style.opacity = "0.75");
+if (lastActiveFrameIndex !== null && navButtons[lastActiveFrameIndex]) {
+    navButtons[lastActiveFrameIndex].style.opacity = "1";
+}
 
 function themeColor(color) {
     let metaThemeColor = document.querySelector('meta[name="theme-color"]');

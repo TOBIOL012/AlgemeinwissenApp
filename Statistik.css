@@ -27,6 +27,10 @@ header {
     margin-top: 15%;
 }
 
+.headline-statistiken {
+    font-size: 2rem;
+}s
+
 #spieler-container {
     width: 90%;
     padding-left: 5%;

@@ -383,6 +383,7 @@ body {
 }
 
 .nav-bar {
+    z-index: 9999;
     position: fixed;
     width: 100vw;
     background-color: #141F25;
@@ -417,7 +418,7 @@ body {
 }
 
 .nav-button:active{
-    scale: 0.75;
+    scale: 0.75 !important;
 }
 
 .nav-button::before {
