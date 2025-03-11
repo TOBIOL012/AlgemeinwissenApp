@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    
-
     const uid = localStorage.getItem("uid");
     console.log(uid);
     
@@ -36,10 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
     coinsElement.style.opacity = '1';
 
     extendStreak();
+    localStorage.setItem("mission-game", (parseInt(localStorage.getItem("mission-game")) || 0) + 1);
+    
 
 
     // Fortschrittsanzeige
     const percentage = Math.round((correctCount / 15) * 100);
+    if (percentage == 100){
+        localStorage.setItem("mission-perfectgame", (parseInt(localStorage.getItem("mission-perfectgame")) || 0) + 1);
+    }
     document.querySelector('.progress').style.width = `${percentage}%`;
     document.querySelector('.progress a').textContent = `${percentage}%`;
 

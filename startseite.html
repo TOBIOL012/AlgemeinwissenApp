@@ -30,6 +30,7 @@
     <script src="profil.js" defer></script>
     <script src="ranking.js" defer></script>
     <script src="shop.js" defer></script>
+    <script src="missions.js" defer></script>
     <script src="profil-auswahl.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="Statistikprofil.js" defer></script>
@@ -85,26 +86,11 @@
     </header>
     <a class="ü-daily-missions">Tägliche Missionen</a>
     <div class="daily-missions">
-      <div class="mission">
-        <div class="mission-header">
-          <a class="mission-title">Mission 1</a>
-          <div class="reward-header">
-              <a class="reward-amount">+100</a>
-              <img src="icons8-smaragd-64.png" alt="Münzen">
-          </div>
-        </div>
-        <progress class="progress-bar" value="30" max="100"></progress>
-      </div>
+
     </div>
     <a class="ü-daily-missions">Abzeichen</a>
     <div class="abzeichen-container">
-      <div class="abzeichen">
-        <div class="abzeichen-header">
-          <a class="abzeichen-title">Mission 1</a>
-          <progress class="progress-bar-abzeichen" value="30" max="100"></progress>
-        </div>
-        <img src="icons8-smaragd-64.png" alt="Münzen">
-      </div>
+      
     </div>
   </div>
 
@@ -127,17 +113,19 @@
   
   
   
-  <header class="shop-header">
-    <h1 class="title">Shop</h1>
-    <div class="currency">
-      <div class="kohle">
-        <span id="coins" class="coins-shop">...</span>
-        <img class="coinse-img" src="coin.png" alt="Münzen">
-      </div>
-    </div>
-  </header>
   
-  <div class="shop" id="iframe" style="display:none;">    
+  
+  <div class="shop" id="iframe" style="display:none;">   
+    
+    <header class="shop-header">
+      <h1 class="title">Shop</h1>
+      <div class="currency">
+        <div class="kohle">
+          <span id="coins" class="coins-shop">...</span>
+          <img class="coinse-img" src="coin.png" alt="Münzen">
+        </div>
+      </div>
+    </header>
 
   <h2 class="inventory-title">Aktuell auf Lager</h2>
 <section class="inventory">
@@ -204,10 +192,10 @@
         </div>
         <div class="profile-bottom">
           <div class="profile-name">Albert Einstein</div>
-          <button class="buy-button">
+          <button class="buy-button" onclick="buyProfilePicture('/Profilbilder/AlbertEinstein.png', 100)">
             <span class="price-amount">100</span>
             <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>
+          </button>          
         </div>
       </div>
       
@@ -597,7 +585,7 @@
       <img src="nav-bar-icons/icons8-home.svg" alt="Home" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
     </a>
     <a class="nav-button">
-      <img src="https://img.icons8.com/material-rounded/80/FFFFFF/star--v1.png" alt="Missions" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+      <img src="https://img.icons8.com/material-rounded/80/FFFFFF/star--v1.png" alt="Missions" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25'); window.updateProgress();">
     </a>
     <a class="nav-button">
       <img src="nav-bar-icons/ranking.png" alt="Ranking" style="width: 2.4rem; height: 2.4rem; margin-bottom: -0.3rem;" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">

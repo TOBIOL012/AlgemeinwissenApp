@@ -124,6 +124,7 @@
             username,
             coins: 0,
             xp: 0,
+            token: 0,
             streak: 0,
             higheststreak: 0,
             streakOnIce: 1, // Standardwert für "Streak auf Eis"
@@ -132,8 +133,7 @@
             xpHistory: [],
             profilepictures: ["AlbertEinstein.png"],
             currentprofile: "AlbertEinstein.png",
-            profilecolor: "#5d8ee2",
-            token: 0
+            profilecolor: "#5d8ee2"
         }).then(() => {
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);
@@ -425,7 +425,7 @@ setTimeout(() => {
         
             isDragging = false;
             const deltaX = currentX - startX;
-            const threshold = window.innerWidth / 4; // Threshold für Swipe
+            const threshold = window.innerWidth / 6; // Threshold für Swipe
         
             // Swipe-Erkennung nur, wenn nicht in .xp-pfad
             if (deltaX < -threshold && strichvoher < 4) {

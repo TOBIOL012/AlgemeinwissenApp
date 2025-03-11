@@ -302,6 +302,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateStats(randomQuestion, isMatch);
     
                 answers.forEach(btn => btn.disabled = true);
+
+                localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase())) || 0) + 1);
     
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
                     this.classList.add('correct-answer');

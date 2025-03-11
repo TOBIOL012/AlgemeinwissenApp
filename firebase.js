@@ -29,7 +29,9 @@ window.userData = {
     profilepictures: ["AlbertEinstein.png"],
     currentprofile: "AlbertEinstein.png",
     profilecolor: "#5d8ee2",
-    token: 0
+    token: 0,
+    dailyTasks: 0,
+    lifeTasks: 0,
 };
 
 window.ranking = [];

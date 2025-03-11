@@ -8,6 +8,7 @@ header {
     width: 100%;
 }
 
+
 .Überschrift-missions {
     position:relative;
     width: 100%;
@@ -40,7 +41,7 @@ header {
 }
 
 .daily-missions{
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -49,37 +50,49 @@ header {
 
 }
 
-.mission{
-    max-width: 30rem;
-    max-height: 9.4rem;
-    font-size:1.4rem;
-    color:#141F25;
-    width: 90vw;
-    height: 28vw;
-    padding: 0.1rem;
-    margin-bottom:1rem;
-    background-image: url('schriftrolle.png');
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.mission-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: min(4.5vw, 1.2rem);
 }
 
+
+.mission{
+    border-radius: 2rem;
+    background-color: #43576e;
+    font-size:1.2rem;
+    color:#5c483b;
+    min-width: 88vw;
+    height: 25.5vw;
+    padding: 0.1rem;
+    margin-bottom:0.7rem;
+    background-image: url('schriftrolle.png');
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: none;
+    color:white;
+}
+
+
+
+
 .ü-daily-missions{
-    font-size: 1.4rem;
-    width: 84vw;
+    font-size: 1.5rem;
+    width: 88vw;
     text-align: left;
 }
 
 .mission-header{
     display:flex;
     width: 84%;
-    margin-left:4%;
     justify-content: space-between;
     align-items: center;
     margin-bottom:4%;
+    
 }
 
 .reward-header{
@@ -90,57 +103,68 @@ header {
 }
 
 .reward-header img{
-    width: 2rem;
-    height: 2rem;
+    margin-left: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* Fortschrittsbalken-Container */
 .progress-bar {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     width: 82%;
-    margin-left: 3%;
     height: 1rem;
-    border-radius: 0.5rem;
-    background-color: #927457; /* Hintergrund */
+    border-radius: 0.6rem;
+    background-color: #c59267; /* Hintergrund */
     overflow: hidden;
     appearance: none; /* Standard-Styling entfernen */
     position: relative;
+    background-color: #2a3948; /* Hintergrund */
 }
 
 /* Fortschritt (für Chrome, Edge, Safari) */
-.progress-bar::-webkit-progress-value {
-    border-radius: 0.5rem;
-    background-color: #E48D45; /* Farbe des Fortschritts */
-    transition: width 0.5s ease-in-out;
+.progress {
+    width: 82%;
+    height: 1rem;
+    border-radius: 0.6rem;
+    background-color: #f99623; /* Hintergrund */
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: center;
 }
 
-/* Hintergrund (für Chrome, Edge, Safari) */
-.progress-bar::-webkit-progress-bar {
-    background-color: #927457;
-    border-radius: 0.5rem;
+.progress-finished {
+    width: 82%;
+    height: 1rem;
+    border-radius: 0.6rem;
+    background-color: #7db76b; /* Hintergrund */
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: center;
 }
 
-/* Fortschritt (für Firefox) */
-.progress-bar::-moz-progress-bar {
-    background-color: #E48D45;
-    border-radius: 0.5rem;
+.highlight{
+    margin-top:0.2rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    width: calc(100% - 1rem);
+    background-color: #febe5f;
 }
 
-.progress-bar::-webkit-progress-value::after {
-    content: "";
-    position: absolute;
-    right: 0px; /* Am Ende der Fortschrittsleiste */
-    top: 50%;
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
-    transform: translate(50%, -50%);
+.highlight-finished{
+    margin-top:0.2rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    width: calc(100% - 1rem);
+    background-color: #9dd28d;
 }
 
 .abzeichen{
+    gap:0.5rem;
     font-size: 1.2rem;
     display:flex;
-    width: 85%;
+    width: 88%;
     align-items: center;
     justify-content: space-between;
     margin-bottom:0.5rem;
@@ -187,7 +211,7 @@ header {
     transform: translate(50%, -50%);
 }
 
-.abzeichen-header{
+.abzeichen-inner{
     display:flex;
     flex-direction: column;
     width:100%;
@@ -195,17 +219,63 @@ header {
 }
 
 .abzeichen-container{
-    padding: 1rem 0;
+    gap: 2rem;
+    padding: 1.5rem 0;
     display:flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 8rem;
 }
 
 .abzeichen-title{
     text-align: left;
-    padding-left: 1rem;
-    padding-bottom:0.5rem;
+    padding-left: 0.5rem;
 }
+
+.abzeichen-header{
+    display:flex;
+    flex-direction:column;
+}
+
+.abzeichen-header-header{
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:0.4rem;
+}
+
+.abzeichen-erklärung{
+    font-size:0.95rem;
+    color:#b6c7d1;
+    text-align: left;
+    padding:0rem 0.5rem;
+    padding-bottom:0.6rem;
+}
+
+.progress-abzeichen {
+    width: 82%;
+    height: 1rem;
+    border-radius: 0.6rem;
+    background-color: #e0e6eb; /* Hintergrund */
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
+
+
+.img img{
+    width: auto;
+    height: 4rem;
+}
+
+.img{
+    width:4rem;
+    height:4rem;
+    display:flex;
+    align-items:center;
+}
+
 
