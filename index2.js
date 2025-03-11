@@ -478,6 +478,9 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
         // Verarbeite die Antwort basierend auf dem Übereinstimmungsstatus
         if (isMatch) {
             correctCount++;
+            localStorage.setItem("mission-" + Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + Kategorie.toLowerCase())) || 0) + 1);
+            localStorage.setItem("mission-" + Kategorie.toLowerCase() + "1", (parseInt(localStorage.getItem("mission-" + Kategorie.toLowerCase() + "1")) || 0) + 1);
+            localStorage.setItem("mission-question1", (parseInt(localStorage.getItem("mission-question1")) || 0) + 1);
             console.log('Richtig! Aktuelle Anzahl der richtigen Antworten:', correctCount);
             inputField.classList.add('correct');
             micButton.classList.add('correct');

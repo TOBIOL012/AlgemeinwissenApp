@@ -616,6 +616,15 @@ const musik = [
         "Schwierigkeitsgrad": "mittel",
         "Fakt": "Die Romantik folgt direkt auf das Zeitalter der Klassik"
     },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Epoche fand direkt vor der Klassik statt?",
+        "Antworten": ["Barock", "Romantik", "Renaissance", "Moderne"],
+        "RichtigeAntwort": "Barock",
+        "RichtigeAntwortMöglichkeiten": "Barock",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Barockzeit ging der Klassik voraus und beeinflusste viele musikalische Entwicklungen,"
+    },    
     { // Klassik
         "Kategorie": "Musik",
         "Frage": "Welche musikalische Form war während der Klassik besonders beliebt?",
@@ -781,6 +790,27 @@ const musik = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Robert Schumann schrieb das Stück 'Träumerei', ein bekanntes Klavierwerk der Romantik"
     },
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Epoche fand direkt vor der Romantik statt?",
+        "Antworten": ["Klassik", "Barock", "Renaissance", "Moderne"],
+        "RichtigeAntwort": "Klassik",
+        "RichtigeAntwortMöglichkeiten": "Klassik",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Klassik ging der Romantik voraus und legte mit ihren klaren Strukturen den Grundstein für den emotionalen Stil der Romantik,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Epoche folgte direkt auf die Romantik?",
+        "Antworten": ["Moderne", "Barock", "Klassik", "Renaissance"],
+        "RichtigeAntwort": "Moderne",
+        "RichtigeAntwortMöglichkeiten": "Moderne",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Moderne folgte auf die Romantik und führte zu radikalen musikalischen Neuerungen und Experimenten,"
+    },
+    
+    
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1033,24 +1063,6 @@ const musik = [
     },
     { // Zeitgenössische Musik
         "Kategorie": "Musik",
-        "Frage": "Welcher Popstar ist bekannt für Hits wie 'Thriller' und 'Billie Jean'?",
-        "Antworten": ["Michael Jackson", "Prince", "Madonna", "Elton John"],
-        "RichtigeAntwort": "Michael Jackson",
-        "RichtigeAntwortMöglichkeiten": "Michael Jackson",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Michael Jackson, bekannt für Hits wie 'Thriller' und 'Billie Jean', wird oft als 'King of Pop' bezeichnet"
-    },
-    { // Zeitgenössische Musik
-        "Kategorie": "Musik",
-        "Frage": "Welcher Musiker wird oft als 'King of Pop' bezeichnet?",
-        "Antworten": ["Michael Jackson", "Prince", "Madonna", "Elton John"],
-        "RichtigeAntwort": "Michael Jackson",
-        "RichtigeAntwortMöglichkeiten": "Michael Jackson",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Michael Jackson, bekannt für Hits wie 'Thriller' und 'Billie Jean', wird oft als 'King of Pop' bezeichnet"
-    },
-    { // Zeitgenössische Musik
-        "Kategorie": "Musik",
         "Frage": "Welche revolutionäre Musikrichtung eroberte in den 1980er Jahren die Tanzflächen?",
         "Antworten": ["Elektronische Musik", "Reggae", "Jazz", "Blues"],
         "RichtigeAntwort": "Elektronische Musik",
@@ -1091,7 +1103,7 @@ const musik = [
         "Antworten": ["George Martin", "Brian Epstein", "Phil Spector", "Quincy Jones"],
         "RichtigeAntwort": "George Martin",
         "RichtigeAntwortMöglichkeiten": "George Martin",
-        "Schwierigkeitsgrad": "expert",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "George Martin ist bekannt für seine Arbeit mit den Beatles und wird oft als 'der fünfte Beatle' bezeichnet"
     },
     { // Zeitgenössische Musik
@@ -1112,6 +1124,379 @@ const musik = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Leonard Cohen ist bekannt für seine markante Stimme und das Lied 'Hallelujah'"
     },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Künstler erreichte als erster Rapper über eine Milliarde Streams auf Spotify und definiert so den Erfolg in der Streaming-Ära?",
+        "Antworten": ["Drake", "Post Malone", "Kendrick Lamar", "Kanye West"],
+        "RichtigeAntwort": "Drake",
+        "RichtigeAntwortMöglichkeiten": "Drake",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Drake setzte neue Maßstäbe in der digitalen Musiklandschaft und ist ein Paradebeispiel für den Erfolg moderner Hip-Hop-Künstler im Streaming-Zeitalter."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer hat die meisten Grammys gewonnen?",
+        "Antworten": ["Georg Solti", "Beyoncé", "Quincy Jones", "Stevie Wonder"],
+        "RichtigeAntwort": "Georg Solti",
+        "RichtigeAntwortMöglichkeiten": "Georg Solti",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Dirigent Georg Solti hält mit 31 Grammy Awards den Rekord."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer prägte den modernen Mumble Rap?",
+        "Antworten": ["Future", "Travis Scott", "Lil Uzi Vert", "Young Thug"],
+        "RichtigeAntwort": "Future",
+        "RichtigeAntwortMöglichkeiten": "Future",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Future ist bekannt für seinen melodischen, oft undeutlichen Rap-Stil, der den Mumble Rap definierte."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song war schon in sehr jungen Jahren Justin Biebers Durchbruch?",
+        "Antworten": ["Baby", "Sorry", "Love Yourself", "What Do You Mean?"],
+        "RichtigeAntwort": "Baby",
+        "RichtigeAntwortMöglichkeiten": "Baby",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Baby' katapultierte Justin Bieber ins internationale Rampenlicht."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musik Popstar wurde schon als Teenager zum Superstar?",
+        "Antworten": ["Justin Bieber", "Britney Spears", "Usher", "Justin Timberlake"],
+        "RichtigeAntwort": "Justin Bieber",
+        "RichtigeAntwortMöglichkeiten": "Justin Bieber",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Justin Bieber wurde als Teenager durch YouTube entdeckt und avancierte rasch zum internationalen Popstar."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper ist bekannt für seine extrem schnelle Rap-Technik?",
+        "Antworten": ["Eminem", "Drake", "Future", "Travis Scott"],
+        "RichtigeAntwort": "Eminem",
+        "RichtigeAntwortMöglichkeiten": "Eminem",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eminem rappte in 'Rap God' 6,46 Wörter pro Sekunde und stellte damit einen Weltrekord auf."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Plattform dominiert das Musik-Streaming?",
+        "Antworten": ["Spotify", "Apple Music", "YouTube Music", "Amazon Music"],
+        "RichtigeAntwort": "Spotify",
+        "RichtigeAntwortMöglichkeiten": "Spotify",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Spotify ist mit über 500 Millionen Nutzern die größte Musik-Streaming-Plattform."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Genre ist heutzutage weltweit das meistgehörte?",
+        "Antworten": ["Pop", "Rock", "Hip-Hop", "Elektronische Musik"],
+        "RichtigeAntwort": "Pop",
+        "RichtigeAntwortMöglichkeiten": "Pop",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Pop-Musik ist das meistgehörte Genre und dominiert die Charts weltweit."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper ist unter dem Namen 'Slim Shady' bekannt?",
+        "Antworten": ["Eminem", "Drake", "Jay-Z", "Kanye West"],
+        "RichtigeAntwort": "Eminem",
+        "RichtigeAntwortMöglichkeiten": "Eminem Slim Shady",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Slim Shady ist Eminems Alter Ego, mit dem er für seine provokanten und schnellen Raps bekannt wurde."
+    },
+
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikrichtung ist Kanye West bekannt?",
+        "Antworten": ["Hip-Hop", "Rock", "Pop", "Reggae"],
+        "RichtigeAntwort": "Hip-Hop",
+        "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kanye West gilt als einer der einflussreichsten Hip-Hop-Künstler und hat das Genre mit seinen innovativen Sounds revolutioniert."
+    },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Eminem bekannt?",
+            "Antworten": ["Hip-Hop", "Rock", "Pop", "Country"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Eminem ist einer der erfolgreichsten Rapper aller Zeiten und bekannt für seine schnellen Flows und kontroversen Texte."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Tupac bekannt?",
+            "Antworten": ["Hip-Hop", "R&B", "Jazz", "Reggae"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Tupac Shakur gilt als eine der einflussreichsten Figuren des Hip-Hop und kombinierte soziale Themen mit tiefgründigen Texten."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Jay-Z bekannt?",
+            "Antworten": ["Hip-Hop", "Funk", "Rock", "Elektronische Musik"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Jay-Z ist nicht nur einer der größten Rapper, sondern auch ein einflussreicher Geschäftsmann in der Musikindustrie."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Travis Scott bekannt?",
+            "Antworten": ["Hip-Hop", "House", "Techno", "Blues"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Travis Scott ist bekannt für seinen einzigartigen Auto-Tune-Sound und energiegeladene Live-Shows."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Lil Uzi Vert bekannt?",
+            "Antworten": ["Hip-Hop", "Rock", "Punk", "Pop"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Lil Uzi Vert kombiniert Rap mit melodischen Elementen und hat den 'SoundCloud-Rap' mitgeprägt."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Nicki Minaj bekannt?",
+            "Antworten": ["Hip-Hop", "Pop", "R&B", "Reggae"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Nicki Minaj ist eine der erfolgreichsten Rapperinnen und bekannt für ihre vielseitigen Flows und Charaktere in ihren Songs."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Drake bekannt?",
+            "Antworten": ["Hip-Hop", "Pop", "R&B", "Soul"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Drake vermischt Rap und Gesang und hat Hip-Hop mit emotionalen und melodischen Elementen erweitert."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Kendrick Lamar bekannt?",
+            "Antworten": ["Hip-Hop", "Funk", "Rock", "Jazz"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Kendrick Lamar ist bekannt für seine tiefgründigen Texte, politischen Botschaften und einzigartigen Erzählstile im Rap."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist der Musiker Future bekannt?",
+            "Antworten": ["Hip-Hop", "Trap", "R&B", "Soul"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap Trap",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Future hat den modernen Trap-Sound mitgeprägt und ist bekannt für seinen massiven Einfluss auf die neue Generation von Rappern."
+        },
+
+
+
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Taylor Swift bekannt?",
+            "Antworten": ["Pop", "Country", "Rock", "Hip-Hop"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Taylor Swift begann in der Country-Musik, wurde aber mit Pop-Welthits wie 'Shake It Off' zum Megastar,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Lady Gaga bekannt?",
+            "Antworten": ["Pop", "Rock", "Elektronische Musik", "Jazz"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Lady Gaga revolutionierte den Pop mit ihren extravaganten Outfits, ikonischen Songs und starken Performances,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Billie Eilish bekannt?",
+            "Antworten": ["Pop", "Indie", "Rock", "Rap"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Billie Eilish brachte mit ihrem düsteren, minimalistischen Stil und Flüstergesang eine ganz neue Pop-Ästhetik,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Ariana Grande bekannt?",
+            "Antworten": ["Pop", "Soul", "Hip-Hop", "House"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Ariana Grande ist bekannt für ihre kraftvolle Stimme und Pop-Hits mit R&B-Einflüssen,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist The Weeknd bekannt?",
+            "Antworten": ["Pop", "R&B", "Hip-Hop", "Funk"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "The Weeknd begann mit R&B, wurde aber mit Hits wie 'Blinding Lights' zur globalen Pop-Ikone,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Ed Sheeran bekannt?",
+            "Antworten": ["Pop", "Folk", "Rock", "Hip-Hop"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Ed Sheeran kombiniert akustische Gitarrenmusik mit Pop-Melodien und ist für seine emotionalen Songs bekannt,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Rihanna bekannt?",
+            "Antworten": ["Pop", "R&B", "Reggae", "Hip-Hop"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Rihanna hat in vielen Genres Erfolge gefeiert, aber ihre größten Hits sind im Pop-Bereich,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Shawn Mendes bekannt?",
+            "Antworten": ["Pop", "Rock", "Soul", "R&B"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Shawn Mendes wurde durch seine gefühlvollen Pop-Balladen und seinen soften Gesang bekannt,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Katy Perry bekannt?",
+            "Antworten": ["Pop", "Country", "Elektro", "Indie"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Katy Perry ist für ihre farbenfrohen Musikvideos und eingängigen Pop-Hits weltbekannt,"
+        },
+
+
+
+
+
+
+
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist B.B. King bekannt?",
+            "Antworten": ["Blues", "Jazz", "Rock", "Soul"],
+            "RichtigeAntwort": "Blues",
+            "RichtigeAntwortMöglichkeiten": "Blues",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "B.B. King gilt als einer der größten Blues-Gitarristen aller Zeiten und prägte den modernen Blues-Sound,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Miles Davis bekannt?",
+            "Antworten": ["Jazz", "Blues", "Funk", "Rock"],
+            "RichtigeAntwort": "Jazz",
+            "RichtigeAntwortMöglichkeiten": "Jazz",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Miles Davis war ein Pionier des Jazz und entwickelte verschiedene Stile wie Bebop, Cool Jazz und Fusion,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Bob Marley bekannt?",
+            "Antworten": ["Reggae", "Ska", "Rock", "Pop"],
+            "RichtigeAntwort": "Reggae",
+            "RichtigeAntwortMöglichkeiten": "Reggae",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Bob Marley machte Reggae weltweit bekannt und wurde zur Ikone für Frieden und Freiheit,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Elvis Presley bekannt?",
+            "Antworten": ["Rock", "Blues", "Jazz", "Country"],
+            "RichtigeAntwort": "Rock",
+            "RichtigeAntwortMöglichkeiten": "Rock Rock'n'Roll",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Elvis Presley wird als 'King of Rock'n'Roll' bezeichnet und revolutionierte die Musikszene der 50er Jahre,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist James Brown bekannt?",
+            "Antworten": ["Funk", "Soul", "Jazz", "Blues"],
+            "RichtigeAntwort": "Funk",
+            "RichtigeAntwortMöglichkeiten": "Funk",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "James Brown gilt als der 'Godfather of Funk' und beeinflusste mit seinem Rhythmus viele spätere Genres,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Aretha Franklin bekannt?",
+            "Antworten": ["Soul", "Jazz", "Funk", "Blues"],
+            "RichtigeAntwort": "Soul",
+            "RichtigeAntwortMöglichkeiten": "Soul",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Aretha Franklin wurde als 'Queen of Soul' bekannt und war eine der einflussreichsten Stimmen ihrer Zeit,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Louis Armstrong bekannt?",
+            "Antworten": ["Jazz", "Blues", "Funk", "Soul"],
+            "RichtigeAntwort": "Jazz",
+            "RichtigeAntwortMöglichkeiten": "Jazz",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Louis Armstrong war einer der wichtigsten Jazzmusiker und machte die Trompete zum Star-Instrument des Genres,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Jimi Hendrix bekannt?",
+            "Antworten": ["Rock", "Blues", "Funk", "Jazz"],
+            "RichtigeAntwort": "Rock",
+            "RichtigeAntwortMöglichkeiten": "Rock",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Jimi Hendrix revolutionierte den Rock mit seinem einzigartigen Gitarrenspiel und psychedelischen Sounds,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Ray Charles bekannt?",
+            "Antworten": ["Soul", "Jazz", "Blues", "Funk"],
+            "RichtigeAntwort": "Soul",
+            "RichtigeAntwortMöglichkeiten": "Soul",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Ray Charles mischte Blues und Gospel und schuf den modernen Soul-Sound,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Nina Simone bekannt?",
+            "Antworten": ["Jazz", "Soul", "Blues", "Funk"],
+            "RichtigeAntwort": "Jazz",
+            "RichtigeAntwortMöglichkeiten": "Jazz",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Nina Simone kombinierte Jazz mit politischer Botschaft und wurde zu einer der wichtigsten Stimmen des 20. Jahrhunderts,"
+        },
+
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1130,6 +1515,18 @@ const musik = [
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
     { // Giovanni Pierluigi da Palestrina
         "Kategorie": "Musik",
@@ -1451,15 +1848,6 @@ const musik = [
     },
     { // Antonio Vivaldi
         "Kategorie": "Musik",
-        "Frage": "Welchen Beinamen trug Antonio Vivaldi aufgrund seiner Haarfarbe und seines Berufs als Priester?",
-        "Antworten": ["Der Rote Priester", "Der Schwarze Violinist", "Der Weiße Komponist", "Der Blaue Dirigent"],
-        "RichtigeAntwort": "Der Rote Priester",
-        "RichtigeAntwortMöglichkeiten": "Rote Priester",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Antonio Vivaldi trug den Beinamen 'Der Rote Priester' aufgrund seiner roten Haare und seines Berufs als Priester"
-    },
-    { // Antonio Vivaldi
-        "Kategorie": "Musik",
         "Frage": "Welche musikalische Gattung dominierte Vivaldis Werk?",
         "Antworten": ["Konzert", "Oper", "Sinfonie", "Lied"],
         "RichtigeAntwort": "Konzert",
@@ -1482,7 +1870,7 @@ const musik = [
         "Antworten": ["1678", "1700", "1725", "1750"],
         "RichtigeAntwort": "1678",
         "RichtigeAntwortMöglichkeiten": "1678",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi wurde im Jahr 1678 geboren"
     },
     { // Antonio Vivaldi
@@ -1509,7 +1897,7 @@ const musik = [
         "Antworten": ["1741", "1750", "1725", "1700"],
         "RichtigeAntwort": "1741",
         "RichtigeAntwortMöglichkeiten": "1741",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Antonio Vivaldi starb im Jahr 1741"
     },
     { // Antonio Vivaldi /A
@@ -1530,7 +1918,7 @@ const musik = [
         "Antworten": ["Barock", "Klassik", "Romantik", "Renaissance"],
         "RichtigeAntwort": "Barock",
         "RichtigeAntwortMöglichkeiten": "Barock",
-        "Schwierigkeitsgrad": "extrem",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Georg Friedrich Händel war einer der bedeutendsten Komponisten des Barock und prägte besonders die Oper und das Oratorium."
     },
     {
@@ -1719,7 +2107,7 @@ const musik = [
         "Frage": "In welchem Alter komponierte Mozart seine erste Sinfonie?",
         "Antworten": ["8 Jahre", "12 Jahre", "15 Jahre", "18 Jahre"],
         "RichtigeAntwort": "8 Jahre",
-        "RichtigeAntwortMöglichkeiten": "8 Jahre",
+        "RichtigeAntwortMöglichkeiten": "8",
         "Schwierigkeitsgrad": "extrem",
         "Fakt": "Mozart komponierte seine erste Sinfonie, die Sinfonie Nr. 1 in Es-Dur, im Alter von nur 8 Jahren."
     },
@@ -2153,7 +2541,7 @@ const musik = [
     },
     {
         "Kategorie": "Musik",
-        "Frage": "In welchem Jahr wurde Richard Wagner geboren?",
+        "Frage": "In welchem Jahr wurde Giuseppe Verd geboren?",
         "Antworten": ["1813", "1809", "1820", "1818"],
         "RichtigeAntwort": "1813",
         "RichtigeAntwortMöglichkeiten": "1813",
@@ -2247,7 +2635,912 @@ const musik = [
 
 
 
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist gilt als einer der virtuosesten Pianisten aller Zeiten?",
+        "Antworten": ["Franz Liszt", "Ludwig van Beethoven", "Frédéric Chopin", "Johann Sebastian Bach"],
+        "RichtigeAntwort": "Franz Liszt",
+        "RichtigeAntwortMöglichkeiten": "Franz Liszt Liszt",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Franz Liszt revolutionierte das Klavierspiel und gilt bis heute als einer der technisch anspruchsvollsten Pianisten der Musikgeschichte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Musikform entwickelte Franz Liszt und machte sie populär?",
+        "Antworten": ["Sinfonische Dichtung", "Konzertetüde", "Klavierfuge", "Barockkantate"],
+        "RichtigeAntwort": "Sinfonische Dichtung",
+        "RichtigeAntwortMöglichkeiten": "Sinfonische Dichtung",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Liszt war der erste Komponist, der das Konzept der sinfonischen Dichtung etablierte, bei dem Musik eine Geschichte erzählt oder eine Idee ausdrückt,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches berühmte Klavierstück von Franz Liszt gilt als eines wenn nicht sogar als das schwierigste der Welt?",
+        "Antworten": ["La Campanella", "Hungarian Rhapsody No. 2", "Mephisto-Walzer", "Liebesträume No. 3"],
+        "RichtigeAntwort": "La Campanella",
+        "RichtigeAntwortMöglichkeiten": "La Campanella",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'La Campanella' ist bekannt für seine extrem schnellen Sprünge und Triller und stellt selbst für Spitzenpianisten eine enorme Herausforderung dar,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist schrieb die berühmten 'Liebesträume' für Klavier?",
+        "Antworten": ["Franz Liszt", "Frédéric Chopin", "Johannes Brahms", "Claude Debussy"],
+        "RichtigeAntwort": "Franz Liszt",
+        "RichtigeAntwortMöglichkeiten": "Franz Liszt Liszt",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Liebesträume' von Liszt gehören zu den schönsten romantischen Klavierwerken und sind besonders für ihr emotionales Thema bekannt,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Beziehung hatte Franz Liszt zu Richard Wagner?",
+        "Antworten": ["Schwiegervater", "Rivale", "Schüler", "Kein direkter Kontakt"],
+        "RichtigeAntwort": "Schwiegervater",
+        "RichtigeAntwortMöglichkeiten": "Schwiegervater",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Liszt war der Schwiegervater von Richard Wagner, da seine Tochter Cosima Wagner heiratete,"
+    },
+    
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Werk machte Igor Stravinsky über Nacht weltberühmt?",
+        "Antworten": ["Der Feuervogel", "Petruschka", "Le Sacre du Printemps", "Die Geschichte vom Soldaten"],
+        "RichtigeAntwort": "Der Feuervogel",
+        "RichtigeAntwortMöglichkeiten": "Der Feuervogel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Der Feuervogel' war Stravinskys erstes großes Ballett für die Ballets Russes und etablierte ihn als führenden Komponisten der Moderne,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist veränderte die Musik des 20. Jahrhunderts mit seinem radikalen Umgang mit Rhythmus und Dissonanz?",
+        "Antworten": ["Igor Stravinsky", "Arnold Schönberg", "Dmitri Schostakowitsch", "Béla Bartók"],
+        "RichtigeAntwort": "Igor Stravinsky",
+        "RichtigeAntwortMöglichkeiten": "Igor Stravinsky Stravinsky",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Stravinsky revolutionierte die Musik mit seinen komplexen Rhythmen und Dissonanzen, die vor allem in 'Le Sacre du Printemps' deutlich wurden,"
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist entwickelte die Zwölftontechnik, die die Musik des 20. Jahrhunderts radikal veränderte?",
+        "Antworten": ["Arnold Schönberg", "Igor Stravinsky", "Alban Berg", "Anton Webern"],
+        "RichtigeAntwort": "Arnold Schönberg",
+        "RichtigeAntwortMöglichkeiten": "Arnold Schönberg Schoenberg",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Schönberg entwickelte die Zwölftontechnik, die die Musik von der traditionellen Tonalität löste und die Neue Musik des 20. Jahrhunderts prägte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche berühmte Oper von Arnold Schönberg blieb unvollendet, weil sie zu revolutionär für die damalige Zeit war?",
+        "Antworten": ["Moses und Aron", "Erwartung", "Die Jakobsleiter", "Von heute auf morgen"],
+        "RichtigeAntwort": "Moses und Aron",
+        "RichtigeAntwortMöglichkeiten": "Moses und Aron",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Moses und Aron' blieb unvollendet, weil Schönberg immer weiter an seiner Zwölftontechnik arbeitete und das Werk extrem komplex war,"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Jazzmusiker machte den Scat-Gesang populär, indem er beim Aufnehmen eines Songs versehentlich den Text vergaß?",
+        "Antworten": ["Louis Armstrong", "Ella Fitzgerald", "Dizzy Gillespie", "Frank Sinatra"],
+        "RichtigeAntwort": "Louis Armstrong",
+        "RichtigeAntwortMöglichkeiten": "Louis Armstrong Armstrong",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Louis Armstrong improvisierte den Text bei einer Aufnahme von 'Heebie Jeebies' und erfand so den Scat-Gesang,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker machte den Song 'What a Wonderful World' weltberühmt?",
+        "Antworten": ["Louis Armstrong", "Nat King Cole", "Ray Charles", "Frank Sinatra"],
+        "RichtigeAntwort": "Louis Armstrong",
+        "RichtigeAntwortMöglichkeiten": "Louis Armstrong Armstrong",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'What a Wonderful World' wurde 1967 veröffentlicht, war zunächst kein großer Erfolg, wurde aber später eines der bekanntesten Lieder aller Zeiten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument machte Louis Armstrong berühmt?",
+        "Antworten": ["Trompete", "Saxophon", "Klarinette", "Klavier"],
+        "RichtigeAntwort": "Trompete",
+        "RichtigeAntwortMöglichkeiten": "Trompete",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Louis Armstrong war ein virtuoser Trompeter und setzte neue Maßstäbe für Technik und Ausdruck in der Jazzmusik,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker revolutionierte den Jazz mit seinem Trompetenspiel?",
+        "Antworten": ["Louis Armstrong", "Duke Ellington", "Miles Davis", "Charlie Parker"],
+        "RichtigeAntwort": "Louis Armstrong",
+        "RichtigeAntwortMöglichkeiten": "Louis Armstrong Armstrong",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Louis Armstrong prägte den Jazz mit virtuoser Trompete und einzigartiger Stimme,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche war Louis Armstrong bekannt?",
+        "Antworten": ["Jazz", "Barock", "Romantik", "Klassik"],
+        "RichtigeAntwort": "Jazz",
+        "RichtigeAntwortMöglichkeiten": "Jazz",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Louis Armstrong war eine Schlüsselfigur des frühen Jazz und prägte das Genre entscheidend,"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche war Duke Ellington bekannt?",
+        "Antworten": ["Swing", "Bebop", "Blues", "Barock"],
+        "RichtigeAntwort": "Swing",
+        "RichtigeAntwortMöglichkeiten": "Swing",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Duke Ellington war eine der Schlüsselfiguren des Swing und brachte mit seiner Big Band den Jazz auf ein neues Niveau,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist und Bandleader schrieb Klassiker wie 'Take the A Train' und 'Mood Indigo'?",
+        "Antworten": ["Duke Ellington", "Charlie Parker", "John Coltrane", "Miles Davis"],
+        "RichtigeAntwort": "Duke Ellington",
+        "RichtigeAntwortMöglichkeiten": "Duke Ellington Ellington",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Take the A Train' wurde zur Erkennungsmelodie von Ellingtons Orchester und ist einer der bekanntesten Jazz-Standards,"
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche war Miles Davis bekannt?",
+        "Antworten": ["Jazz", "Blues", "Klassik", "Funk"],
+        "RichtigeAntwort": "Jazz",
+        "RichtigeAntwortMöglichkeiten": "Jazz",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Miles Davis war eine zentrale Figur im Jazz des 20. Jahrhunderts und prägte mehrere stilistische Umbrüche,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Album von Miles Davis gilt als eines der wichtigsten Jazz-Alben aller Zeiten?",
+        "Antworten": ["Kind of Blue", "Bitches Brew", "Sketches of Spain", "Birth of the Cool"],
+        "RichtigeAntwort": "Kind of Blue",
+        "RichtigeAntwortMöglichkeiten": "Kind of Blue",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Kind of Blue' ist das meistverkaufte Jazz-Album aller Zeiten und definierte den Cool Jazz neu,"
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker wird als 'King of Rock 'n' Roll' bezeichnet?",
+        "Antworten": ["Elvis Presley", "Chuck Berry", "Little Richard", "Buddy Holly"],
+        "RichtigeAntwort": "Elvis Presley",
+        "RichtigeAntwortMöglichkeiten": "Elvis Presley Elvis",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Elvis Presley revolutionierte die Musik mit seinem einzigartigen Stil und machte Rock 'n' Roll weltweit populär,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche war Elvis Presley bekannt?",
+        "Antworten": ["Rock 'n' Roll", "Blues", "Country", "Swing"],
+        "RichtigeAntwort": "Rock 'n' Roll",
+        "RichtigeAntwortMöglichkeiten": "Rock 'n' Roll RocknRoll Rock and Roll",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Elvis war die zentrale Figur des Rock 'n' Roll der 1950er und veränderte die Musiklandschaft für immer,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker machte Hüftschwünge zu einem Markenzeichen und schockierte das konservative Publikum der 50er?",
+        "Antworten": ["Elvis Presley", "Mick Jagger", "James Brown", "Chuck Berry"],
+        "RichtigeAntwort": "Elvis Presley",
+        "RichtigeAntwortMöglichkeiten": "Elvis Presley Elvis",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Elvis' Auftritte galten als skandalös, weil seine Hüftbewegungen als zu provokant für das damalige Fernsehen angesehen wurden,"
+    },
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Band gilt als die erfolgreichste und einflussreichste der Musikgeschichte?",
+        "Antworten": ["The Beatles", "The Rolling Stones", "Led Zeppelin", "Queen"],
+        "RichtigeAntwort": "The Beatles",
+        "RichtigeAntwortMöglichkeiten": "The Beatles Beatles",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mit über 600 Millionen verkauften Alben und zahlreichen Innovationen haben die Beatles die Musik revolutioniert,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche waren The Beatles bekannt?",
+        "Antworten": ["Rock", "Blues", "Psychedelic", "Jazz"],
+        "RichtigeAntwort": "Rock",
+        "RichtigeAntwortMöglichkeiten": "Rock",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Beatles begannen mit Rock 'n' Roll und Beat-Musik, experimentierten aber später mit Psychedelic und progressiven Klängen,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beatles-Album gilt als eines der einflussreichsten Alben aller Zeiten?",
+        "Antworten": ["Sgt. Peppers Lonely Hearts Club Band", "Abbey Road", "Revolver", "The White Album"],
+        "RichtigeAntwort": "Sgt. Peppers Lonely Hearts Club Band",
+        "RichtigeAntwortMöglichkeiten": "Sgt. Peppers Lonely Hearts Club Band Sgt. Pepper",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Sgt. Peppers' setzte neue Maßstäbe für Konzeptalben und Studioaufnahmen und beeinflusste Generationen von Musikern,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Stadt gilt als Geburtsort von The Beatles?",
+        "Antworten": ["Liverpool", "London", "Manchester", "New York"],
+        "RichtigeAntwort": "Liverpool",
+        "RichtigeAntwortMöglichkeiten": "Liverpool",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Liverpool ist die Heimatstadt der Beatles, und dort begann ihre Karriere in den berühmten Clubs der Stadt,"
+    },
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song der Beatles hält den Rekord als meistgecoverter Song der Musikgeschichte?",
+        "Antworten": ["Yesterday", "Let It Be", "Something", "Hey Jude"],
+        "RichtigeAntwort": "Yesterday",
+        "RichtigeAntwortMöglichkeiten": "Yesterday",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'Yesterday' wurde von über 2.000 Künstlern neu interpretiert und gilt als der meistgecoverte Song aller Zeiten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song gilt als der meistgecoverte Song der Musikgeschichte?",
+        "Antworten": ["Yesterday – The Beatles", "Hallelujah – Leonard Cohen", "Summertime – George Gershwin", "Over the Rainbow – Judy Garland"],
+        "RichtigeAntwort": "Yesterday – The Beatles",
+        "RichtigeAntwortMöglichkeiten": "Yesterday",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'Yesterday' von den Beatles wurde von über 2.000 Künstlern neu interpretiert und hält damit den Rekord als meistgecoverter Song der Welt,"
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielten die Beatles als erste Rockband in einem ihrer Songs?",
+        "Antworten": ["Sitar", "Mellotron", "Theremin", "Moog-Synthesizer"],
+        "RichtigeAntwort": "Sitar",
+        "RichtigeAntwortMöglichkeiten": "Sitar",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "George Harrison spielte auf 'Norwegian Wood' als erster Rockmusiker eine Sitar und brachte so indische Musik in den Mainstream,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Beatles-Song wurde im Weltall abgespielt, um ein Signal an potenzielle außerirdische Zivilisationen zu senden?",
+        "Antworten": ["Across the Universe", "Here Comes the Sun", "Yellow Submarine", "Lucy in the Sky with Diamonds"],
+        "RichtigeAntwort": "Across the Universe",
+        "RichtigeAntwortMöglichkeiten": "Across the Universe",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die NASA sendete 2008 'Across the Universe' ins All als Botschaft für außerirdisches Leben,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Aus wie vielen Mitgliedern bestanden The Beatles in ihrer klassischen Besetzung?",
+        "Antworten": ["4", "3", "5", "6"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "The Beatles bestanden aus John Lennon, Paul McCartney, George Harrison und Ringo Starr und wurden als Vierergruppe weltberühmt,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer war der Hauptsänger der Beatles?",
+        "Antworten": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        "RichtigeAntwort": "John Lennon",
+        "RichtigeAntwortMöglichkeiten": "John Lennon Lennon",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "John Lennon war die zentrale Stimme der Beatles, besonders in ihren frühen Jahren, und prägte ihren Sound mit seinem markanten Gesang,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beatles-Mitglied sang neben John Lennon am häufigsten die Lead-Vocals?",
+        "Antworten": ["Paul McCartney", "George Harrison", "Ringo Starr", "Brian Epstein"],
+        "RichtigeAntwort": "Paul McCartney",
+        "RichtigeAntwortMöglichkeiten": "Paul McCartney McCartney",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Paul McCartney war neben John Lennon der wichtigste Sänger der Beatles und übernahm in vielen ihrer bekanntesten Songs den Gesang,"
+    },
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielte John Lennon hauptsächlich bei den Beatles?",
+        "Antworten": ["Rhythmusgitarre", "Bass", "Schlagzeug", "Keyboard"],
+        "RichtigeAntwort": "Rhythmusgitarre",
+        "RichtigeAntwortMöglichkeiten": "Rhythmusgitarre Gitarre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "John Lennon spielte meist die Rhythmusgitarre, während Paul McCartney den Bass übernahm und George Harrison die Lead-Gitarre spielte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielte Paul McCartney hauptsächlich bei den Beatles?",
+        "Antworten": ["Bass", "Schlagzeug", "Lead-Gitarre", "Keyboard"],
+        "RichtigeAntwort": "Bass",
+        "RichtigeAntwortMöglichkeiten": "Bass Bassgitarre",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Paul McCartney war der Bassist der Beatles und nutzte oft seinen ikonischen Höfner-Violinbass,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beatles-Mitglied spielte hauptsächlich die Lead-Gitarre?",
+        "Antworten": ["George Harrison", "John Lennon", "Paul McCartney", "Ringo Starr"],
+        "RichtigeAntwort": "George Harrison",
+        "RichtigeAntwortMöglichkeiten": "George Harrison Harrison",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "George Harrison war der Lead-Gitarrist der Beatles und prägte ihren Sound mit seinen einzigartigen Melodien und Soli,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beatles-Mitglied spielte Schlagzeug?",
+        "Antworten": ["Ringo Starr", "John Lennon", "Paul McCartney", "George Harrison"],
+        "RichtigeAntwort": "Ringo Starr",
+        "RichtigeAntwortMöglichkeiten": "Ringo Starr Ringo",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ringo Starr war der Schlagzeuger der Beatles und bekannt für seinen einzigartigen Stil ohne überflüssige Fills,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker unterstützte die Beatles mit seinem Keyboard-Spiel auf mehreren Alben?",
+        "Antworten": ["Billy Preston", "Eric Clapton", "Brian Wilson", "David Gilmour"],
+        "RichtigeAntwort": "Billy Preston",
+        "RichtigeAntwortMöglichkeiten": "Billy Preston Preston",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Billy Preston spielte Keyboard auf Beatles-Songs wie 'Get Back' und war einer der wenigen Musiker, der als 'fünfter Beatle' bezeichnet wurde,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beatles-Mitglied wurde 1980 erschossen?",
+        "Antworten": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        "RichtigeAntwort": "John Lennon",
+        "RichtigeAntwortMöglichkeiten": "John Lennon Lennon",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "John Lennon wurde 1980 vor seinem Wohnhaus in New York von Mark David Chapman erschossen, was weltweit für Entsetzen sorgte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Mitglied der Beatles verstarb 2001 an Krebs?",
+        "Antworten": ["George Harrison", "John Lennon", "Paul McCartney", "Ringo Starr"],
+        "RichtigeAntwort": "George Harrison",
+        "RichtigeAntwortMöglichkeiten": "George Harrison Harrison",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "George Harrison starb 2001 an Lungenkrebs, nachdem er sich jahrelang gegen die Krankheit behandelte,"
+    },
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Beatles-Mitglied wurde 1966 fälschlicherweise für tot erklärt?",
+        "Antworten": ["Paul McCartney", "John Lennon", "George Harrison", "Ringo Starr"],
+        "RichtigeAntwort": "Paul McCartney",
+        "RichtigeAntwortMöglichkeiten": "Paul McCartney McCartney",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Paul is dead'-Verschwörungstheorie behauptete, dass Paul McCartney 1966 starb und durch einen Doppelgänger ersetzt wurde – trotz offensichtlicher Absurdität hielt sich das Gerücht über Jahrzehnte,"
+    },
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie wurde die berühmte Frisur der Beatles in den 1960er Jahren genannt?",
+        "Antworten": ["Pilzkopf", "Mod-Schnitt", "Mop-Top", "Swing-Style"],
+        "RichtigeAntwort": "Pilzkopf",
+        "RichtigeAntwortMöglichkeiten": "Pilzkopf Mop-Top",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die 'Pilzkopf'-Frisur der Beatles wurde zu einem ikonischen Stil der 60er Jahre und beeinflusste die Mode weltweit,"
+    },     
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Bob-Dylan-Song wird oft als einer der einflussreichsten Songs der Rockgeschichte bezeichnet?",
+        "Antworten": ["Like a Rolling Stone", "Knockin’ on Heaven’s Door", "Mr. Tambourine Man", "Hurricane"],
+        "RichtigeAntwort": "Like a Rolling Stone",
+        "RichtigeAntwortMöglichkeiten": "Like a Rolling Stone Rolling Stone",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Like a Rolling Stone' veränderte 1965 die Rockmusik mit seiner Länge, seinem revolutionären Text und Dylans unverwechselbarem Gesang,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker wurde 2016 als erster Songwriter mit dem Literaturnobelpreis ausgezeichnet?",
+        "Antworten": ["Bob Dylan", "Leonard Cohen", "Bruce Springsteen", "Paul Simon"],
+        "RichtigeAntwort": "Bob Dylan",
+        "RichtigeAntwortMöglichkeiten": "Bob Dylan Dylan",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bob Dylan erhielt 2016 den Literaturnobelpreis für seine poetischen Songtexte, nahm die Auszeichnung aber erst Monate später persönlich an,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikrichtungen ist Bob Dylan bekannt?",
+        "Antworten": ["Folk & Rock", "Blues & Jazz", "Klassik & Pop", "Country & Metal"],
+        "RichtigeAntwort": "Folk & Rock",
+        "RichtigeAntwortMöglichkeiten": "Folk Rock Folk & Rock",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bob Dylan begann als Folk-Sänger, wechselte aber Mitte der 60er zum Rock und wurde so zur Schlüsselfigur des Folk-Rock,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Durch welchen Aspekt seiner Musik beeinflusste Bob Dylan die Musikwelt am stärksten?",
+        "Antworten": ["Lyrics", "Gitarrenspiel", "Bühnenperformance", "Stimme"],
+        "RichtigeAntwort": "Lyrics",
+        "RichtigeAntwortMöglichkeiten": "Poet poetisch politisch gesellschaftskritisch kritisch Lyrics Texte Songtexte Lyrik politische Texte",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bob Dylan machte Songtexte zu einer Kunstform, indem er politische, soziale und poetische Themen in seine Musik integrierte – eine Innovation, die ihm 2016 den Literaturnobelpreis einbrachte,"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer gilt als der einflussreichste Gitarrist aller Zeiten?",
+        "Antworten": ["Jimi Hendrix", "Eric Clapton", "Jimmy Page", "Carlos Santana"],
+        "RichtigeAntwort": "Jimi Hendrix",
+        "RichtigeAntwortMöglichkeiten": "Jimi Hendrix Hendrix",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Jimi Hendrix revolutionierte das E-Gitarrenspiel mit innovativen Techniken, Effekten und seinem unverwechselbaren Sound,"
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche war Jimi Hendrix bekannt?",
+        "Antworten": ["Psychedelic Rock", "Blues", "Jazz", "Heavy Metal"],
+        "RichtigeAntwort": "Psychedelic Rock",
+        "RichtigeAntwortMöglichkeiten": "Psychedelic Rock Rock",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Hendrix war einer der Pioniere des Psychedelic Rock und kombinierte verzerrte Gitarrensounds mit experimentellen Effekten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches legendäre Album machte Jimi Hendrix zum Superstar?",
+        "Antworten": ["Are You Experienced", "Electric Ladyland", "Axis: Bold as Love", "Band of Gypsys"],
+        "RichtigeAntwort": "Are You Experienced",
+        "RichtigeAntwortMöglichkeiten": "Are You Experienced",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mit 'Are You Experienced' setzte Hendrix 1967 neue Maßstäbe für die Rockmusik und zeigte seine außergewöhnliche Gitarrentechnik,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument machte Jimi Hendrix berühmt?",
+        "Antworten": ["E-Gitarre", "Bass", "Schlagzeug", "Keyboard"],
+        "RichtigeAntwort": "E-Gitarre",
+        "RichtigeAntwortMöglichkeiten": "E-Gitarre Gitarre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Hendrix war bekannt für sein einzigartiges Spiel auf der E-Gitarre, oft mit unkonventionellen Techniken wie dem Spielen mit den Zähnen oder hinter dem Rücken,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker wurde mit 27 Jahren tot in seiner Londoner Wohnung aufgefunden?",
+        "Antworten": ["Jimi Hendrix", "Jim Morrison", "Janis Joplin", "Kurt Cobain"],
+        "RichtigeAntwort": "Jimi Hendrix",
+        "RichtigeAntwortMöglichkeiten": "Jimi Hendrix Hendrix",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Hendrix starb 1970 mit nur 27 Jahren und wurde so Teil des berüchtigten 'Club 27', zu dem auch Janis Joplin und Jim Morrison gehören,"
+    },
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    { // Zeitgenössische Musik
+        "Kategorie": "Musik",
+        "Frage": "Welcher Popstar ist bekannt für Hits wie 'Thriller' und 'Billie Jean'?",
+        "Antworten": ["Michael Jackson", "Prince", "Madonna", "Elton John"],
+        "RichtigeAntwort": "Michael Jackson",
+        "RichtigeAntwortMöglichkeiten": "Michael Jackson",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Michael Jackson, bekannt für Hits wie 'Thriller' und 'Billie Jean', wird oft als 'King of Pop' bezeichnet"
+    },
+    { // Zeitgenössische Musik
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker wird oft als 'King of Pop' bezeichnet?",
+        "Antworten": ["Michael Jackson", "Prince", "Madonna", "Elton John"],
+        "RichtigeAntwort": "Michael Jackson",
+        "RichtigeAntwortMöglichkeiten": "Michael Jackson",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Michael Jackson, bekannt für Hits wie 'Thriller' und 'Billie Jean', wird oft als 'King of Pop' bezeichnet"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer ist der meistverkaufte Popkünstler weltweit?",
+        "Antworten": ["Elvis Presley", "Michael Jackson", "Madonna", "Prince"],
+        "RichtigeAntwort": "Michael Jackson",
+        "RichtigeAntwortMöglichkeiten": "Michael Jackson",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson, der 'King of Pop', verkaufte über 350 Millionen Alben und revolutionierte die Popmusik."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Album von Michael Jackson ist das meistverkaufte Album aller Zeiten?",
+        "Antworten": ["Thriller", "Bad", "Dangerous", "Off the Wall"],
+        "RichtigeAntwort": "Thriller",
+        "RichtigeAntwortMöglichkeiten": "Thriller",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Thriller' verkaufte sich über 70 Millionen Mal und bleibt das meistverkaufte Album der Musikgeschichte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Tanzschritt wurde durch Michael Jackson weltberühmt?",
+        "Antworten": ["Moonwalk", "Breakdance Spin", "Robot", "Cabbage Patch"],
+        "RichtigeAntwort": "Moonwalk",
+        "RichtigeAntwortMöglichkeiten": "Moonwalk",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Michael Jackson führte den Moonwalk 1983 bei der Motown 25-Show auf und machte ihn zu einer seiner ikonischsten Bewegungen,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Album von Michael Jackson war das erste, das fünf aufeinanderfolgende Nummer-1-Singles hervorbrachte?",
+        "Antworten": ["Bad", "Thriller", "Dangerous", "Off the Wall"],
+        "RichtigeAntwort": "Bad",
+        "RichtigeAntwortMöglichkeiten": "Bad",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Bad' war das erste Album, das fünf aufeinanderfolgende Nummer-1-Hits in den USA hervorbrachte, darunter 'Man in the Mirror' und 'Smooth Criminal',"
+    },
+
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Album von Michael Jackson gewann die meisten Grammys in einer einzigen Nacht?",
+        "Antworten": ["Thriller", "Bad", "Dangerous", "Off the Wall"],
+        "RichtigeAntwort": "Thriller",
+        "RichtigeAntwortMöglichkeiten": "Thriller",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Thriller' gewann 1984 insgesamt 8 Grammys – bis heute eine der höchsten Auszeichnungen für ein einziges Album,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song von Michael Jackson hält den Rekord als schnellstverkaufte Single aller Zeiten?",
+        "Antworten": ["You Are Not Alone", "Billie Jean", "Black or White", "Beat It"],
+        "RichtigeAntwort": "You Are Not Alone",
+        "RichtigeAntwortMöglichkeiten": "You Are Not Alone",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'You Are Not Alone' war die erste Single, die direkt auf Platz 1 der Billboard Hot 100 einstieg und hält den Rekord als schnellstverkaufte Single,"
+    },
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Grammys gewann Michael Jackson in einer einzigen Nacht bei den Grammy Awards 1984?",
+        "Antworten": ["8", "6", "10", "5"],
+        "RichtigeAntwort": "8",
+        "RichtigeAntwortMöglichkeiten": "8",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson stellte 1984 mit 8 gewonnenen Grammys einen Rekord auf, der erst Jahrzehnte später von anderen Künstlern eingestellt wurde,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist Michael Jackson bekannt?",
+        "Antworten": ["Pop", "Rock", "R&B", "Funk"],
+        "RichtigeAntwort": "Pop",
+        "RichtigeAntwortMöglichkeiten": "Pop",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson war der prägende Künstler der modernen Popmusik und wird als 'King of Pop' bezeichnet,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Grammy Awards gewann Michael Jackson insgesamt?",
+        "Antworten": ["13", "10", "15", "8"],
+        "RichtigeAntwort": "13",
+        "RichtigeAntwortMöglichkeiten": "13",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson gewann insgesamt 13 Grammy Awards und erhielt zudem den Grammy Legend Award und den Grammy Lifetime Achievement Award,"
+    },
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Soloalben veröffentlichte Michael Jackson?",
+        "Antworten": ["10", "8", "12", "6"],
+        "RichtigeAntwort": "10",
+        "RichtigeAntwortMöglichkeiten": "10",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson veröffentlichte insgesamt 10 Soloalben, darunter Klassiker wie 'Thriller', 'Bad' und 'Dangerous',"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie alt war Michael Jackson, als er seine Karriere als Leadsänger der Jackson 5 begann?",
+        "Antworten": ["6", "10", "12", "8"],
+        "RichtigeAntwort": "6",
+        "RichtigeAntwortMöglichkeiten": "6",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson begann mit nur 6 Jahren als Leadsänger der Jackson 5 und wurde schnell zum Kinderstar,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Land errichtete eine eigene Michael-Jackson-Statue als Tribut?",
+        "Antworten": ["Ungarn", "Deutschland", "Brasilien", "Japan"],
+        "RichtigeAntwort": "Ungarn",
+        "RichtigeAntwortMöglichkeiten": "Ungarn",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ungarn errichtete eine Michael-Jackson-Statue in Budapest als Hommage an seinen großen Einfluss auf die Popkultur,"
+    },
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher bekannte Musiker litt an einer Hautkrankheit, wodurch sich seine Hautfarbe im Laufe seiner Karriere veränderte?",
+        "Antworten": ["Michael Jackson", "Prince", "Stevie Wonder", "James Brown"],
+        "RichtigeAntwort": "Michael Jackson",
+        "RichtigeAntwortMöglichkeiten": "Michael Jackson Jackson",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Michael Jackson hatte Vitiligo, eine Hautkrankheit, die Pigmentverlust verursacht, was zu seiner sich aufhellenden Hautfarbe führte,"
+    },
+
+
+    
+    
+
+
+        
+    
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Künstler war bekannt für seine ständigen musikalischen und visuellen Veränderungen und erschuf Alter Egos wie Ziggy Stardust?",
+        "Antworten": ["David Bowie", "Freddie Mercury", "Prince", "Elton John"],
+        "RichtigeAntwort": "David Bowie",
+        "RichtigeAntwortMöglichkeiten": "David Bowie Bowie",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "David Bowie war ein Pionier der Pop-Kultur und erfand sich musikalisch und optisch immer wieder neu, besonders mit seinem Alter Ego Ziggy Stardust,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist David Bowie bekannt?",
+        "Antworten": ["Glam Rock", "Jazz", "Heavy Metal", "Punk"],
+        "RichtigeAntwort": "Glam Rock",
+        "RichtigeAntwortMöglichkeiten": "Glam Rock",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "David Bowie war eine Schlüsselfigur des Glam Rock in den 1970er Jahren und kombinierte Musik mit Theatralik und futuristischen Outfits,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Konzeptalbum von David Bowie machte ihn in den 1970ern weltberühmt?",
+        "Antworten": ["The Rise and Fall of Ziggy Stardust and the Spiders from Mars", "Hunky Dory", "Aladdin Sane", "Low"],
+        "RichtigeAntwort": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+        "RichtigeAntwortMöglichkeiten": "Ziggy Stardust The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mit 'Ziggy Stardust' erschuf Bowie eine fiktive Rockfigur und kombinierte Science-Fiction-Elemente mit Glam Rock,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song von David Bowie wurde während des Kalten Krieges zur Hymne für geteilte Länder?",
+        "Antworten": ["Heroes", "Space Oddity", "Let's Dance", "Life on Mars?"],
+        "RichtigeAntwort": "Heroes",
+        "RichtigeAntwortMöglichkeiten": "Heroes",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Heroes' wurde zur Hymne für Hoffnung und Einheit und ist besonders bekannt für seine Verbindung zur Berliner Mauer,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ikonische Musikvideo zeigt David Bowie mit auffälligem Make-up und einem knallroten Haarschnitt?",
+        "Antworten": ["Life on Mars?", "Ashes to Ashes", "Starman", "Let's Dance"],
+        "RichtigeAntwort": "Life on Mars?",
+        "RichtigeAntwortMöglichkeiten": "Life on Mars?",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Video zu 'Life on Mars?' zeigte Bowies ikonischen Ziggy-Stardust-Look mit blauem Lidschatten und feuerrotem Haar,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Mit welchem Album begann David Bowies sogenannte 'Berlin-Trilogie'?",
+        "Antworten": ["Low", "Heroes", "Lodger", "Station to Station"],
+        "RichtigeAntwort": "Low",
+        "RichtigeAntwortMöglichkeiten": "Low",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Low' war das erste Album von Bowies Berlin-Trilogie und entstand unter dem Einfluss von Brian Eno und der elektronischen Musik,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker arbeitete eng mit David Bowie an der 'Berlin-Trilogie' zusammen?",
+        "Antworten": ["Brian Eno", "Lou Reed", "Iggy Pop", "Mick Jagger"],
+        "RichtigeAntwort": "Brian Eno",
+        "RichtigeAntwortMöglichkeiten": "Brian Eno Eno",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Brian Eno half Bowie, elektronische und experimentelle Musik in seine 'Berlin-Trilogie' zu integrieren und prägte seinen Sound maßgeblich,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches David-Bowie-Album war sein letztes und wurde kurz vor seinem Tod veröffentlicht?",
+        "Antworten": ["Blackstar", "The Next Day", "Reality", "Heathen"],
+        "RichtigeAntwort": "Blackstar",
+        "RichtigeAntwortMöglichkeiten": "Blackstar",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Blackstar' wurde nur zwei Tage vor Bowies Tod veröffentlicht und enthält viele Hinweise auf sein nahendes Ende,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song von David Bowie wurde als erste Single eines Künstlers aus dem Weltall ausgestrahlt?",
+        "Antworten": ["Space Oddity", "Starman", "Heroes", "Ashes to Ashes"],
+        "RichtigeAntwort": "Space Oddity",
+        "RichtigeAntwortMöglichkeiten": "Space Oddity",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Space Oddity' wurde von der NASA während der Apollo-11-Mission gespielt und ist bis heute mit der Raumfahrt verbunden,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Kultfilm spielte David Bowie die Hauptrolle als mysteriöser König?",
+        "Antworten": ["Labyrinth", "The Man Who Fell to Earth", "Merry Christmas, Mr. Lawrence", "Twin Peaks: Fire Walk with Me"],
+        "RichtigeAntwort": "Labyrinth",
+        "RichtigeAntwortMöglichkeiten": "Labyrinth",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bowie spielte 1986 in 'Labyrinth' den Koboldkönig Jareth und lieferte eine der kultigsten Rollen seiner Schauspielkarriere,"
+    },
+    
+
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper ist neben seiner Musik auch für seine kontroversen Aussagen und politischen Statements bekannt?",
+        "Antworten": ["Kanye West", "Jay-Z", "Eminem", "Lil Wayne"],
+        "RichtigeAntwort": "Kanye West",
+        "RichtigeAntwortMöglichkeiten": "Kanye West Ye",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Kanye West sorgt regelmäßig für Schlagzeilen mit seinen politischen Statements und unkonventionellen Ansichten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper war früher als Produzent tätig und hat unter anderem für Jay-Zs Album 'The Blueprint' produziert?",
+        "Antworten": ["Kanye West", "Pharrell Williams", "Dr. Dre", "Metro Boomin"],
+        "RichtigeAntwort": "Kanye West",
+        "RichtigeAntwortMöglichkeiten": "Kanye West Kanye",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bevor Kanye West selbst zum Star wurde, produzierte er Hits für Jay-Z, Alicia Keys und Ludacris,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Kanye West-Album veränderte den Hip-Hop durch seine emotionale, Auto-Tune-lastige Produktion?",
+        "Antworten": ["808s & Heartbreak", "Graduation", "Late Registration", "Yeezus"],
+        "RichtigeAntwort": "808s & Heartbreak",
+        "RichtigeAntwortMöglichkeiten": "808s & Heartbreak 808s",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'808s & Heartbreak' setzte neue Maßstäbe im Hip-Hop und beeinflusste eine ganze Generation von Künstlern,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Mode-Label gründete Kanye West und revolutionierte damit Streetwear?",
+        "Antworten": ["Yeezy", "Off-White", "Fear of God", "Balenciaga"],
+        "RichtigeAntwort": "Yeezy",
+        "RichtigeAntwortMöglichkeiten": "Yeezy",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Mit Yeezy erschuf Kanye West eine der begehrtesten Sneaker- und Modekollektionen der Welt,"
+    },
+
+
+
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Künstlerin hat den Rekord für das meistverkaufte Album einer weiblichen Sängerin in einer einzigen Woche?",
+        "Antworten": ["Taylor Swift", "Adele", "Madonna", "Katy Perry"],
+        "RichtigeAntwort": "Taylor Swift",
+        "RichtigeAntwortMöglichkeiten": "Taylor Swift",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Taylor Swifts Album '1989' brach Verkaufsrekorde und ist eines der meistverkauften Alben einer Künstlerin aller Zeiten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Künstlerin hatte als erste die komplette Top 10 der Billboard Hot 100 nur mit Songs aus einem einzigen Album belegt?",
+        "Antworten": ["Taylor Swift", "Beyoncé", "Ariana Grande", "Olivia Rodrigo"],
+        "RichtigeAntwort": "Taylor Swift",
+        "RichtigeAntwortMöglichkeiten": "Taylor Swift",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Mit dem Album 'Midnights' war Taylor Swift die erste Künstlerin, die die gesamte Top 10 der Billboard Hot 100 dominierte,"
+    },
+    
+
+
+
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper wurde als erster Hip-Hop-Künstler Milliardär?",
+        "Antworten": ["Jay-Z", "Dr. Dre", "Kanye West", "P. Diddy"],
+        "RichtigeAntwort": "Jay-Z",
+        "RichtigeAntwortMöglichkeiten": "Jay-Z Jay Z",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Jay-Z wurde 2019 offiziell der erste Hip-Hop-Milliardär durch Musik, Mode, Investments und sein Label Roc Nation,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper hält den Rekord für die meisten Grammy-Auszeichnungen im Hip-Hop?",
+        "Antworten": ["Jay-Z", "Kanye West", "Eminem", "Kendrick Lamar"],
+        "RichtigeAntwort": "Jay-Z",
+        "RichtigeAntwortMöglichkeiten": "Jay-Z Jay Z",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Mit über 24 Grammys ist Jay-Z der meistprämierte Hip-Hop-Künstler in der Geschichte der Preisverleihung,"
+    },
+
+
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Künstler hat als erster die gesamte Top 10 der Billboard Hot 100 mit Songs aus einem einzigen Album belegt?",
+        "Antworten": ["Drake", "Kanye West", "Travis Scott", "Jay-Z"],
+        "RichtigeAntwort": "Drake",
+        "RichtigeAntwortMöglichkeiten": "Drake",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Mit 'Midnights' belegte Taylor Swift 2022 erstmals die gesamte Top 10, doch ein Jahr später tat es ihr Drake mit 'For All the Dogs' gleich,"
+    },
+
+
+
+
+    
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

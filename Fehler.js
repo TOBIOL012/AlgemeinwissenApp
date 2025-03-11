@@ -22,7 +22,7 @@
 
     let currentQuestionIndex = 0;
     let correctCount = 0;
-    let askedQuestions = [];
+    let alreadyaskedQuestions = [];
     const totalQuestions = 15;
     let clickCount = 0;
     let kleinste = Infinity;
@@ -159,7 +159,7 @@ function getRandomQuestion() {
     const question = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
 
     // Markiere die Frage als gestellt
-    askedQuestions.push(question.Frage);
+    alreadyaskedQuestions.push(question.Frage);
 
     console.log('Zufällige Frage:', question); // Debugging
     return question; // Gebe die Frage zurück
@@ -418,6 +418,11 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
         
         // Verarbeite die Antwort basierend auf dem Übereinstimmungsstatus
         if (isMatch) {
+            localStorage.setItem("mission-" + Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + Kategorie.toLowerCase())) || 0) + 1);
+            localStorage.setItem("mission-fehler", (parseInt(localStorage.getItem("mission-fehler")) || 0) + 1);
+            localStorage.setItem("mission-" + Kategorie.toLowerCase() + "1", (parseInt(localStorage.getItem("mission-" + Kategorie.toLowerCase() + "1")) || 0) + 1);
+            localStorage.setItem("mission-question1", (parseInt(localStorage.getItem("mission-question1")) || 0) + 1);
+            localStorage.setItem("mission-fehler1", (parseInt(localStorage.getItem("mission-fehler1")) || 0) + 1);
             correctCount++;
             console.log('Richtig! Aktuelle Anzahl der richtigen Antworten:', correctCount);
             const incorrectQuestions = JSON.parse(localStorage.getItem('incorrectQuestions')) || [];
@@ -536,6 +541,11 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
                 updateStats(randomQuestion, isMatch);  
                 answers.forEach(btn => btn.disabled = true);
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
+                    localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase())) || 0) + 1);
+                    localStorage.setItem("mission-fehler", (parseInt(localStorage.getItem("mission-fehler")) || 0) + 1);
+                    localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase() + "1", (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase() + "1")) || 0) + 1);
+                    localStorage.setItem("mission-question1", (parseInt(localStorage.getItem("mission-question1")) || 0) + 1);
+                    localStorage.setItem("mission-fehler1", (parseInt(localStorage.getItem("mission-fehler1")) || 0) + 1);
                     this.classList.add('correct-answer');
                     document.querySelector('.results2').classList.add('correct');
                     document.querySelector('.next-button').classList.add('correct-button');

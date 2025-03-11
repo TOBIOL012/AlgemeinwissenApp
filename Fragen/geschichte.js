@@ -8753,7 +8753,7 @@ const geschichte = [
             "Kategorie": "Geschichte",
             "Frage": "Was passierte mit Korea im 7. Jahrhundert nach Christus?", //JA... Die Vereinigung Koreas fand im Jahr 668 n. Chr. statt, als das Königreich Silla, unterstützt von der chinesischen Tang-Dynastie, die anderen beiden Königreiche Baekje und Goguryeo eroberte.
             "Antworten": ["Vereinigung", "Gründung von Goryeo", "Einführung des Buddhismus", "Japanische Invasion"],
-            "RichtigeAntwort": "Vereinigung ",
+            "RichtigeAntwort": "Vereinigung",
             "RichtigeAntwortMöglichkeiten": "Vereinigung vereinen zusammenschluss verbindung einheit einigung zusammenschließen zusammen verschmelzung wiedervereinigung union",
             "Schwierigkeitsgrad": "mittel",
             "Fakt": "Korea wurde im 7. Jahrhundert durch das Königreich Silla mit buddhistischer Unterstützung vereint.",

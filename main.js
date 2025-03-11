@@ -303,9 +303,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
                 answers.forEach(btn => btn.disabled = true);
 
-                localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase())) || 0) + 1);
+                
     
                 if (this.textContent === randomQuestion.RichtigeAntwort) {
+                    localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase())) || 0) + 1);
+                    localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase() + "1", (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase() + "1")) || 0) + 1);
+                    localStorage.setItem("mission-question1", (parseInt(localStorage.getItem("mission-question1")) || 0) + 1);
                     this.classList.add('correct-answer');
                     document.querySelector('.results').classList.add('correct');
                     document.querySelector('.next-button').classList.add('correct-button');
