@@ -242,7 +242,7 @@ main {
     width: 90%;
     padding: 0.5em;
     border-radius: 10px;
-    border: 1px solid #2f4957;
+    border: 1px solid var(--line-color);
     background-color: #38424b;
     color: white;
     font-size: 1em;

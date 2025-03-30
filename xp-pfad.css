@@ -4,7 +4,7 @@ body {
     font-family: 'Dosis', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     overflow-y: scroll;
 }
@@ -76,7 +76,7 @@ header {
     position: absolute;
     width: 60px;
     height: 60px;
-    background-color: #2F4957;
+    background-color: var(--line-color);
     border-radius: 8px;
     left: calc(100% + 60px); /* Rechts von der Progress-Bar */
     display: flex;
@@ -98,8 +98,8 @@ header {
 .progress-bar {
     width: 15px;
     border-radius: 8px;
-    background-color: #141F25;
-    border: 5px solid #2F4957;
+    background-color: var(--background-color);
+    border: 5px solid var(--line-color);
     height: 3050px;
     margin-bottom: 50px;
     position: relative;
@@ -109,14 +109,14 @@ header {
     position: absolute;
     width: 15px;
     height: 4px;
-    background-color: #2F4957; /* Farbe der Striche */
+    background-color: var(--line-color); /* Farbe der Striche */
     left: 0; /* Striche innerhalb der Progress-Bar */
     transform: translateY(-50%); /* Zentriere die Striche */
 }
 
 .progress-bar .marker-label {
     position: absolute;
-    color: #2F4957;
+    color: var(--line-color);
     font-size: 1rem;
     font-family: 'Dosis', sans-serif;
     left: calc(100% + 10px); /* Zahlen rechts neben der Progress-Bar */

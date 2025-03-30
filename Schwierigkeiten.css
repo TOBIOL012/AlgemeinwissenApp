@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-html, body {
+html, body {overflow-x: hidden;
     height: 100%; /* Stellt sicher, dass der Body die volle Höhe hat */
     margin: 0;
     font-family: "Dosis", sans-serif;
@@ -11,20 +11,21 @@ main {
     flex-direction: column; /* Stellt sicher, dass die Elemente untereinander sind */
     justify-content: center;
     align-items: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     height: calc(100% - 7% - var(--font-size-header))
 }
 
 .header {
+    padding-left: 7.5%;
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #141F25;
-    padding-left: 5%;
+    background-color: var(--background-color);
     padding-top: 7%;
 }
 
 .back-arrow {
+    z-index: 999999;
     color: white;
     text-decoration: none;
     position: relative;

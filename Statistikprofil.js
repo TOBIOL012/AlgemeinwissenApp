@@ -200,25 +200,6 @@ if (typeof updateDifficultyBar !== 'function') {
     updateDifficultyBar();
 }
 
-function syncStreakDataFromServiceWorker() {
-    if (!navigator.serviceWorker.controller) {
-        console.error("❌ Kein aktiver Service Worker gefunden. Registrierung überprüfen!");
-        return;
-    }
-
-    console.log("📨 Sende Nachricht an Service Worker zur Streak-Abfrage:", { type: "initUserData", uid: localStorage.getItem("uid") });
-
-    try {
-        navigator.serviceWorker.controller.postMessage({ type: "initUserData", uid: localStorage.getItem("uid") });
-        console.log("✅ Streak-Anfrage erfolgreich gesendet!");
-    } catch (error) {
-        console.error("❌ Fehler beim Senden der Streak-Anfrage an den Service Worker:", error);
-    }
-}
-
-
-syncStreakDataFromServiceWorker();
-
 let xpHistory = []; // Initialisiere mit einem leeren Array
 
 // Statt den Service Worker zu nutzen, warten wir auf das Event, wenn Firebase-Daten geladen wurden:
@@ -447,6 +428,3 @@ document.querySelector('.graph-container').addEventListener('touchend', (event) 
         updateChart();
     }
 });
-
-// Initialize the chart data and view after fetching XP history
-syncXpHistoryFromServiceWorker();

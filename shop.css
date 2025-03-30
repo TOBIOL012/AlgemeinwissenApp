@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
 .shop {
-    width: 90%;
+    width: 100%;
     flex-direction: column;
     font-family: 'Dosis', sans-serif;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     padding: 0;
     height: 100%;
     margin: 0;
+    padding-bottom: 5rem;
+    overflow: scroll;
 }
 
 /* Header */
 .shop-header {
-    width: 99vw;
+    width: 100vw;
     position: relative; /* Ermöglicht die absolute Positionierung der Münzen */
     display: flex;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-bottom: 1rem;
     justify-content: center;
     align-items: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     border-bottom: 1px solid white;
     color: white;
-    margin: 0 -5%;
 }
 
 .title{
@@ -69,10 +70,21 @@
 
 /* ✅ Neue Überschrift für das Inventar */
 .inventory-title {
-    margin-top: 35px;
+    margin-top: 2rem;
     margin-bottom: 8px;
     font-size: 1.5rem;
 }
+
+.shop h2{
+    margin-left: 5%;
+    width:90%;
+}
+
+.shop section{
+    margin-left: 5%;
+    width:90%;
+}
+
 
 /* ✅ Inventar jetzt über die volle Breite */
 .inventory {
@@ -87,7 +99,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
-    background-color: #2f4957;
+    background-color: var(--line-color);
     padding: 0.6rem 0;
     border-radius: 12px;
     text-align: center;
@@ -108,7 +120,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
-    background-color: #2f4957;
+    background-color: var(--line-color);
     padding: 0.6rem 0;
     border-radius: 12px;
     text-align: center;
@@ -145,7 +157,7 @@
     text-align: left;
     margin-bottom: 8px;
     justify-content: space-between;
-    border: 2px solid #2f4957;
+    border: 2px solid var(--line-color);
     padding: 15px 20px;
     border-radius: 12px;
     cursor: pointer;
@@ -159,7 +171,7 @@
     text-align: left;
     margin-bottom: 8px;
     justify-content: space-between;
-    border: 2px solid #2f4957;
+    border: 2px solid var(--line-color);
     padding: 15px 20px;
     border-radius: 12px;
     cursor: pointer;
@@ -297,6 +309,11 @@
     padding-right: 15px; /* Fügt den Abstand rechts wieder hinzu */
 }
 
+.profile-picture-container a{
+    margin-left:1rem;
+    opacity:0.7;
+}
+
 .profile-picture-container::-webkit-scrollbar {
     display: none;  /* Scrollbar in Chrome & Safari ausblenden */
 }
@@ -371,15 +388,15 @@
 
 .buy-button {
     display: flex;
-    background-color: rgb(94, 233, 136);
+    background-color: rgb(66, 186, 120);
     border: none;
     width: 7.3rem;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     margin-top: 0.7rem;
     margin-bottom: 0.75rem;
     align-items: center;
     justify-content: center;
-    padding: 3px 10px;
+    padding: 0.3rem 0.1rem;
     color: white;
     cursor: pointer;
     display: flex;

@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-body {
+.ranking {
+    z-index:99999;
+    top:0;
+    position: absolute;
     font-family: "Dosis", sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: white;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between; /* Platz zwischen Überschrift und Button */
     height: 100vh;
+    width:100vw;
     overflow: hidden; /* Verhindert das Scrollen der gesamten Seite */
 }
 
-header {
+.ranking header {
     text-align: center;
     margin-top: 1.5em;
 }
 
-main {
+.ranking main {
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +32,7 @@ main {
     overflow: hidden; /* Verhindert das Scrollen des Main-Bereichs */
 }
 
-.Überschrift {
+.ranking .Überschrift {
     font-size: 3em;
 }
 
@@ -76,7 +80,7 @@ main {
     flex-shrink: 0; /* Verhindert, dass die Punkte verkleinert werden */
 }
 
-#next-round-button {
+.ranking #next-round-button {
     background-color: #f1730c;
     color: white;
     border: none;
@@ -89,8 +93,7 @@ main {
     width: 90vw;
 }
 
-.next-round-button:active {
+.ranking .next-round-button:active {
     box-shadow: none;
     transform: translateY(6px);
 }
-

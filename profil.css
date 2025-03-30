@@ -8,7 +8,7 @@
     height: 100%;
     overflow-x: hidden;
     font-family: "Dosis", sans-serif;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@
     height: 2.3rem;
     width: 2.3rem;
     transition: all 0.5s ease-in-out;
+    transition: scale 0.15s cubic-bezier(0.42, 0, 0.23, 2.12);
 }
 
 
@@ -75,7 +76,7 @@ body {
     justify-content: center;
     width: 100%;
     padding-top: 5%;
-    border-bottom: 3px solid #2f4957;
+    border-bottom: 3px solid var(--line-color);
 }
 
 .Profilbild-container a {
@@ -93,8 +94,8 @@ body {
     width: 90%;
     display: block;
     justify-content: center;
-    outline: 3px solid #2f4957;
-    background-color: #141F25;
+    outline: 3px solid var(--line-color);
+    background-color: var(--background-color);
     border-radius: 1rem;
 }
 
@@ -132,7 +133,7 @@ body {
     padding: 5px;
     cursor: pointer;
     border: none;
-    background-color: #141F25;
+    background-color: var(--background-color);
     transition: all 0.3s ease;
 }
 
@@ -154,7 +155,7 @@ body {
 
 .tab-register, .tab-login{
     border-bottom: none;
-    background-color: #141F25;
+    background-color: var(--background-color);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -163,7 +164,7 @@ body {
     color:#65757d;
 }
 .tab-register.active, .tab-login.active{
-    border-bottom: 3px solid #2f4957;
+    border-bottom: 3px solid var(--line-color);
 }
 
 
@@ -172,12 +173,13 @@ body {
 
 .Benutzername,  .E-Mail, .Passwort{
     width: calc(100% - 1.8rem);
-    color: white;
-    background-color: #141F25;
+    color: white !important;
+    background-color: var(--background-color);
     border: none;
     justify-content: center;
     padding: 0.9rem;
-    font-size: 1.6em;
+    font-size: 1.6em !important;
+    background-color: var(--background-color) !important;
     font-family: "Dosis", sans-serif;
 }
 
@@ -186,7 +188,7 @@ body {
 }
 
 .Benutzername,  .E-Mail{
-    border-bottom: 2px solid #2f4957;
+    border-bottom: 2px solid var(--line-color);
 }
 
 .submit-btn{
@@ -209,8 +211,8 @@ body {
 .Übersicht {
     display: flex;
     align-items: center;
-    background-color: #141F25;
-    border: 3px solid #2f4957;
+    background-color: var(--background-color);
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 1em 0em;
     width: 90%;
@@ -231,7 +233,7 @@ body {
     top: 0;
     bottom: 0;
     width: 1px; /* Schmalere Trennstriche */
-    background-color: #2f4957;
+    background-color: var(--line-color);
 }
 
 .XP::after {
@@ -255,8 +257,8 @@ body {
 .XP-Pfad-Container {
     display: block;
     text-decoration: none;
-    background-color: #141F25;
-    border: 3px solid #2f4957;
+    background-color: var(--background-color);
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 12px;
     width: calc(90% - 24px);
@@ -293,7 +295,7 @@ body {
 .xp-progress-bar {
     width: 100%;
     height: 10px;
-    background-color: #2F4957;
+    background-color: var(--line-color);
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -316,7 +318,7 @@ body {
     bottom: 6.5rem; /* Leicht über der Nav-Bar */
     left: 1rem;
     width: 20%;
-    background-color: #2F4957;
+    background-color: var(--line-color);
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -328,11 +330,11 @@ body {
 
 #xp-display {
     position: sticky;
-    bottom: 6.5rem; /* Über der Nav-Bar */
+    bottom: 4.5rem; /* Über der Nav-Bar */
     left: 1rem;
     width: 7rem; /* Feste Breite */
     height: 2.5rem; /* Angepasste Höhe */
-    background-color: #2F4957;
+    background-color: var(--line-color);
     color: white;
     font-size: 1.6rem; /* Größere Schrift */
     font-weight: bold;
@@ -379,10 +381,10 @@ body {
 
 .Statistik-button {
     display:block;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 15px 20px;
     font-size: 1.5em;
@@ -402,7 +404,7 @@ body {
 .Beantwortet{
     text-align: right;
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to right, #476e83, #55859f);
+    background: linear-gradient(to right, var(--line-color), #55859f);
     height:100%;
     width: 0px;
     transition: width 0.5s ease;
@@ -417,22 +419,7 @@ body {
     transition: width 0.5s ease;
 }
 
-#einstellung {
-    display: block;
-    background-color: #fa8e29;
-    text-decoration: none;
-    gap: 0.6rem;
-    border-radius: 15px;
-    padding: 0.6rem 0.6rem;
-    font-size: 1.5em;
-    font-family: "Dosis", sans-serif;
-    width: calc(90vw - 1.4rem);
-    margin-top: 1rem;
-    margin-left: 5vw;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .ausloggen {
     background-color: #fa8e29;
@@ -444,14 +431,54 @@ body {
     width: 90%;
     font-family: "Dosis", sans-serif;
     box-shadow: 0px 6px 0px 0px #bb691d;
-    transition: transform 0.3s ease;
     position: relative;
+    display: block;
+    background-color: #fa8e29;
+    text-decoration: none;
+    gap: 0.6rem;
+    border-radius: 1.1rem;
+    padding: 0.6rem 0.6rem;
+    font-size: 1.5em;
+    font-family: "Dosis", sans-serif;
+    width: calc(90vw - 1rem);
+    margin-top: 1rem;
+    margin-left: 5vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
 }
 
 .ausloggen:active {
     box-shadow: none;
     top: 6px;
     transform: translate(0, 0); 
+}
+
+.datenschutz{
+    background-color: var(--background-color);
+    color: white;
+    border: solid 3px var(--line-color);
+    padding: 1.2em 0.8rem;
+    border-radius: 1em;
+    width: calc(90% - 6px);
+    box-shadow: none;
+    position: relative;
+    text-decoration: none;
+    gap: 0.6rem;
+    border-radius: 1.1rem;
+    padding: 0.7rem 0.8rem;
+    font-size: 1.3em;
+    font-family: "Dosis", sans-serif;
+    width: calc(90vw - 1.6rem);
+    margin-top: 1.5rem;
+    margin-left: 5vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    position: relative;
+
 }
 
 .einstellungen{
@@ -466,7 +493,7 @@ body {
     height: 100%;
     overflow-x: hidden;
     font-family: "Dosis", sans-serif;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     display: flex;
     flex-direction: column;
@@ -507,7 +534,7 @@ a img{
     border-radius: 3px;
     width: 4rem;
     transition: left ease-in-out;
-    background-color: #476e83;
+    background-color: var(--line-color);
     position: relative;
     left: calc(12.5% - 2rem);
     transition: width 0.15s ease, left 0.3s ease; /* Animation für width & left */
@@ -567,10 +594,10 @@ a img{
 
 .iframe3 .highest-streak-stats-container, .tage-stats-container {
     display:block;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 0.6rem 0.8rem;
     font-size: 1.5em;
@@ -623,10 +650,10 @@ a img{
 .kalendar{
     padding: 0.5rem;
     display:block;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     width: calc(90% - 1rem - 6px);
     margin-top: 2rem;
@@ -671,12 +698,12 @@ a img{
 .month-calendar .day-row {
     display: flex;
     width: 100%;
-    background-color: #2f4957;
+    background-color: var(--line-color);
     border-radius: 3rem;
 }
 
 .month {
-    background-color: #2f4957;
+    background-color: var(--line-color);
     border-radius: 1.25rem;
 }
 
@@ -763,7 +790,7 @@ a img{
     left: 0;
     width: 100%;
     position: relative;
-    color: #2f4957;
+    color: var(--line-color);
     font-weight: bold;
     align-items: center;
     justify-content: center;
@@ -787,7 +814,7 @@ a img{
 }
 
 .profil .streak-all{
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-align: left;
     border-radius: 12px;
@@ -798,7 +825,7 @@ a img{
 }
 
 .newmonth{
-    background-color: #141F25;
+    background-color: var(--background-color);
     width: 100%;
     padding-bottom: 0.3rem;
     text-align: center;
@@ -815,9 +842,17 @@ a img{
 
 
 
+
+
 #spieler-container {
     width: 100%;
-    padding-left: 10vw;
+    display:flex;
+}
+
+.profil #spieler-container {
+    width: 100%;
+    display:flex;
+    justify-content: center;
 }
 
 .header {
@@ -828,6 +863,7 @@ a img{
 }
 
 .back-arrow {
+    transition: scale 0.15s cubic-bezier(0.42, 0, 0.23, 2.12); 
     color: white;
     text-decoration: none;
     position: relative;
@@ -883,7 +919,7 @@ a img{
 
 .circle-bg {
     fill: none;
-    stroke: #2f4957; /* Hintergrundfarbe */
+    stroke: var(--line-color); /* Hintergrundfarbe */
     stroke-width: 2.8;
 }
 
@@ -923,7 +959,7 @@ a img{
 .fragen-gesamt-farbe{
     width: 0.8rem;
     height: 1.2rem;
-    background-color: #2f4957;
+    background-color: var(--line-color);
     border-radius: 1rem;
 }
 
@@ -952,11 +988,11 @@ a img{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     padding-top: 0.5rem;
     width: 82%;
     padding-top: 2rem;
-    border-top: 1px solid #2f4957;
+    border-top: 1px solid var(--line-color);
     margin-top: 2rem;
 }
 
@@ -985,7 +1021,7 @@ a img{
 }
 
 #border{
-    border-top: 3px solid #2f4957;
+    border-top: 3px solid var(--line-color);
     width: 100%;
 }
 
@@ -1013,7 +1049,7 @@ a img{
 .Schwachpunkt{
     width: auto;
     padding:0.7rem;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
@@ -1035,7 +1071,7 @@ a img{
     width: 82%;
     height: 1.4rem;
     border-radius: 15px;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     overflow: visible; /* Ermöglicht das Hervorstehen des Balkens */
 }
 
@@ -1058,7 +1094,7 @@ a img{
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2f4957;
+    border-bottom: 1px solid var(--line-color);
     width: 82%;
     text-align: center;
 }
@@ -1072,7 +1108,7 @@ a img{
     top: 0;
     width: 5px; /* Breite der Striche */
     height: 100%; /* Striche über die ganze Höhe */
-    background-color: #2f4957; /* Farbe der Striche */
+    background-color: var(--line-color); /* Farbe der Striche */
     z-index: -10;
 }
 
@@ -1095,10 +1131,10 @@ a img{
 
 .iframe4 .streak-stats-container, .highest-streak-stats-container{
     display:block;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 0.6rem 0.8rem;
     font-size: 1.5em;
@@ -1115,9 +1151,9 @@ a img{
     display: flex;
     align-items: left;
     padding-top: 2rem;
-    border-top: 1px solid #2f4957;
+    border-top: 1px solid var(--line-color);
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2f4957;
+    border-bottom: 1px solid var(--line-color);
 }
 
 .iframe4 .streak-stats-anzeige{
@@ -1168,7 +1204,7 @@ a img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2f4957;
+    background: var(--line-color);
     border-radius: 10px 10px 0 0; /* Nur oben abgerundet */
     padding: 4px;
     width: 160px;
@@ -1217,10 +1253,10 @@ a img{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 0.8rem 0.3rem;
     padding-bottom:0rem;
@@ -1237,7 +1273,7 @@ a img{
 }
 
 .xp-line {
-    stroke: #2F4957;
+    stroke: var(--line-color);
     stroke-width: 20px;
     fill: transparent;
     stroke-linecap: round;
@@ -1254,8 +1290,8 @@ a img{
 
 .checkpoint {
     opacity: 1;
-    fill: #141F25;
-    stroke: #2F4957;
+    fill: var(--background-color);
+    stroke: var(--line-color);
     stroke-width: 4px;
     pointer-events: none;
 }
@@ -1273,7 +1309,7 @@ a img{
 
 /* Start-Checkpoint */
 .start-checkpoint {
-    fill: #141F25;
+    fill: var(--background-color);
     stroke: #E48D45;
     stroke-width: 9px;
     width: 38px;

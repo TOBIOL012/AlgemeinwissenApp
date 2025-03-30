@@ -1,15 +1,4 @@
 
-:root {
-    --background-color: #141F25;
-    --line-color: #45545c;
-    --button-color: #f1730c;
-    --button-shade-color: 146, 65, 7;
-    --font-size-header: 2rem;
-    --font-size-question: 1.5rem;
-    --font-size-awnsers: 1.3rem;
-    --font-size-button: 1.6rem;
-    --icon-size:2.3em;
-}
 
 #next-button {
     color: white;
@@ -43,6 +32,6 @@ body {
     font-family: "Dosis", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #141F25;
+    background-color: var(--background-color);
     height: 100vh;
 }

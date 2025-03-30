@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+.ranking {
+    z-index:99999;
+    top:0;
+    position: absolute;
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Platz zwischen Überschrift und Button */
+    height: 100vh;
+    width:100vw;
+    overflow: hidden; /* Verhindert das Scrollen der gesamten Seite */
+}
+
+.ranking header {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.ranking main {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    flex-grow: 1;
+    overflow: hidden; /* Verhindert das Scrollen des Main-Bereichs */
+}
+
+.ranking .Überschrift {
+    font-size: 3em;
+}
+
+#ranking-container {
+    width: 100%; /* Balken über 100% des Containers */
+    max-height: 40vh; /* Begrenze die Höhe des Containers auf 40% der Viewport-Höhe */
+    overflow-y: auto; /* Ermöglicht das vertikale Scrollen */
+    margin-bottom: 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriere die Balken horizontal */
+}
+
+.ranking-bar {
+    font-size: 1.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--line-color);
+    border-radius: 15px;
+    margin: 5px 0; /* Verringerter Abstand zwischen den Balken */
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 90%; /* Balken über 90% des Containers */
+    max-width: 600px; /* Optionale maximale Breite für größere Bildschirme */
+    height: 2.5em; /* Konstante Höhe der Balken */
+}
+
+.ranking-bar span {
+    flex: 1;
+}
+
+.ranking-bar .name {
+    text-align: left;
+    flex: 3; /* Nimmt den Großteil des Platzes ein */
+    overflow: hidden; /* Verhindert Überlauf */
+    text-overflow: ellipsis; /* Fügt Auslassungspunkte hinzu, wenn der Text zu lang ist */
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+}
+
+.ranking-bar .points {
+    text-align: right;
+    margin-right: 10px;
+    flex-shrink: 0; /* Verhindert, dass die Punkte verkleinert werden */
+}
+
+.ranking #next-round-button {
+    background-color: #f1730c;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    box-shadow: 0px 6px 0px 0px rgb(146, 65, 7);
+    margin-bottom:3rem;
+    width: 90vw;
+}
+
+.ranking .next-round-button:active {
+    box-shadow: none;
+    transform: translateY(6px);
+}
+

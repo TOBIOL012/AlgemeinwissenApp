@@ -79,7 +79,11 @@ function loadAllPlayers(ranking) {
 
 function updateRankingUI(ranking, userRank, username) {
     console.log(username);
-    document.querySelector('.scroll-button').textContent = `${window.userData.username}: Rang ${window.userRank}`;
+    if (uid){
+        document.querySelector('.scroll-button').textContent = `${window.userData.username}: Rang ${window.userRank}`;
+    } else {
+        document.querySelector('.scroll-button').style.display = "none";
+    }
     console.log("🔄 Aktualisiere UI mit Rangliste und Benutzer-Rang");
     loadAllPlayers(ranking);
 }
@@ -92,6 +96,7 @@ document.querySelector('.scroll-button').addEventListener('click', () => {
 });
 
 document.addEventListener("rankingDataLoaded", function () {
+    console.log("ranking loaded");
     syncRankingData();
 });
 

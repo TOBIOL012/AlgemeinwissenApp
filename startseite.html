@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="missions.css">
     <link rel="stylesheet" href="Standart.css">
     <link rel="manifest" href="/manifest.json">
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
@@ -23,7 +25,10 @@
     <script src="Fragen/musik.js" defer></script>
     <script src="Fragen/wissenschaft.js" defer></script>
     <script src="Fragen/kunst.js" defer></script>
+    <script src="Fragen/astronomie.js" defer></script>
+    <script src="Fragen/literatur.js" defer></script>
     <script src="Fragen/question.js" defer></script>
+    <script src="Profilbilder/profilbilder.js" defer></script>
     <script src="startseite.js" defer></script>
     <script src="anzeige.js" defer></script>
     <script src="calendar.js" defer></script>
@@ -42,21 +47,17 @@
   <div class="startseite" id="iframe">
     <div class="top-bar expanded" id="top-bar">
         <div class="top-bar-icons">
-            <div class="stat" id="streak" onclick="toggleContent('streak-content')">
+            <div class="stat" id="streak" onclick="toggleContent('streak-content'); navigator.vibrate(30);">
                 <img src="streak.png" alt="Streak" class="streak-img">
                 <span class="stat-value" id="streak-value">0</span>
             </div>
-            <div class="stat" id="coins" onclick="toggleContent('coins-content')">
+            <div class="stat" id="coins" onclick="toggleContent('coins-content'); navigator.vibrate(30);">
                 <img src="icons8-smaragd-64.png" alt="Coins" class="coins-img">
                 <span class="stat-value" id="coins-value">0</span>
             </div>
-            <div class="stat" id="xp" onclick="toggleContent('xp-content')">
+            <div class="stat" id="xp" onclick="toggleContent('xp-content'); navigator.vibrate(30);">
                 <img src="icons8-bücher-96.png" alt="XP" class="xp-img">
                 <span class="stat-value" id="xp-value">0</span>
-            </div>
-            <div class="stat" id="notifications" onclick="toggleContent('notifications-content')">
-                <img src="icons8-nachricht-96 (1).png" alt="Benachrichtigungen" class="notifications-img">
-                <span class="stat-value" id="notifications-value">0</span>
             </div>
         </div>
         <div class="top-bar-content" id="top-bar-content"></div>
@@ -68,10 +69,33 @@
 
     
     <div class="buttons-container" id="buttons-container">
-        <button class="animated-button" onclick="location.href='Kategorien.html'">Spielen</button>
-        <button class="animated-button" onclick="location.href='mehrspieler.html'">Mehrspieler</button>
+        
+        <div class="quiz">
+          <img class="quiz-background" src="quiz-background/planeten.png">
+          <div class="quiz-absolute">
+            <div class="button">
+              <div class="quiz-button-absolute">
+                <button class="quiz-button">Quiz starten</button>
+                <div class="quiz-button-absolute-absolute">
+                  <button class="einzelspieler-button" onclick="window.switchsite('Kategorien.html');"><img src="https://img.icons8.com/FFFFFF/fluency-systems-regular/50/user--v1.png"></button>
+                  <button class="mehrspieler-button" onclick="window.switchsite('mehrspieler.html');"><img src="https://img.icons8.com/FFFFFF/fluency-systems-regular/50/conference-call--v1.png"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "pfad">
+          <img class="pfad-anzeige" src="Pfad-Bilder/1.png">
+          <div class="pfad-absolute">
+            <div class="pfad-header">
+              <a>Geschichte</a>
+              <img class="arrow" src="pfeil.png">
+            </div>
+            <button class="pfad-start">Lektion starten</button>
+          </div>
+        </div>
         <div class="Fehler-container">
-          <button class="animated-button" id="fehler" onclick="location.href='kategorien-fehler.html'">Fehler</button>
+          <button class="animated-button" id="fehler" onclick="window.switchsite('kategorien-fehler.html');">Fehler<img class="repeat" src="https://img.icons8.com/FFFFFF/sf-black/64/repeat.png"></button>
           <div class="notification-dot"></div>
         </div>
     </div>
@@ -185,89 +209,8 @@
   <div class="profile-picture-container">
     <div class="profile-picture-track">
       
-      <!-- Erster Eintrag -->
-      <div class="profile-picture-wrapper">
-        <div class="profile-picture" style="--profile-bg: rgb(93, 142, 226);">
-          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-        </div>
-        <div class="profile-bottom">
-          <div class="profile-name">Albert Einstein</div>
-          <button class="buy-button" onclick="buyProfilePicture('/Profilbilder/AlbertEinstein.png', 100)">
-            <span class="price-amount">100</span>
-            <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>          
-        </div>
-      </div>
+      <a>keine neuen Profilbilder</a>
       
-      <!-- Zweiter Eintrag -->
-      <div class="profile-picture-wrapper">
-        <div class="profile-picture" style="--profile-bg: rgb(222, 131, 218);">
-          <img src="/Profilbilder/DonaldTrump.png" alt="Profilbild 2">
-        </div>
-        <div class="profile-bottom">
-          <div class="profile-name">Donald Trump</div>
-          <button class="buy-button">
-            <span class="price-amount">250</span>
-            <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>
-        </div>
-      </div>
-
-      <!-- Dritter Eintrag -->
-      <div class="profile-picture-wrapper">
-        <div class="profile-picture" style="--profile-bg: rgb(153, 93, 226);">
-          <img src="/Profilbilder/Tutanchamun.png" alt="Profilbild 3">
-        </div>
-        <div class="profile-bottom">
-          <div class="profile-name">Tutanchamun</div>
-          <button class="buy-button">
-            <span class="price-amount">250</span>
-            <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>
-        </div>
-      </div>
-      
-      <!-- Vierter Eintrag -->
-      <div class="profile-picture-wrapper">
-        <div class="profile-picture" style="--profile-bg: #ff5733;">
-          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-        </div>
-        <div class="profile-bottom">
-          <div class="profile-name">Albert Einstein</div>
-          <button class="buy-button">
-            <span class="price-amount">100</span>
-            <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>
-        </div>
-      </div>
-
-      <!-- Fünfter Eintrag -->
-      <div class="profile-picture-wrapper">
-        <div class="profile-picture" style="--profile-bg: #ff5733;">
-          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-        </div>
-        <div class="profile-bottom">
-          <div class="profile-name">Albert Einstein</div>
-          <button class="buy-button">
-            <span class="price-amount">100</span>
-            <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>
-        </div>
-      </div>
-
-      <!-- Sechster Eintrag -->
-      <div class="profile-picture-wrapper">
-        <div class="profile-picture" style="--profile-bg: #ff5733;">
-          <img src="/Profilbilder/AlbertEinstein.png" alt="Profilbild 1">
-        </div>
-        <div class="profile-bottom">
-          <div class="profile-name">Albert Einstein</div>
-          <button class="buy-button">
-            <span class="price-amount">100</span>
-            <img src="coin.png" alt="Münzen" class="coin-icon">
-          </button>
-        </div>
-      </div>
       
     </div>
   </div>
@@ -283,17 +226,18 @@
   <div class="profil" id="iframe" style="display:none;">
     <div class="einstellungen" style="display: none;">
       <div class="ausloggen" id="einstellung">Ausloggen <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAe0lEQVR4nO3VMQqAIBSAYYdoDJqiG3noGnPqFLbXEf5wCBryUemb9J+ffqCgxtS+BFhg438+7CEBYSA1LwHRzLsTkGfLAYARaDSBA3BApwVcrUCfBRCatYFJ84jc/R5yAjuwaF7yALSx9clArDIAj/JzbRMRL344NfPQCYXdh8uFVAL0AAAAAElFTkSuQmCC"></div>
+      <div class="datenschutz" id="einstellung">Datenschutzerklärung</div>
     </div>
   
     <div class="back-arrow-container">
       <div class="settings-icon">
-        <img src="output_images/rotated_000.webp" alt="Einstellungen">
+        <img class="settongs-img" src="output_images/rotated_000.webp" alt="Einstellungen">
       </div>
     </div>
-    <div class="Profilbild-container">
+    <div class="Profilbild-container" style="background-color: #5da571;">
       <a>
         <!-- Standardwert wird nur angezeigt, wenn kein Wert in localStorage ist -->
-        <img class="Profilbild-groß">
+        <img class="Profilbild-groß" src="Profilbilder/AlbertEinstein.png">
       </a>
     </div>
   
@@ -325,8 +269,8 @@
     <!-- Hier sind die Login- und Registrierungsfelder -->
     <div class="Benutzerdaten" style="display: none;">
       <div class="tabs">
-        <button class="tab-login">EINLOGGEN</button>
         <button class="tab-register">REGISTRIEREN</button>
+        <button class="tab-login">EINLOGGEN</button>
       </div>
       <div class="Register">
         <input type="text" id="Benutzername" class="Benutzername" placeholder="Benutzername">
@@ -357,16 +301,32 @@
   
   
   <div class="iframe2">
-    <svg id="xp-container" width="400" height="2200">
+    <svg id="xp-container" width="400" height="6000">
       <!-- Hintergrundlinie -->
       <path id="xp-path" class="xp-line" d="
           M 200 50 
-          Q 350 250, 200 450 
-          Q 50 650, 200 850 
-          Q 350 1050, 200 1250
-          Q 50 1450, 200 1650
-          Q 350 1850, 200 2050
-          Q 50 2250, 200 2450" />
+          Q 400 250, 200 450 
+          Q 0 650, 200 850 
+          Q 400 1050, 200 1250
+          Q 0 1450, 200 1650
+          Q 400 1850, 200 2050
+          Q 0 2250, 200 2450 
+          Q 400 2650, 200 2850 
+          Q 0 3050, 200 3250 
+          Q 400 3450, 200 3650 
+          Q 0 3850, 200 4050 
+          Q 400 4250, 200 4450 
+          Q 0 4650, 200 4850 
+          Q 400 5050, 200 5250
+          Q 0 5450, 200 5650 
+          Q 400 5850, 200 6050 
+          Q 0 6250, 200 6450 
+          Q 400 6650, 200 6850
+          Q 0 7050, 200 7250 
+          Q 400 7450, 200 7650
+          Q 0 7850, 200 8050 
+          Q 400 8250, 200 8450
+          Q 0 8650, 200 8850" />
   
       <!-- Fortschrittslinie -->
       <path id="xp-progress" class="xp-progress" d="" />
@@ -582,19 +542,19 @@
 
   <div class="nav-bar">
     <a class="nav-button">
-      <img src="nav-bar-icons/icons8-home.svg" alt="Home" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+      <img src="nav-bar-icons/icons8-home.svg" alt="Home" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25'); navigator.vibrate(30);" oncontextmenu="return false;">
     </a>
     <a class="nav-button">
-      <img src="https://img.icons8.com/material-rounded/80/FFFFFF/star--v1.png" alt="Missions" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25'); window.updateProgress();">
+      <img src="https://img.icons8.com/material-rounded/80/FFFFFF/star--v1.png" alt="Missions" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25'); window.updateProgress(); navigator.vibrate(30);" oncontextmenu="return false;">
     </a>
     <a class="nav-button">
-      <img src="nav-bar-icons/ranking.png" alt="Ranking" style="width: 2.4rem; height: 2.4rem; margin-bottom: -0.3rem;" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+      <img src="nav-bar-icons/ranking.png" alt="Ranking" style="width: 2.4rem; height: 2.4rem; margin-bottom: -0.3rem;" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25'); navigator.vibrate(30);" oncontextmenu="return false;">
     </a>
     <a class="nav-button">
-      <img src="nav-bar-icons/shop.png" alt="Shop" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25');">
+      <img src="nav-bar-icons/shop.png" alt="Shop" onclick="fetchXP(); navigate(1); updateIndicator(1); window.themeColor('#141F25'); navigator.vibrate(1000);" oncontextmenu="return false;">
     </a>
     <a class="nav-button">
-      <img src="https://img.icons8.com/fluency-systems-filled/80/FFFFFF/user.png" alt="Profil" onclick="window.themeColor(window.userData.profilecolor || '#141F25');">
+      <img src="https://img.icons8.com/fluency-systems-filled/80/FFFFFF/user.png" alt="Profil" onclick="window.themeColor(window.userData.profilecolor || '#141F25'); navigator.vibrate(30);" oncontextmenu="return false;">
     </a>
   </div>
 

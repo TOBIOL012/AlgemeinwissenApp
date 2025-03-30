@@ -13,24 +13,8 @@ let selectedColor = null;         // Vom User ausgewählte Farbe
 
 // Lädt die JSON-Datei (alle verfügbaren Bilder) und fordert danach Benutzerdaten per SW an.
 function loadProfileImages() {
-  const data = [
-    {
-      "name": "AlbertEinstein",
-      "datei": "AlbertEinstein.png",
-      "preis": 500
-    },
-    {
-      "name": "DonaldTrump",
-      "datei": "DonaldTrump.png",
-      "preis": 600
-    },
-    {
-      "name": "Tutanchamun",
-      "datei": "Tutanchamun.png",
-      "preis": 700
-    }
-  ];
-  jsonProfileUrls = data.map(item => `/Profilbilder/${item.datei}`);
+  const data = profilbilder;
+  jsonProfileUrls = data.map(item => `Profilbilder/${item.datei}`);
   updateImageDisplay(jsonProfileUrls);
 }
 
@@ -51,7 +35,7 @@ function updateImageDisplay() {
     const div = document.createElement('div');
     div.className = 'profilbild selectable';
     const img = document.createElement('img');
-    img.src = `/Profilbilder/${filename}`;
+    img.src = `Profilbilder/${filename}`;
     img.alt = 'Profilbild';
     img.className = 'Profilbild-img';
     img.style.opacity = "1";
@@ -79,9 +63,10 @@ function updateImageDisplay() {
   // Setze das große Profilbild anhand des in Firebase gespeicherten currentProfile,
   // aber markiere es nicht als active – die Hervorhebung erfolgt erst beim Anklicken.
   if (currentProfile) {
-    const profilbildGross = document.querySelector('.Profilbild-groß');
+    const profilbildGross = document.querySelector('.profil-auswahl .Profilbild-groß');
     if (profilbildGross) {
-      profilbildGross.src = `/Profilbilder/${currentProfile}`;
+      profilbildGross.src = `Profilbilder/${currentProfile}`;
+      console.log(profilbildGross.src);
     }
     // Hier nicht selectedProfile = currentProfile setzen, damit es nicht dauerhaft hervorgehoben ist.
     const overlay = document.getElementById("profilOverlay");
@@ -137,8 +122,8 @@ function addProfileSelectionListener() {
       const profilbildGross = document.querySelector('.profil-auswahl .Profilbild-groß');
       const profilbildGross1 = document.querySelector('.Profilbild-groß');
       if (profilbildGross) {
-        profilbildGross.src = `/Profilbilder/${selectedProfile}`;
-        profilbildGross1.src = `/Profilbilder/${selectedProfile}`;
+        profilbildGross.src = `Profilbilder/${selectedProfile}`;
+        profilbildGross1.src = `Profilbilder/${selectedProfile}`;
       }
       // Markiere das ausgewählte Bild als active
       highlightSelectedProfile(selectedProfile);
@@ -264,4 +249,19 @@ document.addEventListener("firebaseDataLoaded", function () {
   loadProfileImages();
   highlightSelectedProfile(selectedProfile);
 });
-    
+
+const deleteButton = document.querySelector('.back-arrow');
+
+deleteButton.addEventListener('touchstart', () => {
+  requestAnimationFrame(() => {
+      deleteButton.style.scale = '1.2';
+  });
+});
+
+deleteButton.addEventListener('touchend', () => {
+  deleteButton.style.scale = '';
+});
+
+deleteButton.addEventListener('mouseleave', () => {
+  deleteButton.style.scale = '';
+});

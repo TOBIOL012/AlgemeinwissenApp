@@ -41,7 +41,7 @@
     const coinsDisplay = document.querySelector(".coin-text");
     const streakDisplay = document.querySelector(".streak-text");
     
-    let currentMode = "login";
+    let currentMode = "register";
 
     // Benutzerstatus prüfen und Daten synchronisieren
     const savedUID = localStorage.getItem("uid");
@@ -51,7 +51,7 @@
             showUsername(savedUsername);
         }
 
-    // Tabs wechseln
+    // Tabs wechseln 
     tabLogin.addEventListener("click", () => {
         currentMode = "login";
         usernameField.style.display = "none";
@@ -122,8 +122,8 @@
         const creationDate = new Date().toISOString().split("T")[0]; // Aktuelles Datum
         firestore.collection("users").doc(uid).set({
             username,
-            coins: 0,
-            xp: 0,
+            coins: localStorage.getItem("coins") || 0,
+            xp: localStorage.getItem("xp") || 0,
             token: 0,
             streak: 0,
             higheststreak: 0,
@@ -133,7 +133,181 @@
             xpHistory: [],
             profilepictures: ["AlbertEinstein.png"],
             currentprofile: "AlbertEinstein.png",
-            profilecolor: "#5d8ee2"
+            profilecolor: "#5d8ee2",
+            lastmissionxp: localStorage.getItem("xp") || 0,
+            dailyTasks: [
+                {
+                  ueberschrift: "Sammle 50 XP",
+                  art: "xp",
+                  anzahl: 50,
+                  belohnungsart: "token",
+                  belohnungsmenge: 3
+                },
+                {
+                  ueberschrift: "Spiele 3 Spiele",
+                  art: "game",
+                  anzahl: 3,
+                  belohnungsart: "xp",
+                  belohnungsmenge: 40
+                },
+                {
+                  ueberschrift: "Spiele 1 Fehlerfreies Spiel",
+                  art: "perfectgame",
+                  anzahl: 1,
+                  belohnungsart: "coins",
+                  belohnungsmenge: 15
+                }
+              ],
+              lifeMissions: [
+                {
+                  id: "mission1", // eindeutige ID für die Mission
+                  ueberschrift: "Straßen",
+                  erklärung1: "Ereeiche eine 7 Tage Streak",
+                  erklärung2: "Ereeiche eine 30 Tage Streak",
+                  erklärung3: "Ereeiche eine 365 Tage Streak",
+                  art: "streak",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 7,
+                  anzahl2: 30,
+                  anzahl3: 365,
+                  abzeichen1: "streak1.png",
+                  abzeichen2: "streak2.png",
+                  abzeichen3: "streak3.png",
+                  belohnungsmenge1: 50,
+                  belohnungsart1: "coins",
+                  belohnungsmenge2: 100,
+                  belohnungsart2: "coins",
+                  belohnungsmenge3: 500,
+                  belohnungsart3: "coins"
+                },
+                {
+                  id: "mission2", // eindeutige ID für die Mission
+                  ueberschrift: "XP Meister",
+                  erklärung1: "Sammle 1000 XP",
+                  erklärung2: "Sammle 5000 XP",
+                  erklärung3: "Sammle 20000 XP",
+                  art: "xp",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 1000,
+                  anzahl2: 5000,
+                  anzahl3: 20000,
+                  abzeichen1: "xp1.png",
+                  abzeichen2: "xp2.png",
+                  abzeichen3: "xp3.png",
+                  belohnungsmenge1: 50,
+                  belohnungsart1: "coins",
+                  belohnungsmenge2: 100,
+                  belohnungsart2: "coins",
+                  belohnungsmenge3: 200,
+                  belohnungsart3: "coins"
+                },
+                {
+                  id: "mission3", // eindeutige ID für die Mission
+                  ueberschrift: "Fragen König",
+                  erklärung1: "Beantworte 100 Fragen richtig",
+                  erklärung2: "Beantworte 500 Fragen richtig",
+                  erklärung3: "Beantworte 2000 Fragen richtig",
+                  art: "question",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 100,
+                  anzahl2: 500,
+                  anzahl3: 2000,
+                  abzeichen1: "question1.png",
+                  abzeichen2: "question2.png",
+                  abzeichen3: "question3.png",
+                  belohnungsmenge1: 200,
+                  belohnungsart1: "xp",
+                  belohnungsmenge2: 300,
+                  belohnungsart2: "xp",
+                  belohnungsmenge3: 500,
+                  belohnungsart3: "xp"
+                },
+                {
+                  id: "mission4", // eindeutige ID für die Mission
+                  ueberschrift: "Lerne aus deinen Fehlern",
+                  erklärung1: "Korrigiere 50 Fragen",
+                  erklärung2: "Korrigiere 200 Fragen",
+                  erklärung3: "Korrigiere 500 Fragen",
+                  art: "fehler",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 50,
+                  anzahl2: 200,
+                  anzahl3: 500,
+                  abzeichen1: "fehler1.png",
+                  abzeichen2: "fehler2.png",
+                  abzeichen3: "fehler3.png",
+                  belohnungsmenge1: 100,
+                  belohnungsart1: "xp",
+                  belohnungsmenge2: 250,
+                  belohnungsart2: "xp",
+                  belohnungsmenge3: 500,
+                  belohnungsart3: "xp"
+                },
+                {
+                  id: "mission5", // eindeutige ID für die Mission
+                  ueberschrift: "Historiker",
+                  erklärung1: "Beantworte 100 Geschichtsfragen richtig",
+                  erklärung2: "Beantworte 500 Geschichtsfragen richtig",
+                  erklärung3: "Beantworte 1000 Geschichtsfragen richtig",
+                  art: "geschichte",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 100,
+                  anzahl2: 500,
+                  anzahl3: 1000,
+                  abzeichen1: "geschichte1.png",
+                  abzeichen2: "geschichte2.png",
+                  abzeichen3: "geschichte3.png",
+                  belohnungsmenge1: 100,
+                  belohnungsart1: "coins",
+                  belohnungsmenge2: 200,
+                  belohnungsart2: "coins",
+                  belohnungsmenge3: 300,
+                  belohnungsart3: "coins"
+                },
+                {
+                  id: "mission6", // eindeutige ID für die Mission
+                  ueberschrift: "Entdecker",
+                  erklärung1: "Beantworte 100 Geographiefragen richtig",
+                  erklärung2: "Beantworte 500 Geographiefragen richtig",
+                  erklärung3: "Beantworte 1000 Geographiefragen richtig",
+                  art: "geographie",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 100,
+                  anzahl2: 500,
+                  anzahl3: 1000,
+                  abzeichen1: "geographie1.png",
+                  abzeichen2: "geographie2.png",
+                  abzeichen3: "geographie3.png",
+                  belohnungsmenge1: 100,
+                  belohnungsart1: "coins",
+                  belohnungsmenge2: 200,
+                  belohnungsart2: "coins",
+                  belohnungsmenge3: 300,
+                  belohnungsart3: "coins"
+                },
+                {
+                  id: "mission7", // eindeutige ID für die Mission
+                  ueberschrift: "Wissenschaftler",
+                  erklärung1: "Beantworte 50 Wissenschaftsfragen richtig",
+                  erklärung2: "Beantworte 200 Wissenschaftsfragen richtig",
+                  erklärung3: "Beantworte 500 Wissenschaftsfragen richtig",
+                  art: "wissenschaft",
+                  anzahlbisjetzt: 0, // Standardwert – wird nur genutzt, wenn die Mission neu hinzugefügt wird
+                  anzahl1: 50,
+                  anzahl2: 200,
+                  anzahl3: 500,
+                  abzeichen1: "wissenschaft1.png",
+                  abzeichen2: "wissenschaft2.png",
+                  abzeichen3: "wissenschaft3.png",
+                  belohnungsmenge1: 50,
+                  belohnungsart1: "coins",
+                  belohnungsmenge2: 100,
+                  belohnungsart2: "coins",
+                  belohnungsmenge3: 200,
+                  belohnungsart3: "coins"
+                }
+                // Weitere lebenslange Missionen können hier hinzugefügt werden
+              ]
         }).then(() => {
             localStorage.setItem("uid", uid);
             localStorage.setItem("username", username);
@@ -179,30 +353,16 @@
         
         const profilbildGross = document.querySelector('.Profilbild-groß');
         const color1 = document.querySelector('.Profilbild-container');
-        profilbildGross.src = `/Profilbilder/${currentprofile}`;
-        color1.style.background = color;
+        profilbildGross.src = `Profilbilder/${currentprofile || localStorage.getItem("currentprofile") || "Profilbilder/AlbertEinstein.png"}`;
+        color1.style.background = color || localStorage.getItem("profilecolor") || "#5da571";
         console.log(currentprofile);
-
-        let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-        if (!metaThemeColor) {
-            metaThemeColor = document.createElement('meta');
-            metaThemeColor.setAttribute('name', 'theme-color');
-            document.head.appendChild(metaThemeColor);
-        }
-        metaThemeColor.setAttribute('content', color);
-    
-        // Für Safari (iOS) - Hintergrundfarbe über Notch setzen
-        document.documentElement.style.setProperty('--status-bar-color', color);
-        
-        // Falls kein safe-area-Inset-Top verwendet wird, als Fallback
-        document.documentElement.style.backgroundColor = color;
         
 
-        if (coinsDisplay) coinsDisplay.textContent = coins;
-        if (xpDisplay) xpDisplay.textContent = xp;
-        if (streakDisplay) streakDisplay.textContent = streak;
-        if (usernameDisplay) usernameDisplay.textContent = username;
-        if (beigetretenDisplay) beigetretenDisplay.textContent = `Beigetreten: ${beigetreten}`;
+        if (coinsDisplay) coinsDisplay.textContent = coins || localStorage.getItem("coins");
+        if (xpDisplay) xpDisplay.textContent = xp || localStorage.getItem("xp");
+        if (streakDisplay) streakDisplay.textContent = streak || localStorage.getItem("streak");
+        if (usernameDisplay) usernameDisplay.textContent = username || localStorage.getItem("username");
+        if (beigetretenDisplay) beigetretenDisplay.textContent = `Beigetreten: ${beigetreten || localStorage.getItem("beigetreten")}`;
         console.log("currentprofile");
         const overlay = document.getElementById("profilOverlay");
         if (overlay) {
@@ -235,7 +395,7 @@
         inactiveTab.classList.remove("active");
     }
 
-    tabLogin.click();
+    tabRegister.click();
     // Call syncUserData with the saved UID
     if (savedUID) {
         console.log("Gefundene UID im LocalStorage:", savedUID);
@@ -249,7 +409,25 @@
     
     document.addEventListener("firebaseDataLoaded", () => {
         updateStats(window.userData.coins, window.userData.xp, window.userData.streak, window.userData.username, window.userData.creationDate, window.userData.streakHistory, window.userData.streakOnIce, window.userData.currentprofile, window.userData.creationDate, window.userData.profilecolor);
-        console.log("Benutzerdaten geladen:", window.userData);
+        if(window.userData.higheststreak !== null){
+            const xpplus = localStorage.getItem("xp-plus");
+            const coinsplus = localStorage.getItem("coins-plus");
+            if (xpplus !== null && xpplus > 0){
+                firestore.collection("users").doc(uid).update({
+                    coins: firebase.firestore.FieldValue.increment(coinsplus),
+                    xp: firebase.firestore.FieldValue.increment(xpplus),
+                })
+                localStorage.setItem("coins-plus", 0);
+                localStorage.setItem("xp-plus", 0);
+            } else if(coinsplus !== null && coinsplus > 0){
+                firestore.collection("users").doc(uid).update({
+                    coins: firebase.firestore.FieldValue.increment(coinsplus),
+                    xp: firebase.firestore.FieldValue.increment(xpplus),
+                })
+                localStorage.setItem("coins-plus", 0);
+                localStorage.setItem("xp-plus", 0);
+            }
+        }
     });
 
 
@@ -258,6 +436,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    
     const xpIndicator = document.querySelector('.xp-indicator');
     const xpBox = document.getElementById('xp-box');
     const xpContainer = document.querySelector('.XP-Pfad-Container');
@@ -308,7 +487,29 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentX = 0;
     let isDragging = false;
 
+    function showPopup() {
+        const popup = document.createElement("div");
+        Object.assign(popup.style, {
+            position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+            padding: "1.2rem", background: "#39404d", color: "white", borderRadius: "8px",
+            opacity: "0.85", transition: "opacity 0.5s", zIndex: "1000", fontSize: "1.1rem"
+        });
+        if (!localStorage.getItem("uid")){
+            popup.textContent = "Anmeldung erforderlich";
+        } else{
+            popup.textContent = "Internet erforderlich";
+        }
+        document.body.appendChild(popup);
+        setTimeout(() => popup.style.opacity = "0", 1500);
+        setTimeout(() => popup.remove(), 2000);
+    }
+
     function updateIndicator(nummer) {
+        if(strichvoher == 1 && nummer !== 1 && nummer !== 4 && window.userData.higheststreak == null){
+            nummer = 4;
+        } else if (strichvoher == 4 && nummer !== 4 && nummer !== 1 && window.userData.higheststreak == null){
+            nummer = 1;
+        }
         const strich = document.querySelector(".strich");
         const positions = ["12.5%", "37.5%", "62.5%", "87.5%"];
         strich.style.left = `calc(${positions[nummer - 1]} - 2rem)`;
@@ -317,6 +518,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function navigate(nummer, duration = 200) {
         const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
+        if(strichvoher2 == 1 && nummer !== 1 && nummer !== 4 && window.userData.higheststreak == null){
+            nummer = 4;
+            showPopup();
+        } else if (strichvoher2 == 4 && nummer !== 4 && nummer !== 1 && window.userData.higheststreak == null){
+            nummer = 1;
+            showPopup();
+        }
         strichvoher2 = nummer;
         iframes.forEach(iframe => {
             iframe.style.transition = `transform ${duration}ms ease-in-out`;
@@ -365,96 +573,99 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-setTimeout(() => {
-    document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((iframe, index) => {
-        iframe.addEventListener('touchstart', event => {
-            isDragging = true;
-            startX = event.touches[0].clientX;
-            startY = event.touches[0].clientY;
-            currentX = startX;
-            iframe.style.transition = 'none'; // Disable transition during drag
-            const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
-            iframes.forEach(iframe => {
+    setTimeout(() => {
+        let touchStartedInXpPfad = false; // Speichert, ob der Touch in .xp-pfad gestartet wurde
+    
+        document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((iframe, index) => {
+            iframe.addEventListener('touchstart', event => {
+                isDragging = true;
+                startX = event.touches[0].clientX;
+                startY = event.touches[0].clientY;
+                currentX = startX;
                 iframe.style.transition = 'none';
+    
+                const iframes = document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4');
+                iframes.forEach(iframe => {
+                    iframe.style.transition = 'none';
+                });
+    
+                // Prüfen, ob Touch in .xp-pfad gestartet wurde
+                touchStartedInXpPfad = !!event.target.closest('.xp-pfad');
+            });
+    
+            iframe.addEventListener('touchmove', event => {
+                if (isDragging) {
+                    currentX = event.touches[0].clientX;
+                    const deltaX = currentX - startX;
+                    const deltaY = event.touches[0].clientY - startY;
+    
+                    // Falls Touch in .xp-pfad gestartet wurde, erlauben wir vertikales Scrollen
+                    if (touchStartedInXpPfad) return;
+    
+                    // Nur horizontales Scrollen blockieren, wenn horizontale Bewegung stärker ist
+                    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                        event.preventDefault();
+                    }
+    
+                    if (!isDragging) return;
+    
+                    const element = document.querySelector(".profil");
+    
+                    if (element.scrollTop / window.innerHeight * 100 < 5) {
+                        document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
+                            const baseTranslate = (idx - strichvoher + 1) * 100;
+                            if (idx === 0) {
+                                frame.style.transform = `translateX(clamp(-200%, calc(${deltaX}px + ${baseTranslate - 50}%), -50%))`;
+                            } else if (idx === 1 || idx === 2) {
+                                frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
+                            } else {
+                                frame.style.transform = `translateX(clamp(-50%, calc(${deltaX}px + ${baseTranslate - 50}%), 200%))`;
+                            }
+                        });
+                    } else {
+                        navigate(strichvoher2);
+                    }
+                }
+            });
+    
+            iframe.addEventListener('touchend', event => {
+                isDragging = false;
+    
+                // Falls der Touch in .xp-pfad gestartet wurde, nichts weiter tun
+                if (touchStartedInXpPfad) return;
+    
+                const deltaX = currentX - startX;
+                const threshold = window.innerWidth / 6;
+    
+                if (deltaX < -threshold && strichvoher < 4) {
+                    navigate(strichvoher + 1);
+                    updateIndicator(strichvoher + 1);
+                } else if (deltaX > threshold && strichvoher > 1) {
+                    navigate(strichvoher - 1);
+                    updateIndicator(strichvoher - 1);
+                } else {
+                    navigate(strichvoher);
+                }
             });
         });
-
-        // Hier: Live-Update des transform für ALLE iframes beim Scrollen
-        iframe.addEventListener('touchmove', event => {
-            if (isDragging) {
-                currentX = event.touches[0].clientX;
-                const deltaX = currentX - startX;
-                const deltaY = event.touches[0].clientY - startY; // Vertikale Bewegung
-
-                // Nur verhindern, wenn die Bewegung eher horizontal als vertikal ist
-                if (Math.abs(deltaX) > Math.abs(deltaY)) {
-                    event.preventDefault();
-                }
-
-                if (!isDragging) return;
-
-                const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-                const element = document.querySelector(".profil");
-
-                if (element.scrollTop / window.innerHeight * 100 < 5) {
-                    document.querySelectorAll('.iframe1, .iframe2, .iframe3, .iframe4').forEach((frame, idx) => {
-                        const baseTranslate = (idx - strichvoher + 1) * 100;
-                        if (idx === 0) {
-                            frame.style.transform = `translateX(clamp(-200%, calc(${deltaX}px + ${baseTranslate - 50}%), -50%))`;
-                        } else if (idx === 1) {
-                            frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
-                        } else if (idx === 2) {
-                            frame.style.transform = `translateX(calc(${deltaX}px + ${baseTranslate - 50}%))`;
-                        } else {
-                            frame.style.transform = `translateX(clamp(-50%, calc(${deltaX}px + ${baseTranslate - 50}%), 200%))`;
-                        }
-                    });
-                } else {
-                    navigate(strichvoher2);
-                }
-            }
+    
+        document.querySelectorAll('.navigation img').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                updateIndicator(index + 1);
+            });
         });
-
-        iframe.addEventListener('touchend', (event) => {
-            const touchedElement = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
-        
-            if (touchedElement && touchedElement.closest('.xp-pfad')) {
-                // Falls .xp-pfad berührt wurde, vertikales Scrollen erlauben, aber nichts weiter tun
-                return;
-            }
-        
-            isDragging = false;
-            const deltaX = currentX - startX;
-            const threshold = window.innerWidth / 6; // Threshold für Swipe
-        
-            // Swipe-Erkennung nur, wenn nicht in .xp-pfad
-            if (deltaX < -threshold && strichvoher < 4) {
-                navigate(strichvoher + 1);
-                updateIndicator(strichvoher + 1);
-            } else if (deltaX > threshold && strichvoher > 1) {
-                navigate(strichvoher - 1);
-                updateIndicator(strichvoher - 1);
-            } else {
-                navigate(strichvoher);
-            }
-        });
-    });
-
-    // Handle navigation button clicks to update the indicator only
-    document.querySelectorAll('.navigation img').forEach((button, index) => {
-        button.addEventListener('click', () => {
-            updateIndicator(index + 1);
-        });
-    });
-
-}, 300); // **Warte 0.1 Sekunden bevor der Code ausgeführt wird**
+    
+    }, 300);
+    
 
 
 // Klickevent mit weniger Speicherverbrauch
 document.querySelector('.Profilbild-container').addEventListener('click', function () {
-    const frames = document.querySelectorAll("div[id='iframe']");
-    frames.forEach(frame => frame.style.display = "none");
-    document.querySelector(".profil-auswahl").style.display = "flex";
+    if (window.userData.higheststreak !== null && document.querySelector(".einstellungen").style.display == "none"){
+        const frames = document.querySelectorAll("div[id='iframe']");
+        frames.forEach(frame => frame.style.display = "none");
+        document.querySelector(".profil-auswahl").style.display = "flex";
+    }
 });
 
 

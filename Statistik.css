@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
 }
 
@@ -100,7 +100,7 @@ header {
 
 .circle-bg {
     fill: none;
-    stroke: #2f4957; /* Hintergrundfarbe */
+    stroke: var(--line-color); /* Hintergrundfarbe */
     stroke-width: 2.8;
 }
 
@@ -140,7 +140,7 @@ header {
 .fragen-gesamt-farbe{
     width: 0.8rem;
     height: 1.2rem;
-    background-color: #2f4957;
+    background-color: var(--line-color);
     border-radius: 1rem;
 }
 
@@ -169,11 +169,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     padding-top: 0.5rem;
     width: 82%;
     padding-top: 2rem;
-    border-top: 1px solid #2f4957;
+    border-top: 1px solid var(--line-color);
     margin-top: 2rem;
 }
 
@@ -202,7 +202,7 @@ header {
 }
 
 #border{
-    border-top: 3px solid #2f4957;
+    border-top: 3px solid var(--line-color);
     width: 100%;
 }
 
@@ -230,7 +230,7 @@ header {
 .Schwachpunkt{
     width: auto;
     padding:0.7rem;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
@@ -252,7 +252,7 @@ header {
     width: 82%;
     height: 1.4rem;
     border-radius: 15px;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     overflow: visible; /* Ermöglicht das Hervorstehen des Balkens */
 }
 
@@ -275,7 +275,7 @@ header {
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2f4957;
+    border-bottom: 1px solid var(--line-color);
     width: 82%;
     text-align: center;
 }
@@ -289,7 +289,7 @@ header {
     top: 0;
     width: 5px; /* Breite der Striche */
     height: 100%; /* Striche über die ganze Höhe */
-    background-color: #2f4957; /* Farbe der Striche */
+    background-color: var(--line-color); /* Farbe der Striche */
     z-index: -10;
 }
 
@@ -312,10 +312,10 @@ header {
 
 .streak-stats-container, .highest-streak-stats-container{
     display:block;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 0.6rem 0.8rem;
     font-size: 1.5em;
@@ -332,9 +332,9 @@ header {
     display: flex;
     align-items: left;
     padding-top: 2rem;
-    border-top: 1px solid #2f4957;
+    border-top: 1px solid var(--line-color);
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2f4957;
+    border-bottom: 1px solid var(--line-color);
 }
 
 .streak-stats-anzeige{
@@ -385,7 +385,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2f4957;
+    background: var(--line-color);
     border-radius: 10px 10px 0 0; /* Nur oben abgerundet */
     padding: 4px;
     width: 160px;
@@ -434,10 +434,10 @@ header {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    border: 3px solid #2f4957;
+    border: 3px solid var(--line-color);
     border-radius: 15px;
     padding: 0.8rem 0.3rem;
     padding-bottom:0rem;

@@ -1,4 +1,7 @@
 document.addEventListener("firebaseDataLoaded", function() {
+  // Globaler Zähler für Firebase-Schreiboperationen
+  let firebaseWriteCount = 0;
+
   // Hilfsfunktion: Aktualisiert die UI (Daily Missions und Life Tasks)
   function renderUI() {
     // --- UI-Aktualisierung: Daily Missions anzeigen ---
@@ -92,7 +95,7 @@ document.addEventListener("firebaseDataLoaded", function() {
               <div class="abzeichen-header">
                 <div class="abzeichen-header-header">
                   <a class="abzeichen-title">${mission.ueberschrift}</a>
-                  <div class="reward-header">
+                  <div class="reward-header"> 
                     <img src="https://img.icons8.com/sf-black-filled/64/7db76b/checked-checkbox.png" alt="checked-checkbox" style="scale: 1.4">
                   </div>
                 </div>
@@ -134,99 +137,132 @@ document.addEventListener("firebaseDataLoaded", function() {
   
   // Direkt beim Eventaufruf die UI rendern
   renderUI();
+
+  // Wenn higheststreak null ist, sollen keine Daten übernommen oder überschrieben werden.
+  if (window.userData.higheststreak === null) {
+    console.warn("higheststreak ist null – Firebase-Updates werden übersprungen.");
+    return;
+  }
   
   // --- Unabhängige Aktualisierung der Life Missions bei jedem firebaseDataLoaded ---
   (function updateLifeTasks() {
+    if (!window.userData || !window.userData.lifeTasks) {
+      console.warn("Keine Benutzerdaten verfügbar für lifeTasks Update");
+      return;
+    }
     const userRefLife = firestore.collection("users").doc(uid);
-    userRefLife.get()
-      .then(function(doc) {
-        if (doc.exists) {
-          let data = doc.data();
-          let lifeTasks = data.lifeTasks || window.userData.lifeTasks;
-          let aggregatedLifeReward = { coins: 0, token: 0, xp: 0 };
-  
-          lifeTasks.forEach(function(mission) {
-            // Aktualisiere anzahlbisjetzt basierend auf dem Typ der lifeTask
-            if (mission.art === "xp") {
-              mission.anzahlbisjetzt = window.userData.xp;
-            } else if (mission.art === "streak") {
-              mission.anzahlbisjetzt = window.userData.higheststreak;
-            } else if (mission.art === "geschichte") {
-              let increment = Number(localStorage.getItem("mission-geschichte1")) || 0;
-              mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
-              localStorage.setItem("mission-geschichte1", 0);
-            } else if (mission.art === "geographie") {
-              let increment = Number(localStorage.getItem("mission-geographie1")) || 0;
-              mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
-              localStorage.setItem("mission-geographie1", 0);
-            } else if (mission.art === "wissenschaft") {
-              let increment = Number(localStorage.getItem("mission-wissenschaft1")) || 0;
-              mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
-              localStorage.setItem("mission-wissenschaft1", 0);
-            } else if (mission.art === "fehler") {
-              let increment = Number(localStorage.getItem("mission-fehler1")) || 0;
-              mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
-              localStorage.setItem("mission-fehler1", 0);
-            } else if (mission.art === "question") {
-              let increment = Number(localStorage.getItem("mission-question1")) || 0;
-              mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
-              localStorage.setItem("mission-question1", 0);
-            }
-  
-            // Prüfe und addiere Belohnungen, falls Schwellenwerte erreicht wurden
-            if (mission.anzahlbisjetzt >= mission.anzahl1 && mission.belohnungsmenge1 !== -1) {
-              if (mission.belohnungsart1 === "coins") {
-                aggregatedLifeReward.coins += mission.belohnungsmenge1;
-              } else if (mission.belohnungsart1 === "token") {
-                aggregatedLifeReward.token += mission.belohnungsmenge1;
-              } else if (mission.belohnungsart1 === "xp") {
-                aggregatedLifeReward.xp += mission.belohnungsmenge1;
-              }
-              mission.belohnungsmenge1 = -1;
-            }
-            if (mission.anzahlbisjetzt >= mission.anzahl2 && mission.belohnungsmenge2 !== -1) {
-              if (mission.belohnungsart2 === "coins") {
-                aggregatedLifeReward.coins += mission.belohnungsmenge2;
-              } else if (mission.belohnungsart2 === "token") {
-                aggregatedLifeReward.token += mission.belohnungsmenge2;
-              } else if (mission.belohnungsart2 === "xp") {
-                aggregatedLifeReward.xp += mission.belohnungsmenge2;
-              }
-              mission.belohnungsmenge2 = -1;
-            }
-            if (mission.anzahlbisjetzt >= mission.anzahl3 && mission.belohnungsmenge3 !== -1) {
-              if (mission.belohnungsart3 === "coins") {
-                aggregatedLifeReward.coins += mission.belohnungsmenge3;
-              } else if (mission.belohnungsart3 === "token") {
-                aggregatedLifeReward.token += mission.belohnungsmenge3;
-              } else if (mission.belohnungsart3 === "xp") {
-                aggregatedLifeReward.xp += mission.belohnungsmenge3;
-              }
-              mission.belohnungsmenge3 = -1;
-            }
-          });
-  
-          let updateData = { lifeTasks: lifeTasks };
-          if (aggregatedLifeReward.coins !== 0) {
-            updateData.coins = firebase.firestore.FieldValue.increment(aggregatedLifeReward.coins);
-          }
-          if (aggregatedLifeReward.token !== 0) {
-            updateData.token = firebase.firestore.FieldValue.increment(aggregatedLifeReward.token);
-          }
-          if (aggregatedLifeReward.xp !== 0) {
-            updateData.xp = firebase.firestore.FieldValue.increment(aggregatedLifeReward.xp);
-          }
-          return userRefLife.update(updateData);
-        } else {
-          return Promise.reject("Dokument nicht vorhanden");
+    // Kopie der originalen lifeTasks (als JSON-String) zum Vergleich
+    let originalLifeTasks = JSON.stringify(window.userData.lifeTasks);
+    let lifeTasks = window.userData.lifeTasks;
+    let aggregatedLifeReward = { coins: 0, token: 0, xp: 0 };
+
+    lifeTasks.forEach(function(mission) {
+      // Aktualisiere anzahlbisjetzt basierend auf dem Typ der lifeTask
+      if (mission.art === "xp") {
+        if (mission.anzahlbisjetzt !== window.userData.xp) {
+          mission.anzahlbisjetzt = window.userData.xp;
         }
-      })
-      .then(function() {
-        console.log("Belohnungen und lifeTasks wurden aktualisiert!");
-      })
-      .catch(function(error) {
-        console.error("Fehler beim Update der lifeTasks:", error);
-      });
+      } else if (mission.art === "streak") {
+        if (mission.anzahlbisjetzt !== window.userData.higheststreak) {
+          mission.anzahlbisjetzt = window.userData.higheststreak;
+        }
+      } else if (mission.art === "geschichte") {
+        let increment = Number(localStorage.getItem("mission-geschichte1")) || 0;
+        if (increment > 0) {
+          mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
+          localStorage.setItem("mission-geschichte1", 0);
+        }
+      } else if (mission.art === "geographie") {
+        let increment = Number(localStorage.getItem("mission-geographie1")) || 0;
+        if (increment > 0) {
+          mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
+          localStorage.setItem("mission-geographie1", 0);
+        }
+      } else if (mission.art === "wissenschaft") {
+        let increment = Number(localStorage.getItem("mission-wissenschaft1")) || 0;
+        if (increment > 0) {
+          mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
+          localStorage.setItem("mission-wissenschaft1", 0);
+        }
+      } else if (mission.art === "fehler") {
+        let increment = Number(localStorage.getItem("mission-fehler1")) || 0;
+        if (increment > 0) {
+          mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
+          localStorage.setItem("mission-fehler1", 0);
+        }
+      } else if (mission.art === "question") {
+        let increment = Number(localStorage.getItem("mission-question1")) || 0;
+        if (increment > 0) {
+          mission.anzahlbisjetzt = (mission.anzahlbisjetzt || 0) + increment;
+          localStorage.setItem("mission-question1", 0);
+        }
+      }
+  
+      // Prüfe und addiere Belohnungen, falls Schwellenwerte erreicht wurden
+      if (mission.anzahlbisjetzt >= mission.anzahl1 && mission.belohnungsmenge1 !== -1) {
+        if (mission.belohnungsart1 === "coins") {
+          aggregatedLifeReward.coins += mission.belohnungsmenge1;
+        } else if (mission.belohnungsart1 === "token") {
+          aggregatedLifeReward.token += mission.belohnungsmenge1;
+        } else if (mission.belohnungsart1 === "xp") {
+          aggregatedLifeReward.xp += mission.belohnungsmenge1;
+        }
+        mission.belohnungsmenge1 = -1;
+      }
+      if (mission.anzahlbisjetzt >= mission.anzahl2 && mission.belohnungsmenge2 !== -1) {
+        if (mission.belohnungsart2 === "coins") {
+          aggregatedLifeReward.coins += mission.belohnungsmenge2;
+        } else if (mission.belohnungsart2 === "token") {
+          aggregatedLifeReward.token += mission.belohnungsmenge2;
+        } else if (mission.belohnungsart2 === "xp") {
+          aggregatedLifeReward.xp += mission.belohnungsmenge2;
+        }
+        mission.belohnungsmenge2 = -1;
+      }
+      if (mission.anzahlbisjetzt >= mission.anzahl3 && mission.belohnungsmenge3 !== -1) {
+        if (mission.belohnungsart3 === "coins") {
+          aggregatedLifeReward.coins += mission.belohnungsmenge3;
+        } else if (mission.belohnungsart3 === "token") {
+          aggregatedLifeReward.token += mission.belohnungsmenge3;
+        } else if (mission.belohnungsart3 === "xp") {
+          aggregatedLifeReward.xp += mission.belohnungsmenge3;
+        }
+        mission.belohnungsmenge3 = -1;
+      }
+    });
+  
+    // Erstelle updateData nur, wenn sich etwas geändert hat:
+    let updateData = {};
+    if (JSON.stringify(lifeTasks) !== originalLifeTasks ||
+        aggregatedLifeReward.coins !== 0 ||
+        aggregatedLifeReward.token !== 0 ||
+        aggregatedLifeReward.xp !== 0) {
+      updateData.lifeTasks = lifeTasks;
+      if (aggregatedLifeReward.coins !== 0) {
+        updateData.coins = firebase.firestore.FieldValue.increment(aggregatedLifeReward.coins);
+      }
+      if (aggregatedLifeReward.token !== 0) {
+        updateData.token = firebase.firestore.FieldValue.increment(aggregatedLifeReward.token);
+      }
+      if (aggregatedLifeReward.xp !== 0) {
+        updateData.xp = firebase.firestore.FieldValue.increment(aggregatedLifeReward.xp);
+      }
+    }
+  
+    if (Object.keys(updateData).length > 0) {
+      firebaseWriteCount++;
+      console.log(`Firebase write operation #${firebaseWriteCount} initiated for lifeTasks update`);
+      userRefLife.update(updateData)
+        .then(function() {
+          console.log("Belohnungen und lifeTasks wurden aktualisiert!");
+          console.log(`Firebase write operation #${firebaseWriteCount} completed for lifeTasks update`);
+        })
+        .catch(function(error) {
+          console.error("Fehler beim Update der lifeTasks:", error);
+        });
+    } else {
+      console.log("Keine Änderungen an lifeTasks festgestellt – kein Firebase-Write nötig.");
+    }
   })();
   
   // --- Lock für Daily Tasks (falls noch nicht gesetzt) ---
@@ -234,7 +270,6 @@ document.addEventListener("firebaseDataLoaded", function() {
   window.firebaseDataLoadedLock = true;
   
   // --- UI-Aktualisierung: Daily Missions anzeigen (erneut, um eventuelle Änderungen zu rendern) ---
-  // (Dieser Codeblock wurde schon in renderUI() definiert, hier erfolgt nur noch ein erneuter Aufruf, wenn nötig.)
   renderUI();
   
   // --- Hilfsfunktion: Wartet, bis das Element ".missions" sichtbar wird ---
@@ -251,7 +286,6 @@ document.addEventListener("firebaseDataLoaded", function() {
       });
       observer.observe(missionsPage, { attributes: true, attributeFilter: ["style"] });
     } else {
-      // Falls das Element noch nicht existiert, prüfe periodisch
       let interval = setInterval(() => {
         const missionsPage = document.querySelector(".missions");
         if (missionsPage && getComputedStyle(missionsPage).display !== "none") {
@@ -273,7 +307,7 @@ document.addEventListener("firebaseDataLoaded", function() {
   
     const progressbars = document.querySelectorAll(".progress-bar");
     console.log("updateProgress aufgerufen");
-    let finishedMissions = []; // Indizes aller fertiggestellten Missionen
+    let finishedMissions = [];
     let aggregatedReward = { coins: 0, token: 0, xp: 0 };
   
     progressbars.forEach((missionEl, index) => {
@@ -287,13 +321,11 @@ document.addEventListener("firebaseDataLoaded", function() {
         } else if (task.belohnungsart === "xp") {
           aggregatedReward.xp += task.belohnungsmenge;
         }
-        // Die Belohnungs-Animation wird erst ausgeführt, wenn die Missions-Seite sichtbar ist.
         waitForMissionsVisible(function() {
           animateReward(task, index);
         });
       }
   
-      // Berechne und setze den Fortschritt
       let progress = (task.anzahlbisjetzt / task.anzahl) * 100;
       setTimeout(() => {
         const progressElement = missionEl.querySelector(".progress") || missionEl.querySelector(".progress-finished");
@@ -302,14 +334,22 @@ document.addEventListener("firebaseDataLoaded", function() {
           if (missionContainer && getComputedStyle(missionContainer).display === "none") {
             let observer = new MutationObserver((mutations, obs) => {
               if (getComputedStyle(missionContainer).display !== "none") {
-                progressElement.style.transition = "width 0.5s ease-in-out";
+                if ((progressElement.offsetWidth / progressElement.parentElement.offsetWidth) * 100 < progress){
+                  progressElement.style.transition = "width 0.5s ease-in-out";
+                } else {
+                  progressElement.style.transition = "none";
+                }
                 progressElement.style.width = progress + "%";
                 obs.disconnect();
               }
             });
             observer.observe(missionContainer, { attributes: true, attributeFilter: ["style"] });
           } else {
-            progressElement.style.transition = "width 0.5s ease-in-out";
+            if ((progressElement.offsetWidth / progressElement.parentElement.offsetWidth) * 100 < progress){
+              progressElement.style.transition = "width 0.5s ease-in-out";
+            } else {
+              progressElement.style.transition = "none";
+            }
             progressElement.style.width = progress + "%";
           }
         }
@@ -319,31 +359,27 @@ document.addEventListener("firebaseDataLoaded", function() {
   
     if (finishedMissions.length > 0) {
       const userRef = firestore.collection("users").doc(uid);
-      userRef.get()
-        .then(function(doc) {
-          if (doc.exists) {
-            let data = doc.data();
-            let dailyTasks = data.dailyTasks || [];
-            finishedMissions.forEach(function(i) {
-              dailyTasks[i].anzahlbisjetzt = -1;
-            });
-            let updateData = { dailyTasks: dailyTasks };
-            if (aggregatedReward.coins !== 0) {
-              updateData.coins = firebase.firestore.FieldValue.increment(aggregatedReward.coins);
-            }
-            if (aggregatedReward.token !== 0) {
-              updateData.token = firebase.firestore.FieldValue.increment(aggregatedReward.token);
-            }
-            if (aggregatedReward.xp !== 0) {
-              updateData.xp = firebase.firestore.FieldValue.increment(aggregatedReward.xp);
-            }
-            return userRef.update(updateData);
-          } else {
-            return Promise.reject("Dokument nicht vorhanden");
-          }
-        })
+      let dailyTasks = window.userData.dailyTasks || [];
+      finishedMissions.forEach(function(i) {
+        dailyTasks[i].anzahlbisjetzt = -1;
+      });
+      let updateData = { dailyTasks: dailyTasks };
+      if (aggregatedReward.coins !== 0) {
+        updateData.coins = firebase.firestore.FieldValue.increment(aggregatedReward.coins);
+      }
+      if (aggregatedReward.token !== 0) {
+        updateData.token = firebase.firestore.FieldValue.increment(aggregatedReward.token);
+      }
+      if (aggregatedReward.xp !== 0) {
+        updateData.xp = firebase.firestore.FieldValue.increment(aggregatedReward.xp);
+      }
+      // Da finishedMissions > 0 vorliegt, wurde eine Änderung festgestellt.
+      firebaseWriteCount++;
+      console.log(`Firebase write operation #${firebaseWriteCount} initiated for dailyTasks update (progress update)`);
+      userRef.update(updateData)
         .then(function() {
           console.log("Belohnungen und dailyTasks wurden aktualisiert!");
+          console.log(`Firebase write operation #${firebaseWriteCount} completed for dailyTasks update (progress update)`);
         })
         .catch(function(error) {
           console.error("Fehler beim Update:", error);
@@ -415,93 +451,101 @@ document.addEventListener("firebaseDataLoaded", function() {
   }
   
   // --- XP-Inkrementierung: Werte abrufen und localStorage aktualisieren ---
-  let lastXp = Number(localStorage.getItem("mission-last-xp")) || 0;
-  const missionXpDiff = window.userData.xp - lastXp;
-  localStorage.setItem("mission-xp", missionXpDiff);
-  localStorage.setItem("mission-last-xp", window.userData.xp);
+  let lastXp = Number(window.userData.lastmissionxp);
+  if(lastXp){
+    const missionXpDiff = window.userData.xp - lastXp;
+    localStorage.setItem("mission-xp", missionXpDiff || 0);
+  }
+  if (window.userData.lastmissionxp !== window.userData.xp){
+    const userRef = firestore.collection("users").doc(uid);
+    userRef.update({ lastmissionxp: window.userData.xp })
+      .then(() => {
+        console.log("lastmissionxp wurde erfolgreich auf window.userData.xp gesetzt.");
+      })
+      .catch(error => {
+        console.error("Fehler beim Setzen von lastmissionxp:", error);
+      });
+  }
   
   // --- Firestore-Update: Inkremente anhand der localStorage-Werte in dailyTasks einarbeiten ---
   const userRef = firestore.collection("users").doc(uid);
-  userRef.get()
-    .then(function(doc) {
-      if (doc.exists) {
-        let data = doc.data();
-        let dailyTasks = data.dailyTasks || [];
-        dailyTasks.forEach(function(mission, index) {
-          if (mission.anzahlbisjetzt !== -1) {
-            let incrementValue = 0;
-            if (mission.art === "xp" && Number(localStorage.getItem("mission-xp")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-xp"));
-            } else if (mission.art === "game" && Number(localStorage.getItem("mission-game")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-game"));
-            } else if (mission.art === "perfectgame" && Number(localStorage.getItem("mission-perfectgame")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-perfectgame"));
-            } else if (mission.art === "fehler" && Number(localStorage.getItem("mission-fehler")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-fehler"));
-            } else if (mission.art === "geschichte" && Number(localStorage.getItem("mission-geschichte")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-geschichte"));
-            } else if (mission.art === "geographie" && Number(localStorage.getItem("mission-geographie")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-geographie"));
-            } else if (mission.art === "musik" && Number(localStorage.getItem("mission-musik")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-musik"));
-            } else if (mission.art === "kunst" && Number(localStorage.getItem("mission-kunst")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-kunst"));
-            } else if (mission.art === "sport" && Number(localStorage.getItem("mission-sport")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-sport"));
-            } else if (mission.art === "wissenschaft" && Number(localStorage.getItem("mission-wissenschaft")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-wissenschaft"));
-            } else if (mission.art === "astronomie" && Number(localStorage.getItem("mission-astronomie")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-astronomie"));
-            } else if (mission.art === "biologie" && Number(localStorage.getItem("mission-biologie")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-biologie"));
-            } else if (mission.art === "politik" && Number(localStorage.getItem("mission-politik")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-politik"));
-            } else if (mission.art === "literatur" && Number(localStorage.getItem("mission-literatur")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-literatur"));
-            } else if (mission.art === "fehler" && Number(localStorage.getItem("mission-fehler")) !== 0) {
-              incrementValue = Number(localStorage.getItem("mission-fehler"));
-            }
-            if (incrementValue !== 0) {
-              dailyTasks[index].anzahlbisjetzt = (dailyTasks[index].anzahlbisjetzt || 0) + incrementValue;
-            }
-          }
-        });
-        return userRef.update({ dailyTasks: dailyTasks });
-      } else {
-        return Promise.reject("Dokument nicht vorhanden");
+  let dailyTasks = window.userData.dailyTasks || [];
+  // Originalkopie für den Vergleich
+  let originalDailyTasks = JSON.stringify(dailyTasks);
+  dailyTasks.forEach(function(mission, index) {
+    if (mission.anzahlbisjetzt !== -1) {
+      let incrementValue = 0;
+      if (mission.art === "xp" && Number(localStorage.getItem("mission-xp"))) {
+        incrementValue = Number(localStorage.getItem("mission-xp"));
+      } else if (mission.art === "game" && Number(localStorage.getItem("mission-game"))) {
+        incrementValue = Number(localStorage.getItem("mission-game"));
+      } else if (mission.art === "perfectgame" && Number(localStorage.getItem("mission-perfectgame"))) {
+        incrementValue = Number(localStorage.getItem("mission-perfectgame"));
+      } else if (mission.art === "fehler" && Number(localStorage.getItem("mission-fehler"))) {
+        incrementValue = Number(localStorage.getItem("mission-fehler"));
+      } else if (mission.art === "geschichte" && Number(localStorage.getItem("mission-geschichte"))) {
+        incrementValue = Number(localStorage.getItem("mission-geschichte"));
+      } else if (mission.art === "geographie" && Number(localStorage.getItem("mission-geographie"))) {
+        incrementValue = Number(localStorage.getItem("mission-geographie"));
+      } else if (mission.art === "musik" && Number(localStorage.getItem("mission-musik"))) {
+        incrementValue = Number(localStorage.getItem("mission-musik"));
+      } else if (mission.art === "kunst" && Number(localStorage.getItem("mission-kunst"))) {
+        incrementValue = Number(localStorage.getItem("mission-kunst"));
+      } else if (mission.art === "sport" && Number(localStorage.getItem("mission-sport"))) {
+        incrementValue = Number(localStorage.getItem("mission-sport"));
+      } else if (mission.art === "wissenschaft" && Number(localStorage.getItem("mission-wissenschaft"))) {
+        incrementValue = Number(localStorage.getItem("mission-wissenschaft"));
+      } else if (mission.art === "astronomie" && Number(localStorage.getItem("mission-astronomie"))) {
+        incrementValue = Number(localStorage.getItem("mission-astronomie"));
+      } else if (mission.art === "biologie" && Number(localStorage.getItem("mission-biologie"))) {
+        incrementValue = Number(localStorage.getItem("mission-biologie"));
+      } else if (mission.art === "politik" && Number(localStorage.getItem("mission-politik"))) {
+        incrementValue = Number(localStorage.getItem("mission-politik"));
+      } else if (mission.art === "literatur" && Number(localStorage.getItem("mission-literatur"))) {
+        incrementValue = Number(localStorage.getItem("mission-literatur"));
+      } else if (mission.art === "fehler" && Number(localStorage.getItem("mission-fehler"))) {
+        incrementValue = Number(localStorage.getItem("mission-fehler"));
       }
-    })
-    .then(function() {
-      console.log("Daily tasks wurden in Firebase aktualisiert!");
-      // --- Reset: Alle verwendeten localStorage-Werte auf 0 setzen ---
-      localStorage.setItem("mission-xp", 0);
-      localStorage.setItem("mission-game", 0);
-      localStorage.setItem("mission-perfectgame", 0);
-      localStorage.setItem("mission-fehler", 0);
-      localStorage.setItem("mission-geschichte", 0);
-      localStorage.setItem("mission-geographie", 0);
-      localStorage.setItem("mission-musik", 0);
-      localStorage.setItem("mission-kunst", 0);
-      localStorage.setItem("mission-sport", 0);
-      localStorage.setItem("mission-wissenschaft", 0);
-      localStorage.setItem("mission-astronomie", 0);
-      localStorage.setItem("mission-biologie", 0);
-      localStorage.setItem("mission-politik", 0);
-      localStorage.setItem("mission-literatur", 0);
-      localStorage.setItem("mission-fehler", 0);
-    })
-    .catch(function(error) {
-      console.error("Fehler beim Firestore-Update:", error);
-    })
-    .finally(function() {
-      // Um die aktuellsten Werte aus Firebase zu erhalten, holen wir das Dokument erneut und aktualisieren window.userData.
-      firestore.collection("users").doc(uid).get().then(function(doc) {
-        if (doc.exists) {
-          window.userData = doc.data();
-          renderUI(); // UI neu rendern, sodass auch die Fortschrittsbalken aktualisiert werden.
-        }
+      if (incrementValue !== 0) {
+        dailyTasks[index].anzahlbisjetzt = (dailyTasks[index].anzahlbisjetzt || 0) + incrementValue;
+      }
+    }
+  });
+  // Nur ein Firebase-Write, wenn sich dailyTasks geändert haben
+  if (JSON.stringify(dailyTasks) !== originalDailyTasks) {
+    firebaseWriteCount++;
+    console.log(`Firebase write operation #${firebaseWriteCount} initiated for dailyTasks update (final update)`);
+    userRef.update({ dailyTasks: dailyTasks })
+      .then(function() {
+        console.log("Daily tasks wurden in Firebase aktualisiert!");
+        console.log(`Firebase write operation #${firebaseWriteCount} completed for dailyTasks update (final update)`);
+        // --- Reset: Alle verwendeten localStorage-Werte auf 0 setzen ---
+        localStorage.setItem("mission-xp", 0);
+        localStorage.setItem("mission-game", 0);
+        localStorage.setItem("mission-perfectgame", 0);
+        localStorage.setItem("mission-fehler", 0);
+        localStorage.setItem("mission-geschichte", 0);
+        localStorage.setItem("mission-geographie", 0);
+        localStorage.setItem("mission-musik", 0);
+        localStorage.setItem("mission-kunst", 0);
+        localStorage.setItem("mission-sport", 0);
+        localStorage.setItem("mission-wissenschaft", 0);
+        localStorage.setItem("mission-astronomie", 0);
+        localStorage.setItem("mission-biologie", 0);
+        localStorage.setItem("mission-politik", 0);
+        localStorage.setItem("mission-literatur", 0);
+        localStorage.setItem("mission-fehler", 0);
+      })
+      .catch(function(error) {
+        console.error("Fehler beim Firestore-Update:", error);
+      })
+      .finally(function() {
+        updateProgress();
+        window.firebaseDataLoadedLock = false;
       });
-      updateProgress();
-      window.firebaseDataLoadedLock = false;
-    });
+  } else {
+    console.log("Keine Änderungen an dailyTasks festgestellt – kein Firebase-Write nötig.");
+    updateProgress();
+    window.firebaseDataLoadedLock = false;
+  }
 });

@@ -48,8 +48,6 @@ window.buyStreak = function () {
                     })
                     .then(() => {
                         console.log("Kauf erfolgreich ausgeführt");
-                        streakOnIce++;
-                        coins -= 200;
                         updateUI();
                     })
                     .catch(error => {
@@ -80,8 +78,6 @@ window.buyTokens = function () {
                     })
                     .then(() => {
                         console.log("Kauf erfolgreich ausgeführt");
-                        tokens += 10;
-                        coins -= 200;
                         updateUI();
                     })
                     .catch(error => {
@@ -108,25 +104,112 @@ window.buyTokens = function () {
     
     document.addEventListener("firebaseDataLoaded", function () {
         syncStatsFromServiceWorker();
+
+        const profiles = profilbilder;
+        function getRandomProfiles(profiles, count) {
+            const weightedProfiles = [];
+            profiles.forEach(profile => {
+                for (let i = 0; i < profile.seltenheit; i++) {
+                    weightedProfiles.push(profile.name);
+                }
+            });
+
+            const seed = new Date().toISOString().split('T')[0]; // Use today's date as seed
+            let randomSeed = 0;
+            for (let i = 0; i < seed.length; i++) {
+                randomSeed += seed.charCodeAt(i);
+            }
+
+            function seededRandom(seed) {
+                const x = Math.sin(seed++) * 10000;
+                return x - Math.floor(x);
+            }
+
+            const selectedProfiles = new Set();
+            while (selectedProfiles.size < count) {
+                const randomIndex = Math.floor(seededRandom(randomSeed++) * weightedProfiles.length);
+                selectedProfiles.add(weightedProfiles[randomIndex]);
+            }
+
+            return Array.from(selectedProfiles);
+        }
+
+        const todayprofiles = getRandomProfiles(profiles, 3);
+
+    
+        const profileTrack = document.querySelector(".profile-picture-track");
+        if (!todayprofiles.every(profile => 
+            profiles.find(p => p.name === profile && window.userData.profilepictures.includes(p.datei))
+        )) {
+            profileTrack.innerHTML = "";
+        } else {
+            profileTrack.innerHTML = "<a>keine neuen Profilbilder</a>";
+        }
+    
+        todayprofiles.forEach((profile, index) => {
+            const profileWrapper = document.createElement("div");
+            profileWrapper.className = "profile-picture-wrapper";
+
+            const profileData = profiles.find(p => p.name === profile);
+            if (profileData) {
+                // Check if the profile picture is already in the user's profilepictures
+                if (!window.userData.profilepictures.includes(profileData.datei)) {
+                    profileWrapper.innerHTML = `
+                        <div class="profile-picture" style="--profile-bg: ${profileData.farbe};">
+                          <img src="/Profilbilder/${profileData.datei}" alt="Profilbild">
+                        </div>
+                        <div class="profile-bottom">
+                          <div class="profile-name">${profileData.name}</div>
+                          <button class="buy-button">
+                            <span class="price-amount">${profileData.preis}</span>
+                            <img src="coin.png" alt="Münzen" class="coin-icon">
+                          </button>          
+                        </div>
+                    `;
+
+                    const buyButton = profileWrapper.querySelector(".buy-button");
+                    if (buyButton) {
+                        buyButton.addEventListener("click", () => {
+                            showGlobalModal(
+                                "Kauf bestätigen",
+                                `Möchtest du ${profileData.name} für ${profileData.preis} Coins kaufen?`,
+                                "kreuz.png",
+                                (result) => {
+                                    if (result === "ok") {
+                                        if (coins >= profileData.preis) {
+                                            firestore.collection("users").doc(uid).update({
+                                                profilepictures: firebase.firestore.FieldValue.arrayUnion(profileData.datei),
+                                                coins: firebase.firestore.FieldValue.increment(-profileData.preis),
+                                                currentprofile: profileData.datei
+                                            })
+                                            .then(() => {
+                                                updateUI();
+                                                frames[3].style.zIndex = "1500";
+                                                frames[3].style.position = "absolute";
+                                                frames[3].style.top = "0";
+                                                frames[3].style.transition = "opacity 0.6s";
+                                                frames[3].style.opacity = "0";
+                                                setTimeout(() => {frames[3].style = "display: none;";}, 600);    
+                                                frames[4].style.display = "flex";
+                                            })
+                                            .catch(error => {
+                                                console.error("Fehler beim Aktualisieren:", error);
+                                            });
+                                        }
+                                    }
+                                }
+                            );
+                        });
+                    }
+
+                    profileTrack.appendChild(profileWrapper);
+                }
+            }
+        });
+
+
+
     });
 
-    window.buyProfilePicture = function(imageSrc, price) {
-        if (coins >= price) {
-          firestore.collection("users").doc(uid).update({
-            // Setze das gekaufte Profilbild – ggf. kannst du hier auch ein Array führen, falls mehrere Käufe möglich sein sollen
-            profilePicture: imageSrc,
-            coins: firebase.firestore.FieldValue.increment(-price)
-          })
-          .then(() => {
-            console.log("Profilbild gekauft: " + imageSrc);
-            coins -= price;
-            // Hier kannst du zusätzlich die UI aktualisieren, z. B. das aktuell angezeigte Profilbild ändern
-          })
-          .catch(error => {
-            console.error("Fehler beim Kauf des Profilbildes:", error);
-          });
-        } else {
-          console.log("Nicht genug Münzen für den Kauf!");
-        }
-      };
+    
       
