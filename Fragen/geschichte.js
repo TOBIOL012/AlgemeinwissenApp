@@ -1,24 +1,7 @@
 const geschichte = [
 
     //Erdgeschichte
-        { 
-            "Kategorie": "Geschichte",
-            "Frage": "Vor wie vielen Milliarden Jahren entstand die Erde?",
-            "Antworten": ["4,5 Milliarden", "3,2 Milliarden", "5 Milliarden", "3,6 Milliarden"],
-            "RichtigeAntwort": "4,5 Milliarden",
-            "RichtigeAntwortMöglichkeiten": "4 4.5 4,5 4,54 4.54 4000000000 4.000.000.000 vier",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Die Entstehungszeit der Erde konnte man durch untersuchungen an Meteoriten und Mondgestein festellen"
-        },
-        { 
-            "Kategorie": "Geschichte",
-            "Frage": "Vor wie vielen Milliarden Jahren entstand das Universum?",
-            "Antworten": ["14 Milliarden", "13,8 Milliarden", "8,6 Milliarden", "7,9 Milliarden"],
-            "RichtigeAntwort": "13,8 Milliarden",
-            "RichtigeAntwortMöglichkeiten": "14 13 13.8 13,8 13,82 13.82 13.000.000.000 13000000000 dreizehn vierzehn",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Das Universum entstand vor etwa 13,8 Milliarden Jahren durch den Urknall (Big Bang).",
-        },
+        
         { 
             "Kategorie": "Geschichte",
             "Frage": "In Welchem Zeitalter lebeten die ersten dinosaurier?",
@@ -1876,7 +1859,7 @@ const geschichte = [
         },
         {
             "Kategorie": "Geschichte",
-            "Frage": "Wer war der Karl dem Großen?", //JA... Pepin der Kurze war der Vater von Karl dem Großen, nicht dieselbe Person. Karl der Große war der Sohn von Pepin dem Kurzen.
+            "Frage": "Wer war der Vater von Karl dem Großen?",
             "Antworten": ["Pepin der Kurze", "Karl Martell", "Chlodwig I.", "Ludwig der Fromme"],
             "RichtigeAntwort": "Pepin der Kurze",
             "RichtigeAntwortMöglichkeiten": "Pepin Kurze",
@@ -2497,7 +2480,7 @@ const geschichte = [
         },
         {
             "Kategorie": "Geschichte",
-            "Frage": "Welches Gerät wurde im Mittelalter verbessert, um Getreide zu verarbeiten?",
+            "Frage": "Welches Gerät wurde im Mittelalter genutzt, um Getreide zu verarbeiten?",
             "Antworten": ["Wassermühle", "Dampfmühle", "Holzmühle", "Stahlmühle"],
             "RichtigeAntwort": "Wassermühle",
             "RichtigeAntwortMöglichkeiten": "Wassermühle Mühlen windmühlen",
@@ -9486,7 +9469,7 @@ const geschichte = [
             "Frage": "In welchem Ozean sank die Titanic?",
             "Antworten": ["Atlantischer Ozean", "Indischer Ozean", "Pazifischer Ozean", "Arktischer Ozean"],
             "RichtigeAntwort": "Atlantischer Ozean",
-            "RichtigeAntwortMöglichkeiten": "Atlantischer Ozean",
+            "RichtigeAntwortMöglichkeiten": "Atlantischer Ozean atlantik",
             "Schwierigkeitsgrad": "schwer",
             "Fakt": "Die Titanic sank im Nordatlantik am 15. April 1912 nach dem Zusammenstoß mit einem Eisberg.",
         },
@@ -9495,7 +9478,7 @@ const geschichte = [
             "Frage": "Wie viele Rettungsboote hatte die Titanic?",
             "Antworten": ["20", "16", "24", "12"],
             "RichtigeAntwort": "20",
-            "RichtigeAntwortMöglichkeiten": "20",
+            "RichtigeAntwortMöglichkeiten": "20 zwanzig",
             "Schwierigkeitsgrad": "expert",
             "Fakt": "1912 verfügte die Titanic mit 20 Rettungsbooten über Kapazität für nur 1178 von 2208 Menschen.",
         },

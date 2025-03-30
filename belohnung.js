@@ -1,25 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const uid = localStorage.getItem("uid");
-    console.log(uid);
-    
-    // Firebase-Konfiguration
-    const firebaseConfig = {
-        apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
-        authDomain: "besserwisser-95b63.firebaseapp.com",
-        projectId: "besserwisser-95b63",
-        storageBucket: "besserwisser-95b63.appspot.com",
-        messagingSenderId: "522066225262",
-        appId: "1:522066225262:web:4bec0b45ceff85913c1e7f",
-        measurementId: "G-P8SBRHWS84",
-    };
-
-    const { increaseValue, readData, extendStreak} = window;
-    
-    // Firebase initialisieren
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const firestore = firebase.firestore();
-
     // Berechnungen für Münzen und XP
     const correctCount = parseInt(localStorage.getItem('correctCount') || '0', 10);
     const earnedCoins = correctCount; // 1 Münze pro richtiger Frage
@@ -45,35 +24,45 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.progress').style.width = `${percentage}%`;
     document.querySelector('.progress a').textContent = `${percentage}%`;
 
-    const nextButton = document.getElementById('next-button');
-    nextButton.addEventListener('click', function () {
-        window.location.href = 'startseite.html';
-    });
+    if(localStorage.getItem("mode") == "mehrspieler"){
+        document.querySelector(".progress-bar").style.display = "none";
+    }
+    localStorage.setItem("mode", "")
+
+    
 
     // Funktion: Münzen und XP synchronisieren
     function syncCoinsAndXP() {
-        readData("coins", (currentCoins) => {
-            readData("xp", (currentXP) => {
-                // Erhöhe die Coins und XP mit den globalen Funktionen
-                console.log("oioioi");
-                increaseValue("coins", earnedCoins);
-                increaseValue("xp", earnedXP);
-                console.log(currentXP);
-                console.log(currentXP + earnedXP);
-
-                // Aktualisiere die Anzeige
-                animateStats(currentCoins + earnedCoins, currentXP + earnedXP, currentCoins, currentXP, earnedCoins, earnedXP);
-            });
+        if (window.userData.higheststreak !== null){
+            const currentCoins = window.userData.coins;
+            const currentXP = window.userData.xp;
+            firestore.collection("users").doc(uid).update({
+                coins: firebase.firestore.FieldValue.increment(earnedCoins),
+                xp: firebase.firestore.FieldValue.increment(earnedXP),
+            })
+            animateStats(currentCoins + earnedCoins, currentXP + earnedXP, currentCoins, currentXP, earnedCoins, earnedXP);
+        } else {
+            const currentCoins = parseInt(localStorage.getItem("coins")) || 0;
+            const currentXP = parseInt(localStorage.getItem("xp")) || 0;
+            if (localStorage.getItem("uid")){
+                localStorage.setItem("xp-plus", (parseInt(localStorage.getItem("xp-plus")) || 0) + earnedXP);
+                localStorage.setItem("coins-plus", (parseInt(localStorage.getItem("coins-plus")) || 0) + earnedCoins);
+                localStorage.setItem("xp", (parseInt(localStorage.getItem("xp")) || 0) + earnedXP);
+                localStorage.setItem("coins", (parseInt(localStorage.getItem("coins")) || 0) + earnedCoins);
+            } else {
+                localStorage.setItem("xp", (parseInt(localStorage.getItem("xp")) || 0) + earnedXP);
+                localStorage.setItem("coins", (parseInt(localStorage.getItem("coins")) || 0) + earnedCoins);
+                console.log("kein benutzer");
+            }
+            animateStats(currentCoins + earnedCoins, currentXP + earnedXP, currentCoins, currentXP, earnedCoins, earnedXP);
+        }
+        const nextButton = document.getElementById('next-button');
+        nextButton.addEventListener('click', function () {
+            window.location.href = 'startseite.html';
         });
     }
 
-    // Funktion: Lokale Werte speichern
-    function saveToLocal(coins, xp) {
-        localStorage.setItem('totalCoins', coins);
-        localStorage.setItem('totalXP', xp);
-    }
 
-    // Funktion: Statistiken mit Animation aktualisieren
     function animateStats(coins, xp, coinsbefore, xpbefore) {
         const xpElement = document.getElementById('xp-total');
         const coinsElement = document.getElementById('coins-total');
@@ -113,13 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animateCoins);
     }
 
-    // Synchronisation prüfen und ausführen
-    syncCoinsAndXP();
 
     // Online-Synchronisation bei Verbindung
-    window.addEventListener('online', () => {
-        if (auth.currentUser) {
-            syncCoinsAndXP();
-        }
+    document.addEventListener("firebaseDataLoaded", function handler() {
+        setTimeout(syncCoinsAndXP, 1000);
+        document.removeEventListener("firebaseDataLoaded", handler);
     });
 });

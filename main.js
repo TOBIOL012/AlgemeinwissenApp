@@ -39,8 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateContinueButtonState() {
         if (continueButton) {
-            continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#f1730c';
-            continueButton.style.boxShadow = selectedCategories.length === 0 ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
+            const rootStyles = getComputedStyle(document.documentElement);
+            const bgColor = rootStyles.getPropertyValue('--disabled-background').trim();
+            const shadowColor = rootStyles.getPropertyValue('--disabled-shadow').trim();
+            continueButton.style.backgroundColor = selectedCategories.length === 0 ? bgColor : '';
+            continueButton.style.boxShadow = selectedCategories.length === 0 ? `0px 6px 0px 0px ${shadowColor}` : '';
             continueButton.disabled = selectedCategories.length === 0;
         } 
     }
@@ -48,8 +51,25 @@ document.addEventListener('DOMContentLoaded', function() {
     updateContinueButtonState();
 
     categoryImages.forEach(img => {
+        const parent = img.parentElement;
+        img.style.scale = "1";
+        img.style.opacity = "1";
+        setTimeout(() => {
+            img.style.transition = "none";
+        }, 400);
         const category = img.getAttribute('data-category');
         img.style.opacity = selectedCategories.includes(category) ? 1.0 : 0.5;
+        if (selectedCategories.includes(category)){
+            setTimeout(() => {
+            const hacken = document.createElement('img');
+                    parent.appendChild(hacken);
+                    hacken.className = 'hacken';
+                    hacken.src = "https://img.icons8.com/FFFFFF/metro/50/checkmark.png";
+                    setTimeout(() => {
+                        hacken.style.scale = "1";
+                    }, 20);
+                }, 200);
+        }
 
         img.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
@@ -67,9 +87,20 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 if (selectedCategories.includes(category)) {
                     selectedCategories.splice(selectedCategories.indexOf(category), 1);
+                    const hackenElement = parent.querySelector('.hacken');
+                    if (hackenElement) {
+                        hackenElement.remove();
+                    }
                     this.style.opacity = 0.5;
                 } else {
                     selectedCategories.push(category);
+                    const hacken = document.createElement('img');
+                    parent.appendChild(hacken);
+                    hacken.className = 'hacken';
+                    hacken.src = "https://img.icons8.com/FFFFFF/metro/50/checkmark.png";
+                    setTimeout(() => {
+                        hacken.style.scale = "1";
+                    }, 20);
                     this.style.opacity = 1.0;
                 }
                 if (selectedCategories.includes('Alles')) {
@@ -91,7 +122,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedCategories.length > 0) {
                 localStorage.removeItem('questionsAsked');
                 localStorage.removeItem('correctCount');
-                window.location.href = 'schwierigkeiten.html';
+                if (localStorage.getItem("isMultiplayer") == "true"){
+                    localStorage.setItem("isMultiplayer" , "false")
+                    window.location.href = 'fragen-mehrspieler.html';
+                } else {
+                    window.location.href = 'Schwierigkeiten.html';
+                }
             }
         });
     }
@@ -269,8 +305,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.querySelector('.question')) {
             document.querySelector('.question').textContent = randomQuestion.Frage;
         }
+
+        
         updateCategoryDisplay(randomQuestion.Kategorie);
         setDifficultyBlocks(randomQuestion.Schwierigkeitsgrad);
+
+
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -388,9 +428,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-    
-    if (document.querySelector('.next-button')) {
-        document.querySelector('.next-button').addEventListener('click', loadQuestion);
+    if (window.location.pathname.endsWith('index.html')) {
+        if (document.querySelector('.next-button')) {
+            document.querySelector('.next-button').addEventListener('click', loadQuestion);
+        }
     }
 
     if (window.location.pathname.endsWith('index.html')) {
@@ -422,10 +463,25 @@ function toggleContent(contentId) {
         // Verstecke den Inhalt und entferne die Klasse "expanded"
         contentDiv.style.display = 'none';
         contentDiv.dataset.activeContent = '';
+        contentDiv.style.scale = "0.3";
+        contentDiv.style.transform = "";
         topBar.classList.remove('expanded');
     } else {
         // Zeige den Inhalt und füge die Klasse "expanded" hinzu
         contentDiv.innerHTML = getContent(contentId);
+        if (contentId == "streak-content"){
+            contentDiv.style.transformOrigin = "top left";
+        } else if (contentId == "coins-content"){
+            contentDiv.style.transformOrigin = "top center";
+        } else if (contentId == "xp-content"){
+            contentDiv.style.transformOrigin = "top center";
+        } else {
+            contentDiv.style.transformOrigin = "top right";
+        }
+        setTimeout(() => {
+            contentDiv.style.scale = "1";
+            contentDiv.style.transform = "";
+        }, 1);
         contentDiv.style.display = 'block';
         contentDiv.dataset.activeContent = contentId;
         topBar.classList.add('expanded');
@@ -436,39 +492,171 @@ function toggleContent(contentId) {
 
 function getContent(contentId) {
     if (contentId === 'streak-content') {
-        return `
-            <div class="streak-all" onclick="window.location.href='calendar.html'">
-            <div class="streak-header">
-                <p>Streak Übersicht</p>
-                <button class="streak-button">
-                    <img src="streak-icon.png" alt="Details" class="streak-icon">
-                </button>
-            </div>
-            ${generateWeekCalendar()}
-            </div>
-        `;
+        if (localStorage.getItem("uid")){
+            if (window.userData.higheststreak == null){
+                setTimeout(() => {
+                    document.querySelector(".internet-img").style.scale = "1";
+                }, 10);
+                return `
+                <div class="nointernet">
+                    <img class="internet-img" src="internet.png" style="scale:0.3;">
+                    <div class="internet-text">Kein Internet</div>
+                </div>
+            `;
+            } else {
+                return `
+                <div class="streak-all">
+                <div class="streak-header">
+                    <p>Streak Übersicht</p>
+                    <button class="streak-button">
+                        <img src="streak-icon.png" alt="Details" class="streak-icon">
+                    </button>
+                </div>
+                ${generateWeekCalendar()}
+                </div>
+            `;
+            }
+            
+        } else {
+            setTimeout(() => {
+                const loginButton = document.querySelector(".login-button");
+                if (loginButton) {
+                    loginButton.addEventListener('click', function() {
+                        const frames = document.querySelectorAll("div[id='iframe']");
+                        frames.forEach(frame => frame.style.display = "none");
+                        frames[4].style.display = "flex";
+                    });
+
+                }
+            }, 10);
+            return `
+                <div class="login-container">
+                    <div class="login-button-text">Streak erst mit Account möglich</div>
+                    <div class="login-button">Account Erstellen</div>
+                </div>
+            `;
+        }
     }
     if (contentId === 'xp-content') {
-        return `
+        
+        if (localStorage.getItem("uid")){
+            if (window.userData.higheststreak == null){
+                setTimeout(() => {
+                    document.querySelector(".internet-img").style.scale = "1";
+                }, 10);
+                return `
+                <div class="nointernet">
+                    <img class="internet-img" src="internet.png" style="scale:0.3;">
+                    <div class="internet-text">Kein Internet</div>
+                </div>
+            `;
+            } else {
+                return `
             <div class="XP-Pfad-Container">
                 <a href="xp-pfad.html" class="xp-pfad-button">XP-Pfad ></a>
             </div>
-        `;
+            `;
+            }
+            
+        } else {
+            setTimeout(() => {
+                const loginButton = document.querySelector(".login-button");
+                if (loginButton) {
+                    loginButton.addEventListener('click', function() {
+                        const frames = document.querySelectorAll("div[id='iframe']");
+                        frames.forEach(frame => frame.style.display = "none");
+                        frames[4].style.display = "flex";
+                    });
+
+                }
+            }, 100);
+            return `
+                <div class="login-container">
+                    <div class="login-button-text">Streak erst mit Account möglich</div>
+                    <div class="login-button">Account Erstellen</div>
+                </div>
+            `;
+        }
     }
-    switch (contentId) {
-        case 'coins-content':
-            return '<p>Coins Details: Verdiene Münzen durch Quiz!</p>';
-        case 'notifications-content':
-            return '<p>Benachrichtigungen: Neuigkeiten und Updates!</p>';
-        default:
-            return '';
+    if (contentId === 'coins-content') {
+        if (localStorage.getItem("uid")){
+            if (window.userData.higheststreak == null){
+                setTimeout(() => {
+                    document.querySelector(".internet-img").style.scale = "1";
+                }, 100);
+                return `
+                <div class="nointernet">
+                    <img class="internet-img" src="internet.png" style="scale:0.3;">
+                    <div class="internet-text">Kein Internet</div>
+                </div>
+            `;
+            } else {
+                return `
+            <div class="XP-Pfad-Container"></div>
+            `;
+            }
+            
+        } else {
+            setTimeout(() => {
+                const loginButton = document.querySelector(".login-button");
+                if (loginButton) {
+                    loginButton.addEventListener('click', function() {
+                        const frames = document.querySelectorAll("div[id='iframe']");
+                        frames.forEach(frame => frame.style.display = "none");
+                        frames[4].style.display = "flex";
+                    });
+
+                }
+            }, 100);
+            return `
+                <div class="login-container">
+                    <div class="login-button-text">Streak erst mit Account möglich</div>
+                    <div class="login-button">Account Erstellen</div>
+                </div>
+            `;
+        }
     }
+    if (contentId === 'notifications-content') {
+        if (localStorage.getItem("uid")){
+            if (window.userData.higheststreak == null){
+                setTimeout(() => {
+                    document.querySelector(".internet-img").style.scale = "1";
+                }, 100);
+                return `
+                <div class="nointernet">
+                    <img class="internet-img" src="internet.png" style="scale:0.3;">
+                    <div class="internet-text">Kein Internet</div>
+                </div>
+            `;
+            } else {
+                return `
+            <div class="XP-Pfad-Container"></div>
+            `;
+            }
+            
+        } else {
+            setTimeout(() => {
+                const loginButton = document.querySelector(".login-button");
+                if (loginButton) {
+                    loginButton.addEventListener('click', function() {
+                        const frames = document.querySelectorAll("div[id='iframe']");
+                        frames.forEach(frame => frame.style.display = "none");
+                        frames[4].style.display = "flex";
+                    });
+
+                }
+            }, 10);
+            return `
+                <div class="login-container">
+                    <div class="login-button-text">Streak erst mit Account möglich</div>
+                    <div class="login-button">Account Erstellen</div>
+                </div>
+            `;
+        }
+    }
+
+
 }
-
-
-
-
-
 
 document.addEventListener('click', function (event) {
     const topBar = document.getElementById('top-bar');
@@ -477,156 +665,8 @@ document.addEventListener('click', function (event) {
     if (topBar && contentDiv && !topBar.contains(event.target)) {
         contentDiv.style.display = 'none';
         contentDiv.dataset.activeContent = '';
+        contentDiv.style.scale = "0.3";
+        contentDiv.style.transform = "";
         topBar.classList.remove('expanded');
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const progressBar = document.getElementById('progress-bar');
-    const indicator = document.getElementById('indicator');
-    const xpBox = document.getElementById('xp-box');
-    const maxXP = 10000;
-    const stepXP = 500;
-    const rewardLevels = Array.from({ length: 21 }, (_, i) => i * 500); // XP-Stufen von 0 bis 10.000
-
-    // **Exakte Orange-Farbe festlegen**
-    const orangeColor = "#E48D45"; // Falls eine andere Farbe besser passt, kannst du sie mir sagen
-
-    // **Marker für XP-Werte hinzufügen**
-    function addMarkers() {
-        rewardLevels.forEach(xpValue => {
-            if (xpValue === 0) return;
-
-            const positionPercent = (xpValue / maxXP) * 100;
-
-            // **Marker-Strich erstellen**
-            const marker = document.createElement('div');
-            marker.classList.add('marker');
-            marker.style.position = "absolute";
-            marker.style.left = "0";
-            marker.style.width = "15px";
-            marker.style.height = "4px";
-            marker.style.backgroundColor = "#2F4957";
-            marker.style.top = `${positionPercent}%`;
-
-            // **XP-Wert als Label**
-            const label = document.createElement('div');
-            label.classList.add('marker-label');
-            label.style.position = "absolute";
-            label.style.color = "#2F4957";
-            label.style.fontSize = "1rem";
-            label.style.left = "25px"; // **Mehr Abstand von der Bar**
-            label.style.top = `${positionPercent}%`;
-            label.textContent = xpValue;
-
-            progressBar.appendChild(marker);
-            progressBar.appendChild(label);
-        });
-    }
-
-    // **Rewards hinzufügen**
-    function addRewards() {
-        rewardLevels.forEach(xpValue => {
-            if (xpValue === 0) return;
-            const positionPercent = (xpValue / maxXP) * 100;
-
-            const reward = document.createElement('div');
-            reward.classList.add('reward');
-            reward.style.top = `${positionPercent}%`;
-            reward.dataset.xp = xpValue;
-            reward.textContent = "GE";
-
-            progressBar.appendChild(reward);
-        });
-    }
-
-    if (window.location.pathname.includes("xp-pfad.html")) {
-        let xplast = localStorage.getItem('xplast') || "0"; // Falls null, setze auf "0"
-        console.log(xplast);
-        indicator.style.height = `${Math.min((xplast / maxXP) * 100, 100)}%`;
-        xpBox.style.top = `${Math.min((xplast / maxXP) * 100, 100)}%`;
-    }
-
-    // **XP-Fortschritt aktualisieren & Rewards färben**
-    function updateProgressBar(xp) {
-        const progressHeight = Math.min((xp / maxXP) * 100, 100);
-        let xplast = parseFloat(localStorage.getItem('xplast')) || 0;  // Falls null, setze auf "0"
-
-        indicator.style.height = `${progressHeight}%`;
-        console.log("uwuwuwneger");
-        xpBox.style.top = `${progressHeight}%`;
-
-        // **XP-Box Wert animieren**
-        const currentXP = parseInt(xpBox.textContent) || 0;
-        console.log(xplast);
-        console.log(xp);
-        if (xplast !== xp){
-            console.log("was zum sigma");
-            animateCounter(xpBox, xplast, xp, 2000);
-            localStorage.setItem('xplast', xp);
-        } else {
-            xpBox.textContent = xp;
-        }
-
-
-        // **Rewards färben mit dem exakt gleichen Orange**
-        document.querySelectorAll('.reward').forEach(reward => {
-            const rewardXP = parseInt(reward.dataset.xp);
-            if (xp >= rewardXP) {
-                reward.style.backgroundColor = orangeColor;
-            }
-        });
-    }
-
-    // **XP-Box Animation**
-    function animateCounter(element, start, end, duration) {
-        const range = end - start;
-        const increment = range / (duration / 16);
-        let current = start;
-        console.log(increment);
-
-        function updateCounter() {
-            current += increment;
-            if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-                current = end;
-            }
-            element.textContent = Math.floor(current);
-            if (current !== end) {
-                requestAnimationFrame(updateCounter);
-            }
-        }
-        updateCounter();
-    }
-
-    // **Initialisierung**
-    addMarkers();
-    addRewards();
-
-    // **XP aus Firestore abrufen & Fortschritt updaten**
-    updateProgressBar(window.userData.xp);
-});
-
-
-
-
-
-
-

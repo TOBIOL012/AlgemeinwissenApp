@@ -66,7 +66,6 @@ if ('webkitSpeechRecognition' in window) {
     console.warn('Web Speech API wird von diesem Browser nicht unterstützt.');
     document.querySelector('.mic-button').style.display = 'none'; // Mikrofon-Button verstecken
 }
-
 // Sprachaufnahme beim Drücken des Mikrofon-Buttons starten und stoppen
 const micButton = document.querySelector('.mic-button');
 
@@ -125,7 +124,7 @@ micButton.addEventListener('touchend', function(e) {
 
 document.getElementById('clearImage2').addEventListener('click', function() {
     console.log('hallo');
-    document.getElementById('myInput').value = '';
+    document.getElementById('myInput2').value = '';
 });
 
 document.querySelector('input').addEventListener('focus', function() {

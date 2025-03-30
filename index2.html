@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allgemeinwissen Quiz App</title>
+    <link rel="stylesheet" href="Standart.css">
     <link rel="stylesheet" href="style2.css">
     <script src="Fragen/geschichte.js" defer></script>
     <script src="Fragen/geographie.js" defer></script>
@@ -11,11 +12,11 @@
     <script src="Fragen/musik.js" defer></script>
     <script src="Fragen/wissenschaft.js" defer></script>
     <script src="Fragen/kunst.js" defer></script>
+    <script src="Fragen/astronomie.js" defer></script>
+    <script src="Fragen/literatur.js" defer></script>
     <script src="Fragen/question.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="Standart.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
@@ -51,6 +52,12 @@
                 </div>
                 <button class="mic-button"><img src="icons8-microphone-32.png" alt="Mikrofon"></button>
             </div>
+            <div class="answers">
+                <button class="answer" style="display:none;">Antwort1</button>
+                <button class="answer" style="display:none;">Antwort2</button>
+                <button class="answer" style="display:none;">Antwort3</button>
+                <button class="answer" style="display:none;">Antwort4</button>
+            </div>
             <div class="bars-content">
                 <div class="volume-bars">
                     <div class="bar" id="bar1"></div>
@@ -62,10 +69,12 @@
                     <div class="bar" id="bar7"></div>
                 </div>
             </div>
-
+            <span>
             <div class="next-button-background">
+                <button id="token-button"><img class="token-img" src="token.png"><a></a></button>
                 <button id="next-button">Weiter</button>
             </div>
+        </span>
             <div class="next-button-wrapper">
                 <input type="text" class="note-input" placeholder="Fehler">
                 <div class="answer-box">

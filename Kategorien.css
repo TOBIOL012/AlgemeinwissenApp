@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #141F25;
+    background-color: var(--background-color);
     color: white;
 }
 
@@ -50,6 +50,7 @@ header {
 }
 
 .pfeil{
+    z-index: 9999;
     height: 2rem;
     width: 2rem;
 }
@@ -91,13 +92,17 @@ button:active {
     z-index: 1000;
 }
 
-.first, .second, .third, .fourth, .fifth, .sixth, .seventh {
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .astronomie, .literatur, .biologie, .religion, .politik {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.second img, .third img, .fourth img, .fifth img, .sixth img, .seventh img {
+.second img:not(.hacken), .third img:not(.hacken), .fourth img:not(.hacken), 
+.fifth img:not(.hacken), .sixth img:not(.hacken), .seventh img:not(.hacken), 
+.astronomie img:not(.hacken), .literatur img:not(.hacken), .biologie img:not(.hacken),
+.religion img:not(.hacken), .politik img:not(.hacken) {
     width: 75vw;
     margin-top: 7%;
     border-radius: 25px;
@@ -112,8 +117,8 @@ button:active {
     border-radius: 25px;
 }
 
-.seventh {
-    padding-bottom: 20vh;
+.biologie {
+    padding-bottom: 14vh;
 }
 
 
@@ -156,4 +161,24 @@ button:active {
     vertical-align: middle; /* Zusätzliche Sicherstellung */
 }
 
-/* Styling für die Kategorie-Bilder (optional, falls nötig) */
+
+img[data-category]{
+    scale:0.5;
+    opacity: 0.5;
+    transition: scale 0.3s cubic-bezier(0.25, 0.71, 0.69, 1.1), opacity 0.5s;
+}
+
+.hacken{
+    position:absolute;
+    top: 2.1rem;
+    right: 0.9rem;
+    justify-content: flex-end;
+    margin-right: 0;
+    height: 1rem;
+    width: 1rem;
+    padding:0.4rem;
+    border-radius: 0.7rem;
+    background-color: #464d51a1;
+    scale:0.5;
+    transition: scale 0.15s cubic-bezier(0.42, 0, 0.23, 2.12);
+}

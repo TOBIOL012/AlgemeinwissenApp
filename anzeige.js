@@ -1,20 +1,21 @@
 function showGlobalModal(title, text, imageUrl, callback) {
     console.log("Modal wird angezeigt");
-    // Existierendes Modal entfernen, falls vorhanden
     const existingModal = document.getElementById("global-modal");
     if (existingModal) existingModal.remove();
 
-    // Hintergrund abdunkeln
     const overlay = document.createElement("div");
-
     overlay.id = "global-overlay";
     overlay.classList.add("global-overlay");
-    // Modal erstellen
+
     const modal = document.createElement("div");
     modal.id = "global-modal";
     modal.classList.add("global-modal");
 
-    // Header mit Überschrift und Schließen-Button
+    // Anfangszustand für Animation
+    modal.style.opacity = "0.3";
+    modal.style.scale = "0.3";
+    modal.style.transition = "opacity 0.3s cubic-bezier(0.37, 0.73, 0.51, 1.49), scale 0.3s cubic-bezier(0.37, 0.73, 0.51, 1.49)";
+
     const header = document.createElement("div");
     header.classList.add("global-modal-header");
 
@@ -23,7 +24,6 @@ function showGlobalModal(title, text, imageUrl, callback) {
 
     const closeButton = document.createElement("img");
     closeButton.src = "kreuz.png";
-    closeButton.innerHTML = "&times;";
     closeButton.classList.add("global-close");
     closeButton.onclick = function () {
         document.body.removeChild(overlay);
@@ -34,7 +34,6 @@ function showGlobalModal(title, text, imageUrl, callback) {
     header.appendChild(titleElem);
     header.appendChild(closeButton);
 
-    // Inhalt
     const content = document.createElement("div");
     content.classList.add("global-modal-content");
 
@@ -43,7 +42,6 @@ function showGlobalModal(title, text, imageUrl, callback) {
 
     content.appendChild(textElem);
 
-    // Footer mit OK-Button
     const footer = document.createElement("div");
     footer.classList.add("global-modal-footer");
 
@@ -56,17 +54,52 @@ function showGlobalModal(title, text, imageUrl, callback) {
         if (callback) callback("ok");
     };
 
+    okButton.addEventListener('touchstart', () => {
+        requestAnimationFrame(() => {
+            okButton.style.boxShadow = 'none';
+            okButton.style.transform = 'translateY(6px)';
+        });
+    });
+
+    okButton.addEventListener('touchend', () => {
+        okButton.style.boxShadow = '';
+        okButton.style.transform = '';
+    });
+
+    okButton.addEventListener('mouseleave', () => {
+        okButton.style.boxShadow = '';
+        okButton.style.transform = '';
+    });
+
+    closeButton.addEventListener('touchstart', () => {
+        requestAnimationFrame(() => {
+            closeButton.style.scale = '0.75';
+        });
+    });
+
+    closeButton.addEventListener('touchend', () => {
+        closeButton.style.scale = '';
+    });
+
+    closeButton.addEventListener('mouseleave', () => {
+        closeButton.style.scale = '';
+    });
+
     footer.appendChild(okButton);
 
-    // Modal zusammenbauen
     modal.appendChild(header);
     modal.appendChild(content);
     modal.appendChild(footer);
 
-    // Elemente zum Body hinzufügen
     document.body.appendChild(overlay);
     document.body.appendChild(modal);
+
+    // Trigger Animation mit kleinem Delay
+    requestAnimationFrame(() => {
+        modal.style.opacity = "1";
+        modal.style.scale = "1";
+        modal.style.transform = "translate(-50%, -50%)";
+    });
 }
 
 window.showGlobalModal = showGlobalModal;
-

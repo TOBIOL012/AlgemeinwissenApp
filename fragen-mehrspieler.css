@@ -143,6 +143,14 @@ header {
     background-color: #E55E5E;
 }
 
+.difficulty-block.expert {
+    background-color: rgb(217, 105, 231);
+}
+
+.difficulty-block2.expert {
+    background-color: rgb(217, 105, 231);
+}
+
 .category-difficulty2 {
     display: flex;
     align-items: center;
@@ -297,7 +305,7 @@ main {
     width: 90%;
     padding: 0.5em;
     border-radius: 10px;
-    border: 1px solid #2f4957;
+    border: 1px solid var(--line-color);
     background-color: #38424b;
     color: white;
     font-size: 1em;

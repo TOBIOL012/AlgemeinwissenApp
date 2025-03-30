@@ -38,6 +38,7 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onend = function() {
         isRecognizing = false;
         console.log('Erkennung beendet');
+        hidebars();
         document.querySelector('.mic-button').classList.remove('active'); // Visuelles Feedback entfernen
     };
 } else {
@@ -51,27 +52,30 @@ const micButton = document.querySelector('.mic-button');
 
 micButton.addEventListener('mousedown', function() {
     isMouseDown = true; // Maus gedrückt
+    showBars(); // Zeige die Balken (display: flex)
     if (recognition && !isRecognizing) {
-        console.log('Erkennung wird gestartet');
-        recognition.start();
-        startAudioProcessing();
+      console.log('Erkennung wird gestartet');
+      recognition.start();
+      startAudioProcessing();
     }
-});
-
-micButton.addEventListener('mouseup', function() {
+  });
+  
+  micButton.addEventListener('mouseup', function() {
     console.log('Maus losgelassen');
     isMouseDown = false; // Maus losgelassen
+    hidebars(); // Verstecke die Balken (display: none)
     if (recognition && isRecognizing) {
-        console.log('Erkennung wird gestoppt');
-        recognition.stop();
-        stopAudioProcessing();
+      console.log('Erkennung wird gestoppt');
+      recognition.stop();
+      stopAudioProcessing();
     }
-});
+  });
 
 micButton.addEventListener('mouseleave', function() {
     console.log('Maus hat den Bereich verlassen');
     if (isMouseDown && recognition && isRecognizing) {
         console.log('Erkennung wird gestoppt, weil die Maus den Bereich verlassen hat');
+        hidebars();
         recognition.stop(); // Stoppen, wenn die Maus den Bereich verlässt und der Knopf gedrückt war
         isMouseDown = false; // Flag zurücksetzen
         stopAudioProcessing();
@@ -79,24 +83,28 @@ micButton.addEventListener('mouseleave', function() {
 });
 
 // Falls das Gerät auf Touch-Ereignisse reagiert (z.B. auf Mobilgeräten)
-micButton.addEventListener('touchstart', function(e) {
-    e.preventDefault(); // Verhindert das Standardverhalten von Touch-Ereignissen
-    if (recognition && !isRecognizing) {
-        console.log('Erkennung wird gestartet (Touch)');
-        recognition.start();
-        startAudioProcessing();
-    }
-});
 
-micButton.addEventListener('touchend', function(e) {
+  
+  micButton.addEventListener('touchstart', function(e) {
+    e.preventDefault(); // Standard-Touchverhalten unterbinden
+    showBars(); // Zeige die Balken (display: flex)
+    if (recognition && !isRecognizing) {
+      console.log('Erkennung wird gestartet (Touch)');
+      recognition.start();
+      startAudioProcessing();
+    }
+  });
+  
+  micButton.addEventListener('touchend', function(e) {
     e.preventDefault();
     console.log('Touch beendet');
+    hidebars(); // Verstecke die Balken (display: none)
     if (recognition && isRecognizing) {
-        console.log('Erkennung wird gestoppt (Touch)');
-        recognition.stop();
-        stopAudioProcessing();
+      console.log('Erkennung wird gestoppt (Touch)');
+      recognition.stop();
+      stopAudioProcessing();
     }
-});
+  });
 
 
 document.getElementById('clearImage').addEventListener('click', function() {
@@ -108,17 +116,7 @@ document.querySelector('input').addEventListener('focus', function() {
     console.log('Tastatur könnte geöffnet sein');
 });
 
-let initialHeight = window.innerHeight;
 
-window.addEventListener('resize', function() {
-    let currentHeight = window.innerHeight;
-    
-    if (currentHeight < initialHeight) {
-        let keyboardHeight = initialHeight - currentHeight;
-        console.log('Ungefähre Tastaturhöhe:', keyboardHeight, 'px');
-        document.getElementById('myInput').value = keyboardHeight;
-    }
-});
 
 
 
@@ -221,13 +219,6 @@ function getRandomQuestion() {
         const progressBar = document.querySelector('.progress');
         if (progressBar) {
             progressBar.style.width = `${percentage}%`;
-
-            const progressText = progressBar.querySelector('a');
-            if (progressText) {
-                progressText.textContent = `${percentage.toFixed(0)}%`;
-            } else {
-                console.warn('Das Fortschritts-Text-Element konnte nicht gefunden werden.');
-            }
         } else {
             console.error('Das Fortschritts-Element konnte nicht gefunden werden.');
         }
@@ -441,8 +432,6 @@ categories.forEach(category => {
     }
 
     // Ausgabe der kategoriespezifischen Statistik
-    console.log(`Beantwortete Fragen in ${category}: ${answeredCategoryQuestions.length}`);
-    console.log(`Richtige Antworten in ${category}: ${correctCategoryAnswers.length}`);
 });
 
 const schwierigkeiten = ['leicht', 'mittel', 'schwer', 'extrem', 'expert'];
@@ -467,21 +456,30 @@ schwierigkeiten.forEach(schwierigkeiten => {
     }
 
     // Ausgabe der kategoriespezifischen Statistik
-    console.log(`Beantwortete Fragen in ${schwierigkeiten}: ${answeredCategoryQuestions.length}`);
-    console.log(`Richtige Antworten in ${schwierigkeiten}: ${correctCategoryAnswers.length}`);
 });
 
 // Ausgabe der allgemeinen Statistik
 console.log(`Beantwortete Fragen: ${answeredQuestions.length}`);
 console.log(`Richtige Antworten: ${correctAnswers.length}`);
 
+        document.querySelector("#token-button").style.display = "none";
+        document.querySelector(".correct-answer").style.display = "none";
         // Verarbeite die Antwort basierend auf dem Übereinstimmungsstatus
+        wrapper.classList.remove('correct', 'incorrect');
+        wrapper.removeAttribute('style');
+        inputField.classList.remove('correct', 'incorrect');
+        micButton.classList.remove('correct', 'incorrect');
+        question.classList.remove('correct', 'incorrect');
+        wrapper.classList.remove('correct', 'incorrect');
+        document.querySelector("#next-button").classList.remove('correct', 'incorrect');
+        container.classList.remove('correct', 'incorrect');
+        document.querySelector(".answer").classList.remove('correct', 'incorrect');
         if (isMatch) {
             correctCount++;
             localStorage.setItem("mission-" + Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + Kategorie.toLowerCase())) || 0) + 1);
             localStorage.setItem("mission-" + Kategorie.toLowerCase() + "1", (parseInt(localStorage.getItem("mission-" + Kategorie.toLowerCase() + "1")) || 0) + 1);
             localStorage.setItem("mission-question1", (parseInt(localStorage.getItem("mission-question1")) || 0) + 1);
-            console.log('Richtig! Aktuelle Anzahl der richtigen Antworten:', correctCount);
+            console.log('Richtig! Aktuelle Anzahl der richtigen Antworten1:', correctCount);
             inputField.classList.add('correct');
             micButton.classList.add('correct');
             question.classList.add('correct');
@@ -497,8 +495,9 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
             container.disabled = !inputField.value.trim();
         } else {
             saveIncorrectQuestion(question);
-            console.log('Falsch! Die richtige Antwort wäre:', correctAnswer);
-            correctAnswerDisplay.innerHTML = `<span class="highlight">Antwort:</span> <span class="highlight">${AntwortAnzeige}</span>`;
+            console.log('Falsch! Die richtige Antwort wäre1:', correctAnswer);
+            correctAnswerDisplay.innerHTML = `<span class="highlight">Antwort:</span> <span class="highlight">${correctAnswer}</span>`;
+            correctAnswerDisplay.classList.remove('correct', 'incorrect');
             correctAnswerDisplay.classList.add('incorrect');
             correctAnswerDisplay.style.display = 'block';
             inputField.classList.add('incorrect');
@@ -541,10 +540,9 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
         container.classList.remove('correct', 'incorrect');
         correctAnswerDisplay.style.display = 'none';
         correctAnswerDisplay.classList.remove('incorrect');
-        answerBox.style.display = 'none'; // Die Box ausblenden
-        factDisplay.style.display = 'none'; // Fakt ausblenden
-        factBox.style.display = 'none'; // Die Box ausblenden
-        
+        tokentext = document.querySelector("#token-button a");
+        token = document.querySelector("#token-button");
+
         if (currentQuestionIndex >= totalQuestions) {
             localStorage.setItem('correctCount', correctCount);
             window.location.href = 'belohnung.html';
@@ -557,6 +555,223 @@ console.log(`Richtige Antworten: ${correctAnswers.length}`);
             window.location.href = 'kategorien.html';
             return;
         }
+
+
+        if (localStorage.getItem("token") > 0 && localStorage.getItem("token") !== null) {
+            token.style.display = "flex";
+            tokentext.textContent = localStorage.getItem("token");
+        } else {
+            token.style.display = "none";
+        }
+
+
+/////////////////////////////////////////////////////////////////
+
+        token.addEventListener('click', function() {
+            if (localStorage.getItem("token") > 0 && localStorage.getItem("token") !== null) {
+                localStorage.setItem("token", localStorage.getItem("token") - 1);
+                localStorage.setItem("tokenminus", localStorage.getItem("token") - 1);
+
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                    return array;
+                }
+        
+                const shuffledAnswers = shuffleArray([...randomQuestion.Antworten]);
+        
+                let answers2 = document.querySelectorAll('.answer');
+                answers2.forEach((button, index) => {
+                    button.textContent = shuffledAnswers[index];
+                    button.disabled = false;
+                    button.classList.remove('correct-answer2', 'wrong-answer2');
+                });
+            
+                let questionAnswered = false;
+                document.querySelector(".answer-typed").style.scale = "0.2";
+                setTimeout(() => {
+                    document.querySelector(".answer-typed").style.display = "none";
+                }, 200);
+                setTimeout(() => {
+                    document.querySelectorAll(".answer")[0].style.display = "flex";
+                    setTimeout(() => {document.querySelectorAll(".answer")[0].style.scale = "1";}, 10);
+                }, 300);
+                setTimeout(() => {
+                    document.querySelectorAll(".answer")[1].style.display = "flex";
+                    setTimeout(() => {document.querySelectorAll(".answer")[1].style.scale = "1";}, 10);
+                }, 400);
+                setTimeout(() => {
+                    document.querySelectorAll(".answer")[2].style.display = "flex";
+                    setTimeout(() => {document.querySelectorAll(".answer")[2].style.scale = "1";}, 10);
+                }, 500);
+                setTimeout(() => {
+                    document.querySelectorAll(".answer")[3].style.display = "flex";
+                    setTimeout(() => {document.querySelectorAll(".answer")[3].style.scale = "1";}, 10);
+                }, 600);
+                setTimeout(() => {
+                    document.querySelector("#next-button").disabled = true;
+                    document.querySelector("#next-button").style.scale = "0.3";
+                    setTimeout(() => {
+                        document.querySelector("#next-button").style.display = "none";
+                        document.querySelector("#next-button").style.scale = "1";
+                        document.querySelector("#next-button").disabled = false;
+                    }, 200);
+                }, 300);
+                setTimeout(() => {
+                    document.querySelector("#token-button").disabled = true;
+                    document.querySelector("#token-button").style.scale = "0.3";
+                    setTimeout(() => {
+                        document.querySelector("#token-button").style.display = "none";
+                        document.querySelector("#token-button").style.scale = "1";
+                        document.querySelector("#token-button").disabled = false;
+                    }, 200);
+                }, 300);
+    
+                
+                
+                
+                function remToPx(rem) { 
+                  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+                }
+                function vwToPx(vw) { 
+                  return (vw / 100) * window.innerWidth;
+                }
+                let initialLeft = remToPx(1.45) + vwToPx(5);
+                let initialTop = window.innerHeight - remToPx(4.8);
+                const flyingImg = document.createElement("img");
+                flyingImg.src = "token.png";
+                flyingImg.style.position = "fixed";
+                flyingImg.style.left = `${initialLeft}px`;
+                flyingImg.style.top = `${initialTop}px`;
+                flyingImg.style.width = `2rem`;
+                flyingImg.style.height = `2rem`;
+                flyingImg.style.transition = `top 0.7s cubic-bezier(0.66, -2, 0.97, 0.97), left 0.7s cubic-bezier(0.71, 1, 1, 0.82)`;
+                flyingImg.style.zIndex = "1000000";
+                document.body.appendChild(flyingImg);
+                setTimeout(() => {
+                  flyingImg.style.top = `${window.innerHeight}px`;
+                  flyingImg.style.left = `-60px`;
+                }, 10);
+                setTimeout(() => {
+                  flyingImg.remove();
+                }, 1000);
+                      
+                    
+    
+                answers2.forEach(button => {
+                    button.addEventListener('click', function() {
+                        if (questionAnswered) {
+                            return;
+                        }
+                        console.log(randomQuestion.RichtigeAntwort);
+                        
+                        const isMatch2 = button.textContent === randomQuestion.RichtigeAntwort;
+                        console.log(isMatch2);
+            
+                        answers2.forEach(btn => btn.disabled = true);
+            
+                        if (isMatch2) {
+                            localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase(), (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase())) || 0) + 1);
+                            localStorage.setItem("mission-" + randomQuestion.Kategorie.toLowerCase() + "1", (parseInt(localStorage.getItem("mission-" + randomQuestion.Kategorie.toLowerCase() + "1")) || 0) + 1);
+                            localStorage.setItem("mission-question1", (parseInt(localStorage.getItem("mission-question1")) || 0) + 1);
+                        } else {
+                            button.classList.add('wrong-answer2');
+                            saveIncorrectQuestion(randomQuestion);
+                        }
+            
+                        answers2.forEach(btn => {
+                            if (btn.textContent === randomQuestion.RichtigeAntwort) {
+                                btn.classList.add('correct-answer2');
+                            }
+                        });
+                        
+                        updateProgressBar();
+    
+                        const nextbutton = document.querySelector("#next-button");
+                        correctAnswerDisplay.style.display = "none";
+    
+                        wrapper.classList.remove('correct', 'incorrect');
+                                wrapper.removeAttribute('style');
+                                inputField.classList.remove('correct', 'incorrect');
+                                micButton.classList.remove('correct', 'incorrect');
+                                question.classList.remove('correct', 'incorrect');
+                                wrapper.classList.remove('correct', 'incorrect');
+                                nextbutton.classList.remove('correct', 'incorrect');
+                                container.classList.remove('correct', 'incorrect');
+                                document.querySelector(".answer").classList.remove('correct', 'incorrect');
+                        if (isMatch2) {
+                            correctCount++;
+                            inputField.classList.add('correct');
+                            micButton.classList.add('correct');
+                            question.classList.add('correct');
+                            wrapper.classList.add('correct');
+                            nextbutton.classList.add('correct');
+                            nextbutton.style.display = ("block");
+                            container.classList.add('correct');
+                            wrapper.classList.remove('no-transition');
+                            correctAnswerDisplay.innerHTML = `<span class="highlight">Richtig!</span> <span class="highlight">${randomQuestion.RichtigeAntwort}</span>`;
+                            correctAnswerDisplay.classList.remove('incorrect');
+                            correctAnswerDisplay.style.display = 'block';
+                            const bars = document.querySelectorAll('.bar');
+                            bars.forEach(bar => bar.style.height = '0px');
+                            container.disabled = !inputField.value.trim();
+                            factDisplay.textContent = randomQuestion.Fakt;
+                        } else {
+                            correctAnswerDisplay.innerHTML = `<span class="highlight">Antwort:</span> <span class="highlight">${randomQuestion.RichtigeAntwort}</span>`;
+                            correctAnswerDisplay.classList.add('incorrect');
+                            correctAnswerDisplay.style.display = 'block';
+                            inputField.classList.add('incorrect');
+                            micButton.classList.add('incorrect');
+                            question.classList.add('incorrect');
+                            wrapper.classList.add('incorrect');
+                            nextbutton.classList.add('incorrect');
+                            nextbutton.style.display = ("block");
+                            container.classList.add('incorrect');
+                            wrapper.classList.remove('no-transition'); 
+                            const bars = document.querySelectorAll('.bar');
+                            bars.forEach(bar => bar.style.height = '0px');
+                            container.disabled = !inputField.value.trim();
+                            factDisplay.textContent = randomQuestion.Fakt;
+                        }
+                        console.log("halloouwu");
+                        answerBox.style.display = "none";
+                        document.querySelector('#next-button').textContent = 'Weiter';
+                        const nextButtonHandler = (button) => {
+                            document.querySelector(".answer-typed").style.display = "flex";
+                            document.querySelector(".answer-typed").style.scale = "1";
+                            document.querySelectorAll(".answer").forEach(answer => {
+                                answer.style.display = "none";
+                            });
+                            const wrapper = document.querySelector('.next-button-wrapper');
+                            if (wrapper) {
+                                // Entferne die Klassen `correct` und `incorrect`, falls vorhanden
+                                wrapper.classList.remove('correct', 'incorrect');
+                                wrapper.removeAttribute('style');
+                                inputField.classList.remove('correct', 'incorrect');
+                                micButton.classList.remove('correct', 'incorrect');
+                                question.classList.remove('correct', 'incorrect');
+                                wrapper.classList.remove('correct', 'incorrect');
+                                nextButton.classList.remove('correct', 'incorrect');
+                                container.classList.remove('correct', 'incorrect');
+                            } 
+                            loadNextQuestion();
+                            nextButton.removeEventListener('click', nextButtonHandler);
+                            answers2.forEach(button => {
+                                button.removeEventListener('click', nextButtonHandler);
+                            });
+                        };
+                        nextButton.addEventListener('click', nextButtonHandler);
+    
+    
+                    }, { once: true });
+                });
+    
+                }
+        });////////////////////////
+
+        
         
         document.querySelector('.question').textContent = randomQuestion.Frage;
         categoryText.textContent = randomQuestion.Kategorie;
@@ -691,7 +906,6 @@ if (wrapper) {
     loadNextQuestion();
 
     function startAudioProcessing() {
-        hidebars();
         navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
             analyser = audioContext.createAnalyser();
@@ -715,10 +929,8 @@ if (wrapper) {
                 // Kleinste Lautstärke aktualisieren, wenn die aktuelle Lautstärke kleiner ist
                 if (values < kleinste && values > 10) {
                     kleinste = values;
-                    console.log(kleinste);
                 }
     
-                
                 // Lautstärke auf Balkenhöhen anwenden
                 const bars = document.querySelectorAll('.bar');
                 bars.forEach((bar, index) => {
@@ -729,16 +941,15 @@ if (wrapper) {
     }
 
 
-    function hidebars() {
-        const element = document.querySelectorAll('mic-button');
-    const bars = document.querySelectorAll('.bar');
-    if (document.activeElement === element) {
-        console.log('Hallo2')
-    } else {
-        bars.forEach(bar => bar.style.height = '0px');
-        console.log('Hallo1')
-    } 
-    }
+    function showBars() {
+        const barsContent = document.querySelector('.bars-content');
+        barsContent.style.display = 'flex';
+      }
+      
+      function hidebars() {
+        const barsContent = document.querySelector('.bars-content');
+        barsContent.style.display = 'none';
+      }
 
 
     function stopAudioProcessing() {
@@ -801,9 +1012,4 @@ document.addEventListener('DOMContentLoaded', function() {
     wrapper.addEventListener('touchmove', onTouchMove);
     wrapper.addEventListener('touchend', onTouchEnd);
 
-    // Simulation der nächsten Frage
-    function loadNextQuestion() {
-        loadNextQuestionWrapper();
-        // Logik zum Laden der nächsten Frage...
-    }
 });

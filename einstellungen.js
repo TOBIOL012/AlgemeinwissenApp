@@ -12,18 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
         settingsIcon.src = `output_images/rotated_${paddedFrame}.webp`;
     };
 
-    const playWebPAnimation = (forward, callback) => {
+    const playWebPAnimation = (forward, duration = 350, callback) => {
         const totalFrames = 30; // Anzahl der Frames in der Animation
-        const duration = 400; // Dauer der Animation in Millisekunden
         const startTime = performance.now();
+
+        const easeInOut = (t) => {
+            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        };
 
         const animate = (currentTime) => {
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1); // Fortschritt von 0 bis 1
+            const easedProgress = easeInOut(progress);
 
             const frame = forward
-                ? Math.round(progress * (totalFrames - 1)) + 1
-                : totalFrames - Math.round(progress * (totalFrames - 1));
+                ? Math.round(easedProgress * (totalFrames - 1)) + 1
+                : totalFrames - Math.round(easedProgress * (totalFrames - 1));
 
             setWebPFrame(frame);
 
@@ -70,6 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // WebP Animation rückwärts abspielen und gleichzeitig Opacity und Position animieren
             playWebPAnimation(false);
 
+            
+
             einstellungen.style.top = "-100%";
             einstellungen.style.opacity = "0";
             setTimeout(() => {
@@ -102,9 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (result === "ok") {
             localStorage.removeItem("uid");
             localStorage.removeItem("username");
-            localStorage.removeItem("lastCoins");
-            localStorage.removeItem("lastXp");
-            localStorage.removeItem("lastStreak");
+            localStorage.removeItem("coins");
+            localStorage.removeItem("xp");
+            localStorage.removeItem("streak");
+            localStorage.removeItem("beigetreten");
+            localStorage.removeItem("currentprofile");
+            localStorage.removeItem("profilecolor");
+            localStorage.removeItem("mission-last-xp");
+            localStorage.removeItem("tokenminus");
 
             // Firebase-Logout
             auth.signOut().then(() => {
@@ -116,5 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+
+
+
+    
+
 });
+
+
 

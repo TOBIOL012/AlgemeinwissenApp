@@ -1004,7 +1004,7 @@ const musik = [
         "Antworten": ["Hip-Hop", "Jazz", "Rock", "Blues"],
         "RichtigeAntwort": "Hip-Hop",
         "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "mittel",
         "Fakt": "Hip-Hop entstand in den 1970er Jahren und ist bekannt für seine rhythmischen Sprechgesänge"
     },
     { // Zeitgenössische Musik
@@ -1013,7 +1013,7 @@ const musik = [
         "Antworten": ["Techno", "Swing", "Reggae", "Folk"],
         "RichtigeAntwort": "Techno",
         "RichtigeAntwortMöglichkeiten": "Techno",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "mittel",
         "Fakt": "Techno, ein Musikstil, der elektronische Klänge und Beats verwendet, wurde in den 1980er Jahren populär"
     },
     { // Zeitgenössische Musik
@@ -1108,15 +1108,6 @@ const musik = [
     },
     { // Zeitgenössische Musik
         "Kategorie": "Musik",
-        "Frage": "Welche Musikrichtung wurde von Künstlern wie Bob Marley und Peter Tosh populär gemacht und hat ihre Wurzeln in Jamaika?",
-        "Antworten": ["Reggae", "Rock", "Pop", "Jazz"],
-        "RichtigeAntwort": "Reggae",
-        "RichtigeAntwortMöglichkeiten": "Reggae",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Reggae wurde von Künstlern wie Bob Marley und Peter Tosh populär gemacht und hat seine Wurzeln in Jamaika"
-    },
-    { // Zeitgenössische Musik
-        "Kategorie": "Musik",
         "Frage": "Welcher Sänger ist bekannt für seine markante Stimme und das Lied 'Hallelujah'?",
         "Antworten": ["Leonard Cohen", "Bob Dylan", "Bruce Springsteen", "Paul Simon"],
         "RichtigeAntwort": "Leonard Cohen",
@@ -1124,363 +1115,6 @@ const musik = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Leonard Cohen ist bekannt für seine markante Stimme und das Lied 'Hallelujah'"
     },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welcher Künstler erreichte als erster Rapper über eine Milliarde Streams auf Spotify und definiert so den Erfolg in der Streaming-Ära?",
-        "Antworten": ["Drake", "Post Malone", "Kendrick Lamar", "Kanye West"],
-        "RichtigeAntwort": "Drake",
-        "RichtigeAntwortMöglichkeiten": "Drake",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Drake setzte neue Maßstäbe in der digitalen Musiklandschaft und ist ein Paradebeispiel für den Erfolg moderner Hip-Hop-Künstler im Streaming-Zeitalter."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Wer hat die meisten Grammys gewonnen?",
-        "Antworten": ["Georg Solti", "Beyoncé", "Quincy Jones", "Stevie Wonder"],
-        "RichtigeAntwort": "Georg Solti",
-        "RichtigeAntwortMöglichkeiten": "Georg Solti",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Der Dirigent Georg Solti hält mit 31 Grammy Awards den Rekord."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Wer prägte den modernen Mumble Rap?",
-        "Antworten": ["Future", "Travis Scott", "Lil Uzi Vert", "Young Thug"],
-        "RichtigeAntwort": "Future",
-        "RichtigeAntwortMöglichkeiten": "Future",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Future ist bekannt für seinen melodischen, oft undeutlichen Rap-Stil, der den Mumble Rap definierte."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welcher Song war schon in sehr jungen Jahren Justin Biebers Durchbruch?",
-        "Antworten": ["Baby", "Sorry", "Love Yourself", "What Do You Mean?"],
-        "RichtigeAntwort": "Baby",
-        "RichtigeAntwortMöglichkeiten": "Baby",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "'Baby' katapultierte Justin Bieber ins internationale Rampenlicht."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welcher Musik Popstar wurde schon als Teenager zum Superstar?",
-        "Antworten": ["Justin Bieber", "Britney Spears", "Usher", "Justin Timberlake"],
-        "RichtigeAntwort": "Justin Bieber",
-        "RichtigeAntwortMöglichkeiten": "Justin Bieber",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Justin Bieber wurde als Teenager durch YouTube entdeckt und avancierte rasch zum internationalen Popstar."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welcher Rapper ist bekannt für seine extrem schnelle Rap-Technik?",
-        "Antworten": ["Eminem", "Drake", "Future", "Travis Scott"],
-        "RichtigeAntwort": "Eminem",
-        "RichtigeAntwortMöglichkeiten": "Eminem",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Eminem rappte in 'Rap God' 6,46 Wörter pro Sekunde und stellte damit einen Weltrekord auf."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welche Plattform dominiert das Musik-Streaming?",
-        "Antworten": ["Spotify", "Apple Music", "YouTube Music", "Amazon Music"],
-        "RichtigeAntwort": "Spotify",
-        "RichtigeAntwortMöglichkeiten": "Spotify",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Spotify ist mit über 500 Millionen Nutzern die größte Musik-Streaming-Plattform."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welches Genre ist heutzutage weltweit das meistgehörte?",
-        "Antworten": ["Pop", "Rock", "Hip-Hop", "Elektronische Musik"],
-        "RichtigeAntwort": "Pop",
-        "RichtigeAntwortMöglichkeiten": "Pop",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Pop-Musik ist das meistgehörte Genre und dominiert die Charts weltweit."
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "Welcher Rapper ist unter dem Namen 'Slim Shady' bekannt?",
-        "Antworten": ["Eminem", "Drake", "Jay-Z", "Kanye West"],
-        "RichtigeAntwort": "Eminem",
-        "RichtigeAntwortMöglichkeiten": "Eminem Slim Shady",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Slim Shady ist Eminems Alter Ego, mit dem er für seine provokanten und schnellen Raps bekannt wurde."
-    },
-
-    
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    {
-        "Kategorie": "Musik",
-        "Frage": "Für welche Musikrichtung ist Kanye West bekannt?",
-        "Antworten": ["Hip-Hop", "Rock", "Pop", "Reggae"],
-        "RichtigeAntwort": "Hip-Hop",
-        "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Kanye West gilt als einer der einflussreichsten Hip-Hop-Künstler und hat das Genre mit seinen innovativen Sounds revolutioniert."
-    },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Eminem bekannt?",
-            "Antworten": ["Hip-Hop", "Rock", "Pop", "Country"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Eminem ist einer der erfolgreichsten Rapper aller Zeiten und bekannt für seine schnellen Flows und kontroversen Texte."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Tupac bekannt?",
-            "Antworten": ["Hip-Hop", "R&B", "Jazz", "Reggae"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Tupac Shakur gilt als eine der einflussreichsten Figuren des Hip-Hop und kombinierte soziale Themen mit tiefgründigen Texten."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Jay-Z bekannt?",
-            "Antworten": ["Hip-Hop", "Funk", "Rock", "Elektronische Musik"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Jay-Z ist nicht nur einer der größten Rapper, sondern auch ein einflussreicher Geschäftsmann in der Musikindustrie."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Travis Scott bekannt?",
-            "Antworten": ["Hip-Hop", "House", "Techno", "Blues"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Travis Scott ist bekannt für seinen einzigartigen Auto-Tune-Sound und energiegeladene Live-Shows."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Lil Uzi Vert bekannt?",
-            "Antworten": ["Hip-Hop", "Rock", "Punk", "Pop"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Lil Uzi Vert kombiniert Rap mit melodischen Elementen und hat den 'SoundCloud-Rap' mitgeprägt."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Nicki Minaj bekannt?",
-            "Antworten": ["Hip-Hop", "Pop", "R&B", "Reggae"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Nicki Minaj ist eine der erfolgreichsten Rapperinnen und bekannt für ihre vielseitigen Flows und Charaktere in ihren Songs."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Drake bekannt?",
-            "Antworten": ["Hip-Hop", "Pop", "R&B", "Soul"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Drake vermischt Rap und Gesang und hat Hip-Hop mit emotionalen und melodischen Elementen erweitert."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Kendrick Lamar bekannt?",
-            "Antworten": ["Hip-Hop", "Funk", "Rock", "Jazz"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Kendrick Lamar ist bekannt für seine tiefgründigen Texte, politischen Botschaften und einzigartigen Erzählstile im Rap."
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist der Musiker Future bekannt?",
-            "Antworten": ["Hip-Hop", "Trap", "R&B", "Soul"],
-            "RichtigeAntwort": "Hip-Hop",
-            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap Trap",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Future hat den modernen Trap-Sound mitgeprägt und ist bekannt für seinen massiven Einfluss auf die neue Generation von Rappern."
-        },
-
-
-
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Taylor Swift bekannt?",
-            "Antworten": ["Pop", "Country", "Rock", "Hip-Hop"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Taylor Swift begann in der Country-Musik, wurde aber mit Pop-Welthits wie 'Shake It Off' zum Megastar,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Lady Gaga bekannt?",
-            "Antworten": ["Pop", "Rock", "Elektronische Musik", "Jazz"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Lady Gaga revolutionierte den Pop mit ihren extravaganten Outfits, ikonischen Songs und starken Performances,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Billie Eilish bekannt?",
-            "Antworten": ["Pop", "Indie", "Rock", "Rap"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Billie Eilish brachte mit ihrem düsteren, minimalistischen Stil und Flüstergesang eine ganz neue Pop-Ästhetik,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Ariana Grande bekannt?",
-            "Antworten": ["Pop", "Soul", "Hip-Hop", "House"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ariana Grande ist bekannt für ihre kraftvolle Stimme und Pop-Hits mit R&B-Einflüssen,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist The Weeknd bekannt?",
-            "Antworten": ["Pop", "R&B", "Hip-Hop", "Funk"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "The Weeknd begann mit R&B, wurde aber mit Hits wie 'Blinding Lights' zur globalen Pop-Ikone,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Ed Sheeran bekannt?",
-            "Antworten": ["Pop", "Folk", "Rock", "Hip-Hop"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ed Sheeran kombiniert akustische Gitarrenmusik mit Pop-Melodien und ist für seine emotionalen Songs bekannt,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Rihanna bekannt?",
-            "Antworten": ["Pop", "R&B", "Reggae", "Hip-Hop"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Rihanna hat in vielen Genres Erfolge gefeiert, aber ihre größten Hits sind im Pop-Bereich,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Shawn Mendes bekannt?",
-            "Antworten": ["Pop", "Rock", "Soul", "R&B"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Shawn Mendes wurde durch seine gefühlvollen Pop-Balladen und seinen soften Gesang bekannt,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Katy Perry bekannt?",
-            "Antworten": ["Pop", "Country", "Elektro", "Indie"],
-            "RichtigeAntwort": "Pop",
-            "RichtigeAntwortMöglichkeiten": "Pop",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Katy Perry ist für ihre farbenfrohen Musikvideos und eingängigen Pop-Hits weltbekannt,"
-        },
-
-
-
-
-
-
-
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist B.B. King bekannt?",
-            "Antworten": ["Blues", "Jazz", "Rock", "Soul"],
-            "RichtigeAntwort": "Blues",
-            "RichtigeAntwortMöglichkeiten": "Blues",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "B.B. King gilt als einer der größten Blues-Gitarristen aller Zeiten und prägte den modernen Blues-Sound,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Miles Davis bekannt?",
-            "Antworten": ["Jazz", "Blues", "Funk", "Rock"],
-            "RichtigeAntwort": "Jazz",
-            "RichtigeAntwortMöglichkeiten": "Jazz",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Miles Davis war ein Pionier des Jazz und entwickelte verschiedene Stile wie Bebop, Cool Jazz und Fusion,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Bob Marley bekannt?",
-            "Antworten": ["Reggae", "Ska", "Rock", "Pop"],
-            "RichtigeAntwort": "Reggae",
-            "RichtigeAntwortMöglichkeiten": "Reggae",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Bob Marley machte Reggae weltweit bekannt und wurde zur Ikone für Frieden und Freiheit,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Elvis Presley bekannt?",
-            "Antworten": ["Rock", "Blues", "Jazz", "Country"],
-            "RichtigeAntwort": "Rock",
-            "RichtigeAntwortMöglichkeiten": "Rock Rock'n'Roll",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Elvis Presley wird als 'King of Rock'n'Roll' bezeichnet und revolutionierte die Musikszene der 50er Jahre,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist James Brown bekannt?",
-            "Antworten": ["Funk", "Soul", "Jazz", "Blues"],
-            "RichtigeAntwort": "Funk",
-            "RichtigeAntwortMöglichkeiten": "Funk",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "James Brown gilt als der 'Godfather of Funk' und beeinflusste mit seinem Rhythmus viele spätere Genres,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Aretha Franklin bekannt?",
-            "Antworten": ["Soul", "Jazz", "Funk", "Blues"],
-            "RichtigeAntwort": "Soul",
-            "RichtigeAntwortMöglichkeiten": "Soul",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Aretha Franklin wurde als 'Queen of Soul' bekannt und war eine der einflussreichsten Stimmen ihrer Zeit,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Louis Armstrong bekannt?",
-            "Antworten": ["Jazz", "Blues", "Funk", "Soul"],
-            "RichtigeAntwort": "Jazz",
-            "RichtigeAntwortMöglichkeiten": "Jazz",
-            "Schwierigkeitsgrad": "schwer",
-            "Fakt": "Louis Armstrong war einer der wichtigsten Jazzmusiker und machte die Trompete zum Star-Instrument des Genres,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Jimi Hendrix bekannt?",
-            "Antworten": ["Rock", "Blues", "Funk", "Jazz"],
-            "RichtigeAntwort": "Rock",
-            "RichtigeAntwortMöglichkeiten": "Rock",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Jimi Hendrix revolutionierte den Rock mit seinem einzigartigen Gitarrenspiel und psychedelischen Sounds,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Ray Charles bekannt?",
-            "Antworten": ["Soul", "Jazz", "Blues", "Funk"],
-            "RichtigeAntwort": "Soul",
-            "RichtigeAntwortMöglichkeiten": "Soul",
-            "Schwierigkeitsgrad": "extrem",
-            "Fakt": "Ray Charles mischte Blues und Gospel und schuf den modernen Soul-Sound,"
-        },
-        {
-            "Kategorie": "Musik",
-            "Frage": "Für welche Musikrichtung ist Nina Simone bekannt?",
-            "Antworten": ["Jazz", "Soul", "Blues", "Funk"],
-            "RichtigeAntwort": "Jazz",
-            "RichtigeAntwortMöglichkeiten": "Jazz",
-            "Schwierigkeitsgrad": "expert",
-            "Fakt": "Nina Simone kombinierte Jazz mit politischer Botschaft und wurde zu einer der wichtigsten Stimmen des 20. Jahrhunderts,"
-        },
-
 
 
 
@@ -3281,15 +2915,7 @@ const musik = [
         "RichtigeAntwortMöglichkeiten": "Michael Jackson Jackson",
         "Schwierigkeitsgrad": "expert",
         "Fakt": "Michael Jackson hatte Vitiligo, eine Hautkrankheit, die Pigmentverlust verursacht, was zu seiner sich aufhellenden Hautfarbe führte,"
-    },
-
-
-    
-    
-
-
-        
-    
+    },   
     
 
 
@@ -3316,15 +2942,6 @@ const musik = [
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Welches Konzeptalbum von David Bowie machte ihn in den 1970ern weltberühmt?",
-        "Antworten": ["The Rise and Fall of Ziggy Stardust and the Spiders from Mars", "Hunky Dory", "Aladdin Sane", "Low"],
-        "RichtigeAntwort": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
-        "RichtigeAntwortMöglichkeiten": "Ziggy Stardust The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Mit 'Ziggy Stardust' erschuf Bowie eine fiktive Rockfigur und kombinierte Science-Fiction-Elemente mit Glam Rock,"
-    },
-    {
-        "Kategorie": "Musik",
         "Frage": "Welcher Song von David Bowie wurde während des Kalten Krieges zur Hymne für geteilte Länder?",
         "Antworten": ["Heroes", "Space Oddity", "Let's Dance", "Life on Mars?"],
         "RichtigeAntwort": "Heroes",
@@ -3332,108 +2949,823 @@ const musik = [
         "Schwierigkeitsgrad": "expert",
         "Fakt": "'Heroes' wurde zur Hymne für Hoffnung und Einheit und ist besonders bekannt für seine Verbindung zur Berliner Mauer,"
     },
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     {
         "Kategorie": "Musik",
-        "Frage": "Welches ikonische Musikvideo zeigt David Bowie mit auffälligem Make-up und einem knallroten Haarschnitt?",
-        "Antworten": ["Life on Mars?", "Ashes to Ashes", "Starman", "Let's Dance"],
-        "RichtigeAntwort": "Life on Mars?",
-        "RichtigeAntwortMöglichkeiten": "Life on Mars?",
+        "Frage": "Welcher Sänger machte Queen mit seiner charismatischen Bühnenpräsenz und außergewöhnlichen Stimme weltberühmt?",
+        "Antworten": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
+        "RichtigeAntwort": "Freddie Mercury",
+        "RichtigeAntwortMöglichkeiten": "Freddie Mercury Mercury",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "Das Video zu 'Life on Mars?' zeigte Bowies ikonischen Ziggy-Stardust-Look mit blauem Lidschatten und feuerrotem Haar,"
+        "Fakt": "Freddie Mercury war bekannt für seine beeindruckende Stimmspanne und seine energiegeladenen Live-Auftritte, die Queen unvergesslich machten,"
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Mit welchem Album begann David Bowies sogenannte 'Berlin-Trilogie'?",
-        "Antworten": ["Low", "Heroes", "Lodger", "Station to Station"],
-        "RichtigeAntwort": "Low",
-        "RichtigeAntwortMöglichkeiten": "Low",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "'Low' war das erste Album von Bowies Berlin-Trilogie und entstand unter dem Einfluss von Brian Eno und der elektronischen Musik,"
+        "Frage": "Für welche Musikepoche ist Queen bekannt?",
+        "Antworten": ["Rock", "Jazz", "Metal", "Funk"],
+        "RichtigeAntwort": "Rock",
+        "RichtigeAntwortMöglichkeiten": "Rock",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Queen war eine der einflussreichsten Rockbands aller Zeiten und kombinierte klassische Elemente mit Hard Rock und Glam Rock,"
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Welcher Musiker arbeitete eng mit David Bowie an der 'Berlin-Trilogie' zusammen?",
-        "Antworten": ["Brian Eno", "Lou Reed", "Iggy Pop", "Mick Jagger"],
-        "RichtigeAntwort": "Brian Eno",
-        "RichtigeAntwortMöglichkeiten": "Brian Eno Eno",
+        "Frage": "Welches Album von Queen enthält die Songs 'We Will Rock You' und 'We Are the Champions'?",
+        "Antworten": ["News of the World", "A Night at the Opera", "The Game", "Sheer Heart Attack"],
+        "RichtigeAntwort": "News of the World",
+        "RichtigeAntwortMöglichkeiten": "News of the World",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "Brian Eno half Bowie, elektronische und experimentelle Musik in seine 'Berlin-Trilogie' zu integrieren und prägte seinen Sound maßgeblich,"
+        "Fakt": "'News of the World' enthält zwei der bekanntesten Stadionhymnen aller Zeiten: 'We Will Rock You' und 'We Are the Champions',"
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Welches David-Bowie-Album war sein letztes und wurde kurz vor seinem Tod veröffentlicht?",
-        "Antworten": ["Blackstar", "The Next Day", "Reality", "Heathen"],
-        "RichtigeAntwort": "Blackstar",
-        "RichtigeAntwortMöglichkeiten": "Blackstar",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "'Blackstar' wurde nur zwei Tage vor Bowies Tod veröffentlicht und enthält viele Hinweise auf sein nahendes Ende,"
+        "Frage": "Welcher Queen-Song wurde von vielen Sportteams als Siegeshymne übernommen?",
+        "Antworten": ["We Are the Champions", "We Will Rock You", "Another One Bites the Dust", "Radio Ga Ga"],
+        "RichtigeAntwort": "We Are the Champions",
+        "RichtigeAntwortMöglichkeiten": "We Are the Champions Champions",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'We Are the Champions' wurde zu einer der bekanntesten Siegeshymnen und wird weltweit bei Sportveranstaltungen gespielt,"
     },
     {
         "Kategorie": "Musik",
-        "Frage": "Welcher Song von David Bowie wurde als erste Single eines Künstlers aus dem Weltall ausgestrahlt?",
-        "Antworten": ["Space Oddity", "Starman", "Heroes", "Ashes to Ashes"],
-        "RichtigeAntwort": "Space Oddity",
-        "RichtigeAntwortMöglichkeiten": "Space Oddity",
+        "Frage": "Welches Queen-Mitglied war für seine kraftvolle Stimme und sein Talent als Multiinstrumentalist bekannt?",
+        "Antworten": ["Roger Taylor", "Brian May", "Freddie Mercury", "John Deacon"],
+        "RichtigeAntwort": "Roger Taylor",
+        "RichtigeAntwortMöglichkeiten": "Roger Taylor Taylor",
         "Schwierigkeitsgrad": "expert",
-        "Fakt": "'Space Oddity' wurde von der NASA während der Apollo-11-Mission gespielt und ist bis heute mit der Raumfahrt verbunden,"
-    },
-    {
-        "Kategorie": "Musik",
-        "Frage": "In welchem Kultfilm spielte David Bowie die Hauptrolle als mysteriöser König?",
-        "Antworten": ["Labyrinth", "The Man Who Fell to Earth", "Merry Christmas, Mr. Lawrence", "Twin Peaks: Fire Walk with Me"],
-        "RichtigeAntwort": "Labyrinth",
-        "RichtigeAntwortMöglichkeiten": "Labyrinth",
-        "Schwierigkeitsgrad": "expert",
-        "Fakt": "Bowie spielte 1986 in 'Labyrinth' den Koboldkönig Jareth und lieferte eine der kultigsten Rollen seiner Schauspielkarriere,"
+        "Fakt": "Roger Taylor, der Schlagzeuger von Queen, war bekannt für seine kraftvolle Stimme und spielte neben dem Schlagzeug auch Gitarre und Keyboard,"
     },
     
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist AC/DC bekannt?",
+        "Antworten": ["Hard Rock", "Heavy Metal", "Blues Rock", "Punk Rock"],
+        "RichtigeAntwort": "Hard Rock",
+        "RichtigeAntwortMöglichkeiten": "Hard Rock",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "AC/DC wird als eine der prägendsten Hard-Rock-Bands der Musikgeschichte angesehen und beeinflusste unzählige Bands mit ihrem rohen, energiegeladenen Sound,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument ist das prägende Element im Sound von AC/DC?",
+        "Antworten": ["E-Gitarre", "Schlagzeug", "Bass", "Keyboard"],
+        "RichtigeAntwort": "E-Gitarre",
+        "RichtigeAntwortMöglichkeiten": "E-Gitarre Gitarre",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "AC/DCs Sound basiert stark auf der verzerrten E-Gitarre, gespielt von den Brüdern Angus und Malcolm Young, die für ihren unverwechselbaren Rhythmus und ihre Riffs bekannt sind,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielte Malcolm Young in AC/DC?",
+        "Antworten": ["Rhythmusgitarrist", "Schlagzeuger", "Bassist", "Leadsänger"],
+        "RichtigeAntwort": "Rhythmusgitarrist",
+        "RichtigeAntwortMöglichkeiten": "Rhythmusgitarrist Gitarre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Malcolm Young war der Rhythmusgitarrist von AC/DC und prägte den markanten, treibenden Sound der Band mit seinen kraftvollen Akkorden,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielte Cliff Williams bei AC/DC?",
+        "Antworten": ["Bass", "Gitarre", "Schlagzeug", "Keyboard"],
+        "RichtigeAntwort": "Bass",
+        "RichtigeAntwortMöglichkeiten": "Bass",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Cliff Williams war jahrelang der Bassist von AC/DC und bekannt für seinen kraftvollen, soliden Spielstil, der den treibenden Sound der Band unterstützte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Bandmitglied war für den einzigartigen Gesang von AC/DC verantwortlich?",
+        "Antworten": ["Bon Scott & Brian Johnson", "Angus Young", "Malcolm Young", "Phil Rudd"],
+        "RichtigeAntwort": "Bon Scott & Brian Johnson",
+        "RichtigeAntwortMöglichkeiten": "Bon Scott Brian Johnson",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "AC/DC hatte zwei legendäre Sänger: Bon Scott, der bis 1980 sang, und Brian Johnson, der nach Scotts Tod die markante Stimme der Band wurde,"
+    },    
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche sind The Rolling Stones bekannt?",
+        "Antworten": ["Rock", "Psychedelic Rock", "Blues", "Funk"],
+        "RichtigeAntwort": "Rock",
+        "RichtigeAntwortMöglichkeiten": "Rock",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "The Rolling Stones sind eine der wichtigsten Rockbands der Geschichte und prägten das Genre mit ihrem bluesbasierten Sound und energiegeladenen Live-Auftritten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Bandmitglied ist für seine charismatische Bühnenpräsenz und energiegeladenen Performances bekannt?",
+        "Antworten": ["Mick Jagger", "Keith Richards", "Charlie Watts", "Ronnie Wood"],
+        "RichtigeAntwort": "Mick Jagger",
+        "RichtigeAntwortMöglichkeiten": "Mick Jagger Jagger",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mick Jagger ist bekannt für seine kraftvolle Bühnenpräsenz, seine wilden Tanzbewegungen und seine Fähigkeit, das Publikum zu elektrisieren,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument machte Keith Richards zu einer Rock-Ikone?",
+        "Antworten": ["E-Gitarre", "Bass", "Schlagzeug", "Keyboard"],
+        "RichtigeAntwort": "E-Gitarre",
+        "RichtigeAntwortMöglichkeiten": "E-Gitarre Gitarre",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Keith Richards ist für seine unverwechselbaren Riffs auf der E-Gitarre bekannt und prägte den Sound der Rolling Stones maßgeblich,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Gitarrist der Rolling Stones ist für sein einzigartiges Open-G-Tuning bekannt?",
+        "Antworten": ["Keith Richards", "Brian Jones", "Ronnie Wood", "Mick Taylor"],
+        "RichtigeAntwort": "Keith Richards",
+        "RichtigeAntwortMöglichkeiten": "Keith Richards Richards",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Keith Richards entwickelte seinen unverwechselbaren Sound mit Open-G-Tuning, das viele der bekanntesten Stones-Riffs ausmacht,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Symbol ist das berühmte Logo der Rolling Stones?",
+        "Antworten": ["Die rote Zunge", "Ein Totenkopf", "Ein Blitz", "Eine Krone"],
+        "RichtigeAntwort": "Die rote Zunge",
+        "RichtigeAntwortMöglichkeiten": "Die rote Zunge Zunge",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Zungenlogo der Rolling Stones wurde 1971 entworfen und ist eines der bekanntesten Bandlogos der Welt,"
+    },
+    
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Symbol ist untrennbar mit Pink Floyd verbunden?",
+        "Antworten": ["Das Prisma mit Regenbogen", "Eine rote Zunge", "Ein fliegendes Schwein", "Ein brennender Stern"],
+        "RichtigeAntwort": "Das Prisma mit Regenbogen",
+        "RichtigeAntwortMöglichkeiten": "Prisma Regenbogen Dark Side of the Moon",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das berühmte Prisma mit dem Regenbogen stammt vom Album 'The Dark Side of the Moon' und ist eines der bekanntesten Covermotive der Musikgeschichte,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist Pink Floyd besonders bekannt?",
+        "Antworten": ["Progressive Rock", "Blues Rock", "Hard Rock", "New Wave"],
+        "RichtigeAntwort": "Progressive Rock",
+        "RichtigeAntwortMöglichkeiten": "Progressive Rock Prog Rock",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Pink Floyd war eine der einflussreichsten Bands des Progressive Rock und kombinierte komplexe Kompositionen mit tiefgründigen Konzeptalben,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Pink-Floyd-Mitglied wurde für seine psychedelischen Ideen bekannt, verließ die Band aber wegen psychischer Probleme?",
+        "Antworten": ["Syd Barrett", "Roger Waters", "David Gilmour", "Nick Mason"],
+        "RichtigeAntwort": "Syd Barrett",
+        "RichtigeAntwortMöglichkeiten": "Syd Barrett Barrett",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Syd Barrett war das kreative Genie hinter Pink Floyds Anfangsjahren, doch sein zunehmender Drogenkonsum und psychische Probleme führten zu seinem Ausstieg,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Pink-Floyd-Mitglied übernahm nach Syd Barretts Ausstieg die Führung in der Band?",
+        "Antworten": ["Roger Waters", "David Gilmour", "Nick Mason", "Richard Wright"],
+        "RichtigeAntwort": "Roger Waters",
+        "RichtigeAntwortMöglichkeiten": "Roger Waters Waters",
+        "Schwierigkeitsgrad": "exper",
+        "Fakt": "Nach Syd Barretts Weggang wurde Roger Waters zum Hauptsongwriter von Pink Floyd und prägte deren Konzeptalben mit tiefgründigen gesellschaftskritischen Texten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker ersetzte Syd Barrett als Gitarrist von Pink Floyd?",
+        "Antworten": ["David Gilmour", "Roger Waters", "Nick Mason", "Richard Wright"],
+        "RichtigeAntwort": "David Gilmour",
+        "RichtigeAntwortMöglichkeiten": "David Gilmour Gilmour",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "David Gilmour wurde 1968 Mitglied von Pink Floyd, um Syd Barrett zu unterstützen, ersetzte ihn aber bald als Lead-Gitarrist,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Pink-Floyd-Mitglied ist das einzige, das auf jedem Album der Band mitgewirkt hat?",
+        "Antworten": ["Nick Mason", "Roger Waters", "David Gilmour", "Richard Wright"],
+        "RichtigeAntwort": "Nick Mason",
+        "RichtigeAntwortMöglichkeiten": "Nick Mason Mason",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Schlagzeuger Nick Mason ist das einzige Bandmitglied, das auf jedem Pink-Floyd-Album zu hören ist,"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist Metallica besonders bekannt?",
+        "Antworten": ["Thrash Metal", "Jazz", "Hard Rock", "Pop"],
+        "RichtigeAntwort": "Thrash Metal",
+        "RichtigeAntwortMöglichkeiten": "Thrash Metal Metal",
+        "Schwierigkeitsgrad": "exrem",
+        "Fakt": "Metallica war eine der einflussreichsten Bands des Thrash Metal der 1980er Jahre und brachte das Genre in den Mainstream,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker war Mitbegründer von Metallica und ist bis heute Frontmann der Band?",
+        "Antworten": ["James Hetfield", "Bob Shandes", "Kirk Hammett", "Cliff Burton"],
+        "RichtigeAntwort": "James Hetfield",
+        "RichtigeAntwortMöglichkeiten": "James Hetfield Hetfield",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "James Hetfield gründete Metallica 1981 zusammen mit Lars Ulrich und wurde als Sänger und Rhythmusgitarrist das Gesicht der Band,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Metallica-Album wird als eines der einflussreichsten Metal-Alben aller Zeiten angesehen?",
+        "Antworten": ["Master of Puppets", "Ride the Lightning", "Metallica (Black Album)", "Kill 'Em All"],
+        "RichtigeAntwort": "Master of Puppets",
+        "RichtigeAntwortMöglichkeiten": "Master of Puppets",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Master of Puppets' gilt als eines der besten Metal-Alben aller Zeiten und wurde 2016 als erstes Metal-Album in die US-Kongressbibliothek aufgenommen,"
+    },
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche deutsche Band wurde mit ihrem Song 'Durch den Monsun' international berühmt?",
+        "Antworten": ["Tokio Hotel", "Rammstein", "Die Ärzte", "Wir sind Helden"],
+        "RichtigeAntwort": "Tokio Hotel",
+        "RichtigeAntwortMöglichkeiten": "Tokio Hotel",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Tokio Hotel erreichten 2005 mit 'Durch den Monsun' internationalen Ruhm und wurden zu einer der bekanntesten deutschen Bands im Ausland,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker von Tokio Hotel ist für seinen extravaganten Look bekannt?",
+        "Antworten": ["Bill Kaulitz", "Tom Kaulitz", "Gustav Schäfer", "Georg Listing"],
+        "RichtigeAntwort": "Bill Kaulitz",
+        "RichtigeAntwortMöglichkeiten": "Bill Kaulitz Kaulitz",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Bill Kaulitz wurde durch seine auffälligen Frisuren, Make-up und extravaganten Outfits zum Aushängeschild von Tokio Hotel,"
+    },
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Titel wird Madonna oft zugeschrieben?",
+        "Antworten": ["Queen of Pop", "First Lady of Rock", "Princess of Soul", "Diva of Dance"],
+        "RichtigeAntwort": "Queen of Pop",
+        "RichtigeAntwortMöglichkeiten": "Queen of Pop",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Madonna wird oft als 'Queen of Pop' bezeichnet, da sie seit den 1980ern die Popmusik maßgeblich geprägt hat,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist Madonna besonders bekannt?",
+        "Antworten": ["Pop der 80er und 90er", "Disco der 70er", "R&B der 90er", "New Wave der 2000er"],
+        "RichtigeAntwort": "Pop der 80er und 90er",
+        "RichtigeAntwortMöglichkeiten": "Pop der 80er Pop der 90er",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Madonna dominierte die Popmusik in den 1980er und 1990er Jahren mit Hits, die von Disco bis Elektronik reichten,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Madonna-Album gilt als eines der meistverkauften Pop-Alben aller Zeiten?",
+        "Antworten": ["Like a Virgin", "True Blue", "Ray of Light", "Confessions on a Dance Floor"],
+        "RichtigeAntwort": "Like a Virgin",
+        "RichtigeAntwortMöglichkeiten": "Like a Virgin",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "'Like a Virgin' machte Madonna 1984 zum Superstar und war das erste Album einer weiblichen Künstlerin, das über 10 Millionen Mal verkauft wurde,"
+    },   
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist Elton John besonders bekannt?",
+        "Antworten": ["Pop & Rock der 70er und 80er", "Jazz der 60er", "Disco der 90er", "New Wave der 2000er"],
+        "RichtigeAntwort": "Pop & Rock der 70er und 80er",
+        "RichtigeAntwortMöglichkeiten": "Pop 70er 80er Rock",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Elton John wurde in den 70er und 80er Jahren mit seinem einzigartigen Mix aus Rock, Pop und Balladen weltberühmt,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument machte Elton John berühmt?",
+        "Antworten": ["Klavier", "Gitarre", "Saxophon", "Schlagzeug"],
+        "RichtigeAntwort": "Klavier",
+        "RichtigeAntwortMöglichkeiten": "Klavier Piano",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Elton John ist für seine virtuosen Klavierkünste bekannt und kombiniert sie mit kraftvollem Gesang und energiegeladenen Bühnenauftritten,"
+    },   
 
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist Prince besonders bekannt?",
+        "Antworten": ["80er & 90er", "60er & 70er", "2000er", "50er"],
+        "RichtigeAntwort": "80er & 90er",
+        "RichtigeAntwortMöglichkeiten": "80er 90er",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Prince war eine Schlüsselfigur der 80er und 90er Jahre und revolutionierte Pop, Funk und Rock mit seinem einzigartigen Stil,"
+    },   
 
 
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikepoche ist ABBA besonders bekannt?",
+        "Antworten": ["Pop der 70er", "Rock der 80er", "Disco der 90er", "New Wave der 2000er"],
+        "RichtigeAntwort": "Pop der 70er",
+        "RichtigeAntwortMöglichkeiten": "Pop 70er",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "ABBA war eine der erfolgreichsten Bands der 1970er Jahre und prägte die Popmusik mit ihrem einzigartigen Sound,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musikwettbewerb machte ABBA weltberühmt?",
+        "Antworten": ["Eurovision Song Contest", "Sanremo Festival", "Melodifestivalen", "Golden Globe Awards"],
+        "RichtigeAntwort": "Eurovision Song Contest",
+        "RichtigeAntwortMöglichkeiten": "Eurovision Song Contest Eurovision ESC",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "ABBA gewann 1974 mit 'Waterloo' den Eurovision Song Contest und wurde über Nacht zu einer internationalen Sensation,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Was bedeutet der Name ABBA?",
+        "Antworten": ["Die Anfangsbuchstaben der Mitglieder", "Ein schwedisches Wort für Musik", "Ein skandinavischer Mythos", "Die Initialen ihres Managers"],
+        "RichtigeAntwort": "Die Anfangsbuchstaben der Mitglieder",
+        "RichtigeAntwortMöglichkeiten": "Anfangsbuchstaben Name Bandname Buchstabe",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Name ABBA setzt sich aus den Anfangsbuchstaben der vier Mitglieder zusammen: Agnetha, Björn, Benny und Anni-Frid,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ABBA-Mitglied wurde in Norwegen geboren?",
+        "Antworten": ["Anni-Frid Lyngstad", "Agnetha Fältskog", "Björn Ulvaeus", "Benny Andersson"],
+        "RichtigeAntwort": "Anni-Frid Lyngstad",
+        "RichtigeAntwortMöglichkeiten": "Anni-Frid Lyngstad Frida",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Anni-Frid Lyngstad, auch bekannt als Frida, wurde in Norwegen geboren und zog später nach Schweden,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Jahre dauerte es, bis ABBA nach ihrer Trennung wieder neue Musik veröffentlichte?",
+        "Antworten": ["40 Jahre", "20 Jahre", "30 Jahre", "10 Jahre"],
+        "RichtigeAntwort": "40 Jahre",
+        "RichtigeAntwortMöglichkeiten": "40 Jahre",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Nach einer Pause von 40 Jahren veröffentlichte ABBA 2021 ihr Comeback-Album 'Voyage', das weltweit auf Begeisterung stieß,"
+    },
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Mitglieder hat BTS?",
+        "Antworten": ["7", "5", "9", "4"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7 sieben",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "BTS besteht aus sieben Mitgliedern: RM, Jin, Suga, J-Hope, Jimin, V und Jungkook,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Musikrichtung hat BTS weltweit populär gemacht?",
+        "Antworten": ["K-Pop", "Hip-Hop", "R&B", "EDM"],
+        "RichtigeAntwort": "K-Pop",
+        "RichtigeAntwortMöglichkeiten": "K-Pop Kpop",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "BTS spielte eine Schlüsselrolle in der globalen Verbreitung von K-Pop und brach zahlreiche Rekorde in den westlichen Charts,"
+    },
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musiker machte Reggae weltweit bekannt?",
+        "Antworten": ["Bob Marley", "Peter Tosh", "Jimmy Cliff", "Toots Hibbert"],
+        "RichtigeAntwort": "Bob Marley",
+        "RichtigeAntwortMöglichkeiten": "Bob Marley Marley",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Bob Marley brachte den Reggae in die internationale Musikszene und machte ihn zu einem weltweiten Phänomen,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikrichtung ist Bob Marley bekannt?",
+        "Antworten": ["Reggae", "Ska", "Rock", "Pop"],
+        "RichtigeAntwort": "Reggae",
+        "RichtigeAntwortMöglichkeiten": "Reggae",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Bob Marley machte Reggae weltweit bekannt und wurde zur Ikone für Frieden und Freiheit,"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikrichtung ist Adele bekannt?",
+        "Antworten": ["Pop & Soul", "Rock", "Hip-Hop", "Jazz"],
+        "RichtigeAntwort": "Pop & Soul",
+        "RichtigeAntwortMöglichkeiten": "Pop Soul",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Adele kombiniert Pop mit Soul und ist bekannt für ihre kraftvolle Stimme und emotionale Balladen,"
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song von Adele wurde für einen James-Bond-Film geschrieben?",
+        "Antworten": ["Skyfall", "Hello", "Set Fire to the Rain", "When We Were Young"],
+        "RichtigeAntwort": "Skyfall",
+        "RichtigeAntwortMöglichkeiten": "Skyfall",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'Skyfall' wurde für den gleichnamigen James-Bond-Film geschrieben und gewann einen Oscar für den besten Filmsong,"
+    },    
 
 
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikrichtung ist Lady Gaga bekannt?",
+        "Antworten": ["Pop", "Rock", "Hip-Hop", "Country"],
+        "RichtigeAntwort": "Pop",
+        "RichtigeAntwortMöglichkeiten": "Pop",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Lady Gaga wurde mit ihrem einzigartigen Pop-Sound, ihren exzentrischen Outfits und ihrer starken Bühnenpräsenz berühmt,"
+    },
 
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Künstler erreichte als erster Rapper über eine Milliarde Streams auf Spotify und definiert so den Erfolg in der Streaming-Ära?",
+        "Antworten": ["Drake", "Post Malone", "Kendrick Lamar", "Kanye West"],
+        "RichtigeAntwort": "Drake",
+        "RichtigeAntwortMöglichkeiten": "Drake",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Drake setzte neue Maßstäbe in der digitalen Musiklandschaft und ist ein Paradebeispiel für den Erfolg moderner Hip-Hop-Künstler im Streaming-Zeitalter."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer hat die meisten Grammys gewonnen?",
+        "Antworten": ["Georg Solti", "Beyoncé", "Quincy Jones", "Stevie Wonder"],
+        "RichtigeAntwort": "Georg Solti",
+        "RichtigeAntwortMöglichkeiten": "Georg Solti",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Dirigent Georg Solti hält mit 31 Grammy Awards den Rekord."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer prägte den modernen Mumble Rap?",
+        "Antworten": ["Future", "Travis Scott", "Lil Uzi Vert", "Young Thug"],
+        "RichtigeAntwort": "Future",
+        "RichtigeAntwortMöglichkeiten": "Future",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Future ist bekannt für seinen melodischen, oft undeutlichen Rap-Stil, der den Mumble Rap definierte."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Song war schon in sehr jungen Jahren Justin Biebers Durchbruch?",
+        "Antworten": ["Baby", "Sorry", "Love Yourself", "What Do You Mean?"],
+        "RichtigeAntwort": "Baby",
+        "RichtigeAntwortMöglichkeiten": "Baby",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "'Baby' katapultierte Justin Bieber ins internationale Rampenlicht."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Musik Popstar wurde schon als Teenager zum Superstar?",
+        "Antworten": ["Justin Bieber", "Britney Spears", "Usher", "Justin Timberlake"],
+        "RichtigeAntwort": "Justin Bieber",
+        "RichtigeAntwortMöglichkeiten": "Justin Bieber",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Justin Bieber wurde als Teenager durch YouTube entdeckt und avancierte rasch zum internationalen Popstar."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper ist bekannt für seine extrem schnelle Rap-Technik?",
+        "Antworten": ["Eminem", "Drake", "Future", "Travis Scott"],
+        "RichtigeAntwort": "Eminem",
+        "RichtigeAntwortMöglichkeiten": "Eminem",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eminem rappte in 'Rap God' 6,46 Wörter pro Sekunde und stellte damit einen Weltrekord auf."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Plattform dominiert das Musik-Streaming?",
+        "Antworten": ["Spotify", "Apple Music", "YouTube Music", "Amazon Music"],
+        "RichtigeAntwort": "Spotify",
+        "RichtigeAntwortMöglichkeiten": "Spotify",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Spotify ist mit über 500 Millionen Nutzern die größte Musik-Streaming-Plattform."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Genre ist heutzutage weltweit das meistgehörte?",
+        "Antworten": ["Pop", "Rock", "Hip-Hop", "Elektronische Musik"],
+        "RichtigeAntwort": "Pop",
+        "RichtigeAntwortMöglichkeiten": "Pop",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Pop-Musik ist das meistgehörte Genre und dominiert die Charts weltweit."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Rapper ist unter dem Namen 'Slim Shady' bekannt?",
+        "Antworten": ["Eminem", "Drake", "Jay-Z", "Kanye West"],
+        "RichtigeAntwort": "Eminem",
+        "RichtigeAntwortMöglichkeiten": "Eminem Slim Shady",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Slim Shady ist Eminems Alter Ego, mit dem er für seine provokanten und schnellen Raps bekannt wurde."
+    },
+
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Für welche Musikrichtung ist Kanye West bekannt?",
+        "Antworten": ["Hip-Hop", "Rock", "Pop", "Reggae"],
+        "RichtigeAntwort": "Hip-Hop",
+        "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Kanye West gilt als einer der einflussreichsten Hip-Hop-Künstler und hat das Genre mit seinen innovativen Sounds revolutioniert."
+    },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Eminem bekannt?",
+            "Antworten": ["Hip-Hop", "Rock", "Pop", "Country"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Eminem ist einer der erfolgreichsten Rapper aller Zeiten und bekannt für seine schnellen Flows und kontroversen Texte."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Tupac bekannt?",
+            "Antworten": ["Hip-Hop", "R&B", "Jazz", "Reggae"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Tupac Shakur gilt als eine der einflussreichsten Figuren des Hip-Hop und kombinierte soziale Themen mit tiefgründigen Texten."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Jay-Z bekannt?",
+            "Antworten": ["Hip-Hop", "Funk", "Rock", "Elektronische Musik"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Jay-Z ist nicht nur einer der größten Rapper, sondern auch ein einflussreicher Geschäftsmann in der Musikindustrie."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Travis Scott bekannt?",
+            "Antworten": ["Hip-Hop", "House", "Techno", "Blues"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Travis Scott ist bekannt für seinen einzigartigen Auto-Tune-Sound und energiegeladene Live-Shows."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Lil Uzi Vert bekannt?",
+            "Antworten": ["Hip-Hop", "Rock", "Punk", "Pop"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Lil Uzi Vert kombiniert Rap mit melodischen Elementen und hat den 'SoundCloud-Rap' mitgeprägt."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Nicki Minaj bekannt?",
+            "Antworten": ["Hip-Hop", "Pop", "R&B", "Reggae"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Nicki Minaj ist eine der erfolgreichsten Rapperinnen und bekannt für ihre vielseitigen Flows und Charaktere in ihren Songs."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Drake bekannt?",
+            "Antworten": ["Hip-Hop", "Pop", "R&B", "Soul"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Drake vermischt Rap und Gesang und hat Hip-Hop mit emotionalen und melodischen Elementen erweitert."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Kendrick Lamar bekannt?",
+            "Antworten": ["Hip-Hop", "Funk", "Rock", "Jazz"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Kendrick Lamar ist bekannt für seine tiefgründigen Texte, politischen Botschaften und einzigartigen Erzählstile im Rap."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist der Musiker Future bekannt?",
+            "Antworten": ["Hip-Hop", "Trap", "R&B", "Soul"],
+            "RichtigeAntwort": "Hip-Hop",
+            "RichtigeAntwortMöglichkeiten": "Hip-Hop Rap Trap",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Future hat den modernen Trap-Sound mitgeprägt und ist bekannt für seinen massiven Einfluss auf die neue Generation von Rappern."
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Taylor Swift bekannt?",
+            "Antworten": ["Pop", "Country", "Rock", "Hip-Hop"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Taylor Swift begann in der Country-Musik, wurde aber mit Pop-Welthits wie 'Shake It Off' zum Megastar,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Lady Gaga bekannt?",
+            "Antworten": ["Pop", "Rock", "Elektronische Musik", "Jazz"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Lady Gaga revolutionierte den Pop mit ihren extravaganten Outfits, ikonischen Songs und starken Performances,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Billie Eilish bekannt?",
+            "Antworten": ["Pop", "Indie", "Rock", "Rap"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Billie Eilish brachte mit ihrem düsteren, minimalistischen Stil und Flüstergesang eine ganz neue Pop-Ästhetik,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Ariana Grande bekannt?",
+            "Antworten": ["Pop", "Soul", "Hip-Hop", "House"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Ariana Grande ist bekannt für ihre kraftvolle Stimme und Pop-Hits mit R&B-Einflüssen,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist The Weeknd bekannt?",
+            "Antworten": ["Pop", "R&B", "Hip-Hop", "Funk"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "The Weeknd begann mit R&B, wurde aber mit Hits wie 'Blinding Lights' zur globalen Pop-Ikone,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Ed Sheeran bekannt?",
+            "Antworten": ["Pop", "Folk", "Rock", "Hip-Hop"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Ed Sheeran kombiniert akustische Gitarrenmusik mit Pop-Melodien und ist für seine emotionalen Songs bekannt,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Rihanna bekannt?",
+            "Antworten": ["Pop", "R&B", "Reggae", "Hip-Hop"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Rihanna hat in vielen Genres Erfolge gefeiert, aber ihre größten Hits sind im Pop-Bereich,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Shawn Mendes bekannt?",
+            "Antworten": ["Pop", "Rock", "Soul", "R&B"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Shawn Mendes wurde durch seine gefühlvollen Pop-Balladen und seinen soften Gesang bekannt,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Katy Perry bekannt?",
+            "Antworten": ["Pop", "Country", "Elektro", "Indie"],
+            "RichtigeAntwort": "Pop",
+            "RichtigeAntwortMöglichkeiten": "Pop",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Katy Perry ist für ihre farbenfrohen Musikvideos und eingängigen Pop-Hits weltbekannt,"
+        },
+
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist B.B. King bekannt?",
+            "Antworten": ["Blues", "Jazz", "Rock", "Soul"],
+            "RichtigeAntwort": "Blues",
+            "RichtigeAntwortMöglichkeiten": "Blues",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "B.B. King gilt als einer der größten Blues-Gitarristen aller Zeiten und prägte den modernen Blues-Sound,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Miles Davis bekannt?",
+            "Antworten": ["Jazz", "Blues", "Funk", "Rock"],
+            "RichtigeAntwort": "Jazz",
+            "RichtigeAntwortMöglichkeiten": "Jazz",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Miles Davis war ein Pionier des Jazz und entwickelte verschiedene Stile wie Bebop, Cool Jazz und Fusion,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Elvis Presley bekannt?",
+            "Antworten": ["Rock", "Blues", "Jazz", "Country"],
+            "RichtigeAntwort": "Rock",
+            "RichtigeAntwortMöglichkeiten": "Rock Rock'n'Roll",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Elvis Presley wird als 'King of Rock'n'Roll' bezeichnet und revolutionierte die Musikszene der 50er Jahre,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist James Brown bekannt?",
+            "Antworten": ["Funk", "Soul", "Jazz", "Blues"],
+            "RichtigeAntwort": "Funk",
+            "RichtigeAntwortMöglichkeiten": "Funk",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "James Brown gilt als der 'Godfather of Funk' und beeinflusste mit seinem Rhythmus viele spätere Genres,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Aretha Franklin bekannt?",
+            "Antworten": ["Soul", "Jazz", "Funk", "Blues"],
+            "RichtigeAntwort": "Soul",
+            "RichtigeAntwortMöglichkeiten": "Soul",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Aretha Franklin wurde als 'Queen of Soul' bekannt und war eine der einflussreichsten Stimmen ihrer Zeit,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Louis Armstrong bekannt?",
+            "Antworten": ["Jazz", "Blues", "Funk", "Soul"],
+            "RichtigeAntwort": "Jazz",
+            "RichtigeAntwortMöglichkeiten": "Jazz",
+            "Schwierigkeitsgrad": "schwer",
+            "Fakt": "Louis Armstrong war einer der wichtigsten Jazzmusiker und machte die Trompete zum Star-Instrument des Genres,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Jimi Hendrix bekannt?",
+            "Antworten": ["Rock", "Blues", "Funk", "Jazz"],
+            "RichtigeAntwort": "Rock",
+            "RichtigeAntwortMöglichkeiten": "Rock",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Jimi Hendrix revolutionierte den Rock mit seinem einzigartigen Gitarrenspiel und psychedelischen Sounds,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Ray Charles bekannt?",
+            "Antworten": ["Soul", "Jazz", "Blues", "Funk"],
+            "RichtigeAntwort": "Soul",
+            "RichtigeAntwortMöglichkeiten": "Soul",
+            "Schwierigkeitsgrad": "extrem",
+            "Fakt": "Ray Charles mischte Blues und Gospel und schuf den modernen Soul-Sound,"
+        },
+        {
+            "Kategorie": "Musik",
+            "Frage": "Für welche Musikrichtung ist Nina Simone bekannt?",
+            "Antworten": ["Jazz", "Soul", "Blues", "Funk"],
+            "RichtigeAntwort": "Jazz",
+            "RichtigeAntwortMöglichkeiten": "Jazz",
+            "Schwierigkeitsgrad": "expert",
+            "Fakt": "Nina Simone kombinierte Jazz mit politischer Botschaft und wurde zu einer der wichtigsten Stimmen des 20. Jahrhunderts,"
+        },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     
 
@@ -3443,7 +3775,7 @@ const musik = [
         "Antworten": ["Kanye West", "Jay-Z", "Eminem", "Lil Wayne"],
         "RichtigeAntwort": "Kanye West",
         "RichtigeAntwortMöglichkeiten": "Kanye West Ye",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "schwer",
         "Fakt": "Kanye West sorgt regelmäßig für Schlagzeilen mit seinen politischen Statements und unkonventionellen Ansichten,"
     },
     {
@@ -3470,7 +3802,7 @@ const musik = [
         "Antworten": ["Yeezy", "Off-White", "Fear of God", "Balenciaga"],
         "RichtigeAntwort": "Yeezy",
         "RichtigeAntwortMöglichkeiten": "Yeezy",
-        "Schwierigkeitsgrad": "leicht",
+        "Schwierigkeitsgrad": "expert",
         "Fakt": "Mit Yeezy erschuf Kanye West eine der begehrtesten Sneaker- und Modekollektionen der Welt,"
     },
 
@@ -3533,9 +3865,10 @@ const musik = [
         "Antworten": ["Drake", "Kanye West", "Travis Scott", "Jay-Z"],
         "RichtigeAntwort": "Drake",
         "RichtigeAntwortMöglichkeiten": "Drake",
-        "Schwierigkeitsgrad": "mittel",
+        "Schwierigkeitsgrad": "extrem",
         "Fakt": "Mit 'Midnights' belegte Taylor Swift 2022 erstmals die gesamte Top 10, doch ein Jahr später tat es ihr Drake mit 'For All the Dogs' gleich,"
     },
+
 
 
 
@@ -3565,89 +3898,320 @@ const musik = [
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    
+
+
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Ganztöne hat eine Oktave?",
-        "Antworten": ["6", "7", "5", "8"],
-        "RichtigeAntwort": "6",
-        "RichtigeAntwortMöglichkeiten": "6 sechs",
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Symbol, das den Rhythmus eines Musikstücks vorgibt?",
+        "Antworten": ["Taktart", "Notenschlüssel", "Tonart", "Melodielinie"],
+        "RichtigeAntwort": "Taktart",
+        "RichtigeAntwortMöglichkeiten": "Taktart",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Taktart gibt an, wie viele Zählzeiten pro Takt vorhanden sind und beeinflusst den Rhythmus eines Stücks."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Symbol, das eine Note um einen Halbton erhöht?",
+        "Antworten": ["Kreuz (#)", "b (Be)", "Auflösungszeichen", "Punktierung"],
+        "RichtigeAntwort": "Kreuz (#)",
+        "RichtigeAntwortMöglichkeiten": "Kreuz #",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Eine Oktave hat 6 Ganztöne, die jeweils aus zwei Halbtonschritten bestehen."
+        "Fakt": "Ein Kreuz (#) erhöht eine Note um einen Halbton, z. B. wird ein F zu einem Fis."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Vierteltöne hat eine Oktave?",
-        "Antworten": ["24", "12", "16", "20"],
-        "RichtigeAntwort": "24",
-        "RichtigeAntwortMöglichkeiten": "24 vierundzwanzig",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Eine Oktave enthält 24 Vierteltöne, wenn man sie mikrotonal betrachtet."
-    },
-    {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtöne hat eine Oktave?",
-        "Antworten": ["12", "8", "10", "14"],
-        "RichtigeAntwort": "12",
-        "RichtigeAntwortMöglichkeiten": "12 zwölf",
-        "Schwierigkeitsgrad": "schwer",
-        "Fakt": "Eine Oktave hat 12 Halbtonschritte, die aufeinander folgen."
-    },
-    {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele große Terzen hat eine Dur-Tonleiter?",
-        "Antworten": ["4", "5", "6", "3"],
-        "RichtigeAntwort": "4",
-        "RichtigeAntwortMöglichkeiten": "4 vier",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "In einer Dur-Tonleiter gibt es genau 4 große Terzen zwischen den verschiedenen Tönen."
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Symbol, das eine Note um einen Halbton erniedrigt?",
+        "Antworten": ["b (Be)", "Kreuz (#)", "Auflösungszeichen", "Punktierung"],
+        "RichtigeAntwort": "b (Be)",
+        "RichtigeAntwortMöglichkeiten": "b Be",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein b (Be) erniedrigt eine Note um einen Halbton, z. B. wird ein H zu einem B."
     },    
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Quarten hat eine Oktave?",
-        "Antworten": ["3", "4", "5", "6"],
-        "RichtigeAntwort": "3",
-        "RichtigeAntwortMöglichkeiten": "3 drei",
+        "Kategorie": "Musik",
+        "Frage": "Welches Symbol verlängert eine Note um die Hälfte ihres Wertes?",
+        "Antworten": ["Punktierung", "Fermate", "Bindebogen", "Dynamikzeichen"],
+        "RichtigeAntwort": "Punktierung",
+        "RichtigeAntwortMöglichkeiten": "Punktierung",
         "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Es gibt 3 reine Quarten innerhalb einer Oktave, die sich durch ihre harmonische Stabilität auszeichnen."
+        "Fakt": "Eine punktierte Note wird um die Hälfte ihres ursprünglichen Wertes verlängert, z. B. wird eine punktierte Viertelnote zu 1,5 Schlägen."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Quinten hat eine Dur-Tonleiter?",
-        "Antworten": ["5", "4", "3", "6"],
-        "RichtigeAntwort": "5",
-        "RichtigeAntwortMöglichkeiten": "5 fünf",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Eine Dur-Tonleiter enthält 5 Quinten, die sich aus den Tönen der Tonleiter zusammensetzen."
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Zeichen, das eine Note verlängert, bis der Musiker(Dirigent) sie beendet?",
+        "Antworten": ["Fermate", "Punktierung", "Legato-Bogen", "Akzent"],
+        "RichtigeAntwort": "Fermate",
+        "RichtigeAntwortMöglichkeiten": "Fermate",
+        "Schwierigkeitsgrad": "extre,",
+        "Fakt": "Eine Fermate zeigt an, dass eine Note oder Pause länger gehalten werden soll, bis der Musiker entscheidet, weiterzuspielen."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Töne hat eine Oktave?",
-        "Antworten": ["12", "8", "7", "10"],
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine Gruppe von Noten, die zusammengebunden sind und rhythmisch gleichmäßig gespielt werden?",
+        "Antworten": ["Triolen", "Akkord", "Taktstriche", "Doppelstrich"],
+        "RichtigeAntwort": "Triolen",
+        "RichtigeAntwortMöglichkeiten": "Triolen Triole",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Triolen teilen eine Note in drei gleich lange Unterteilungen auf und werden oft für synkopische Rhythmen genutzt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Symbol zeigt an, dass eine Note betont gespielt werden soll?",
+        "Antworten": ["Akzent", "Fermate", "Punktierung", "Legato"],
+        "RichtigeAntwort": "Akzent",
+        "RichtigeAntwortMöglichkeiten": "Akzent",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein Akzent betont eine Note stärker als die umliegenden Noten und verändert die Dynamik des Spiels."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikangabe steht für ein allmähliches Lauterwerden?",
+        "Antworten": ["Crescendo", "Decrescendo", "Fermate", "Staccato"],
+        "RichtigeAntwort": "Crescendo",
+        "RichtigeAntwortMöglichkeiten": "Crescendo",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Crescendo zeigt an, dass die Lautstärke allmählich zunimmt und die Musik intensiver wird."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikangabe steht für ein allmähliches Leiserwerden?",
+        "Antworten": ["Decrescendo", "Crescendo", "Fermate", "Staccato"],
+        "RichtigeAntwort": "Decrescendo",
+        "RichtigeAntwortMöglichkeiten": "Decrescendo Diminuendo",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Decrescendo zeigt an, dass die Lautstärke allmählich verringert wird, bis sie fast verschwindet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Zeichen zeigt an, dass eine Note kurz und abgehackt gespielt werden soll?",
+        "Antworten": ["Staccato", "Legato", "Bindebogen", "Fermate"],
+        "RichtigeAntwort": "Staccato",
+        "RichtigeAntwortMöglichkeiten": "Staccato",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Staccato-Punkt über oder unter einer Note bedeutet, dass sie kurz und abgehackt gespielt werden soll."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Symbol, das einen Taktabschluss oder einen Wechsel in der Notation markiert?",
+        "Antworten": ["Doppelstrich", "Taktstrich", "Schlussstrich", "Bindebogen"],
+        "RichtigeAntwort": "Doppelstrich",
+        "RichtigeAntwortMöglichkeiten": "Doppelstrich",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein Doppelstrich zeigt das Ende eines Abschnitts oder eines Musikstücks an und wird oft mit Wiederholungszeichen kombiniert."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Zeichen zeigt an, dass eine Note besonders betont gespielt werden soll?",
+        "Antworten": ["Marcato", "Staccato", "Fermate", "Bindebogen"],
+        "RichtigeAntwort": "Marcato",
+        "RichtigeAntwortMöglichkeiten": "Marcato",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Marcato-Zeichen sieht aus wie ein umgedrehtes V über oder unter einer Note und bedeutet, dass die Note stark betont werden soll."
+    },
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine Note ohne Notenhals?",
+        "Antworten": ["Ganze Note", "Halbe Note", "Viertelnote", "Achtelnote"],
+        "RichtigeAntwort": "Ganze Note",
+        "RichtigeAntwortMöglichkeiten": "Ganze",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die ganze Note ist die einzige Notenart ohne Notenhals und dauert vier Schläge in einem 4/4-Takt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine Note mit einem ausgefüllten Notenkopf und ohne Fähnchen?",
+        "Antworten": ["Viertelnote", "Halbe Note", "Ganze Note", "Achtelnote"],
+        "RichtigeAntwort": "Viertelnote",
+        "RichtigeAntwortMöglichkeiten": "Viertel 4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Viertelnote hat einen ausgefüllten Notenkopf, einen Notenhals und dauert in einem 4/4-Takt einen Schlag."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine Note mit einem leeren Notenkopf und einem Notenhals?",
+        "Antworten": ["Halbe Note", "Viertelnote", "Ganze Note", "Achtelnote"],
+        "RichtigeAntwort": "Halbe Note",
+        "RichtigeAntwortMöglichkeiten": "Halbe",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Halbe Note hat einen nicht ausgefüllten Notenkopf mit Notenhals und dauert zwei Schläge in einem 4/4-Takt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine Note mit einem Fähnchen am Notenhals?",
+        "Antworten": ["Achtelnote", "Viertelnote", "Halbe Note", "Ganze Note"],
+        "RichtigeAntwort": "Achtelnote",
+        "RichtigeAntwortMöglichkeiten": "Achtelnote 8",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Achtelnote hat einen ausgefüllten Notenkopf, einen Notenhals und ein Fähnchen, sie dauert einen halben Schlag im 4/4-Takt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine Note mit zwei Fähnchen am Notenhals?",
+        "Antworten": ["Sechzehntelnote", "Achtelnote", "Viertelnote", "Halbe Note"],
+        "RichtigeAntwort": "Sechzehntelnote",
+        "RichtigeAntwortMöglichkeiten": "Sechzehntelnote 16",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Sechzehntelnote hat zwei Fähnchen am Notenhals und dauert ein Viertel eines Schlages im 4/4-Takt."
+    },
+
+
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Viertelnoten passen in einen 4/4-Takt?",
+        "Antworten": ["4", "8", "6", "2"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein 4/4-Takt besteht aus vier Viertelnoten, die jeweils einen Schlag im Takt haben."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Halbe Noten passen in einen 4/4-Takt?",
+        "Antworten": ["2", "4", "3", "6"],
+        "RichtigeAntwort": "2",
+        "RichtigeAntwortMöglichkeiten": "2 zwei",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine halbe Note dauert zwei Schläge, sodass in einem 4/4-Takt genau zwei Halbe Noten Platz haben."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Sechzehntelnoten passen in einen 4/4-Takt?",
+        "Antworten": ["16", "8", "12", "24"],
+        "RichtigeAntwort": "16",
+        "RichtigeAntwortMöglichkeiten": "16 sechzehn",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ein 4/4-Takt besteht aus vier Viertelnoten, die jeweils in vier Sechzehntelnoten unterteilt werden können, also insgesamt 16 Sechzehntelnoten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Achtelnoten passen in einen 3/4-Takt?",
+        "Antworten": ["6", "8", "4", "12"],
+        "RichtigeAntwort": "6",
+        "RichtigeAntwortMöglichkeiten": "6 sechs",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ein 3/4-Takt besteht aus drei Viertelnoten, die jeweils in zwei Achtelnoten unterteilt werden können, also insgesamt 6 Achtelnoten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Sechzehntelnoten passen in einen 3/4-Takt?",
+        "Antworten": ["12", "16", "6", "8"],
         "RichtigeAntwort": "12",
-        "RichtigeAntwortMöglichkeiten": "12",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Eine Oktave besteht aus 12 Halbtonschritten, die die Grundlage der westlichen Musik bilden."
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ein 3/4-Takt besteht aus drei Viertelnoten, die jeweils in vier Sechzehntelnoten unterteilt werden können, also insgesamt 12 Sechzehntelnoten."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Töne hat eine Dur-Tonleiter?",
-        "Antworten": ["7", "8", "6", "12"],
-        "RichtigeAntwort": "7",
-        "RichtigeAntwortMöglichkeiten": "7 sieben",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Eine Dur-Tonleiter hat 7 unterschiedliche Töne, bevor sie auf den Ausgangston zurückkehrt."
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Viertelnoten passen in einen 6/8-Takt?",
+        "Antworten": ["2", "3", "4", "6"],
+        "RichtigeAntwort": "2",
+        "RichtigeAntwortMöglichkeiten": "2 zwei",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein 6/8-Takt wird in zwei Hauptschläge mit je drei Achtelnoten unterteilt, sodass er zwei Viertelnoten mit Punktierung entspricht."
     },
     {
-        "Kategorie": "Musiktheorie",
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Achtelnoten passen in einen 2/4-Takt?",
+        "Antworten": ["4", "2", "6", "8"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ein 2/4-Takt besteht aus zwei Viertelnoten, die jeweils in zwei Achtelnoten unterteilt werden können, also insgesamt 4 Achtelnoten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Sechzehntelnoten passen in einen 2/4-Takt?",
+        "Antworten": ["8", "4", "12", "16"],
+        "RichtigeAntwort": "8",
+        "RichtigeAntwortMöglichkeiten": "8 acht",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein 2/4-Takt besteht aus zwei Viertelnoten, die jeweils in vier Sechzehntelnoten unterteilt werden können, also insgesamt 8 Sechzehntelnoten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Viertelnoten passen in einen 12/8-Takt?",
+        "Antworten": ["4", "3", "6", "8"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein 12/8-Takt hat zwölf Achtelnoten, die in vier Gruppen zu jeweils drei Achteln zusammengefasst werden, sodass er vier Viertelnoten mit Punktierung entspricht."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikbezeichnung steht für 'sehr leise'?",
+        "Antworten": ["Pianissimo (pp)", "Mezzopiano (mp)", "Forte (f)", "Crescendo"],
+        "RichtigeAntwort": "Pianissimo (pp)",
+        "RichtigeAntwortMöglichkeiten": "Pianissimo pp",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Pianissimo (pp) bedeutet 'sehr leise' und wird in der Notation verwendet, um eine sanfte, gedämpfte Lautstärke anzugeben."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikbezeichnung steht für 'leise'?",
+        "Antworten": ["Piano (p)", "Forte (f)", "Pianissimo (pp)", "Mezzoforte (mf)"],
+        "RichtigeAntwort": "Piano (p)",
+        "RichtigeAntwortMöglichkeiten": "Piano p",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Piano (p) bedeutet 'leise' und wird oft für sanfte, ruhige Passagen verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikbezeichnung steht für 'mittellaut'?",
+        "Antworten": ["Mezzoforte (mf)", "Forte (f)", "Piano (p)", "Mezzopiano (mp)"],
+        "RichtigeAntwort": "Mezzoforte",
+        "RichtigeAntwortMöglichkeiten": "Mezzoforte mf Mezzopiano mp",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Mezzoforte (mf) bedeutet 'mittellaut' und wird oft als Standardlautstärke in Musikstücken verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikbezeichnung steht für 'sehr laut'?",
+        "Antworten": ["Fortissimo (ff)", "Forte (f)", "Mezzoforte (mf)", "Crescendo"],
+        "RichtigeAntwort": "Fortissimo (ff)",
+        "RichtigeAntwortMöglichkeiten": "Fortissimo ff",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Fortissimo (ff) bedeutet 'sehr laut' und wird oft für dramatische und kraftvolle Musikpassagen verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Dynamikbezeichnung steht für 'laut'?",
+        "Antworten": ["Forte (f)", "Piano (p)", "Mezzoforte (mf)", "Crescendo"],
+        "RichtigeAntwort": "Forte (f)",
+        "RichtigeAntwortMöglichkeiten": "Forte f",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Forte (f) bedeutet 'laut' und wird in Musikstücken für kraftvolle Passagen eingesetzt."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    {
+        "Kategorie": "Musik",
         "Frage": "Wie nennt man den ersten Ton einer Tonleiter?",
         "Antworten": ["Grundton", "Leitton", "Dominante", "Subdominante"],
         "RichtigeAntwort": "Grundton",
         "RichtigeAntwortMöglichkeiten": "Grundton",
-        "Schwierigkeitsgrad": "scwer",
+        "Schwierigkeitsgrad": "mittel",
         "Fakt": "Der Grundton ist der erste Ton einer Tonleiter und gibt ihr ihren Namen."
     },
     {
-        "Kategorie": "Musiktheorie",
+        "Kategorie": "Musik",
         "Frage": "Welche Tonarten haben keine Vorzeichen?",
         "Antworten": ["C-Dur", "a-Moll", "G-Dur", "F-Dur"],
         "RichtigeAntwort": "C-Dur a-Moll",
@@ -3656,16 +4220,7 @@ const musik = [
         "Fakt": "C-Dur und a-Moll haben keine Vorzeichen, da ihre Tonleitern ausschließlich weiße Tasten auf dem Klavier verwenden."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine Quinte?",
-        "Antworten": ["7", "5", "6", "8"],
-        "RichtigeAntwort": "7",
-        "RichtigeAntwortMöglichkeiten": "7 sieben",
-        "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Eine Quinte besteht aus 7 Halbtonschritten und ist eines der wichtigsten Intervalle in der Musik."
-    },
-    {
-        "Kategorie": "Musiktheorie",
+        "Kategorie": "Musik",
         "Frage": "Wie nennt man zwei Töne, die gleichzeitig erklingen?",
         "Antworten": ["Intervall", "Akkord", "Melodie", "Harmonie"],
         "RichtigeAntwort": "Intervall",
@@ -3674,7 +4229,16 @@ const musik = [
         "Fakt": "Ein Intervall beschreibt den Abstand zwischen zwei Tönen, die gleichzeitig erklingen."
     },
     {
-        "Kategorie": "Musiktheorie",
+        "Kategorie": "Musik",
+        "Frage": "Wie viele verschiedene Intervalle gibt es innerhalb einer Oktave?",
+        "Antworten": ["12", "8", "6", "7"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Es gibt 12 verschiedene Intervalle innerhalb einer Oktave, basierend auf den 12 Halbtönen des temperierten Systems."
+    },
+    {
+        "Kategorie": "Musik",
         "Frage": "Wie nennt man drei oder mehr Töne, die gleichzeitig erklingen und eine harmonische Einheit bilden?",
         "Antworten": ["Akkord", "Intervall", "Melodie", "Harmonie"],
         "RichtigeAntwort": "Akkord",
@@ -3682,100 +4246,1396 @@ const musik = [
         "Schwierigkeitsgrad": "schwer",
         "Fakt": "Ein Akkord besteht aus mindestens drei Tönen, die zusammen eine harmonische Einheit bilden."
     },
-    
-{
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine große Sekunde?",
-        "Antworten": ["2", "1", "3", "4"],
-        "RichtigeAntwort": "2",
-        "RichtigeAntwortMöglichkeiten": "2 zwei",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine große Sekunde besteht aus zwei Halbtonschritten und ist das Intervall zwischen benachbarten Tönen in einer Dur-Tonleiter."
-    },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine kleine Terz?",
-        "Antworten": ["3", "2", "4", "5"],
-        "RichtigeAntwort": "3",
-        "RichtigeAntwortMöglichkeiten": "3 drei",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine kleine Terz besteht aus drei Halbtonschritten und wird oft als traurig klingendes Intervall empfunden."
-    },
-    {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine reine Quarte?",
-        "Antworten": ["5", "4", "6", "7"],
-        "RichtigeAntwort": "5",
-        "RichtigeAntwortMöglichkeiten": "5 fünf",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine reine Quarte umfasst fünf Halbtonschritte und wird als sehr stabil empfunden."
-    },
-    {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine Quinte?",
-        "Antworten": ["7", "5", "6", "8"],
-        "RichtigeAntwort": "7",
-        "RichtigeAntwortMöglichkeiten": "7 sieben",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine Quinte umfasst sieben Halbtonschritte und ist eines der wichtigsten Intervalle in der Musik."
-    },
-    {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine Oktave?",
-        "Antworten": ["12", "10", "8", "14"],
-        "RichtigeAntwort": "12",
-        "RichtigeAntwortMöglichkeiten": "12 zwölf",
-        "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Eine Oktave besteht aus zwölf Halbtonschritten und bildet den gleichen Ton eine Stufe höher."
-    },
-    {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine große Sekunde?",
-        "Antworten": ["2", "1", "3", "4"],
-        "RichtigeAntwort": "2",
-        "RichtigeAntwortMöglichkeiten": "2 zwei",
+        "Kategorie": "Musik",
+        "Frage": "Welche Tonart hat fünf Kreuz-Vorzeichen?",
+        "Antworten": ["H-Dur", "E-Dur", "D-Dur", "Fis-Dur"],
+        "RichtigeAntwort": "H-Dur",
+        "RichtigeAntwortMöglichkeiten": "H-Dur Hdur H",
         "Schwierigkeitsgrad": "extrem",
-        "Fakt": "Eine große Sekunde besteht aus zwei Halbtonschritten und ist das Intervall zwischen benachbarten Tönen in einer Dur-Tonleiter."
+        "Fakt": "H-Dur besteht aus den Tönen H, Cis, Dis, E, Fis, Gis und Ais und hat fünf Kreuze als Vorzeichen."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Ganztöne hat eine Oktave?",
+        "Antworten": ["6", "7", "5", "8"],
+        "RichtigeAntwort": "6",
+        "RichtigeAntwortMöglichkeiten": "6 sechs",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Oktave hat 6 Ganztöne, die jeweils aus zwei Halbtonschritten bestehen."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine kleine Terz?",
-        "Antworten": ["3", "2", "4", "5"],
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Halbtöne hat eine Oktave?",
+        "Antworten": ["12", "8", "10", "14"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Eine Oktave hat 12 Halbtonschritte, die aufeinander folgen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Töne hat eine Oktave?",
+        "Antworten": ["12", "19", "7", "8"],
+        "RichtigeAntwort": "12",
+        "RichtigeAntwortMöglichkeiten": "12",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Oktave besteht aus 12 Halbtonschritten, die die Grundlage der westlichen Musik bilden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Quarten hat eine Oktave?",
+        "Antworten": ["3", "4", "5", "6"],
         "RichtigeAntwort": "3",
         "RichtigeAntwortMöglichkeiten": "3 drei",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine kleine Terz besteht aus drei Halbtonschritten und wird oft als traurig klingendes Intervall empfunden."
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Es gibt 3 reine Quarten innerhalb einer Oktave, die sich durch ihre harmonische Stabilität auszeichnen."
     },
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine reine Quarte?",
-        "Antworten": ["5", "4", "6", "7"],
+        "Kategorie": "Musik",
+        "Frage": "Wie viele große Terzen hat eine Dur-Tonleiter?",
+        "Antworten": ["4", "5", "6", "3"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "In einer Dur-Tonleiter gibt es genau 4 große Terzen zwischen den verschiedenen Tönen."
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Quinten hat eine Dur-Tonleiter?",
+        "Antworten": ["5", "4", "3", "6"],
         "RichtigeAntwort": "5",
         "RichtigeAntwortMöglichkeiten": "5 fünf",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine reine Quarte umfasst fünf Halbtonschritte und wird als sehr stabil empfunden."
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eine Dur-Tonleiter enthält 5 Quinten, die sich aus den Tönen der Tonleiter zusammensetzen."
     },
     {
-        "Kategorie": "Musiktheorie",
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Töne hat eine Dur-Tonleiter?",
+        "Antworten": ["7", "8", "6", "12"],
+        "RichtigeAntwort": "7",
+        "RichtigeAntwortMöglichkeiten": "7 sieben",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine Dur-Tonleiter hat 7 unterschiedliche Töne, bevor sie auf den Ausgangston zurückkehrt."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
         "Frage": "Wie viele Halbtonschritte hat eine Quinte?",
         "Antworten": ["7", "5", "6", "8"],
         "RichtigeAntwort": "7",
         "RichtigeAntwortMöglichkeiten": "7 sieben",
-        "Schwierigkeitsgrad": "leicht",
-        "Fakt": "Eine Quinte umfasst sieben Halbtonschritte und ist eines der wichtigsten Intervalle in der Musik."
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Eine Quinte besteht aus 7 Halbtonschritten und ist eines der wichtigsten Intervalle in der Musik."
+    },
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {  
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Halbtonschritte hat eine große Sekunde?",
+        "Antworten": ["2", "1", "3", "4"],
+        "RichtigeAntwort": "2",
+        "RichtigeAntwortMöglichkeiten": "2 zwei",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Eine große Sekunde besteht aus zwei Halbtonschritten und ist das Intervall zwischen benachbarten Tönen in einer Dur-Tonleiter."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Halbtonschritte hat eine kleine Terz?",
+        "Antworten": ["3", "2", "4", "5"],
+        "RichtigeAntwort": "3",
+        "RichtigeAntwortMöglichkeiten": "3 drei",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Eine kleine Terz besteht aus drei Halbtonschritten und wird oft als traurig klingendes Intervall empfunden."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Halbtonschritte hat eine reine Quarte?",
+        "Antworten": ["5", "4", "6", "7"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5 fünf",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Eine reine Quarte umfasst fünf Halbtonschritte und wird als sehr stabil empfunden."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Notenschlüssel wird am häufigsten für Melodiestimmen wie Gesang oder Violine verwendet?",
+        "Antworten": ["Violinschlüssel", "Bassschlüssel", "Altschlüssel", "Tenorschlüssel"],
+        "RichtigeAntwort": "Violinschlüssel",
+        "RichtigeAntwortMöglichkeiten": "Violinschlüssel G-Schlüssel",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Violinschlüssel, auch G-Schlüssel genannt, ist der am häufigsten verwendete Notenschlüssel für Melodiestimmen."
     },
     {
-        "Kategorie": "Musiktheorie",
-        "Frage": "Wie viele Halbtonschritte hat eine Oktave?",
-        "Antworten": ["12", "10", "8", "14"],
-        "RichtigeAntwort": "12",
-        "RichtigeAntwortMöglichkeiten": "12 zwölf",
+        "Kategorie": "Musik",
+        "Frage": "Welcher Notenschlüssel wird oft für tiefe Instrumente wie Bass oder Cello verwendet?",
+        "Antworten": ["Bassschlüssel", "Violinschlüssel", "Altschlüssel", "Tenorschlüssel"],
+        "RichtigeAntwort": "Bassschlüssel",
+        "RichtigeAntwortMöglichkeiten": "Bassschlüssel F-Schlüssel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Bassschlüssel, auch F-Schlüssel genannt, wird für tiefe Instrumente wie Kontrabass, Cello oder Fagott verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Notenschlüssel ist für Bratsche (Viola) die Standardnotation?",
+        "Antworten": ["Altschlüssel", "Violinschlüssel", "Bassschlüssel", "Tenorschlüssel"],
+        "RichtigeAntwort": "Altschlüssel",
+        "RichtigeAntwortMöglichkeiten": "Altschlüssel C-Schlüssel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Altschlüssel, ein C-Schlüssel, wird hauptsächlich für die Bratsche verwendet und zeigt das mittlere C als Referenzlinie."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Notenschlüssel wird für Tenorinstrumente wie Posaune oder Fagott genutzt?",
+        "Antworten": ["Tenorschlüssel", "Bassschlüssel", "Altschlüssel", "Violinschlüssel"],
+        "RichtigeAntwort": "Tenorschlüssel",
+        "RichtigeAntwortMöglichkeiten": "Tenorschlüssel C-Schlüssel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Tenorschlüssel ist ein C-Schlüssel und wird für Instrumente wie die Tenorposaune oder das Fagott verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Notenschlüssel wird in Klaviernoten für die rechte Hand genutzt?",
+        "Antworten": ["Violinschlüssel", "Bassschlüssel", "Altschlüssel", "Tenorschlüssel"],
+        "RichtigeAntwort": "Violinschlüssel",
+        "RichtigeAntwortMöglichkeiten": "Violinschlüssel G-Schlüssel",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "In Klaviernoten wird der Violinschlüssel meist für die rechte Hand und höhere Töne genutzt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Linien hat ein Notensystem, auf dem Notenschlüssel stehen?",
+        "Antworten": ["5", "4", "6", "7"],
+        "RichtigeAntwort": "5",
+        "RichtigeAntwortMöglichkeiten": "5 fünf",
         "Schwierigkeitsgrad": "mittel",
-        "Fakt": "Eine Oktave besteht aus zwölf Halbtonschritten und bildet den gleichen Ton eine Stufe höher."
-    }
+        "Fakt": "Ein Notensystem besteht aus fünf Linien, auf denen Noten und Notenschlüssel gesetzt werden."
+    },
     
     
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////// I N S T R U M E N T E ////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Tasten hat ein Standard-Klavier?",
+        "Antworten": ["88", "76", "61", "96"],
+        "RichtigeAntwort": "88",
+        "RichtigeAntwortMöglichkeiten": "88",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Standard-Klavier hat 88 Tasten, bestehend aus 52 weißen und 36 schwarzen Tasten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Pedal, das die Töne länger klingen lässt?",
+        "Antworten": ["Sustain-Pedal", "Soft-Pedal", "Sostenuto-Pedal", "Dämpfer-Pedal"],
+        "RichtigeAntwort": "Sustain-Pedal",
+        "RichtigeAntwortMöglichkeiten": "Sustain-Pedal Haltepedal",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Sustain-Pedal (Haltepedal) hält die Saiten nach dem Anschlag schwingend, sodass die Töne länger klingen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Bauteil des Klaviers verstärkt die Schwingungen der Saiten?",
+        "Antworten": ["Resonanzboden", "Hammermechanik", "Dämpfer", "Tasten"],
+        "RichtigeAntwort": "Resonanzboden",
+        "RichtigeAntwortMöglichkeiten": "Resonanzboden",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Resonanzboden verstärkt die Schwingungen der Saiten und macht den Klang des Klaviers hörbar."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man ein Klavier, bei dem die Saiten waagerecht liegen?",
+        "Antworten": ["Flügel", "Upright-Piano", "Digitalpiano", "Spinett"],
+        "RichtigeAntwort": "Flügel",
+        "RichtigeAntwortMöglichkeiten": "Flügel",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ein Flügel hat seine Saiten waagerecht angeordnet und bietet eine bessere Klangqualität als ein aufrecht stehendes Klavier."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die weißen Tasten eines Klaviers?",
+        "Antworten": ["Naturtasten", "Halbtöne", "Kreuz-Tasten", "Diatonische Tasten"],
+        "RichtigeAntwort": "Naturtasten",
+        "RichtigeAntwortMöglichkeiten": "Naturtasten",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die weißen Tasten eines Klaviers werden Naturtasten genannt und entsprechen den Stammtönen einer Tonleiter."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die schwarzen Tasten eines Klaviers?",
+        "Antworten": ["Kreuz- und B-Tasten", "Diatonische Tasten", "Oktavtasten", "Subdominant-Tasten"],
+        "RichtigeAntwort": "Kreuz- und B-Tasten",
+        "RichtigeAntwortMöglichkeiten": "Kreuz- und B- Schwarze",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die schwarzen Tasten eines Klaviers entsprechen den erhöhten (#) oder erniedrigten (b) Tönen einer Tonleiter."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man ein Klavier, das elektrische Klangerzeugung nutzt?",
+        "Antworten": ["E-Piano", "Cembalo", "Spinett", "Orgel"],
+        "RichtigeAntwort": "E-Piano",
+        "RichtigeAntwortMöglichkeiten": "E-Piano Digitalpiano",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ein E-Piano oder Digitalpiano erzeugt Klänge elektronisch und kann verschiedene Klangfarben simulieren."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument ist der Vorläufer des modernen Klaviers?",
+        "Antworten": ["Cembalo", "Orgel", "Spinett", "Harmonium"],
+        "RichtigeAntwort": "Cembalo",
+        "RichtigeAntwortMöglichkeiten": "Cembalo",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Cembalo war der direkte Vorläufer des Klaviers, hatte aber keine Anschlagsdynamik, da die Saiten gezupft wurden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man eine schnelle Tonwiederholung auf dem Klavier?",
+        "Antworten": ["Triller", "Glissando", "Arpeggio", "Legato"],
+        "RichtigeAntwort": "Triller",
+        "RichtigeAntwortMöglichkeiten": "Triller",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ein Triller ist eine schnelle abwechselnde Wiederholung zweier benachbarter Töne."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die Instrumentengruppe, zu der Klavier, Orgel und Cembalo gehören?",
+        "Antworten": ["Tasteninstrumente", "Blasinstrumente", "Streichinstrumente", "Schlaginstrumente"],
+        "RichtigeAntwort": "Tasteninstrumente",
+        "RichtigeAntwortMöglichkeiten": "Tasteninstrumente",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Klavier, Orgel und Cembalo gehören zu den Tasteninstrumenten, da sie durch das Drücken von Tasten gespielt werden."
+    },    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Pedale hat ein Flügel normalerweise?",
+        "Antworten": ["Drei", "Zwei", "Vier", "Eins"],
+        "RichtigeAntwort": "Drei",
+        "RichtigeAntwortMöglichkeiten": "Drei 3",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Flügel hat in der Regel drei Pedale: das Sustain-Pedal, das Una-Corda-Pedal und das Sostenuto-Pedal."
+    },
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Epoche war das Cembalo besonders populär?",
+        "Antworten": ["Barock", "Klassik", "Romantik", "Moderne"],
+        "RichtigeAntwort": "Barock",
+        "RichtigeAntwortMöglichkeiten": "Barock",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das Cembalo war im Barock besonders verbreitet und wurde oft für Generalbass-Begleitungen in Orchestern und Kammermusik verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist war bekannt für seine Cembalo-Kompositionen?",
+        "Antworten": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Frédéric Chopin", "Claude Debussy"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach Bach",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Johann Sebastian Bach schrieb zahlreiche Werke für Cembalo, darunter das berühmte 'Wohltemperierte Klavier'."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument ersetzte das Cembalo in der Klassik?",
+        "Antworten": ["Klavier", "Orgel", "Harmonium", "Spinett"],
+        "RichtigeAntwort": "Klavier",
+        "RichtigeAntwortMöglichkeiten": "Klavier",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Klavier ersetzte das Cembalo in der Klassik, da es eine größere dynamische Bandbreite ermöglichte."
+    },
     
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie erzeugt eine Orgel ihren Klang?",
+        "Antworten": ["Durch Luft, die durch Pfeifen strömt", "Durch Saiten, die angeschlagen werden", "Durch elektrische Verstärkung", "Durch das Zupfen von Saiten"],
+        "RichtigeAntwort": "Durch Luft, die durch Pfeifen strömt",
+        "RichtigeAntwortMöglichkeiten": "Luft Pfeifen",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Klang der Orgel entsteht durch Luft, die durch unterschiedlich große Pfeifen geblasen wird, was verschiedene Tonhöhen und Klangfarben erzeugt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die Tastenreihe einer Orgel?",
+        "Antworten": ["Manual", "Pedal", "Register", "Oktave"],
+        "RichtigeAntwort": "Manual",
+        "RichtigeAntwortMöglichkeiten": "Manual",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein Manual ist eine Tastenreihe einer Orgel, von denen große Orgeln mehrere haben können, um verschiedene Klangfarben zu kombinieren."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Tasteninstrument erzeugt seinen Klang durch Luft, die durch Pfeifen geleitet wird?",
+        "Antworten": ["Orgel", "Klavier", "Cembalo", "E-Piano"],
+        "RichtigeAntwort": "Orgel",
+        "RichtigeAntwortMöglichkeiten": "Orgel",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Orgel erzeugt ihren Klang, indem Luft durch unterschiedlich große Pfeifen geblasen wird, was sie von anderen Tasteninstrumenten unterscheidet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das System, das Luft durch die Orgelpfeifen leitet?",
+        "Antworten": ["Windlade", "Resonanzboden", "Zungenwerk", "Registerzug"],
+        "RichtigeAntwort": "Windlade",
+        "RichtigeAntwortMöglichkeiten": "Windlade",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Windlade verteilt die Luft aus den Blasebälgen an die verschiedenen Pfeifen einer Orgel und ermöglicht das Spielen der Töne."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher Komponist schrieb viele berühmte Orgelwerke?",
+        "Antworten": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Frédéric Chopin", "Wolfgang Amadeus Mozart"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach Bach",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Johann Sebastian Bach schrieb zahlreiche Werke für Orgel, darunter die berühmte 'Toccata und Fuge in d-Moll'."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Marke ist für ihre Digitalpianos besonders bekannt?",
+        "Antworten": ["Yamaha", "Roland", "Kawai", "Casio"],
+        "RichtigeAntwort": "Yamaha",
+        "RichtigeAntwortMöglichkeiten": "Yamaha",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Yamaha ist eine der führenden Marken für Digitalpianos und bekannt für Serien wie Clavinova und die P-Serie."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie erzeugt ein Akkordeon seinen Klang?",
+        "Antworten": ["Durch Luft, die durch Stimmzungen gepresst wird", "Durch Saiten, die angeschlagen werden", "Durch digitale Klangerzeugung", "Durch gezupfte Drähte"],
+        "RichtigeAntwort": "Durch Luft, die durch Stimmzungen gepresst wird",
+        "RichtigeAntwortMöglichkeiten": "Luft Stimmzungen",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein Akkordeon erzeugt seinen Klang, indem Luft durch metallene Stimmzungen strömt, die durch das Drücken und Ziehen des Balgs in Schwingung versetzt werden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man den beweglichen Teil des Akkordeons, der für die Luftzufuhr sorgt?",
+        "Antworten": ["Balg", "Register", "Bassfeld", "Diskantmanual"],
+        "RichtigeAntwort": "Balg",
+        "RichtigeAntwortMöglichkeiten": "Balg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Balg eines Akkordeons wird auseinandergezogen oder zusammengedrückt, um Luft durch die Stimmzungen zu leiten und so den Klang zu erzeugen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche zwei Hauptspielbereiche hat ein Akkordeon?",
+        "Antworten": ["Diskant- und Bassmanual", "Pedale und Tasten", "Ober- und Untermanual", "Register und Balg"],
+        "RichtigeAntwort": "Diskant- und Bassmanual",
+        "RichtigeAntwortMöglichkeiten": "Diskantmanual Bassmanual",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Akkordeon hat zwei Spielbereiche: das Diskantmanual für die Melodien (rechte Hand) und das Bassmanual für Begleitungen (linke Hand)."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Land ist besonders für seine traditionelle Akkordeonmusik bekannt?",
+        "Antworten": ["Frankreich", "Italien", "Deutschland", "Mexiko"],
+        "RichtigeAntwort": "Frankreich",
+        "RichtigeAntwortMöglichkeiten": "Frankreich",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Frankreich ist bekannt für seinen Musette-Walzer, bei dem das Akkordeon eine zentrale Rolle spielt."
+    },
+    
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Aus welchem Material werden die Saiten einer traditionellen Violine häufig hergestellt?",
+        "Antworten": ["Darmsaiten", "Nylon", "Metall", "Seide"],
+        "RichtigeAntwort": "Darmsaiten",
+        "RichtigeAntwortMöglichkeiten": "Darmsaiten",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Früher wurden Violinsaiten traditionell aus Schafdarm gefertigt, während moderne Saiten oft aus synthetischen Materialien oder Metall bestehen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Holz wird traditionell für den Korpus hochwertiger Violinen verwendet?",
+        "Antworten": ["Ahorn und Fichte", "Eiche und Mahagoni", "Kiefer und Birke", "Zeder und Walnuss"],
+        "RichtigeAntwort": "Ahorn und Fichte",
+        "RichtigeAntwortMöglichkeiten": "Ahorn Fichte",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Boden und die Zargen einer Violine bestehen meist aus Ahorn, während die Decke aus Fichte gefertigt wird, um eine optimale Klangqualität zu gewährleisten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat eine normale Violine?",
+        "Antworten": ["Vier", "Fünf", "Sechs", "Drei"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Eine klassische Violine hat vier Saiten, die in Quinten gestimmt sind: G, D, A und E."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die Technik, bei der die Saite mit den Fingern gezupft wird, anstatt sie mit dem Bogen zu streichen?",
+        "Antworten": ["Pizzicato", "Legato", "Arpeggio", "Col legno"],
+        "RichtigeAntwort": "Pizzicato",
+        "RichtigeAntwortMöglichkeiten": "Pizzicato",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Beim Pizzicato werden die Saiten mit den Fingern gezupft, was einen kurzen und perkussiven Klang erzeugt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man den Bogen einer Violine?",
+        "Antworten": ["Archet", "Bastón", "Stick", "Strichbogen"],
+        "RichtigeAntwort": "Archet",
+        "RichtigeAntwortMöglichkeiten": "Archet",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Violinbogen wird im Französischen als 'Archet' bezeichnet und besteht meist aus Pernambuco-Holz oder Karbon."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Material wird traditionell für die Bespannung eines Violinbogens verwendet?",
+        "Antworten": ["Pferdehaar", "Seide", "Nylon", "Metall"],
+        "RichtigeAntwort": "Pferdehaar",
+        "RichtigeAntwortMöglichkeiten": "Pferdehaar",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Ein Violinbogen ist traditionell mit echtem Pferdehaar bespannt, das mit Kolophonium eingerieben wird, um die Reibung auf den Saiten zu erhöhen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das klebrige Harz, das auf den Bogenhaaren aufgetragen wird, um den Kontakt zur Saite zu verbessern?",
+        "Antworten": ["Kolophonium", "Terpentin", "Balsam", "Harzpolitur"],
+        "RichtigeAntwort": "Kolophonium",
+        "RichtigeAntwortMöglichkeiten": "Kolophonium",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Kolophonium ist ein Baumharz, das auf den Bogen aufgetragen wird, um die Reibung zwischen Haaren und Saiten zu erhöhen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Streichinstrument gilt als das bekannteste?",
+        "Antworten": ["Violine", "Cello", "Kontrabass", "Bratsche"],
+        "RichtigeAntwort": "Violine",
+        "RichtigeAntwortMöglichkeiten": "Violine Geige",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Violine, auch Geige genannt, ist das bekannteste und meistgespielte Streichinstrument und wird in Klassik, Jazz, Folk und Popmusik verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist das höchste Streichinstrument im klassischen Orchester?",
+        "Antworten": ["Violine", "Bratsche", "Cello", "Kontrabass"],
+        "RichtigeAntwort": "Violine",
+        "RichtigeAntwortMöglichkeiten": "Violine Geige",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Violine ist das höchste Streichinstrument im Orchester und kann besonders hohe und brillante Töne spielen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist das kleinste Streichinstrument im klassischen Orchester?",
+        "Antworten": ["Violine", "Bratsche", "Cello", "Kontrabass"],
+        "RichtigeAntwort": "Violine",
+        "RichtigeAntwortMöglichkeiten": "Violine Geige",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Violine ist das kleinste Streichinstrument im Orchester und hat die höchste Tonlage unter den Streichinstrumenten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie wird die Geige noch genannt?",
+        "Antworten": ["Violine", "Fidel", "Streichlaute", "Altgeige"],
+        "RichtigeAntwort": "Violine",
+        "RichtigeAntwortMöglichkeiten": "Violine",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Geige wird auch Violine genannt und ist das höchste Streichinstrument im klassischen Orchester."
+    },
+    
+        
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat eine Bratsche (Viola)?",
+        "Antworten": ["Vier", "Fünf", "Sechs", "Drei"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Wie die Violine hat auch die Viola vier Saiten, ist jedoch eine Quinte tiefer gestimmt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher berühmte Komponist war selbst Bratschist?",
+        "Antworten": ["Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Ludwig van Beethoven", "Frédéric Chopin"],
+        "RichtigeAntwort": "Wolfgang Amadeus Mozart",
+        "RichtigeAntwortMöglichkeiten": "Wolfgang Amadeus Mozart Mozart",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mozart spielte selbst Viola und schrieb zahlreiche Werke, in denen die Bratsche eine prominente Rolle spielt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie wird die Bratsche noch genannt?",
+        "Antworten": ["Viola", "Altgeige", "Große Violine", "Tenorgeige"],
+        "RichtigeAntwort": "Viola",
+        "RichtigeAntwortMöglichkeiten": "Viola",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Bratsche wird auch Viola genannt und hat eine tiefere Stimmung als die Violine."
+    },
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher berühmte Komponist schrieb die sechs Cellosuiten, die heute als Meisterwerke gelten?",
+        "Antworten": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Franz Schubert"],
+        "RichtigeAntwort": "Johann Sebastian Bach",
+        "RichtigeAntwortMöglichkeiten": "Johann Sebastian Bach Bach",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Johann Sebastian Bachs sechs Cellosuiten gehören zu den bedeutendsten Solostücken für das Instrument und werden bis heute weltweit gespielt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche ist die tiefste Saite eines Cellos?",
+        "Antworten": ["C-Saite", "G-Saite", "D-Saite", "A-Saite"],
+        "RichtigeAntwort": "C-Saite",
+        "RichtigeAntwortMöglichkeiten": "C-Saite C",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die tiefste Saite des Cellos ist die C-Saite, die dem Instrument seinen vollen, tiefen Klang verleiht."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat ein Standard-Cello?",
+        "Antworten": ["Vier", "Fünf", "Sechs", "Drei"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das Standard-Cello hat vier Saiten, die in Quinten gestimmt sind: C, G, D und A."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man den langen Metallstachel, mit dem das Cello auf dem Boden abgestützt wird?",
+        "Antworten": ["Stachel", "Steg", "Wirbel", "Resonanzstab"],
+        "RichtigeAntwort": "Stachel",
+        "RichtigeAntwortMöglichkeiten": "Stachel",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Stachel des Cellos ermöglicht es dem Spieler, das Instrument bequem im Sitzen zu spielen und sorgt für Stabilität."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie lautet der Fachbegriff für das Cello?",
+        "Antworten": ["Violoncello", "Bassvioline", "Tenorgeige", "Großviola"],
+        "RichtigeAntwort": "Violoncello",
+        "RichtigeAntwortMöglichkeiten": "Violoncello",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Cello wird offiziell als Violoncello bezeichnet, was sich aus dem italienischen Wort 'violone' (große Violine) ableitet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Notenschlüssel wird das Cello hauptsächlich notiert?",
+        "Antworten": ["Bassschlüssel", "Altschlüssel", "Violinschlüssel", "Tenorschlüssel"],
+        "RichtigeAntwort": "Bassschlüssel",
+        "RichtigeAntwortMöglichkeiten": "Bassschlüssel",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Cello wird hauptsächlich im Bassschlüssel notiert, bei hohen Passagen aber auch im Tenor- oder Violinschlüssel."
+    },    
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist das größte und tiefste Streichinstrument im klassischen Orchester?",
+        "Antworten": ["Kontrabass", "Cello", "Viola", "Violine"],
+        "RichtigeAntwort": "Kontrabass",
+        "RichtigeAntwortMöglichkeiten": "Kontrabass Bass",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Der Kontrabass ist das größte und tiefste Streichinstrument im Orchester und bildet das klangliche Fundament der Streichergruppe."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat ein Standard-Kontrabass?",
+        "Antworten": ["Vier", "Fünf", "Sechs", "Drei"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Standard-Kontrabass hat vier Saiten, die in Quarten gestimmt sind: E, A, D und G."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Spieltechnik wird oft im Jazz auf dem Kontrabass verwendet?",
+        "Antworten": ["Pizzicato", "Arco", "Col legno", "Flautando"],
+        "RichtigeAntwort": "Pizzicato",
+        "RichtigeAntwortMöglichkeiten": "Pizzicato",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Im Jazz wird der Kontrabass häufig gezupft (Pizzicato), um eine rhythmische Basslinie zu erzeugen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche bekannte Musikrichtung nutzt den Kontrabass neben der klassischen Musik besonders häufig?",
+        "Antworten": ["Jazz", "Hip-Hop", "Techno", "Reggae"],
+        "RichtigeAntwort": "Jazz",
+        "RichtigeAntwortMöglichkeiten": "Jazz",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Kontrabass ist ein zentrales Instrument im Jazz und wird oft als rhythmische Begleitung oder für Walking Bass-Linien eingesetzt."
+    },    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welcher Epoche war die Gambe besonders populär?",
+        "Antworten": ["Renaissance und Barock", "Romantik", "Moderne", "Mittelalter"],
+        "RichtigeAntwort": "Renaissance und Barock",
+        "RichtigeAntwortMöglichkeiten": "Renaissance Barock",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Gambe war vor allem in der Renaissance und im Barock weit verbreitet, wurde aber später von der Violine und dem Cello verdrängt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat eine typische Gambe?",
+        "Antworten": ["Sechs oder sieben", "Vier", "Drei", "Fünf"],
+        "RichtigeAntwort": "Sechs oder sieben",
+        "RichtigeAntwortMöglichkeiten": "Sechs sieben",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Eine typische Gambe hat sechs oder sieben Saiten und ist in Quarten mit einer großen Terz gestimmt."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument spielt in einem Streichquartett die tiefste Stimme?",
+        "Antworten": ["Cello", "Bratsche", "Violine", "Kontrabass"],
+        "RichtigeAntwort": "Cello",
+        "RichtigeAntwortMöglichkeiten": "Cello",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Cello spielt im Streichquartett die tiefste Stimme und sorgt für das klangliche Fundament."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die erste Violine in einem Streichquartett?",
+        "Antworten": ["Primarius", "Concertino", "Vorspieler", "Violonist"],
+        "RichtigeAntwort": "Primarius",
+        "RichtigeAntwortMöglichkeiten": "Primarius",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Primarius ist die erste Violine im Streichquartett und übernimmt meist die führende Rolle in der Melodiegestaltung."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Streichinstrument wird in einem Streichquartett nicht verwendet?",
+        "Antworten": ["Kontrabass", "Violine", "Bratsche", "Cello"],
+        "RichtigeAntwort": "Kontrabass",
+        "RichtigeAntwortMöglichkeiten": "Kontrabass",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Kontrabass ist nicht Teil eines klassischen Streichquartetts, da seine tiefen Frequenzen eher in größeren Ensembles verwendet werden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man ein Ensemble, das aus zwei Violinen, einer Viola und einem Cello besteht?",
+        "Antworten": ["Streichquartett", "Triple", "Streichtrio", "Kammerensemble"],
+        "RichtigeAntwort": "Streichquartett",
+        "RichtigeAntwortMöglichkeiten": "Streichquartett",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Ein Streichquartett ist eine klassische Kammermusikbesetzung, bestehend aus zwei Violinen, einer Viola und einem Cello."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie wird der Klang einer Akustikgitarre verstärkt?",
+        "Antworten": ["Durch den Resonanzkörper", "Durch Tonabnehmer", "Durch einen Verstärker", "Durch elektronische Effekte"],
+        "RichtigeAntwort": "Durch den Resonanzkörper",
+        "RichtigeAntwortMöglichkeiten": "Resonanzkörper",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Der Klang einer Akustikgitarre entsteht durch die Schwingungen der Saiten, die über den Steg auf den Resonanzkörper übertragen und verstärkt werden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat eine Akustikgitarre?",
+        "Antworten": ["Sechs", "Fünf", "Sieben", "Zwölf"],
+        "RichtigeAntwort": "Sechs",
+        "RichtigeAntwortMöglichkeiten": "Sechs 6",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Standard-Akustikgitarre hat sechs Saiten, die in E, A, D, G, B und E gestimmt sind."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Bauteil hält die Saiten am Korpus einer Akustikgitarre fest?",
+        "Antworten": ["Steg", "Griffbrett", "Wirbel", "Tonabnehmer"],
+        "RichtigeAntwort": "Steg",
+        "RichtigeAntwortMöglichkeiten": "Steg",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Der Steg hält die Saiten am Korpus der Gitarre fest und überträgt ihre Schwingungen auf die Decke der Gitarre."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument wird typischerweise mit sechs Saiten gespielt?",
+        "Antworten": ["Gitarre", "Geige", "Bass", "Mandoline"],
+        "RichtigeAntwort": "Gitarre",
+        "RichtigeAntwortMöglichkeiten": "Gitarre",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Gitarre ist eines der meistgespielten Instrumente der Welt und hat typischerweise sechs Saiten."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Saiteninstrument wird häufig mit einem Plektrum gespielt?",
+        "Antworten": ["Gitarre", "Harfe", "Cello", "Kontrabass"],
+        "RichtigeAntwort": "Gitarre",
+        "RichtigeAntwortMöglichkeiten": "Gitarre",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Viele Gitarristen verwenden ein Plektrum, um einen schärferen und klareren Klang zu erzeugen, besonders in Rock- und Popmusik."
+    },    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das kleine Plättchen, mit dem Gitarristen oft die Saiten anschlagen?",
+        "Antworten": ["Plektrum", "Bogen", "Kapodaster", "Steg"],
+        "RichtigeAntwort": "Plektrum",
+        "RichtigeAntwortMöglichkeiten": "Plektrum",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Ein Plektrum wird verwendet, um die Saiten einer Gitarre anzuschlagen und sorgt für einen präziseren und schärferen Klang."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument gilt weltweit als das bekannteste?",
+        "Antworten": ["Gitarre", "Klavier", "Violine", "Schlagzeug"],
+        "RichtigeAntwort": "Gitarre",
+        "RichtigeAntwortMöglichkeiten": "Gitarre",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Gitarre ist eines der meistgespielten Instrumente weltweit und wird in nahezu allen Musikrichtungen eingesetzt."
+    },     
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie wird der Klang einer E-Gitarre verstärkt?",
+        "Antworten": ["Durch Tonabnehmer und Verstärker", "Durch Resonanzkörper", "Durch Luftströmung", "Durch integrierte Lautsprecher"],
+        "RichtigeAntwort": "Durch Tonabnehmer und Verstärker",
+        "RichtigeAntwortMöglichkeiten": "Tonabnehmer Verstärker",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die E-Gitarre erzeugt ihren Klang durch elektromagnetische Tonabnehmer, die die Schwingungen der Saiten in elektrische Signale umwandeln und an einen Verstärker senden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Bauteil einer E-Gitarre wandelt die Schwingungen der Saiten in elektrische Signale um?",
+        "Antworten": ["Tonabnehmer", "Brücke", "Steg", "Mechaniken"],
+        "RichtigeAntwort": "Tonabnehmer",
+        "RichtigeAntwortMöglichkeiten": "Tonabnehmer",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Tonabnehmer (Pickups) bestehen aus Magneten und Spulen, die die Saitenschwingungen erfassen und in elektrische Signale umwandeln."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Bauform einer E-Gitarre ist besonders verbreitet?",
+        "Antworten": ["Solid-Body", "Hollow-Body", "Semi-Hollow", "Archtop"],
+        "RichtigeAntwort": "Solid-Body",
+        "RichtigeAntwortMöglichkeiten": "Solid-Body",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Solid-Body-Gitarren bestehen aus einem massiven Korpus ohne Resonanzkammer und sind die am häufigsten verwendete Bauform für E-Gitarren."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Effektgerät wird häufig verwendet, um den Klang einer E-Gitarre zu verzerren?",
+        "Antworten": ["Distortion-Pedal", "Chorus-Pedal", "Reverb-Pedal", "Wah-Wah-Pedal"],
+        "RichtigeAntwort": "Distortion-Pedal",
+        "RichtigeAntwortMöglichkeiten": "Distortion-Pedal Verzerrer",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Distortion-Pedale werden verwendet, um den Klang einer E-Gitarre zu verzerren, was vor allem in Rock- und Metal-Musik weit verbreitet ist."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Holz wird häufig für den Korpus einer E-Gitarre verwendet?",
+        "Antworten": ["Mahagoni", "Ahorn", "Fichte", "Zeder"],
+        "RichtigeAntwort": "Mahagoni",
+        "RichtigeAntwortMöglichkeiten": "Mahagoni",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Mahagoni wird oft für den Korpus von E-Gitarren verwendet, da es einen warmen Klang mit ausgeprägten Mitten erzeugt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Marke gilt als die bekannteste für E-Gitarren?",
+        "Antworten": ["Fender", "Gibson", "Ibanez", "PRS"],
+        "RichtigeAntwort": "Fender",
+        "RichtigeAntwortMöglichkeiten": "Fender",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Fender ist weltweit eine der bekanntesten Marken für E-Gitarren und wird oft mit legendären Modellen wie der Stratocaster und der Telecaster in Verbindung gebracht."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wer gilt als der bekannteste E-Gitarrist aller Zeiten?",
+        "Antworten": ["Jimi Hendrix", "Eric Clapton", "Jimmy Page", "Eddie Van Halen"],
+        "RichtigeAntwort": "Jimi Hendrix",
+        "RichtigeAntwortMöglichkeiten": "Jimi Hendrix Hendrix",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Jimi Hendrix gilt als der bekannteste und einflussreichste E-Gitarrist aller Zeiten. Sein innovativer Spielstil, seine Bühnenperformance und sein kreativer Einsatz von Effekten revolutionierten die Rockmusik."
+    },    
+    
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist die tiefste Saite eines Standard-E-Basses?",
+        "Antworten": ["E-Saite", "A-Saite", "D-Saite", "G-Saite"],
+        "RichtigeAntwort": "E-Saite",
+        "RichtigeAntwortMöglichkeiten": "E-Saite E",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die tiefste Saite eines Standard-E-Basses ist die E-Saite, die für das tiefe Fundament in der Musik sorgt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Spieltechnik wird oft für einen perkussiven Bass-Sound verwendet?",
+        "Antworten": ["Slap", "Tapping", "Fingerpicking", "Sweep Picking"],
+        "RichtigeAntwort": "Slap",
+        "RichtigeAntwortMöglichkeiten": "Slap Slapping",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Beim Slap-Bass wird die Saite mit dem Daumen geschlagen und mit den Fingern geschnippt, was einen perkussiven Klang erzeugt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welcher berühmte Bassist ist bekannt für seine virtuose Slap-Technik?",
+        "Antworten": ["Flea", "Jaco Pastorius", "Paul McCartney", "Geddy Lee"],
+        "RichtigeAntwort": "Flea",
+        "RichtigeAntwortMöglichkeiten": "Flea",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Flea, der Bassist der Red Hot Chili Peppers, ist berühmt für seine aggressive und rhythmische Slap-Bass-Technik."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche bekannte Band hatte mit Paul McCartney einen der berühmtesten E-Bassisten?",
+        "Antworten": ["The Beatles", "The Rolling Stones", "Led Zeppelin", "Pink Floyd"],
+        "RichtigeAntwort": "The Beatles",
+        "RichtigeAntwortMöglichkeiten": "The Beatles Beatles",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Paul McCartney spielte Bass für The Beatles und beeinflusste mit seinen melodischen Basslinien die moderne Pop- und Rockmusik."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Saiten hat eine Standard-Ukulele?",
+        "Antworten": ["Vier", "Sechs", "Fünf", "Acht"],
+        "RichtigeAntwort": "Vier",
+        "RichtigeAntwortMöglichkeiten": "Vier 4",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Standard-Ukulele hat vier Saiten und ist für ihren hellen, fröhlichen Klang bekannt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Aus welchem Land stammt die Ukulele ursprünglich?",
+        "Antworten": ["Hawaii", "Portugal", "Spanien", "Brasilien"],
+        "RichtigeAntwort": "Hawaii",
+        "RichtigeAntwortMöglichkeiten": "Hawaii",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Ukulele wurde auf Hawaii entwickelt, basierend auf portugiesischen Zupfinstrumenten wie der Machete."
+    },    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Zupfinstrument hat einen runden Korpus und wird oft in Bluegrass-Musik verwendet?",
+        "Antworten": ["Banjo", "Mandoline", "Laute", "Harfe"],
+        "RichtigeAntwort": "Banjo",
+        "RichtigeAntwortMöglichkeiten": "Banjo",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Banjo hat einen charakteristischen runden Korpus mit einer gespannten Membran und wird häufig in Bluegrass- und Folk-Musik eingesetzt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Saiteninstrument wird traditionell mit einer Zupftechnik namens 'Clawhammer' gespielt?",
+        "Antworten": ["Banjo", "Mandoline", "Laute", "Harfe"],
+        "RichtigeAntwort": "Banjo",
+        "RichtigeAntwortMöglichkeiten": "Banjo",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Das Banjo wird oft mit der Clawhammer-Technik gespielt, bei der die Saiten mit einer abwärts gerichteten Bewegung angeschlagen werden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Zupfinstrument hat acht Saiten in vier Doppelpaaren und wird häufig in Folk- und Bluegrass-Musik verwendet?",
+        "Antworten": ["Mandoline", "Banjo", "Laute", "Harfe"],
+        "RichtigeAntwort": "Mandoline",
+        "RichtigeAntwortMöglichkeiten": "Mandoline",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Mandoline hat vier Doppelsaiten und wird häufig mit einem Plektrum gespielt, um ihren klaren, hellen Klang zu erzeugen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Saiteninstrument hat oft eine birnenförmige Bauform und wurde besonders in der Renaissance und im Barock verwendet?",
+        "Antworten": ["Laute", "Mandoline", "Harfe", "Banjo"],
+        "RichtigeAntwort": "Laute",
+        "RichtigeAntwortMöglichkeiten": "Laute",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Laute war in der Renaissance und im Barock weit verbreitet und wurde oft zur Begleitung von Liedern und Tänzen verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches dieser Instrumente wird traditionell in der irischen und keltischen Musik gespielt?",
+        "Antworten": ["Harfe", "Banjo", "Laute", "Mandoline"],
+        "RichtigeAntwort": "Harfe",
+        "RichtigeAntwortMöglichkeiten": "Harfe",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Harfe hat eine lange Tradition in der keltischen Musik und ist eines der bekanntesten Symbole Irlands."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die kleinste und höchste Flöte im Orchester?",
+        "Antworten": ["Piccoloflöte", "Altflöte", "Blockflöte", "Bassflöte"],
+        "RichtigeAntwort": "Piccoloflöte",
+        "RichtigeAntwortMöglichkeiten": "Piccoloflöte Piccolo",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Piccoloflöte ist kleiner als die normale Querflöte und klingt eine Oktave höher."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Holzblasinstrument hat keine Rohrblätter?",
+        "Antworten": ["Querflöte", "Klarinette", "Saxophon", "Oboe"],
+        "RichtigeAntwort": "Querflöte",
+        "RichtigeAntwortMöglichkeiten": "Querflöte Flöte",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Im Gegensatz zu Klarinette, Saxophon und Oboe benötigt die Querflöte keine Rohrblätter zur Tonerzeugung."
+    },
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Musikstil spielte die Klarinette eine prägende Rolle?",
+        "Antworten": ["Jazz", "Rock", "Hip-Hop", "Elektronische Musik"],
+        "RichtigeAntwort": "Jazz",
+        "RichtigeAntwortMöglichkeiten": "Jazz",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Klarinette war in der Swing-Ära des Jazz ein zentrales Instrument und prägte den warmen, fließenden Sound dieser Musikrichtung.",
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Familie von Blasinstrumenten zählt die Klarinette?",
+        "Antworten": ["Holzblasinstrumente", "Blechblasinstrumente", "Saiteninstrumente", "Tasteninstrumente"],
+        "RichtigeAntwort": "Holzblasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Holzblasinstrumente Blasinstrumente",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Klarinette gehört zur Familie der Holzblasinstrumente und besticht durch ihren flexiblen, warmen Klang.",
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welchem Instrument ähnelt die Oboe am meisten?",
+        "Antworten": ["Klarinette", "Fagott", "Flöte", "Saxophon"],
+        "RichtigeAntwort": "Fagott",
+        "RichtigeAntwortMöglichkeiten": "Fagott Bassoboe",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Oboe gehört zur Familie der Doppelrohrblattinstrumente und ist eng mit dem Fagott verwandt."
+    },    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Familie von Instrumenten zählt das Fagott?",
+        "Antworten": ["Holzblasinstrumente", "Blechblasinstrumente", "Saiteninstrumente", "Tasteninstrumente"],
+        "RichtigeAntwort": "Holzblasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Holzblasinstrumente Blasinstrumente",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Das Fagott gehört zu den Holzblasinstrumenten und zeichnet sich durch seinen tiefen, resonanten Klang aus.",
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Klappen besitzt ein typisches modernes Fagott?",
+        "Antworten": ["21", "23", "25", "27"],
+        "RichtigeAntwort": "23",
+        "RichtigeAntwortMöglichkeiten": "23",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Moderne Fagotte verfügen in der Regel über etwa 23 Klappen, die eine präzise Intonation und flexible Spielmöglichkeiten ermöglichen.",
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Instrumentenfamilie gehört das Saxophon?",
+        "Antworten": ["Holzblasinstrumente", "Blechblasinstrumente", "Saiteninstrumente", "Tasteninstrumente"],
+        "RichtigeAntwort": "Holzblasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Holzblasinstrumente Holzbläser",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Obwohl das Saxophon aus Metall besteht, gehört es zu den Holzblasinstrumenten, da der Ton mit einem Rohrblatt erzeugt wird."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Jahrhundert wurde das Saxophon erfunden?",
+        "Antworten": ["19. Jahrhundert", "18. Jahrhundert", "20. Jahrhundert", "17. Jahrhundert"],
+        "RichtigeAntwort": "19. Jahrhundert",
+        "RichtigeAntwortMöglichkeiten": "19 19. Jahrhundert",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Saxophon wurde im 19. Jahrhundert von Adolphe Sax entwickelt und patentiert."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Aus welchem Metall werden Trompeten traditionell gefertigt?",
+        "Antworten": ["Messing", "Kupfer", "Bronze", "Edelstahl"],
+        "RichtigeAntwort": "Messing",
+        "RichtigeAntwortMöglichkeiten": "Messing",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Hochwertige Trompeten werden üblicherweise aus Messing gefertigt, da dieses Material einen klaren, strahlenden Klang ermöglicht."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Instrumentenfamilie gehört die Trompete?",
+        "Antworten": ["Blechblasinstrumente", "Holzblasinstrumente", "Saiteninstrumente", "Schlaginstrumente"],
+        "RichtigeAntwort": "Blechblasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Blechblasinstrumente",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Trompete ist ein klassisches Blechblasinstrument, das durch das Spiel von Luft und Lippenvibrationen seinen charakteristischen Klang erzeugt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Technik wird von Jazz-Trompetern häufig eingesetzt, um den Klang zu variieren?",
+        "Antworten": ["Verwendung von Mutes", "Legato-Spiel", "Vibrato", "Schnellfeuer-Noten"],
+        "RichtigeAntwort": "Verwendung von Mutes",
+        "RichtigeAntwortMöglichkeiten": "Mute, Mutes",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Jazz-Trompeter nutzen oft verschiedene Mutes, um den Klang zu färben und einen expressiven Sound zu erzeugen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Ventile besitzt eine typische moderne Trompete?",
+        "Antworten": ["3", "4", "2", "5"],
+        "RichtigeAntwort": "3",
+        "RichtigeAntwortMöglichkeiten": "3",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Standardtrompete ist in der Regel mit drei Ventilen ausgestattet, die das Spielen verschiedener Tonarten und Skalen ermöglichen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist das bekannteste Blechblasinstrument?",
+        "Antworten": ["Trompete", "Posaune", "Tuba", "Horn"],
+        "RichtigeAntwort": "Trompete",
+        "RichtigeAntwortMöglichkeiten": "Trompete",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Trompete ist eines der bekanntesten Blechblasinstrumente und wird in vielen Musikrichtungen von Klassik bis Jazz eingesetzt."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Familie gehört die Posaune?",
+        "Antworten": ["Blechblasinstrumente", "Holzblasinstrumente", "Saiteninstrumente", "Tasteninstrumente"],
+        "RichtigeAntwort": "Blechblasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Blechblasinstrumente Blechbläser",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Posaune gehört zu den Blechblasinstrumenten, obwohl sie keine Ventile, sondern einen Zug hat."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "In welchem Musikstil ist die Posaune besonders verbreitet?",
+        "Antworten": ["Jazz", "Klassik", "Rock", "Elektronische Musik"],
+        "RichtigeAntwort": "Jazz",
+        "RichtigeAntwortMöglichkeiten": "Jazz",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Posaune ist ein zentrales Instrument im Jazz und wird oft für expressive Soli verwendet."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument zieht man vor und zurück, um den Ton zu ändern?",
+        "Antworten": ["Posaune", "Tuba", "Trompete", "Horn"],
+        "RichtigeAntwort": "Posaune",
+        "RichtigeAntwortMöglichkeiten": "Posaune Zugposaune",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Posaune ist das einzige Blechblasinstrument mit einem Zugmechanismus, um die Tonhöhe zu verändern."
+    },    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist das tiefste Blechblasinstrument im Orchester?",
+        "Antworten": ["Tuba", "Posaune", "Horn", "Trompete"],
+        "RichtigeAntwort": "Tuba",
+        "RichtigeAntwortMöglichkeiten": "Tuba",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Tuba ist das tiefste Blechblasinstrument und bildet oft das Fundament des Orchesters oder der Blaskapelle."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Ventile hat eine Tuba?",
+        "Antworten": ["3", "4", "5", "6"],
+        "RichtigeAntwort": "4",
+        "RichtigeAntwortMöglichkeiten": "4 vier",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die meisten Tuben haben vier Ventile, aber es gibt auch Modelle mit fünf oder sechs für noch tiefere Töne."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Instrumentenfamilie gehört das Horn?",
+        "Antworten": ["Blechblasinstrumente", "Holzblasinstrumente", "Saiteninstrumente", "Schlaginstrumente"],
+        "RichtigeAntwort": "Blechblasinstrumente",
+        "RichtigeAntwortMöglichkeiten": "Blechblasinstrumente",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Das Horn gehört zur Familie der Blechblasinstrumente und besticht durch seinen weichen, runden Klang."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie viele Ventile besitzt ein typisches modernes Horn?",
+        "Antworten": ["3", "4", "2", "5"],
+        "RichtigeAntwort": "3",
+        "RichtigeAntwortMöglichkeiten": "3",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein Standardhorn ist in der Regel mit 3 Ventilen ausgestattet, die eine flexible Intonation ermöglichen."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Spieltechnik wird beim Horn häufig eingesetzt, um den Klang zu variieren?",
+        "Antworten": ["Handstopping", "Vibrato", "Legato", "Staccato"],
+        "RichtigeAntwort": "Handstopping",
+        "RichtigeAntwortMöglichkeiten": "Handstopping",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Beim Horn wird die Handstopping-Technik angewendet, bei der der Spieler seine Hand in die Schallbecheröffnung legt, um den Klang zu modifizieren und zusätzliche Farbnuancen zu erzeugen."
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches ist die größte Trommel in einem Standard-Schlagzeug?",
+        "Antworten": ["Bassdrum", "Snaredrum", "Tom-Tom", "Hi-Hat"],
+        "RichtigeAntwort": "Bassdrum",
+        "RichtigeAntwortMöglichkeiten": "Bass Kick",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Bassdrum ist die größte Trommel im Schlagzeug und wird mit einem Fußpedal gespielt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Trommel erzeugt den typischen 'Knall'-Sound im Schlagzeug?",
+        "Antworten": ["Snaredrum", "Bassdrum", "Tom-Tom", "Hi-Hat"],
+        "RichtigeAntwort": "Snaredrum",
+        "RichtigeAntwortMöglichkeiten": "Snaredrum Snare",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Snaredrum hat ein gespanntes Metallteppich an der Unterseite, der für den charakteristischen scharfen Klang sorgt."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man das Paar aus zwei Becken, das mit einem Pedal geschlossen und geöffnet werden kann?",
+        "Antworten": ["Hi-Hat", "Ride-Becken", "Crash-Becken", "China-Becken"],
+        "RichtigeAntwort": "Hi-Hat",
+        "RichtigeAntwortMöglichkeiten": "Hi-Hat HiHat Hihat",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Hi-Hat besteht aus zwei Becken, die mit dem Fußpedal geöffnet und geschlossen werden können."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Instrument besteht aus Trommeln und Becken?",
+        "Antworten": ["Schlagzeug", "Trompete", "Geige", "Klavier"],
+        "RichtigeAntwort": "Schlagzeug",
+        "RichtigeAntwortMöglichkeiten": "Schlagzeug Drums",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Das Schlagzeug kombiniert Trommeln und Becken und wird mit Sticks oder Pedalen gespielt."
+    },   
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Instrumentengruppe gehören Pauken?",
+        "Antworten": ["Schlaginstrumente", "Blasinstrumente", "Saiteninstrumente", "Tasteninstrumente"],
+        "RichtigeAntwort": "Schlaginstrumente",
+        "RichtigeAntwortMöglichkeiten": "Schlaginstrumente Percussion",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Pauken gehören zu den Schlaginstrumenten, da sie durch Schläge auf ein gespanntes Fell zum Klingen gebracht werden."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie verändert man die Tonhöhe einer Pauke?",
+        "Antworten": ["Mit einem Pedal", "Durch stärkeren Schlag", "Mit einem Hebel", "Durch Drehen des Schlägels"],
+        "RichtigeAntwort": "Mit einem Pedal",
+        "RichtigeAntwortMöglichkeiten": "Pedal Fußpedal",
+        "Schwierigkeitsgrad": "extrem",
+        "Fakt": "Die Tonhöhe der Pauke wird mit einem Pedal verändert, das die Spannung des Fells reguliert."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Instrumentengruppe umfasst Trommeln, Becken und Rasseln?",
+        "Antworten": ["Percussion", "Blasinstrumente", "Tasteninstrumente", "Saiteninstrumente"],
+        "RichtigeAntwort": "Percussion",
+        "RichtigeAntwortMöglichkeiten": "Percussion Schlaginstrumente Rhythmusinstrumente",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Percussion-Instrumente sind Schlag- oder Effektinstrumente, die oft den Rhythmus in der Musik vorgeben."
+    },    
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches Schlaginstrument besteht aus nur einem gebogenen Metallstab?",
+        "Antworten": ["Triangel", "Becken", "Tamburin", "Pauken"],
+        "RichtigeAntwort": "Triangel",
+        "RichtigeAntwortMöglichkeiten": "Triangel",
+        "Schwierigkeitsgrad": "mittel",
+        "Fakt": "Die Triangel ist ein einfaches Schlaginstrument aus Metall, das mit einem Metallstab angeschlagen wird."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welche Form hat die Triangel?",
+        "Antworten": ["Dreieck", "Kreis", "Rechteck", "Trapez"],
+        "RichtigeAntwort": "Dreieck",
+        "RichtigeAntwortMöglichkeiten": "Dreieck",
+        "Schwierigkeitsgrad": "leicht",
+        "Fakt": "Die Triangel hat eine dreieckige Form und ist an einer Ecke offen, damit sie frei schwingen kann."
+    },   
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Aus welchem Material bestehen die Klangstäbe eines Xylophons?",
+        "Antworten": ["Holz", "Metall", "Glas", "Kunststoff"],
+        "RichtigeAntwort": "Holz",
+        "RichtigeAntwortMöglichkeiten": "Holz",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Die Klangstäbe eines traditionellen Xylophons bestehen aus Holz und erzeugen durch Anschlagen mit Schlägeln helle, perkussive Töne."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Zu welcher Instrumentengruppe gehört das Xylophon?",
+        "Antworten": ["Schlaginstrumente", "Tasteninstrumente", "Saiteninstrumente", "Blasinstrumente"],
+        "RichtigeAntwort": "Schlaginstrumente",
+        "RichtigeAntwortMöglichkeiten": "Schlaginstrumente",
+        "Schwierigkeitsgrad": "schwer",
+        "Fakt": "Das Xylophon gehört zu den Schlaginstrumenten, da der Ton durch das Anschlagen der Klangstäbe mit Schlägeln erzeugt wird."
+    },
+    {
+        "Kategorie": "Musik",
+        "Frage": "Wie nennt man die Schlägel, mit denen das Xylophon gespielt wird?",
+        "Antworten": ["Mallets", "Sticks", "Drumsticks", "Klöppel"],
+        "RichtigeAntwort": "Mallets",
+        "RichtigeAntwortMöglichkeiten": "Mallets",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Die Schlägel eines Xylophons werden 'Mallets' genannt und können je nach Material des Kopfes unterschiedliche Klangfarben erzeugen."
+    },    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+        "Kategorie": "Musik",
+        "Frage": "Welches elektronische Instrument spielt aufgezeichnete Klänge auf Knopfdruck ab?",
+        "Antworten": ["Sampler", "Synthesizer", "Drum Machine", "Sequenzer"],
+        "RichtigeAntwort": "Sampler",
+        "RichtigeAntwortMöglichkeiten": "Sampler",
+        "Schwierigkeitsgrad": "expert",
+        "Fakt": "Ein Sampler nimmt Klänge auf und kann sie in verschiedenen Tonhöhen und Rhythmen abspielen."
+    },
+    
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

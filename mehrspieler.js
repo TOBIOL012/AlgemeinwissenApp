@@ -2,14 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const spielerContainer = document.getElementById('spieler-container');
     const addPlayerButton = document.getElementById('add-player-button'); // Button für Spieler hinzufügen
     const maxPlayers = 15; // Maximale Anzahl von Spielern
-    const difficulties = ['Leicht', 'Mittel', 'Schwer', 'Extrem'];
+    const difficulties = ['Leicht', 'Mittel', 'Schwer', 'Extrem', 'Expert'];
     let closestItem = null;
     const difficultyColors = {
-        'Leicht': '#5EFC8D',
+        'Leicht': '#4adb75',
         'Mittel': '#E5E55E',
         'Schwer': '#E58A5E',
-        'Extrem': '#E55E5E'
+        'Extrem': '#E55E5E',
+        'Expert': '#d464fe'
     };
+
+    setTimeout(() => {
+        document.querySelector(".loading").style.display ="none";
+    }, 10);
 
     function addDifficultyButtonFunctionality(button) {
         button.addEventListener('click', function () {
@@ -58,6 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function addNewInputField() {
         const inputContainer = document.createElement('div');
+        setTimeout(() => {
+            inputContainer.style.scale = "1";
+            document.querySelector("#add-player-button").style.scale = "1";
+        }, 10);
+        
+
         inputContainer.classList.add('input-container');
     
         const inputWrapper = document.createElement('div');
@@ -75,6 +86,19 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteButton.style.cursor = 'pointer';
         deleteButton.addEventListener('click', function () {
             handleDelete(inputContainer, inputField);
+        });
+        deleteButton.addEventListener('touchstart', () => {
+            requestAnimationFrame(() => {
+                deleteButton.style.scale = '0.75';
+            });
+        });
+    
+        deleteButton.addEventListener('touchend', () => {
+            deleteButton.style.scale = '';
+        });
+    
+        deleteButton.addEventListener('mouseleave', () => {
+            deleteButton.style.scale = '';
         });
     
         // Lösche Block nur beim Verlassen des Feldes (Blur)
@@ -254,7 +278,7 @@ function updateActiveItem() {
             if (allFilled) {
                 localStorage.setItem('players', JSON.stringify(players));
                 localStorage.setItem('isMultiplayer', 'true');
-                window.location.href = 'kategorien-mehrspieler.html';
+                window.location.href = 'Kategorien.html';
             } else {
                 alert('Bitte trage für alle Spieler einen Namen ein.');
             }
@@ -298,8 +322,8 @@ function updateActiveItem() {
 
         if (nextButton) {
             const shouldDisable = !firstTwoFilled;
-            nextButton.style.backgroundColor = shouldDisable ? 'gray' : '#f1730c';
-            nextButton.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
+            nextButton.style.backgroundColor = shouldDisable ? 'rgb(105, 117, 123)' : '#f1730c';
+            nextButton.style.boxShadow = shouldDisable ? '0px 6px 0px 0px rgb(64 77 82)' : '0px 6px 0px 0px rgb(146, 65, 7)';
             nextButton.disabled = shouldDisable;
         }
     }

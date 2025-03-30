@@ -1,6 +1,3 @@
-
-
-
 // Firebase initialisieren
 const firebaseConfig = {
     apiKey: "AIzaSyCHdNTXnLblziPQkH0Kg2WjoTKk4vts1mE",
@@ -16,26 +13,52 @@ firebase.initializeApp(firebaseConfig);
 const firestore = firebase.firestore();
 
 // Globale Benutzer-Daten
-window.userData = {
-    username: "",
-    coins: null,
-    xp: 0,
-    streak: 0,
-    higheststreak: 0,
-    streakOnIce: 3,
-    creationDate: "",
-    streakHistory: [],
-    xpHistory: [],
-    profilepictures: ["AlbertEinstein.png"],
-    currentprofile: "AlbertEinstein.png",
-    profilecolor: "#5d8ee2",
-    token: 0,
-    dailyTasks: 0,
-    lifeTasks: 0,
-};
 
 window.ranking = [];
-window.userRank = 0;
+window.userRank = null;
+let wasOffline = false;
+
+// Standardwerte für Benutzerdaten
+function getDefaultUserData() {
+    return {
+        username: localStorage.getItem("username"),
+        coins: localStorage.getItem("coins"),
+        xp: localStorage.getItem("xp"),
+        streak: localStorage.getItem("streak"),
+        higheststreak: null,
+        streakOnIce: null,
+        creationDate: localStorage.getItem("beigetreten"),
+        streakHistory: [],
+        xpHistory: [],
+        profilepictures: ["AlbertEinstein.png"],
+        currentprofile: localStorage.getItem("currentprofile") || "AlbertEinstein.png",
+        profilecolor: localStorage.getItem("profilecolor") || "rgb(93, 165, 113)",
+        token: null,
+        dailyTasks: [],
+        lifeTasks: [],
+    };
+}
+
+window.userData = getDefaultUserData();
+
+// Internetverbindung prüfen
+function checkInternetConnection() {
+    if (!navigator.onLine) {
+        console.warn("❌ Kein Internetzugang! Setze Benutzerdaten zurück.");
+        window.userData = getDefaultUserData();
+        document.dispatchEvent(new Event('firebaseDataLoaded'));
+        wasOffline = true;
+    } else if (wasOffline) {
+        console.log("✅ Internetverbindung wiederhergestellt! Lese Daten aus Firestore.");
+        wasOffline = false;
+        const uid = localStorage.getItem("uid");
+        if (uid) {
+            initUserData(uid);
+        } else {
+            fetchRankingAndUpdate();
+        }
+    }
+}
 
 // Benutzer-Daten aus Firestore abrufen und überwachen
 function initUserData(uid) {
@@ -43,14 +66,12 @@ function initUserData(uid) {
         if (doc.exists) {
             window.userData = { ...doc.data() };
             console.log("📊 Benutzerdaten aktualisiert:", window.userData);
-            
-            // Dispatch des Events, dass Firebase-Daten geladen wurden
             document.dispatchEvent(new Event('firebaseDataLoaded'));
-            
-            // Danach Ranking abrufen
             fetchRankingAndUpdate();
         } else {
             console.warn("❌ Kein Dokument für UID gefunden:", uid);
+            fetchRankingAndUpdate();
+            document.dispatchEvent(new Event('firebaseDataLoaded'));
         }
     });
 }
@@ -65,15 +86,13 @@ async function fetchRankingAndUpdate() {
 
         window.ranking = parseCSV(csvText);
         window.ranking.sort((a, b) => b.xp - a.xp);
-        window.userRank = window.ranking.findIndex(user => user.UID === localStorage.getItem("uid")) + 1;
-        console.log(localStorage.getItem("uid"));
+        if (uid) {
+            window.userRank = window.ranking.findIndex(user => user.UID === localStorage.getItem("uid")) + 1;
+        }
 
         console.log("🏆 Rangliste aktualisiert:", window.ranking);
         console.log("📌 Deine Platzierung:", window.userRank);
-
-        // Dispatch des Events, dass die Rangliste geladen wurde
         document.dispatchEvent(new Event('rankingDataLoaded'));
-
     } catch (error) {
         console.error("❌ Fehler beim Abrufen der Rangliste:", error);
     }
@@ -83,7 +102,6 @@ async function fetchRankingAndUpdate() {
 function parseCSV(csvText) {
     const lines = csvText.trim().split('\n');
     const headers = lines[0].split(',');
-
     return lines.slice(1).map(line => {
         const values = line.split(',');
         let entry = {};
@@ -99,7 +117,11 @@ const uid = localStorage.getItem("uid");
 if (uid) {
     initUserData(uid);
 } else {
-    console.warn("⚠️ Keine UID gefunden. Benutzer nicht eingeloggt?");
+    setTimeout(fetchRankingAndUpdate, 200);
+    setTimeout(() => document.dispatchEvent(new Event('firebaseDataLoaded')), 200);
 }
 
-console.log(window.userData);
+
+// Regelmäßige Prüfung der Internetverbindung
+setInterval(checkInternetConnection, 1000);
+setTimeout(checkInternetConnection, 500);

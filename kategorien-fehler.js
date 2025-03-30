@@ -29,10 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Funktion zur Aktualisierung des "Weiter"-Buttons (orange/grau)
     function updateContinueButtonState() {
         if (continueButton) {
-            continueButton.style.backgroundColor = selectedCategories.length === 0 ? 'gray' : '#f1730c';
-            continueButton.style.boxShadow = selectedCategories.length === 0 ? '0px 6px 0px 0px rgb(38, 46, 49)' : '0px 6px 0px 0px rgb(146, 65, 7)';
+            const rootStyles = getComputedStyle(document.documentElement);
+            const bgColor = rootStyles.getPropertyValue('--disabled-background').trim();
+            const shadowColor = rootStyles.getPropertyValue('--disabled-shadow').trim();
+            continueButton.style.backgroundColor = selectedCategories.length === 0 ? bgColor : '';
+            continueButton.style.boxShadow = selectedCategories.length === 0 ? `0px 6px 0px 0px ${shadowColor}` : '';
             continueButton.disabled = selectedCategories.length === 0;
-        }
+        } 
     }
 
     // Anfangsstatus aktualisieren
@@ -41,6 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Kategorien-Images durchlaufen und anklickbare Logik hinzufügen
     categoryImages.forEach(img => {
+        img.style.scale = "1";
+        img.style.opacity = "1";
+        setTimeout(() => {
+            img.style.transition = "none";
+        }, 400);
         const category = img.getAttribute('data-category');
         img.style.opacity = selectedCategories.includes(category) ? 1.0 : 0.5;
 

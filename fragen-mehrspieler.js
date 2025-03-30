@@ -2,28 +2,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // ====================================================
     // Multiplayer-Grundlagen und globale Variablen
     // ====================================================
-    const players = JSON.parse(localStorage.getItem('players')) || [];
-    const selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
-    // Globales Array "questions" – alle Fragen (muss existieren)
-    const totalQuestionsPerPlayer = players[0].questionCount;
-    const totalQuestions = totalQuestionsPerPlayer * players.length;
-    localStorage.setItem('totalQuestions', totalQuestions);
-  
-    let currentPlayerIndex = 0;
-    let questionsAsked = localStorage.getItem('questionsAsked') ? parseInt(localStorage.getItem('questionsAsked')) : 0;
-    let currentQuestionIndex = 0;
-    let correctCount = 0;
-    let isAnswerChecked = false; // Nur im Eintippmodus
-  
-    console.log('DEBUG: Players:', players);
-    console.log('DEBUG: Selected Categories:', selectedCategories);
-    console.log('DEBUG: Total Questions Per Player:', totalQuestionsPerPlayer);
-    console.log('DEBUG: Total Questions:', totalQuestions);
-  
-    players.forEach(player => {
-      if (player.questionsAnswered === undefined) player.questionsAnswered = 0;
-      if (player.points === undefined) player.points = 0;
-    });
+    let players, selectedCategories, totalQuestionsPerPlayer, totalQuestions, currentPlayerIndex, questionsAsked, currentQuestionIndex, correctCount, isAnswerChecked;
+
+    function initializeGameData() {
+      players = JSON.parse(localStorage.getItem('players')) || [];
+      selectedCategories = JSON.parse(localStorage.getItem('selectedCategories')) || [];
+      totalQuestionsPerPlayer = players[0]?.questionCount || 0;
+      totalQuestions = totalQuestionsPerPlayer * players.length;
+      localStorage.setItem('totalQuestions', totalQuestions);
+
+      currentPlayerIndex = 0;
+      questionsAsked = localStorage.getItem('questionsAsked') ? parseInt(localStorage.getItem('questionsAsked')) : 0;
+      currentQuestionIndex = 0;
+      correctCount = 0;
+      isAnswerChecked = false; // Nur im Eintippmodus
+
+      console.log('DEBUG: Players:', players);
+      console.log('DEBUG: Selected Categories:', selectedCategories);
+      console.log('DEBUG: Total Questions Per Player:', totalQuestionsPerPlayer);
+      console.log('DEBUG: Total Questions:', totalQuestions);
+
+      players.forEach(player => {
+        if (player.questionsAnswered === undefined) player.questionsAnswered = 0;
+        if (player.points === undefined) player.points = 0;
+      });
+    }
+
+    // Call the function to initialize game data
+    initializeGameData();
+    window.initializeGameData = initializeGameData;
+
+
+
+    
   
     // ====================================================
     // Multiplayer-Anzeige
@@ -60,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (questionsAsked >= totalQuestions) {
         localStorage.setItem('correctCount', correctCount);
         console.log('DEBUG: Alle Fragen beantwortet – redirect to endranking-mehrspieler.html');
-        window.location.href = 'endranking-mehrspieler.html';
+        window.updateRanking();
         return;
       }else if(((currentPlayerIndex + 1) % (players.length + 1)) === 0 && questionsAsked < totalQuestions) {
         localStorage.setItem('players', JSON.stringify(players));
         console.log('DEBUG: Runde beendet – redirect to ranking-mehrspieler.html');
-        window.location.href = 'ranking-mehrspieler.html';
+        window.updateRanking();
         return;
       }else{
         loadQuestion();
@@ -364,6 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
       const currentPlayer = players[currentPlayerIndex];
       updateCurrentPlayerDisplay(currentPlayer);
+
       updateQuestionStatusDisplay(currentPlayer);
     
       const randomQuestion = getRandomQuestion();
@@ -476,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateStats(randomQuestion, isMatch);
             const answerbox = document.querySelector('.answer-box');
             const factBox = document.querySelector('.fact-box');
-            const factDisplay = document.querySelector('.fact');
+            const factDisplay = document.querySelector('.fact2');
             if (isMatch) {
               answerbox.innerHTML = `<span class="highlight">Richtig!</span> <span class="highlight">${randomQuestion.RichtigeAntwort}</span>`;
               factBox.textContent = randomQuestion.Fakt;
@@ -516,6 +528,8 @@ document.addEventListener('DOMContentLoaded', function() {
         };
       }
     }
+
+    window.loadQuestion = loadQuestion;
     
     // ====================================================
     // Handler für den separaten Weiter-Button im Auswahlmodus
