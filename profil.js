@@ -487,14 +487,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentX = 0;
     let isDragging = false;
 
-    function showPopup() {
+    function showPopup(nachricht) {
         const popup = document.createElement("div");
         Object.assign(popup.style, {
             position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
             padding: "1.2rem", background: "#39404d", color: "white", borderRadius: "8px",
             opacity: "0.85", transition: "opacity 0.5s", zIndex: "1000", fontSize: "1.1rem"
         });
-        if (!localStorage.getItem("uid")){
+        if (nachricht == "xp"){
+            popup.textContent = "XP-Pfad kommt bald";
+        } else if (!localStorage.getItem("uid")){
             popup.textContent = "Anmeldung erforderlich";
         } else{
             popup.textContent = "Internet erforderlich";
@@ -505,11 +507,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateIndicator(nummer) {
+
+        if(nummer == 2 && strichvoher == 1){
+            nummer = 3;
+        } else if(nummer == 2 && strichvoher == 3){
+            nummer = 1;
+        } else if (nummer == 2){
+            nummer = 4;
+        }
+
         if(strichvoher == 1 && nummer !== 1 && nummer !== 4 && window.userData.higheststreak == null){
             nummer = 4;
         } else if (strichvoher == 4 && nummer !== 4 && nummer !== 1 && window.userData.higheststreak == null){
             nummer = 1;
         }
+
         const strich = document.querySelector(".strich");
         const positions = ["12.5%", "37.5%", "62.5%", "87.5%"];
         strich.style.left = `calc(${positions[nummer - 1]} - 2rem)`;
@@ -525,6 +537,18 @@ document.addEventListener('DOMContentLoaded', function () {
             nummer = 1;
             showPopup();
         }
+
+        if(nummer == 2 && strichvoher2 == 1){
+            nummer = 3;
+            showPopup("xp");
+        } else if(nummer == 2 && strichvoher2 == 3){
+            nummer = 1;
+            showPopup("xp");
+        } else if (nummer == 2){
+            nummer = 4;
+            showPopup("xp");
+        }
+
         strichvoher2 = nummer;
         iframes.forEach(iframe => {
             iframe.style.transition = `transform ${duration}ms ease-in-out`;

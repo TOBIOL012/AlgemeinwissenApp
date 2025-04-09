@@ -48,49 +48,78 @@ document.addEventListener("DOMContentLoaded", () => {
     einstellungen.style.opacity = "0";
     einstellungen.style.transition = "top 0.5s ease, opacity 0.5s ease";
 
+    function simulateZahnradFeedback(repeats = 5, interval = 60) {
+        let count = 0;
+        const intervalId = setInterval(() => {
+            if (window.TapticEngine && window.TapticEngine.selection) {
+                window.TapticEngine.selection(); // ultra-subtiler Effekt
+            }
+            count++;
+            if (count >= repeats) clearInterval(intervalId);
+        }, interval);
+    }
+    
     settingsIcon.addEventListener("click", () => {
-        isSettingsOpen = !isSettingsOpen; // Umschalten zwischen Ein-/Ausblenden
-
+        if (settingsIcon.disabled) return;
+        settingsIcon.disabled = true;
+    
+        isSettingsOpen = !isSettingsOpen;
+    
+        // 👉 Direkt zu Beginn: Zahnrad-Haptik abspielen
+        simulateZahnradFeedback(5, 80); // 5 Impacts in 400 ms
+    
         if (isSettingsOpen) {
-            // WebP Animation vorwärts abspielen und gleichzeitig Opacity und Position animieren
             playWebPAnimation(true);
-
+    
             allElements.forEach(el => {
                 el.style.transition = "opacity 0.5s ease";
                 el.style.opacity = "0";
-                el.style.pointerEvents = "none"; // Klicks deaktivieren
+                el.style.pointerEvents = "none";
             });
 
+            document.body.style.transition = "backgroundColor 0.5s ease";
+            document.body.style.backgroundColor = "#181b22";
+            setTimeout(() => {
+                document.body.style.transition = "";
+            }, 480);
+    
             buttonsAndLinks.forEach(button => {
                 button.disabled = true;
             });
-
+    
             einstellungen.style.display = "block";
             setTimeout(() => {
                 einstellungen.style.top = "0";
                 einstellungen.style.opacity = "1";
             }, 10);
         } else {
-            // WebP Animation rückwärts abspielen und gleichzeitig Opacity und Position animieren
             playWebPAnimation(false);
-
-            
-
+    
             einstellungen.style.top = "-100%";
             einstellungen.style.opacity = "0";
             setTimeout(() => {
                 einstellungen.style.display = "none";
             }, 500);
-
+    
             allElements.forEach(el => {
                 el.style.opacity = "1";
-                el.style.pointerEvents = "auto"; // Klicks aktivieren
+                el.style.pointerEvents = "auto";
             });
 
+            document.body.style.transition = "backgroundColor 0.5s ease";
+            document.body.style.backgroundColor = "#181b22" ;
+            setTimeout(() => {
+                document.body.style.transition = "";
+            }, 480);
+    
             buttonsAndLinks.forEach(button => {
                 button.disabled = false;
             });
         }
+    
+        setTimeout(() => {
+            settingsIcon.disabled = false;
+        }, 500);
     });
 
 
@@ -127,6 +156,72 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    const deleteButton = document.querySelector(".löschen");
+
+deleteButton.addEventListener("click", () => {
+    showGlobalModal(
+        "Account wirklich löschen?",
+        "Dein gesamter Account inklusive aller Statistiken, XP, Münzen, Streaks und Fehler wird dauerhaft gelöscht und kann nicht wiederhergestellt werden.",
+        "warnung.png",
+        (result) => {
+            if (result === "ok") {
+                const user = firebase.auth().currentUser;
+                const uid = user?.uid;
+
+                if (!uid) {
+                    console.error("Keine UID gefunden.");
+                    return;
+                }
+
+                const firestore = firebase.firestore();
+
+                user.reauthenticateWithPopup(new firebase.auth.GoogleAuthProvider()) // oder dein Loginprovider
+                    .then(() => user.delete())
+                    .then(() => {
+                        // Lokalen Speicher löschen…
+                    });
+
+                // 1. Firestore-Daten löschen
+                firestore.collection("users").doc(uid).delete()
+                    .then(() => {
+                        console.log("Firestore-Daten gelöscht.");
+
+                        // 2. Authentifizierten Account löschen
+                        return user.delete();
+                    })
+                    .then(() => {
+                        console.log("Firebase-Auth-Account gelöscht.");
+
+                        // 3. Lokale Daten löschen
+                        localStorage.removeItem("uid");
+                        localStorage.removeItem("username");
+                        localStorage.removeItem("coins");
+                        localStorage.removeItem("xp");
+                        localStorage.removeItem("streak");
+                        localStorage.removeItem("beigetreten");
+                        localStorage.removeItem("currentprofile");
+                        localStorage.removeItem("profilecolor");
+                        localStorage.removeItem("mission-last-xp");
+                        localStorage.removeItem("tokenminus");
+
+                        // 4. Erfolg anzeigen
+                        showGlobalModal(
+                            "Account gelöscht",
+                            "Dein Account wurde erfolgreich gelöscht. Du wirst nun zur Startseite weitergeleitet.",
+                            "kreuz.png",
+                            () => {
+                                window.location.reload();
+                            }
+                        );
+                    })
+                    .catch((error) => {
+                        console.error("Fehler beim Löschen:", error);
+                    });
+            }
+        }
+    );
+});
 
 
 

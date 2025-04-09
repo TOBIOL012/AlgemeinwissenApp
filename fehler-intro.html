@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fehlermodus Erklärung</title>
+  <link rel="stylesheet" href="fehler-intro.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="headline">Fehler</div>
+    <div class="infotext">In diesem Modus kannst du deine gemachten Fehler wiederholen und so dich gezielt verbessern</div>
+  </div>
+
+  <div class="intro-image-wrapper">
+    <img src="info-fehler.png" alt="Fehlermodus Vorschau" class="intro-image">
+  </div>
+
+  <div class="infobox">
+    <div class="infoteil1">
+        <div class="infobox1">2x</div>
+        <div class="infobox2">richtig beantwortet?</div>
+    </div>
+    <div class="infobox3">Dann ist die Frage erledigt und verschwindet aus dem Modus</div>
+  </div>  
+
+  <div class="bottom-section">
+    <div class="checkbox-row">
+      <input type="checkbox" id="skipCheckbox">
+      <label for="skipCheckbox">Diese Seite nicht mehr anzeigen</label>
+    </div>
+
+    <button class="weiter-button" onclick="weiter()">Weiter</button>
+  </div>
+
+  <script>
+    function weiter() {
+      if (document.getElementById('skipCheckbox').checked) {
+        localStorage.setItem('skipFehlerIntro', 'true');
+      }
+      window.location.href = 'kategorien-fehler.html';
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+<!--                localStorage.removeItem('skipFehlerIntro');                    -->
+

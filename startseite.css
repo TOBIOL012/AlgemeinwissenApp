@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
-body {
+html,body {
+    width: 100%;
     font-family: "Dosis", sans-serif;
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: flex-end; /* Inhalte am unteren Rand ausrichten */
     align-items: center;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -32,15 +33,7 @@ html {
     overflow-x: hidden;
 }
 
-.buttons-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: clamp(0rem, 1.9rem, 3.5vh);
-    bottom: clamp(0rem, 6rem, calc(4rem + 3.5vh)); /* Vergrößerter Abstand zur Navigationsleiste */
-}
+
 
 .top-bar-content{
     display:none;
@@ -181,8 +174,8 @@ html {
 }
 
 .coins-img {
-    width: 31px;
-    height: 31px;
+    width: 27px;
+    height: 27px;
     margin-right: 4px;
 }
 
@@ -375,14 +368,14 @@ html {
 
 .nav-bar {
     bottom:0;
-    z-index: 9999;
+    z-index: 10001;
     position: fixed;
     width: 100vw;
     background-color: var(--background-color);
     display: flex;
     justify-content: space-around;
     padding: 1em 0;
-    padding-bottom: 0.5em;
+    padding-bottom: 2em;
     border-top: 3px solid var(--line-color);
     border-top-left-radius: 5px; 
     border-top-right-radius: 5px;
@@ -409,7 +402,7 @@ html {
     height: 2.3em;
     color: white;
     scale: 1;
-    transition: scale 0.12s cubic-bezier(0.42, 0, 0.23, 2.12);
+    transition: scale 0.12s cubic-bezier(0.42, 0, 0.52, 1.87);
 }
 /*
 .nav-button:active{
@@ -452,7 +445,7 @@ html {
 }
 
 .Fehler-container {
-    width: 90%;
+    width: 100%;
     position: relative; /* Wichtiger Bezugspunkt für die roten Punkte */
     display: inline-block; /* Für korrekte Positionierung der Elemente */
 }
@@ -549,7 +542,7 @@ input:-webkit-autofill {
     border-radius: 2rem;
     border-radius: 1em;
     font-size: 1.6em;
-    width: 90%;
+    width: 100%;
     height: 43vw;
     max-height: 30vh;
     font-family: "Dosis", sans-serif;
@@ -612,10 +605,15 @@ input:-webkit-autofill {
 
 .quiz{
     width: 90vw;
-    height: calc(100vh - 19.3rem - 43vw);
-    min-height: calc(100vh - 5rem - 60vh);
     border-radius: 2rem;
     background-color: var(--background-block-color);
+    position: relative;
+    object-fit: contain;
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    object-fit: cover;
+    min-height: 0;
 }
 
 
@@ -631,8 +629,7 @@ input:-webkit-autofill {
     display: flex;
     align-items: flex-end;
     position:absolute;
-    height: calc(100vh - 19.3rem - 43vw - 1.5rem);
-    min-height: calc(100vh - 5rem - 60vh - 1.5rem);
+    height: calc(100% - 1.6rem);
     width: 90%;
     top: 0;
     padding-left: 1.6rem;
@@ -683,7 +680,7 @@ input:-webkit-autofill {
     padding-bottom: clamp(0rem, 1.8rem, 4vh);
     border-radius: 1em;
     font-size: 1.6em;
-    width: 90%;
+    width: 100%;
     font-family: "Dosis", sans-serif;
     box-shadow: 0px 6px 0px 0px #bb691d;
     position: relative;
@@ -714,6 +711,197 @@ input:-webkit-autofill {
     width: 2.5rem;
     height: 2.5rem;
 }
+
+.datenschutz-text-u {
+    color: white;
+    text-align: center;
+    font-size: var(--font-size-header);
+}
+
+.datenschutz1{
+    width: calc(100% - 3rem);
+    padding: 0rem 1.5rem;
+    overflow: scroll;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    font-size: 1rem;
+}
+
+.startseite-container{
+    top: 3.5rem;
+    height: 100%;
+    width: 195vw;
+    padding-left: 5vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: clamp(0rem, 6rem, calc(4rem + 3.5vh));
+    transform: translateX(-100vw);
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.buttons-container {
+    height: calc(100% - 10.5rem);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0rem, 1.9rem, 3.5vh);
+    bottom: clamp(0rem, 8rem, calc(6rem + 3.5vh)); /* Vergrößerter Abstand zur Navigationsleiste */
+}
+
+.lernpfad{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: clamp(0rem, 6rem, calc(4rem + 3.5vh));
+    margin-left: 5vw;
+    padding: 1rem;
+    color:#ebf1f4;
+    padding-top: 0;
+}
+
+
+
+
+
+
+
+
+
+#login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none; /* alles bleibt klickbar außer das Popup */
+}
+
+.dimmed-content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4rem); /* Höhe minus Nav-Bar */
+    pointer-events: auto;
+}
+
+.overlay-dim {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay-popup {
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);; /* leicht wärmeres, moderneres Grau */
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    border-top: 2px solid var(--line-color);;
+    color: white;
+    font-family: "Dosis", sans-serif;
+    box-sizing: border-box;
+    z-index: 10000;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2.1rem 1.5rem 2.35rem 1.5rem;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35); /* ☁️ Card-Effekt */
+    gap: 1rem;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.overlay-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-align: left;
+    color: white;
+}
+
+.overlay-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #d4d4d4; /* weicher als pures Weiß */
+    text-align: left;
+    margin-bottom: 0.25rem;
+}
+
+.overlay-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.overlay-button {
+    background-color: rgb(27, 143, 79);
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 6px 0px 0px rgb(21, 112, 62);
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.overlay-button:active {
+    background-color: rgb(22, 120, 68);
+}
+
+@keyframes popupBumpIn {
+    0% {
+        transform: translateY(20%) scale(0.99);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(0) scale(1.005);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.overlay-popup.animate-in {
+    animation: popupBumpIn 0.25s ease-out;
+}
+
+.highlight-green {
+    color: rgb(31, 199, 106);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.highlight-blue {
+    color: rgb(31, 199, 106);;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
 
 
 

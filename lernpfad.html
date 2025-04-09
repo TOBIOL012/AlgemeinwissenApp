@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeinwissen Quiz App - Kategorien</title>
+    <link rel="stylesheet" href="lernpfad.css">
+    <link rel="stylesheet" href="Standart.css">
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+    <script src="Fragen/geschichte.js" defer></script>
+    <script src="Fragen/geographie.js" defer></script>
+    <script src="Fragen/sport.js" defer></script>
+    <script src="Fragen/musik.js" defer></script>
+    <script src="Fragen/wissenschaft.js" defer></script>
+    <script src="Fragen/kunst.js" defer></script>
+    <script src="Fragen/astronomie.js" defer></script>
+    <script src="Fragen/literatur.js" defer></script>
+    <script src="Fragen/question.js" defer></script>
+</head>
+<body>
+    <main>
+        
+        <div id="spieler-container">
+            <div class="header">
+                <a href='startseite.html' class="pfeil"><img src="pfeil.png" class="back-arrow"></a>
+                <div class="Überschrift">Lernpfad</div>
+            </div>    
+        </div>
+        <div class="pfad">
+            <div class="scroll">
+                <div class="geschichte" id="kategorie">
+                    <div class="kategorie-header">
+                        <a>Geschichte</a>
+                    </div>
+                    <div class="lektion">
+                        <img class="lektion-img" src="Kategorien/6.png">
+                        <div class="lektion-side">
+                            <div class="lektion-uberschrift">2 Weltkrieg</div>
+                            <div class="lektion-button">Starten</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="biologie" id="kategorie">
+                    <div class="kategorie-header">
+                        <a>Biologie</a>
+                    </div>
+                    <div class="lektion">
+                        <img class="lektion-img" src="Kategorien/5.png">
+                        <div class="lektion-side">
+                            <div class="lektion-uberschrift">Dna</div>
+                            <div class="lektion-button">Starten</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side">
+                <img class="geschichte-icon" id="icon" src="categorie-icons/i-tempel.png">
+                <img class="geschichte-icon" id="icon" src="categorie-icons/i-weltkarte.png">
+                <img class="geschichte-icon" id="icon" src="categorie-icons/i-dna.png">
+            </div>
+        </div>
+        
+        
+    </main>
+    <script src="lernpfad.js"></script>
+</body>
+</html>

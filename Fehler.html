@@ -24,6 +24,19 @@
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
+    <div id="intro-page" style="display: none;">
+        <div style="padding: 2em; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; background-color: #1e1e1e; color: white;">
+            <h2>Willkommen im Fehlermodus</h2>
+            <p style="margin: 1em 0;">Hier kannst du deine früheren Fehler verbessern und daraus lernen!</p>
+            <label style="margin-top: 2em;">
+                <input type="checkbox" id="skip-intro-checkbox" style="transform: scale(1.5); margin-right: 0.5em;">
+                Diese Seite nicht mehr anzeigen
+            </label>
+            <button id="intro-continue-button" style="margin-top: 2em; padding: 0.7em 2em; background-color: #e48d45; color: white; border: none; border-radius: 15px; font-size: 1.1em; cursor: pointer;">
+                Weiter
+            </button>
+        </div>
+    </div>    
     <header>
         <a href = 'startseite.html' class="home-button"><img src="icons8-home.svg" alt="Home"></a>
         <div class="progress-bar-wrapper">

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
+
+
+
 body {
+    overflow: scroll;
     font-family: "Dosis", sans-serif;
     margin: 0;
     padding: 0;
@@ -10,11 +14,11 @@ body {
 }
 
 main {
+    overflow: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
     box-sizing: border-box;
 }
 
@@ -117,6 +121,7 @@ button:active {
     border-radius: 25px;
 }
 
+
 .biologie {
     padding-bottom: 14vh;
 }
@@ -180,5 +185,9 @@ img[data-category]{
     border-radius: 0.7rem;
     background-color: #464d51a1;
     scale:0.5;
-    transition: scale 0.15s cubic-bezier(0.42, 0, 0.23, 2.12);
+    transition: scale 0.17s cubic-bezier(0.42, 0, 0.48, 1.82);
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }

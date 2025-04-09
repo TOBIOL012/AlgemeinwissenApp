@@ -481,6 +481,29 @@ body {
 
 }
 
+.löschen{
+    background-color: var(--background-color);
+    color: rgb(236, 63, 63);
+    border: solid 3px var(--line-color);
+    border-radius: 1em;
+    width: calc(90% - 6px);
+    box-shadow: none;
+    text-decoration: none;
+    gap: 0.6rem;
+    padding: 0.7rem 0.8rem;
+    font-size: 1.3em;
+    font-family: "Dosis", sans-serif;
+    width: calc(90vw - 1.6rem);
+    margin-top: 1.6rem;
+    margin-left: 5vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    position: relative;
+
+}
+
 .einstellungen{
     width:100%;
     margin-top:4.5rem;

@@ -16,6 +16,12 @@
     <script src="Fragen/literatur.js" defer></script>
     <script src="Fragen/question.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+    <script src="melden.js" defer></script>
+    <script src="speichern.js" defer></script>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="manifest" href="/manifest.json">
 </head>
@@ -24,7 +30,7 @@
         <a href="startseite.html" class="home-button"><img src="icons8-home.svg" alt="Home"></a>
         <div class="progress-bar-wrapper">
             <div class="progress-bar">
-                <div class="progress" style="width: 0%;"></div>
+                <div class="progress" style="width: 0%; display: none;"></div>
             </div>
         </div>
     </header>
@@ -75,16 +81,29 @@
                 <button id="next-button">Weiter</button>
             </div>
         </span>
-            <div class="next-button-wrapper">
-                <input type="text" class="note-input" placeholder="Fehler">
-                <div class="answer-box">
-                    <a class="correct-answer"></a>
+
+        <div class="next-button-wrapper">
+            <div class="icon-bar">
+                <div class="left-icons">
+                    <img src="share-icon.png" alt="Teilen" class="action-icon">
+                    <img src="speichern.svg" alt="Speichern" class="action-icon">
                 </div>
-                <div class="fact-box">
-                    <p class="fact"></p>
+                <div class="right-icon">
+                    <img src="melden.png" alt="Melden" class="action-icon">
                 </div>
             </div>
+        
+            <input type="text" class="note-input" placeholder="Fehler">
+            <div class="answer-box">
+                <a class="correct-answer"></a>
+            </div>
+            <div class="fact-box">
+                <p class="fact"></p>
+            </div>
         </div>
+        
+        
+
     </main>
 
     <script src="index2.js"></script>

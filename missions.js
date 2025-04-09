@@ -129,7 +129,7 @@ document.addEventListener("firebaseDataLoaded", function() {
               </div>
             </div>
           </div>
-          <div class="img"><img src="abzeichen/${mission["abzeichen" + index]}" alt="Münzen"></div>
+          <div class="img"><img src="gold.png" alt="Münzen"></div>
         </div>`;
       }
     });

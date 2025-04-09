@@ -2,6 +2,7 @@ const coinsElement = document.getElementById("coins-value");
 const xpElement = document.getElementById("xp-value");
 const streakElement = document.getElementById("streak-value");
 const dot = document.querySelector(".notification-dot");
+let profilecolor = localStorage.getItem("profilecolor") || "rgb(93, 165, 113)";
 
 // ❗ Falsche Fragen aus dem Speicher holen und Punktanzeige aktualisieren
 function updateNotificationDot() {
@@ -44,12 +45,24 @@ function syncStatsFromFirestore() {
     localStorage.setItem("token", window.userData.token || 0);
     localStorage.setItem("streak", window.userData.streak || 0);
     localStorage.setItem("profilecolor", window.userData.profilecolor || 0);
+    //profilecolor = window.userData.profilecolor || "rgb(93, 165, 113)";
     localStorage.setItem("currentprofile", window.userData.currentprofile || 0);
     localStorage.setItem("beigetreten", window.userData.creationDate || 0);
     localStorage.setItem("username", window.userData.username || 0);
 }
 
+
+
+
 function switchsite(site) {
+    if (site === 'kategorien-fehler.html') {
+        if (localStorage.getItem('skipFehlerIntro') === 'true') {
+            site = 'kategorien-fehler.html'; // ← Richtige Seite!
+        } else {
+            site = 'fehler-intro.html';
+        }
+    }
+
     const transitionBlock = document.createElement("div");
     Object.assign(transitionBlock.style, {
         position: "fixed",
@@ -57,23 +70,22 @@ function switchsite(site) {
         left: "0",
         width: "100%",
         height: "0",
-        backgroundColor: "#141F25", // Adjust the color as needed
+        backgroundColor: "#141F25",
         zIndex: "10000",
         transition: "height 0.2s ease-in-out",
     });
 
     document.body.appendChild(transitionBlock);
-
-    // Trigger the height transition
     requestAnimationFrame(() => {
         transitionBlock.style.height = "100%";
     });
 
-    // Redirect after the animation
     setTimeout(() => {
         window.location.href = site;
-    }, 200);
+    }, 300);
 }
+
+
 
 
 
@@ -113,56 +125,76 @@ function showPopup1(text) {
 
 
 
-//Navigation Test
 const frames = document.querySelectorAll("div[id='iframe']");
 const navButtons = document.querySelectorAll(".nav-bar .nav-button");
 
-// Letzten aktiven Frame aus localStorage abrufen
 const lastActiveFrameIndex = localStorage.getItem("activeFrameIndex");
-
-// Falls vorhanden, den gespeicherten Frame aktivieren
 if (lastActiveFrameIndex !== null && frames[lastActiveFrameIndex]) {
     frames.forEach(frame => frame.style.display = "none");
     frames[lastActiveFrameIndex].style.display = "flex";
 }
 
-// Event-Listener für die Navigation setzen
 navButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
-        if (localStorage.getItem("uid") || index === 4 || index === 2 || index === 0) {
-            if (window.userData.higheststreak !== null || index === 4 || index === 2 || index === 0) {
-                frames.forEach(frame => frame.style.display = "none");
-                document.body.style.backgroundColor = "";
-        
-                if (frames[index]) {
-                    if (index === 3) {
-                        frames[index].style.display = "block";
-                    } else{
-                        frames[index].style.display = "flex";
-                    }
-                    localStorage.setItem("activeFrameIndex", index); // Aktiven Frame speichern
-                }
+        frames.forEach(frame => frame.style.display = "none");
+        document.body.style.backgroundColor = "";
+
+        if (frames[index]) {
+            if (index === 3) {
+                frames[index].style.display = "block";
             } else {
-                showPopup1("Kein Internetzugriff");
+                frames[index].style.display = "flex";
             }
-        } else {
-            if (index == 1){
-                showPopup1("Online Missionen erst nach Anmeldung im Profil verfügbar");
-            } else if (index == 3){
-                showPopup1("Shop erst nach Anmeldung im Profil verfügbar");
-            }
-            document.querySelectorAll(".nav-button img")[4].style.transition = "scale 0.12s ease-in-out";
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1.35", 150);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1", 350);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1.25", 550);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1", 750);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1.15", 950);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1", 1150);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1.05", 1350);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.scale = "1", 1550);
-                setTimeout(() => document.querySelectorAll(".nav-button img")[4].style.transition = "", 2000);
+            localStorage.setItem("activeFrameIndex", index);
         }
+
+        const isLoggedIn = !!localStorage.getItem("uid");
+
+        if (!isLoggedIn && (index === 1 || index === 3)) {
+            const overlay = document.getElementById("login-overlay");
+            const popup = document.querySelector(".overlay-popup");
+
+            document.getElementById("overlay-text").innerHTML = `
+                Um ${index === 1 ? '<span class="highlight-green">Missionen</span>' : '<span class="highlight-green">den Shop</span>'} zu öffnen brauchst du einen Account. Logge dich ein oder erstelle dir einen Account!
+            `;
+
+            overlay.style.display = "block";
+            popup.classList.remove("animate-in");
+            void popup.offsetWidth;
+            popup.classList.add("animate-in");
+        }
+
+        if (!isLoggedIn && index === 3) {
+            const overlay = document.getElementById("login-overlay-shop");
+            const popup = overlay.querySelector(".overlay-popup");
+        
+            overlay.querySelector("#overlay-text-shop").innerHTML = `
+              Um den <span class="highlight-blue">Shop</span> zu öffnen brauchst du einen Account. Logge dich ein oder erstelle dir einen Account!
+            `;
+        
+            overlay.style.display = "block";
+            popup.classList.remove("animate-in");
+            void popup.offsetWidth;
+            popup.classList.add("animate-in");
+        
+            document.getElementById("overlay-login-button-shop").onclick = () => {
+                frames.forEach(frame => frame.style.display = "none");
+                frames[4].style.display = "flex";
+        
+                overlay.style.display = "none";
+                popup.classList.remove("animate-in");
+            };
+        }
+        
     });
+});
+
+document.getElementById("overlay-login-button").addEventListener("click", () => {
+    frames.forEach(frame => frame.style.display = "none");
+    frames[4].style.display = "flex";
+
+    document.getElementById("login-overlay").style.display = "none";
+    document.querySelector(".overlay-popup").classList.remove("animate-in");
 });
 
 
@@ -218,18 +250,27 @@ const navbuttons = document.querySelectorAll('.nav-button');
 navbuttons.forEach((button, index) => {
     console.log(index);
     button.addEventListener('touchstart', () => {
+        const startTime = Date.now();
         requestAnimationFrame(() => {
-            document.querySelectorAll('.nav-button img')[index].style.scale = '0.75';
+            document.querySelectorAll('.nav-button img')[index].style.scale = '0.82';
         });
+
+        button.addEventListener('touchend', () => {
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, 100 - elapsedTime);
+            setTimeout(() => {
+                document.querySelectorAll('.nav-button img')[index].style.scale = '1';
+            }, remainingTime);
+        }, { once: true });
     });
 
-    button.addEventListener('touchend', () => {
+    button.addEventListener('mouseleave', () => {
         document.querySelectorAll('.nav-button img')[index].style.scale = '1';
     });
 
-    if(!localStorage.getItem("uid")){
-        if (index == 1  || index == 3){
-            button.style.opacity = "0.8"
+    if (!localStorage.getItem("uid")) {
+        if (index == 1 || index == 3) {
+            button.style.opacity = "0.8";
         }
     }
 });
@@ -280,6 +321,18 @@ document.addEventListener("firebaseDataLoaded", () => {
         }
     }
 });
+
+document.querySelector(".datenschutz").addEventListener("click", () => {
+    frames.forEach(frame => frame.style.display = "none");
+    frames[6].style.display = "block";
+});
+
+document.querySelector("#back-datenschutz").addEventListener("click", () => {
+    frames.forEach(frame => frame.style.display = "none");
+    frames[4].style.display = "flex";
+});
+
+
 
 let quizStyleAktiv = false; // Zustand merken
 
@@ -364,6 +417,7 @@ absolute.addEventListener('mouseleave', () => {
     pfadstart.style.boxShadow = '';
     pfadstart.style.transform = '';
 });
+
 
 
 

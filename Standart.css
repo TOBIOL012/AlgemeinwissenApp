@@ -72,7 +72,7 @@ html::-webkit-scrollbar {
     scrollbar-width: none;  /* Firefox */
 }
 
-iframe::-webkit-scrollbar {
+#iframe::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
 
@@ -198,4 +198,27 @@ img{
     pointer-events: auto; /* Interaktiv lassen */
     user-select: none; /* Verhindert Markieren */
     -webkit-user-drag: none;
+}
+
+img {
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+  }
+
+  img {
+    -webkit-touch-callout: none; /* verhindert das iOS-Bild-Menü */
+  }
+
+  main{
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+main::-webkit-scrollbar {
+    display: none; /* Safari, iOS, Chrome */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Safari, iOS, Chrome */
 }

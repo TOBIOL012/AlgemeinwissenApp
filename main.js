@@ -60,15 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const category = img.getAttribute('data-category');
         img.style.opacity = selectedCategories.includes(category) ? 1.0 : 0.5;
         if (selectedCategories.includes(category)){
-            setTimeout(() => {
             const hacken = document.createElement('img');
                     parent.appendChild(hacken);
                     hacken.className = 'hacken';
+                    hacken.style.opacity = "0";
                     hacken.src = "https://img.icons8.com/FFFFFF/metro/50/checkmark.png";
                     setTimeout(() => {
+                        hacken.style.opacity = "1";
                         hacken.style.scale = "1";
-                    }, 20);
-                }, 200);
+                    }, 200);
         }
 
         img.addEventListener('click', function() {
@@ -98,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     parent.appendChild(hacken);
                     hacken.className = 'hacken';
                     hacken.src = "https://img.icons8.com/FFFFFF/metro/50/checkmark.png";
+                    hacken.style.opacity = "0";
                     setTimeout(() => {
+                        hacken.style.opacity = "1";
                         hacken.style.scale = "1";
-                    }, 20);
+                    }, 40);
                     this.style.opacity = 1.0;
                 }
                 if (selectedCategories.includes('Alles')) {
@@ -188,8 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ];
             } else if (selectedDifficulty === 'mittel') {
                 questionsPool = [
-                    ...mittelQuestions,
-                    ...schwerQuestions.slice(0, Math.floor(mittelQuestions.length * 0.4))
+                    ...mittelQuestions
                 ];
             } else {
                 questionsPool = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
@@ -670,3 +671,10 @@ document.addEventListener('click', function (event) {
         topBar.classList.remove('expanded');
     }
 });
+
+
+
+
+
+
+

@@ -8,113 +8,224 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sprachaufnahme initialisieren
     let recognition;
-let isRecognizing = false; // Flag, um den Status der Erkennung zu verfolgen
-let isMouseDown = false; // Flag, um den Status des Knopfes zu verfolgen
+    let isRecognizing = false;
+    let isMouseDown = false;
+    let speechPermissionGranted = localStorage.getItem('speechGranted') === 'true';
     hidebars();
-// Überprüfen, ob die Web Speech API unterstützt wird
-if ('webkitSpeechRecognition' in window) {
-    recognition = new webkitSpeechRecognition();
-    recognition.continuous = true; // Kontinuierliche Erkennung aktivieren
-    recognition.interimResults = false; // Keine Zwischenergebnisse
-    recognition.lang = 'de-DE'; // Sprache auf Deutsch setzen
-
-    recognition.onstart = function() {
-        isRecognizing = true;
-        console.log('Erkennung gestartet');
-        document.querySelector('.mic-button').classList.add('active'); // Visuelles Feedback hinzufügen
-    };
-
-    recognition.onresult = function(event) {
-        const transcript = event.results[0][0].transcript;
-        const inputField = document.querySelector('.text-input');
-        inputField.value = transcript.replace(/\.$/, ''); // Entfernt den Punkt am Ende
-        inputField.dispatchEvent(new Event('input')); // Trigger Input Event für die Weiterverarbeitung
-    };
-
-    recognition.onerror = function(event) {
-        console.error('Spracherkennungsfehler:', event.error);
-    };
-
-    recognition.onend = function() {
-        isRecognizing = false;
-        console.log('Erkennung beendet');
+    
+    // Web Speech API (Browser & Android)
+    if ('webkitSpeechRecognition' in window) {
+        recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = false;
+        recognition.lang = 'de-DE';
+    
+        recognition.onstart = function () {
+            isRecognizing = true;
+            console.log('Erkennung gestartet (Web API)');
+            document.querySelector('.mic-button').classList.add('active');
+        };
+    
+        recognition.onresult = function (event) {
+            const transcript = event.results[0][0].transcript;
+            const inputField = document.querySelector('.text-input');
+            inputField.value = transcript.replace(/\.$/, '');
+            inputField.dispatchEvent(new Event('input'));
+        };
+    
+        recognition.onerror = function (event) {
+            console.error('Spracherkennungsfehler:', event.error);
+        };
+    
+        recognition.onend = function () {
+            isRecognizing = false;
+            console.log('Erkennung beendet');
+            hidebars();
+            document.querySelector('.mic-button').classList.remove('active');
+        };
+    }
+    
+    // Cordova: native Plugin für iOS & Android
+    else if (window.cordova && window.plugins && window.plugins.speechRecognition) {
+        // Prüfen & ggf. Permission einmalig holen
+        window.plugins.speechRecognition.hasPermission((hasPermission) => {
+            if (!hasPermission) {
+                window.plugins.speechRecognition.requestPermission(() => {
+                    localStorage.setItem('speechGranted', 'true');
+                    speechPermissionGranted = true;
+                }, (err) => {
+                    console.error('Erlaubnis verweigert:', err);
+                });
+            } else {
+                localStorage.setItem('speechGranted', 'true');
+                speechPermissionGranted = true;
+            }
+        });
+    
+        recognition = {
+            start: function () {
+                window.plugins.speechRecognition.startListening(
+                    function (result) {
+                        console.log('Erkannt (Cordova):', result[0]);
+                        const inputField = document.querySelector('.text-input');
+                        inputField.value = result[0];
+                        inputField.dispatchEvent(new Event('input'));
+                    },
+                    function (err) {
+                        console.error('Spracherkennungsfehler (Cordova):', err);
+                    },
+                    {
+                        language: 'de-DE',
+                        matches: 1,
+                        showPopup: !speechPermissionGranted,
+                        showPartial: false
+                    }
+                );
+                isRecognizing = true;
+                document.querySelector('.mic-button').classList.add('active');
+                console.log('Erkennung gestartet (Cordova)');
+            },
+            stop: function () {
+                window.plugins.speechRecognition.stopListening(
+                    function () {
+                        isRecognizing = false;
+                        console.log('Erkennung gestoppt (Cordova)');
+                        document.querySelector('.mic-button').classList.remove('active');
+                    },
+                    function (err) {
+                        console.error('Fehler beim Stoppen (Cordova):', err);
+                    }
+                );
+            }
+        };
+    } else {
+        console.warn('Spracherkennung wird von diesem Gerät nicht unterstützt.');
+        document.querySelector('.mic-button').style.display = 'none';
+    }
+    
+    // Mikrofonbutton-Events
+    const micButton = document.querySelector('.mic-button');
+    
+    micButton.addEventListener('mousedown', function () {
+        isMouseDown = true;
+        showBars();
+        if (recognition && !isRecognizing) {
+            console.log('Erkennung wird gestartet');
+            recognition.start();
+            startAudioProcessing();
+        }
+    });
+    
+    micButton.addEventListener('mouseup', function () {
+        console.log('Maus losgelassen');
+        isMouseDown = false;
         hidebars();
-        document.querySelector('.mic-button').classList.remove('active'); // Visuelles Feedback entfernen
-    };
-} else {
-    console.warn('Web Speech API wird von diesem Browser nicht unterstützt.');
-    document.querySelector('.mic-button').style.display = 'none'; // Mikrofon-Button verstecken
-}
-
-// Sprachaufnahme beim Drücken des Mikrofon-Buttons starten und stoppen
-const micButton = document.querySelector('.mic-button');
-
-
-micButton.addEventListener('mousedown', function() {
-    isMouseDown = true; // Maus gedrückt
-    showBars(); // Zeige die Balken (display: flex)
-    if (recognition && !isRecognizing) {
-      console.log('Erkennung wird gestartet');
-      recognition.start();
-      startAudioProcessing();
-    }
-  });
-  
-  micButton.addEventListener('mouseup', function() {
-    console.log('Maus losgelassen');
-    isMouseDown = false; // Maus losgelassen
-    hidebars(); // Verstecke die Balken (display: none)
-    if (recognition && isRecognizing) {
-      console.log('Erkennung wird gestoppt');
-      recognition.stop();
-      stopAudioProcessing();
-    }
-  });
-
-micButton.addEventListener('mouseleave', function() {
-    console.log('Maus hat den Bereich verlassen');
-    if (isMouseDown && recognition && isRecognizing) {
-        console.log('Erkennung wird gestoppt, weil die Maus den Bereich verlassen hat');
+        if (recognition && isRecognizing) {
+            console.log('Erkennung wird gestoppt');
+            recognition.stop();
+            stopAudioProcessing();
+        }
+    });
+    
+    micButton.addEventListener('mouseleave', function () {
+        console.log('Maus hat den Bereich verlassen');
+        if (isMouseDown && recognition && isRecognizing) {
+            console.log('Erkennung wird gestoppt, weil die Maus den Bereich verlassen hat');
+            hidebars();
+            recognition.stop();
+            isMouseDown = false;
+            stopAudioProcessing();
+        }
+    });
+    
+    micButton.addEventListener('touchstart', function (e) {
+        e.preventDefault();
+        showBars();
+        if (recognition && !isRecognizing) {
+            console.log('Erkennung wird gestartet (Touch)');
+            recognition.start();
+            startAudioProcessing();
+        }
+    });
+    
+    micButton.addEventListener('touchend', function (e) {
+        e.preventDefault();
+        console.log('Touch beendet');
         hidebars();
-        recognition.stop(); // Stoppen, wenn die Maus den Bereich verlässt und der Knopf gedrückt war
-        isMouseDown = false; // Flag zurücksetzen
-        stopAudioProcessing();
+        if (recognition && isRecognizing) {
+            console.log('Erkennung wird gestoppt (Touch)');
+            recognition.stop();
+            stopAudioProcessing();
+        }
+    });
+    
+    // Audio Processing
+    function startAudioProcessing() {
+        navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioContext.createAnalyser();
+            microphone = audioContext.createMediaStreamSource(stream);
+            scriptProcessor = audioContext.createScriptProcessor(256, 1, 1);
+    
+            analyser.smoothingTimeConstant = 0.3;
+            analyser.fftSize = 32;
+    
+            microphone.connect(analyser);
+            analyser.connect(scriptProcessor);
+            scriptProcessor.connect(audioContext.destination);
+    
+            const barScales = [0.2, 0.5, 0.9, 0.8, 0.4, 0.2, 0.05];
+    
+            scriptProcessor.onaudioprocess = function() {
+                const array = new Uint8Array(analyser.frequencyBinCount);
+                analyser.getByteFrequencyData(array);
+                const values = array.reduce((a, b) => a + b) / array.length;
+    
+                if (values < kleinste && values > 10) {
+                    kleinste = values;
+                }
+    
+                const bars = document.querySelectorAll('.bar');
+                bars.forEach((bar, index) => {
+                    bar.style.height = `${Math.min(6, Math.max(1, ((values - (kleinste * 0.7)) * barScales[index] * 0.15)))}em`;
+                });
+            };
+        }).catch(error => console.error('Fehler bei der Audioverarbeitung:', error));
     }
-});
+    
+    function showBars() {
+        const barsContent = document.querySelector('.bars-content');
+        barsContent.style.display = 'flex';
+    }
+    
+    function hidebars() {
+        const barsContent = document.querySelector('.bars-content');
+        barsContent.style.display = 'none';
+    }
+    
+    function stopAudioProcessing() {
+        if (audioContext) {
+            audioContext.close();
+            audioContext = null;
+        }
+        if (scriptProcessor) {
+            scriptProcessor.disconnect();
+            scriptProcessor = null;
+        }
+        const bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => bar.style.height = '0px');
+    }
 
-// Falls das Gerät auf Touch-Ereignisse reagiert (z.B. auf Mobilgeräten)
 
-  
-  micButton.addEventListener('touchstart', function(e) {
-    e.preventDefault(); // Standard-Touchverhalten unterbinden
-    showBars(); // Zeige die Balken (display: flex)
-    if (recognition && !isRecognizing) {
-      console.log('Erkennung wird gestartet (Touch)');
-      recognition.start();
-      startAudioProcessing();
-    }
-  });
-  
-  micButton.addEventListener('touchend', function(e) {
-    e.preventDefault();
-    console.log('Touch beendet');
-    hidebars(); // Verstecke die Balken (display: none)
-    if (recognition && isRecognizing) {
-      console.log('Erkennung wird gestoppt (Touch)');
-      recognition.stop();
-      stopAudioProcessing();
-    }
-  });
+
+
+
 
 
 document.getElementById('clearImage').addEventListener('click', function() {
-    console.log('hallo');
     document.getElementById('myInput').value = '';
 });
 
-document.querySelector('input').addEventListener('focus', function() {
-    console.log('Tastatur könnte geöffnet sein');
-});
 
 
 
@@ -158,8 +269,7 @@ function getRandomQuestion() {
             ];
         } else if (selectedDifficulty === 'mittel') {
             questionsPool = [
-                ...mittelQuestions,
-                ...schwerQuestions.slice(0, Math.floor(mittelQuestions.length * 0.4))
+                ...mittelQuestions
             ];
         } else {
             questionsPool = filteredQuestions.filter(q => q.Schwierigkeitsgrad === selectedDifficulty);
@@ -905,65 +1015,7 @@ if (wrapper) {
     
     loadNextQuestion();
 
-    function startAudioProcessing() {
-        navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            analyser = audioContext.createAnalyser();
-            microphone = audioContext.createMediaStreamSource(stream);
-            scriptProcessor = audioContext.createScriptProcessor(256, 1, 1);
     
-            analyser.smoothingTimeConstant = 0.3;
-            analyser.fftSize = 32;
-    
-            microphone.connect(analyser);
-            analyser.connect(scriptProcessor);
-            scriptProcessor.connect(audioContext.destination);
-    
-            const barScales = [0.2, 0.5, 0.9, 0.8, 0.4, 0.2, 0.05]; // Prozentuale Höhenverteilung der Balken
-    
-            scriptProcessor.onaudioprocess = function() {
-                const array = new Uint8Array(analyser.frequencyBinCount);
-                analyser.getByteFrequencyData(array);
-                const values = array.reduce((a, b) => a + b) / array.length;
-    
-                // Kleinste Lautstärke aktualisieren, wenn die aktuelle Lautstärke kleiner ist
-                if (values < kleinste && values > 10) {
-                    kleinste = values;
-                }
-    
-                // Lautstärke auf Balkenhöhen anwenden
-                const bars = document.querySelectorAll('.bar');
-                bars.forEach((bar, index) => {
-                    bar.style.height = `${Math.min(6, Math.max(1, ((values - (kleinste * 0.7)) * barScales[index] * 0.15)))}em`;
-                });
-            };
-        }).catch(error => console.error('Fehler bei der Audioverarbeitung:', error));
-    }
-
-
-    function showBars() {
-        const barsContent = document.querySelector('.bars-content');
-        barsContent.style.display = 'flex';
-      }
-      
-      function hidebars() {
-        const barsContent = document.querySelector('.bars-content');
-        barsContent.style.display = 'none';
-      }
-
-
-    function stopAudioProcessing() {
-        if (audioContext) {
-            audioContext.close();
-            audioContext = null;
-        }
-        if (scriptProcessor) {
-            scriptProcessor.disconnect();
-            scriptProcessor = null;
-        }
-        const bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => bar.style.height = '0px'); // Balken zurücksetzen
-    }
 
        
 
@@ -1013,3 +1065,17 @@ document.addEventListener('DOMContentLoaded', function() {
     wrapper.addEventListener('touchend', onTouchEnd);
 
 });
+
+document.querySelector('.right-icon img')?.addEventListener('click', () => {
+    showReportModal((meldung) => {
+        if (meldung) {
+            console.log("Gemeldet:", meldung);
+        }
+    });
+});
+
+
+
+
+
+
